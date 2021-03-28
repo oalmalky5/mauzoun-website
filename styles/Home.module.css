@@ -1,122 +1,180 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+/* body {
+    font-family: sans-serif;
+} */
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 430px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  margin-top: 0px;
+  margin-top: 0px;
+  background-color: #F8D952; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  /* color: black; */
+  display: block;
+  margin-bottom: 50px;
+  margin-left: 10px;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  width: 100%;
+.sidenav .logo img {
   height: 100px;
-  border-top: 1px solid #eaeaea;
+  width: 100px;
+  margin-left: 30px
+}
+
+.sidenav .navLinks {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.sidenav .bottomNavIcons {
+  margin-left: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: stretch;
+}
+.sidenav .bottomNav .facebook {
+  margin-left: 0px;
+}
+.sidenav .bottomNav .instagram {
+  margin-left: 7px;
+}
+.sidenav .email {
+  margin-left: 40px;
 }
 
-.footer img {
-  margin-left: 0.5rem;
+.sidenav .location {
+  margin-left: 40px;
+  font-weight: bold;
+}
+.main {
+  margin-left: 430px; /* Same as the width of the sidebar */
+  height: 100%;
+  width: 510px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  top: 0;
+  bottom: 0;
+  padding: 0px 10px;
+  background-color: #F8D952; 
+  padding-top: 20px;
+  padding: 50px; 
+  font-size: 30px;
+} 
+
+.main h6 {
+  margin-bottom: 30px;
+}
+.topPara {
+  margin-top: 0px;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.main img {
+   width: 800px;
+   height: 400px;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.main h2 p {
+  display: block;
+
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.main p {
+  font-size: 20px;
+  margin-top: 0;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.main .into {
+  margin-top: 0;
 }
 
-.title,
-.description {
-  text-align: center;
+.main h6 {
+  font-size: 29px;
+  margin-top: 0;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.main .storyPara .storyLink {
+  color: white;
+  font-size: 20px;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+
+.services {
+    display: flex;
+    justify-content: flex-start;
+    
+    
+}
+.services .text1 {
+    font-size: 20px;
+    font-weight: bold;  
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+.services span {
+    font-size: 20px;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+.approach {
+  margin-top: 30px;
+} 
+
+.projects {
+  margin-top: 30px 
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.work{
+  margin-top: 30px
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.approach .text2 {
+    
+  font-size: 20px;
+  font-weight: bold;  
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.approach span {
+  font-size: 20px;
 }
 
-.logo {
-  height: 1em;
+.projects .text3 {
+  font-size: 20px;
+  font-weight: bold;  
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.projects span {
+  font-size: 20px;
 }
+
+.work .text4 {
+  font-size: 20px;
+  font-weight: bold;  
+}
+
+.work span {
+  font-size: 20px;
+}
+
+.icon1 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+ 
+.navLinks {
+  margin-top: 100px;
+}
+
+
