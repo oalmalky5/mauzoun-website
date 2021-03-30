@@ -128,7 +128,7 @@
   }
   
   .main .whiteBox {
-    background-color: white;
+    background-image: white;
     height: 250px;
     width: 750px;
     border: solid black 2px;
@@ -152,4 +152,9 @@
   .main .aspectPara {
     margin-top: 40px;
     font-size: 20px;
+  }
+
+  .main .gridSection .gridContainer .gridOne .gridItem{
+    background-image: url(https://i.imgur.com/Ph2nM8j.gif);
+    background-size: 200px 200px;
   }

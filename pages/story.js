@@ -7,7 +7,6 @@ import { GrFacebookOption } from "react-icons/gr";
 
 
 
-
 const Story = function(){
 
     
