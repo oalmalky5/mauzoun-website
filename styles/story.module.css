@@ -128,7 +128,7 @@
   }
   
   .main .whiteBox {
-    background-image: white;
+    background-color: white;
     height: 250px;
     width: 750px;
     border: solid black 2px;
