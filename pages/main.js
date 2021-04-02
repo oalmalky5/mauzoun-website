@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import story from './story'
-// import services from './services'
-// import job from './job'
+import services from './services'
+import job from './job'
 import styles from '../styles/Home.module.css'
 import React, {useState} from 'react'
 import Link from 'next/link'
@@ -26,7 +26,7 @@ export default function Home() {
         <div className={styles.logo}><Link href="main" ><img src="https://i.imgur.com/0IJeIP7.png" alt="Mauzoun logo"/></Link></div>
         <div className={styles.navLinks}>
             <Link href="story">Story</Link>
-            <Link href="#">Services</Link>
+            <Link href="services">Services</Link>
             <Link href="#">Portfolio</Link>
             <Link href="job">Mauzoun & You</Link>
         </div>

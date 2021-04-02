@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import story from './story'
-// import services from './services'
-// import job from './job'
+import services from './services'
 import styles from '../styles/job.module.css'
 import React, {useState} from 'react'
 import Link from 'next/link'
@@ -25,7 +24,7 @@ export default function job() {
                     <div className={styles.logo}><Link href="main" ><img src="https://i.imgur.com/68krFzC.jpg" alt="Mauzoun logo"/></Link></div>
                     <div className={styles.navLinks}>
                         <Link href="story">Story</Link>
-                        <Link href="#">Services</Link>
+                        <Link href="services">Services</Link>
                         <Link href="#">Portfolio</Link>
                         <Link href="job">Mauzoun & You</Link>
                     </div>
@@ -37,6 +36,7 @@ export default function job() {
                     <div className={styles.email}>hello@mauzoun.com</div>
                     <div className={styles.location}>Based in Jeddah, Saudi Arabia</div>
                 </div>
+
                 <div className={styles.main}>
                     <div className={styles.mainTitle}>Mauzoun & You</div>
                     <div> 
