@@ -25,11 +25,10 @@ export default function Home() {
     <div className={styles.sidenav}>
         <div className={styles.logo}><Link href="main" ><img src="https://i.imgur.com/0IJeIP7.png" alt="Mauzoun logo"/></Link></div>
         <div className={styles.navLinks}>
-            <Link href="lanfPage">Home</Link>
             <Link href="story">Story</Link>
             <Link href="#">Services</Link>
             <Link href="#">Portfolio</Link>
-            <Link href="#">Mauzoun & You</Link>
+            <Link href="job">Mauzoun & You</Link>
         </div>
         <div className={styles.bottomNavIcons}>
             <div className={styles.twitter}><a target="_blank" href='https://twitter.com/mauzoun_?lang=en'><IoLogoTwitter size='30px'/></a></div>
