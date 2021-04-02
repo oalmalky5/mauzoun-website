@@ -60,7 +60,7 @@
 
   .main {
     margin-left: 430px; /* Same as the width of the sidebar */
-    height: 100%;
+    height: 350vh;
     width: 510px;
     margin-top: 0 !important;
     margin-bottom: 0 !important;

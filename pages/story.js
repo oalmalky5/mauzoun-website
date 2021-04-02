@@ -18,7 +18,7 @@ const Story = function(){
                     <div className={styles.navLinks}>
                         <Link href="story">Story</Link>
                         <Link href="services">Services</Link>
-                        <Link href="#">Portfolio</Link>
+                        <Link href="portfolio">Portfolio</Link>
                         <Link href="job">Mauzoun & You</Link>
                     </div>
                     <div className={styles.bottomNavIcons}>

@@ -27,7 +27,7 @@ export default function Home() {
         <div className={styles.navLinks}>
             <Link href="story">Story</Link>
             <Link href="services">Services</Link>
-            <Link href="#">Portfolio</Link>
+            <Link href="portfolio">Portfolio</Link>
             <Link href="job">Mauzoun & You</Link>
         </div>
         <div className={styles.bottomNavIcons}>
@@ -44,8 +44,9 @@ export default function Home() {
         <p className={styles.topPara}>We are a Jeddah-based writing studio that researches then writes creatively and holistically, providing services to clients worldwide.</p>
         <img src='http://writingandwellness.com/wp-content/uploads/2015/02/Home-Office-2.jpg' alt='an image of an office'></img>
         <div className={styles.storyPara}>
-            <a className={styles.storyLink} href='#'>Here's our story:</a> 
+            <a className={styles.storyLink} href='#'><u>Here's our story:</u></a> 
             <p>we realized a lack of captivating brand content and creative writing in the Arab World. Quite simply, we created a solution.</p>
+            <hr/>
         </div>
 
     <div className={styles.services}> 
