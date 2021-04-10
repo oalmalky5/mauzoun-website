@@ -9,8 +9,7 @@ import { BsChevronDown } from "react-icons/bs";
 import { IoLogoTwitter } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
 import { GrFacebookOption } from "react-icons/gr";
-import contact from '../comps/contact'
-
+import Modal from 'react-modal'
 
 export default function Home() {
   // create a hook foreach instancee of a button  
@@ -19,6 +18,7 @@ export default function Home() {
   const [button3Show, setButton3Show] = useState(true)
   const [button4Show, setButton4Show] = useState(true)
 
+  const [modalIsOpen, setModalIsOpen] = useState(false)
 
   return (
     <div>
@@ -38,7 +38,20 @@ export default function Home() {
         <div className={styles.email}>hello@mauzoun.com</div>
         <div className={styles.location}>Based in Jeddah, Saudi Arabia</div>
     </div>
-    
+
+    <button className={styles.contactForm} onClick={() => setModalIsOpen(true)}>
+        <div className={styles.innerContent}>Interested in the work we do?</div>
+        
+        <Modal className={styles.modal} isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+            <h4>Modal title</h4>
+            <p>Modal body</p>
+            <div>
+                <button className={styles.closeButton} onClick={()=> setModalIsOpen(false)}>close</button>
+            </div>
+        </Modal>
+
+    </button>
+
     <div className={styles.main}>
         <h6>A warm welcome to you from the Mauzoun Team.</h6>
         <p className={styles.topPara}>We are a Jeddah-based writing studio that researches then writes creatively and holistically, providing services to clients worldwide.</p>
@@ -48,6 +61,9 @@ export default function Home() {
             <p>we realized a lack of captivating brand content and creative writing in the Arab World. Quite simply, we created a solution.</p>
             <hr/>
         </div>
+        
+            
+
 
     <div className={styles.services}> 
         <div> 
@@ -82,9 +98,6 @@ export default function Home() {
         </div>
     </div>
 
-</div>
-<div className={styles.contactForm}>
-    <contact />
 </div>
 
 </div>

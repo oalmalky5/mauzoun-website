@@ -85,6 +85,7 @@ export default function Home() {
 
 </div>
 
+
 </div>
 
      // layout the structure of the pages and  

@@ -5,7 +5,6 @@ export default function contact() {
     return (
         <div>
             <div className={styles.blueCircle}>Blue</div>
-            
         </div>
     )
 }
