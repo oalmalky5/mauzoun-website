@@ -31,9 +31,9 @@
 }
 
 .sidenav .logo img {
-  height: 100px;
-  width: 100px;
-  margin-left: 30px
+  height: 150px;
+  width: 175px;
+  margin-left: 10px
 }
 
 .sidenav .navLinks {
@@ -204,5 +204,5 @@
 
 
 .contactFrom .modal {
-  
+
 }

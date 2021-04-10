@@ -9,6 +9,8 @@ import { BsChevronDown } from "react-icons/bs";
 import { IoLogoTwitter } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
 import { GrFacebookOption } from "react-icons/gr";
+import Modal from 'react-modal'
+
 
 
 
@@ -19,11 +21,14 @@ export default function Home() {
   const [button3Show, setButton3Show] = useState(true)
   const [button4Show, setButton4Show] = useState(true)
 
+  const [modalIsOpen, setModalIsOpen] = useState(false)
+
+
 
   return (
     <div>
     <div className={styles.sidenav}>
-        <div className={styles.logo}><Link href="main" ><img src="https://i.imgur.com/0IJeIP7.png" alt="Mauzoun logo"/></Link></div>
+        <div className={styles.logo}><Link href="main" ><img src="https://i.imgur.com/HjDbXtR.png" alt="Mauzoun logo"/></Link></div>
         <div className={styles.navLinks}>
             <Link href="story">Story</Link>
             <Link classname={styles.serviceLink} href="services">Services</Link>
@@ -39,6 +44,20 @@ export default function Home() {
         <div className={styles.location}>Based in Jeddah, Saudi Arabia</div>
     </div>
     
+
+    <button className={styles.contactForm} onClick={() => setModalIsOpen(true)}>
+    <div className={styles.innerContent}>Interested in the work we do?</div>
+    
+    <Modal className={styles.modal} isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+        <h4>Modal title</h4>
+        <p>Modal body</p>
+        <div>
+            <button className={styles.closeButton} onClick={()=> setModalIsOpen(false)}>close</button>
+        </div>
+    </Modal>
+
+</button>
+
     <div className={styles.main}>
         <h6>A warm welcome to you from the Mauzoun Team.</h6>
         <p className={styles.topPara}>We are a Jeddah-based writing studio that researches then writes creatively and holistically, providing services to clients worldwide.</p>

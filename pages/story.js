@@ -14,7 +14,7 @@ const Story = function(){
     return (
         <div>
                 <div className={styles.sidenav}>
-                    <div className={styles.logo}><Link href="main" ><img src="https://i.imgur.com/68krFzC.jpg" alt="Mauzoun logo"/></Link></div>
+                    <div className={styles.logo}><Link href="main" ><img src="https://i.imgur.com/HjDbXtR.png" alt="Mauzoun logo"/></Link></div>
                     <div className={styles.navLinks}>
                         <Link href="story">Story</Link>
                         <Link href="services">Services</Link>

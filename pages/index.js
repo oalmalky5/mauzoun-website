@@ -10,6 +10,7 @@ import { IoLogoTwitter } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
 import { GrFacebookOption } from "react-icons/gr";
 import Modal from 'react-modal'
+ import 'tailwindcss/tailwind.css'
 
 export default function Home() {
   // create a hook foreach instancee of a button  
@@ -23,7 +24,7 @@ export default function Home() {
   return (
     <div>
     <div className={styles.sidenav}>
-        <div className={styles.logo}><Link href="main" ><img src="https://i.imgur.com/0IJeIP7.png" alt="Mauzoun logo"/></Link></div>
+        <div className={styles.logo}><Link href="main" ><img src="https://i.imgur.com/HjDbXtR.png" alt="Mauzoun logo"/></Link></div>
         <div className={styles.navLinks}>
             <Link href="story">Story</Link>
             <Link href="services">Services</Link>
