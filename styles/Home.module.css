@@ -16,7 +16,7 @@
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Alegreya';
  }
 
 
@@ -73,6 +73,8 @@
   padding-top: 20px;
   padding: 50px; 
   font-size: 30px;
+  font-family: 'Alegreya';
+
 } 
 
 .main h6 {
@@ -178,3 +180,6 @@
 }
 
 
+.contactFrom {
+  margin-left: 900px;
+}

@@ -9,7 +9,7 @@ import { BsChevronDown } from "react-icons/bs";
 import { IoLogoTwitter } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
 import { GrFacebookOption } from "react-icons/gr";
-
+import contact from '../comps/contact'
 
 
 export default function Home() {
@@ -82,6 +82,9 @@ export default function Home() {
         </div>
     </div>
 
+</div>
+<div className={styles.contactForm}>
+    <contact />
 </div>
 
 </div>
