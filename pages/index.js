@@ -10,7 +10,6 @@ import { IoLogoTwitter } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
 import { GrFacebookOption } from "react-icons/gr";
 import Modal from 'react-modal'
- import 'tailwindcss/tailwind.css'
 
 export default function Home() {
   // create a hook foreach instancee of a button  
