@@ -1,162 +1,102 @@
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 430px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    margin-top: 0px;
-    margin-top: 0px;
-    background-color: #91cae1; 
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Alegreya';
-   }
-  
-  
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    /* color: black; */
-    display: block;
-    margin-bottom: 50px;
-    margin-left: 10px;
-  }
-  
-  .sidenav .logo img {
-    height: 150px;
-    width: 175px;
-    margin-left: 10px
-  }
-  
-  .sidenav .navLinks {
-    margin-top: 50px;
-    margin-left: 20px;
-  }
-  
-  .sidenav .bottomNavIcons {
-    margin-left: 20px;
-    display: flex;
-    align-items: stretch;
-  }
-  .sidenav .bottomNav .facebook {
-    margin-left: 1px;
-  }
-  .sidenav .bottomNav .instagram {
-    margin-left: 7px;
-  }
-  .sidenav .email {
-    margin-left: 40px;
-  }
-  
-  .sidenav .location {
-    margin-left: 40px;
-    font-weight: bold;
-  }
-  
-  .main {
-      margin-left: 430px; /* Same as the width of the sidebar */
-      height: 100%;
-      width: 500px;
-      margin-top: 0 !important;
-      margin-bottom: 0 !important;
-      top: 0;
-      bottom: 0;
-      padding: 0px 10px;
-      background-color: #91cae1; 
-      padding-top: 20px;
-      padding: 50px; 
-      /* font-size: 30px; */
-      font-family: 'Alegreya';
-  
-   } 
-  
-  .main .nameMeaning p {
-    font-size: 25px;
-    font-weight: bold;
-  }
-  
-  .main .aim p {
-    font-size: 20px;
-  }
-  
-  .main .teamWork p {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .gridSection h4 {
-    font-size: 23px;
-    margin-bottom: 0px;
-  }
-  .gridContainer {
-    width: 450px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    /* padding: 1px; */
-    margin-top: 0px;
-  }
-  
-  .gridItem {
-    width: 200px;
-    height: 200px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    margin-right: 75px;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    background-color: white;
-  }
-  
-  .gridSection .gridContainer .gridOne .name {
-    margin-left: 6px;
-    font-size: 20px;
-  }
-  
-  .gridSection .gridContainer .gridOne .role {
-    margin-left: 18px;
-    font-size: 20px;
-  }
-  
-  .main .world {
-    margin-top: 75px;
-    font-size: 18px;
-    margin-bottom: 40px;
-  }
-  
-  .main .whiteBox {
-    background-color: white;
-    height: 250px;
-    width: 750px;
-    border: solid black 2px;
-  }
-  
-  .main .whiteBox .innerText1 {
-    margin-top: 40px;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .main .whiteBox .innerText2 {
-    margin-top: 40px;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 20px;
-  }
-  
-  .main .aspectPara {
-    margin-top: 40px;
-    font-size: 20px;
-  }
+.main {
+  margin-left: 430px; /* Same as the width of the sidebar */
+  height: 100%;
+  width: 500px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  top: 0;
+  bottom: 0;
+  padding: 0px 10px;
+  background-color: #91cae1;
+  padding-top: 20px;
+  padding: 50px;
+  /* font-size: 30px; */
+  font-family: "Alegreya";
+}
 
-  .main .gridSection .gridContainer .gridOne .gridItem{
-    background-image: url(https://i.imgur.com/Ph2nM8j.gif);
-    background-size: 200px 200px;
-  }
+.main .nameMeaning p {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.main .aim p {
+  font-size: 20px;
+}
+
+.main .teamWork p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.gridSection h4 {
+  font-size: 23px;
+  margin-bottom: 0px;
+}
+.gridContainer {
+  width: 450px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* padding: 1px; */
+  margin-top: 0px;
+}
+
+.gridItem {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  margin-right: 75px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  background-color: white;
+}
+
+.gridSection .gridContainer .gridOne .name {
+  margin-left: 6px;
+  font-size: 20px;
+}
+
+.gridSection .gridContainer .gridOne .role {
+  margin-left: 18px;
+  font-size: 20px;
+}
+
+.main .world {
+  margin-top: 75px;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.main .whiteBox {
+  background-color: white;
+  height: 250px;
+  width: 750px;
+  border: solid black 2px;
+}
+
+.main .whiteBox .innerText1 {
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.main .whiteBox .innerText2 {
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.main .aspectPara {
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.main .gridSection .gridContainer .gridOne .gridItem {
+  background-image: url(https://i.imgur.com/Ph2nM8j.gif);
+  background-size: 200px 200px;
+}

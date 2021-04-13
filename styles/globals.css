@@ -3,19 +3,14 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
 
 @font-face {
-  font-family: 'Alegreya';
-  src: url('../public/fonts/AlegreyaSans-Medium.ttf');
- }
-
-a {
-color: inherit;
-text-decoration: none;
+  font-family: "Alegreya";
+  src: url("../public/fonts/AlegreyaSans-Medium.ttf");
 }
+
 a {
   color: inherit;
   text-decoration: none;

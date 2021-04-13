@@ -1,132 +1,71 @@
+.main {
+  margin-left: 430px; /* Same as the width of the sidebar */
+  height: 150vh;
+  width: 510px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  top: 0;
+  bottom: 0;
+  padding: 0px 10px;
+  background-color: #d5e3ef;
+  padding-top: 20px;
+  padding: 50px;
+  font-size: 30px;
+  font-family: "Alegreya";
+}
+.main .mainTitle {
+  font-weight: bold;
+}
 
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 430px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    margin-top: 0px;
-    margin-top: 0px;
-    background-color: #D5E3EF; 
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Alegreya';
-   }
-  
-  
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    /* color: black; */
-    display: block;
-    margin-bottom: 50px;
-    margin-left: 10px;
-  }
-  
-  .sidenav .logo img {
-    height: 150px;
-    width: 175px;
-    margin-left: 10px
-  }
-  
-  .sidenav .navLinks {
-    margin-top: 50px;
-    margin-left: 20px;
-  }
-  
-  .sidenav .bottomNavIcons {
-    margin-left: 20px;
-    display: flex;
-    align-items: stretch;
-  }
-  .sidenav .bottomNav .facebook {
-    margin-left: 0px;
-  }
-  .sidenav .bottomNav .instagram {
-    margin-left: 7px;
-  }
-  .sidenav .email {
-    margin-left: 40px;
-  }
-  
-  .sidenav .location {
-    margin-left: 40px;
-    font-weight: bold;
-  }
-  .main {
-    margin-left: 430px; /* Same as the width of the sidebar */
-    height: 150vh;
-    width: 510px;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    top: 0;
-    bottom: 0;
-    padding: 0px 10px;
-    background-color: #D5E3EF; 
-    padding-top: 20px;
-    padding: 50px; 
-    font-size: 30px;
-    font-family: 'Alegreya';
-  } 
-  .main .mainTitle {
-    font-weight: bold;
-  }
-  
-  .main .jobStatus {
-    margin-top: 40px;
-    font-weight: bold;
-    font-size: 22px;
-  }
+.main .jobStatus {
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 22px;
+}
 
-  .main .explainJobStatus1 {
-    margin-top: 40px;
-    font-size: 22px;
-  }
+.main .explainJobStatus1 {
+  margin-top: 40px;
+  font-size: 22px;
+}
 
-  .main .explainJobStatus2 {
-    margin-top: 40px;
-    font-size: 22px;
-  }
+.main .explainJobStatus2 {
+  margin-top: 40px;
+  font-size: 22px;
+}
 
-  .main .line {
-    font-size: 15;
-    font-weight: lighter;
-  }
+.main .line {
+  font-size: 15;
+  font-weight: lighter;
+}
 
-  .main hr {
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 1px;
-    color: black;
-  }
+.main hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  color: black;
+}
 
-  .main .compStatus {
-    display: flex;
-    margin-top: 40px;
-  }
+.main .compStatus {
+  display: flex;
+  margin-top: 40px;
+}
 
-  .main .compStatus .statusBox {
-    width: 160px;
-    height: 45px;
-    background-color: white;
-    border: solid;
-    font-size: 18px;
-    font-weight: bold;
-  }
+.main .compStatus .statusBox {
+  width: 160px;
+  height: 45px;
+  background-color: white;
+  border: solid;
+  font-size: 18px;
+  font-weight: bold;
+}
 
-  .main .compStatus .statusBox .innerText {
-    padding: 7px;
-    
-  }
+.main .compStatus .statusBox .innerText {
+  padding: 7px;
+}
 
-  .main .compStatus .leftLine .innerLine {
-
-  }
+.main .compStatus .leftLine .innerLine {
+}
