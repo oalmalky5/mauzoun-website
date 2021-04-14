@@ -1,3 +1,5 @@
+@use "mixins" as *;
+
 html,
 body {
   padding: 0;
@@ -18,4 +20,22 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  min-height: 100%;
+  width: 510px;
+  background-color: #f8d952;
+  padding: 50px;
+  font-size: 30px;
+  font-family: "Alegreya";
+
+  @include ltr {
+    margin-left: 430px; /* Same as the width of the sidebar */
+  }
+
+  @include rtl {
+    margin-right: 430px; /* Same as the width of the sidebar */
+  }
 }

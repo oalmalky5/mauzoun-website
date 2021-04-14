@@ -23,13 +23,13 @@ export default function portfolio() {
           </div>
 
           <div className={styles.projects}>
-            <div className={styles.mauj}>Mauj</div>
-            <div className={styles.shafra}>Shafra</div>
-            <div className={styles.musa}>Musa & Palm</div>
-            <div className={styles.tourism}>Saudi Tourism Authority</div>
-            <div className={styles.albalad}>Ministry of Culture: AlBalad</div>
+            <div className={styles.project}>Mauj</div>
+            <div className={styles.project}>Shafra</div>
+            <div className={styles.project}>Musa & Palm</div>
+            <div className={styles.project}>Saudi Tourism Authority</div>
+            <div className={styles.project}>Ministry of Culture: AlBalad</div>
           </div>
-          <hr />
+          <hr size={1} color="black" />
         </div>
 
         <div className={styles.creative}>
@@ -38,7 +38,7 @@ export default function portfolio() {
           </div>
 
           <div className={styles.projects}>
-            <div className={styles.culture}>
+            <div className={styles.project}>
               Ministry of Culture: <br />
               Madinah Culinary Arts
             </div>
@@ -49,9 +49,9 @@ export default function portfolio() {
           <div className={styles.logoGrid}>
             <div className={styles.clients}>
               Since 2018, we have worked with{" "}
-              <span className={styles.hundrid}>
+              <b>
                 <u>over 100 clients</u>
-              </span>
+              </b>
             </div>
           </div>
         </div>

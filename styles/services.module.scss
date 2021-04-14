@@ -28,7 +28,6 @@
 
   & p {
     display: inline;
-    text-decoration: underline;
   }
 
   & .revealIcon {
@@ -49,10 +48,6 @@
 .unwrappedContent {
   margin-top: 40px;
   margin-bottom: 40px;
-
-  & .contentTitle p {
-    text-decoration: underline;
-  }
 }
 
 .header {

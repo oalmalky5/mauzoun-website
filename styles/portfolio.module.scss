@@ -1,62 +1,57 @@
+@use "mixins" as *;
+
 .main {
-  margin-left: 430px; /* Same as the width of the sidebar */
-  height: 100%;
+  position: absolute;
+  min-height: 100%;
   width: 510px;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  top: 0;
-  bottom: 0;
-  padding: 0px 10px;
   background-color: #fbec9a;
-  padding-top: 20px;
   padding: 50px;
   font-size: 30px;
   font-family: "Alegreya";
+
+  @include ltr {
+    margin-left: 430px; /* Same as the width of the sidebar */
+  }
+
+  @include rtl {
+    margin-right: 430px; /* Same as the width of the sidebar */
+  }
 }
 
-.main .mainTitle {
+.mainTitle {
   font-weight: bold;
   font-size: 25px;
 }
 
-.main .firstPara {
+.firstPara {
   font-size: 25px;
   margin-top: 40px;
 }
 
-.main .secondPara {
+.secondPara {
   font-size: 20px;
   margin-top: 40px;
 }
 
-.main .content {
+.content {
   margin-top: 50px;
   font-size: 23px;
 }
 
-.main .projects {
+.projects {
   margin-top: 20px;
 }
 
-.main .content .projects .mauj,
-.shafra,
-.musa,
-.tourism,
-.albalad {
+.project {
   font-size: 35px;
   font-weight: bold;
 }
 
-.main .creative .title {
+.creative .title {
   font-size: 25px;
 }
 
-.main .creative .projects .culture {
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.main .brandLogos .logoGrid {
+.brandLogos .logoGrid {
   margin-top: 40px;
   width: 750px;
   height: 800px;
@@ -64,12 +59,7 @@
   background-color: white;
 }
 
-.main .brandLogos .clients {
+.brandLogos .clients {
   font-size: 30px;
   margin: 15px;
-}
-
-.main .brandLogos .clients .hundrid {
-  font-weight: bold;
-  font-size: 30px;
 }

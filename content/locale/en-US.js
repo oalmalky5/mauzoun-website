@@ -6,6 +6,7 @@ exports["en-US"] = {
     jobLink: "Mauzoun & You",
     email: "hello@mauzoun.com",
     location: "Based in Jeddah, Saudi Arabia",
+    comingSoon: "COMING SOON.",
   },
   "/": {
     interestedInWork: "Interested in the work we do?",
@@ -27,7 +28,18 @@ exports["en-US"] = {
     "work.content":
       ", prioritizing our community as much as our clients. This is why we host an annual competition for up-and-coming writers who are developing their first-ever manuscripts. Winners are provided with free editing, marketing, and publishing services to unleash their works to the world. To learn more about this competition, click here.",
   },
-  "/job": {},
+  "/job": {
+    title: "Mauzoun & You",
+    "joinTeam.intro": "Join the Team",
+    "joinTeam.content": `<b>There are currently no job opportunities available. Keep checking.</b>
+      <br /><br />
+      If you are interested in joining Mauzoun, keep checking this page or our Instagram account for the latest job announcements.
+      <br /><br />
+      At Mauzoun, we look for writers with bulletproof Arabic and English who are creative and passionate about writing. To win us over, make sure that your application is free of mistakes, and complement it with a captivating cover letter that conveys why you love the work you do.`,
+    "joinCompetition.intro": "Join the Competition",
+    "joinCompetition.content":
+      "Our latest endeavor in creative writing will be investing in emerging and first-time writers from the Arab World, who are trying to publish their first book, novel, short stories, collection of essays, or visual script. Mauzoun will be collaborating with a judging panel that will process applications and decide on one writer, who will receive our consultation and services for a period of one year, and have their work published or paired with a producer by the end of the year.",
+  },
   "/portfolio": {},
   "/services": {
     title: "Services",

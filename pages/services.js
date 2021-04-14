@@ -23,6 +23,7 @@ export default function services() {
       <div className={styles.main}>
         <div className={styles.title}>{f("title")}</div>
 
+        {/* Approach */}
         {!isApproachVisible ? (
           <div
             className={styles.wrappedContent}
@@ -63,6 +64,7 @@ export default function services() {
           </div>
         )}
 
+        {/* Content Writing */}
         {!isContentWritingVisible ? (
           <div
             className={styles.wrappedContent}
@@ -104,6 +106,7 @@ export default function services() {
           </div>
         )}
 
+        {/* Creative Writing */}
         {!isCreativeWritingVisible ? (
           <div
             className={styles.wrappedContent}

@@ -1,81 +1,74 @@
 import React, { useState } from "react";
+import { useIntl } from "react-intl";
 import { BsChevronDown } from "react-icons/bs";
 
 import styles from "../styles/job.module.scss";
 import Menu from "../components/Menu";
+import formatJsxMessage from "../utils/formatJsxMessage";
 
 export default function job() {
-  const [button1Show, setButton1Show] = useState(true);
-  const [button2Show, setButton2Show] = useState(true);
+  const intl = useIntl();
+  const f = (id, options) => formatJsxMessage(intl, id, options);
+
+  const [isJoinTeamVisible, setIsJoinTeamVisible] = useState(false);
+  const [isJoinCompetitionVisible, setIsJoinCompetitionVisible] = useState(
+    false
+  );
 
   return (
     <div>
       <Menu backgroundColor="#d5e3ef" />
 
       <div className={styles.main}>
-        <div className={styles.mainTitle}>Mauzoun & You</div>
-        <div>
-          <span className={styles.join}>Join the Team</span>
-          {button1Show ? (
-            <span onClick={() => setButton1Show(false)}>
-              <BsChevronDown className={styles.icon1} />
-            </span>
-          ) : (
-            <div>
-              <div className={styles.jobStatus}>
-                {" "}
-                There are currently no job opportunities available. Keep
-                checking.
-              </div>
-              <div className={styles.explainJobStatus1}>
-                If you are interested in joining Mauzoun, keep checking this
-                page or our Instagram account for the latest job announcements.
-              </div>
-              <div className={styles.explainJobStatus2}>
-                At Mauzoun, we look for writers with bulletproof Arabic and
-                English who are creative and passionate about writing. To win us
-                over, make sure that your application is free of mistakes, and
-                complement it with a captivating cover letter that conveys why
-                you love the work you do.
-              </div>
-              <hr />
-            </div>
-          )}
-        </div>
+        <div className={styles.title}>Mauzoun & You</div>
 
-        <div>
-          <span className={styles.join}>Join the Competition</span>
-          {button2Show ? (
-            <span onClick={() => setButton2Show(false)}>
-              <BsChevronDown className={styles.icon1} />
+        {/* Join the team */}
+        {!isJoinTeamVisible ? (
+          <div
+            className={styles.wrappedContent}
+            onClick={() => setIsJoinTeamVisible(true)}
+            style={{ cursor: "pointer" }}
+          >
+            {f("joinTeam.intro")}
+            <span className={styles.revealIcon}>
+              <BsChevronDown className={styles.revealIcon} />
             </span>
-          ) : (
-            <div>
-              <div className={styles.compStatus}>
-                <div className={styles.leftLine}>
-                  <div className={styles.innerLine}>________</div>
-                </div>
-                <div className={styles.statusBox}>
-                  <div className={styles.innerText}>COMING SOON.</div>
-                </div>
-                <div className={styles.rightLine}>
-                  <div className={styles.innerLine}>________</div>
-                </div>
+          </div>
+        ) : (
+          <div className={styles.unwrappedContent}>
+            <span className={styles.contentTitle}>{f("joinTeam.intro")}</span>
+            <div className={styles.content}>{f("joinTeam.content")}</div>
+            <hr size={1} color="black" />
+          </div>
+        )}
+
+        {/* Join the competition */}
+        {!isJoinCompetitionVisible ? (
+          <div
+            className={styles.wrappedContent}
+            onClick={() => setIsJoinCompetitionVisible(true)}
+            style={{ cursor: "pointer" }}
+          >
+            {f("joinCompetition.intro")}
+            <span className={styles.revealIcon}>
+              <BsChevronDown className={styles.revealIcon} />
+            </span>
+          </div>
+        ) : (
+          <div className={styles.unwrappedContent}>
+            <span className={styles.contentTitle}>
+              {f("joinCompetition.intro")}
+            </span>
+            <div className={styles.compStatus}>
+              ________
+              <div className={styles.statusBox}>
+                <div className={styles.innerText}>{f("comingSoon")}</div>
               </div>
-              <div className={styles.explainJobStatus1}>
-                Our latest endeavor in creative writing will be investing in
-                emerging and first-time writers from the Arab World, who are
-                trying to publish their first book, novel, short stories,
-                collection of essays, or visual script. Mauzoun will be
-                collaborating with a judging panel that will process
-                applications and decide on one writer, who will receive our
-                consultation and services for a period of one year, and have
-                their work published or paired with a producer by the end of the
-                year.
-              </div>
+              ________
             </div>
-          )}
-        </div>
+            <div className={styles.content}>{f("joinCompetition.content")}</div>
+          </div>
+        )}
       </div>
     </div>
   );

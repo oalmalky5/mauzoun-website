@@ -1,71 +1,74 @@
+@use "mixins" as *;
+
 .main {
-  margin-left: 430px; /* Same as the width of the sidebar */
-  height: 150vh;
+  position: absolute;
+  min-height: 100%;
   width: 510px;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  top: 0;
-  bottom: 0;
-  padding: 0px 10px;
   background-color: #d5e3ef;
-  padding-top: 20px;
   padding: 50px;
   font-size: 30px;
   font-family: "Alegreya";
+
+  @include ltr {
+    margin-left: 430px; /* Same as the width of the sidebar */
+  }
+
+  @include rtl {
+    margin-right: 430px; /* Same as the width of the sidebar */
+  }
 }
-.main .mainTitle {
+
+.title {
   font-weight: bold;
 }
 
-.main .jobStatus {
+.wrappedContent {
   margin-top: 40px;
-  font-weight: bold;
-  font-size: 22px;
+  margin-bottom: 40px;
+
+  & p {
+    display: inline;
+  }
+
+  & .revealIcon {
+    vertical-align: middle;
+    font-size: 20px;
+    stroke-width: 1;
+
+    @include ltr {
+      margin-left: 5px;
+    }
+
+    @include rtl {
+      margin-right: 5px;
+    }
+  }
 }
 
-.main .explainJobStatus1 {
+.unwrappedContent {
   margin-top: 40px;
-  font-size: 22px;
 }
 
-.main .explainJobStatus2 {
-  margin-top: 40px;
-  font-size: 22px;
+.content {
+  font-size: 20px;
+  margin-bottom: 40px;
 }
 
-.main .line {
-  font-size: 15;
-  font-weight: lighter;
-}
-
-.main hr {
-  display: block;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: inset;
-  border-width: 1px;
-  color: black;
-}
-
-.main .compStatus {
+.compStatus {
   display: flex;
   margin-top: 40px;
-}
 
-.main .compStatus .statusBox {
-  width: 160px;
-  height: 45px;
-  background-color: white;
-  border: solid;
-  font-size: 18px;
-  font-weight: bold;
-}
+  & .statusBox {
+    width: 160px;
+    height: 45px;
+    background-color: white;
+    border: solid;
+    font-size: 18px;
+    font-weight: bold;
 
-.main .compStatus .statusBox .innerText {
-  padding: 7px;
-}
-
-.main .compStatus .leftLine .innerLine {
+    & .innerText {
+      text-align: center;
+      margin-top: -5px;
+    }
+  }
 }
