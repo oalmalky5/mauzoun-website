@@ -31,7 +31,68 @@ exports["en-US"] = {
   "/portfolio": {},
   "/services": {
     title: "Services",
-    approachTitle: "Approach",
+    "approach.title": "Approach",
+    "approach.header":
+      "The language of storytelling is one, no matter the path your project paves. Below is the flow that all of our projects follow.",
+    "approach.contact.header": "1. Contact Us.",
+    "approach.contact.content":
+      "<u>Send an e-mail</u> or <u>book a call</u> through our scheduling system. Our team is keen to get to know you better and understand the kind of services you’re looking for.",
+    "approach.briefForm.header": "2. Complete the Mauzoun Brief Form.",
+    "approach.briefForm.content":
+      "After understanding your needs, we will provide you with the Mauzoun Brief Form, where you can fill the necessary information required to further understand the scope of your project.",
+    "approach.quotation.header": "3. Preparing Your Quotation.",
+    "approach.quotation.content":
+      "Our quotations take around 3 business days to prepare after reviewing your form. They include our Terms and Conditions and help clarify and streamline our work together.",
+    "approach.timeline.header": "4. We Book Your Timeline",
+    "approach.timeline.content":
+      "After receiving your approval of the quotation and down payment, we book your timeline immediately. Our busy schedule and workload demand that we work on booking basis only.",
+    "approach.research.header": "5. Our Research Begins.",
+    "approach.research.content":
+      "Good work is slow work––that’s our motto. Our average timeline is between 10 to 21 business days. Great writing takes time, so we gather all the data and information needed to complement our writing process and distinguish your tone from competitors.",
+    "approach.writing.header": "6. The Writing Process.",
+    "approach.writing.content":
+      "After finalizing our research internally, we hand it over to our brilliant team of English and Arabic writers who adapt to your tone with the best quality of writing. We then proofread the content at least seven times to make sure that everything is grammatically correct, structurally strong, and holistically captivating.",
+    "approach.delivery.header": "7. Your Deliverables Arrive Right on Time.",
+    "approach.delivery.content":
+      "Working on a booking basis means we’re always on time and with work polished to final draft perfection.",
+    "approach.feedback.header": "8. You Share Your Feedback or Approval.",
+    "approach.feedback.content":
+      "You provide your feedback via e-mail or phone, and may immediately approve the project! If not, don’t worry—great content takes time. Every project at Mauzoun has a standard 2 rounds of changes in order to polish your content to perfection. ",
+    "approach.adaptTimeline.header": "9. We Adapt Your Timeline",
+    "approach.adaptTimeline.content":
+      "We repeat steps 5 through 7 with a new and different approach to research and writing to ensure different results.",
+    "approach.finished.header": "10. Your Story Comes to Life",
+    "approach.finished.content":
+      "Our holistic process ensures that when your content is finalized it is an embodiment of your vision, having brought together your story to life.",
+    "contentWriting.title": "Content Writing",
+    "contentWriting.content": `<b>Holistic, research-based services for strong brands and campaigns that need captivating content.</b>
+      <br /><br />
+      All of our content writing services must be preceded by a Brand Strategy. If your brand does not have one, we’d be more than glad to prepare one for you.
+      <br /><br />
+      We choose to work exclusively with compelling brands on long-term basis, or on exciting campaigns.`,
+    "contentWriting.services.header":
+      "Here’s a list of some of the words we write. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.",
+    "contentWriting.services.naming": "Brand Naming",
+    "contentWriting.services.manifesto": "Brand Manifesto",
+    "contentWriting.services.slogans": "Taglines & Slogans",
+    "contentWriting.services.profile": "Company Profile",
+    "contentWriting.services.website": "Website Content",
+    "contentWriting.services.socialMedia": "Social Media Content",
+    "creativeWriting.title": "Creative Writing",
+    "creativeWriting.content": `<b>All that moves the heart begins with a story.</b>
+      <br /><br />
+      Writers are artists of speech and thought. There’s nothing we enjoy more than telling a story, and we can help you tell your own in the best way possible.
+      <br /><br />
+      We seek inspiration from the rich literary heritages of the world, and we aspire to contribute to our region’s libraries and partake in the advancement of language use. 
+      <br /><br />
+      Our annual competition, which occurs every summer, offers the winner free services in either book doctoring or script doctoring, culminating in pairing the writer’s finished product with either a publisher or a producer. To find out more about our annual competition, <Link href='/job'>click here</Link>.
+      `,
+    "creativeWriting.services.header":
+      "Here’s a list of some of the fee-based services we provide. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.",
+    "creativeWriting.services.storyDoctoring": "Story Doctoring",
+    "creativeWriting.services.scriptwriting": "Scriptwriting",
+    "creativeWriting.services.bookEditing": "Book Editing",
+    "creativeWriting.services.bookTranslation": "Book Translation",
   },
   "/story": {
     nameMeaning:
