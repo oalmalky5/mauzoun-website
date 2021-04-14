@@ -22,45 +22,43 @@ export default function job() {
       <Menu backgroundColor={backgroundColor} />
 
       <div className="container" style={{ backgroundColor }}>
-        <div className="page-title">Mauzoun & You</div>
+        <h1>Mauzoun & You</h1>
 
         {/* Join the team */}
         {!isJoinTeamVisible ? (
           <div
-            className={styles.wrappedContent}
+            className="wrapped-content"
             onClick={() => setIsJoinTeamVisible(true)}
             style={{ cursor: "pointer" }}
           >
-            {f("joinTeam.intro")}
-            <span className={styles.revealIcon}>
-              <BsChevronDown className={styles.revealIcon} />
+            <h2>{f("joinTeam.intro")}</h2>
+            <span className="reveal-icon">
+              <BsChevronDown className="reveal-icon" />
             </span>
           </div>
         ) : (
-          <div className={styles.unwrappedContent}>
-            <span className={styles.contentTitle}>{f("joinTeam.intro")}</span>
-            <div className={styles.content}>{f("joinTeam.content")}</div>
-            <hr size={1} color="black" />
+          <div className="unwrapped-content">
+            <h2>{f("joinTeam.intro")}</h2>
+            {f("joinTeam.content")}
+            <hr />
           </div>
         )}
 
         {/* Join the competition */}
         {!isJoinCompetitionVisible ? (
           <div
-            className={styles.wrappedContent}
+            className="wrapped-content"
             onClick={() => setIsJoinCompetitionVisible(true)}
             style={{ cursor: "pointer" }}
           >
-            {f("joinCompetition.intro")}
-            <span className={styles.revealIcon}>
-              <BsChevronDown className={styles.revealIcon} />
+            <h2>{f("joinCompetition.intro")}</h2>
+            <span className="reveal-icon">
+              <BsChevronDown className="reveal-icon" />
             </span>
           </div>
         ) : (
           <div className={styles.unwrappedContent}>
-            <span className={styles.contentTitle}>
-              {f("joinCompetition.intro")}
-            </span>
+            <h2>{f("joinCompetition.intro")}</h2>
             <div className={styles.compStatus}>
               ________
               <div className={styles.statusBox}>

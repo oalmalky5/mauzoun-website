@@ -1,37 +1,5 @@
 @use "mixins" as *;
 
-.wrappedContent {
-  margin-top: 40px;
-  margin-bottom: 40px;
-
-  & p {
-    display: inline;
-  }
-
-  & .revealIcon {
-    vertical-align: middle;
-    font-size: 20px;
-    stroke-width: 1;
-
-    @include ltr {
-      margin-left: 5px;
-    }
-
-    @include rtl {
-      margin-right: 5px;
-    }
-  }
-}
-
-.unwrappedContent {
-  margin-top: 40px;
-}
-
-.content {
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-
 .compStatus {
   display: flex;
   margin-top: 40px;
