@@ -2,7 +2,7 @@ import React from "react";
 import { IntlProvider } from "react-intl";
 import { useRouter } from "next/router";
 
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import * as locales from "../content/locale";
 
 function MyApp({ Component, pageProps }) {
@@ -17,7 +17,9 @@ function MyApp({ Component, pageProps }) {
       defaultLocale={defaultLocale}
       messages={messages}
     >
-      <Component {...pageProps} />
+      <div dir={locale === "ar" ? "rtl" : "ltr"}>
+        <Component {...pageProps} />
+      </div>
     </IntlProvider>
   );
 }

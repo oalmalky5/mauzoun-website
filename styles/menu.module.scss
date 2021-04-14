@@ -1,0 +1,146 @@
+@use "mixins" as *;
+
+.sidenav {
+  height: 100%;
+  width: 430px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  margin-top: 0px;
+  overflow-x: hidden;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Alegreya";
+
+  @include ltr {
+    left: 0;
+    padding-left: 30px;
+  }
+
+  @include rtl {
+    right: 0;
+    padding-right: 30px;
+  }
+}
+
+.navLink {
+  padding: 6px 8px 6px 16px;
+  display: block;
+  margin-bottom: 20px;
+
+  @include ltr {
+    margin-left: 10px;
+  }
+
+  @include rtl {
+    margin-right: 10px;
+  }
+
+  & p {
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  & .otherLocaleLink p {
+    font-weight: lighter;
+    font-size: 15px;
+  }
+}
+
+.logo img {
+  height: 150px;
+  width: 175px;
+  margin-bottom: 50px;
+}
+
+.bottomNavIcons {
+  display: flex;
+  align-items: stretch;
+
+  @include ltr {
+    margin-left: 25px;
+  }
+
+  @include rtl {
+    margin-right: 25px;
+  }
+}
+
+.complementaryInfo {
+  @include ltr {
+    margin-left: 25px;
+  }
+
+  @include rtl {
+    margin-right: 25px;
+  }
+}
+
+.languageSwitch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 20px;
+
+  @include ltr {
+    margin-left: 25px;
+  }
+
+  @include rtl {
+    margin-right: 25px;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 70px;
+  height: 30px;
+
+  & input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  & .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 34px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  & .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 3px;
+    background-color: black;
+    border-radius: 50%;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  & input:checked + .slider:before {
+    -webkit-transform: translateX(35px);
+    -ms-transform: translateX(35px);
+    transform: translateX(35px);
+  }
+}

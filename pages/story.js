@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "../styles/story.module.css";
+
+import styles from "../styles/story.module.scss";
 import Menu from "../components/Menu";
 
 const Story = function () {

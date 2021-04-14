@@ -17,7 +17,8 @@
     "react-icons": "^4.2.0",
     "react-intl": "^5.15.8",
     "react-jsx-parser": "^1.28.3",
-    "react-modal": "^3.12.1"
+    "react-modal": "^3.12.1",
+    "sass": "^1.32.8"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

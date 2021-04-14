@@ -4,6 +4,8 @@ exports["en-US"] = {
     servicesLink: "Services",
     portfolioLink: "Portfolio",
     jobLink: "Mauzoun & You",
+    email: "hello@mauzoun.com",
+    location: "Based in Jeddah, Saudi Arabia",
   },
   "/": {
     interestedInWork: "Interested in the work we do?",

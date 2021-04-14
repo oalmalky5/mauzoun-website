@@ -1,6 +1,7 @@
-import styles from "../styles/job.module.css";
 import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
+
+import styles from "../styles/job.module.scss";
 import Menu from "../components/Menu";
 
 export default function job() {

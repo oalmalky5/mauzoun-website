@@ -2,9 +2,10 @@ import Head from "next/head";
 import story from "./story";
 // import services from './services'
 // import job from './job'
-import styles from "../styles/services.module.css";
 import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
+
+import styles from "../styles/services.module.scss";
 import Menu from "../components/Menu";
 
 export default function services() {

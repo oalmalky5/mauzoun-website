@@ -11,7 +11,7 @@ import {
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-import styles from "../styles/menu.module.css";
+import styles from "../styles/menu.module.scss";
 import * as locales from "../content/locale";
 import formatJsxMessage from "../utils/formatJsxMessage";
 
@@ -39,71 +39,65 @@ export default function Menu({ backgroundColor }) {
     );
   }, [locale]);
 
-  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
-  const otherF = (id, options) =>
-    formatJsxMessage(otherIntl, otherLocale, id, options);
+  const f = (id, options) => formatJsxMessage(intl, id, options);
+  const otherF = (id, options) => formatJsxMessage(otherIntl, id, options);
 
   return (
-    <div>
-      <div className={styles.sidenav} style={{ backgroundColor }}>
-        <div className={styles.logo}>
-          <Link href="/">
-            <img src="https://i.imgur.com/HjDbXtR.png" alt="Mauzoun logo" />
+    <div className={styles.sidenav} style={{ backgroundColor }}>
+      <div className={styles.logo}>
+        <Link href="/">
+          <img src="https://i.imgur.com/HjDbXtR.png" alt="Mauzoun logo" />
+        </Link>
+      </div>
+
+      <div>
+        {["story", "services", "portfolio", "job"].map((e) => (
+          <Link href={"/" + e} key={e}>
+            <a className={styles.navLink}>
+              <span>{f(e + "Link")}</span>
+              <span className={styles.otherLocaleLink}>
+                {otherF(e + "Link")}
+              </span>
+            </a>
           </Link>
+        ))}
+      </div>
+
+      <div className={styles.languageSwitch}>
+        <b>{locale === "en-US" ? "English" : "عربــي"}</b>
+        <Link href={pathname} locale={otherLocale}>
+          <label className={styles.switch}>
+            <input type="checkbox" checked={locale === "ar"} readOnly />
+            <span className={styles.slider}></span>
+          </label>
+        </Link>
+        {locale === "ar" ? "English" : "عربــي"}
+      </div>
+
+      <div className={styles.bottomNavIcons}>
+        <div className={styles.twitter}>
+          <a target="_blank" href="https://twitter.com/mauzoun_?lang=en">
+            <IoLogoTwitter size="30px" />
+          </a>
         </div>
-
-        <div>
-          {["story", "services", "portfolio", "job"].map((e) => (
-            <Link href={"/" + e} key={e}>
-              <a className={styles.navLink}>
-                <span>{f(e + "Link", { style: { textAlign: "left" } })}</span>
-                <span className={styles.otherLocaleLink}>
-                  {otherF(e + "Link", { style: { textAlign: "left" } })}
-                </span>
-              </a>
-            </Link>
-          ))}
+        <div className={styles.twitter}>
+          <a target="_blank" href="https://www.instagram.com/mauzoun/?hl=en">
+            <IoLogoInstagram size="30px" />
+          </a>
         </div>
-
-        <div className={styles.languageSwitch}>
-          <p style={{ fontWeight: locale === "en-US" ? "bold" : "normal" }}>
-            English
-          </p>
-          <Link href={pathname} locale={otherLocale}>
-            <label className={styles.switch}>
-              <input type="checkbox" checked={locale === "ar"} readOnly />
-              <span className={styles.slider}></span>
-            </label>
-          </Link>
-          <p style={{ fontWeight: locale === "ar" ? "bold" : "normal" }}>
-            عربــي
-          </p>
+        <div className={styles.twitter}>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/mauzoun/about/"
+          >
+            <GrFacebookOption size="30px" />
+          </a>
         </div>
+      </div>
 
-        <div className={styles.bottomNavIcons}>
-          <div className={styles.twitter}>
-            <a target="_blank" href="https://twitter.com/mauzoun_?lang=en">
-              <IoLogoTwitter size="30px" />
-            </a>
-          </div>
-          <div className={styles.twitter}>
-            <a target="_blank" href="https://www.instagram.com/mauzoun/?hl=en">
-              <IoLogoInstagram size="30px" />
-            </a>
-          </div>
-          <div className={styles.twitter}>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/company/mauzoun/about/"
-            >
-              <GrFacebookOption size="30px" />
-            </a>
-          </div>
-        </div>
-
-        <div className={styles.email}>hello@mauzoun.com</div>
-
-        <div className={styles.location}>Based in Jeddah, Saudi Arabia</div>
+      <div className={styles.complementaryInfo}>
+        {f("email")}
+        <b>{f("location")}</b>
       </div>
     </div>
   );

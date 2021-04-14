@@ -4,9 +4,11 @@ export const ar = {
     servicesLink: "خدماتنا",
     portfolioLink: "أعمالنا",
     jobLink: "مَوْزوْن وأنت",
+    email: "WAITING FOR TRANSLATION",
+    location: "WAITING FOR TRANSLATION",
   },
   "/": {
-    interestedInWork: "TRANSLATION PENDING",
+    interestedInWork: "WAITING FOR TRANSLATION",
     title: "أجمل ترحيب من فريق مَوْزوْن.",
     summary:
       "نحن ستوديو كتابة إبداعية يبحث ثم يكتب بإبداع وتكامل. نقدم خدماتنا من مكاتبنا في جدة لعملائنا في جميع أنحاء العالم.",

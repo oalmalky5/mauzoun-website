@@ -5,14 +5,13 @@ import { useIntl } from "react-intl";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-import styles from "../styles/home.module.css";
+import styles from "../styles/home.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 
 export default function Home() {
-  const router = useRouter();
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, router.locale, id, options);
+  const f = (id, options) => formatJsxMessage(intl, id, options);
 
   const [areServicesVisible, setAreServicesVisible] = useState(false);
   const [isApproachVisible, setIsApproachVisible] = useState(false);
@@ -22,7 +21,7 @@ export default function Home() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
-    <div>
+    <>
       <Menu backgroundColor="#F8D952" />
 
       <button
@@ -150,7 +149,7 @@ export default function Home() {
           </div>
         )}
       </div>
-    </div>
+    </>
 
     // layout the structure of the pages and
   );

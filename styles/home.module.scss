@@ -1,22 +1,29 @@
+@use "mixins" as *;
+
 .main {
-  margin-left: 430px; /* Same as the width of the sidebar */
-  height: 100%;
+  position: absolute;
+  min-height: 100%;
   width: 510px;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  top: 0;
-  bottom: 0;
-  padding: 0px 10px;
   background-color: #f8d952;
-  padding-top: 20px;
   padding: 50px;
   font-size: 30px;
   font-family: "Alegreya";
+
+  @include ltr {
+    margin-left: 430px; /* Same as the width of the sidebar */
+  }
+
+  @include rtl {
+    margin-right: 430px; /* Same as the width of the sidebar */
+  }
 }
 
 .main h6 {
+  margin-top: 0;
   margin-bottom: 30px;
+  font-size: 29px;
 }
+
 .topPara {
   margin-top: 0px;
 }
@@ -35,12 +42,7 @@
   margin-top: 0;
 }
 
-.main .into {
-  margin-top: 0;
-}
-
-.main h6 {
-  font-size: 29px;
+.into {
   margin-top: 0;
 }
 
@@ -51,29 +53,32 @@
 .wrappedContent {
   margin-top: 20px;
   font-weight: bold;
-}
 
-.wrappedContent p {
-  display: inline;
-}
+  & p {
+    display: inline;
+  }
 
-.revealIcon {
-  vertical-align: middle;
-  margin-left: 5px;
-  font-size: 20px;
-  stroke-width: 1;
+  & .revealIcon {
+    vertical-align: middle;
+    font-size: 20px;
+    stroke-width: 1;
+
+    @include ltr {
+      margin-left: 5px;
+    }
+
+    @include rtl {
+      margin-right: 5px;
+    }
+  }
 }
 
 .unwrappedContent {
   margin-top: 20px;
-}
 
-.unwrappedContent p {
-  display: inline;
-}
-
-.navLinks {
-  margin-top: 100px;
+  & p {
+    display: inline;
+  }
 }
 
 .contactForm {
@@ -86,12 +91,19 @@
   display: flex; /* or inline-flex */
   align-items: center;
   justify-content: center;
-  margin-left: 1100px;
   position: absolute;
   position: fixed;
   border: solid black;
   font-size: 20px;
   font-family: "Alegreya";
+
+  @include ltr {
+    margin-left: 1100px;
+  }
+
+  @include rtl {
+    margin-right: 1100px;
+  }
 }
 
 .contactFrom .innerContent {
