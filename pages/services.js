@@ -1,32 +1,32 @@
-import Head from "next/head";
-import story from "./story";
-// import services from './services'
-// import job from './job'
 import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
 import styles from "../styles/services.module.scss";
 import Menu from "../components/Menu";
+import { useIntl } from "react-intl";
+import formatJsxMessage from "../utils/formatJsxMessage";
 
 export default function services() {
-  const [button1Show, setButton1Show] = useState(true);
-  const [button2Show, setButton2Show] = useState(true);
-  const [button3Show, setButton3Show] = useState(true);
-  const [button4Show, setButton4Show] = useState(true);
+  const intl = useIntl();
+  const f = (id, options) => formatJsxMessage(intl, id, options);
+
+  const [isApproachVisible, setIsApproachVisible] = useState(false);
+  const [isContentWritingVisible, setIsContentWritingVisible] = useState(false);
 
   return (
     <div>
       <Menu backgroundColor="#f7f5f0" />
 
       <div className={styles.main}>
-        <div className={styles.mainTitle}>Services</div>
+        <div className={styles.mainTitle}>{f("title")}</div>
 
         <div className={styles.first}>
           <span className={styles.approach}>
-            <u>Approach</u>
+            <u>{f("approachTitle")}</u>
           </span>
-          {button1Show ? (
-            <span onClick={() => setButton1Show(false)}>
+
+          {!isApproachVisible ? (
+            <span onClick={() => setIsApproachVisible(true)}>
               <BsChevronDown className={styles.icon1} />
             </span>
           ) : (
@@ -154,8 +154,8 @@ export default function services() {
           <span className={styles.contentWriting}>
             <u>Content Writing</u>
           </span>
-          {button2Show ? (
-            <span onClick={() => setButton2Show(false)}>
+          {!isContentWritingVisible ? (
+            <span onClick={() => setIsContentWritingVisible(true)}>
               <BsChevronDown className={styles.icon1} />
             </span>
           ) : (

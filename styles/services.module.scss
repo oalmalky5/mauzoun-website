@@ -1,148 +1,154 @@
+@use "mixins" as *;
+
 .main {
-  margin-left: 430px; /* Same as the width of the sidebar */
-  height: 350vh;
+  position: absolute;
+  min-height: 100%;
   width: 510px;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  top: 0;
-  bottom: 0;
-  padding: 0px 10px;
   background-color: #f7f5f0;
-  padding-top: 20px;
   padding: 50px;
   font-size: 30px;
   font-family: "Alegreya";
+
+  @include ltr {
+    margin-left: 430px; /* Same as the width of the sidebar */
+  }
+
+  @include rtl {
+    margin-right: 430px; /* Same as the width of the sidebar */
+  }
 }
 
-.main .first {
+.first {
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
-.main .mainTitle {
+.mainTitle {
   font-weight: bold;
 }
 
-.main .mainPara {
+.mainPara {
   margin-top: 60.5px;
   font-size: 25px;
   margin-bottom: 40px;
 }
 
-.main .contactUs .stepTitle {
+.contactUs .stepTitle {
   font-size: 20px;
   font-weight: bold;
 }
 
-.main .contactUs .stepInfo {
+.contactUs .stepInfo {
   font-size: 20px;
 }
 
-.main .form .stepTitle {
-  margin-top: 40px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.main .form .stepInfo {
-  font-size: 20px;
-}
-
-.main .quotation .stepTitle {
+.form .stepTitle {
   margin-top: 40px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.main .quotation .stepInfo {
+.form .stepInfo {
   font-size: 20px;
 }
-.main .timeline .stepTitle {
+
+.quotation .stepTitle {
   margin-top: 40px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.main .timeline .stepInfo {
+.quotation .stepInfo {
   font-size: 20px;
 }
 
-.main .research .stepTitle {
+.timeline .stepTitle {
   margin-top: 40px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.main .research .stepInfo {
+.timeline .stepInfo {
   font-size: 20px;
 }
 
-.main .writing .stepTitle {
+.research .stepTitle {
   margin-top: 40px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.main .writing .stepInfo {
+.research .stepInfo {
   font-size: 20px;
 }
 
-.main .delivery .stepTitle {
+.writing .stepTitle {
   margin-top: 40px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.main .delivery .stepInfo {
+.writing .stepInfo {
   font-size: 20px;
 }
 
-.main .feedback .stepTitle {
+.delivery .stepTitle {
   margin-top: 40px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.main .feedback .stepInfo {
+.delivery .stepInfo {
   font-size: 20px;
 }
 
-.main .adapt .stepTitle {
+.feedback .stepTitle {
   margin-top: 40px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.main .adapt .stepInfo {
+.feedback .stepInfo {
   font-size: 20px;
 }
 
-.main .final .stepTitle {
+.adapt .stepTitle {
   margin-top: 40px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.main .final .stepInfo {
+.adapt .stepInfo {
   font-size: 20px;
 }
 
-.main .firstPara {
+.final .stepTitle {
   margin-top: 40px;
   font-size: 20px;
   font-weight: bold;
 }
-.main .secondPara {
+
+.final .stepInfo {
+  font-size: 20px;
+}
+
+.firstPara {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.secondPara {
   margin-top: 40px;
   font-size: 20px;
 }
 
-.main .thirdPara {
+.thirdPara {
   margin-top: 40px;
   font-size: 20px;
 }
 
-.main .serviceListBox {
+.serviceListBox {
   margin-top: 50px;
   width: 850.5px;
   height: 350px;
@@ -150,14 +156,14 @@
   background-color: white;
 }
 
-.main .serviceListBox .introPara {
+.serviceListBox .introPara {
   margin-top: 25.5px;
   font-size: 25px;
   margin-left: 30px;
   margin-right: 30px;
 }
 
-.main .services .naming,
+.services .naming,
 .manifesto,
 .slogans,
 .profile,
@@ -170,6 +176,6 @@
   font-weight: bold;
 }
 
-.main .services .serviceName {
+.services .serviceName {
   margin-left: 5px;
 }

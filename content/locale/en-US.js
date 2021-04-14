@@ -29,6 +29,27 @@ exports["en-US"] = {
   },
   "/job": {},
   "/portfolio": {},
-  "/services": {},
-  "/story": {},
+  "/services": {
+    title: "Services",
+    approachTitle: "Approach",
+  },
+  "/story": {
+    nameMeaning:
+      "Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia that was founded in 2018. Our name aptly means “poetic balance” in Arabic, a meaning that our words, services, and values live up to.",
+    aim:
+      "Through our work process, we aim to reflect the richness and versatility of both the Arabic and English languages, the ingenuity of our writers, and how powerful and seamless good writing should be.",
+    teamwork:
+      "Our team works cooperatively to revive the appreciation of good writing, and we craft content and stories with precision and passion. Our words can pack a punch or be elegantly eloquent. It all depends on what you want, and how we see it best.",
+    teamPresentation: "Here is the team:",
+    "teamMember.LayanAbdulShakoor": "Layan Abdul Shakoor",
+    "roles.creativeDirector": "Creative Director",
+    world:
+      "In a world that is always bustling about and concerned with immediate results, we stick to the belief that good work takes care and time. Every word is an investment in your brand, or your identity as an author. That is why we work on booking basis only and rarely take on rushed projects.",
+    "whitebox.innerText1":
+      "We believe in the four-day work week, and consider ourselves pioneers in actively pursuing a work-life balance for all of our team members.",
+    "whitebox.innerText2":
+      "This culture we cultivated takes our creativities and productivities up a notch, providing the space and time needed to bring a fresh outlook to our workplace and your projects.",
+    workAspects:
+      "In all aspects, the work we do, and how we do it, is holistic and innovative. We aim to ease and expedite the process for artists, independent filmmakers, personal brands, and businesses alike, activating their ambitions with powerful and captivating words.",
+  },
 };
