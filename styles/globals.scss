@@ -17,14 +17,24 @@ body {
   box-sizing: border-box;
 }
 
+p {
+  font-size: 20px;
+  font-family: "Alegreya";
+}
+
 h1 p {
   font-size: 30px;
   font-weight: bold;
 }
 
-h2 p {
+h2 {
   font-size: 28px;
   font-weight: normal;
+
+  & p {
+    font-size: 28px;
+    font-weight: normal;
+  }
 }
 
 h3 {
@@ -40,10 +50,6 @@ h3 {
 h4 p {
   font-size: 23px;
   font-weight: bold;
-}
-
-p {
-  font-size: 20px;
 }
 
 hr {
@@ -67,7 +73,6 @@ a {
   min-height: 100%;
   width: 600px;
   padding: 50px;
-  font-family: "Alegreya";
 
   @include ltr {
     margin-left: 430px; /* Same as the width of the sidebar */

@@ -2,14 +2,10 @@ import React from "react";
 import { IoLogoTwitter } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
 import { GrFacebookOption } from "react-icons/gr";
-import {
-  useIntl,
-  createIntl,
-  createIntlCache,
-  RawIntlProvider,
-} from "react-intl";
+import { useIntl, createIntl, createIntlCache } from "react-intl";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Cookies from "js-cookie";
 
 import styles from "../styles/menu.module.scss";
 import * as locales from "../content/locale";
@@ -54,7 +50,7 @@ export default function Menu({ backgroundColor }) {
         {["story", "services", "portfolio", "job"].map((e) => (
           <Link href={"/" + e} key={e}>
             <a className={styles.navLink}>
-              <span>{f(e + "Link")}</span>
+              {f(e + "Link")}
               <span className={styles.otherLocaleLink}>
                 {otherF(e + "Link")}
               </span>
@@ -66,26 +62,24 @@ export default function Menu({ backgroundColor }) {
       <div className={styles.languageSwitch}>
         <b>{locale === "en-US" ? "English" : "عربــي"}</b>
         <Link href={pathname} locale={otherLocale}>
-          <label className={styles.switch}>
-            <input type="checkbox" checked={locale === "ar"} readOnly />
-            <span className={styles.slider}></span>
-          </label>
+          <a onClick={() => Cookies.set("NEXT_LOCALE", otherLocale)}>
+            <label className={styles.switch}>
+              <input type="checkbox" checked={locale === "ar"} readOnly />
+              <span className={styles.slider} />
+            </label>
+          </a>
         </Link>
         {locale === "ar" ? "English" : "عربــي"}
       </div>
 
-      <div className={styles.bottomNavIcons}>
-        <div className={styles.twitter}>
+      <div className={styles.complementaryInfo}>
+        <div className={styles.bottomNavIcons}>
           <a target="_blank" href="https://twitter.com/mauzoun_?lang=en">
             <IoLogoTwitter size="30px" />
           </a>
-        </div>
-        <div className={styles.twitter}>
           <a target="_blank" href="https://www.instagram.com/mauzoun/?hl=en">
             <IoLogoInstagram size="30px" />
           </a>
-        </div>
-        <div className={styles.twitter}>
           <a
             target="_blank"
             href="https://www.linkedin.com/company/mauzoun/about/"
@@ -93,9 +87,7 @@ export default function Menu({ backgroundColor }) {
             <GrFacebookOption size="30px" />
           </a>
         </div>
-      </div>
 
-      <div className={styles.complementaryInfo}>
         {f("email")}
         <b>{f("location")}</b>
       </div>

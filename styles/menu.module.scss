@@ -1,42 +1,40 @@
 @use "mixins" as *;
 
 .sidenav {
+  position: fixed;
+  top: 0;
   height: 100%;
   width: 430px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  margin-top: 0px;
-  overflow-x: hidden;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-  font-family: "Alegreya";
 
   @include ltr {
     left: 0;
-    padding-left: 30px;
+    padding-left: 60px;
   }
 
   @include rtl {
     right: 0;
-    padding-right: 30px;
+    padding-right: 60px;
+  }
+}
+
+.logo img {
+  height: 150px;
+  width: 175px;
+  margin-bottom: 50px;
+
+  @include ltr {
+    margin-left: -25px;
+  }
+
+  @include rtl {
+    margin-right: -25px;
   }
 }
 
 .navLink {
-  padding: 6px 8px 6px 16px;
-  display: block;
-  margin-bottom: 20px;
-
-  @include ltr {
-    margin-left: 10px;
-  }
-
-  @include rtl {
-    margin-right: 10px;
-  }
-
   & p {
     text-decoration: none;
     font-size: 25px;
@@ -47,35 +45,19 @@
   & .otherLocaleLink p {
     font-weight: lighter;
     font-size: 15px;
-  }
-}
-
-.logo img {
-  height: 150px;
-  width: 175px;
-  margin-bottom: 50px;
-}
-
-.bottomNavIcons {
-  display: flex;
-  align-items: stretch;
-
-  @include ltr {
-    margin-left: 25px;
-  }
-
-  @include rtl {
-    margin-right: 25px;
+    margin-bottom: 30px;
   }
 }
 
 .complementaryInfo {
-  @include ltr {
-    margin-left: 25px;
+  & .bottomNavIcons {
+    display: flex;
+    align-items: stretch;
   }
 
-  @include rtl {
-    margin-right: 25px;
+  & p {
+    margin-top: 5px;
+    margin-bottom: 0px;
   }
 }
 
@@ -83,17 +65,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   font-size: 20px;
-
-  @include ltr {
-    margin-left: 25px;
-  }
-
-  @include rtl {
-    margin-right: 25px;
-  }
 }
 
 .switch {
@@ -110,7 +84,6 @@
     height: 0;
   }
 
-  /* The slider */
   & .slider {
     position: absolute;
     cursor: pointer;
