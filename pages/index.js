@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
-import Modal from "react-modal";
 import { useIntl } from "react-intl";
-import { useRouter } from "next/router";
 import Link from "next/link";
 
 import styles from "../styles/home.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
+import ContactButton from "../components/ContactButton";
+
+const backgroundColor = "#f8d952";
 
 export default function Home() {
   const intl = useIntl();
@@ -18,139 +19,110 @@ export default function Home() {
   const [areProjectsVisible, setAreProjectsVisible] = useState(false);
   const [isWorkVisible, setIsWorkVisible] = useState(false);
 
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
   return (
     <>
-      <Menu backgroundColor="#F8D952" />
+      <Menu backgroundColor={backgroundColor} />
 
-      <button
-        className={styles.contactForm}
-        onClick={() => setModalIsOpen(true)}
-      >
-        <div className={styles.innerContent}> {f("interestedInWork")}</div>
+      <div className="container" style={{ backgroundColor }}>
+        <h1>{f("title")}</h1>
 
-        <Modal
-          className={styles.modal}
-          isOpen={modalIsOpen}
-          onRequestClose={() => setModalIsOpen(false)}
-        >
-          <h4>Modal title</h4>
-          <p>Modal body</p>
-          <div>
-            <button
-              className={styles.closeButton}
-              onClick={() => setModalIsOpen(false)}
-            >
-              close
-            </button>
-          </div>
-        </Modal>
-      </button>
-
-      <div className={styles.main}>
-        <h6>{f("title")}</h6>
-
-        <span className={styles.topPara}>{f("summary")}</span>
+        {f("summary")}
 
         <img
+          className={styles.homeImg}
           src="http://writingandwellness.com/wp-content/uploads/2015/02/Home-Office-2.jpg"
           alt="an image of an office"
-        ></img>
+        />
 
-        <div className={styles.storyPara}>
-          {f("story")}
-          <hr size={1} color="black" />
-        </div>
+        {f("story")}
+        <hr />
 
         {/* Services */}
         {!areServicesVisible ? (
           <div
-            className={styles.wrappedContent}
+            className="wrapped-content"
             onClick={() => setAreServicesVisible(true)}
             style={{ cursor: "pointer" }}
           >
-            {f("services.intro")}
-            <span className={styles.revealIcon}>
-              <BsChevronDown className={styles.revealIcon} />
+            <b>{f("services.intro")}</b>
+            <span className="reveal-icon">
+              <BsChevronDown className="reveal-icon" />
             </span>
           </div>
         ) : (
-          <div className={styles.unwrappedContent}>
+          <div className="inline unwrapped-content">
             <Link href="/services">
               <b style={{ cursor: "pointer" }}>{f("services.intro")}</b>
             </Link>
             {f("services.content")}
-            <hr size={1} color="black" />
+            <hr />
           </div>
         )}
 
         {/* Approach */}
         {!isApproachVisible ? (
           <div
-            className={styles.wrappedContent}
+            className="wrapped-content"
             onClick={() => setIsApproachVisible(true)}
             style={{ cursor: "pointer" }}
           >
-            {f("approach.intro")}
-            <span className={styles.revealIcon}>
-              <BsChevronDown className={styles.revealIcon} />
+            <b>{f("approach.intro")}</b>
+            <span className="reveal-icon">
+              <BsChevronDown className="reveal-icon" />
             </span>
           </div>
         ) : (
-          <div className={styles.unwrappedContent}>
-            {!areServicesVisible && <hr size={1} color="black" />}
+          <div className="inline unwrapped-content">
+            {!areServicesVisible && <hr />}
             <b>{f("approach.intro")}</b>
             {f("approach.content")}
-            <hr size={1} color="black" />
+            <hr />
           </div>
         )}
 
         {/* Projects */}
         {!areProjectsVisible ? (
           <div
-            className={styles.wrappedContent}
+            className="wrapped-content"
             onClick={() => setAreProjectsVisible(true)}
             style={{ cursor: "pointer" }}
           >
-            {f("projects.intro")}
-            <span className={styles.revealIcon}>
-              <BsChevronDown className={styles.revealIcon} />
+            <b>{f("projects.intro")}</b>
+            <span className="reveal-icon">
+              <BsChevronDown className="reveal-icon" />
             </span>
           </div>
         ) : (
-          <div className={styles.unwrappedContent}>
-            {!isApproachVisible && <hr size={1} color="black" />}
+          <div className="inline unwrapped-content">
+            {!isApproachVisible && <hr />}
             <b>{f("projects.intro")}</b>
             {f("projects.content")}
-            <hr size={1} color="black" />
+            <hr />
           </div>
         )}
 
         {/* Work */}
         {!isWorkVisible ? (
           <div
-            className={styles.wrappedContent}
+            className="wrapped-content"
             onClick={() => setIsWorkVisible(true)}
             style={{ cursor: "pointer" }}
           >
-            {f("work.intro")}
-            <span className={styles.revealIcon}>
-              <BsChevronDown className={styles.revealIcon} />
+            <b>{f("work.intro")}</b>
+            <span className="reveal-icon">
+              <BsChevronDown className="reveal-icon" />
             </span>
           </div>
         ) : (
-          <div className={styles.unwrappedContent}>
-            {!areProjectsVisible && <hr size={1} color="black" />}
-            <Link href="/job">
-              <b style={{ cursor: "pointer" }}>{f("work.intro")}</b>
-            </Link>
+          <div className="inline unwrapped-content">
+            {!areProjectsVisible && <hr />}
+            <b>{f("work.intro")}</b>
             {f("work.content")}
           </div>
         )}
       </div>
-    </>
 
-    // layout the structure of the pages and
+      <ContactButton messageId="contactPrompt" />
+    </>
   );
 }

@@ -1,19 +1,34 @@
-.blueCircle {
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
-  border-radius: 50%; /* the magic */
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  text-align: center;
-  color: white;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin: 0 auto 40px;
-  background-color: blue;
+@use "mixins" as *;
+
+.contactButton {
+  background: #f8d952;
+  padding: 30px;
+  width: 235px;
+  height: 235px;
+  margin-top: 580px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  border: solid black;
+
+  @include ltr {
+    margin-left: 1100px;
+  }
+
+  @include rtl {
+    margin-right: 1100px;
+  }
+
+  & p {
+    font-size: 23px;
+    font-family: "Alegreya";
+    font-style: italic;
+  }
 }
 
-.contactForm .modal {
-  background-color: blue;
+.contactModal {
+  position: fixed;
+  z-index: 10;
 }

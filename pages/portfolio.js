@@ -1,58 +1,63 @@
 import React from "react";
 import styles from "../styles/portfolio.module.scss";
 import Menu from "../components/Menu";
+import { useIntl } from "react-intl";
+import formatJsxMessage from "../utils/formatJsxMessage";
+
+const backgroundColor = "#fbec9a";
 
 export default function portfolio() {
+  const intl = useIntl();
+  const f = (id, options) => formatJsxMessage(intl, id, options);
+
+  const getClients = (category) => {
+    let i = 1;
+    let numberOfClients = 0;
+    let clients = [];
+
+    Object.keys(intl.messages).forEach((e) => {
+      if (e.startsWith(`${category}.clients.`)) numberOfClients += 1;
+    });
+
+    while (i < numberOfClients + 1) {
+      clients.push(
+        <span className={styles.client} key={`${category}.clients.${i}`}>
+          {i % 2 === 0 ? (
+            f(`${category}.clients.${i}`)
+          ) : (
+            <b>{f(`${category}.clients.${i}`)}</b>
+          )}
+        </span>
+      );
+      i += 1;
+    }
+    return clients;
+  };
+
   return (
     <div>
-      <Menu backgroundColor="#fbec9a" />
+      <Menu backgroundColor={backgroundColor} />
 
-      <div className={styles.main}>
-        <div className={styles.mainTitle}>Portfolio</div>
-        <div className={styles.firstPara}>
-          A personal look into our tales of success.
-        </div>
-        <div className={styles.secondPara}>
-          Read our team’s project-focused journal entries, which document our
-          creative thought process and show our beloved final outcome.
-        </div>
+      <div className="container" style={{ backgroundColor }}>
+        <h1>{f("title")}</h1>
 
-        <div className={styles.content}>
-          <div className={styles.title}>
-            <u>Content Writing</u>
-          </div>
+        <h2>{f("subtitle")}</h2>
 
-          <div className={styles.projects}>
-            <div className={styles.project}>Mauj</div>
-            <div className={styles.project}>Shafra</div>
-            <div className={styles.project}>Musa & Palm</div>
-            <div className={styles.project}>Saudi Tourism Authority</div>
-            <div className={styles.project}>Ministry of Culture: AlBalad</div>
-          </div>
-          <hr size={1} color="black" />
-        </div>
+        {f("content")}
 
-        <div className={styles.creative}>
-          <div className={styles.title}>
-            <u>Creative Writing</u>
-          </div>
+        {/* Content Writing */}
+        <h3 className={styles.clientCategory}>{f("contentWriting.title")}</h3>
+        {getClients("contentWriting")}
 
-          <div className={styles.projects}>
-            <div className={styles.project}>
-              Ministry of Culture: <br />
-              Madinah Culinary Arts
-            </div>
-          </div>
-        </div>
+        <hr className="big-margin" size={1} color="black" />
 
-        <div className={styles.brandLogos}>
+        {/* Creative Writing */}
+        <h3 className={styles.clientCategory}>{f("creativeWriting.title")}</h3>
+        {getClients("creativeWriting")}
+
+        <div className="whitebox">
           <div className={styles.logoGrid}>
-            <div className={styles.clients}>
-              Since 2018, we have worked with{" "}
-              <b>
-                <u>over 100 clients</u>
-              </b>
-            </div>
+            <div className={styles.clients}>{f("clients")}</div>
           </div>
         </div>
       </div>

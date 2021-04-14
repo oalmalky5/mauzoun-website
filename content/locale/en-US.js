@@ -9,7 +9,7 @@ exports["en-US"] = {
     comingSoon: "COMING SOON.",
   },
   "/": {
-    interestedInWork: "Interested in the work we do?",
+    contactPrompt: "Interested in the work we do?",
     title: "A warm welcome to you from the Mauzoun Team.",
     summary:
       "We are a Jeddah-based writing studio that researches then writes creatively and holistically, providing services to clients worldwide.",
@@ -26,7 +26,7 @@ exports["en-US"] = {
       ", from innovative brands to independent authors with passion projects. You can read our tales of success in <Link href='/portfolio'>our portfolio</Link>.",
     "work.intro": "Our work is dedicated and ethical",
     "work.content":
-      ", prioritizing our community as much as our clients. This is why we host an annual competition for up-and-coming writers who are developing their first-ever manuscripts. Winners are provided with free editing, marketing, and publishing services to unleash their works to the world. To learn more about this competition, click here.",
+      ", prioritizing our community as much as our clients. This is why we host an annual competition for up-and-coming writers who are developing their first-ever manuscripts. Winners are provided with free editing, marketing, and publishing services to unleash their works to the world. To learn more about this competition, <Link href='/job'>click here</Link>.",
   },
   "/job": {
     title: "Mauzoun & You",
@@ -40,8 +40,23 @@ exports["en-US"] = {
     "joinCompetition.content":
       "Our latest endeavor in creative writing will be investing in emerging and first-time writers from the Arab World, who are trying to publish their first book, novel, short stories, collection of essays, or visual script. Mauzoun will be collaborating with a judging panel that will process applications and decide on one writer, who will receive our consultation and services for a period of one year, and have their work published or paired with a producer by the end of the year.",
   },
-  "/portfolio": {},
+  "/portfolio": {
+    title: "Portfolio",
+    subtitle: "A personal look into our tales of success.",
+    content:
+      "Read our team’s project-focused journal entries, which document our creative thought process and show our beloved final outcome.",
+    "contentWriting.title": "Content Writing",
+    "contentWriting.clients.1": "Mauj",
+    "contentWriting.clients.2": "Shafra",
+    "contentWriting.clients.3": "Musa & Palm",
+    "contentWriting.clients.4": "Saudi Tourism Authority",
+    "contentWriting.clients.5": "Ministry of Culture: AlBalad",
+    "creativeWriting.title": "Creative Writing",
+    "creativeWriting.clients.1": "Ministry of Culture: Madinah Culinary Arts",
+    clients: "Since 2018, we have worked with <b><u>over 100 clients</u></b>.",
+  },
   "/services": {
+    contactPrompt: "Book a call or send us an e-mail, and our team will help you in our earliest availability.",
     title: "Services",
     "approach.title": "Approach",
     "approach.header":

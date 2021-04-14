@@ -5,23 +5,26 @@ import styles from "../styles/story.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 
+const backgroundColor = "#d1e3f2";
+
 const Story = function () {
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, id, options);
 
   return (
     <div>
-      <Menu backgroundColor="#91cae1" />
+      <Menu backgroundColor={backgroundColor} />
 
-      <div className={styles.main}>
-        <div className={styles.nameMeaning}>{f("nameMeaning")}</div>
+      <div className="container" style={{ backgroundColor }}>
+        <h1>{f("nameMeaning")}</h1>
 
-        <div className={styles.aim}>{f("aim")}</div>
+        {f("aim")}
 
-        <div className={styles.teamWork}>{f("teamwork")}</div>
+        <b>{f("teamwork")}</b>
 
         <div className={styles.gridSection}>
           <h4>{f("teamPresentation")}</h4>
+
           <div className={styles.gridContainer}>
             <div className={styles.gridOne}>
               <div className={styles.gridItem}></div>
@@ -81,15 +84,15 @@ const Story = function () {
           </div>
         </div>
 
-        <div className={styles.world}>{f("world")}</div>
+        {f("world")}
 
-        <div className={styles.whiteBox}>
-          <div className={styles.innerText1}>{f("whitebox.innerText1")}</div>
-
-          <div className={styles.innerText2}>{f("whitebox.innerText2")}</div>
+        <div className="whitebox">
+          <b>{f("whitebox.innerText1")}</b>
+          <br />
+          {f("whitebox.innerText2")}
         </div>
 
-        <div className={styles.aspectPara}>{f("workAspects")}</div>
+        {f("workAspects")}
       </div>
     </div>
   );

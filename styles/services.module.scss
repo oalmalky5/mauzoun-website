@@ -1,88 +1,10 @@
 @use "mixins" as *;
 
-.main {
-  position: absolute;
-  min-height: 100%;
-  width: 510px;
-  background-color: #f7f5f0;
-  padding: 50px;
-  font-size: 30px;
-  font-family: "Alegreya";
-
-  @include ltr {
-    margin-left: 430px; /* Same as the width of the sidebar */
-  }
-
-  @include rtl {
-    margin-right: 430px; /* Same as the width of the sidebar */
-  }
-}
-
-.title {
+.service {
+  font-size: 22px;
   font-weight: bold;
-}
-
-.wrappedContent {
-  margin-top: 40px;
-  margin-bottom: 40px;
 
   & p {
     display: inline;
-  }
-
-  & .revealIcon {
-    vertical-align: middle;
-    font-size: 20px;
-    stroke-width: 1;
-
-    @include ltr {
-      margin-left: 5px;
-    }
-
-    @include rtl {
-      margin-right: 5px;
-    }
-  }
-}
-
-.unwrappedContent {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.header {
-  margin-top: 60.5px;
-  font-size: 25px;
-  margin-bottom: 40px;
-}
-
-.contentHeader {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.content {
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-
-.serviceListBox {
-  padding: 30px;
-  width: 850.5px;
-  border: solid;
-  background-color: white;
-
-  & .header {
-    margin-top: 0px;
-    font-size: 25px;
-  }
-
-  & .service {
-    font-size: 22px;
-    font-weight: bold;
-
-    & p {
-      display: inline;
-    }
   }
 }

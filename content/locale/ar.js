@@ -9,7 +9,7 @@ export const ar = {
     comingSoon: "قريبًا.",
   },
   "/": {
-    interestedInWork: "WAITING FOR TRANSLATION",
+    contactPrompt: "هل أنتم مهتمون بعملنا؟",
     title: "أجمل ترحيب من فريق مَوْزوْن.",
     summary:
       "نحن ستوديو كتابة إبداعية يبحث ثم يكتب بإبداع وتكامل. نقدم خدماتنا من مكاتبنا في جدة لعملائنا في جميع أنحاء العالم.",
@@ -41,8 +41,24 @@ export const ar = {
     "joinCompetition.content":
       "يتمثل أحدث استثماراتنا في الكتابة الإبداعية في الكتاب الصاعدين ممن يحضرون أعمالهم الأولى من العالم العربي، خاصة الساعين لنشر أول كتاب، أو رواية، أو قصص قصيرة، أو مجموعة مقالات، أو نصوص بصرية. سيتعاون مَوْزوْن مع هيئة تحكيم ستقوم بمعالجة الطلبات واختيار كاتب واحد سيحصل على استشارتنا وخدماتنا على مدى عام كامل، وسيُنشر عملهم أو يتم ربطهم مع منتج عند نهاية العام.",
   },
-  "/portfolio": {},
+  "/portfolio": {
+    title: "Portfolio",
+    subtitle: "A personal look into our tales of success.",
+    content:
+      "Read our team’s project-focused journal entries, which document our creative thought process and show our beloved final outcome.",
+    "contentWriting.title": "Content Writing",
+    "contentWriting.clients.1": "Mauj",
+    "contentWriting.clients.2": "Shafra",
+    "contentWriting.clients.3": "Musa & Palm",
+    "contentWriting.clients.4": "Saudi Tourism Authority",
+    "contentWriting.clients.5": "Ministry of Culture: AlBalad",
+    "creativeWriting.title": "Creative Writing",
+    "creativeWriting.clients.1": "Ministry of Culture: Madinah Culinary Arts",
+    clients: "Since 2018, we have worked with <b><u>over 100 clients</u></b>.",
+  },
   "/services": {
+    contactPrompt:
+      "احجزوا مكالمة أو ابعثوا لنا رسالة وأخبرونا كيف لمَوْزوْن أن يساعدكم.",
     title: "خدماتنا",
     "approach.title": "توجهنا",
     "approach.header":

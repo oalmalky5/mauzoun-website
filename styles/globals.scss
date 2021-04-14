@@ -1,5 +1,10 @@
 @use "mixins" as *;
 
+@font-face {
+  font-family: "Alegreya";
+  src: url("../public/fonts/AlegreyaSans-Medium.ttf");
+}
+
 html,
 body {
   padding: 0;
@@ -8,9 +13,48 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-@font-face {
-  font-family: "Alegreya";
-  src: url("../public/fonts/AlegreyaSans-Medium.ttf");
+* {
+  box-sizing: border-box;
+}
+
+h1 p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h2 p {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  & p {
+    font-size: 25px;
+    font-weight: normal;
+  }
+}
+
+h4 p {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 0.5px solid black;
+
+  &.big-margin {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }
 
 a {
@@ -18,17 +62,11 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .container {
   position: absolute;
   min-height: 100%;
-  width: 510px;
-  background-color: #f8d952;
+  width: 600px;
   padding: 50px;
-  font-size: 30px;
   font-family: "Alegreya";
 
   @include ltr {
@@ -37,5 +75,68 @@ a {
 
   @include rtl {
     margin-right: 430px; /* Same as the width of the sidebar */
+  }
+}
+
+.wrapped-content {
+  margin-top: 20px;
+
+  & h2,
+  p {
+    display: inline;
+  }
+
+  & .reveal-icon {
+    stroke-width: 1.5px;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-top: -8px;
+
+    @include ltr {
+      margin-left: 5px;
+    }
+
+    @include rtl {
+      margin-right: 5px;
+    }
+  }
+}
+
+.unwrapped-content {
+  margin-top: 20px;
+
+  &.inline p {
+    display: inline;
+  }
+}
+
+.content-block {
+  margin-bottom: 30px;
+
+  & p {
+    margin: 0;
+  }
+}
+
+.whitebox {
+  width: 750px;
+  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: white;
+  border: solid black 2px;
+
+  @include ltr {
+    margin-left: -30px;
+  }
+
+  @include rtl {
+    margin-right: -30px;
+  }
+
+  & p {
+    font-size: 23px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 }

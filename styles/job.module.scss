@@ -1,27 +1,5 @@
 @use "mixins" as *;
 
-.main {
-  position: absolute;
-  min-height: 100%;
-  width: 510px;
-  background-color: #d5e3ef;
-  padding: 50px;
-  font-size: 30px;
-  font-family: "Alegreya";
-
-  @include ltr {
-    margin-left: 430px; /* Same as the width of the sidebar */
-  }
-
-  @include rtl {
-    margin-right: 430px; /* Same as the width of the sidebar */
-  }
-}
-
-.title {
-  font-weight: bold;
-}
-
 .wrappedContent {
   margin-top: 40px;
   margin-bottom: 40px;

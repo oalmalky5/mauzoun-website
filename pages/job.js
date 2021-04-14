@@ -6,6 +6,8 @@ import styles from "../styles/job.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 
+const backgroundColor = "#b3d0ea";
+
 export default function job() {
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, id, options);
@@ -17,10 +19,10 @@ export default function job() {
 
   return (
     <div>
-      <Menu backgroundColor="#d5e3ef" />
+      <Menu backgroundColor={backgroundColor} />
 
-      <div className={styles.main}>
-        <div className={styles.title}>Mauzoun & You</div>
+      <div className="container" style={{ backgroundColor }}>
+        <div className="page-title">Mauzoun & You</div>
 
         {/* Join the team */}
         {!isJoinTeamVisible ? (

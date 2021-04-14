@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useIntl } from "react-intl";
 import { BsChevronDown } from "react-icons/bs";
 
 import styles from "../styles/services.module.scss";
 import Menu from "../components/Menu";
-import { useIntl } from "react-intl";
 import formatJsxMessage from "../utils/formatJsxMessage";
+import ContactButton from "../components/ContactButton";
+
+const backgroundColor = "#f7f5f0";
 
 export default function services() {
   const intl = useIntl();
@@ -18,28 +21,28 @@ export default function services() {
 
   return (
     <div>
-      <Menu backgroundColor="#f7f5f0" />
+      <Menu backgroundColor={backgroundColor} />
 
-      <div className={styles.main}>
-        <div className={styles.title}>{f("title")}</div>
+      <div className="container" style={{ backgroundColor }}>
+        <h1>{f("title")}</h1>
 
         {/* Approach */}
         {!isApproachVisible ? (
           <div
-            className={styles.wrappedContent}
+            className="wrapped-content"
             onClick={() => setIsApproachVisible(true)}
             style={{ cursor: "pointer" }}
           >
-            {f("approach.title")}
-            <span className={styles.revealIcon}>
-              <BsChevronDown className={styles.revealIcon} />
+            <h2>{f("approach.title")}</h2>
+            <span className="reveal-icon">
+              <BsChevronDown className="reveal-icon" />
             </span>
           </div>
         ) : (
-          <div className={styles.unwrappedContent}>
-            <span className={styles.contentTitle}>{f("approach.title")}</span>
+          <div className="unwrapped-content">
+            <h2>{f("approach.title")}</h2>
             <div>
-              <div className={styles.header}>{f("approach.header")}</div>
+              <h3>{f("approach.header")}</h3>
               {[
                 "approach.contact",
                 "approach.briefForm",
@@ -52,12 +55,10 @@ export default function services() {
                 "approach.adaptTimeline",
                 "approach.finished",
               ].map((e) => (
-                <div key={e}>
-                  <div className={styles.contentHeader}>{f(`${e}.header`)}</div>
+                <div className="content-block" key={e}>
+                  <b>{f(`${e}.header`)}</b>
                   {intl.formatMessage({ id: `${e}.content` }) !==
-                    `${e}.content` && (
-                    <div className={styles.content}>{f(`${e}.content`)}</div>
-                  )}
+                    `${e}.content` && f(`${e}.content`)}
                 </div>
               ))}
             </div>
@@ -67,28 +68,24 @@ export default function services() {
         {/* Content Writing */}
         {!isContentWritingVisible ? (
           <div
-            className={styles.wrappedContent}
+            className="wrapped-content"
             onClick={() => setIsContentWritingVisible(true)}
             style={{ cursor: "pointer" }}
           >
-            {f("contentWriting.title")}
-            <span className={styles.revealIcon}>
-              <BsChevronDown className={styles.revealIcon} />
+            <h2>{f("contentWriting.title")}</h2>
+            <span className="reveal-icon">
+              <BsChevronDown className="reveal-icon" />
             </span>
           </div>
         ) : (
-          <div className={styles.unwrappedContent}>
-            <span className={styles.contentTitle}>
-              {f("contentWriting.title")}
-            </span>
+          <div className="unwrapped-content">
+            <h2>{f("contentWriting.title")}</h2>
 
-            <div className={styles.content}>{f("contentWriting.content")}</div>
+            {f("contentWriting.content")}
 
-            <div className={styles.serviceListBox}>
-              <div className={styles.header}>
-                {f("contentWriting.services.header")}
-              </div>
-
+            <div className="whitebox">
+              {f("contentWriting.services.header")}
+              <br />
               {[
                 "contentWriting.services.naming",
                 "contentWriting.services.manifesto",
@@ -99,7 +96,7 @@ export default function services() {
               ].map((e) => (
                 <div className={styles.service} key={e}>
                   ____
-                  <span className={styles.serviceName}>{f(e)}</span>
+                  {f(e)}
                 </div>
               ))}
             </div>
@@ -109,28 +106,24 @@ export default function services() {
         {/* Creative Writing */}
         {!isCreativeWritingVisible ? (
           <div
-            className={styles.wrappedContent}
+            className="wrapped-content"
             onClick={() => setIsCreativeWritingVisible(true)}
             style={{ cursor: "pointer" }}
           >
-            {f("creativeWriting.title")}
-            <span className={styles.revealIcon}>
-              <BsChevronDown className={styles.revealIcon} />
+            <h2>{f("creativeWriting.title")}</h2>
+            <span className="reveal-icon">
+              <BsChevronDown className="reveal-icon" />
             </span>
           </div>
         ) : (
-          <div className={styles.unwrappedContent}>
-            <span className={styles.contentTitle}>
-              {f("creativeWriting.title")}
-            </span>
+          <div className="unwrapped-content">
+            <h2>{f("creativeWriting.title")}</h2>
 
-            <div className={styles.content}>{f("creativeWriting.content")}</div>
+            {f("creativeWriting.content")}
 
-            <div className={styles.serviceListBox}>
-              <div className={styles.header}>
-                {f("creativeWriting.services.header")}
-              </div>
-
+            <div className="whitebox">
+              {f("creativeWriting.services.header")}
+              <br />
               {[
                 "creativeWriting.services.storyDoctoring",
                 "creativeWriting.services.scriptwriting",
@@ -139,13 +132,15 @@ export default function services() {
               ].map((e) => (
                 <div className={styles.service} key={e}>
                   ____
-                  <span className={styles.serviceName}>{f(e)}</span>
+                  {f(e)}
                 </div>
               ))}
             </div>
           </div>
         )}
       </div>
+
+      <ContactButton messageId="contactPrompt" />
     </div>
   );
 }
