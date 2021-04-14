@@ -2,22 +2,22 @@ import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import Modal from "react-modal";
 import { useIntl } from "react-intl";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 import styles from "../styles/home.module.css";
-import Menu from "../components/menu";
+import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
-import { useRouter } from "next/router";
 
 export default function Home() {
   const router = useRouter();
   const intl = useIntl();
-  const f = (id, styles) => formatJsxMessage(intl, router.locale, id, styles);
+  const f = (id, options) => formatJsxMessage(intl, router.locale, id, options);
 
-  // create a hook foreach instancee of a button
-  const [button1Show, setButton1Show] = useState(true);
-  const [button2Show, setButton2Show] = useState(true);
-  const [button3Show, setButton3Show] = useState(true);
-  const [button4Show, setButton4Show] = useState(true);
+  const [areServicesVisible, setAreServicesVisible] = useState(false);
+  const [isApproachVisible, setIsApproachVisible] = useState(false);
+  const [areProjectsVisible, setAreProjectsVisible] = useState(false);
+  const [isWorkVisible, setIsWorkVisible] = useState(false);
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -51,92 +51,104 @@ export default function Home() {
 
       <div className={styles.main}>
         <h6>{f("title")}</h6>
+
         <span className={styles.topPara}>{f("summary")}</span>
+
         <img
           src="http://writingandwellness.com/wp-content/uploads/2015/02/Home-Office-2.jpg"
           alt="an image of an office"
         ></img>
-        <span className={styles.storyPara}>
+
+        <div className={styles.storyPara}>
           {f("story")}
-          <hr />
-        </span>
-
-        <div className={styles.services}>
-          <div>
-            <span className={styles.text1}>Our Services</span>
-            {button1Show ? (
-              <span onClick={() => setButton1Show(false)}>
-                <BsChevronDown className={styles.icon1} />
-              </span>
-            ) : (
-              <span>
-                {" "}
-                include developing strategic content for brands and campaigns,
-                as well as unleashing our creativities in book editing, creative
-                writing, story doctoring, and boutique publishing.
-              </span>
-            )}
-          </div>
+          <hr size={1} color="black" />
         </div>
 
-        <div className={styles.approach}>
-          <div>
-            <span className={styles.text2}>
-              Our approach to writing is thoughtful and imaginative
+        {/* Services */}
+        {!areServicesVisible ? (
+          <div
+            className={styles.wrappedContent}
+            onClick={() => setAreServicesVisible(true)}
+            style={{ cursor: "pointer" }}
+          >
+            {f("services.intro")}
+            <span className={styles.revealIcon}>
+              <BsChevronDown className={styles.revealIcon} />
             </span>
-            {button2Show ? (
-              <span onClick={() => setButton2Show(false)}>
-                <BsChevronDown className={styles.icon1} />
-              </span>
-            ) : (
-              <span>
-                , balancing between Arabic and English while remaining loyal to
-                each language and the kind of service we provide. We believe in
-                work that is backed by a strong understanding of brand
-                strategies, audience needs, and empathetic storytelling.
-              </span>
-            )}
           </div>
-        </div>
+        ) : (
+          <div className={styles.unwrappedContent}>
+            <Link href="/services">
+              <b style={{ cursor: "pointer" }}>{f("services.intro")}</b>
+            </Link>
+            {f("services.content")}
+            <hr size={1} color="black" />
+          </div>
+        )}
 
-        <div className={styles.projects}>
-          <div>
-            <span className={styles.text3}>
-              We seek projects that need us as much as we need them
+        {/* Approach */}
+        {!isApproachVisible ? (
+          <div
+            className={styles.wrappedContent}
+            onClick={() => setIsApproachVisible(true)}
+            style={{ cursor: "pointer" }}
+          >
+            {f("approach.intro")}
+            <span className={styles.revealIcon}>
+              <BsChevronDown className={styles.revealIcon} />
             </span>
-            {button3Show ? (
-              <span onClick={() => setButton3Show(false)}>
-                <BsChevronDown className={styles.icon1} />
-              </span>
-            ) : (
-              <span>
-                , from innovative brands to independent authors with passion
-                projects. You can read our tales of success in our portfolio.
-              </span>
-            )}
           </div>
-        </div>
+        ) : (
+          <div className={styles.unwrappedContent}>
+            {!areServicesVisible && <hr size={1} color="black" />}
+            <b>{f("approach.intro")}</b>
+            {f("approach.content")}
+            <hr size={1} color="black" />
+          </div>
+        )}
 
-        <div className={styles.work}>
-          <div>
-            <span className={styles.text4}>
-              Our work is dedicated and ethical
+        {/* Projects */}
+        {!areProjectsVisible ? (
+          <div
+            className={styles.wrappedContent}
+            onClick={() => setAreProjectsVisible(true)}
+            style={{ cursor: "pointer" }}
+          >
+            {f("projects.intro")}
+            <span className={styles.revealIcon}>
+              <BsChevronDown className={styles.revealIcon} />
             </span>
-            {button4Show ? (
-              <span onClick={() => setButton4Show(false)}>
-                <BsChevronDown className={styles.icon1} />
-              </span>
-            ) : (
-              <span>
-                , prioritizing our community as much as our clients. This is why
-                we host an annual competition for up-and-coming writers who are
-                developing their first-ever manuscripts. Winners are provided
-                with free editing, marketing, and publishing services to unleash
-                their works to the world.
-              </span>
-            )}
           </div>
-        </div>
+        ) : (
+          <div className={styles.unwrappedContent}>
+            {!isApproachVisible && <hr size={1} color="black" />}
+            <b>{f("projects.intro")}</b>
+            {f("projects.content")}
+            <hr size={1} color="black" />
+          </div>
+        )}
+
+        {/* Work */}
+        {!isWorkVisible ? (
+          <div
+            className={styles.wrappedContent}
+            onClick={() => setIsWorkVisible(true)}
+            style={{ cursor: "pointer" }}
+          >
+            {f("work.intro")}
+            <span className={styles.revealIcon}>
+              <BsChevronDown className={styles.revealIcon} />
+            </span>
+          </div>
+        ) : (
+          <div className={styles.unwrappedContent}>
+            {!areProjectsVisible && <hr size={1} color="black" />}
+            <Link href="/job">
+              <b style={{ cursor: "pointer" }}>{f("work.intro")}</b>
+            </Link>
+            {f("work.content")}
+          </div>
+        )}
       </div>
     </div>
 

@@ -1,15 +1,6 @@
-import Head from "next/head";
-import story from "./story";
-// import services from './services'
-// import job from './job'
 import styles from "../styles/portfolio.module.css";
 import React, { useState } from "react";
-import Link from "next/link";
-import { BsChevronDown } from "react-icons/bs";
-import { IoLogoTwitter } from "react-icons/io";
-import { IoLogoInstagram } from "react-icons/io";
-import { GrFacebookOption } from "react-icons/gr";
-import Menu from "../components/menu";
+import Menu from "../components/Menu";
 
 export default function portfolio() {
   return (

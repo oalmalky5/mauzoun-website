@@ -1,12 +1,8 @@
 import JsxParser from "react-jsx-parser";
 import Link from "next/link";
 
-const formatJsxMessage = (intl, locale, id, styles) => {
+const formatJsxMessage = (intl, locale, id, options) => {
   if (!intl) return;
-
-  if (locale == "ar") {
-    styles = { textAlign: "right", ...styles };
-  }
 
   let message = intl.formatMessage({ id });
 
@@ -17,10 +13,19 @@ const formatJsxMessage = (intl, locale, id, styles) => {
   );
   message = message.replace(/(<\/Link[^>]*>)/g, "</span>$1");
 
+  if (!options) options = {};
+  if (locale == "ar") {
+    options.style = { textAlign: "right", ...options.style };
+  }
+
   return (
-    <div style={styles}>
-      <JsxParser components={{ Link }} jsx={`<p>${message}</p>`} />
-    </div>
+    <span style={options.style}>
+      <JsxParser
+        renderInWrapper={false}
+        components={{ Link }}
+        jsx={`<p>${message}</p>`}
+      />
+    </span>
   );
 };
 

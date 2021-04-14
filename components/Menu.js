@@ -39,9 +39,9 @@ export default function Menu({ backgroundColor }) {
     );
   }, [locale]);
 
-  const f = (id, styles) => formatJsxMessage(intl, locale, id, styles);
-  const otherF = (id, styles) =>
-    formatJsxMessage(otherIntl, otherLocale, id, styles);
+  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
+  const otherF = (id, options) =>
+    formatJsxMessage(otherIntl, otherLocale, id, options);
 
   return (
     <div>
@@ -56,9 +56,9 @@ export default function Menu({ backgroundColor }) {
           {["story", "services", "portfolio", "job"].map((e) => (
             <Link href={"/" + e} key={e}>
               <a className={styles.navLink}>
-                <span>{f(e + "Link", { textAlign: "left" })}</span>
+                <span>{f(e + "Link", { style: { textAlign: "left" } })}</span>
                 <span className={styles.otherLocaleLink}>
-                  {otherF(e + "Link", { textAlign: "left" })}
+                  {otherF(e + "Link", { style: { textAlign: "left" } })}
                 </span>
               </a>
             </Link>

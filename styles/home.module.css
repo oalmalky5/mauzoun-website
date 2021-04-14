@@ -44,66 +44,32 @@
   margin-top: 0;
 }
 
-.main .storyPara .storyLink {
-  color: white;
-  font-size: 20px;
+.storyPara {
+  margin-top: 20px;
 }
 
-.services {
-  display: flex;
-  justify-content: flex-start;
-}
-.services .text1 {
-  font-size: 20px;
+.wrappedContent {
+  margin-top: 20px;
   font-weight: bold;
 }
 
-.services span {
+.wrappedContent p {
+  display: inline;
+}
+
+.revealIcon {
+  vertical-align: middle;
+  margin-left: 5px;
   font-size: 20px;
+  stroke-width: 1;
 }
 
-.approach {
-  margin-top: 30px;
+.unwrappedContent {
+  margin-top: 20px;
 }
 
-.projects {
-  margin-top: 30px;
-}
-
-.work {
-  margin-top: 30px;
-}
-
-.approach .text2 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.approach span {
-  font-size: 20px;
-}
-
-.projects .text3 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.projects span {
-  font-size: 20px;
-}
-
-.work .text4 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.work span {
-  font-size: 20px;
-}
-
-.icon1 {
-  margin-top: 10px;
-  margin-left: 10px;
+.unwrappedContent p {
+  display: inline;
 }
 
 .navLinks {

@@ -1,20 +1,11 @@
-import Head from "next/head";
-import story from "./story";
-import services from "./services";
 import styles from "../styles/job.module.css";
 import React, { useState } from "react";
-import Link from "next/link";
 import { BsChevronDown } from "react-icons/bs";
-import { IoLogoTwitter } from "react-icons/io";
-import { IoLogoInstagram } from "react-icons/io";
-import { GrFacebookOption } from "react-icons/gr";
-import Menu from "../components/menu";
+import Menu from "../components/Menu";
 
 export default function job() {
   const [button1Show, setButton1Show] = useState(true);
   const [button2Show, setButton2Show] = useState(true);
-  const [button3Show, setButton3Show] = useState(true);
-  const [button4Show, setButton4Show] = useState(true);
 
   return (
     <div>

@@ -1,11 +1,6 @@
 import React from "react";
 import styles from "../styles/story.module.css";
-// import job from './job'
-import Link from "next/link";
-import { IoLogoTwitter } from "react-icons/io";
-import { IoLogoInstagram } from "react-icons/io";
-import { GrFacebookOption } from "react-icons/gr";
-import Menu from "../components/menu";
+import Menu from "../components/Menu";
 
 const Story = function () {
   return (
