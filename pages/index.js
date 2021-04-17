@@ -7,6 +7,7 @@ import styles from "../styles/home.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
+import { motion } from "framer-motion";
 
 const backgroundColor = "#f8d952";
 
@@ -23,7 +24,11 @@ export default function Home() {
     <>
       <Menu backgroundColor={backgroundColor} />
 
-      <div className="container" style={{ backgroundColor }}>
+      <motion.div
+        className="container"
+        style={{ backgroundColor }}
+        layoutId="content"
+      >
         <h1>{f("title")}</h1>
 
         {f("summary")}
@@ -35,12 +40,11 @@ export default function Home() {
         />
 
         {f("story")}
-        <hr />
 
         {/* Services */}
         {!areServicesVisible ? (
           <div
-            className="wrapped-content"
+            className="content-wrapper"
             onClick={() => setAreServicesVisible(true)}
             style={{ cursor: "pointer" }}
           >
@@ -51,6 +55,7 @@ export default function Home() {
           </div>
         ) : (
           <div className="inline unwrapped-content">
+            <hr />
             <Link href="/services">
               <b style={{ cursor: "pointer" }}>{f("services.intro")}</b>
             </Link>
@@ -62,7 +67,7 @@ export default function Home() {
         {/* Approach */}
         {!isApproachVisible ? (
           <div
-            className="wrapped-content"
+            className="content-wrapper"
             onClick={() => setIsApproachVisible(true)}
             style={{ cursor: "pointer" }}
           >
@@ -83,7 +88,7 @@ export default function Home() {
         {/* Projects */}
         {!areProjectsVisible ? (
           <div
-            className="wrapped-content"
+            className="content-wrapper"
             onClick={() => setAreProjectsVisible(true)}
             style={{ cursor: "pointer" }}
           >
@@ -104,7 +109,7 @@ export default function Home() {
         {/* Work */}
         {!isWorkVisible ? (
           <div
-            className="wrapped-content"
+            className="content-wrapper"
             onClick={() => setIsWorkVisible(true)}
             style={{ cursor: "pointer" }}
           >
@@ -120,9 +125,9 @@ export default function Home() {
             {f("work.content")}
           </div>
         )}
-      </div>
+      </motion.div>
 
-      <ContactButton messageId="contactPrompt" />
+      <ContactButton messageId="contactPrompt" backgroundColor="#ffffff" />
     </>
   );
 }

@@ -5,6 +5,7 @@ import { GrFacebookOption } from "react-icons/gr";
 import { useIntl, createIntl, createIntlCache } from "react-intl";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Cookies from "js-cookie";
 
 import styles from "../styles/menu.module.scss";
@@ -39,16 +40,24 @@ export default function Menu({ backgroundColor }) {
   const otherF = (id, options) => formatJsxMessage(otherIntl, id, options);
 
   return (
-    <div className={styles.sidenav} style={{ backgroundColor }}>
+    <motion.div
+      className={styles.sidenav}
+      style={{ backgroundColor }}
+      layoutId="menu"
+    >
       <div className={styles.logo}>
-        <Link href="/">
-          <img src="https://i.imgur.com/HjDbXtR.png" alt="Mauzoun logo" />
+        <Link href="/chooseLocale">
+          <motion.img
+            src="https://i.imgur.com/HjDbXtR.png"
+            alt="Mauzoun logo"
+            layoutId="logo"
+          />
         </Link>
       </div>
 
       <div>
-        {["story", "services", "portfolio", "job"].map((e) => (
-          <Link href={"/" + e} key={e}>
+        {["home", "story", "services", "portfolio", "job"].map((e) => (
+          <Link href={e === "home" ? "/" : "/" + e} key={e}>
             <a className={styles.navLink}>
               {f(e + "Link")}
               <span className={styles.otherLocaleLink}>
@@ -91,6 +100,6 @@ export default function Menu({ backgroundColor }) {
         {f("email")}
         <b>{f("location")}</b>
       </div>
-    </div>
+    </motion.div>
   );
 }

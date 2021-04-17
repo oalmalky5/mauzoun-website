@@ -24,6 +24,7 @@
   height: 150px;
   width: 175px;
   margin-bottom: 50px;
+  cursor: pointer;
 
   @include ltr {
     margin-left: -25px;

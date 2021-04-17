@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { IntlProvider } from "react-intl";
 import { useRouter } from "next/router";
 import Cookies from "js-cookie";
+import { AnimateSharedLayout } from "framer-motion";
 
 import "../styles/globals.scss";
 import * as locales from "../content/locale";
@@ -24,9 +25,11 @@ function MyApp({ Component, pageProps }) {
       defaultLocale={defaultLocale}
       messages={messages}
     >
-      <div dir={locale === "ar" ? "rtl" : "ltr"}>
-        <Component {...pageProps} />
-      </div>
+      <AnimateSharedLayout>
+        <div dir={locale === "ar" ? "rtl" : "ltr"}>
+          <Component {...pageProps} />
+        </div>
+      </AnimateSharedLayout>
     </IntlProvider>
   );
 }

@@ -1,5 +1,6 @@
 exports["en-US"] = {
   shared: {
+    homeLink: "Home",
     storyLink: "Our story",
     servicesLink: "Services",
     portfolioLink: "Portfolio",
@@ -56,7 +57,8 @@ exports["en-US"] = {
     clients: "Since 2018, we have worked with <b><u>over 100 clients</u></b>.",
   },
   "/services": {
-    contactPrompt: "Book a call or send us an e-mail, and our team will help you in our earliest availability.",
+    contactPrompt:
+      "Book a call or send us an e-mail, and our team will help you in our earliest availability.",
     title: "Services",
     "approach.title": "Approach",
     "approach.header":

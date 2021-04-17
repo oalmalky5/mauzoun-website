@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "framer-motion": "^4.1.4",
     "js-cookie": "^2.2.1",
     "next": "10.0.9",
     "next-fonts": "^1.5.1",

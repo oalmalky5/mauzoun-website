@@ -4,8 +4,9 @@ import { useIntl } from "react-intl";
 import styles from "../styles/contact.module.scss";
 import Contact from "../components/Contact";
 import formatJsxMessage from "../utils/formatJsxMessage";
+import { motion } from "framer-motion";
 
-export default function ContactButton({ messageId }) {
+export default function ContactButton({ messageId, backgroundColor }) {
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, id, options);
 
@@ -13,12 +14,14 @@ export default function ContactButton({ messageId }) {
 
   return (
     <>
-      <button
+      <motion.button
         className={styles.contactButton}
         onClick={() => setIsContactFormVisible(true)}
+        layoutId="contactButton"
+        style={{ backgroundColor }}
       >
         {f(messageId)}
-      </button>
+      </motion.button>
 
       <Contact
         isOpen={isContactFormVisible}

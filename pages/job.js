@@ -27,7 +27,7 @@ export default function job() {
         {/* Join the team */}
         {!isJoinTeamVisible ? (
           <div
-            className="wrapped-content"
+            className="content-wrapper"
             onClick={() => setIsJoinTeamVisible(true)}
             style={{ cursor: "pointer" }}
           >
@@ -47,7 +47,7 @@ export default function job() {
         {/* Join the competition */}
         {!isJoinCompetitionVisible ? (
           <div
-            className="wrapped-content"
+            className="content-wrapper"
             onClick={() => setIsJoinCompetitionVisible(true)}
             style={{ cursor: "pointer" }}
           >

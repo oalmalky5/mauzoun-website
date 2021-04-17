@@ -1,5 +1,6 @@
 export const ar = {
   shared: {
+    homeLink: "الصفحة الرئيسية",
     storyLink: "قصتنا",
     servicesLink: "خدماتنا",
     portfolioLink: "أعمالنا",

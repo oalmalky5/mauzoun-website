@@ -1,6 +1,7 @@
 import React from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 import styles from "../styles/chooseLocale.module.scss";
 
@@ -14,7 +15,11 @@ export default function ChooseLocale() {
 
   return (
     <div className={styles.pageContainer}>
-      <img src="https://i.imgur.com/HjDbXtR.png" alt="Mauzoun logo" />
+      <motion.img
+        src="https://i.imgur.com/HjDbXtR.png"
+        alt="Mauzoun logo"
+        layoutId="logo"
+      />
       <h1>A warm welcome to you from the Mauzoun Team.</h1>
       <h2>Please choose a language</h2>
       <div className={styles.languagePickerContainer}>

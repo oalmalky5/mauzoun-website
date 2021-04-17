@@ -24,13 +24,13 @@ export default function services() {
       <Menu backgroundColor={backgroundColor} />
 
       <div className="container" style={{ backgroundColor }}>
-        <h1>{f("title")}</h1>
+        <h1 className="mb-0">{f("title")}</h1>
 
         {/* Approach */}
-        {!isApproachVisible ? (
+        <div className="unwrapped-content">
           <div
-            className="wrapped-content"
-            onClick={() => setIsApproachVisible(true)}
+            className="content-wrapper"
+            onClick={() => setIsApproachVisible(!isApproachVisible)}
             style={{ cursor: "pointer" }}
           >
             <h2>{f("approach.title")}</h2>
@@ -38,9 +38,8 @@ export default function services() {
               <BsChevronDown className="reveal-icon" />
             </span>
           </div>
-        ) : (
-          <div className="unwrapped-content">
-            <h2>{f("approach.title")}</h2>
+
+          {isApproachVisible && (
             <div>
               <h3>{f("approach.header")}</h3>
               {[
@@ -62,14 +61,14 @@ export default function services() {
                 </div>
               ))}
             </div>
-          </div>
-        )}
+          )}
+        </div>
 
         {/* Content Writing */}
-        {!isContentWritingVisible ? (
+        <div className="unwrapped-content">
           <div
-            className="wrapped-content"
-            onClick={() => setIsContentWritingVisible(true)}
+            className="content-wrapper"
+            onClick={() => setIsContentWritingVisible(!isContentWritingVisible)}
             style={{ cursor: "pointer" }}
           >
             <h2>{f("contentWriting.title")}</h2>
@@ -77,37 +76,39 @@ export default function services() {
               <BsChevronDown className="reveal-icon" />
             </span>
           </div>
-        ) : (
-          <div className="unwrapped-content">
-            <h2>{f("contentWriting.title")}</h2>
 
-            {f("contentWriting.content")}
+          {isContentWritingVisible && (
+            <>
+              {f("contentWriting.content")}
 
-            <div className="whitebox">
-              {f("contentWriting.services.header")}
-              <br />
-              {[
-                "contentWriting.services.naming",
-                "contentWriting.services.manifesto",
-                "contentWriting.services.slogans",
-                "contentWriting.services.profile",
-                "contentWriting.services.website",
-                "contentWriting.services.socialMedia",
-              ].map((e) => (
-                <div className={styles.service} key={e}>
-                  ____
-                  {f(e)}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+              <div className="whitebox">
+                {f("contentWriting.services.header")}
+                <br />
+                {[
+                  "contentWriting.services.naming",
+                  "contentWriting.services.manifesto",
+                  "contentWriting.services.slogans",
+                  "contentWriting.services.profile",
+                  "contentWriting.services.website",
+                  "contentWriting.services.socialMedia",
+                ].map((e) => (
+                  <div className={styles.service} key={e}>
+                    ____
+                    {f(e)}
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
 
         {/* Creative Writing */}
-        {!isCreativeWritingVisible ? (
+        <div className="unwrapped-content">
           <div
-            className="wrapped-content"
-            onClick={() => setIsCreativeWritingVisible(true)}
+            className="content-wrapper"
+            onClick={() =>
+              setIsCreativeWritingVisible(!isCreativeWritingVisible)
+            }
             style={{ cursor: "pointer" }}
           >
             <h2>{f("creativeWriting.title")}</h2>
@@ -115,29 +116,29 @@ export default function services() {
               <BsChevronDown className="reveal-icon" />
             </span>
           </div>
-        ) : (
-          <div className="unwrapped-content">
-            <h2>{f("creativeWriting.title")}</h2>
 
-            {f("creativeWriting.content")}
+          {isCreativeWritingVisible && (
+            <>
+              {f("creativeWriting.content")}
 
-            <div className="whitebox">
-              {f("creativeWriting.services.header")}
-              <br />
-              {[
-                "creativeWriting.services.storyDoctoring",
-                "creativeWriting.services.scriptwriting",
-                "creativeWriting.services.bookEditing",
-                "creativeWriting.services.bookTranslation",
-              ].map((e) => (
-                <div className={styles.service} key={e}>
-                  ____
-                  {f(e)}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+              <div className="whitebox">
+                {f("creativeWriting.services.header")}
+                <br />
+                {[
+                  "creativeWriting.services.storyDoctoring",
+                  "creativeWriting.services.scriptwriting",
+                  "creativeWriting.services.bookEditing",
+                  "creativeWriting.services.bookTranslation",
+                ].map((e) => (
+                  <div className={styles.service} key={e}>
+                    ____
+                    {f(e)}
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
       </div>
 
       <ContactButton messageId="contactPrompt" />
