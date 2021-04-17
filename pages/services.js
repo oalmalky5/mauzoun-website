@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
 import { BsChevronDown } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 import styles from "../styles/services.module.scss";
 import Menu from "../components/Menu";
@@ -23,7 +24,7 @@ export default function services() {
     <div>
       <Menu backgroundColor={backgroundColor} />
 
-      <div className="container" style={{ backgroundColor }}>
+      <motion.div className="container" style={{ backgroundColor }} layout>
         <h1 className="mb-0">{f("title")}</h1>
 
         {/* Approach */}
@@ -138,7 +139,7 @@ export default function services() {
             </>
           )}
         </div>
-      </div>
+      </motion.div>
 
       <ContactButton messageId="contactPrompt" backgroundColor="#f8d952" />
     </div>

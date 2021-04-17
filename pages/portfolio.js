@@ -1,7 +1,9 @@
 import React from "react";
+import { useIntl } from "react-intl";
+import { motion } from "framer-motion";
+
 import styles from "../styles/portfolio.module.scss";
 import Menu from "../components/Menu";
-import { useIntl } from "react-intl";
 import formatJsxMessage from "../utils/formatJsxMessage";
 
 const backgroundColor = "#fbec9a";
@@ -36,7 +38,7 @@ export default function portfolio() {
     <div>
       <Menu backgroundColor={backgroundColor} />
 
-      <div className="container" style={{ backgroundColor }}>
+      <motion.div className="container" style={{ backgroundColor }} layout>
         <h1>{f("title")}</h1>
 
         <h2>{f("subtitle")}</h2>
@@ -58,7 +60,7 @@ export default function portfolio() {
             <div className={styles.clients}>{f("clients")}</div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

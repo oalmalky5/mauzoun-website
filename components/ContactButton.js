@@ -17,8 +17,8 @@ export default function ContactButton({ messageId, backgroundColor }) {
       <motion.button
         className={styles.contactButton}
         onClick={() => setIsContactFormVisible(true)}
-        layoutId="contactButton"
         style={{ backgroundColor }}
+        layout
       >
         {f(messageId)}
       </motion.button>

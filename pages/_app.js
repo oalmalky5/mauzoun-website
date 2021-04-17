@@ -13,20 +13,14 @@ function MyApp({ Component, pageProps }) {
   const localeCopy = locales[locale];
   const messages = Object.assign(localeCopy["shared"], localeCopy[pathname]);
 
-  useEffect(() => {
-    if (!Cookies.get("NEXT_LOCALE")) {
-      router.replace("/chooseLocale");
-    }
-  }, []);
-
   return (
     <IntlProvider
       locale={locale}
       defaultLocale={defaultLocale}
       messages={messages}
     >
-      <AnimateSharedLayout>
-        <div dir={locale === "ar" ? "rtl" : "ltr"}>
+      <AnimateSharedLayout type="crossfade">
+        <div dir={pathname !== "/" && locale === "ar" ? "rtl" : "ltr"}>
           <Component {...pageProps} />
         </div>
       </AnimateSharedLayout>

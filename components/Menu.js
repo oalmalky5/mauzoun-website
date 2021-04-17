@@ -5,7 +5,7 @@ import { GrFacebookOption } from "react-icons/gr";
 import { useIntl, createIntl, createIntlCache } from "react-intl";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Cookies from "js-cookie";
 
 import styles from "../styles/menu.module.scss";
@@ -40,66 +40,60 @@ export default function Menu({ backgroundColor }) {
   const otherF = (id, options) => formatJsxMessage(otherIntl, id, options);
 
   return (
-    <motion.div
-      className={styles.sidenav}
-      style={{ backgroundColor }}
-      layoutId="menu"
-    >
-      <div className={styles.logo}>
-        <Link href="/chooseLocale">
-          <motion.img
-            src="https://i.imgur.com/HjDbXtR.png"
-            alt="Mauzoun logo"
-            layoutId="logo"
-          />
+    <div className={styles.sidenav} style={{ backgroundColor }}>
+      <motion.div className={styles.logo} layoutId="logo">
+        <Link href="/">
+          <img src="https://i.imgur.com/HjDbXtR.png" alt="Mauzoun logo" />
         </Link>
-      </div>
+      </motion.div>
 
-      <div>
-        {["home", "story", "services", "portfolio", "job"].map((e) => (
-          <Link href={e === "home" ? "/" : "/" + e} key={e}>
-            <a className={styles.navLink}>
-              {f(e + "Link")}
-              <span className={styles.otherLocaleLink}>
-                {otherF(e + "Link")}
-              </span>
-            </a>
-          </Link>
-        ))}
-      </div>
-
-      <div className={styles.languageSwitch}>
-        <b>{locale === "en-US" ? "English" : "عربــي"}</b>
-        <Link href={pathname} locale={otherLocale}>
-          <a onClick={() => Cookies.set("NEXT_LOCALE", otherLocale)}>
-            <label className={styles.switch}>
-              <input type="checkbox" checked={locale === "ar"} readOnly />
-              <span className={styles.slider} />
-            </label>
-          </a>
-        </Link>
-        {locale === "ar" ? "English" : "عربــي"}
-      </div>
-
-      <div className={styles.complementaryInfo}>
-        <div className={styles.bottomNavIcons}>
-          <a target="_blank" href="https://twitter.com/mauzoun_?lang=en">
-            <IoLogoTwitter size="30px" />
-          </a>
-          <a target="_blank" href="https://www.instagram.com/mauzoun/?hl=en">
-            <IoLogoInstagram size="30px" />
-          </a>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/company/mauzoun/about/"
-          >
-            <GrFacebookOption size="30px" />
-          </a>
+      <motion.div className={styles.menu} layout>
+        <div>
+          {["home", "story", "services", "portfolio", "job"].map((e) => (
+            <Link href={"/" + e} key={e}>
+              <a className={styles.navLink}>
+                {f(e + "Link")}
+                <span className={styles.otherLocaleLink}>
+                  {otherF(e + "Link")}
+                </span>
+              </a>
+            </Link>
+          ))}
         </div>
 
-        {f("email")}
-        <b>{f("location")}</b>
-      </div>
-    </motion.div>
+        <div className={styles.languageSwitch}>
+          <b>{locale === "en-US" ? "English" : "عربــي"}</b>
+          <Link href={pathname} locale={otherLocale}>
+            <a onClick={() => Cookies.set("NEXT_LOCALE", otherLocale)}>
+              <label className={styles.switch}>
+                <input type="checkbox" checked={locale === "ar"} readOnly />
+                <span className={styles.slider} />
+              </label>
+            </a>
+          </Link>
+          {locale === "ar" ? "English" : "عربــي"}
+        </div>
+
+        <div className={styles.complementaryInfo}>
+          <div className={styles.bottomNavIcons}>
+            <a target="_blank" href="https://twitter.com/mauzoun_?lang=en">
+              <IoLogoTwitter size="30px" />
+            </a>
+            <a target="_blank" href="https://www.instagram.com/mauzoun/?hl=en">
+              <IoLogoInstagram size="30px" />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/mauzoun/about/"
+            >
+              <GrFacebookOption size="30px" />
+            </a>
+          </div>
+
+          {f("email")}
+          <b>{f("location")}</b>
+        </div>
+      </motion.div>
+    </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
 import { BsChevronDown } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 import styles from "../styles/job.module.scss";
 import Menu from "../components/Menu";
@@ -21,7 +22,7 @@ export default function job() {
     <div>
       <Menu backgroundColor={backgroundColor} />
 
-      <div className="container" style={{ backgroundColor }}>
+      <motion.div className="container" style={{ backgroundColor }} layout>
         <h1>Mauzoun & You</h1>
 
         {/* Join the team */}
@@ -67,7 +68,7 @@ export default function job() {
             <div className={styles.content}>{f("joinCompetition.content")}</div>
           </div>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 }

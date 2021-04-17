@@ -9,7 +9,7 @@ export const ar = {
     location: "مقرنا في جدة، السعودية",
     comingSoon: "قريبًا.",
   },
-  "/": {
+  "/home": {
     contactPrompt: "هل أنتم مهتمون بعملنا؟",
     title: "أجمل ترحيب من فريق مَوْزوْن.",
     summary:

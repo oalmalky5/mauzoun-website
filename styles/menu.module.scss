@@ -8,6 +8,7 @@
   padding-top: 20px;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 
   @include ltr {
     left: 0;
@@ -17,6 +18,11 @@
   @include rtl {
     right: 0;
     padding-right: 60px;
+  }
+
+  & .menu {
+    display: flex;
+    flex-direction: column;
   }
 }
 

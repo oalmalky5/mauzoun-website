@@ -1,5 +1,6 @@
 import React from "react";
 import { useIntl } from "react-intl";
+import { motion } from "framer-motion";
 
 import styles from "../styles/story.module.scss";
 import Menu from "../components/Menu";
@@ -56,7 +57,7 @@ const Story = function () {
     <div>
       <Menu backgroundColor={backgroundColor} />
 
-      <div className="container" style={{ backgroundColor }}>
+      <motion.div className="container" style={{ backgroundColor }} layout>
         <h1>{f("nameMeaning")}</h1>
 
         {f("aim")}
@@ -74,7 +75,7 @@ const Story = function () {
         </div>
 
         {f("workAspects")}
-      </div>
+      </motion.div>
     </div>
   );
 };

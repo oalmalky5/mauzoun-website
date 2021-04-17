@@ -9,7 +9,7 @@ exports["en-US"] = {
     location: "Based in Jeddah, Saudi Arabia",
     comingSoon: "COMING SOON.",
   },
-  "/": {
+  "/home": {
     contactPrompt: "Interested in the work we do?",
     title: "A warm welcome to you from the Mauzoun Team.",
     summary:
