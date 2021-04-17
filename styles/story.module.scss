@@ -1,28 +1,19 @@
 @use "mixins" as *;
 
-.gridSection h4 {
-  font-size: 23px;
-  margin-bottom: 0px;
-}
-
 .gridContainer {
   width: 450px;
   display: grid;
   grid-template-columns: auto auto auto;
-  /* padding: 1px; */
-  margin-top: 0px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .gridItem {
-  width: 200px;
-  height: 200px;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  background-color: white;
+  margin-bottom: 30px;
 
   @include ltr {
     margin-right: 75px;
@@ -33,31 +24,11 @@
   }
 }
 
-.gridSection .gridContainer .gridOne .name {
-  font-size: 20px;
-
-  @include ltr {
-    margin-left: 6px;
-  }
-
-  @include rtl {
-    margin-right: 6px;
-  }
-}
-
-.gridSection .gridContainer .gridOne .role {
-  font-size: 20px;
-
-  @include ltr {
-    margin-left: 18px;
-  }
-
-  @include rtl {
-    margin-right: 18px;
-  }
-}
-
-.gridSection .gridContainer .gridOne .gridItem {
-  background-image: url(https://i.imgur.com/Ph2nM8j.gif);
+.gridItemImage {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: white;
   background-size: 200px 200px;
 }

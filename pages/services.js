@@ -27,11 +27,10 @@ export default function services() {
         <h1 className="mb-0">{f("title")}</h1>
 
         {/* Approach */}
-        <div className="unwrapped-content">
+        <div className="mt-0 unwrapped-content">
           <div
             className="content-wrapper"
             onClick={() => setIsApproachVisible(!isApproachVisible)}
-            style={{ cursor: "pointer" }}
           >
             <h2>{f("approach.title")}</h2>
             <span className="reveal-icon">
@@ -65,11 +64,11 @@ export default function services() {
         </div>
 
         {/* Content Writing */}
-        <div className="unwrapped-content">
+        <div className="mt-0 unwrapped-content">
           <div
             className="content-wrapper"
             onClick={() => setIsContentWritingVisible(!isContentWritingVisible)}
-            style={{ cursor: "pointer" }}
+            style={isContentWritingVisible ? { marginBottom: "30px" } : {}}
           >
             <h2>{f("contentWriting.title")}</h2>
             <span className="reveal-icon">
@@ -103,13 +102,13 @@ export default function services() {
         </div>
 
         {/* Creative Writing */}
-        <div className="unwrapped-content">
+        <div className="mt-0 unwrapped-content">
           <div
             className="content-wrapper"
             onClick={() =>
               setIsCreativeWritingVisible(!isCreativeWritingVisible)
             }
-            style={{ cursor: "pointer" }}
+            style={isCreativeWritingVisible ? { marginBottom: "30px" } : {}}
           >
             <h2>{f("creativeWriting.title")}</h2>
             <span className="reveal-icon">
@@ -141,7 +140,7 @@ export default function services() {
         </div>
       </div>
 
-      <ContactButton messageId="contactPrompt" />
+      <ContactButton messageId="contactPrompt" backgroundColor="#f8d952" />
     </div>
   );
 }

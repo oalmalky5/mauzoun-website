@@ -12,12 +12,10 @@ export default function portfolio() {
 
   const getClients = (category) => {
     let i = 1;
-    let numberOfClients = 0;
+    let numberOfClients = Object.keys(intl.messages).filter((e) =>
+      e.startsWith(`${category}.clients.`)
+    ).length;
     let clients = [];
-
-    Object.keys(intl.messages).forEach((e) => {
-      if (e.startsWith(`${category}.clients.`)) numberOfClients += 1;
-    });
 
     while (i < numberOfClients + 1) {
       clients.push(

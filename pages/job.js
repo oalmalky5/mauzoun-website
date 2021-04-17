@@ -29,7 +29,6 @@ export default function job() {
           <div
             className="content-wrapper"
             onClick={() => setIsJoinTeamVisible(true)}
-            style={{ cursor: "pointer" }}
           >
             <h2>{f("joinTeam.intro")}</h2>
             <span className="reveal-icon">
@@ -49,7 +48,6 @@ export default function job() {
           <div
             className="content-wrapper"
             onClick={() => setIsJoinCompetitionVisible(true)}
-            style={{ cursor: "pointer" }}
           >
             <h2>{f("joinCompetition.intro")}</h2>
             <span className="reveal-icon">

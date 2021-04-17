@@ -138,9 +138,10 @@ export const ar = {
       "نطمح من خلال علمنا أن نعكس غنى وتعدد اللغتين العربية والإنجليزية، وإبداع كتابنا، والقوة والانسياب الكامنين في الكتابة المتقنة.",
     teamwork:
       "يعمل فريقنا بتكافل في سبيل إعادة الاعتبار والتقدير للكتابة المتقنة، وبهذا نصوغ المحتوى والقصص بإتقان وشغف. لكلماتنا القدرة على التدفق بقوة وصلابة، كما يمكنها أن تنساب ببلاغة وأناقة. كل هذا يعتمد على ما تريدونه، وعلى الشكل الأنسب في نظرنا.",
-    teamPresentation: "WAITING FOR TRANSLATION",
-    "teamMember.LayanAbdulShakoor": "WAITING FOR TRANSLATION",
-    "role.creativeDirector": "WAITING FOR TRANSLATION",
+    "teamMember.1.name": "Layan Abdul Shakoor",
+    "teamMember.1.role": "Creative Director",
+    "teamMember.2.name": "Layan Abdul Shakoor",
+    "teamMember.2.role": "Creative Director",
     world:
       "في عالم يضج ساعيًا وراء النتائج الفورية، قررنا الركون لإيماننا أن العمل المتقن يحتاج إلى عناية ووقت. كل كلمة هي استثمار في علامتك، أو في هويتك ككاتب. لهذا السبب نتبع العمل حسب الحجز المسبق فقط ونادرًا ما نقبل المشاريع المستعجلة.",
     "whitebox.innerText1":

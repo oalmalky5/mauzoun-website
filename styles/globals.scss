@@ -81,6 +81,10 @@ a {
   @include rtl {
     margin-right: 430px; /* Same as the width of the sidebar */
   }
+
+  @media (min-width: 1536px) {
+    width: 33%;
+  }
 }
 
 .mt-0 {
@@ -103,6 +107,7 @@ a {
 
 .content-wrapper {
   margin-top: 20px;
+  cursor: pointer;
 
   & h2,
   p {

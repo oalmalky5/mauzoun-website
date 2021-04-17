@@ -130,9 +130,10 @@ exports["en-US"] = {
       "Through our work process, we aim to reflect the richness and versatility of both the Arabic and English languages, the ingenuity of our writers, and how powerful and seamless good writing should be.",
     teamwork:
       "Our team works cooperatively to revive the appreciation of good writing, and we craft content and stories with precision and passion. Our words can pack a punch or be elegantly eloquent. It all depends on what you want, and how we see it best.",
-    teamPresentation: "Here is the team:",
-    "teamMember.LayanAbdulShakoor": "Layan Abdul Shakoor",
-    "roles.creativeDirector": "Creative Director",
+    "teamMember.1.name": "Layan Abdul Shakoor",
+    "teamMember.1.role": "Creative Director",
+    "teamMember.2.name": "Layan Abdul Shakoor",
+    "teamMember.2.role": "Creative Director",
     world:
       "In a world that is always bustling about and concerned with immediate results, we stick to the belief that good work takes care and time. Every word is an investment in your brand, or your identity as an author. That is why we work on booking basis only and rarely take on rushed projects.",
     "whitebox.innerText1":

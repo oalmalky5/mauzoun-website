@@ -46,7 +46,6 @@ export default function Home() {
           <div
             className="content-wrapper"
             onClick={() => setAreServicesVisible(true)}
-            style={{ cursor: "pointer" }}
           >
             <b>{f("services.intro")}</b>
             <span className="reveal-icon">
@@ -69,7 +68,6 @@ export default function Home() {
           <div
             className="content-wrapper"
             onClick={() => setIsApproachVisible(true)}
-            style={{ cursor: "pointer" }}
           >
             <b>{f("approach.intro")}</b>
             <span className="reveal-icon">
@@ -90,7 +88,6 @@ export default function Home() {
           <div
             className="content-wrapper"
             onClick={() => setAreProjectsVisible(true)}
-            style={{ cursor: "pointer" }}
           >
             <b>{f("projects.intro")}</b>
             <span className="reveal-icon">
@@ -111,7 +108,6 @@ export default function Home() {
           <div
             className="content-wrapper"
             onClick={() => setIsWorkVisible(true)}
-            style={{ cursor: "pointer" }}
           >
             <b>{f("work.intro")}</b>
             <span className="reveal-icon">

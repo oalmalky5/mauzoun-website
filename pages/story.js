@@ -7,9 +7,50 @@ import formatJsxMessage from "../utils/formatJsxMessage";
 
 const backgroundColor = "#d1e3f2";
 
+const teamMembersProfilePic = {
+  1: "https://i.imgur.com/Ph2nM8j.gif",
+  2: "",
+  3: "",
+  4: "",
+  5: "",
+  6: "",
+  7: "",
+};
+
 const Story = function () {
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, id, options);
+
+  const getTeamMembers = () => {
+    let i = 1;
+    let numberOfMembersImage = Object.keys(teamMembersProfilePic).length;
+    let numberOfMembers =
+      Object.keys(intl.messages).filter((e) => e.startsWith("teamMember."))
+        .length / 2;
+    let teamMembers = [];
+
+    while (i <= numberOfMembersImage) {
+      teamMembers.push(
+        <div className={styles.gridItem} key={`teamMember.${i}`}>
+          <div
+            className={styles.gridItemImage}
+            style={{
+              backgroundImage: `url(${teamMembersProfilePic[i]})`,
+              backgroundSize: "200px 200px",
+            }}
+          />
+          {i <= numberOfMembers && (
+            <div className="mt-0 mb-0">
+              {f(`teamMember.${i}.name`)}
+              {f(`teamMember.${i}.role`)}
+            </div>
+          )}
+        </div>
+      );
+      i += 1;
+    }
+    return teamMembers;
+  };
 
   return (
     <div>
@@ -22,67 +63,7 @@ const Story = function () {
 
         <b>{f("teamwork")}</b>
 
-        <div className={styles.gridSection}>
-          <h4>{f("teamPresentation")}</h4>
-
-          <div className={styles.gridContainer}>
-            <div className={styles.gridOne}>
-              <div className={styles.gridItem}></div>
-              <div className={styles.name}>
-                {f("teamMember.LayanAbdulShakoor")}
-              </div>
-              <div className={styles.role}>{f("roles.creativeDirector")}</div>
-            </div>
-
-            <div className={styles.gridTwo}>
-              <div className={styles.gridItem}></div>
-              <div className={styles.name}></div>
-              <div className={styles.role}></div>
-            </div>
-
-            <div className={styles.gridThree}>
-              <div className={styles.gridItem}></div>
-              <div className={styles.name}></div>
-              <div className={styles.role}></div>
-            </div>
-
-            <div className={styles.gridFour}>
-              <div className={styles.gridItem}></div>
-              <div className={styles.name}></div>
-              <div className={styles.role}></div>
-            </div>
-
-            <div className={styles.gridFive}>
-              <div className={styles.gridItem}></div>
-              <div className={styles.name}></div>
-              <div className={styles.role}></div>
-            </div>
-
-            <div className={styles.gridSix}>
-              <div className={styles.gridItem}></div>
-              <div className={styles.name}></div>
-              <div className={styles.role}></div>
-            </div>
-
-            <div className={styles.gridSeven}>
-              <div className={styles.gridItem}></div>
-              <div className={styles.name}></div>
-              <div className={styles.role}></div>
-            </div>
-
-            <div className={styles.gridEight}>
-              <div className={styles.gridItem}></div>
-              <div className={styles.name}></div>
-              <div className={styles.role}></div>
-            </div>
-
-            <div className={styles.gridNine}>
-              <div className={styles.gridItem}></div>
-              <div className={styles.name}></div>
-              <div className={styles.role}></div>
-            </div>
-          </div>
-        </div>
+        <div className={styles.gridContainer}>{getTeamMembers()}</div>
 
         {f("world")}
 
