@@ -1,6 +1,7 @@
 @use "mixins" as *;
 
 .contactButton {
+  position: fixed;
   background: #f8d952;
   padding: 30px;
   width: 235px;
@@ -10,8 +11,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
   border: solid black;
+  outline: none;
 
   @include ltr {
     margin-left: 1100px;
@@ -27,7 +28,54 @@
   }
 }
 
-.contactModal {
-  position: fixed;
-  z-index: 1;
+.modal {
+  font-family: "Alegreya";
+  position: absolute;
+  outline: none;
+  background-color: #f8d952;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    margin-top: 10px;
+
+    & input {
+      background: transparent;
+      margin: 10px 0px;
+      width: 400px;
+      border: none;
+      border-bottom: 1px solid;
+      font-size: 17px;
+      padding: 5px;
+      outline: none;
+
+      &::placeholder {
+        color: #000000;
+      }
+    }
+
+    & button {
+      font-size: 17px;
+      margin: 20px;
+      margin-top: 30px;
+      color: #f8d952;
+      font-weight: bold;
+      background-color: black;
+      height: 40px;
+      border: none;
+      border-radius: 20px;
+    }
+  }
+
+  & .closeButton {
+    background-color: transparent;
+    height: 40px;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+  }
 }

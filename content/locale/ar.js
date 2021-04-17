@@ -8,6 +8,12 @@ export const ar = {
     email: "hello@mauzoun.com",
     location: "مقرنا في جدة، السعودية",
     comingSoon: "قريبًا.",
+    "contact.name": "Name",
+    "contact.phone": "Number",
+    "contact.subject": "What would you like to discuss with us?",
+    "contact.date": "DD/MM/YEAR",
+    "contact.time": "Time",
+    "contact.submit": "Let's talk!",
   },
   "/home": {
     contactPrompt: "هل أنتم مهتمون بعملنا؟",

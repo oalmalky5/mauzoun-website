@@ -8,6 +8,7 @@ import styles from "../styles/home.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
+import Contact from "../components/Contact";
 
 const backgroundColor = "#f8d952";
 

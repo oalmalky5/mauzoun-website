@@ -8,7 +8,7 @@
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-  z-index: 3;
+  z-index: 1;
 
   @include ltr {
     left: 0;

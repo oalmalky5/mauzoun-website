@@ -8,6 +8,12 @@ exports["en-US"] = {
     email: "hello@mauzoun.com",
     location: "Based in Jeddah, Saudi Arabia",
     comingSoon: "COMING SOON.",
+    "contact.name": "Name",
+    "contact.phone": "Number",
+    "contact.subject": "What would you like to discuss with us?",
+    "contact.date": "DD/MM/YEAR",
+    "contact.time": "Time",
+    "contact.submit": "Let's talk!",
   },
   "/home": {
     contactPrompt: "Interested in the work we do?",
