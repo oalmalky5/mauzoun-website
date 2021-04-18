@@ -71,7 +71,7 @@ a {
 .container {
   position: absolute;
   min-height: 100%;
-  width: 600px;
+  width: 650px;
   padding: 50px;
 
   @include ltr {
@@ -83,7 +83,7 @@ a {
   }
 
   @media (min-width: 1536px) {
-    width: 33%;
+    width: 35%;
   }
 }
 
