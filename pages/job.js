@@ -68,6 +68,9 @@ export default function job() {
             <div className={styles.content}>{f("joinCompetition.content")}</div>
           </div>
         )}
+
+        <img src="/Mauzoun & You.png" className={styles.jobCover} />
+        <div style={{ height: "350px" }} />
       </motion.div>
     </div>
   );

@@ -58,6 +58,7 @@ const Story = function () {
       <Menu backgroundColor={backgroundColor} />
 
       <motion.div className="container" style={{ backgroundColor }} layout>
+        <img src="/Story.png" className={styles.storyCover} />
         <h1>{f("nameMeaning")}</h1>
 
         {f("aim")}

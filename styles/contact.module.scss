@@ -6,20 +6,21 @@
   padding: 30px;
   width: 235px;
   height: 235px;
-  margin-top: 30%;
+  margin-top: 50vh;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: solid black;
   outline: none;
+  cursor: pointer;
 
   @include ltr {
-    margin-left: 1100px;
+    margin-left: 65%;
   }
 
   @include rtl {
-    margin-right: 1100px;
+    margin-right: 65%;
   }
 
   & p {
@@ -68,6 +69,7 @@
       height: 40px;
       border: none;
       border-radius: 20px;
+      cursor: pointer;
     }
   }
 

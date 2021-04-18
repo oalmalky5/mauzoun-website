@@ -15,23 +15,25 @@ export default function ChooseLocale() {
 
   return (
     <div className={styles.pageContainer}>
-      <button
-        className={styles.languageButton}
-        onClick={() => changeLocale("en-US")}
-      >
-        English
-      </button>
       <motion.img
         src="https://i.imgur.com/HjDbXtR.png"
         alt="Mauzoun logo"
         layoutId="logo"
       />
-      <button
-        className={styles.languageButton}
-        onClick={() => changeLocale("ar")}
-      >
-        عربــي
-      </button>
+      <div className={styles.languagePicker}>
+        <button
+          className={styles.languageButton}
+          onClick={() => changeLocale("en-US")}
+        >
+          English
+        </button>
+        <button
+          className={styles.languageButton}
+          onClick={() => changeLocale("ar")}
+        >
+          عربــي
+        </button>
+      </div>
     </div>
   );
 }

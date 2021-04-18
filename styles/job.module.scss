@@ -1,5 +1,31 @@
 @use "mixins" as *;
 
+.jobCover {
+  position: absolute;
+  bottom: 0;
+  width: 750px;
+
+  @include ltr {
+    margin-left: 100px;
+  }
+
+  @include rtl {
+    margin-right: 100px;
+  }
+
+  @media (min-width: 1536px) {
+    width: 40vw;
+
+    @include ltr {
+      margin-left: 5vw;
+    }
+
+    @include rtl {
+      margin-right: 5vw;
+    }
+  }
+}
+
 .compStatus {
   display: flex;
   margin-top: 40px;

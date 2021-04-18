@@ -1,5 +1,31 @@
 @use "mixins" as *;
 
+.servicesCover {
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+
+  @include ltr {
+    margin-left: 450px;
+  }
+
+  @include rtl {
+    margin-right: 450px;
+  }
+
+  @media (min-width: 1536px) {
+    width: 30vh;
+
+    @include ltr {
+      margin-left: 25vw;
+    }
+
+    @include rtl {
+      margin-right: 25vw;
+    }
+  }
+}
+
 .service {
   font-size: 22px;
   font-weight: bold;

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useIntl } from "react-intl";
 import { BsChevronDown } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 import styles from "../styles/services.module.scss";
 import Menu from "../components/Menu";
@@ -11,6 +12,8 @@ import ContactButton from "../components/ContactButton";
 const backgroundColor = "#f7f5f0";
 
 export default function services() {
+  const router = useRouter();
+
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, id, options);
 
@@ -139,6 +142,13 @@ export default function services() {
             </>
           )}
         </div>
+
+        <img
+          src="/Services.png"
+          className={styles.servicesCover}
+          style={router.locale === "ar" ? { transform: "scaleX(-1)" } : {}}
+        />
+        <div style={{ height: "350px" }} />
       </motion.div>
 
       <ContactButton messageId="contactPrompt" backgroundColor="#f8d952" />
