@@ -1,20 +1,55 @@
 @use "mixins" as *;
 
+.jobCover {
+  position: absolute;
+  bottom: 0;
+  width: 750px;
+
+  @include ltr {
+    margin-left: 100px;
+  }
+
+  @include rtl {
+    margin-right: 100px;
+  }
+
+  @media (min-width: 1536px) {
+    width: 40vw;
+
+    @include ltr {
+      margin-left: 5vw;
+    }
+
+    @include rtl {
+      margin-right: 5vw;
+    }
+  }
+}
+
 .compStatus {
   display: flex;
-  margin-top: 40px;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -40px;
+  margin-bottom: 20px;
+
+  & .tiltedSquare {
+    width: 20px;
+  }
 
   & .statusBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 160px;
     height: 45px;
     background-color: white;
     border: solid;
-    font-size: 18px;
     font-weight: bold;
 
-    & .innerText {
-      text-align: center;
-      margin-top: -5px;
+    & p {
+      font-size: 22px;
+      margin-bottom: -7px;
     }
   }
 }

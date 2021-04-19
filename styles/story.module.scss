@@ -1,5 +1,22 @@
 @use "mixins" as *;
 
+.storyCover {
+  width: 900px;
+  margin-top: -50px;
+
+  @include ltr {
+    margin-left: -50px;
+  }
+
+  @include rtl {
+    margin-right: -50px;
+  }
+
+  @media (min-width: 1536px) {
+    width: 50vw;
+  }
+}
+
 .gridContainer {
   width: 450px;
   display: grid;

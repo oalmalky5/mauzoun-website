@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import { useIntl } from "react-intl";
 import { BsChevronDown } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 import styles from "../styles/services.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
+import WhiteBox from "../components/WhiteBox";
 
 const backgroundColor = "#f7f5f0";
 
 export default function services() {
+  const router = useRouter();
+
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, id, options);
 
@@ -18,6 +22,15 @@ export default function services() {
   const [isContentWritingVisible, setIsContentWritingVisible] = useState(false);
   const [isCreativeWritingVisible, setIsCreativeWritingVisible] = useState(
     false
+  );
+
+  const bullet = (
+    <div className={styles.bullet}>
+      <object data="/Tilted Square.svg" className={styles.tiltedSquare} />
+      <svg width="40" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 10 L40 10" stroke="black" stroke-width="2" />
+      </svg>
+    </div>
   );
 
   return (
@@ -81,7 +94,7 @@ export default function services() {
             <>
               {f("contentWriting.content")}
 
-              <div className="whitebox">
+              <WhiteBox>
                 {f("contentWriting.services.header")}
                 <br />
                 {[
@@ -93,11 +106,11 @@ export default function services() {
                   "contentWriting.services.socialMedia",
                 ].map((e) => (
                   <div className={styles.service} key={e}>
-                    ____
+                    {bullet}
                     {f(e)}
                   </div>
                 ))}
-              </div>
+              </WhiteBox>
             </>
           )}
         </div>
@@ -121,7 +134,7 @@ export default function services() {
             <>
               {f("creativeWriting.content")}
 
-              <div className="whitebox">
+              <WhiteBox>
                 {f("creativeWriting.services.header")}
                 <br />
                 {[
@@ -131,14 +144,27 @@ export default function services() {
                   "creativeWriting.services.bookTranslation",
                 ].map((e) => (
                   <div className={styles.service} key={e}>
-                    ____
+                    {bullet}
                     {f(e)}
                   </div>
                 ))}
-              </div>
+              </WhiteBox>
             </>
           )}
         </div>
+
+        <img
+          className={styles.servicesImg}
+          src="http://writingandwellness.com/wp-content/uploads/2015/02/Home-Office-2.jpg"
+          alt="an image of an office"
+        />
+
+        <img
+          src="/Services.png"
+          className={styles.servicesCover}
+          style={router.locale === "ar" ? { transform: "scaleX(-1)" } : {}}
+        />
+        <div style={{ height: "350px" }} />
       </motion.div>
 
       <ContactButton messageId="contactPrompt" backgroundColor="#f8d952" />

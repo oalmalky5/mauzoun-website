@@ -11,7 +11,7 @@ export default function Contact({ isOpen, onClose }) {
 
   return (
     <Modal
-      isOpen={true}
+      isOpen={isOpen}
       onRequestClose={onClose}
       className={styles.modal}
       style={{
@@ -20,10 +20,11 @@ export default function Contact({ isOpen, onClose }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          ...(!isOpen ? { display: "none" } : {}),
         },
       }}
     >
+      <img src="/Services.png"></img>
+
       <NetlifyForm
         name="Contact"
         action="/home"

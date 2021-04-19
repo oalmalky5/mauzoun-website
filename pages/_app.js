@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { IntlProvider } from "react-intl";
 import { useRouter } from "next/router";
-import Cookies from "js-cookie";
 import { AnimateSharedLayout } from "framer-motion";
 
 import "../styles/globals.scss";

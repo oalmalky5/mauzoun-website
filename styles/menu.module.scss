@@ -26,6 +26,44 @@
   }
 }
 
+.tiltedSquare {
+  position: absolute;
+  width: 40px;
+  z-index: -1;
+  transform: scaleX(-1);
+
+  @include ltr {
+    margin-left: -10px;
+  }
+
+  @include rtl {
+    margin-right: -10px;
+  }
+}
+
+.itemTitle {
+  position: relative;
+
+  & p {
+    display: inline;
+  }
+
+  & .tiltedSquare {
+    position: absolute;
+    width: 40px;
+    z-index: -1;
+    transform: scaleX(-1);
+
+    @include ltr {
+      margin-left: -30px;
+    }
+
+    @include rtl {
+      margin-right: -30px;
+    }
+  }
+}
+
 .logo img {
   height: 150px;
   width: 175px;
