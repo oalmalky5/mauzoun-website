@@ -1,0 +1,34 @@
+@use "mixins" as *;
+
+.whiteBox {
+  width: 750px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: white;
+  border: solid black 2px;
+
+  @include ltr {
+    margin-left: -30px;
+  }
+
+  @include rtl {
+    margin-right: -30px;
+  }
+
+  & .content {
+
+  padding: 30px;
+  }
+
+  & p {
+    font-size: 23px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.tiltedSquare {
+  position: absolute;
+  width: 20px;
+  transform: scaleX(-1);
+}

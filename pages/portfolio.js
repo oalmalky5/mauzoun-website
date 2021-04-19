@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import styles from "../styles/portfolio.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
+import WhiteBox from "../components/WhiteBox";
 
 const backgroundColor = "#fbec9a";
 
@@ -55,11 +56,11 @@ export default function portfolio() {
         <h3 className={styles.clientCategory}>{f("creativeWriting.title")}</h3>
         {getClients("creativeWriting")}
 
-        <div className="whitebox">
+        <WhiteBox>
           <div className={styles.logoGrid}>
             <div className={styles.clients}>{f("clients")}</div>
           </div>
-        </div>
+        </WhiteBox>
       </motion.div>
     </div>
   );

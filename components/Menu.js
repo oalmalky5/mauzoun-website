@@ -71,10 +71,10 @@ export default function Menu({ backgroundColor }) {
       <motion.div className={styles.menu} layout>
         <div>
           {["home", "story", "services", "portfolio", "job"].map((e, i) => (
-            <>
+            <div key={e}>
               {!(i % 2) && buildTiltedSquare(e)}
 
-              <Link href={"/" + e} key={e}>
+              <Link href={"/" + e}>
                 <a
                   className={styles.navLink}
                   onMouseEnter={() => setHoveredLink(e)}
@@ -90,7 +90,7 @@ export default function Menu({ backgroundColor }) {
                   </span>
                 </a>
               </Link>
-            </>
+            </div>
           ))}
         </div>
 

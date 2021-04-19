@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import styles from "../styles/story.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
+import WhiteBox from "../components/WhiteBox";
 
 const backgroundColor = "#d1e3f2";
 
@@ -69,11 +70,11 @@ const Story = function () {
 
         {f("world")}
 
-        <div className="whitebox">
+        <WhiteBox>
           <b>{f("whitebox.innerText1")}</b>
           <br />
           {f("whitebox.innerText2")}
-        </div>
+        </WhiteBox>
 
         {f("workAspects")}
       </motion.div>

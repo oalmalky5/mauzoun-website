@@ -8,6 +8,7 @@ import styles from "../styles/services.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
+import WhiteBox from "../components/WhiteBox";
 
 const backgroundColor = "#f7f5f0";
 
@@ -84,7 +85,7 @@ export default function services() {
             <>
               {f("contentWriting.content")}
 
-              <div className="whitebox">
+              <WhiteBox>
                 {f("contentWriting.services.header")}
                 <br />
                 {[
@@ -100,7 +101,7 @@ export default function services() {
                     {f(e)}
                   </div>
                 ))}
-              </div>
+              </WhiteBox>
             </>
           )}
         </div>
@@ -124,7 +125,7 @@ export default function services() {
             <>
               {f("creativeWriting.content")}
 
-              <div className="whitebox">
+              <WhiteBox>
                 {f("creativeWriting.services.header")}
                 <br />
                 {[
@@ -138,7 +139,7 @@ export default function services() {
                     {f(e)}
                   </div>
                 ))}
-              </div>
+              </WhiteBox>
             </>
           )}
         </div>
