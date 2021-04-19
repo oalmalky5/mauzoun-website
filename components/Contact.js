@@ -22,6 +22,8 @@ export default function Contact({ isOpen, onClose }) {
         },
       }}
     >
+      <img src="/Services.png"></img>
+
       <form name="contact" netlify>
         <input type="text" name="name" placeholder={f("contact.name")} />
         <input type="text" name="phone" placeholder={f("contact.phone")} />

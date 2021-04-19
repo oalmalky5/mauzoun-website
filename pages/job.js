@@ -26,48 +26,62 @@ export default function job() {
         <h1>Mauzoun & You</h1>
 
         {/* Join the team */}
-        {!isJoinTeamVisible ? (
+        <div className="mt-0 unwrapped-content">
           <div
             className="content-wrapper"
-            onClick={() => setIsJoinTeamVisible(true)}
+            onClick={() => setIsJoinTeamVisible(!isJoinTeamVisible)}
+            style={isJoinTeamVisible ? { marginBottom: "30px" } : {}}
           >
             <h2>{f("joinTeam.intro")}</h2>
             <span className="reveal-icon">
               <BsChevronDown className="reveal-icon" />
             </span>
           </div>
-        ) : (
-          <div className="unwrapped-content">
-            <h2>{f("joinTeam.intro")}</h2>
-            {f("joinTeam.content")}
-            <hr />
-          </div>
-        )}
+
+          {isJoinTeamVisible && (
+            <>
+              {f("joinTeam.content")}
+              <hr />
+            </>
+          )}
+        </div>
 
         {/* Join the competition */}
-        {!isJoinCompetitionVisible ? (
+        <div className="mt-0 unwrapped-content">
           <div
             className="content-wrapper"
-            onClick={() => setIsJoinCompetitionVisible(true)}
+            onClick={() =>
+              setIsJoinCompetitionVisible(!isJoinCompetitionVisible)
+            }
+            style={isJoinCompetitionVisible ? { marginBottom: "40px" } : {}}
           >
             <h2>{f("joinCompetition.intro")}</h2>
             <span className="reveal-icon">
               <BsChevronDown className="reveal-icon" />
             </span>
           </div>
-        ) : (
-          <div className={styles.unwrappedContent}>
-            <h2>{f("joinCompetition.intro")}</h2>
-            <div className={styles.compStatus}>
-              ________
-              <div className={styles.statusBox}>
-                <div className={styles.innerText}>{f("comingSoon")}</div>
+
+          {isJoinCompetitionVisible && (
+            <>
+              <hr size="5" color="black" />
+              <div className={styles.compStatus}>
+                <object
+                  data="/Tilted Square.svg"
+                  className={styles.tiltedSquare}
+                />
+                <div className={styles.statusBox}>{f("comingSoon")}</div>
+                <object
+                  data="/Tilted Square.svg"
+                  className={styles.tiltedSquare}
+                />
               </div>
-              ________
-            </div>
-            <div className={styles.content}>{f("joinCompetition.content")}</div>
-          </div>
-        )}
+
+              <div className={styles.content}>
+                {f("joinCompetition.content")}
+              </div>
+            </>
+          )}
+        </div>
 
         <img src="/Mauzoun & You.png" className={styles.jobCover} />
         <div style={{ height: "350px" }} />

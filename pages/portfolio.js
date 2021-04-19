@@ -59,6 +59,7 @@ export default function portfolio() {
         <WhiteBox>
           <div className={styles.logoGrid}>
             <div className={styles.clients}>{f("clients")}</div>
+            <img src="/Companies.png"></img>
           </div>
         </WhiteBox>
       </motion.div>

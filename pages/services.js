@@ -24,6 +24,15 @@ export default function services() {
     false
   );
 
+  const bullet = (
+    <div className={styles.bullet}>
+      <object data="/Tilted Square.svg" className={styles.tiltedSquare} />
+      <svg width="40" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 10 L40 10" stroke="black" stroke-width="2" />
+      </svg>
+    </div>
+  );
+
   return (
     <div>
       <Menu backgroundColor={backgroundColor} />
@@ -97,7 +106,7 @@ export default function services() {
                   "contentWriting.services.socialMedia",
                 ].map((e) => (
                   <div className={styles.service} key={e}>
-                    ____
+                    {bullet}
                     {f(e)}
                   </div>
                 ))}
@@ -135,7 +144,7 @@ export default function services() {
                   "creativeWriting.services.bookTranslation",
                 ].map((e) => (
                   <div className={styles.service} key={e}>
-                    ____
+                    {bullet}
                     {f(e)}
                   </div>
                 ))}
