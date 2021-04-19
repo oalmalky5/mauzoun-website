@@ -1,5 +1,11 @@
 @use "mixins" as *;
 
+.servicesImg {
+  margin-top: 50px;
+  width: 800px;
+  height: 400px;
+}
+
 .servicesCover {
   position: absolute;
   bottom: 0;
