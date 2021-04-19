@@ -6,7 +6,7 @@ import { useIntl, createIntl, createIntlCache } from "react-intl";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import Cookies from "js-cookie";
+import Cookies, { set } from "js-cookie";
 
 import styles from "../styles/menu.module.scss";
 import * as locales from "../content/locale";
@@ -39,6 +39,27 @@ export default function Menu({ backgroundColor }) {
   const f = (id, options) => formatJsxMessage(intl, id, options);
   const otherF = (id, options) => formatJsxMessage(otherIntl, id, options);
 
+  const [hoveredLink, setHoveredLink] = React.useState("");
+
+  const buildTiltedSquare = (linkName) => {
+    let filter;
+    if (router.pathname === "/services")
+      filter =
+        "invert(92%) sepia(72%) saturate(682%) hue-rotate(329deg) brightness(96%) contrast(103%)";
+    else
+      filter =
+        "invert(99%) sepia(59%) saturate(426%) hue-rotate(169deg) brightness(112%) contrast(100%)";
+
+    return (
+      <object
+        data="/Tilted Square.svg"
+        className={styles.tiltedSquare}
+        style={{ filter }}
+        hidden={hoveredLink !== linkName && `/${linkName}` !== router.pathname}
+      />
+    );
+  };
+
   return (
     <div className={styles.sidenav} style={{ backgroundColor }}>
       <motion.div className={styles.logo} layoutId="logo">
@@ -49,15 +70,27 @@ export default function Menu({ backgroundColor }) {
 
       <motion.div className={styles.menu} layout>
         <div>
-          {["home", "story", "services", "portfolio", "job"].map((e) => (
-            <Link href={"/" + e} key={e}>
-              <a className={styles.navLink}>
-                {f(e + "Link")}
-                <span className={styles.otherLocaleLink}>
-                  {otherF(e + "Link")}
-                </span>
-              </a>
-            </Link>
+          {["home", "story", "services", "portfolio", "job"].map((e, i) => (
+            <>
+              {!(i % 2) && buildTiltedSquare(e)}
+
+              <Link href={"/" + e} key={e}>
+                <a
+                  className={styles.navLink}
+                  onMouseEnter={() => setHoveredLink(e)}
+                  onMouseLeave={() => setHoveredLink("")}
+                >
+                  <div className={styles.itemTitle}>
+                    {f(e + "Link")}
+                    {i % 2 ? buildTiltedSquare(e) : null}
+                  </div>
+
+                  <span className={styles.otherLocaleLink}>
+                    {otherF(e + "Link")}
+                  </span>
+                </a>
+              </Link>
+            </>
           ))}
         </div>
 
