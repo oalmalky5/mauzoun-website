@@ -9,37 +9,49 @@ import WhiteBox from "../components/WhiteBox";
 
 const backgroundColor = "#d1e3f2";
 
-const teamMembersProfilePic = {
-  1: "https://i.imgur.com/Ph2nM8j.gif",
-  2: "",
-  3: "",
-  4: "",
-  5: "",
-  6: "",
-  7: "",
+const teamMembersData = {
+  1: {
+    src: "https://i.imgur.com/Ph2nM8j.gif",
+    preview: "/First profile preview.png",
+  },
+  2: {},
+  3: {},
+  4: {},
+  5: {},
+  6: {},
+  7: {},
 };
 
 const Story = function () {
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, id, options);
 
+  let numberOfMembersImage = Object.keys(teamMembersData).length;
+  let numberOfMembers =
+    Object.keys(intl.messages).filter((e) => e.startsWith("teamMember."))
+      .length / 2;
+
+  const updateTeamMembersHoverState = (e, isHovered) => {
+    const id = e.target?.id;
+    if (id && teamMembersData[id].src)
+      e.target.src = isHovered
+        ? teamMembersData[id].src
+        : teamMembersData[id].preview;
+  };
+
   const getTeamMembers = () => {
     let i = 1;
-    let numberOfMembersImage = Object.keys(teamMembersProfilePic).length;
-    let numberOfMembers =
-      Object.keys(intl.messages).filter((e) => e.startsWith("teamMember."))
-        .length / 2;
     let teamMembers = [];
 
     while (i <= numberOfMembersImage) {
       teamMembers.push(
         <div className={styles.gridItem} key={`teamMember.${i}`}>
-          <div
+          <img
+            id={i}
+            src={teamMembersData[i].preview}
             className={styles.gridItemImage}
-            style={{
-              backgroundImage: `url(${teamMembersProfilePic[i]})`,
-              backgroundSize: "200px 200px",
-            }}
+            onMouseEnter={(e) => updateTeamMembersHoverState(e, true)}
+            onMouseLeave={(e) => updateTeamMembersHoverState(e, false)}
           />
           {i <= numberOfMembers && (
             <div className="mt-0 mb-0">
