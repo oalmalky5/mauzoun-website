@@ -19,6 +19,14 @@ function MyApp({ Component, pageProps }) {
       defaultLocale={defaultLocale}
       messages={messages}
     >
+      <form name="Contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="text" name="phone" />
+        <input type="text" name="subject" />
+        <input type="text" name="date" />
+        <input type="text" name="time" />
+      </form>
+
       <AnimateSharedLayout type="crossfade">
         <div dir={pathname !== "/" && locale === "ar" ? "rtl" : "ltr"}>
           <Component {...pageProps} />

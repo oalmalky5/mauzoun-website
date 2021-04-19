@@ -14,6 +14,9 @@ export const ar = {
     "contact.date": "DD/MM/YEAR",
     "contact.time": "Time",
     "contact.submit": "Let's talk!",
+    "contact.success": "Thanks for contacting us!",
+    "contact.failure":
+      "Sorry, we could not reach our servers. Please try again later.",
   },
   "/home": {
     contactPrompt: "هل أنتم مهتمون بعملنا؟",
