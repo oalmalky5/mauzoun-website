@@ -1,11 +1,13 @@
 import React from "react";
 import { useIntl } from "react-intl";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import styles from "../styles/story.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import WhiteBox from "../components/WhiteBox";
+import ContactButton from "../components/ContactButton";
 
 const backgroundColor = "#d1e3f2";
 
@@ -71,7 +73,15 @@ const Story = function () {
       <Menu backgroundColor={backgroundColor} />
 
       <motion.div className="container" style={{ backgroundColor }} layout>
-        <img src="/Story.png" className={styles.storyCover} />
+        <div className={styles.storyCover}>
+          <Image
+            src="/Story.png"
+            height="341px"
+            width="900px"
+            layout="fixed"
+            priority="true"
+          />
+        </div>
         <h1>{f("nameMeaning")}</h1>
 
         {f("aim")}
@@ -90,6 +100,8 @@ const Story = function () {
 
         {f("workAspects")}
       </motion.div>
+
+      <ContactButton />
     </div>
   );
 };

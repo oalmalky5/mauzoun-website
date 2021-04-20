@@ -14,8 +14,11 @@
   margin-bottom: 0px;
 }
 
-.logoGrid img {
+.logoGrid {
   display: block;
   margin: 0 auto;
-  margin-top: 30px;
+
+  & .companies {
+    margin-top: 30px;
+  }
 }

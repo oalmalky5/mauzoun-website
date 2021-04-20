@@ -3,12 +3,12 @@ import { BsChevronDown } from "react-icons/bs";
 import { useIntl } from "react-intl";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import styles from "../styles/home.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
-import Contact from "../components/Contact";
 
 const backgroundColor = "#f8d952";
 
@@ -30,8 +30,11 @@ export default function Home() {
 
         {f("summary")}
 
-        <img
-          className={styles.homeImg}
+        <Image
+          width="800px"
+          height="400px"
+          layout="fixed"
+          priority="true"
           src="http://writingandwellness.com/wp-content/uploads/2015/02/Home-Office-2.jpg"
           alt="an image of an office"
         />
@@ -120,7 +123,7 @@ export default function Home() {
         )}
       </motion.div>
 
-      <ContactButton messageId="contactPrompt" backgroundColor="#ffffff" />
+      <ContactButton />
     </>
   );
 }

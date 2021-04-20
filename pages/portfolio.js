@@ -1,11 +1,13 @@
 import React from "react";
 import { useIntl } from "react-intl";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import styles from "../styles/portfolio.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import WhiteBox from "../components/WhiteBox";
+import ContactButton from "../components/ContactButton";
 
 const backgroundColor = "#fbec9a";
 
@@ -58,11 +60,20 @@ export default function portfolio() {
 
         <WhiteBox>
           <div className={styles.logoGrid}>
-            <div className={styles.clients}>{f("clients")}</div>
-            <img src="/Companies.png"></img>
+            <div>{f("clients")}</div>
+            <div className={styles.companies}>
+              <Image
+                src="/Companies.png"
+                height="624"
+                width="598"
+                priority="true"
+              />
+            </div>
           </div>
         </WhiteBox>
       </motion.div>
+
+      <ContactButton />
     </div>
   );
 }

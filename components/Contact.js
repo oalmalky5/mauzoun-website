@@ -23,8 +23,6 @@ export default function Contact({ isOpen, onClose }) {
         },
       }}
     >
-      <img src="/Services.png"></img>
-
       <NetlifyForm
         name="Contact"
         action="/home"

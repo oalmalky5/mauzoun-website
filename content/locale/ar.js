@@ -4,11 +4,12 @@ export const ar = {
     storyLink: "قصتنا",
     servicesLink: "خدماتنا",
     portfolioLink: "أعمالنا",
+    blogLink: "مدوّنتنا",
     jobLink: "مَوْزوْن وأنت",
-    blogLink: "ونتناّمد",
     email: "hello@mauzoun.com",
     location: "مقرنا في جدة، السعودية",
     comingSoon: "قريبًا.",
+    contactPrompt: "هل أنتم مهتمون بعملنا؟",
     "contact.name": "Name",
     "contact.phone": "Number",
     "contact.subject": "What would you like to discuss with us?",
@@ -20,7 +21,6 @@ export const ar = {
       "Sorry, we could not reach our servers. Please try again later.",
   },
   "/home": {
-    contactPrompt: "هل أنتم مهتمون بعملنا؟",
     title: "أجمل ترحيب من فريق مَوْزوْن.",
     summary:
       "نحن ستوديو كتابة إبداعية يبحث ثم يكتب بإبداع وتكامل. نقدم خدماتنا من مكاتبنا في جدة لعملائنا في جميع أنحاء العالم.",
@@ -68,8 +68,6 @@ export const ar = {
     clients: "Since 2018, we have worked with <b><u>over 100 clients</u></b>.",
   },
   "/services": {
-    contactPrompt:
-      "احجزوا مكالمة أو ابعثوا لنا رسالة وأخبرونا كيف لمَوْزوْن أن يساعدكم.",
     title: "خدماتنا",
     "approach.title": "توجهنا",
     "approach.header":

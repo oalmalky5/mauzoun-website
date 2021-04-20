@@ -3,7 +3,10 @@
 .jobCover {
   position: absolute;
   bottom: 0;
-  width: 750px;
+
+  & div {
+    display: block !important;
+  }
 
   @include ltr {
     margin-left: 100px;
@@ -33,8 +36,8 @@
   margin-top: -40px;
   margin-bottom: 20px;
 
-  & .tiltedSquare {
-    width: 20px;
+  & div {
+    display: block !important;
   }
 
   & .statusBox {

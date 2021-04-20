@@ -6,7 +6,10 @@ import Contact from "../components/Contact";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import { motion } from "framer-motion";
 
-export default function ContactButton({ messageId, backgroundColor }) {
+export default function ContactButton({
+  messageId = "contactPrompt",
+  backgroundColor = "#ffffff",
+}) {
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, id, options);
 

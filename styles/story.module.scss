@@ -1,8 +1,11 @@
 @use "mixins" as *;
 
 .storyCover {
-  width: 900px;
   margin-top: -50px;
+
+  & div {
+    display: block !important;
+  }
 
   @include ltr {
     margin-left: -50px;

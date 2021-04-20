@@ -64,18 +64,18 @@
   }
 }
 
-.logo img {
-  height: 150px;
-  width: 175px;
+.logo {
   margin-bottom: 30px;
   cursor: pointer;
+  height: 150px;
+  width: 175px;
 
   @include ltr {
-    margin-left: -25px;
+    margin-left: -25px !important;
   }
 
   @include rtl {
-    margin-right: -25px;
+    margin-right: -25px !important;
   }
 }
 

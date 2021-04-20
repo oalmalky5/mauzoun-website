@@ -4,11 +4,12 @@ exports["en-US"] = {
     storyLink: "Story",
     servicesLink: "Services",
     portfolioLink: "Portfolio",
-    jobLink: "Mauzoun & You",
     blogLink: "Our Blog",
+    jobLink: "Mauzoun & You",
     email: "hello@mauzoun.com",
     location: "Based in Jeddah, Saudi Arabia",
     comingSoon: "COMING SOON.",
+    contactPrompt: "Book an online call now.",
     "contact.name": "Name",
     "contact.phone": "Number",
     "contact.subject": "What would you like to discuss with us?",
@@ -20,7 +21,6 @@ exports["en-US"] = {
       "Sorry, we could not reach our servers. Please try again later.",
   },
   "/home": {
-    contactPrompt: "Interested in the work we do?",
     title: "A warm welcome to you from the Mauzoun Team.",
     summary:
       "We are a Jeddah-based writing studio that researches then writes creatively and holistically, providing services to clients worldwide.",
@@ -67,8 +67,6 @@ exports["en-US"] = {
     clients: "Since 2018, we have worked with <b><u>over 100 clients</u></b>.",
   },
   "/services": {
-    contactPrompt:
-      "Book a call or send us an e-mail, and our team will help you in our earliest availability.",
     title: "Services",
     "approach.title": "Approach",
     "approach.header":

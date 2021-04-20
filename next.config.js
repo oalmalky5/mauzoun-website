@@ -3,5 +3,8 @@ module.exports = {
     locales: ["en-US", "ar"],
     defaultLocale: "en-US",
   },
-  target: "serverless"
+  images: {
+    domains: ["i.imgur.com", "writingandwellness.com"],
+  },
+  target: "serverless",
 };

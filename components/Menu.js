@@ -5,7 +5,8 @@ import { GrFacebookOption } from "react-icons/gr";
 import { useIntl, createIntl, createIntlCache } from "react-intl";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { motion, MotionConfig } from "framer-motion";
 import Cookies from "js-cookie";
 
 import styles from "../styles/menu.module.scss";
@@ -62,15 +63,18 @@ export default function Menu({ backgroundColor }) {
 
   return (
     <div className={styles.sidenav} style={{ backgroundColor }}>
-      <motion.div className={styles.logo} layoutId="logo">
-        <Link href="/">
-          <img src="https://i.imgur.com/HjDbXtR.png" alt="Mauzoun logo" />
-        </Link>
-      </motion.div>
+      <Link href="/">
+        <motion.img
+          src="https://i.imgur.com/HjDbXtR.png"
+          alt="Mauzoun logo"
+          className={styles.logo}
+          layoutId="logo"
+        />
+      </Link>
 
       <motion.div className={styles.menu} layout>
         <div>
-          {["home", "story", "services", "portfolio", "job", "blog"].map(
+          {["home", "story", "services", "portfolio", "blog", "job"].map(
             (e, i) => (
               <div key={e}>
                 {!(i % 2) && buildTiltedSquare(e)}
