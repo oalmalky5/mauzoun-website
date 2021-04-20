@@ -5,6 +5,7 @@ export const ar = {
     servicesLink: "خدماتنا",
     portfolioLink: "أعمالنا",
     jobLink: "مَوْزوْن وأنت",
+    blogLink: "ونتناّمد",
     email: "hello@mauzoun.com",
     location: "مقرنا في جدة، السعودية",
     comingSoon: "قريبًا.",

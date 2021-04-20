@@ -154,12 +154,6 @@ export default function services() {
         </div>
 
         <img
-          className={styles.servicesImg}
-          src="http://writingandwellness.com/wp-content/uploads/2015/02/Home-Office-2.jpg"
-          alt="an image of an office"
-        />
-
-        <img
           src="/Services.png"
           className={styles.servicesCover}
           style={router.locale === "ar" ? { transform: "scaleX(-1)" } : {}}

@@ -27,7 +27,10 @@ function MyApp({ Component, pageProps }) {
       </form>
 
       <AnimateSharedLayout type="crossfade">
-        <div dir={pathname !== "/" && locale === "ar" ? "rtl" : "ltr"}>
+        <div
+          dir={pathname !== "/" && locale === "ar" ? "rtl" : "ltr"}
+          className={"locale " + locale}
+        >
           <Component {...pageProps} />
         </div>
       </AnimateSharedLayout>

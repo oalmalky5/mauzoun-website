@@ -5,8 +5,8 @@ import { GrFacebookOption } from "react-icons/gr";
 import { useIntl, createIntl, createIntlCache } from "react-intl";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
-import Cookies, { set } from "js-cookie";
+import { motion } from "framer-motion";
+import Cookies from "js-cookie";
 
 import styles from "../styles/menu.module.scss";
 import * as locales from "../content/locale";
@@ -70,32 +70,39 @@ export default function Menu({ backgroundColor }) {
 
       <motion.div className={styles.menu} layout>
         <div>
-          {["home", "story", "services", "portfolio", "job"].map((e, i) => (
-            <div key={e}>
-              {!(i % 2) && buildTiltedSquare(e)}
+          {["home", "story", "services", "portfolio", "job", "blog"].map(
+            (e, i) => (
+              <div key={e}>
+                {!(i % 2) && buildTiltedSquare(e)}
 
-              <Link href={"/" + e}>
-                <a
-                  className={styles.navLink}
-                  onMouseEnter={() => setHoveredLink(e)}
-                  onMouseLeave={() => setHoveredLink("")}
-                >
-                  <div className={styles.itemTitle}>
-                    {f(e + "Link")}
-                    {i % 2 ? buildTiltedSquare(e) : null}
-                  </div>
+                <Link href={"/" + e}>
+                  <a
+                    className={styles.navLink}
+                    onMouseEnter={() => setHoveredLink(e)}
+                    onMouseLeave={() => setHoveredLink("")}
+                  >
+                    <div className={styles.itemTitle}>
+                      {f(e + "Link")}
+                      {i % 2 ? buildTiltedSquare(e) : null}
+                    </div>
 
-                  <span className={styles.otherLocaleLink}>
-                    {otherF(e + "Link")}
-                  </span>
-                </a>
-              </Link>
-            </div>
-          ))}
+                    <span
+                      className={styles.otherLocaleLink + " " + otherLocale}
+                    >
+                      {otherF(e + "Link")}
+                    </span>
+                  </a>
+                </Link>
+              </div>
+            )
+          )}
         </div>
 
         <div className={styles.languageSwitch}>
-          <b>{locale === "en-US" ? "English" : "عربــي"}</b>
+          <p className={locale}>
+            <b>{locale === "en-US" ? "English" : "عربــي"}</b>
+          </p>
+
           <Link href={pathname} locale={otherLocale}>
             <a onClick={() => Cookies.set("NEXT_LOCALE", otherLocale)}>
               <label className={styles.switch}>
@@ -104,7 +111,10 @@ export default function Menu({ backgroundColor }) {
               </label>
             </a>
           </Link>
-          {locale === "ar" ? "English" : "عربــي"}
+
+          <p className={otherLocale}>
+            {locale === "ar" ? "English" : "عربــي"}
+          </p>
         </div>
 
         <div className={styles.complementaryInfo}>

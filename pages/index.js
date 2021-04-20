@@ -24,12 +24,14 @@ export default function ChooseLocale() {
         <button
           className={styles.languageButton}
           onClick={() => changeLocale("en-US")}
+          style={{ fontFamily: "Alegreya" }}
         >
           English
         </button>
         <button
           className={styles.languageButton}
           onClick={() => changeLocale("ar")}
+          style={{ fontFamily: "GE Dinar Two" }}
         >
           عربــي
         </button>

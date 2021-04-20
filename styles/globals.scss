@@ -1,8 +1,18 @@
 @use "mixins" as *;
 
 @font-face {
-  font-family: "Alegreya";
+  font-family: "Alegreya Sans";
   src: url("../public/fonts/AlegreyaSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "GE Dinar One";
+  src: url("../public/fonts/GE Dinar One Medium.otf");
+}
+
+@font-face {
+  font-family: "GE Dinar Two";
+  src: url("../public/fonts/GE Dinar Two Medium.otf");
 }
 
 html,
@@ -17,9 +27,25 @@ body {
   box-sizing: border-box;
 }
 
-p {
-  font-size: 20px;
-  font-family: "Alegreya";
+.locale {
+  &.ar,
+  & .ar {
+    font-size: 20px;
+    font-family: "GE Dinar One";
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "GE Dinar Two";
+    }
+  }
+
+  &.en-US,
+  & .en-US {
+    font-size: 20px;
+    font-family: "Alegreya Sans";
+  }
 }
 
 h1 p {
@@ -91,6 +117,7 @@ a {
   min-height: 100%;
   width: 650px;
   padding: 50px;
+  padding-top: 20px;
 
   @include ltr {
     margin-left: 430px; /* Same as the width of the sidebar */

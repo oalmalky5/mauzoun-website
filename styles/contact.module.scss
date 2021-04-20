@@ -6,7 +6,7 @@
   padding: 30px;
   width: 235px;
   height: 235px;
-  margin-top: 50vh;
+  margin-top: 550px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -16,11 +16,11 @@
   cursor: pointer;
 
   @include ltr {
-    margin-left: 65%;
+    margin-left: 1200px;
   }
 
   @include rtl {
-    margin-right: 65%;
+    margin-right: 1200px;
   }
 
   & p {
@@ -32,7 +32,6 @@
 .modal {
   display: flex;
   align-items: center;
-  font-family: "Alegreya";
   position: absolute;
   outline: none;
   background-color: #f8d952;

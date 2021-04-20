@@ -1,10 +1,11 @@
 exports["en-US"] = {
   shared: {
     homeLink: "Home",
-    storyLink: "Our story",
+    storyLink: "Story",
     servicesLink: "Services",
     portfolioLink: "Portfolio",
     jobLink: "Mauzoun & You",
+    blogLink: "Our Blog",
     email: "hello@mauzoun.com",
     location: "Based in Jeddah, Saudi Arabia",
     comingSoon: "COMING SOON.",
@@ -78,7 +79,7 @@ exports["en-US"] = {
     "approach.briefForm.header": "2. Complete the Mauzoun Brief Form.",
     "approach.briefForm.content":
       "After understanding your needs, we will provide you with the Mauzoun Brief Form, where you can fill the necessary information required to further understand the scope of your project.",
-    "approach.quotation.header": "3. Preparing Your Quotation.",
+    "approach.quotation.header": "3. We Prepare Your Quotation.",
     "approach.quotation.content":
       "Our quotations take around 3 business days to prepare after reviewing your form. They include our Terms and Conditions and help clarify and streamline our work together.",
     "approach.timeline.header": "4. We Book Your Timeline",
