@@ -10,7 +10,7 @@ const formatJsxMessage = (intl, id, options) => {
   // Underline embedded links
   message = message.replace(
     /(<Link[^>]*>)/g,
-    "$1<span style={{ textDecoration: 'underline', cursor: 'pointer' }}>"
+    "$1<span style={{ fontFamily: 'Alegreya', fontWeight: 'bold', cursor: 'pointer' }}>"
   );
   message = message.replace(/(<\/Link[^>]*>)/g, "</span>$1");
 

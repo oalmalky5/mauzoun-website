@@ -1,5 +1,5 @@
 import React from "react";
-import { IoLogoTwitter } from "react-icons/io";
+import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
 import { GrFacebookOption } from "react-icons/gr";
 import { useIntl, createIntl, createIntlCache } from "react-intl";
@@ -62,7 +62,11 @@ export default function Menu({ backgroundColor }) {
   };
 
   return (
-    <div className={styles.sidenav} style={{ backgroundColor }}>
+    <motion.div
+      className={styles.sidenav}
+      style={{ backgroundColor }}
+      layout="position"
+    >
       <Link href="/">
         <motion.img
           src="https://i.imgur.com/HjDbXtR.png"
@@ -72,7 +76,7 @@ export default function Menu({ backgroundColor }) {
         />
       </Link>
 
-      <motion.div className={styles.menu} layout>
+      <div className={styles.menu}>
         <div>
           {["home", "story", "services", "portfolio", "blog", "job"].map(
             (e, i) => (
@@ -85,13 +89,13 @@ export default function Menu({ backgroundColor }) {
                     onMouseEnter={() => setHoveredLink(e)}
                     onMouseLeave={() => setHoveredLink("")}
                   >
-                    <div className={styles.itemTitle}>
+                    <div className={`${styles.itemTitle} heading`}>
                       {f(e + "Link")}
                       {i % 2 ? buildTiltedSquare(e) : null}
                     </div>
 
                     <span
-                      className={styles.otherLocaleLink + " " + otherLocale}
+                      className={`${styles.otherLocaleLink} ${otherLocale} lighter`}
                     >
                       {otherF(e + "Link")}
                     </span>
@@ -133,14 +137,14 @@ export default function Menu({ backgroundColor }) {
               target="_blank"
               href="https://www.linkedin.com/company/mauzoun/about/"
             >
-              <GrFacebookOption size="30px" />
+              <IoLogoLinkedin size="30px" />
             </a>
           </div>
 
           {f("email")}
-          <b>{f("location")}</b>
+          <p className="bolder">{f("location")}</p>
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 }

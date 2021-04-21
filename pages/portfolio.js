@@ -41,7 +41,7 @@ export default function portfolio() {
     <div>
       <Menu backgroundColor={backgroundColor} />
 
-      <motion.div className="container" style={{ backgroundColor }} layout>
+      <motion.div className="container" style={{ backgroundColor }} layout="position">
         <h1>{f("title")}</h1>
 
         <h2>{f("subtitle")}</h2>

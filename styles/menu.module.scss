@@ -81,14 +81,13 @@
 
 .navLink {
   & p {
-    text-decoration: none;
     font-size: 25px;
+    font-weight: 500;
     margin-top: 0px;
     margin-bottom: 0px;
   }
 
   & .otherLocaleLink p {
-    font-weight: lighter;
     font-size: 15px;
     margin-bottom: 20px;
   }
@@ -112,7 +111,10 @@
   align-items: center;
   margin-top: 15px;
   margin-bottom: 35px;
-  font-size: 18px;
+
+  & p {
+    font-size: 18px !important;
+  }
 }
 
 .switch {

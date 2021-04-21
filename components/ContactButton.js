@@ -18,7 +18,7 @@ export default function ContactButton({
   return (
     <>
       <motion.button
-        className={styles.contactButton}
+        className={styles.contactButton + " heading"}
         onClick={() => setIsContactFormVisible(true)}
         style={{ backgroundColor }}
         layout

@@ -1,19 +1,5 @@
 @use "mixins" as *;
-
-@font-face {
-  font-family: "Alegreya Sans";
-  src: url("../public/fonts/AlegreyaSans-Medium.ttf");
-}
-
-@font-face {
-  font-family: "GE Dinar One";
-  src: url("../public/fonts/GE Dinar One Medium.otf");
-}
-
-@font-face {
-  font-family: "GE Dinar Two";
-  src: url("../public/fonts/GE Dinar Two Medium.otf");
-}
+@import "fonts";
 
 html,
 body {
@@ -27,6 +13,7 @@ body {
   box-sizing: border-box;
 }
 
+// Localized fonts
 .locale {
   &.ar,
   & .ar {
@@ -36,7 +23,9 @@ body {
     h1,
     h2,
     h3,
-    h4 {
+    h4,
+    h5,
+    .heading {
       font-family: "GE Dinar Two";
     }
   }
@@ -45,6 +34,15 @@ body {
   & .en-US {
     font-size: 20px;
     font-family: "Alegreya Sans";
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .heading {
+      font-family: "Alegreya";
+    }
   }
 }
 
@@ -76,6 +74,27 @@ h3 {
 h4 p {
   font-size: 23px;
   font-weight: bold;
+}
+
+h5 p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.lighter {
+  font-weight: lighter !important;
+
+  & p {
+    font-weight: lighter !important;
+  }
+}
+
+.bolder {
+  font-weight: bolder !important;
+
+  & p {
+    font-weight: bolder !important;
+  }
 }
 
 hr {
@@ -137,6 +156,7 @@ a {
   cursor: pointer;
 
   & h2,
+  h5,
   p {
     display: inline;
   }
@@ -145,7 +165,7 @@ a {
     stroke-width: 1.5px;
     font-size: 20px;
     vertical-align: middle;
-    margin-top: -8px;
+    margin-top: -7px;
 
     @include ltr {
       margin-left: 5px;
@@ -160,7 +180,9 @@ a {
 .unwrapped-content {
   margin-top: 20px;
 
-  &.inline p {
+  &.inline,
+  h5,
+  p {
     display: inline;
   }
 }

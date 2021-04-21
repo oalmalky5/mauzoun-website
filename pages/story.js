@@ -72,7 +72,7 @@ const Story = function () {
     <div>
       <Menu backgroundColor={backgroundColor} />
 
-      <motion.div className="container" style={{ backgroundColor }} layout>
+      <motion.div className="container" style={{ backgroundColor }} layout="position">
         <div className={styles.storyCover}>
           <Image
             src="/Story.png"

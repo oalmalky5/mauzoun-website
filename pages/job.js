@@ -24,7 +24,7 @@ export default function job() {
     <div>
       <Menu backgroundColor={backgroundColor} />
 
-      <motion.div className="container" style={{ backgroundColor }} layout>
+      <motion.div className="container" style={{ backgroundColor }} layout="position">
         <h1>Mauzoun & You</h1>
 
         {/* Join the team */}

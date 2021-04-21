@@ -25,7 +25,11 @@ export default function Home() {
     <>
       <Menu backgroundColor={backgroundColor} />
 
-      <motion.div className="container" style={{ backgroundColor }} layout>
+      <motion.div
+        className="container"
+        style={{ backgroundColor }}
+        layout="position"
+      >
         <h1>{f("title")}</h1>
 
         {f("summary")}
@@ -39,7 +43,18 @@ export default function Home() {
           alt="an image of an office"
         />
 
-        {f("story")}
+        {intl.formatMessage({ id: "story.intro" }) !== "story.intro" ? (
+          <>
+            <Link href="/story">
+              <h5 className="mb-0">
+                <u>{f("story.intro")}</u>
+              </h5>
+            </Link>
+            <p className="mt-0">{f("story.content")}</p>
+          </>
+        ) : (
+          f("story")
+        )}
 
         {/* Services */}
         {!areServicesVisible ? (
@@ -47,7 +62,7 @@ export default function Home() {
             className="content-wrapper"
             onClick={() => setAreServicesVisible(true)}
           >
-            <b>{f("services.intro")}</b>
+            <h5>{f("services.intro")}</h5>
             <span className="reveal-icon">
               <BsChevronDown className="reveal-icon" />
             </span>
@@ -56,7 +71,7 @@ export default function Home() {
           <div className="inline unwrapped-content">
             <hr />
             <Link href="/services">
-              <b style={{ cursor: "pointer" }}>{f("services.intro")}</b>
+              <h5 style={{ cursor: "pointer" }}>{f("services.intro")}</h5>
             </Link>
             {f("services.content")}
             <hr />
@@ -69,7 +84,7 @@ export default function Home() {
             className="content-wrapper"
             onClick={() => setIsApproachVisible(true)}
           >
-            <b>{f("approach.intro")}</b>
+            <h5>{f("approach.intro")}</h5>
             <span className="reveal-icon">
               <BsChevronDown className="reveal-icon" />
             </span>
@@ -77,7 +92,7 @@ export default function Home() {
         ) : (
           <div className="inline unwrapped-content">
             {!areServicesVisible && <hr />}
-            <b>{f("approach.intro")}</b>
+            <h5>{f("approach.intro")}</h5>
             {f("approach.content")}
             <hr />
           </div>
@@ -89,7 +104,7 @@ export default function Home() {
             className="content-wrapper"
             onClick={() => setAreProjectsVisible(true)}
           >
-            <b>{f("projects.intro")}</b>
+            <h5>{f("projects.intro")}</h5>
             <span className="reveal-icon">
               <BsChevronDown className="reveal-icon" />
             </span>
@@ -97,7 +112,7 @@ export default function Home() {
         ) : (
           <div className="inline unwrapped-content">
             {!isApproachVisible && <hr />}
-            <b>{f("projects.intro")}</b>
+            <h5>{f("projects.intro")}</h5>
             {f("projects.content")}
             <hr />
           </div>
@@ -109,7 +124,7 @@ export default function Home() {
             className="content-wrapper"
             onClick={() => setIsWorkVisible(true)}
           >
-            <b>{f("work.intro")}</b>
+            <h5>{f("work.intro")}</h5>
             <span className="reveal-icon">
               <BsChevronDown className="reveal-icon" />
             </span>
@@ -117,7 +132,7 @@ export default function Home() {
         ) : (
           <div className="inline unwrapped-content">
             {!areProjectsVisible && <hr />}
-            <b>{f("work.intro")}</b>
+            <h5>{f("work.intro")}</h5>
             {f("work.content")}
           </div>
         )}

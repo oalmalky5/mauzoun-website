@@ -38,7 +38,11 @@ export default function services() {
     <div>
       <Menu backgroundColor={backgroundColor} />
 
-      <motion.div className="container" style={{ backgroundColor }} layout>
+      <motion.div
+        className="container"
+        style={{ backgroundColor }}
+        layout="position"
+      >
         <h1 className="mb-0">{f("title")}</h1>
 
         {/* Approach */}
