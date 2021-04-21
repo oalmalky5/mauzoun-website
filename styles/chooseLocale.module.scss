@@ -1,12 +1,25 @@
 @use "mixins" as *;
 
 .pageContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mainPanel {
   position: absolute;
-  width: 100%;
+  width: 35%;
   height: 100%;
   display: flex;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #f8d952;
+
+  @media (max-width: 1536px) {
+    width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 
   & img {
     position: absolute;
@@ -22,13 +35,14 @@
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 
 .languageButton {
   background: #f8d952;
   padding: 20px;
+  margin: 0px 40px;
   width: 180px;
   height: 180px;
   border-radius: 50%;

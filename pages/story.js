@@ -1,7 +1,6 @@
 import React from "react";
 import { useIntl } from "react-intl";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 import styles from "../styles/story.module.scss";
 import Menu from "../components/Menu";
@@ -78,7 +77,7 @@ const Story = function () {
         layout="position"
       >
         <div className={styles.storyCover}>
-          <Image
+          <img
             src="/Story.png"
             height="341px"
             width="900px"

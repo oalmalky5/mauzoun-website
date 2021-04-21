@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { useRouter } from "next/router";
 
 import styles from "../styles/whitebox.module.scss";
@@ -17,12 +16,7 @@ export default function WhiteBox({ children, style }) {
 
     return (
       <div className={styles.tiltedSquare} style={additionalStyles}>
-        <Image
-          src="/Tilted Square.svg"
-          height="20"
-          width="20"
-          priority="true"
-        />
+        <img src="/Tilted Square.svg" height="20" width="20" priority="true" />
       </div>
     );
   };

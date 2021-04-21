@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useIntl } from "react-intl";
 import { BsChevronDown } from "react-icons/bs";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 import styles from "../styles/job.module.scss";
 import Menu from "../components/Menu";
@@ -72,7 +71,7 @@ export default function job() {
               <hr size="5" color="black" />
               <div className={styles.compStatus}>
                 <div className={styles.tiltedSquare}>
-                  <Image
+                  <img
                     src="/Tilted Square.svg"
                     height="20"
                     width="20"
@@ -81,7 +80,7 @@ export default function job() {
                 </div>
                 <div className={styles.statusBox}>{f("comingSoon")}</div>
                 <div className={styles.tiltedSquare}>
-                  <Image
+                  <img
                     src="/Tilted Square.svg"
                     height="20"
                     width="20"
@@ -98,7 +97,7 @@ export default function job() {
         </div>
 
         <div className={styles.jobCover}>
-          <Image
+          <img
             src="/Mauzoun & You.png"
             height="376px"
             width="750px"

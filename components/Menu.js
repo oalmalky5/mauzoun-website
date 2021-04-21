@@ -1,12 +1,10 @@
 import React from "react";
 import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
-import { GrFacebookOption } from "react-icons/gr";
 import { useIntl, createIntl, createIntlCache } from "react-intl";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Image from "next/image";
-import { motion, MotionConfig } from "framer-motion";
+import { motion } from "framer-motion";
 import Cookies from "js-cookie";
 
 import styles from "../styles/menu.module.scss";
@@ -67,14 +65,16 @@ export default function Menu({ backgroundColor }) {
       style={{ backgroundColor }}
       layout="position"
     >
-      <Link href="/">
-        <motion.img
-          src="https://i.imgur.com/HjDbXtR.png"
-          alt="Mauzoun logo"
-          className={styles.logo}
-          layoutId="logo"
-        />
-      </Link>
+      <motion.div layout>
+        <Link href="/">
+          <motion.img
+            src="https://i.imgur.com/HjDbXtR.png"
+            alt="Mauzoun logo"
+            className={styles.logo}
+            layoutId="logo"
+          />
+        </Link>
+      </motion.div>
 
       <div className={styles.menu}>
         <div>

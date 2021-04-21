@@ -15,28 +15,35 @@ export default function ChooseLocale() {
 
   return (
     <div className={styles.pageContainer}>
-      <motion.img
-        src="https://i.imgur.com/HjDbXtR.png"
-        alt="Mauzoun logo"
-        layoutId="logo"
-      />
+      <div />
 
-      <div className={styles.languagePicker}>
-        <button
-          className={styles.languageButton}
-          onClick={() => changeLocale("en-US")}
-          style={{ fontFamily: "Alegreya" }}
-        >
-          English
-        </button>
-        <button
-          className={styles.languageButton}
-          onClick={() => changeLocale("ar")}
-          style={{ fontFamily: "GE Dinar Two" }}
-        >
-          عربــي
-        </button>
+      <div className={styles.mainPanel}>
+        <motion.img
+          src="https://i.imgur.com/HjDbXtR.png"
+          alt="Mauzoun logo"
+          layoutId="logo"
+        />
+
+        <div className={styles.languagePicker}>
+          <button
+            className={styles.languageButton}
+            onClick={() => changeLocale("en-US")}
+            style={{ fontFamily: "Alegreya" }}
+          >
+            English
+          </button>
+
+          <button
+            className={styles.languageButton}
+            onClick={() => changeLocale("ar")}
+            style={{ fontFamily: "GE Dinar Two" }}
+          >
+            عربــي
+          </button>
+        </div>
       </div>
+
+      <div />
     </div>
   );
 }

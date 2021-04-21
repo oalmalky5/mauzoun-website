@@ -1,7 +1,6 @@
 import React from "react";
 import { useIntl } from "react-intl";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 import styles from "../styles/portfolio.module.scss";
 import Menu from "../components/Menu";
@@ -69,7 +68,7 @@ export default function portfolio() {
           <div className={styles.logoGrid}>
             <div>{f("clients")}</div>
             <div className={styles.companies}>
-              <Image
+              <img
                 src="/Companies.png"
                 height="624"
                 width="598"

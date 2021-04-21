@@ -3,7 +3,6 @@ import { useIntl } from "react-intl";
 import { BsChevronDown } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import Image from "next/image";
 
 import styles from "../styles/services.module.scss";
 import Menu from "../components/Menu";
@@ -159,7 +158,7 @@ export default function services() {
         </div>
 
         <div className={styles.servicesCover}>
-          <Image
+          <img
             src="/Services.png"
             height="437px"
             width="400px"

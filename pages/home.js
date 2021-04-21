@@ -3,7 +3,6 @@ import { BsChevronDown } from "react-icons/bs";
 import { useIntl } from "react-intl";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 import styles from "../styles/home.module.scss";
 import Menu from "../components/Menu";
@@ -34,7 +33,7 @@ export default function Home() {
 
         {f("summary")}
 
-        <Image
+        <img
           width="800px"
           height="400px"
           layout="fixed"
@@ -42,8 +41,7 @@ export default function Home() {
           src="http://writingandwellness.com/wp-content/uploads/2015/02/Home-Office-2.jpg"
           alt="an image of an office"
         />
-
-        {intl.formatMessage({ id: "story.intro" }) !== "story.intro" ? (
+        {Object.keys(intl.messages).includes("story.intro") ? (
           <>
             <Link href="/story">
               <h5 className="mb-0">
