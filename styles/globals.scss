@@ -20,11 +20,11 @@ body {
     font-size: 20px;
     font-family: "GE Dinar One";
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
     .heading {
       font-family: "GE Dinar Two";
     }
@@ -35,11 +35,11 @@ body {
     font-size: 20px;
     font-family: "Alegreya Sans";
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
     .heading {
       font-family: "Alegreya";
     }

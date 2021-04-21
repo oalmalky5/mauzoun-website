@@ -143,7 +143,7 @@ export default function Menu({ backgroundColor }) {
           </div>
 
           {f("email")}
-          <p className="bolder">{f("location")}</p>
+          <span className="bolder">{f("location")}</span>
         </div>
       </div>
     </motion.div>

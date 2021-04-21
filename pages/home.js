@@ -51,7 +51,7 @@ export default function Home() {
                 <u>{f("story.intro")}</u>
               </h5>
             </Link>
-            <p className="mt-0">{f("story.content")}</p>
+            <span className="mt-0">{f("story.content")}</span>
           </>
         ) : (
           f("story")

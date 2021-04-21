@@ -81,7 +81,7 @@ export default function portfolio() {
 
         <h2>{f("subtitle")}</h2>
 
-        <p style={{ marginBottom: "50px" }}>{f("content")}</p>
+        <span style={{ marginBottom: "50px" }}>{f("content")}</span>
 
         {/* Content Writing */}
         <h3 className={styles.clientCategory}>{f("contentWriting.title")}</h3>

@@ -19,8 +19,9 @@ function MyApp({ Component, pageProps }) {
       messages={messages}
     >
       <form name="Contact" netlify netlify-honeypot="bot-field" hidden>
-        <input type="text" name="name" />
-        <input type="text" name="phone" />
+        <input type="text" name="fullName" />
+        <input type="text" name="projectName" />
+        <input type="text" name="country" />
         <input type="text" name="subject" />
         <input type="text" name="date" />
         <input type="text" name="time" />

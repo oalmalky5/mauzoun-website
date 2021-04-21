@@ -21,7 +21,7 @@ export default function ComingSoon() {
           />
         </div>
         <div className={styles.statusBox}>
-          <p className="mt-0 mb-0">{f("comingSoon")}</p>
+          <span className="mt-0 mb-0">{f("comingSoon")}</span>
         </div>
         <div className={styles.tiltedSquare}>
           <img

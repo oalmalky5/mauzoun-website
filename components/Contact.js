@@ -2,12 +2,25 @@ import React from "react";
 import { useIntl } from "react-intl";
 import Modal from "react-modal";
 import { NetlifyForm, Honeypot } from "react-netlify-forms";
+import { useRouter } from "next/router";
+import moment from "moment";
+
+var countries = require("i18n-iso-countries");
+countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+countries.registerLocale(require("i18n-iso-countries/langs/ar.json"));
 
 import styles from "../styles/contact.module.scss";
 
+Modal.setAppElement(".container");
+
 export default function Contact({ isOpen, onClose }) {
+  const locale = useRouter().locale;
+
   const intl = useIntl();
   const f = (id) => intl.formatMessage({ id });
+
+  const dateRef = React.createRef();
+  const timeRef = React.createRef();
 
   return (
     <Modal
@@ -28,40 +41,72 @@ export default function Contact({ isOpen, onClose }) {
         action="/home"
         honeypotName="bot-field"
         onFailure={(e) => console.log(e)}
+        formProps={{
+          style: {
+            fontFamily: locale === "en-US" ? "Alegreya Sans" : "GE Dinar One",
+          },
+        }}
       >
         {({ handleChange, success, error }) => (
           <>
             <Honeypot />
+
             {success && f("contact.success")}
             {error && f("contact.failure")}
 
             <input type="hidden" name="form-name" value="Contact" />
+
+            {/* Full Name */}
             <input
               type="text"
-              name="name"
-              placeholder={f("contact.name")}
+              name="fullName"
+              autoFocus={true}
+              placeholder={f("contact.fullName")}
               onChange={handleChange}
             />
+
+            {/* Project Name */}
             <input
               type="text"
-              name="phone"
-              placeholder={f("contact.phone")}
+              name="projectName"
+              placeholder={f("contact.projectName")}
               onChange={handleChange}
             />
-            <input
+
+            {/* Country */}
+            <select name="country" onChange={handleChange}>
+              <option value="">{f("contact.country")}</option>
+              {Object.values(
+                countries.getNames(locale === "en-US" ? "en" : locale, {
+                  select: "official",
+                })
+              ).map((e) => (
+                <option key={e} value={e}>
+                  {e}
+                </option>
+              ))}
+            </select>
+
+            {/* Subject */}
+            <textarea
               type="text"
               name="subject"
+              rows="4"
               placeholder={f("contact.subject")}
               onChange={handleChange}
             />
+
+            {/* Date */}
             <input
-              type="text"
+              type="date"
               name="date"
-              placeholder={f("contact.date")}
+              min={moment().format("YYYY-MM-DD")}
               onChange={handleChange}
             />
+
+            {/* Time */}
             <input
-              type="text"
+              type="time"
               name="time"
               placeholder={f("contact.time")}
               onChange={handleChange}

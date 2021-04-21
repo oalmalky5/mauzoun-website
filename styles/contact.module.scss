@@ -45,15 +45,18 @@
     flex-direction: column;
     margin: 0px 20px;
 
-    & input {
+    & input,
+    & select,
+    & textarea {
       background: transparent;
       margin: 10px 0px;
       width: 400px;
       border: none;
       border-bottom: 1px solid;
-      font-size: 17px;
+      font-size: 20px;
       padding: 5px;
       outline: none;
+      font-family: inherit;
 
       &::placeholder {
         color: #000000;
@@ -72,13 +75,13 @@
       cursor: pointer;
     }
   }
+}
 
-  & .closeButton {
-    align-self: flex-start;
-    background-color: transparent;
-    height: 40px;
-    border: none;
-    font-size: 35px;
-    cursor: pointer;
-  }
+.closeButton {
+  align-self: flex-start;
+  background-color: transparent;
+  height: 40px;
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
 }
