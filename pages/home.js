@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import { useIntl } from "react-intl";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 
 import styles from "../styles/home.module.scss";
@@ -12,8 +13,10 @@ import ContactButton from "../components/ContactButton";
 const backgroundColor = "#f8d952";
 
 export default function Home() {
+  const locale = useRouter().locale;
+
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, id, options);
+  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
 
   const [areServicesVisible, setAreServicesVisible] = useState(false);
   const [isApproachVisible, setIsApproachVisible] = useState(false);

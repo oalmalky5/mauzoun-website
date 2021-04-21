@@ -1,7 +1,7 @@
 import JsxParser from "react-jsx-parser";
 import Link from "next/link";
 
-const formatJsxMessage = (intl, id, options) => {
+const formatJsxMessage = (intl, locale, id, options) => {
   if (!intl) return;
   if (!options) options = {};
 
@@ -10,7 +10,9 @@ const formatJsxMessage = (intl, id, options) => {
   // Underline embedded links
   message = message.replace(
     /(<Link[^>]*>)/g,
-    "$1<span style={{ fontFamily: 'Alegreya', fontWeight: 'bold', cursor: 'pointer' }}>"
+    `$1<span style={{ fontFamily: '${
+      locale === "en-US" ? "Alegreya" : "GE Dinar Two"
+    }', fontWeight: 'bold', cursor: 'pointer' }}>`
   );
   message = message.replace(/(<\/Link[^>]*>)/g, "</span>$1");
 

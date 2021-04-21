@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useIntl } from "react-intl";
+import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 
 import Menu from "../components/Menu";
@@ -9,8 +10,10 @@ import ComingSoon from "../components/ComingSoon";
 const backgroundColor = "#f7f5f0";
 
 export default function blog() {
+  const locale = useRouter().locale;
+
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, id, options);
+  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
 
   return (
     <div>

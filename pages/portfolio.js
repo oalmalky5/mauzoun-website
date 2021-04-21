@@ -1,5 +1,6 @@
 import React from "react";
 import { useIntl } from "react-intl";
+import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 
 import styles from "../styles/portfolio.module.scss";
@@ -37,8 +38,10 @@ const whiteBoxDecoratorsPositions = {
 };
 
 export default function portfolio() {
+  const locale = useRouter().locale;
+
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, id, options);
+  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
 
   const getClients = (category) => {
     let i = 1;

@@ -1,5 +1,6 @@
 import React from "react";
 import { useIntl } from "react-intl";
+import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 
 import styles from "../styles/story.module.scss";
@@ -61,8 +62,10 @@ const whiteBoxDecoratorsPositions = {
 };
 
 const Story = function () {
+  const locale = useRouter().locale;
+
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, id, options);
+  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
 
   let numberOfMembersImage = Object.keys(teamMembersData).length;
   let numberOfMembers =

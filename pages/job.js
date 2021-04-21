@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
 import { BsChevronDown } from "react-icons/bs";
+import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 
 import styles from "../styles/job.module.scss";
@@ -12,8 +13,10 @@ import ComingSoon from "../components/ComingSoon";
 const backgroundColor = "#b3d0ea";
 
 export default function job() {
+  const locale = useRouter().locale;
+
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, id, options);
+  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
 
   const [isJoinTeamVisible, setIsJoinTeamVisible] = useState(false);
   const [isJoinCompetitionVisible, setIsJoinCompetitionVisible] = useState(

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
+import { useRouter } from "next/router";
 
 import styles from "../styles/contact.module.scss";
 import Contact from "../components/Contact";
@@ -10,8 +11,10 @@ export default function ContactButton({
   messageId = "contactPrompt",
   backgroundColor = "#ffffff",
 }) {
+  const locale = useRouter().locale;
+
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, id, options);
+  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
 
   const [isContactFormVisible, setIsContactFormVisible] = useState(false);
 

@@ -39,7 +39,7 @@ export default function services() {
   const router = useRouter();
 
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, id, options);
+  const f = (id, options) => formatJsxMessage(intl, router.locale, id, options);
 
   const [isApproachVisible, setIsApproachVisible] = useState(false);
   const [isContentWritingVisible, setIsContentWritingVisible] = useState(false);

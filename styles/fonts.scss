@@ -52,22 +52,29 @@
 /* GE Dinar One */
 @font-face {
   font-family: "GE Dinar One";
-  src: url("../public/fonts/GE Dinar One Medium.otf");
+  src: url("../public/fonts/GE Dinar One Light.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "GE Dinar One";
-  src: url("../public/fonts/GE Dinar One Light.otf");
-  font-weight: 300;
+  src: url("../public/fonts/GE Dinar One Medium.otf");
+  font-weight: bold;
   font-style: normal;
 }
 
 /* GE Dinar Two */
 @font-face {
   font-family: "GE Dinar Two";
-  src: url("../public/fonts/GE Dinar Two Medium.otf");
+  src: url("../public/fonts/GE Dinar Two Light.otf");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GE Dinar Two";
+  src: url("../public/fonts/GE Dinar Two Medium.otf");
+  font-weight: bold;
   font-style: normal;
 }

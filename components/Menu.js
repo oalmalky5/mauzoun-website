@@ -35,8 +35,9 @@ export default function Menu({ backgroundColor }) {
     );
   }, [locale]);
 
-  const f = (id, options) => formatJsxMessage(intl, id, options);
-  const otherF = (id, options) => formatJsxMessage(otherIntl, id, options);
+  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
+  const otherF = (id, options) =>
+    formatJsxMessage(otherIntl, otherLocale, id, options);
 
   const [hoveredLink, setHoveredLink] = React.useState("");
 
