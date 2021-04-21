@@ -40,6 +40,10 @@ exports["en-US"] = {
     "work.content":
       ", prioritizing our community as much as our clients. This is why we host an annual competition for up-and-coming writers who are developing their first-ever manuscripts. Winners are provided with free editing, marketing, and publishing services to unleash their works to the world. To learn more about this competition, <Link href='/job'>click here</Link>.",
   },
+  "/blog": {
+    title: "Blog",
+    "authors.title": "Authors",
+  },
   "/job": {
     title: "Mauzoun & You",
     "joinTeam.intro": "Join the Team",

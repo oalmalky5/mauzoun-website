@@ -1,0 +1,29 @@
+@use "mixins" as *;
+
+.comingSoon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -35px;
+  margin-bottom: 20px;
+
+  & .tiltedSquare div {
+    display: block !important;
+  }
+
+  & .statusBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 45px;
+    background-color: white;
+    border: solid;
+    font-weight: bold;
+
+    & p {
+      font-size: 22px;
+    }
+  }
+}

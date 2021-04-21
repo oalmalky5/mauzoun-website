@@ -7,6 +7,7 @@ import styles from "../styles/job.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
+import ComingSoon from "../components/ComingSoon";
 
 const backgroundColor = "#b3d0ea";
 
@@ -68,27 +69,7 @@ export default function job() {
 
           {isJoinCompetitionVisible && (
             <>
-              <hr size="5" color="black" />
-              <div className={styles.compStatus}>
-                <div className={styles.tiltedSquare}>
-                  <img
-                    src="/Tilted Square.svg"
-                    height="20"
-                    width="20"
-                    priority="true"
-                  />
-                </div>
-                <div className={styles.statusBox}>{f("comingSoon")}</div>
-                <div className={styles.tiltedSquare}>
-                  <img
-                    src="/Tilted Square.svg"
-                    height="20"
-                    width="20"
-                    priority="true"
-                  />
-                </div>
-              </div>
-
+              <ComingSoon />
               <div className={styles.content}>
                 {f("joinCompetition.content")}
               </div>

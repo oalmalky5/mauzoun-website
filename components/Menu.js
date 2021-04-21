@@ -42,7 +42,7 @@ export default function Menu({ backgroundColor }) {
 
   const buildTiltedSquare = (linkName) => {
     let filter;
-    if (router.pathname === "/services")
+    if (router.pathname === "/services" || router.pathname === "/blog")
       filter =
         "invert(92%) sepia(72%) saturate(682%) hue-rotate(329deg) brightness(96%) contrast(103%)";
     else
