@@ -23,6 +23,43 @@ const teamMembersData = {
   7: {},
 };
 
+const whiteBoxDecoratorsPositions = {
+  fromTop: [
+    {
+      preferredMargin: "520px",
+    },
+    {
+      preferredMargin: "537px",
+    },
+    {
+      marginTop: "10px",
+      preferredMargin: "550px",
+    },
+    {
+      marginTop: "15px",
+    },
+    {
+      marginTop: "32px",
+    },
+    {
+      marginTop: "49px",
+    },
+  ],
+  fromBottom: [
+    {
+      preferredMargin: "300px",
+    },
+    {
+      marginTop: "-50px",
+      preferredMargin: "735px",
+    },
+    {
+      marginTop: "-67px",
+      preferredMargin: "735px",
+    },
+  ],
+};
+
 const Story = function () {
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, id, options);
@@ -95,7 +132,7 @@ const Story = function () {
 
         {f("world")}
 
-        <WhiteBox>
+        <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
           <b>{f("whitebox.innerText1")}</b>
           <br />
           {f("whitebox.innerText2")}

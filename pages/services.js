@@ -12,6 +12,29 @@ import WhiteBox from "../components/WhiteBox";
 
 const backgroundColor = "#f7f5f0";
 
+const whiteBoxDecoratorsPositions = {
+  fromTop: [
+    {},
+    {
+      preferredMargin: "650px",
+    },
+    {
+      preferredMargin: "667px",
+    },
+  ],
+  fromBottom: [
+    {
+      preferredMargin: "550px",
+    },
+    {
+      preferredMargin: "567px",
+    },
+    {
+      preferredMargin: "584px",
+    },
+  ],
+};
+
 export default function services() {
   const router = useRouter();
 
@@ -98,7 +121,7 @@ export default function services() {
             <>
               {f("contentWriting.content")}
 
-              <WhiteBox>
+              <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
                 {f("contentWriting.services.header")}
                 <br />
                 {[
@@ -138,7 +161,7 @@ export default function services() {
             <>
               {f("creativeWriting.content")}
 
-              <WhiteBox>
+              <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
                 {f("creativeWriting.services.header")}
                 <br />
                 {[
@@ -157,6 +180,8 @@ export default function services() {
           )}
         </div>
 
+        <div style={{ height: "400px" }} />
+
         <div className={styles.servicesCover}>
           <img
             src="/Services.png"
@@ -167,7 +192,6 @@ export default function services() {
             style={router.locale === "ar" ? { transform: "scaleX(-1)" } : {}}
           />
         </div>
-        <div style={{ height: "350px" }} />
       </motion.div>
 
       <ContactButton backgroundColor="#f8d952" />

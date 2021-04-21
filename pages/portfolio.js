@@ -10,6 +10,32 @@ import ContactButton from "../components/ContactButton";
 
 const backgroundColor = "#fbec9a";
 
+const whiteBoxDecoratorsPositions = {
+  fromTop: [
+    { marginTop: "70px" },
+    {
+      preferredMargin: "450px",
+    },
+    {
+      preferredMargin: "467px",
+    },
+    {
+      preferredMargin: "484px",
+    },
+    {
+      preferredMargin: "501px",
+    },
+    {
+      marginTop: "45px",
+      preferredMargin: "735px",
+    },
+    {
+      marginTop: "62px",
+      preferredMargin: "735px",
+    },
+  ],
+};
+
 export default function portfolio() {
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, id, options);
@@ -64,7 +90,10 @@ export default function portfolio() {
         <h3 className={styles.clientCategory}>{f("creativeWriting.title")}</h3>
         {getClients("creativeWriting")}
 
-        <WhiteBox style={{ marginTop: "50px" }}>
+        <WhiteBox
+          style={{ marginTop: "50px" }}
+          decoratorsPositions={whiteBoxDecoratorsPositions}
+        >
           <div className={styles.logoGrid}>
             <div>{f("clients")}</div>
             <div className={styles.companies}>

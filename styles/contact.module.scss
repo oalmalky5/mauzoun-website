@@ -16,11 +16,11 @@
   cursor: pointer;
 
   @include ltr {
-    margin-left: 1200px;
+    margin-left: 1220px;
   }
 
   @include rtl {
-    margin-right: 1200px;
+    margin-right: 1220px;
   }
 
   & p {
