@@ -24,12 +24,15 @@ export default function portfolio() {
 
     while (i < numberOfClients + 1) {
       clients.push(
-        <span className={styles.client} key={`${category}.clients.${i}`}>
-          {i % 2 === 0 ? (
-            f(`${category}.clients.${i}`)
-          ) : (
-            <b>{f(`${category}.clients.${i}`)}</b>
-          )}
+        <span
+          key={`${category}.clients.${i}`}
+          className={styles.client + " heading"}
+          style={{
+            fontWeight:
+              numberOfClients !== 1 && i % 2 !== 0 ? "bold" : "normal",
+          }}
+        >
+          {f(`${category}.clients.${i}`)}
         </span>
       );
       i += 1;
@@ -41,12 +44,16 @@ export default function portfolio() {
     <div>
       <Menu backgroundColor={backgroundColor} />
 
-      <motion.div className="container" style={{ backgroundColor }} layout="position">
+      <motion.div
+        className="container"
+        style={{ backgroundColor }}
+        layout="position"
+      >
         <h1>{f("title")}</h1>
 
         <h2>{f("subtitle")}</h2>
 
-        {f("content")}
+        <p style={{ marginBottom: "50px" }}>{f("content")}</p>
 
         {/* Content Writing */}
         <h3 className={styles.clientCategory}>{f("contentWriting.title")}</h3>
@@ -58,7 +65,7 @@ export default function portfolio() {
         <h3 className={styles.clientCategory}>{f("creativeWriting.title")}</h3>
         {getClients("creativeWriting")}
 
-        <WhiteBox>
+        <WhiteBox style={{ marginTop: "50px" }}>
           <div className={styles.logoGrid}>
             <div>{f("clients")}</div>
             <div className={styles.companies}>

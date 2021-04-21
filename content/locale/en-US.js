@@ -64,7 +64,8 @@ exports["en-US"] = {
     "contentWriting.clients.4": "Saudi Tourism Authority",
     "contentWriting.clients.5": "Ministry of Culture: AlBalad",
     "creativeWriting.title": "Creative Writing",
-    "creativeWriting.clients.1": "Ministry of Culture: Madinah Culinary Arts",
+    "creativeWriting.clients.1":
+      "Ministry of Culture:<br />Madinah Culinary Arts",
     clients: "Since 2018, we have worked with <b><u>over 100 clients</u></b>.",
   },
   "/services": {

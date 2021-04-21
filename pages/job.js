@@ -24,8 +24,12 @@ export default function job() {
     <div>
       <Menu backgroundColor={backgroundColor} />
 
-      <motion.div className="container" style={{ backgroundColor }} layout="position">
-        <h1>Mauzoun & You</h1>
+      <motion.div
+        className="container"
+        style={{ backgroundColor }}
+        layout="position"
+      >
+        <h1 className="mb-0">{f("title")}</h1>
 
         {/* Join the team */}
         <div className="mt-0 unwrapped-content">

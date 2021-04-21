@@ -56,8 +56,8 @@ const Story = function () {
             onMouseLeave={(e) => updateTeamMembersHoverState(e, false)}
           />
           {i <= numberOfMembers && (
-            <div className="mt-0 mb-0">
-              {f(`teamMember.${i}.name`)}
+            <div className="mt-0 mb-0 heading">
+              <b>{f(`teamMember.${i}.name`)}</b>
               {f(`teamMember.${i}.role`)}
             </div>
           )}
@@ -72,7 +72,11 @@ const Story = function () {
     <div>
       <Menu backgroundColor={backgroundColor} />
 
-      <motion.div className="container" style={{ backgroundColor }} layout="position">
+      <motion.div
+        className="container"
+        style={{ backgroundColor }}
+        layout="position"
+      >
         <div className={styles.storyCover}>
           <Image
             src="/Story.png"

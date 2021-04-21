@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import styles from "../styles/whitebox.module.scss";
 
-export default function WhiteBox({ children }) {
+export default function WhiteBox({ children, style }) {
   const locale = useRouter().locale;
   const preferredMargin = locale === "ar" ? "marginRight" : "marginLeft";
 
@@ -28,12 +28,12 @@ export default function WhiteBox({ children }) {
   };
 
   return (
-    <div className={styles.whiteBox}>
+    <div className={styles.whiteBox} style={style}>
       {buildTiltedSquare()}
       {buildTiltedSquare({ styles: { [preferredMargin]: "650px" } })}
       {buildTiltedSquare({ styles: { [preferredMargin]: "670px" } })}
 
-      <div className={styles.content}>{children}</div>
+      <div className={styles.content + " heading"}>{children}</div>
 
       {buildTiltedSquare({ styles: { [preferredMargin]: "550px" } })}
       {buildTiltedSquare({ styles: { [preferredMargin]: "570px" } })}

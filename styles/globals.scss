@@ -180,9 +180,8 @@ a {
 .unwrapped-content {
   margin-top: 20px;
 
-  &.inline,
-  h5,
-  p {
+  &.inline h5,
+  &.inline p {
     display: inline;
   }
 }
