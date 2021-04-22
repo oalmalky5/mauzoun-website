@@ -32,69 +32,95 @@ export default function Contact({ isOpen, onClose }) {
         },
       }}
     >
-      <form
+      <NetlifyForm
         name="Contact Form"
-        method="POST"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
-        onSubmit={() => "Form submitted"}
-        style={{
-          fontFamily: locale === "en-US" ? "Alegreya Sans" : "GE Dinar One",
+        action="/home"
+        honeypotName="bot-field"
+        formProps={{
+          style: {
+            fontSize: "20px",
+            fontFamily: locale === "en-US" ? "Alegreya Sans" : "GE Dinar One",
+          },
         }}
       >
-        <p style={{ display: "none" }}>
-          <label>
-            Don’t fill this out if you’re human: <input name="bot-field" />
-          </label>
-        </p>
+        {({ handleChange, success, error }) => (
+          <>
+            <Honeypot />
 
-        <input type="hidden" name="form-name" value="Contact Form" />
+            {/* Full Name */}
+            <input
+              type="text"
+              name="fullName"
+              autoFocus={true}
+              placeholder={f("contact.fullName")}
+              onChange={handleChange}
+            />
 
-        {/* Full Name */}
-        <input
-          type="text"
-          name="fullName"
-          autoFocus={true}
-          placeholder={f("contact.fullName")}
-        />
+            {/* Project Name */}
+            <input
+              type="text"
+              name="projectName"
+              placeholder={f("contact.projectName")}
+              onChange={handleChange}
+            />
 
-        {/* Project Name */}
-        <input
-          type="text"
-          name="projectName"
-          placeholder={f("contact.projectName")}
-        />
+            {/* Country */}
+            <select name="country" onChange={handleChange}>
+              <option value="">{f("contact.country")}</option>
+              {Object.values(
+                countries.getNames(locale === "en-US" ? "en" : locale, {
+                  select: "official",
+                })
+              ).map((e) => (
+                <option key={e} value={e}>
+                  {e}
+                </option>
+              ))}
+            </select>
 
-        {/* Country */}
-        <select name="country">
-          <option value="">{f("contact.country")}</option>
-          {Object.values(
-            countries.getNames(locale === "en-US" ? "en" : locale, {
-              select: "official",
-            })
-          ).map((e) => (
-            <option key={e} value={e}>
-              {e}
-            </option>
-          ))}
-        </select>
+            {/* Subject */}
+            <textarea
+              type="text"
+              name="subject"
+              rows="4"
+              placeholder={f("contact.subject")}
+              onChange={handleChange}
+            />
 
-        {/* Subject */}
-        <textarea
-          type="text"
-          name="subject"
-          rows="4"
-          placeholder={f("contact.subject")}
-        />
+            {/* Date */}
+            <input
+              type="date"
+              name="date"
+              min={moment().format("YYYY-MM-DD")}
+              onChange={handleChange}
+            />
 
-        {/* Date */}
-        <input type="date" name="date" min={moment().format("YYYY-MM-DD")} />
+            {/* Time */}
+            <input
+              type="time"
+              name="time"
+              placeholder={f("contact.time")}
+              onChange={handleChange}
+            />
 
-        {/* Time */}
-        <input type="time" name="time" placeholder={f("contact.time")} />
+            {success || error ? (
+              <div
+                style={{
+                  marginTop: "20px",
+                  textAlign: "center",
+                  fontSize: "inherit",
+                  fontFamily: "inherit",
+                }}
+              >
+                {success && f("contact.success")}
+                {error && f("contact.failure")}
+              </div>
+            ) : null}
 
-        <button type="submit">{f("contact.submit")}</button>
-      </form>
+            <button type="submit">{f("contact.submit")}</button>
+          </>
+        )}
+      </NetlifyForm>
 
       <button className={styles.closeButton} onClick={onClose}>
         X
