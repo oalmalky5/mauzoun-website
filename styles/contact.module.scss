@@ -2,11 +2,11 @@
 
 .contactButton {
   position: fixed;
-  background: #f8d952;
   padding: 30px;
   width: 210px;
   height: 210px;
-  margin-top: 550px;
+  top: 50%;
+  margin-top: -105px;
   border-radius: 50%;
   display: flex;
   align-items: center;

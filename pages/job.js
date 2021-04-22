@@ -18,6 +18,7 @@ export default function job() {
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, locale, id, options);
 
+  const [isBecomeClientVisible, setIsBecomeClientVisible] = useState(false);
   const [isJoinTeamVisible, setIsJoinTeamVisible] = useState(false);
   const [isJoinCompetitionVisible, setIsJoinCompetitionVisible] = useState(
     false
@@ -34,12 +35,33 @@ export default function job() {
       >
         <h1 className="mb-0">{f("title")}</h1>
 
+        {/* Become our client */}
+        <div className="mt-0 unwrapped-content">
+          <div
+            className="content-wrapper"
+            onClick={() => setIsBecomeClientVisible(!isBecomeClientVisible)}
+            style={isBecomeClientVisible ? { marginBottom: "20px" } : {}}
+          >
+            <h2>{f("becomeClient.intro")}</h2>
+            <span className="reveal-icon">
+              <BsChevronDown className="reveal-icon" />
+            </span>
+          </div>
+
+          {isBecomeClientVisible && (
+            <>
+              {f("becomeClient.content")}
+              <hr />
+            </>
+          )}
+        </div>
+
         {/* Join the team */}
         <div className="mt-0 unwrapped-content">
           <div
             className="content-wrapper"
             onClick={() => setIsJoinTeamVisible(!isJoinTeamVisible)}
-            style={isJoinTeamVisible ? { marginBottom: "30px" } : {}}
+            style={isJoinTeamVisible ? { marginBottom: "20px" } : {}}
           >
             <h2>{f("joinTeam.intro")}</h2>
             <span className="reveal-icon">

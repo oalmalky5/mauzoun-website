@@ -16,10 +16,19 @@
 }
 
 .logoGrid {
-  display: block;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 20px;
+}
 
-  & .companies {
-    margin-top: 30px;
+.gridItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  img {
+    width: 150px;
   }
 }

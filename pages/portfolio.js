@@ -11,6 +11,13 @@ import ContactButton from "../components/ContactButton";
 
 const backgroundColor = "#fbec9a";
 
+const clientLogos = [
+  "/clientLogos/Saudi Tourism Authority.png",
+  "/clientLogos/Musa Palm.png",
+  "/clientLogos/Ministry of Culture.png",
+  "/clientLogos/Mauj.png",
+];
+
 const whiteBoxDecoratorsPositions = {
   fromTop: [
     { marginTop: "70px" },
@@ -97,16 +104,13 @@ export default function portfolio() {
           style={{ marginTop: "50px" }}
           decoratorsPositions={whiteBoxDecoratorsPositions}
         >
+          {f("clients")}
           <div className={styles.logoGrid}>
-            <div>{f("clients")}</div>
-            <div className={styles.companies}>
-              <img
-                src="/Companies.png"
-                height="624"
-                width="598"
-                priority="true"
-              />
-            </div>
+            {clientLogos.map((v) => (
+              <div className={styles.gridItem} key={v}>
+                <img src={v} />
+              </div>
+            ))}
           </div>
         </WhiteBox>
       </motion.div>

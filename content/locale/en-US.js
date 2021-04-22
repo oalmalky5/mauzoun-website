@@ -42,11 +42,13 @@ exports["en-US"] = {
       ", prioritizing our community as much as our clients. This is why we host an annual competition for up-and-coming writers who are developing their first-ever manuscripts. Winners are provided with free editing, marketing, and publishing services to unleash their works to the world. To learn more about this competition, <Link href='/job'>click here</Link>.",
   },
   "/blog": {
-    title: "Blog",
-    "authors.title": "Authors",
+    title: "Our Blog",
   },
   "/job": {
     title: "Mauzoun & You",
+    "becomeClient.intro": "Become Our Client",
+    "becomeClient.content":
+      "If you're interested in our services, you can become our client by simply e-mailing us or booking an introductory online call through the circular button on the right of this page.",
     "joinTeam.intro": "Join the Team",
     "joinTeam.content": `<b>There are currently no job opportunities available. Keep checking.</b>
       <br /><br />

@@ -194,7 +194,7 @@ export default function services() {
         </div>
       </motion.div>
 
-      <ContactButton backgroundColor="#f8d952" />
+      <ContactButton />
     </div>
   );
 }

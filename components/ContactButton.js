@@ -16,14 +16,20 @@ export default function ContactButton({
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, locale, id, options);
 
+  const [bgColor, setBgColor] = React.useState(backgroundColor);
   const [isContactFormVisible, setIsContactFormVisible] = useState(false);
 
   return (
     <>
       <motion.button
         className={styles.contactButton + " heading"}
-        onClick={() => setIsContactFormVisible(true)}
-        style={{ backgroundColor }}
+        onClick={() => {
+          setBgColor("#ffffff");
+          setIsContactFormVisible(true);
+        }}
+        style={{ backgroundColor: bgColor }}
+        onMouseEnter={() => setBgColor("#f8d952")}
+        onMouseLeave={() => setBgColor("#ffffff")}
         layout
       >
         {f(messageId)}

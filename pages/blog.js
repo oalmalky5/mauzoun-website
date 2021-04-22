@@ -24,13 +24,9 @@ export default function blog() {
         style={{ backgroundColor }}
         layout="position"
       >
-        <h1 className="mb-0">{f("title")}</h1>
+        <h1>{f("title")}</h1>
 
-        {/* Authors */}
-        <div className="mt-0">
-          <h2>{f("authors.title")}</h2>
-          <ComingSoon />
-        </div>
+        <ComingSoon />
       </motion.div>
     </div>
   );
