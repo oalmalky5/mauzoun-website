@@ -1,31 +1,56 @@
 @use "mixins" as *;
 
-.contactButton {
+.pageContainer {
   position: fixed;
-  padding: 30px;
-  width: 210px;
-  height: 210px;
-  top: 50%;
-  margin-top: -105px;
-  border-radius: 50%;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 100;
+  pointer-events: none;
+
+  .buttonSpacer {
+    width: 650px;
+
+    @include ltr {
+      margin-left: 430px; /* Same as the width of the sidebar */
+    }
+
+    @include rtl {
+      margin-right: 430px; /* Same as the width of the sidebar */
+    }
+
+    @media (min-width: 1536px) {
+      width: 38%;
+    }
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: flex-end;
   justify-content: center;
-  border: solid black;
-  outline: none;
-  cursor: pointer;
+  flex-grow: 1;
 
-  @include ltr {
-    margin-left: 1220px;
-  }
+  .contactButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    padding: 30px;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: solid black;
+    outline: none;
+    pointer-events: auto;
+    cursor: pointer;
 
-  @include rtl {
-    margin-right: 1220px;
-  }
-
-  & p {
-    font-size: 25px;
-    font-style: italic;
+    & p {
+      font-size: 25px;
+      font-style: italic;
+    }
   }
 }
 

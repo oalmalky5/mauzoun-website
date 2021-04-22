@@ -21,19 +21,24 @@ export default function ContactButton({
 
   return (
     <>
-      <motion.button
-        className={styles.contactButton + " heading"}
-        onClick={() => {
-          setBgColor("#ffffff");
-          setIsContactFormVisible(true);
-        }}
-        style={{ backgroundColor: bgColor }}
-        onMouseEnter={() => setBgColor("#f8d952")}
-        onMouseLeave={() => setBgColor("#ffffff")}
-        layout
-      >
-        {f(messageId)}
-      </motion.button>
+      <div className={styles.pageContainer}>
+        <div className={styles.buttonSpacer} />
+        <div className={styles.buttonContainer}>
+          <motion.button
+            className={styles.contactButton + " heading"}
+            onClick={() => {
+              setBgColor("#ffffff");
+              setIsContactFormVisible(true);
+            }}
+            style={{ backgroundColor: bgColor }}
+            onMouseEnter={() => setBgColor("#f8d952")}
+            onMouseLeave={() => setBgColor("#ffffff")}
+            layout
+          >
+            {f(messageId)}
+          </motion.button>
+        </div>
+      </div>
 
       <Contact
         isOpen={isContactFormVisible}
