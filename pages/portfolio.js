@@ -106,11 +106,17 @@ export default function portfolio() {
         >
           {f("clients")}
           <div className={styles.logoGrid}>
-            {clientLogos.map((v) => (
+            <img
+              src="/Companies.png"
+              height="624"
+              width="598"
+              priority="true"
+            />
+            {/* {clientLogos.map((v) => (
               <div className={styles.gridItem} key={v}>
                 <img src={v} />
               </div>
-            ))}
+            ))} */}
           </div>
         </WhiteBox>
       </motion.div>

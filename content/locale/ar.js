@@ -16,7 +16,7 @@ export const ar = {
     "contact.subject": "ما الذي تودون مناقشته معنا؟",
     "contact.date": "احجزوا تاريخًا من تقويمنا",
     "contact.time": "احجزوا وقت الاجتماع",
-    "contact.submit": "Let's talk!",
+    "contact.submit": "لنتحدث",
     "contact.success": "Thanks for contacting us!",
     "contact.failure":
       "Sorry, we could not reach our servers. Please try again later.",
