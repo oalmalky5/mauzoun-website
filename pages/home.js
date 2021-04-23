@@ -11,7 +11,7 @@ import ContactButton from "../components/ContactButton";
 
 const backgroundColor = "#f8d952";
 
-export default function Home({ setPageTransition }) {
+export default function Home({ updatePageTransition }) {
   const locale = useRouter().locale;
 
   const intl = useIntl();
@@ -22,7 +22,7 @@ export default function Home({ setPageTransition }) {
   const [areProjectsVisible, setAreProjectsVisible] = useState(false);
   const [isWorkVisible, setIsWorkVisible] = useState(false);
 
-  React.useEffect(() => setPageTransition("default"), []);
+  React.useEffect(() => updatePageTransition("default"), []);
 
   return (
     <>

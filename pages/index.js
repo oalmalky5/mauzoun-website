@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import styles from "../styles/chooseLocale.module.scss";
 
-export default function ChooseLocale({ setPageTransition }) {
+export default function ChooseLocale({ updatePageTransition }) {
   const router = useRouter();
 
   React.useEffect(() => {
@@ -14,7 +14,7 @@ export default function ChooseLocale({ setPageTransition }) {
   }, []);
 
   const changeLocale = (locale) => {
-    setPageTransition({
+    updatePageTransition({
       initial: "hidden",
       animate: "visible",
       exit: "hidden",

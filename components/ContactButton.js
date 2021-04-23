@@ -33,7 +33,7 @@ export default function ContactButton({
             style={{ backgroundColor: bgColor }}
             onMouseEnter={() => setBgColor("#f8d952")}
             onMouseLeave={() => setBgColor("#ffffff")}
-            layout
+            layout="position"
           >
             {f(messageId)}
           </motion.button>
