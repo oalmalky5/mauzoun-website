@@ -23,6 +23,10 @@ export default function Menu({ backgroundColor }) {
   const [otherIntl, setOtherIntl] = React.useState();
 
   React.useEffect(() => {
+    router.prefetch(`/${otherLocale}${pathname}`);
+  }, []);
+
+  React.useEffect(() => {
     const localeCopy = locales[otherLocale];
     setOtherIntl(
       createIntl(
@@ -40,6 +44,9 @@ export default function Menu({ backgroundColor }) {
     formatJsxMessage(otherIntl, otherLocale, id, options);
 
   const [hoveredLink, setHoveredLink] = React.useState("");
+
+  // State used to avoid oddly appearing transition when switching languages
+  const [logoTransition, setLogoTransition] = React.useState({ duration: 2 });
 
   const buildTiltedSquare = (linkName) => {
     let filter;
@@ -72,6 +79,7 @@ export default function Menu({ backgroundColor }) {
             src="https://i.imgur.com/HjDbXtR.png"
             alt="Mauzoun logo"
             className={styles.logo}
+            transition={logoTransition}
             layoutId="logo"
           />
         </Link>
@@ -112,14 +120,19 @@ export default function Menu({ backgroundColor }) {
             <b>{locale === "en-US" ? "English" : "عربــي"}</b>
           </p>
 
-          <Link href={pathname} locale={otherLocale}>
-            <a onClick={() => Cookies.set("NEXT_LOCALE", otherLocale)}>
-              <label className={styles.switch}>
-                <input type="checkbox" checked={locale === "ar"} readOnly />
-                <span className={styles.slider} />
-              </label>
-            </a>
-          </Link>
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              setLogoTransition({ duration: 0.1 });
+              Cookies.set("NEXT_LOCALE", otherLocale);
+              router.push(pathname, pathname, { locale: otherLocale });
+            }}
+          >
+            <label className={styles.switch}>
+              <input type="checkbox" checked={locale === "ar"} readOnly />
+              <span className={styles.slider} />
+            </label>
+          </a>
 
           <p className={otherLocale}>
             {locale === "ar" ? "English" : "عربــي"}

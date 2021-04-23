@@ -5,14 +5,13 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 
-import styles from "../styles/home.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
 
 const backgroundColor = "#f8d952";
 
-export default function Home() {
+export default function Home({ setPageTransition }) {
   const locale = useRouter().locale;
 
   const intl = useIntl();
@@ -22,6 +21,8 @@ export default function Home() {
   const [isApproachVisible, setIsApproachVisible] = useState(false);
   const [areProjectsVisible, setAreProjectsVisible] = useState(false);
   const [isWorkVisible, setIsWorkVisible] = useState(false);
+
+  React.useEffect(() => setPageTransition("default"), []);
 
   return (
     <>

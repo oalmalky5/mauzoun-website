@@ -20,9 +20,11 @@ export default function ComingSoon() {
             priority="true"
           />
         </div>
+
         <div className={styles.statusBox}>
           <span className="mt-0 mb-0">{f("comingSoon")}</span>
         </div>
+
         <div className={styles.tiltedSquare}>
           <img
             src="/Tilted Square.svg"
