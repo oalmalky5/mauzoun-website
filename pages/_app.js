@@ -1,7 +1,7 @@
 import React from "react";
 import { IntlProvider } from "react-intl";
 import { useRouter } from "next/router";
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import { AnimateSharedLayout, motion, useAnimation } from "framer-motion";
 
 import "../styles/globals.scss";
 import * as locales from "../content/locale";
@@ -12,10 +12,15 @@ function MyApp({ Component, pageProps }) {
   const localeCopy = locales[locale];
   const messages = Object.assign(localeCopy["shared"], localeCopy[pathname]);
 
+  const textAnimationControls = useAnimation();
+
   const variants = {
-    visible: { opacity: 1, transition: { delay: 0, duration: 3 } },
+    visible: {
+      opacity: 1,
+      transition: { delay: 0, duration: 2, ease: "circInOut" },
+    },
     instantlyVisible: { opacity: 1, transition: { duration: 0 } },
-    hidden: { opacity: 0.1, transition: { delay: 0, duration: 0.3 } },
+    hidden: { opacity: 0 },
   };
 
   const defaultPageTransition = {
@@ -56,14 +61,14 @@ function MyApp({ Component, pageProps }) {
       defaultLocale={defaultLocale}
       messages={messages}
     >
-      <AnimateSharedLayout>
+      <AnimateSharedLayout type="crossfade">
         <div
           dir={pathname !== "/" && locale === "ar" ? "rtl" : "ltr"}
           className={"locale " + locale}
         >
           <motion.div
             key={pathname}
-            initial={false}
+            initial={pageTransition.initial}
             animate={pageTransition.animate}
             variants={variants}
             onAnimationStart={() => {
@@ -79,6 +84,7 @@ function MyApp({ Component, pageProps }) {
           >
             <Component
               updatePageTransition={updatePageTransition}
+              textAnimationControls={textAnimationControls}
               {...pageProps}
             />
           </motion.div>

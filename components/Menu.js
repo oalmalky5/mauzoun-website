@@ -13,7 +13,7 @@ import formatJsxMessage from "../utils/formatJsxMessage";
 
 const intlCache = createIntlCache();
 
-export default function Menu({ backgroundColor }) {
+export default function Menu({ backgroundColor, textAnimationControls }) {
   const router = useRouter();
   const { locale, pathname } = router;
 
@@ -39,9 +39,18 @@ export default function Menu({ backgroundColor }) {
     );
   }, [locale]);
 
-  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
+  const f = (id, options) =>
+    formatJsxMessage(intl, locale, id, {
+      shouldFade: true,
+      animationControls: textAnimationControls,
+      ...options,
+    });
   const otherF = (id, options) =>
-    formatJsxMessage(otherIntl, otherLocale, id, options);
+    formatJsxMessage(otherIntl, otherLocale, id, {
+      shouldFade: true,
+      animationControls: textAnimationControls,
+      ...options,
+    });
 
   const [hoveredLink, setHoveredLink] = React.useState("");
 
@@ -121,11 +130,13 @@ export default function Menu({ backgroundColor }) {
           </p>
 
           <a
-            onClick={(e) => {
+            onClick={async (e) => {
               e.preventDefault();
+              await textAnimationControls?.start("hidden");
               setLogoTransition({ duration: 0.1 });
               Cookies.set("NEXT_LOCALE", otherLocale);
               router.push(pathname, pathname, { locale: otherLocale });
+              await textAnimationControls?.start("visible");
             }}
           >
             <label className={styles.switch}>

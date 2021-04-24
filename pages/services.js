@@ -35,11 +35,16 @@ const whiteBoxDecoratorsPositions = {
   ],
 };
 
-export default function services() {
+export default function services({ textAnimationControls }) {
   const router = useRouter();
 
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, router.locale, id, options);
+  const f = (id, options) =>
+    formatJsxMessage(intl, router.locale, id, {
+      shouldFade: true,
+      animationControls: textAnimationControls,
+      ...options,
+    });
 
   const [isApproachVisible, setIsApproachVisible] = useState(false);
   const [isContentWritingVisible, setIsContentWritingVisible] = useState(false);
@@ -58,7 +63,10 @@ export default function services() {
 
   return (
     <div>
-      <Menu backgroundColor={backgroundColor} />
+      <Menu
+        backgroundColor={backgroundColor}
+        textAnimationControls={textAnimationControls}
+      />
 
       <motion.div
         className="container"

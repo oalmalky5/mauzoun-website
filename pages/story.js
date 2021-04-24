@@ -61,11 +61,16 @@ const whiteBoxDecoratorsPositions = {
   ],
 };
 
-const Story = function () {
+const Story = function ({ textAnimationControls }) {
   const locale = useRouter().locale;
 
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
+  const f = (id, options) =>
+    formatJsxMessage(intl, locale, id, {
+      shouldFade: true,
+      animationControls: textAnimationControls,
+      ...options,
+    });
 
   let numberOfMembersImage = Object.keys(teamMembersData).length;
   let numberOfMembers =
@@ -109,7 +114,10 @@ const Story = function () {
 
   return (
     <div>
-      <Menu backgroundColor={backgroundColor} />
+      <Menu
+        backgroundColor={backgroundColor}
+        textAnimationControls={textAnimationControls}
+      />
 
       <motion.div
         className="container"

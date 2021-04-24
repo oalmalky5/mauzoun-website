@@ -17,7 +17,6 @@ export default function ChooseLocale({ updatePageTransition }) {
     updatePageTransition({
       initial: "hidden",
       animate: "visible",
-      exit: "hidden",
     });
     Cookies.set("NEXT_LOCALE", locale);
     router.push(`/${locale}/home`);

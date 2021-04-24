@@ -11,11 +11,16 @@ import ContactButton from "../components/ContactButton";
 
 const backgroundColor = "#f8d952";
 
-export default function Home({ updatePageTransition }) {
+export default function Home({ updatePageTransition, textAnimationControls }) {
   const locale = useRouter().locale;
 
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
+  const f = (id, options) =>
+    formatJsxMessage(intl, locale, id, {
+      shouldFade: true,
+      animationControls: textAnimationControls,
+      ...options,
+    });
 
   const [areServicesVisible, setAreServicesVisible] = useState(false);
   const [isApproachVisible, setIsApproachVisible] = useState(false);
@@ -26,7 +31,10 @@ export default function Home({ updatePageTransition }) {
 
   return (
     <>
-      <Menu backgroundColor={backgroundColor} />
+      <Menu
+        backgroundColor={backgroundColor}
+        textAnimationControls={textAnimationControls}
+      />
 
       <motion.div
         className="container"
@@ -45,18 +53,13 @@ export default function Home({ updatePageTransition }) {
           src="http://writingandwellness.com/wp-content/uploads/2015/02/Home-Office-2.jpg"
           alt="an image of an office"
         />
-        {Object.keys(intl.messages).includes("story.intro") ? (
-          <>
-            <Link href="/story">
-              <h5 className="mb-0">
-                <u>{f("story.intro")}</u>
-              </h5>
-            </Link>
-            <span className="mt-0">{f("story.content")}</span>
-          </>
-        ) : (
-          f("story")
-        )}
+
+        <Link href="/story">
+          <h5 className="mb-0">
+            <u>{f("story.intro")}</u>
+          </h5>
+        </Link>
+        <span className="mt-0">{f("story.content")}</span>
 
         {/* Services */}
         {!areServicesVisible ? (

@@ -44,11 +44,16 @@ const whiteBoxDecoratorsPositions = {
   ],
 };
 
-export default function portfolio() {
+export default function portfolio({ textAnimationControls }) {
   const locale = useRouter().locale;
 
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
+  const f = (id, options) =>
+    formatJsxMessage(intl, locale, id, {
+      shouldFade: true,
+      animationControls: textAnimationControls,
+      ...options,
+    });
 
   const getClients = (category) => {
     let i = 1;
@@ -77,7 +82,7 @@ export default function portfolio() {
 
   return (
     <div>
-      <Menu backgroundColor={backgroundColor} />
+      <Menu backgroundColor={backgroundColor} textAnimationControls={textAnimationControls} />
 
       <motion.div
         className="container"

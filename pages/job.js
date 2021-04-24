@@ -12,11 +12,16 @@ import ComingSoon from "../components/ComingSoon";
 
 const backgroundColor = "#b3d0ea";
 
-export default function job() {
+export default function job({ textAnimationControls }) {
   const locale = useRouter().locale;
 
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
+  const f = (id, options) =>
+    formatJsxMessage(intl, locale, id, {
+      shouldFade: true,
+      animationControls: textAnimationControls,
+      ...options,
+    });
 
   const [isBecomeClientVisible, setIsBecomeClientVisible] = useState(false);
   const [isJoinTeamVisible, setIsJoinTeamVisible] = useState(false);
@@ -26,7 +31,10 @@ export default function job() {
 
   return (
     <div>
-      <Menu backgroundColor={backgroundColor} />
+      <Menu
+        backgroundColor={backgroundColor}
+        textAnimationControls={textAnimationControls}
+      />
 
       <motion.div
         className="container"

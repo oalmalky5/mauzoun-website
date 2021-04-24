@@ -9,15 +9,23 @@ import ComingSoon from "../components/ComingSoon";
 
 const backgroundColor = "#f7f5f0";
 
-export default function blog() {
+export default function blog({ textAnimationControls }) {
   const locale = useRouter().locale;
 
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, locale, id, options);
+  const f = (id, options) =>
+    formatJsxMessage(intl, locale, id, {
+      shouldFade: true,
+      animationControls: textAnimationControls,
+      ...options,
+    });
 
   return (
     <div>
-      <Menu backgroundColor={backgroundColor} />
+      <Menu
+        backgroundColor={backgroundColor}
+        textAnimationControls={textAnimationControls}
+      />
 
       <motion.div
         className="container"
