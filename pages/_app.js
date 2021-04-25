@@ -55,6 +55,13 @@ function MyApp({ Component, pageProps }) {
     }
   };
 
+  React.useEffect(async () => {
+    if (pageTransition.initial) {
+      await textAnimationControls.set("hidden");
+      await textAnimationControls.start("slowVisible");
+    }
+  }, [pathname]);
+
   return (
     <IntlProvider
       locale={locale}

@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 
 import styles from "../styles/chooseLocale.module.scss";
 
-export default function ChooseLocale({ updatePageTransition }) {
+export default function ChooseLocale({
+  updatePageTransition,
+  textAnimationControls,
+}) {
   const router = useRouter();
 
   React.useEffect(() => {
@@ -20,6 +23,7 @@ export default function ChooseLocale({ updatePageTransition }) {
     });
     Cookies.set("NEXT_LOCALE", locale);
     router.push(`/${locale}/home`);
+    textAnimationControls.set("instantlyHidden");
   };
 
   return (

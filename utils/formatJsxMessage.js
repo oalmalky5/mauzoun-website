@@ -23,13 +23,21 @@ const formatJsxMessage = (intl, locale, id, options) => {
   message = message.replace(/(<\/Link[^>]*>)/g, "</span>$1");
 
   const variants = {
+    slowVisible: {
+      opacity: 1,
+      transition: { delay: 0.5, duration: 1.5, ease: "circIn" },
+    },
     visible: { opacity: 1, transition: { delay: 0, duration: 1 } },
     instantlyVisible: { opacity: 1, transition: { duration: 0 } },
-    hidden: { opacity: 0.1, transition: { delay: 0, duration: 0.4 } },
+    hidden: { opacity: 0.05, transition: { delay: 0, duration: 0.4 } },
   };
 
   let content = (
-    <JsxParser renderInWrapper={false} components={{ Link }} jsx={`<span>${message}</span>`} />
+    <JsxParser
+      renderInWrapper={false}
+      components={{ Link }}
+      jsx={`<span>${message}</span>`}
+    />
   );
 
   return (
