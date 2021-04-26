@@ -2,6 +2,7 @@ import React from "react";
 import { IntlProvider } from "react-intl";
 import { useRouter } from "next/router";
 import { AnimateSharedLayout, motion, useAnimation } from "framer-motion";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import "../styles/globals.scss";
 import * as locales from "../content/locale";

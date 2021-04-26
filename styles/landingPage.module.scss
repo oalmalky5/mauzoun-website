@@ -1,5 +1,10 @@
 @use "mixins" as *;
 
+.kashida {
+  position: fixed;
+  z-index: 2;
+}
+
 .pageContainer {
   position: fixed;
   width: 100%;
@@ -10,7 +15,7 @@
 
 .mainPanel {
   position: absolute;
-  width: 35%;
+  width: 45%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -31,29 +36,26 @@
     width: 175px;
     margin-top: 20px;
   }
-
-  & .languagePicker {
-    position: absolute;
-    top: 50%;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 .languageButton {
-  background: #f8d952;
-  padding: 20px;
-  margin: 0px 40px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  margin-top: -35px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid black;
-  cursor: pointer;
+  z-index: 3;
+  background: #f8d952;
+  padding: 20px 0;
   font-size: 30px;
   font-style: bold;
+  border: none;
+  cursor: pointer;
+
+  & .chevron {
+    stroke-width: 0.8px;
+    margin: 0 5px;
+    vertical-align: middle;
+  }
 }

@@ -2,6 +2,8 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { Carousel } from "react-responsive-carousel";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 import styles from "../styles/portfolio.module.scss";
 import Menu from "../components/Menu";
@@ -80,9 +82,15 @@ export default function portfolio({ textAnimationControls }) {
     return clients;
   };
 
+  const preferredSide = locale === "ar" ? "right" : "left";
+  const oppositeSide = locale === "ar" ? "left" : "right";
+
   return (
     <div>
-      <Menu backgroundColor={backgroundColor} textAnimationControls={textAnimationControls} />
+      <Menu
+        backgroundColor={backgroundColor}
+        textAnimationControls={textAnimationControls}
+      />
 
       <motion.div
         className="container"
@@ -110,18 +118,46 @@ export default function portfolio({ textAnimationControls }) {
           decoratorsPositions={whiteBoxDecoratorsPositions}
         >
           {f("clients")}
-          <div className={styles.logoGrid}>
-            <img
-              src="/Companies.png"
-              height="624"
-              width="598"
-              priority="true"
-            />
-            {/* {clientLogos.map((v) => (
-              <div className={styles.gridItem} key={v}>
-                <img src={v} />
-              </div>
-            ))} */}
+
+          <div className={styles.carousel}>
+            <Carousel
+              dynamicHeight={true}
+              showStatus={false}
+              showIndicators={false}
+              showThumbs={false}
+              renderArrowPrev={(clickHandler, hasPrev) =>
+                hasPrev && (
+                  <div
+                    className={styles.arrowContainer}
+                    style={{ [preferredSide]: 0 }}
+                    onClick={clickHandler}
+                  >
+                    <div
+                      className={styles.arrow}
+                      style={{ [preferredSide]: 0 }}
+                    >
+                      <BsChevronLeft className={styles.chevron} />
+                    </div>
+                  </div>
+                )
+              }
+              renderArrowNext={(clickHandler, hasNext) =>
+                hasNext && (
+                  <div
+                    className={styles.arrowContainer}
+                    style={{ [oppositeSide]: 0 }}
+                    onClick={clickHandler}
+                  >
+                    <div className={styles.arrow} style={{ [oppositeSide]: 0 }}>
+                      <BsChevronRight className={styles.chevron} />
+                    </div>
+                  </div>
+                )
+              }
+            >
+              <img src="/Companies.png" priority="true" />
+              <img src="/Companies.png" priority="true" />
+            </Carousel>
           </div>
         </WhiteBox>
       </motion.div>
