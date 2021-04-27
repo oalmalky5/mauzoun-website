@@ -2,9 +2,19 @@ import React from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 import styles from "../styles/landingPage.module.scss";
+
+const kashidas = [
+  { top: "15%", left: "11%" },
+  { top: "14%", right: "11%" },
+  { top: "25%", left: "35%" },
+  { top: "30%", right: "24%" },
+  { top: "65%", left: "18%" },
+  { top: "65%", right: "20%" },
+  { top: "80%", left: "6%" },
+  { top: "85%", right: "32%" },
+];
 
 export default function LandingPage({
   updatePageTransition,
@@ -27,68 +37,113 @@ export default function LandingPage({
     textAnimationControls.set("instantlyHidden");
   };
 
-  const preferredSide = router.locale === "ar" ? "right" : "left";
-  const oppositeSide = router.locale === "ar" ? "left" : "right";
+  const [kashidaRefs, setKashidaRefs] = React.useState([]);
+  React.useEffect(() => {
+    // add or remove refs
+    setKashidaRefs((kashidaRefs) =>
+      Array(kashidas.length)
+        .fill()
+        .map((_, i) => kashidaRefs[i] || React.createRef())
+    );
+  }, [kashidas.length]);
 
-  const buildKashida = (position) => {
-    position[preferredSide] = position.preferredSide;
-    delete position.preferredSide;
-    position[oppositeSide] = position.oppositeSide;
-    delete position.oppositeSide;
+  const updateKashidaHoverState = (e, isHovered) => {
+    const id = e.target?.id;
+    if (!id) return;
 
+    if (isHovered) {
+      e.target.src = `/landingPage/${id}.png`;
+      e.target.style.marginTop =
+        ((e.target.clientHeight / 2) * -0.1).toString() + "px";
+
+      if (e.target.style.left) {
+        e.target.style.marginLeft =
+          ((e.target.clientWidth / 2) * -0.1).toString() + "px";
+      } else {
+        e.target.style.marginRight =
+          ((e.target.clientWidth / 2) * -0.1).toString() + "px";
+      }
+    } else {
+      e.target.src = `/landingPage/Kashida ${id}.png`;
+      e.target.style.marginTop = 0;
+      e.target.style.marginLeft = 0;
+      e.target.style.marginRight = 0;
+    }
+  };
+
+  const buildKashida = (id, position) => {
     return (
-      <img
-        className={styles.kashida}
-        style={position}
-        src="/Tilted Square.svg"
-        height="30"
-        width="30"
-        priority="true"
-      />
+      <div key={id}>
+        <img
+          src={`/landingPage/${id}.png`}
+          style={{ display: "none", position: "absolute" }}
+        />
+        <img
+          id={id}
+          ref={kashidaRefs[id - 1]}
+          className={styles.kashida}
+          style={{
+            transformOrigin: position.left ? "left top" : "right top",
+            ...position,
+          }}
+          src={`/landingPage/Kashida ${id}.png`}
+          onMouseEnter={(e) => updateKashidaHoverState(e, true)}
+          onMouseLeave={(e) => updateKashidaHoverState(e, false)}
+        />
+      </div>
     );
   };
 
   return (
     <>
-      {/* Kashidas organized from top left to bottom right */}
-      {buildKashida({ top: "150px", preferredSide: "180px" })}
-      {buildKashida({ top: "130px", oppositeSide: "180px" })}
-      {buildKashida({ top: "200px", preferredSide: "580px" })}
-      {buildKashida({ top: "240px", oppositeSide: "450px" })}
-      {buildKashida({ top: "530px", preferredSide: "290px" })}
-      {buildKashida({ top: "540px", oppositeSide: "300px" })}
-      {buildKashida({ top: "650px", preferredSide: "100px" })}
-      {buildKashida({ top: "700px", oppositeSide: "550px" })}
-
       <div className={styles.pageContainer}>
+        {/* Kashidas organized from top left to bottom right */}
+        {kashidas.map((e, i) => buildKashida(i + 1, e))}
+
         <div />
 
         <div className={styles.mainPanel}>
           <motion.img
+            className={styles.logo}
             src="https://i.imgur.com/HjDbXtR.png"
             alt="Mauzoun logo"
             transition={{ duration: 2 }}
             layoutId="logo"
           />
 
+          <p style={{ fontFamily: "GE Dinar Two" }}>
+            ‫ﺷﻐــــــﻮف‪:‬‬ ‫وﻓﺮﻳـــﻖ‬ ‫ﻟﻠﻜﻠﻤـــــــــــــــــــﺎت‬ ‫ﺣﺐ
+            <br />
+            <b>‫ﻣـﻮزون‪.‬‬ ‫ﻓﻲ‬ ‫ﺑﻜﻢ‬ ‫ً‬ ‫أﻫﻼ‬</b>
+          </p>
           <button
             className={styles.languageButton}
-            onClick={() => changeLocale("en-US")}
-            style={{ left: "25%", fontFamily: "Alegreya" }}
+            style={{ fontFamily: "GE Dinar One", marginBottom: "30px" }}
+            onClick={() => changeLocale("ar")}
           >
-            <BsChevronLeft className={styles.chevron} />
-            English
+            ‫ﺑﺎﻟﻌﺮﺑﻴـــﺔ‪.‬‬ ‫ﻗﺼﺘﻜﻢ‬ ‫ﻟﺒﺪء‬ ‫ﻫﻨﺎ<b>‬ ‫اﺿﻐﻄــــــﻮا‬</b>
           </button>
 
+          <p style={{ fontFamily: "Alegreya" }}>
+            ‫‪A‬‬ ‫‪love‬‬ ‫‪for‬‬ ‫‪words‬‬ ‫‪and‬‬ ‫‪a‬‬ ‫‪team‬‬ ‫‪with‬‬
+            ‫‪fervor:‬‬
+            <br />
+            <b>‫‪welcome‬‬ ‫‪to‬‬ ‫‪Mauzoun.‬‬</b>
+          </p>
           <button
             className={styles.languageButton}
-            style={{}}
-            onClick={() => changeLocale("ar")}
-            style={{ right: "25%", fontFamily: "GE Dinar Two" }}
+            style={{ fontFamily: "Alegreya Sans" }}
+            onClick={() => changeLocale("en-US")}
           >
-            عربــي
-            <BsChevronRight className={styles.chevron} />
+            <b>‫‪Click‬‬ ‫‪here</b>‬‬ ‫‪to‬‬ ‫‪begin‬‬ ‫‪your‬‬ ‫‪story‬‬ ‫‪in‬‬
+            ‫‪English.‬‬
           </button>
+
+          <img
+            className={styles.bottomKashida}
+            src={`/landingPage/Kashida bottom.png`}
+            width="270px"
+          />
         </div>
 
         <div />
