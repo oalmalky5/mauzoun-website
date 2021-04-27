@@ -111,18 +111,20 @@ export default function LandingPage({
             layoutId="logo"
           />
 
-          <p style={{ fontFamily: "GE Dinar Two" }}>
-            ‫ﺷﻐــــــﻮف‪:‬‬ ‫وﻓﺮﻳـــﻖ‬ ‫ﻟﻠﻜﻠﻤـــــــــــــــــــﺎت‬ ‫ﺣﺐ
-            <br />
-            <b>‫ﻣـﻮزون‪.‬‬ ‫ﻓﻲ‬ ‫ﺑﻜﻢ‬ ‫ً‬ ‫أﻫﻼ‬</b>
-          </p>
-          <button
-            className={styles.languageButton}
-            style={{ fontFamily: "GE Dinar One", marginBottom: "30px" }}
-            onClick={() => changeLocale("ar")}
-          >
-            ‫ﺑﺎﻟﻌﺮﺑﻴـــﺔ‪.‬‬ ‫ﻗﺼﺘﻜﻢ‬ ‫ﻟﺒﺪء‬ ‫ﻫﻨﺎ<b>‬ ‫اﺿﻐﻄــــــﻮا‬</b>
-          </button>
+          <div dir="rtl">
+            <p style={{ fontFamily: "GE Dinar Two" }}>
+              حب للكلمات وفريق شغوف:
+              <br />
+              <b>أهلاً بكم في موزون</b>
+            </p>
+            <button
+              className={styles.languageButton}
+              style={{ fontFamily: "GE Dinar One", marginBottom: "30px" }}
+              onClick={() => changeLocale("ar")}
+            >
+              <b>اضغطوا هنا</b> لبدء قصتكم بالعربية
+            </button>
+          </div>
 
           <p style={{ fontFamily: "Alegreya" }}>
             ‫‪A‬‬ ‫‪love‬‬ ‫‪for‬‬ ‫‪words‬‬ ‫‪and‬‬ ‫‪a‬‬ ‫‪team‬‬ ‫‪with‬‬
