@@ -148,9 +148,19 @@ exports["en-US"] = {
     teamwork:
       "Our team works cooperatively to revive the appreciation of good writing, and we craft content and stories with precision and passion. Our words can pack a punch or be elegantly eloquent. It all depends on what you want, and how we see it best.",
     "teamMember.1.name": "Layan Abdul Shakoor",
-    "teamMember.1.role": "Creative Director",
-    "teamMember.2.name": "Layan Abdul Shakoor",
-    "teamMember.2.role": "Creative Director",
+    "teamMember.1.role": "Founder & Creative Director",
+    "teamMember.2.name": "Amal Al-Awlaki",
+    "teamMember.2.role": "Senior Writer",
+    "teamMember.3.name": "Fatmah Jadani",
+    "teamMember.3.role": "Writer",
+    "teamMember.4.name": "Nada Nasir",
+    "teamMember.4.role": "Account Manager",
+    "teamMember.5.name": "Omar Thawabeh",
+    "teamMember.5.role": "Senior Writer",
+    "teamMember.6.name": "Aya Lozi",
+    "teamMember.6.role": "Writer",
+    "teamMember.7.name": "Omar AlMalky",
+    "teamMember.7.role": "Account Manager",
     world:
       "In a world that is always bustling about and concerned with immediate results, we stick to the belief that good work takes care and time. Every word is an investment in your brand, or your identity as an author. That is why we work on booking basis only and rarely take on rushed projects.",
     "whitebox.innerText1":
