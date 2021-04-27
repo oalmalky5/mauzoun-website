@@ -13,15 +13,33 @@ const backgroundColor = "#d1e3f2";
 
 const teamMembersData = {
   1: {
-    src: "https://i.imgur.com/Ph2nM8j.gif",
-    preview: "/First profile preview.png",
+    src: "/team/Layan.gif",
+    preview: "/team/Layan.png",
   },
-  2: {},
-  3: {},
-  4: {},
-  5: {},
-  6: {},
-  7: {},
+  2: {
+    src: "/team/Amal.gif",
+    preview: "/team/Amal.jpg",
+  },
+  3: {
+    src: "/team/Fatmah.gif",
+    preview: "/team/Fatmah.jpg",
+  },
+  4: {
+    src: "/team/Nada Nasir.gif",
+    preview: "/team/Nada Nasir.jpg",
+  },
+  5: {
+    src: "/team/Omar Thawabeh.gif",
+    preview: "/team/Omar Thawabeh.jpg",
+  },
+  6: {
+    src: "/team/Aya.gif",
+    preview: "/team/Aya.jpeg",
+  },
+  7: {
+    src: "/team/OmarM.gif",
+    preview: "/team/OmarM.png",
+  },
 };
 
 const whiteBoxDecoratorsPositions = {

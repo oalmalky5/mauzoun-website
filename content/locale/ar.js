@@ -1,6 +1,6 @@
 export const ar = {
   shared: {
-    homeLink: "الصفحة الرئيسية",
+    homeLink: "البداية",
     storyLink: "قصتنا",
     servicesLink: "خدماتنا",
     portfolioLink: "أعمالنا",
@@ -60,20 +60,19 @@ export const ar = {
       "يتمثل أحدث استثماراتنا في الكتابة الإبداعية في الكتاب الصاعدين ممن يحضرون أعمالهم الأولى من العالم العربي، خاصة الساعين لنشر أول كتاب، أو رواية، أو قصص قصيرة، أو مجموعة مقالات، أو نصوص بصرية. سيتعاون مَوْزوْن مع هيئة تحكيم ستقوم بمعالجة الطلبات واختيار كاتب واحد سيحصل على استشارتنا وخدماتنا على مدى عام كامل، وسيُنشر عملهم أو يتم ربطهم مع منتج عند نهاية العام.",
   },
   "/portfolio": {
-    title: "Portfolio",
-    subtitle: "A personal look into our tales of success.",
+    title: "أعمالنا",
+    subtitle: "نظرة متعمقة على قصص نجاحنا.",
     content:
-      "Read our team’s project-focused journal entries, which document our creative thought process and show our beloved final outcome.",
-    "contentWriting.title": "Content Writing",
-    "contentWriting.clients.1": "Mauj",
-    "contentWriting.clients.2": "Shafra",
-    "contentWriting.clients.3": "Musa & Palm",
-    "contentWriting.clients.4": "Saudi Tourism Authority",
-    "contentWriting.clients.5": "Ministry of Culture: AlBalad",
-    "creativeWriting.title": "Creative Writing",
-    "creativeWriting.clients.1":
-      "Ministry of Culture:<br />Madinah Culinary Arts",
-    clients: "Since 2018, we have worked with <b><u>over 100 clients</u></b>.",
+      "اقرؤا مدونات الفريق عن مشاريعنا التي توثق تفكيرنا الإبداعي، وتصور أعمالنا بحلتها الأخيرة.",
+    "contentWriting.title": "كتابة المحتوى المهني",
+    "contentWriting.clients.1": "موج",
+    "contentWriting.clients.2": "شفرة",
+    "contentWriting.clients.3": "موسى آند بالم",
+    "contentWriting.clients.4": "الهيئة السعودية للسياحة",
+    "contentWriting.clients.5": "وزارة الثقافة: جدة التاريخية",
+    "creativeWriting.title": "الكتابة الإبداعية",
+    "creativeWriting.clients.1": "وزارة الثقافة:<br /> فنون الطهي المدينية",
+    clients: "عملنا منذ ٢٠١٨ مع أكثر من ١٠٠ عميل وعميلة.",
   },
   "/services": {
     title: "خدماتنا",

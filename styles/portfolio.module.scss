@@ -22,7 +22,7 @@
     padding: 0 20px;
   }
 
-  .arrowContainer {
+  & .arrowContainer {
     position: absolute;
     top: 0;
     height: 100%;
@@ -30,7 +30,7 @@
     cursor: pointer;
     z-index: 2;
 
-    .arrow {
+    & .arrow {
       position: absolute;
       display: flex;
       align-items: center;

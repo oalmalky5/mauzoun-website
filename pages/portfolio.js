@@ -14,10 +14,9 @@ import ContactButton from "../components/ContactButton";
 const backgroundColor = "#fbec9a";
 
 const clientLogos = [
-  "/clientLogos/Saudi Tourism Authority.png",
-  "/clientLogos/Musa Palm.png",
-  "/clientLogos/Ministry of Culture.png",
-  "/clientLogos/Mauj.png",
+  "/clientLogos/1.png",
+  "/clientLogos/2.png",
+  "/clientLogos/3.png",
 ];
 
 const whiteBoxDecoratorsPositions = {
@@ -119,9 +118,8 @@ export default function portfolio({ textAnimationControls }) {
         >
           {f("clients")}
 
-          <div className={styles.carousel}>
+          <div className={styles.carousel} style={{ direction: "initial" }}>
             <Carousel
-              dynamicHeight={true}
               showStatus={false}
               showIndicators={false}
               showThumbs={false}
@@ -136,7 +134,11 @@ export default function portfolio({ textAnimationControls }) {
                       className={styles.arrow}
                       style={{ [preferredSide]: 0 }}
                     >
-                      <BsChevronLeft className={styles.chevron} />
+                      {locale === "en-US" ? (
+                        <BsChevronLeft className={styles.chevron} />
+                      ) : (
+                        <BsChevronRight className={styles.chevron} />
+                      )}
                     </div>
                   </div>
                 )
@@ -149,14 +151,19 @@ export default function portfolio({ textAnimationControls }) {
                     onClick={clickHandler}
                   >
                     <div className={styles.arrow} style={{ [oppositeSide]: 0 }}>
-                      <BsChevronRight className={styles.chevron} />
+                      {locale === "en-US" ? (
+                        <BsChevronRight className={styles.chevron} />
+                      ) : (
+                        <BsChevronLeft className={styles.chevron} />
+                      )}
                     </div>
                   </div>
                 )
               }
             >
-              <img src="/Companies.png" priority="true" />
-              <img src="/Companies.png" priority="true" />
+              {clientLogos.map((e) => (
+                <img src={e} priority="true" />
+              ))}
             </Carousel>
           </div>
         </WhiteBox>
