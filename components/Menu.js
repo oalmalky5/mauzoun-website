@@ -107,7 +107,12 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
                     onMouseEnter={() => setHoveredLink(e)}
                     onMouseLeave={() => setHoveredLink("")}
                   >
-                    <div className={`${styles.itemTitle} heading`}>
+                    <div
+                      className={`${styles.itemTitle} heading`}
+                      style={{
+                        fontWeight: locale === "en-US" ? "500" : "bold",
+                      }}
+                    >
                       {f(e + "Link")}
                       {i % 2 ? buildTiltedSquare(e) : null}
                     </div>

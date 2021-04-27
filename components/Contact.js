@@ -82,7 +82,7 @@ export default function Contact({ isOpen, onClose }) {
             <textarea
               type="text"
               name="subject"
-              rows="4"
+              rows="2"
               placeholder={f("contact.subject")}
               onChange={handleChange}
             />
@@ -123,7 +123,7 @@ export default function Contact({ isOpen, onClose }) {
       </NetlifyForm>
 
       <button className={styles.closeButton} onClick={onClose}>
-        X
+        <img src="/Tilted Square.svg" height="25" width="25" priority="true" />
       </button>
     </Modal>
   );

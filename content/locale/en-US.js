@@ -10,13 +10,13 @@ exports["en-US"] = {
     location: "Based in Jeddah, Saudi Arabia",
     comingSoon: "COMING SOON.",
     contactPrompt: "Book an online call now.",
-    "contact.fullName": "Full name",
-    "contact.projectName": "Your brand or project name",
-    "contact.country": "Country of residence",
+    "contact.fullName": "Your full name.",
+    "contact.projectName": "Your brand or project name.",
+    "contact.country": "Your country of residence.",
     "contact.subject": "What would you like to discuss with us?",
     "contact.date": "Book a date from our calendar",
     "contact.time": "Book a time slot",
-    "contact.submit": "Let's talk!",
+    "contact.submit": "Book your meeting with Mauzoun.",
     "contact.success": "Thanks for contacting us!",
     "contact.failure":
       "Sorry, we could not reach our servers. Please try again later.",
@@ -28,9 +28,10 @@ exports["en-US"] = {
     "story.intro": "Here’s our story:",
     "story.content":
       "We realized a lack of captivating brand content and creative writing in the Arab World. Quite simply, we created a solution.",
-    "services.intro": "Our services",
+    "services.intro":
+      "Our services balance between the professional and the creative",
     "services.content":
-      " include developing strategic content for brands and campaigns, as well as unleashing our creativities in book editing, creative writing, story doctoring, and boutique publishing.",
+      ". They include developing strategic content for brands and campaigns, as well as unleashing our creativities in book editing, creative writing, story doctoring, and boutique publishing.",
     "approach.intro": "Our approach to writing is thoughtful and imaginative",
     "approach.content":
       ", balancing between Arabic and English while remaining loyal to each language and the kind of service we provide. We believe in work that is backed by a strong understanding of brand strategies, audience needs, and empathetic storytelling.",
@@ -54,7 +55,9 @@ exports["en-US"] = {
       <br /><br />
       If you are interested in joining Mauzoun, keep checking this page or our Instagram account for the latest job announcements.
       <br /><br />
-      At Mauzoun, we look for writers with bulletproof Arabic and English who are creative and passionate about writing. To win us over, make sure that your application is free of mistakes, and complement it with a captivating cover letter that conveys why you love the work you do.`,
+      At Mauzoun, we look for writers with bulletproof Arabic and English who are creative and passionate about writing. To win us over, make sure that your application is free of mistakes, and complement it with a captivating cover letter that conveys why you love the work you do.
+      <br /><br />
+      We also seek managers who are able to lead our team in a manner that balances the humanistic with the professional: diligent, organized, precise and empathic are the traits we seek.`,
     "joinCompetition.intro": "Join the Competition",
     "joinCompetition.content":
       "Our latest endeavor in creative writing will be investing in emerging and first-time writers from the Arab World, who are trying to publish their first book, novel, short stories, collection of essays, or visual script. Mauzoun will be collaborating with a judging panel that will process applications and decide on one writer, who will receive our consultation and services for a period of one year, and have their work published or paired with a producer by the end of the year.",
@@ -104,16 +107,16 @@ exports["en-US"] = {
     "approach.feedback.header": "8. You Share Your Feedback or Approval.",
     "approach.feedback.content":
       "You provide your feedback via e-mail or phone, and may immediately approve the project! If not, don’t worry—great content takes time. Every project at Mauzoun has a standard 2 rounds of changes in order to polish your content to perfection. ",
-    "approach.adaptTimeline.header": "9. We Adapt Your Timeline",
+    "approach.adaptTimeline.header": "9. We Adapt Your Timeline;",
     "approach.adaptTimeline.content":
       "We repeat steps 5 through 7 with a new and different approach to research and writing to ensure different results.",
-    "approach.finished.header": "10. Your Story Comes to Life",
+    "approach.finished.header": "10. Your Story Comes to Life.",
     "approach.finished.content":
       "Our holistic process ensures that when your content is finalized it is an embodiment of your vision, having brought together your story to life.",
     "contentWriting.title": "Content Writing",
     "contentWriting.content": `<b>Holistic, research-based services for strong brands and campaigns that need captivating content.</b>
       <br /><br />
-      All of our content writing services must be preceded by a Brand Strategy. If your brand does not have one, we’d be more than glad to prepare one for you.
+      All of our content writing services must be preceded by a Brand Strategy or Messaging Manual. If your brand does not have one, we’d be more than glad to prepare one for you.
       <br /><br />
       We choose to work exclusively with compelling brands on long-term basis, or on exciting campaigns.`,
     "contentWriting.services.header":
