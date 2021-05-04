@@ -9,14 +9,15 @@ exports["en-US"] = {
     email: "hello@mauzoun.com",
     location: "Based in Jeddah, Saudi Arabia",
     comingSoon: "COMING SOON.",
-    contactPrompt: "Book an online call now.",
+    contactPrompt: "Interested in our services?",
+    "contactPrompt.hovered": "Book an online call now.",
     "contact.fullName": "Your full name.",
     "contact.projectName": "Your brand or project name.",
     "contact.country": "Your country of residence.",
     "contact.subject": "What would you like to discuss with us?",
     "contact.date": "Book a date from our calendar",
     "contact.time": "Book a time slot",
-    "contact.submit": "Book your meeting with Mauzoun.",
+    "contact.submit": "Let's talk.",
     "contact.success": "Thanks for contacting us!",
     "contact.failure":
       "Sorry, we could not reach our servers. Please try again later.",
@@ -49,7 +50,7 @@ exports["en-US"] = {
     title: "Mauzoun & You",
     "becomeClient.intro": "Become Our Client",
     "becomeClient.content":
-      "If you're interested in our services, you can become our client by simply e-mailing us or booking an introductory online call through the circular button on the right of this page.",
+      "If you're interested in our services, you can become our client by simply e-mailing us or booking an introductory online call through the button at the bottom right of the page.",
     "joinTeam.intro": "Join the Team",
     "joinTeam.content": `<b>There are currently no job opportunities available. Keep checking.</b>
       <br /><br />
@@ -60,7 +61,7 @@ exports["en-US"] = {
       We also seek managers who are able to lead our team in a manner that balances the humanistic with the professional: diligent, organized, precise and empathic are the traits we seek.`,
     "joinCompetition.intro": "Join the Competition",
     "joinCompetition.content":
-      "Our latest endeavor in creative writing will be investing in emerging and first-time writers from the Arab World, who are trying to publish their first book, novel, short stories, collection of essays, or visual script. Mauzoun will be collaborating with a judging panel that will process applications and decide on one writer, who will receive our consultation and services for a period of one year, and have their work published or paired with a producer by the end of the year.",
+      "Our latest endeavor in creative writing will be investing our story development and publishing services in emerging and first-time writers from the Arab World, who are trying to publish their first book, novel, short story, collection of essays, play, and everything in between. The judging criteria will be made public, and after shortlisting the best writers for a pitch session, we will select one writer who will receive our creative writing and publishing services for free for one year.",
   },
   "/portfolio": {
     title: "Portfolio",
@@ -92,13 +93,13 @@ exports["en-US"] = {
     "approach.quotation.header": "3. We Prepare Your Quotation.",
     "approach.quotation.content":
       "Our quotations take around 3 business days to prepare after reviewing your form. They include our Terms and Conditions and help clarify and streamline our work together.",
-    "approach.timeline.header": "4. We Book Your Timeline",
+    "approach.timeline.header": "4. We Book Your Timeline.",
     "approach.timeline.content":
       "After receiving your approval of the quotation and down payment, we book your timeline immediately. Our busy schedule and workload demand that we work on booking basis only.",
-    "approach.research.header": "5. Our Research Begins.",
+    "approach.research.header": "5. We Dive into the Research.",
     "approach.research.content":
       "Good work is slow work––that’s our motto. Our average timeline is between 10 to 21 business days. Great writing takes time, so we gather all the data and information needed to complement our writing process and distinguish your tone from competitors.",
-    "approach.writing.header": "6. The Writing Process.",
+    "approach.writing.header": "6.  The Writing Process Begins.",
     "approach.writing.content":
       "After finalizing our research internally, we hand it over to our brilliant team of English and Arabic writers who adapt to your tone with the best quality of writing. We then proofread the content at least seven times to make sure that everything is grammatically correct, structurally strong, and holistically captivating.",
     "approach.delivery.header": "7. Your Deliverables Arrive Right on Time.",
@@ -107,7 +108,7 @@ exports["en-US"] = {
     "approach.feedback.header": "8. You Share Your Feedback or Approval.",
     "approach.feedback.content":
       "You provide your feedback via e-mail or phone, and may immediately approve the project! If not, don’t worry—great content takes time. Every project at Mauzoun has a standard 2 rounds of changes in order to polish your content to perfection. ",
-    "approach.adaptTimeline.header": "9. We Adapt Your Timeline;",
+    "approach.adaptTimeline.header": "9. We Adapt Your Timeline.",
     "approach.adaptTimeline.content":
       "We repeat steps 5 through 7 with a new and different approach to research and writing to ensure different results.",
     "approach.finished.header": "10. Your Story Comes to Life.",

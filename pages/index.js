@@ -28,10 +28,10 @@ export default function LandingPage({
   }, []);
 
   const changeLocale = (locale) => {
-    updatePageTransition({
-      initial: "hidden",
-      animate: "visible",
-    });
+    // updatePageTransition({
+    //   initial: "hidden",
+    //   animate: "visible",
+    // });
     Cookies.set("NEXT_LOCALE", locale);
     router.push(`/${locale}/home`);
     textAnimationControls.set("instantlyHidden");
@@ -115,14 +115,14 @@ export default function LandingPage({
             <p style={{ fontFamily: "GE Dinar Two" }}>
               حب للكلمات وفريق شغوف:
               <br />
-              <b>أهلاً بكم في موزون</b>
+              <b>أهلاً بكم في موزون.</b>
             </p>
             <button
               className={styles.languageButton}
               style={{ fontFamily: "GE Dinar One", marginBottom: "30px" }}
               onClick={() => changeLocale("ar")}
             >
-              <b>اضغطوا هنا</b> لبدء قصتكم بالعربية
+              <b>اضغطوا هنا</b> لبدء قصتكم بالعربية.
             </button>
           </div>
 

@@ -17,6 +17,16 @@ export default function Contact({ isOpen, onClose }) {
   const intl = useIntl();
   const f = (id) => intl.formatMessage({ id });
 
+  const placeholderColor = "rgba(0, 0, 0, 1)";
+
+  const updateInputColor = (e) => {
+    if (!e.target.value.length) {
+      e.target.style.color = placeholderColor;
+    } else {
+      e.target.style.color = "rgba(0, 0, 0, 1)";
+    }
+  };
+
   return (
     <Modal
       isOpen={isOpen}
@@ -25,7 +35,7 @@ export default function Contact({ isOpen, onClose }) {
       ariaHideApp={false}
       style={{
         overlay: {
-          zIndex: 2,
+          zIndex: 4,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -65,7 +75,16 @@ export default function Contact({ isOpen, onClose }) {
             />
 
             {/* Country */}
-            <select name="country" onChange={handleChange}>
+            <select
+              name="country"
+              onChange={(e) => {
+                updateInputColor(e);
+                handleChange(e);
+              }}
+              style={{
+                color: placeholderColor,
+              }}
+            >
               <option value="">{f("contact.country")}</option>
               {Object.values(
                 countries.getNames(locale === "en-US" ? "en" : locale, {
@@ -92,7 +111,13 @@ export default function Contact({ isOpen, onClose }) {
               type="date"
               name="date"
               min={moment().format("YYYY-MM-DD")}
-              onChange={handleChange}
+              onChange={(e) => {
+                updateInputColor(e);
+                handleChange(e);
+              }}
+              style={{
+                color: placeholderColor,
+              }}
             />
 
             {/* Time */}
@@ -100,7 +125,13 @@ export default function Contact({ isOpen, onClose }) {
               type="time"
               name="time"
               placeholder={f("contact.time")}
-              onChange={handleChange}
+              onChange={(e) => {
+                updateInputColor(e);
+                handleChange(e);
+              }}
+              style={{
+                color: placeholderColor,
+              }}
             />
 
             {success || error ? (
@@ -117,7 +148,15 @@ export default function Contact({ isOpen, onClose }) {
               </div>
             ) : null}
 
-            <button type="submit">{f("contact.submit")}</button>
+            <button
+              type="submit"
+              style={{
+                fontFamily: locale === "en-US" ? "Alegreya" : "GE Dinar Two",
+                fontWeight: 500,
+              }}
+            >
+              {f("contact.submit")}
+            </button>
           </>
         )}
       </NetlifyForm>

@@ -16,7 +16,7 @@ export default function ContactButton({
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, locale, id, options);
 
-  const [bgColor, setBgColor] = React.useState(backgroundColor);
+  const [isHovered, setIsHovered] = useState(false);
   const [isContactFormVisible, setIsContactFormVisible] = useState(false);
 
   return (
@@ -27,15 +27,15 @@ export default function ContactButton({
           <motion.button
             className={styles.contactButton + " heading"}
             onClick={() => {
-              setBgColor("#ffffff");
+              setIsHovered(false);
               setIsContactFormVisible(true);
             }}
-            style={{ backgroundColor: bgColor }}
-            onMouseEnter={() => setBgColor("#f8d952")}
-            onMouseLeave={() => setBgColor("#ffffff")}
+            style={{ backgroundColor: isHovered ? "#f8d952" : "#ffffff" }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
             layout="position"
           >
-            {f(messageId)}
+            {isHovered ? f(messageId + ".hovered") : f(messageId)}
           </motion.button>
         </div>
       </div>
