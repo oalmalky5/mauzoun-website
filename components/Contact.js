@@ -4,6 +4,7 @@ import Modal from "react-modal";
 import { NetlifyForm, Honeypot } from "react-netlify-forms";
 import { useRouter } from "next/router";
 import moment from "moment";
+import { BsChevronDown } from "react-icons/bs";
 
 var countries = require("i18n-iso-countries");
 countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
@@ -75,27 +76,39 @@ export default function Contact({ isOpen, onClose }) {
             />
 
             {/* Country */}
-            <select
-              name="country"
-              onChange={(e) => {
-                updateInputColor(e);
-                handleChange(e);
-              }}
-              style={{
-                color: placeholderColor,
-              }}
-            >
-              <option value="">{f("contact.country")}</option>
-              {Object.values(
-                countries.getNames(locale === "en-US" ? "en" : locale, {
-                  select: "official",
-                })
-              ).map((e) => (
-                <option key={e} value={e}>
-                  {e}
-                </option>
-              ))}
-            </select>
+            <div>
+              <select
+                name="country"
+                onChange={(e) => {
+                  updateInputColor(e);
+                  handleChange(e);
+                }}
+                style={{
+                  color: placeholderColor,
+                  appearance: "none",
+                }}
+              >
+                <option value="">{f("contact.country")}</option>
+                {Object.values(
+                  countries.getNames(locale === "en-US" ? "en" : locale, {
+                    select: "official",
+                  })
+                ).map((e) => (
+                  <option key={e} value={e}>
+                    {e}
+                  </option>
+                ))}
+              </select>
+              <BsChevronDown
+                size="12px"
+                style={{
+                  position: "absolute",
+                  marginTop: "20px",
+                  marginLeft: "-23px",
+                  strokeWidth: "1.3px",
+                }}
+              />
+            </div>
 
             {/* Subject */}
             <textarea

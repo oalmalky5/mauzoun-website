@@ -7,7 +7,7 @@ export default function WhiteBox({ children, style, decoratorsPositions }) {
   const locale = useRouter().locale;
   const preferredMargin = locale === "ar" ? "marginRight" : "marginLeft";
 
-  const buildTiltedSquare = (options) => {
+  const buildTiltedSquare = (options, name, index) => {
     const style = {
       marginTop: options.marginTop,
       marginBottom: options.marginBottom,
@@ -18,7 +18,11 @@ export default function WhiteBox({ children, style, decoratorsPositions }) {
     if (!style[preferredMargin]) style[preferredMargin] = "-10px";
 
     return (
-      <div className={styles.tiltedSquare} style={style}>
+      <div
+        key={`${name}${index}`}
+        className={styles.tiltedSquare}
+        style={style}
+      >
         <img src="/Tilted Square.svg" height="18" width="18" priority="true" />
       </div>
     );
@@ -26,11 +30,15 @@ export default function WhiteBox({ children, style, decoratorsPositions }) {
 
   return (
     <div className={styles.whiteBox} style={style}>
-      {decoratorsPositions.fromTop?.map((e) => buildTiltedSquare(e))}
+      {decoratorsPositions.fromTop?.map((e, i) =>
+        buildTiltedSquare(e, "fromTop", i)
+      )}
 
       <div className={styles.content + " heading"}>{children}</div>
 
-      {decoratorsPositions.fromBottom?.map((e) => buildTiltedSquare(e))}
+      {decoratorsPositions.fromBottom?.map((e, i) =>
+        buildTiltedSquare(e, "fromBottom", i)
+      )}
     </div>
   );
 }
