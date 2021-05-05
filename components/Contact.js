@@ -11,6 +11,7 @@ countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 countries.registerLocale(require("i18n-iso-countries/langs/ar.json"));
 
 import styles from "../styles/contact.module.scss";
+import { transform } from "framer-motion";
 
 export default function Contact({ isOpen, onClose }) {
   const locale = useRouter().locale;
@@ -29,7 +30,11 @@ export default function Contact({ isOpen, onClose }) {
   };
 
   const closeButton = (
-    <button className={styles.closeButton} onClick={onClose}>
+    <button
+      className={styles.closeButton}
+      onClick={onClose}
+      style={{ transform: locale === "en-US" ? "scaleX(-1)" : "" }}
+    >
       <img src="/Tilted Square.svg" height="25" width="25" priority="true" />
     </button>
   );
@@ -132,7 +137,7 @@ export default function Contact({ isOpen, onClose }) {
 
             {/* Date */}
             <input
-              type="text"
+              type="date"
               name="date"
               placeholder={f("contact.date")}
               min={moment().format("YYYY-MM-DD")}
