@@ -13,32 +13,32 @@ const backgroundColor = "#d1e3f2";
 
 const teamMembersData = {
   1: {
-    src: "/team/Layan.gif",
-    preview: "/team/Layan.png",
+    src: "/team/layan.gif",
+    preview: "/team/layan.png",
   },
   2: {
-    src: "/team/Amal.gif",
-    preview: "/team/Amal.jpg",
+    src: "/team/amal.gif",
+    preview: "/team/amal static.gif",
   },
   3: {
-    src: "/team/Fatmah.gif",
-    preview: "/team/Fatmah.jpg",
+    src: "/team/fatima.gif",
+    preview: "/team/fatima.png",
   },
   4: {
-    src: "/team/Nada Nasir.gif",
-    preview: "/team/Nada Nasir.jpg",
+    src: "/team/nada.gif",
+    preview: "/team/nada.png",
   },
   5: {
-    src: "/team/Omar Thawabeh.gif",
-    preview: "/team/Omar Thawabeh.jpg",
+    src: "/team/omart.gif",
+    preview: "/team/omart.png",
   },
   6: {
-    src: "/team/Aya.gif",
-    preview: "/team/Aya.jpeg",
+    src: "/team/aya.gif",
+    preview: "/team/aya.png",
   },
   7: {
-    src: "/team/OmarM.gif",
-    preview: "/team/OmarM.png",
+    src: "/team/omarm.gif",
+    preview: "/team/omarm.png",
   },
 };
 
