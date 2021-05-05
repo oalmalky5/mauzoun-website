@@ -28,6 +28,12 @@ export default function Contact({ isOpen, onClose }) {
     }
   };
 
+  const closeButton = (
+    <button className={styles.closeButton} onClick={onClose}>
+      <img src="/Tilted Square.svg" height="25" width="25" priority="true" />
+    </button>
+  );
+
   return (
     <Modal
       isOpen={isOpen}
@@ -43,12 +49,15 @@ export default function Contact({ isOpen, onClose }) {
         },
       }}
     >
+      {locale === "ar" && closeButton}
+
       <NetlifyForm
         name="Contact Form"
         action="/home"
         honeypotName="bot-field"
         formProps={{
           style: {
+            direction: locale === "ar" ? "rtl" : "ltr",
             fontSize: "20px",
             fontFamily: locale === "en-US" ? "Alegreya Sans" : "GE Dinar One",
           },
@@ -104,8 +113,10 @@ export default function Contact({ isOpen, onClose }) {
                 style={{
                   position: "absolute",
                   marginTop: "20px",
-                  marginLeft: "-23px",
+                  marginLeft: locale === "en-US" ? "-23px" : "0px",
+                  marginRight: locale === "ar" ? "-23px" : "0px",
                   strokeWidth: "1.3px",
+                  pointerEvents: "none",
                 }}
               />
             </div>
@@ -123,7 +134,11 @@ export default function Contact({ isOpen, onClose }) {
             <input
               type="date"
               name="date"
+              placeholder={f("contact.date")}
               min={moment().format("YYYY-MM-DD")}
+              onFocus={(e) => {
+                e.target.type = "date";
+              }}
               onChange={(e) => {
                 updateInputColor(e);
                 handleChange(e);
@@ -138,6 +153,10 @@ export default function Contact({ isOpen, onClose }) {
               type="time"
               name="time"
               placeholder={f("contact.time")}
+              onFocus={(e) => {
+                e.target.type = "time";
+                e.target.focus();
+              }}
               onChange={(e) => {
                 updateInputColor(e);
                 handleChange(e);
@@ -174,9 +193,7 @@ export default function Contact({ isOpen, onClose }) {
         )}
       </NetlifyForm>
 
-      <button className={styles.closeButton} onClick={onClose}>
-        <img src="/Tilted Square.svg" height="25" width="25" priority="true" />
-      </button>
+      {locale === "en-US" && closeButton}
     </Modal>
   );
 }

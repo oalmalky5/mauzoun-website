@@ -85,6 +85,7 @@
 
       &::placeholder {
         color: rgba(0, 0, 0, 1);
+        opacity: 1;
       }
     }
 
@@ -109,6 +110,7 @@
   background-color: transparent;
   height: 40px;
   border: none;
+  padding: 0;
   margin-top: -8px;
   font-size: 35px;
   cursor: pointer;
