@@ -132,13 +132,10 @@ export default function Contact({ isOpen, onClose }) {
 
             {/* Date */}
             <input
-              type="date"
+              type="text"
               name="date"
               placeholder={f("contact.date")}
               min={moment().format("YYYY-MM-DD")}
-              onFocus={(e) => {
-                e.target.type = "date";
-              }}
               onChange={(e) => {
                 updateInputColor(e);
                 handleChange(e);
@@ -150,13 +147,9 @@ export default function Contact({ isOpen, onClose }) {
 
             {/* Time */}
             <input
-              type="time"
+              type="text"
               name="time"
               placeholder={f("contact.time")}
-              onFocus={(e) => {
-                e.target.type = "time";
-                e.target.focus();
-              }}
               onChange={(e) => {
                 updateInputColor(e);
                 handleChange(e);
