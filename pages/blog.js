@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ComingSoon from "../components/ComingSoon";
+import ContactButton from "../components/ContactButton";
 
 const backgroundColor = "#f7f5f0";
 
@@ -36,6 +37,8 @@ export default function blog({ textAnimationControls }) {
 
         <ComingSoon />
       </motion.div>
+
+      <ContactButton />
     </div>
   );
 }

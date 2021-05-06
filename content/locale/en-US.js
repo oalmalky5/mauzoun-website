@@ -10,7 +10,7 @@ exports["en-US"] = {
     location: "Based in Jeddah, Saudi Arabia",
     comingSoon: "COMING SOON.",
     contactPrompt: "Interested in our services?",
-    "contactPrompt.hovered": "Book an online call now.",
+    "contactPrompt.hovered": "Book a Zoom call now.",
     "contact.fullName": "Your full name.",
     "contact.projectName": "Your brand or project name.",
     "contact.country": "Your country of residence.",
@@ -59,7 +59,7 @@ exports["en-US"] = {
       At Mauzoun, we look for writers with bulletproof Arabic and English who are creative and passionate about writing. To win us over, make sure that your application is free of mistakes, and complement it with a captivating cover letter that conveys why you love the work you do.
       <br /><br />
       We also seek managers who are able to lead our team in a manner that balances the humanistic with the professional: diligent, organized, precise and empathic are the traits we seek.`,
-    "joinCompetition.intro": "Join the Competition",
+    "joinCompetition.intro": "Apply to the Competition",
     "joinCompetition.content":
       "Our latest endeavor in creative writing will be investing our story development and publishing services in emerging and first-time writers from the Arab World, who are trying to publish their first book, novel, short story, collection of essays, play, and everything in between. The judging criteria will be made public, and after shortlisting the best writers for a pitch session, we will select one writer who will receive our creative writing and publishing services for free for one year.",
   },

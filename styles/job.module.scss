@@ -1,6 +1,7 @@
 @use "mixins" as *;
 
 .jobCover {
+  display: flex;
   position: absolute;
   bottom: 0;
 

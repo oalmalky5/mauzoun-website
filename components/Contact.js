@@ -133,6 +133,7 @@ export default function Contact({ isOpen, onClose }) {
               rows="2"
               placeholder={f("contact.subject")}
               onChange={handleChange}
+              style={{ resize: "none" }}
             />
 
             {/* Date */}
