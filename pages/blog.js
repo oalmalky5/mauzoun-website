@@ -38,7 +38,7 @@ export default function blog({ textAnimationControls }) {
         <ComingSoon />
       </div>
 
-      <ContactButton />
+      {/* <ContactButton /> */}
     </div>
   );
 }
