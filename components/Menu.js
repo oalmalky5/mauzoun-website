@@ -68,7 +68,7 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
 
     return (
       <object
-        data="/Tilted Square.svg"
+        data='/Tilted Square.svg'
         className={styles.tiltedSquare}
         style={{ filter }}
         hidden={hoveredLink !== linkName && `/${linkName}` !== router.pathname}
@@ -77,22 +77,18 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
   };
 
   return (
-    <motion.div
-      className={styles.sidenav}
-      style={{ backgroundColor }}
-      layout="position"
-    >
-      <motion.div layout>
-        <Link href="/">
+    <div className={styles.sidenav + " navbar"} style={{ backgroundColor }}>
+      <div className='animationFade'>
+        <Link href='/'>
           <motion.img
-            src="https://i.imgur.com/HjDbXtR.png"
-            alt="Mauzoun logo"
+            src='https://i.imgur.com/HjDbXtR.png'
+            alt='Mauzoun logo'
             className={styles.logo}
-            transition={logoTransition}
-            layoutId="logo"
+            // transition={logoTransition}
+            // layoutId="logo"
           />
         </Link>
-      </motion.div>
+      </div>
 
       <div className={styles.menu}>
         <div>
@@ -145,7 +141,7 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
             }}
           >
             <label className={styles.switch}>
-              <input type="checkbox" checked={locale === "ar"} readOnly />
+              <input type='checkbox' checked={locale === "ar"} readOnly />
               <span className={styles.slider} />
             </label>
           </a>
@@ -157,24 +153,24 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
 
         <div className={styles.complementaryInfo}>
           <div className={styles.bottomNavIcons}>
-            <a target="_blank" href="https://twitter.com/mauzoun_?lang=en">
-              <IoLogoTwitter size="30px" />
+            <a target='_blank' href='https://twitter.com/mauzoun_?lang=en'>
+              <IoLogoTwitter size='30px' />
             </a>
-            <a target="_blank" href="https://www.instagram.com/mauzoun/?hl=en">
-              <IoLogoInstagram size="30px" />
+            <a target='_blank' href='https://www.instagram.com/mauzoun/?hl=en'>
+              <IoLogoInstagram size='30px' />
             </a>
             <a
-              target="_blank"
-              href="https://www.linkedin.com/company/mauzoun/about/"
+              target='_blank'
+              href='https://www.linkedin.com/company/mauzoun/about/'
             >
-              <IoLogoLinkedin size="30px" />
+              <IoLogoLinkedin size='30px' />
             </a>
           </div>
 
-          <span className="en-US">{f("email")}</span>
-          <span className="bolder">{f("location")}</span>
+          <span className='en-US'>{f("email")}</span>
+          <span className='bolder'>{f("location")}</span>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

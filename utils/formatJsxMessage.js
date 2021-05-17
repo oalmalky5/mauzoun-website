@@ -25,11 +25,11 @@ const formatJsxMessage = (intl, locale, id, options) => {
   const variants = {
     slowVisible: {
       opacity: 1,
-      transition: { delay: 0.5, duration: 1.5, ease: "circIn" },
+      transition: { delay: 0, duration: 0, ease: "circIn" },
     },
-    visible: { opacity: 1, transition: { delay: 0, duration: 1 } },
+    visible: { opacity: 1, transition: { delay: 0, duration: 0 } },
     instantlyVisible: { opacity: 1, transition: { duration: 0 } },
-    hidden: { opacity: 0.05, transition: { delay: 0, duration: 0.4 } },
+    hidden: { opacity: 1, transition: { delay: 0, duration: 0 } },
   };
 
   let content = (
@@ -41,15 +41,15 @@ const formatJsxMessage = (intl, locale, id, options) => {
   );
 
   return (
-    <motion.p
-      animate={
-        options.shouldFade ? options.animationControls : "instantlyVisible"
-      }
-      variants={variants}
-      style={options.style}
+    <p
+    // animate={
+    //   options.shouldFade ? options.animationControls : "instantlyVisible"
+    // }
+    // variants={variants}
+    // style={options.style}
     >
       {content}
-    </motion.p>
+    </p>
   );
 };
 
