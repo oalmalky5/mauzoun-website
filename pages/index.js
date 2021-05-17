@@ -103,15 +103,13 @@ export default function LandingPage({
         <div />
 
         <div className={styles.mainPanel}>
-          <motion.img
-            className={styles.logo}
-            src="https://i.imgur.com/HjDbXtR.png"
-            alt="Mauzoun logo"
-            transition={{ duration: 2 }}
-            layoutId="logo"
+          <img
+            className={styles.logo + " logo"}
+            src='https://i.imgur.com/HjDbXtR.png'
+            alt='Mauzoun logo'
           />
 
-          <div dir="rtl">
+          <div dir='rtl'>
             <p style={{ fontFamily: "GE Dinar Two" }}>
               حب للكلمات وفريق شغوف:
               <br />
@@ -144,7 +142,7 @@ export default function LandingPage({
           <img
             className={styles.bottomKashida}
             src={`/landingPage/Kashida bottom.png`}
-            width="270px"
+            width='270px'
           />
         </div>
 
