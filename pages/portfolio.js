@@ -85,91 +85,126 @@ export default function portfolio({ textAnimationControls }) {
   const oppositeSide = locale === "ar" ? "left" : "right";
 
   return (
-    <div>
-      <Menu
-        backgroundColor={backgroundColor}
-        textAnimationControls={textAnimationControls}
-      />
-
+    <div
+      style={{
+        position: "fixed",
+        display: "flex",
+        alignItems: "stretch",
+        width: "100%",
+        height: "100%",
+        overflowX: "hidden",
+        // overflowY: "scroll",
+      }}
+    >
       <div
-        className='container'
-        style={{ backgroundColor }}
-        // layout="position"
+        className='test-portfolio'
+        style={{
+          backgroundColor: backgroundColor,
+          width: "72%",
+          height: "150vh",
+          position: "absolute",
+          zIndex: -1,
+        }}
+      ></div>
+      <div
+        className='bg-animation-portfolio'
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          zIndex: 10,
+        }}
       >
-        <h1>{f("title")}</h1>
+        <Menu
+          backgroundColor={backgroundColor}
+          textAnimationControls={textAnimationControls}
+        />
 
-        <h2>{f("subtitle")}</h2>
-
-        <span style={{ marginBottom: "50px" }}>{f("content")}</span>
-
-        {/* Content Writing */}
-        <h3 className={styles.clientCategory}>{f("contentWriting.title")}</h3>
-        {getClients("contentWriting")}
-
-        <hr className='big-margin' size={1} color='black' />
-
-        {/* Creative Writing */}
-        <h3 className={styles.clientCategory}>{f("creativeWriting.title")}</h3>
-        {getClients("creativeWriting")}
-
-        <WhiteBox
-          style={{ marginTop: "50px" }}
-          decoratorsPositions={whiteBoxDecoratorsPositions}
+        <div
+          className='container'
+          style={{ backgroundColor }}
+          // layout="position"
         >
-          {f("clients")}
+          <h1>{f("title")}</h1>
 
-          <div className={styles.carousel} style={{ direction: "initial" }}>
-            <Carousel
-              showStatus={false}
-              showIndicators={false}
-              showThumbs={false}
-              renderArrowPrev={(clickHandler, hasPrev) =>
-                hasPrev && (
-                  <div
-                    className={styles.arrowContainer}
-                    style={{ [preferredSide]: 0 }}
-                    onClick={clickHandler}
-                  >
+          <h2>{f("subtitle")}</h2>
+
+          <span style={{ marginBottom: "50px" }}>{f("content")}</span>
+
+          {/* Content Writing */}
+          <h3 className={styles.clientCategory}>{f("contentWriting.title")}</h3>
+          {getClients("contentWriting")}
+
+          <hr className='big-margin' size={1} color='black' />
+
+          {/* Creative Writing */}
+          <h3 className={styles.clientCategory}>
+            {f("creativeWriting.title")}
+          </h3>
+          {getClients("creativeWriting")}
+
+          <WhiteBox
+            style={{ marginTop: "50px" }}
+            decoratorsPositions={whiteBoxDecoratorsPositions}
+          >
+            {f("clients")}
+
+            <div className={styles.carousel} style={{ direction: "initial" }}>
+              <Carousel
+                showStatus={false}
+                showIndicators={false}
+                showThumbs={false}
+                renderArrowPrev={(clickHandler, hasPrev) =>
+                  hasPrev && (
                     <div
-                      className={styles.arrow}
+                      className={styles.arrowContainer}
                       style={{ [preferredSide]: 0 }}
+                      onClick={clickHandler}
                     >
-                      {locale === "en-US" ? (
-                        <BsChevronLeft className={styles.chevron} />
-                      ) : (
-                        <BsChevronRight className={styles.chevron} />
-                      )}
+                      <div
+                        className={styles.arrow}
+                        style={{ [preferredSide]: 0 }}
+                      >
+                        {locale === "en-US" ? (
+                          <BsChevronLeft className={styles.chevron} />
+                        ) : (
+                          <BsChevronRight className={styles.chevron} />
+                        )}
+                      </div>
                     </div>
-                  </div>
-                )
-              }
-              renderArrowNext={(clickHandler, hasNext) =>
-                hasNext && (
-                  <div
-                    className={styles.arrowContainer}
-                    style={{ [oppositeSide]: 0 }}
-                    onClick={clickHandler}
-                  >
-                    <div className={styles.arrow} style={{ [oppositeSide]: 0 }}>
-                      {locale === "en-US" ? (
-                        <BsChevronRight className={styles.chevron} />
-                      ) : (
-                        <BsChevronLeft className={styles.chevron} />
-                      )}
+                  )
+                }
+                renderArrowNext={(clickHandler, hasNext) =>
+                  hasNext && (
+                    <div
+                      className={styles.arrowContainer}
+                      style={{ [oppositeSide]: 0 }}
+                      onClick={clickHandler}
+                    >
+                      <div
+                        className={styles.arrow}
+                        style={{ [oppositeSide]: 0 }}
+                      >
+                        {locale === "en-US" ? (
+                          <BsChevronRight className={styles.chevron} />
+                        ) : (
+                          <BsChevronLeft className={styles.chevron} />
+                        )}
+                      </div>
                     </div>
-                  </div>
-                )
-              }
-            >
-              {clientLogos.map((e) => (
-                <img src={e} priority='true' />
-              ))}
-            </Carousel>
-          </div>
-        </WhiteBox>
-      </div>
+                  )
+                }
+              >
+                {clientLogos.map((e) => (
+                  <img src={e} priority='true' />
+                ))}
+              </Carousel>
+            </div>
+          </WhiteBox>
+        </div>
 
-      {/* <ContactButton /> */}
+        {/* <ContactButton /> */}
+      </div>
     </div>
   );
 }

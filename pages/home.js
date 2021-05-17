@@ -30,116 +30,145 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
   React.useEffect(() => updatePageTransition("default"), []);
 
   return (
-    <>
-      <Menu
-        backgroundColor={backgroundColor}
-        textAnimationControls={textAnimationControls}
-      />
-
-      <div className='container' style={{ backgroundColor }}>
-        <h1>{f("title")}</h1>
-
-        {f("summary")}
-
-        <img
-          width='800px'
-          height='400px'
-          layout='fixed'
-          priority='true'
-          src='http://writingandwellness.com/wp-content/uploads/2015/02/Home-Office-2.jpg'
-          alt='an image of an office'
+    <div
+      style={{
+        position: "fixed",
+        display: "flex",
+        alignItems: "stretch",
+        width: "100%",
+        height: "100%",
+        overflowX: "hidden",
+        // overflowY: "scroll",
+      }}
+    >
+      <div
+        className='test-home'
+        style={{
+          backgroundColor: backgroundColor,
+          width: "72%",
+          height: "150vh",
+          position: "absolute",
+          zIndex: -1,
+        }}
+      ></div>
+      <div
+        className='bg-animation-home'
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          zIndex: 10,
+        }}
+      >
+        <Menu
+          backgroundColor={backgroundColor}
+          textAnimationControls={textAnimationControls}
         />
 
-        <Link href='/story'>
-          <h5 className='mb-0'>
-            <u>{f("story.intro")}</u>
-          </h5>
-        </Link>
-        <span className='mt-0'>{f("story.content")}</span>
+        <div className='container' style={{ backgroundColor }}>
+          <h1>{f("title")}</h1>
 
-        {/* Services */}
-        {!areServicesVisible ? (
-          <div
-            className='content-wrapper'
-            onClick={() => setAreServicesVisible(true)}
-          >
-            <h5>{f("services.intro")}</h5>
-            <span className='reveal-icon'>
-              <BsChevronDown className='reveal-icon' />
-            </span>
-          </div>
-        ) : (
-          <div className='inline unwrapped-content'>
-            <hr />
-            <Link href='/services'>
-              <h5 style={{ cursor: "pointer" }}>{f("services.intro")}</h5>
-            </Link>
-            {f("services.content")}
-            <hr />
-          </div>
-        )}
+          {f("summary")}
 
-        {/* Approach */}
-        {!isApproachVisible ? (
-          <div
-            className='content-wrapper'
-            onClick={() => setIsApproachVisible(true)}
-          >
-            <h5>{f("approach.intro")}</h5>
-            <span className='reveal-icon'>
-              <BsChevronDown className='reveal-icon' />
-            </span>
-          </div>
-        ) : (
-          <div className='inline unwrapped-content'>
-            {!areServicesVisible && <hr />}
-            <h5>{f("approach.intro")}</h5>
-            {f("approach.content")}
-            <hr />
-          </div>
-        )}
+          <img
+            width='800px'
+            height='400px'
+            layout='fixed'
+            priority='true'
+            src='http://writingandwellness.com/wp-content/uploads/2015/02/Home-Office-2.jpg'
+            alt='an image of an office'
+          />
 
-        {/* Projects */}
-        {!areProjectsVisible ? (
-          <div
-            className='content-wrapper'
-            onClick={() => setAreProjectsVisible(true)}
-          >
-            <h5>{f("projects.intro")}</h5>
-            <span className='reveal-icon'>
-              <BsChevronDown className='reveal-icon' />
-            </span>
-          </div>
-        ) : (
-          <div className='inline unwrapped-content'>
-            {!isApproachVisible && <hr />}
-            <h5>{f("projects.intro")}</h5>
-            {f("projects.content")}
-            <hr />
-          </div>
-        )}
+          <Link href='/story'>
+            <h5 className='mb-0'>
+              <u>{f("story.intro")}</u>
+            </h5>
+          </Link>
+          <span className='mt-0'>{f("story.content")}</span>
 
-        {/* Work */}
-        {!isWorkVisible ? (
-          <div
-            className='content-wrapper'
-            onClick={() => setIsWorkVisible(true)}
-          >
-            <h5>{f("work.intro")}</h5>
-            <span className='reveal-icon'>
-              <BsChevronDown className='reveal-icon' />
-            </span>
-          </div>
-        ) : (
-          <div className='inline unwrapped-content'>
-            {!areProjectsVisible && <hr />}
-            <h5>{f("work.intro")}</h5>
-            {f("work.content")}
-          </div>
-        )}
+          {/* Services */}
+          {!areServicesVisible ? (
+            <div
+              className='content-wrapper'
+              onClick={() => setAreServicesVisible(true)}
+            >
+              <h5>{f("services.intro")}</h5>
+              <span className='reveal-icon'>
+                <BsChevronDown className='reveal-icon' />
+              </span>
+            </div>
+          ) : (
+            <div className='inline unwrapped-content'>
+              <hr />
+              <Link href='/services'>
+                <h5 style={{ cursor: "pointer" }}>{f("services.intro")}</h5>
+              </Link>
+              {f("services.content")}
+              <hr />
+            </div>
+          )}
+
+          {/* Approach */}
+          {!isApproachVisible ? (
+            <div
+              className='content-wrapper'
+              onClick={() => setIsApproachVisible(true)}
+            >
+              <h5>{f("approach.intro")}</h5>
+              <span className='reveal-icon'>
+                <BsChevronDown className='reveal-icon' />
+              </span>
+            </div>
+          ) : (
+            <div className='inline unwrapped-content'>
+              {!areServicesVisible && <hr />}
+              <h5>{f("approach.intro")}</h5>
+              {f("approach.content")}
+              <hr />
+            </div>
+          )}
+
+          {/* Projects */}
+          {!areProjectsVisible ? (
+            <div
+              className='content-wrapper'
+              onClick={() => setAreProjectsVisible(true)}
+            >
+              <h5>{f("projects.intro")}</h5>
+              <span className='reveal-icon'>
+                <BsChevronDown className='reveal-icon' />
+              </span>
+            </div>
+          ) : (
+            <div className='inline unwrapped-content'>
+              {!isApproachVisible && <hr />}
+              <h5>{f("projects.intro")}</h5>
+              {f("projects.content")}
+              <hr />
+            </div>
+          )}
+
+          {/* Work */}
+          {!isWorkVisible ? (
+            <div
+              className='content-wrapper'
+              onClick={() => setIsWorkVisible(true)}
+            >
+              <h5>{f("work.intro")}</h5>
+              <span className='reveal-icon'>
+                <BsChevronDown className='reveal-icon' />
+              </span>
+            </div>
+          ) : (
+            <div className='inline unwrapped-content'>
+              {!areProjectsVisible && <hr />}
+              <h5>{f("work.intro")}</h5>
+              {f("work.content")}
+            </div>
+          )}
+        </div>
+        {/* <ContactButton /> */}
       </div>
-
-      {/* <ContactButton /> */}
-    </>
+    </div>
   );
 }

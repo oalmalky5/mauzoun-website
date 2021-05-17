@@ -2,6 +2,7 @@ import React from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { gsap } from "gsap";
 
 import styles from "../styles/landingPage.module.scss";
 
@@ -94,58 +95,124 @@ export default function LandingPage({
     );
   };
 
+  const handleMovePage = React.useCallback((click) => {
+    gsap.fromTo(
+      ".background",
+      { opacity: 1 },
+      { opacity: 1, x: click === 2 ? -165 : 155, duration: 0.8 }
+    );
+    gsap.to(".background", {
+      duration: 0.8,
+      left: click === 2 ? "-25%" : "25%",
+      width: "100%",
+      justifyContent: "flex-start",
+      paddingLeft: "33%",
+      textAlign: "left",
+    });
+
+    gsap.to(".main", {
+      duration: 0.8,
+      left: click === 2 ? "100%" : "-100%",
+      opacity: 0,
+    });
+    gsap.fromTo(
+      ".transition_dot",
+      { opacity: 1 },
+      { opacity: 0, x: click === 2 ? 1200 : -1200, duration: 0.8 }
+    );
+    gsap.to(".logo", {
+      xPercent: click === 2 ? -208 : -78,
+      yPercent: -5,
+      duration: 0.8,
+    });
+    setTimeout(() => {
+      if (click === 1) {
+        changeLocale("ar");
+      } else if (click === 2) {
+        changeLocale("en-US");
+      }
+    }, 700);
+  }, []);
+
   return (
     <>
       <div className={styles.pageContainer}>
         {/* Kashidas organized from top left to bottom right */}
-        {kashidas.map((e, i) => buildKashida(i + 1, e))}
+        <div
+          className={"transition_dot"}
+          style={{
+            position: "relative",
+            display: "flex",
+            alignItems: "stretch",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          {kashidas.map((e, i) => buildKashida(i + 1, e))}
+        </div>
 
         <div />
 
-        <div className={styles.mainPanel}>
+        <div className={styles.mainPanel + " background"}>
           <img
             className={styles.logo + " logo"}
             src='https://i.imgur.com/HjDbXtR.png'
             alt='Mauzoun logo'
           />
+          <div
+            className='main'
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              position: "absolute",
+              height: "calc(100vh - 150px)",
+              bottom: 0,
+              justifyContent: "center",
+            }}
+          >
+            <div dir='rtl'>
+              <p style={{ fontFamily: "GE Dinar Two" }}>
+                حب للكلمات وفريق شغوف:
+                <br />
+                <b>أهلاً بكم في موزون.</b>
+              </p>
+              <button
+                className={styles.languageButton}
+                style={{ fontFamily: "GE Dinar One", marginBottom: "30px" }}
+                onClick={() => {
+                  handleMovePage(1);
+                }}
+              >
+                <b>اضغطوا هنا</b> لبدء قصتكم بالعربية.
+              </button>
+            </div>
 
-          <div dir='rtl'>
-            <p style={{ fontFamily: "GE Dinar Two" }}>
-              حب للكلمات وفريق شغوف:
+            <p style={{ fontFamily: "Alegreya" }}>
+              ‫‪A‬‬ ‫‪love‬‬ ‫‪for‬‬ ‫‪words‬‬ ‫‪and‬‬ ‫‪a‬‬ ‫‪team‬‬ ‫‪with‬‬
+              ‫‪fervor:‬‬
               <br />
-              <b>أهلاً بكم في موزون.</b>
+              <b>‫‪welcome‬‬ ‫‪to‬‬ ‫‪Mauzoun.‬‬</b>
             </p>
             <button
               className={styles.languageButton}
-              style={{ fontFamily: "GE Dinar One", marginBottom: "30px" }}
-              onClick={() => changeLocale("ar")}
+              style={{ fontFamily: "Alegreya Sans" }}
+              onClick={() => {
+                handleMovePage(2);
+              }}
             >
-              <b>اضغطوا هنا</b> لبدء قصتكم بالعربية.
+              <b>‫‪Click‬‬ ‫‪here</b>‬‬ ‫‪to‬‬ ‫‪begin‬‬ ‫‪your‬‬ ‫‪story‬‬
+              ‫‪in‬‬ ‫‪English.‬‬
             </button>
+
+            <img
+              className={styles.bottomKashida}
+              src={`/landingPage/Kashida bottom.png`}
+              width='270px'
+            />
           </div>
-
-          <p style={{ fontFamily: "Alegreya" }}>
-            ‫‪A‬‬ ‫‪love‬‬ ‫‪for‬‬ ‫‪words‬‬ ‫‪and‬‬ ‫‪a‬‬ ‫‪team‬‬ ‫‪with‬‬
-            ‫‪fervor:‬‬
-            <br />
-            <b>‫‪welcome‬‬ ‫‪to‬‬ ‫‪Mauzoun.‬‬</b>
-          </p>
-          <button
-            className={styles.languageButton}
-            style={{ fontFamily: "Alegreya Sans" }}
-            onClick={() => changeLocale("en-US")}
-          >
-            <b>‫‪Click‬‬ ‫‪here</b>‬‬ ‫‪to‬‬ ‫‪begin‬‬ ‫‪your‬‬ ‫‪story‬‬ ‫‪in‬‬
-            ‫‪English.‬‬
-          </button>
-
-          <img
-            className={styles.bottomKashida}
-            src={`/landingPage/Kashida bottom.png`}
-            width='270px'
-          />
         </div>
-
         <div />
       </div>
     </>

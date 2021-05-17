@@ -22,23 +22,53 @@ export default function blog({ textAnimationControls }) {
     });
 
   return (
-    <div>
-      <Menu
-        backgroundColor={backgroundColor}
-        textAnimationControls={textAnimationControls}
-      />
-
+    <div
+      style={{
+        position: "fixed",
+        display: "flex",
+        alignItems: "stretch",
+        width: "100%",
+        height: "100%",
+        overflowX: "hidden",
+        // overflowY: "scroll",
+      }}
+    >
       <div
-        className='container'
-        style={{ backgroundColor }}
-        // layout="position"
+        className='test-blog'
+        style={{
+          backgroundColor: backgroundColor,
+          width: "72%",
+          height: "150vh",
+          position: "absolute",
+          zIndex: -1,
+        }}
+      ></div>
+      <div
+        className='bg-animation-blog'
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          zIndex: 10,
+        }}
       >
-        <h1>{f("title")}</h1>
+        <Menu
+          backgroundColor={backgroundColor}
+          textAnimationControls={textAnimationControls}
+        />
 
-        <ComingSoon />
+        <div
+          className='container'
+          style={{ backgroundColor }}
+          // layout="position"
+        >
+          <h1>{f("title")}</h1>
+
+          <ComingSoon />
+        </div>
+
+        {/* <ContactButton /> */}
       </div>
-
-      {/* <ContactButton /> */}
     </div>
   );
 }
