@@ -48,15 +48,14 @@ export default function services({ textAnimationControls }) {
 
   const [isApproachVisible, setIsApproachVisible] = useState(false);
   const [isContentWritingVisible, setIsContentWritingVisible] = useState(false);
-  const [isCreativeWritingVisible, setIsCreativeWritingVisible] = useState(
-    false
-  );
+  const [isCreativeWritingVisible, setIsCreativeWritingVisible] =
+    useState(false);
 
   const bullet = (
     <div className={styles.bullet}>
-      <object data="/Tilted Square.svg" className={styles.tiltedSquare} />
-      <svg width="40" height="20" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 10 L40 10" stroke="black" stroke-width="2" />
+      <object data='/Tilted Square.svg' className={styles.tiltedSquare} />
+      <svg width='40' height='20' xmlns='http://www.w3.org/2000/svg'>
+        <path d='M0 10 L40 10' stroke='black' stroke-width='2' />
       </svg>
     </div>
   );
@@ -68,22 +67,22 @@ export default function services({ textAnimationControls }) {
         textAnimationControls={textAnimationControls}
       />
 
-      <motion.div
-        className="container"
+      <div
+        className='container'
         style={{ backgroundColor }}
-        layout="position"
+        // layout="position"
       >
-        <h1 className="mb-0">{f("title")}</h1>
+        <h1 className='mb-0'>{f("title")}</h1>
 
         {/* Approach */}
-        <div className="mt-0 unwrapped-content">
+        <div className='mt-0 unwrapped-content'>
           <div
-            className="content-wrapper"
+            className='content-wrapper'
             onClick={() => setIsApproachVisible(!isApproachVisible)}
           >
             <h2>{f("approach.title")}</h2>
-            <span className="reveal-icon">
-              <BsChevronDown className="reveal-icon" />
+            <span className='reveal-icon'>
+              <BsChevronDown className='reveal-icon' />
             </span>
           </div>
 
@@ -102,7 +101,7 @@ export default function services({ textAnimationControls }) {
                 "approach.adaptTimeline",
                 "approach.finished",
               ].map((e) => (
-                <div className="content-block" key={e}>
+                <div className='content-block' key={e}>
                   <b>{f(`${e}.header`)}</b>
                   {intl.formatMessage({ id: `${e}.content` }) !==
                     `${e}.content` && f(`${e}.content`)}
@@ -113,15 +112,15 @@ export default function services({ textAnimationControls }) {
         </div>
 
         {/* Content Writing */}
-        <div className="mt-0 unwrapped-content">
+        <div className='mt-0 unwrapped-content'>
           <div
-            className="content-wrapper"
+            className='content-wrapper'
             onClick={() => setIsContentWritingVisible(!isContentWritingVisible)}
             style={isContentWritingVisible ? { marginBottom: "30px" } : {}}
           >
             <h2>{f("contentWriting.title")}</h2>
-            <span className="reveal-icon">
-              <BsChevronDown className="reveal-icon" />
+            <span className='reveal-icon'>
+              <BsChevronDown className='reveal-icon' />
             </span>
           </div>
 
@@ -151,17 +150,17 @@ export default function services({ textAnimationControls }) {
         </div>
 
         {/* Creative Writing */}
-        <div className="mt-0 unwrapped-content">
+        <div className='mt-0 unwrapped-content'>
           <div
-            className="content-wrapper"
+            className='content-wrapper'
             onClick={() =>
               setIsCreativeWritingVisible(!isCreativeWritingVisible)
             }
             style={isCreativeWritingVisible ? { marginBottom: "30px" } : {}}
           >
             <h2>{f("creativeWriting.title")}</h2>
-            <span className="reveal-icon">
-              <BsChevronDown className="reveal-icon" />
+            <span className='reveal-icon'>
+              <BsChevronDown className='reveal-icon' />
             </span>
           </div>
 
@@ -192,17 +191,17 @@ export default function services({ textAnimationControls }) {
 
         <div className={styles.servicesCover}>
           <img
-            src="/Services.png"
-            height="437px"
-            width="400px"
-            layout="fixed"
-            priority="true"
+            src='/Services.png'
+            height='437px'
+            width='400px'
+            layout='fixed'
+            priority='true'
             style={router.locale === "ar" ? { transform: "scaleX(-1)" } : {}}
           />
         </div>
-      </motion.div>
+      </div>
 
-      <ContactButton />
+      {/* <ContactButton /> */}
     </div>
   );
 }

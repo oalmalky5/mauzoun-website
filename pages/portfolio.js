@@ -91,10 +91,10 @@ export default function portfolio({ textAnimationControls }) {
         textAnimationControls={textAnimationControls}
       />
 
-      <motion.div
-        className="container"
+      <div
+        className='container'
         style={{ backgroundColor }}
-        layout="position"
+        // layout="position"
       >
         <h1>{f("title")}</h1>
 
@@ -106,7 +106,7 @@ export default function portfolio({ textAnimationControls }) {
         <h3 className={styles.clientCategory}>{f("contentWriting.title")}</h3>
         {getClients("contentWriting")}
 
-        <hr className="big-margin" size={1} color="black" />
+        <hr className='big-margin' size={1} color='black' />
 
         {/* Creative Writing */}
         <h3 className={styles.clientCategory}>{f("creativeWriting.title")}</h3>
@@ -162,14 +162,14 @@ export default function portfolio({ textAnimationControls }) {
               }
             >
               {clientLogos.map((e) => (
-                <img src={e} priority="true" />
+                <img src={e} priority='true' />
               ))}
             </Carousel>
           </div>
         </WhiteBox>
-      </motion.div>
+      </div>
 
-      <ContactButton />
+      {/* <ContactButton /> */}
     </div>
   );
 }

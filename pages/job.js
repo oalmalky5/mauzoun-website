@@ -25,9 +25,8 @@ export default function job({ textAnimationControls }) {
 
   const [isBecomeClientVisible, setIsBecomeClientVisible] = useState(false);
   const [isJoinTeamVisible, setIsJoinTeamVisible] = useState(false);
-  const [isJoinCompetitionVisible, setIsJoinCompetitionVisible] = useState(
-    false
-  );
+  const [isJoinCompetitionVisible, setIsJoinCompetitionVisible] =
+    useState(false);
 
   return (
     <div>
@@ -36,23 +35,23 @@ export default function job({ textAnimationControls }) {
         textAnimationControls={textAnimationControls}
       />
 
-      <motion.div
-        className="container"
+      <div
+        className='container'
         style={{ backgroundColor }}
-        layout="position"
+        // layout="position"
       >
-        <h1 className="mb-0">{f("title")}</h1>
+        <h1 className='mb-0'>{f("title")}</h1>
 
         {/* Become our client */}
-        <div className="mt-0 unwrapped-content">
+        <div className='mt-0 unwrapped-content'>
           <div
-            className="content-wrapper"
+            className='content-wrapper'
             onClick={() => setIsBecomeClientVisible(!isBecomeClientVisible)}
             style={isBecomeClientVisible ? { marginBottom: "20px" } : {}}
           >
             <h2>{f("becomeClient.intro")}</h2>
-            <span className="reveal-icon">
-              <BsChevronDown className="reveal-icon" />
+            <span className='reveal-icon'>
+              <BsChevronDown className='reveal-icon' />
             </span>
           </div>
 
@@ -65,15 +64,15 @@ export default function job({ textAnimationControls }) {
         </div>
 
         {/* Join the team */}
-        <div className="mt-0 unwrapped-content">
+        <div className='mt-0 unwrapped-content'>
           <div
-            className="content-wrapper"
+            className='content-wrapper'
             onClick={() => setIsJoinTeamVisible(!isJoinTeamVisible)}
             style={isJoinTeamVisible ? { marginBottom: "20px" } : {}}
           >
             <h2>{f("joinTeam.intro")}</h2>
-            <span className="reveal-icon">
-              <BsChevronDown className="reveal-icon" />
+            <span className='reveal-icon'>
+              <BsChevronDown className='reveal-icon' />
             </span>
           </div>
 
@@ -86,17 +85,17 @@ export default function job({ textAnimationControls }) {
         </div>
 
         {/* Join the competition */}
-        <div className="mt-0 unwrapped-content">
+        <div className='mt-0 unwrapped-content'>
           <div
-            className="content-wrapper"
+            className='content-wrapper'
             onClick={() =>
               setIsJoinCompetitionVisible(!isJoinCompetitionVisible)
             }
             style={isJoinCompetitionVisible ? { marginBottom: "40px" } : {}}
           >
             <h2>{f("joinCompetition.intro")}</h2>
-            <span className="reveal-icon">
-              <BsChevronDown className="reveal-icon" />
+            <span className='reveal-icon'>
+              <BsChevronDown className='reveal-icon' />
             </span>
           </div>
 
@@ -112,17 +111,17 @@ export default function job({ textAnimationControls }) {
 
         <div className={styles.jobCover}>
           <img
-            src="/Mauzoun & You.png"
-            height="376px"
-            width="750px"
-            layout="fixed"
-            priority="true"
+            src='/Mauzoun & You.png'
+            height='376px'
+            width='750px'
+            layout='fixed'
+            priority='true'
           />
         </div>
         <div style={{ height: "350px" }} />
-      </motion.div>
+      </div>
 
-      <ContactButton />
+      {/* <ContactButton /> */}
     </div>
   );
 }

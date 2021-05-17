@@ -28,15 +28,15 @@ export default function blog({ textAnimationControls }) {
         textAnimationControls={textAnimationControls}
       />
 
-      <motion.div
-        className="container"
+      <div
+        className='container'
         style={{ backgroundColor }}
-        layout="position"
+        // layout="position"
       >
         <h1>{f("title")}</h1>
 
         <ComingSoon />
-      </motion.div>
+      </div>
 
       <ContactButton />
     </div>

@@ -118,7 +118,7 @@ const Story = function ({ textAnimationControls }) {
             onMouseLeave={(e) => updateTeamMembersHoverState(e, false)}
           />
           {i <= numberOfMembers && (
-            <div className="mt-0 mb-0 heading">
+            <div className='mt-0 mb-0 heading'>
               <b>{f(`teamMember.${i}.name`)}</b>
               {f(`teamMember.${i}.role`)}
             </div>
@@ -137,18 +137,18 @@ const Story = function ({ textAnimationControls }) {
         textAnimationControls={textAnimationControls}
       />
 
-      <motion.div
-        className="container"
+      <div
+        className='container'
         style={{ backgroundColor }}
-        layout="position"
+        // layout="position"
       >
         <div className={styles.storyCover}>
           <img
-            src="/Story.png"
-            height="341px"
-            width="900px"
-            layout="fixed"
-            priority="true"
+            src='/Story.png'
+            height='341px'
+            width='900px'
+            layout='fixed'
+            priority='true'
           />
         </div>
         <h1>{f("nameMeaning")}</h1>
@@ -168,9 +168,9 @@ const Story = function ({ textAnimationControls }) {
         </WhiteBox>
 
         {f("workAspects")}
-      </motion.div>
+      </div>
 
-      <ContactButton />
+      {/* <ContactButton /> */}
     </div>
   );
 };
