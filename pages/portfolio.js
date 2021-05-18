@@ -203,7 +203,7 @@ export default function portfolio({ textAnimationControls }) {
           </WhiteBox>
         </div>
 
-        {/* <ContactButton /> */}
+        <ContactButton />
       </div>
     </div>
   );

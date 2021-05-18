@@ -150,7 +150,7 @@ export default function job({ textAnimationControls }) {
           <div style={{ height: "350px" }} />
         </div>
 
-        {/* <ContactButton /> */}
+        <ContactButton />
       </div>
     </div>
   );

@@ -199,7 +199,7 @@ const Story = function ({ textAnimationControls }) {
           {f("workAspects")}
         </div>
 
-        {/* <ContactButton /> */}
+        <ContactButton />
       </div>
     </div>
   );

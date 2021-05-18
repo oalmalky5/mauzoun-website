@@ -28,12 +28,12 @@ export default function ContactButton({
             className={styles.contactButton + " heading"}
             onClick={() => {
               setIsHovered(false);
-              setIsContactFormVisible(true);
+              // setIsContactFormVisible(true);
             }}
             style={{ backgroundColor: isHovered ? "#f8d952" : "#ffffff" }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            layout="position"
+            layout='position'
           >
             {isHovered ? f(messageId + ".hovered") : f(messageId)}
           </motion.button>

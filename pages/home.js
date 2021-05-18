@@ -167,7 +167,7 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
             </div>
           )}
         </div>
-        {/* <ContactButton /> */}
+        <ContactButton />
       </div>
     </div>
   );

@@ -232,7 +232,7 @@ export default function services({ textAnimationControls }) {
           </div>
         </div>
 
-        {/* <ContactButton /> */}
+        <ContactButton />
       </div>
     </div>
   );
