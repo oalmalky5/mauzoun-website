@@ -61,147 +61,179 @@ export default function services({ textAnimationControls }) {
   );
 
   return (
-    <div>
-      <Menu
-        backgroundColor={backgroundColor}
-        textAnimationControls={textAnimationControls}
-      />
-
+    <div
+      style={{
+        position: "fixed",
+        display: "flex",
+        alignItems: "stretch",
+        width: "100%",
+        height: "100%",
+        overflowX: "hidden",
+        // overflowY: "scroll",
+      }}
+    >
       <div
-        className='container'
-        style={{ backgroundColor }}
-        // layout="position"
+        className='test-services'
+        style={{
+          backgroundColor: backgroundColor,
+          width: "72%",
+          height: "150vh",
+          position: "absolute",
+          zIndex: -1,
+        }}
+      ></div>
+      <div
+        className='bg-animation-services'
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          zIndex: 10,
+        }}
       >
-        <h1 className='mb-0'>{f("title")}</h1>
+        <Menu
+          backgroundColor={backgroundColor}
+          textAnimationControls={textAnimationControls}
+        />
 
-        {/* Approach */}
-        <div className='mt-0 unwrapped-content'>
-          <div
-            className='content-wrapper'
-            onClick={() => setIsApproachVisible(!isApproachVisible)}
-          >
-            <h2>{f("approach.title")}</h2>
-            <span className='reveal-icon'>
-              <BsChevronDown className='reveal-icon' />
-            </span>
-          </div>
+        <div
+          className='container'
+          style={{ backgroundColor }}
+          // layout="position"
+        >
+          <h1 className='mb-0'>{f("title")}</h1>
 
-          {isApproachVisible && (
-            <div>
-              <h3>{f("approach.header")}</h3>
-              {[
-                "approach.contact",
-                "approach.briefForm",
-                "approach.quotation",
-                "approach.timeline",
-                "approach.research",
-                "approach.writing",
-                "approach.delivery",
-                "approach.feedback",
-                "approach.adaptTimeline",
-                "approach.finished",
-              ].map((e) => (
-                <div className='content-block' key={e}>
-                  <b>{f(`${e}.header`)}</b>
-                  {intl.formatMessage({ id: `${e}.content` }) !==
-                    `${e}.content` && f(`${e}.content`)}
-                </div>
-              ))}
+          {/* Approach */}
+          <div className='mt-0 unwrapped-content'>
+            <div
+              className='content-wrapper'
+              onClick={() => setIsApproachVisible(!isApproachVisible)}
+            >
+              <h2>{f("approach.title")}</h2>
+              <span className='reveal-icon'>
+                <BsChevronDown className='reveal-icon' />
+              </span>
             </div>
-          )}
-        </div>
 
-        {/* Content Writing */}
-        <div className='mt-0 unwrapped-content'>
-          <div
-            className='content-wrapper'
-            onClick={() => setIsContentWritingVisible(!isContentWritingVisible)}
-            style={isContentWritingVisible ? { marginBottom: "30px" } : {}}
-          >
-            <h2>{f("contentWriting.title")}</h2>
-            <span className='reveal-icon'>
-              <BsChevronDown className='reveal-icon' />
-            </span>
-          </div>
-
-          {isContentWritingVisible && (
-            <>
-              {f("contentWriting.content")}
-
-              <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                {f("contentWriting.services.header")}
-                <br />
+            {isApproachVisible && (
+              <div>
+                <h3>{f("approach.header")}</h3>
                 {[
-                  "contentWriting.services.naming",
-                  "contentWriting.services.manifesto",
-                  "contentWriting.services.slogans",
-                  "contentWriting.services.profile",
-                  "contentWriting.services.website",
-                  "contentWriting.services.socialMedia",
+                  "approach.contact",
+                  "approach.briefForm",
+                  "approach.quotation",
+                  "approach.timeline",
+                  "approach.research",
+                  "approach.writing",
+                  "approach.delivery",
+                  "approach.feedback",
+                  "approach.adaptTimeline",
+                  "approach.finished",
                 ].map((e) => (
-                  <div className={styles.service} key={e}>
-                    {bullet}
-                    {f(e)}
+                  <div className='content-block' key={e}>
+                    <b>{f(`${e}.header`)}</b>
+                    {intl.formatMessage({ id: `${e}.content` }) !==
+                      `${e}.content` && f(`${e}.content`)}
                   </div>
                 ))}
-              </WhiteBox>
-            </>
-          )}
-        </div>
-
-        {/* Creative Writing */}
-        <div className='mt-0 unwrapped-content'>
-          <div
-            className='content-wrapper'
-            onClick={() =>
-              setIsCreativeWritingVisible(!isCreativeWritingVisible)
-            }
-            style={isCreativeWritingVisible ? { marginBottom: "30px" } : {}}
-          >
-            <h2>{f("creativeWriting.title")}</h2>
-            <span className='reveal-icon'>
-              <BsChevronDown className='reveal-icon' />
-            </span>
+              </div>
+            )}
           </div>
 
-          {isCreativeWritingVisible && (
-            <>
-              {f("creativeWriting.content")}
+          {/* Content Writing */}
+          <div className='mt-0 unwrapped-content'>
+            <div
+              className='content-wrapper'
+              onClick={() =>
+                setIsContentWritingVisible(!isContentWritingVisible)
+              }
+              style={isContentWritingVisible ? { marginBottom: "30px" } : {}}
+            >
+              <h2>{f("contentWriting.title")}</h2>
+              <span className='reveal-icon'>
+                <BsChevronDown className='reveal-icon' />
+              </span>
+            </div>
 
-              <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                {f("creativeWriting.services.header")}
-                <br />
-                {[
-                  "creativeWriting.services.storyDoctoring",
-                  "creativeWriting.services.scriptwriting",
-                  "creativeWriting.services.bookEditing",
-                  "creativeWriting.services.bookTranslation",
-                ].map((e) => (
-                  <div className={styles.service} key={e}>
-                    {bullet}
-                    {f(e)}
-                  </div>
-                ))}
-              </WhiteBox>
-            </>
-          )}
+            {isContentWritingVisible && (
+              <>
+                {f("contentWriting.content")}
+
+                <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
+                  {f("contentWriting.services.header")}
+                  <br />
+                  {[
+                    "contentWriting.services.naming",
+                    "contentWriting.services.manifesto",
+                    "contentWriting.services.slogans",
+                    "contentWriting.services.profile",
+                    "contentWriting.services.website",
+                    "contentWriting.services.socialMedia",
+                  ].map((e) => (
+                    <div className={styles.service} key={e}>
+                      {bullet}
+                      {f(e)}
+                    </div>
+                  ))}
+                </WhiteBox>
+              </>
+            )}
+          </div>
+
+          {/* Creative Writing */}
+          <div className='mt-0 unwrapped-content'>
+            <div
+              className='content-wrapper'
+              onClick={() =>
+                setIsCreativeWritingVisible(!isCreativeWritingVisible)
+              }
+              style={isCreativeWritingVisible ? { marginBottom: "30px" } : {}}
+            >
+              <h2>{f("creativeWriting.title")}</h2>
+              <span className='reveal-icon'>
+                <BsChevronDown className='reveal-icon' />
+              </span>
+            </div>
+
+            {isCreativeWritingVisible && (
+              <>
+                {f("creativeWriting.content")}
+
+                <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
+                  {f("creativeWriting.services.header")}
+                  <br />
+                  {[
+                    "creativeWriting.services.storyDoctoring",
+                    "creativeWriting.services.scriptwriting",
+                    "creativeWriting.services.bookEditing",
+                    "creativeWriting.services.bookTranslation",
+                  ].map((e) => (
+                    <div className={styles.service} key={e}>
+                      {bullet}
+                      {f(e)}
+                    </div>
+                  ))}
+                </WhiteBox>
+              </>
+            )}
+          </div>
+
+          <div style={{ height: "400px" }} />
+
+          <div className={styles.servicesCover}>
+            <img
+              src='/Services.png'
+              height='437px'
+              width='400px'
+              layout='fixed'
+              priority='true'
+              style={router.locale === "ar" ? { transform: "scaleX(-1)" } : {}}
+            />
+          </div>
         </div>
 
-        <div style={{ height: "400px" }} />
-
-        <div className={styles.servicesCover}>
-          <img
-            src='/Services.png'
-            height='437px'
-            width='400px'
-            layout='fixed'
-            priority='true'
-            style={router.locale === "ar" ? { transform: "scaleX(-1)" } : {}}
-          />
-        </div>
+        <ContactButton />
       </div>
-
-      {/* <ContactButton /> */}
     </div>
   );
 }

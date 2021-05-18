@@ -11,6 +11,8 @@ import styles from "../styles/menu.module.scss";
 import * as locales from "../content/locale";
 import formatJsxMessage from "../utils/formatJsxMessage";
 
+import gsap from "gsap";
+
 const intlCache = createIntlCache();
 
 export default function Menu({ backgroundColor, textAnimationControls }) {
@@ -76,8 +78,61 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
     );
   };
 
+  const handleAnimation = React.useCallback((locale) => {
+    gsap.fromTo(
+      `.bg-animation-${pathname.split("/")[1]}`,
+      { opacity: 0 },
+      { opacity: 1, delay: 1.5 }
+    );
+    if (!locale || locale.includes("en-US")) {
+      gsap.to(`.test-${pathname.split("/")[1]}`, { left: 0 });
+    } else {
+      gsap.to(`.test-${pathname.split("/")[1]}`, { right: 0 });
+    }
+    if (!locale || locale.includes("en-US")) {
+      gsap.fromTo(
+        `.test-${pathname.split("/")[1]}`,
+        {
+          opacity: 1,
+          x: 0,
+          right: 0,
+          width: "100%",
+        },
+        {
+          opacity: 1,
+          x: 100,
+          left: 0,
+          width: "72%",
+          duration: 1.2,
+        }
+      );
+    } else {
+      gsap.fromTo(
+        `.test-${pathname.split("/")[1]}`,
+        {
+          opacity: 1,
+          x: 0,
+          left: 0,
+          width: "100%",
+        },
+        {
+          opacity: 1,
+          x: -100,
+          right: 0,
+          width: pathname === "/portfolio" ? "78%" : "75%",
+          duration: 1.2,
+        }
+      );
+    }
+  }, []);
+
   return (
-    <div className={styles.sidenav + " navbar"} style={{ backgroundColor }}>
+    <div
+      className={styles.sidenav + " navbar"}
+      style={{ backgroundColor }}
+      // layout='position'
+    >
+      {" "}
       <div className='animationFade'>
         <Link href='/'>
           <motion.img
@@ -88,87 +143,91 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
             // layoutId="logo"
           />
         </Link>
-      </div>
 
-      <div className={styles.menu}>
-        <div>
-          {["home", "story", "services", "portfolio", "blog", "job"].map(
-            (e, i) => (
-              <div key={e}>
-                {!(i % 2) && buildTiltedSquare(e)}
+        <div className={styles.menu}>
+          <div>
+            {["home", "story", "services", "portfolio", "blog", "job"].map(
+              (e, i) => (
+                <div key={e}>
+                  {!(i % 2) && buildTiltedSquare(e)}
 
-                <Link href={"/" + e}>
-                  <a
-                    className={styles.navLink}
-                    onMouseEnter={() => setHoveredLink(e)}
-                    onMouseLeave={() => setHoveredLink("")}
-                  >
-                    <div
-                      className={`${styles.itemTitle} heading`}
-                      style={{
-                        fontWeight: locale === "en-US" ? "500" : "bold",
-                      }}
+                  <Link href={"/" + e}>
+                    <a
+                      className={styles.navLink}
+                      onMouseEnter={() => setHoveredLink(e)}
+                      onMouseLeave={() => setHoveredLink("")}
                     >
-                      {f(e + "Link")}
-                      {i % 2 ? buildTiltedSquare(e) : null}
-                    </div>
+                      <div
+                        className={`${styles.itemTitle} heading`}
+                        style={{
+                          fontWeight: locale === "en-US" ? "500" : "bold",
+                        }}
+                      >
+                        {f(e + "Link")}
+                        {i % 2 ? buildTiltedSquare(e) : null}
+                      </div>
 
-                    <span
-                      className={`${styles.otherLocaleLink} ${otherLocale} lighter`}
-                    >
-                      {otherF(e + "Link")}
-                    </span>
-                  </a>
-                </Link>
-              </div>
-            )
-          )}
-        </div>
-
-        <div className={styles.languageSwitch}>
-          <p className={locale}>
-            <b>{locale === "en-US" ? "English" : "عربــي"}</b>
-          </p>
-
-          <a
-            onClick={async (e) => {
-              e.preventDefault();
-              await textAnimationControls?.start("hidden");
-              setLogoTransition({ duration: 0.1 });
-              Cookies.set("NEXT_LOCALE", otherLocale);
-              router.push(pathname, pathname, { locale: otherLocale });
-              await textAnimationControls?.start("visible");
-            }}
-          >
-            <label className={styles.switch}>
-              <input type='checkbox' checked={locale === "ar"} readOnly />
-              <span className={styles.slider} />
-            </label>
-          </a>
-
-          <p className={otherLocale}>
-            {locale === "ar" ? "English" : "عربــي"}
-          </p>
-        </div>
-
-        <div className={styles.complementaryInfo}>
-          <div className={styles.bottomNavIcons}>
-            <a target='_blank' href='https://twitter.com/mauzoun_?lang=en'>
-              <IoLogoTwitter size='30px' />
-            </a>
-            <a target='_blank' href='https://www.instagram.com/mauzoun/?hl=en'>
-              <IoLogoInstagram size='30px' />
-            </a>
-            <a
-              target='_blank'
-              href='https://www.linkedin.com/company/mauzoun/about/'
-            >
-              <IoLogoLinkedin size='30px' />
-            </a>
+                      <span
+                        className={`${styles.otherLocaleLink} ${otherLocale} lighter`}
+                      >
+                        {otherF(e + "Link")}
+                      </span>
+                    </a>
+                  </Link>
+                </div>
+              )
+            )}
           </div>
 
-          <span className='en-US'>{f("email")}</span>
-          <span className='bolder'>{f("location")}</span>
+          <div className={styles.languageSwitch}>
+            <p className={locale}>
+              <b>{locale === "en-US" ? "English" : "عربــي"}</b>
+            </p>
+
+            <a
+              onClick={async (e) => {
+                e.preventDefault();
+                await textAnimationControls?.start("hidden");
+                setLogoTransition({ duration: 0.1 });
+                Cookies.set("NEXT_LOCALE", otherLocale);
+                router.push(pathname, pathname, { locale: otherLocale });
+                await textAnimationControls?.start("visible");
+                handleAnimation(locale);
+              }}
+            >
+              <label className={styles.switch}>
+                <input type='checkbox' checked={locale === "ar"} readOnly />
+                <span className={styles.slider} />
+              </label>
+            </a>
+
+            <p className={otherLocale}>
+              {locale === "ar" ? "English" : "عربــي"}
+            </p>
+          </div>
+
+          <div className={styles.complementaryInfo}>
+            <div className={styles.bottomNavIcons}>
+              <a target='_blank' href='https://twitter.com/mauzoun_?lang=en'>
+                <IoLogoTwitter size='30px' />
+              </a>
+              <a
+                target='_blank'
+                href='https://www.instagram.com/mauzoun/?hl=en'
+              >
+                <IoLogoInstagram size='30px' />
+              </a>
+              <a
+                target='_blank'
+                href='https://www.linkedin.com/company/mauzoun/about/'
+              >
+                <IoLogoLinkedin size='30px' />
+              </a>
+            </div>
+
+            <span className='en-US'>{f("email")}</span>
+            <span className='bolder'>{f("location")}</span>
+          </div>
         </div>
       </div>
     </div>
