@@ -96,42 +96,49 @@ export default function LandingPage({
   };
 
   const handleMovePage = React.useCallback((click) => {
-    gsap.fromTo(
-      ".background",
-      { opacity: 1 },
-      { opacity: 1, x: click === 2 ? -165 : 155, duration: 0.8 }
-    );
-    gsap.to(".background", {
-      duration: 0.8,
-      left: click === 2 ? "-25%" : "25%",
-      width: "100%",
-      justifyContent: "flex-start",
-      paddingLeft: "33%",
-      textAlign: "left",
-    });
+    //TODO : uncomment this part of code to enable animation
+    // gsap.fromTo(
+    //   ".background",
+    //   { opacity: 1 },
+    //   { opacity: 1, x: click === 2 ? -165 : 155, duration: 0.8 }
+    // );
+    // gsap.to(".background", {
+    //   duration: 0.8,
+    //   left: click === 2 ? "-25%" : "25%",
+    //   width: "100%",
+    //   justifyContent: "flex-start",
+    //   paddingLeft: "33%",
+    //   textAlign: "left",
+    // });
 
-    gsap.to(".main", {
-      duration: 0.8,
-      left: click === 2 ? "100%" : "-100%",
-      opacity: 0,
-    });
-    gsap.fromTo(
-      ".transition_dot",
-      { opacity: 1 },
-      { opacity: 0, x: click === 2 ? 1200 : -1200, duration: 0.8 }
-    );
-    gsap.to(".logo", {
-      xPercent: click === 2 ? -208 : -78,
-      yPercent: -5,
-      duration: 0.8,
-    });
-    setTimeout(() => {
-      if (click === 1) {
-        changeLocale("ar");
-      } else if (click === 2) {
-        changeLocale("en-US");
-      }
-    }, 700);
+    // gsap.to(".main", {
+    //   duration: 0.8,
+    //   left: click === 2 ? "100%" : "-100%",
+    //   opacity: 0,
+    // });
+    // gsap.fromTo(
+    //   ".transition_dot",
+    //   { opacity: 1 },
+    //   { opacity: 0, x: click === 2 ? 1200 : -1200, duration: 0.8 }
+    // );
+    // gsap.to(".logo", {
+    //   xPercent: click === 2 ? -208 : -78,
+    //   yPercent: -5,
+    //   duration: 0.8,
+    // });
+    // setTimeout(() => {
+    //   if (click === 1) {
+    //     changeLocale("ar");
+    //   } else if (click === 2) {
+    //     changeLocale("en-US");
+    //   }
+    // }, 700);
+    //TODO : comment this part of code when animation enabled
+    if (click === 1) {
+      changeLocale("ar");
+    } else if (click === 2) {
+      changeLocale("en-US");
+    }
   }, []);
 
   return (
