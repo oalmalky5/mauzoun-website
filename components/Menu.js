@@ -130,7 +130,7 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
     <div
       className={styles.sidenav + " navbar"}
       style={{ backgroundColor }}
-      // layout='position'
+    // layout='position'
     >
       {" "}
       <div className='animationFade'>
@@ -139,8 +139,8 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
             src='https://i.imgur.com/HjDbXtR.png'
             alt='Mauzoun logo'
             className={styles.logo}
-            // transition={logoTransition}
-            // layoutId="logo"
+          // transition={logoTransition}
+          // layoutId="logo"
           />
         </Link>
 
@@ -192,7 +192,8 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
                 Cookies.set("NEXT_LOCALE", otherLocale);
                 router.push(pathname, pathname, { locale: otherLocale });
                 await textAnimationControls?.start("visible");
-                handleAnimation(locale);
+                //TODO : uncomment this part of code to enable animation
+                // handleAnimation(locale);
               }}
             >
               <label className={styles.switch}>
