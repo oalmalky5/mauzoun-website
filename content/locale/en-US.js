@@ -163,7 +163,7 @@ exports["en-US"] = {
     "teamMember.5.role": "Senior Writer",
     "teamMember.6.name": "Aya Lozi",
     "teamMember.6.role": "Writer",
-    "teamMember.7.name": "Omar AlMalky",
+    "teamMember.7.name": "/////",
     "teamMember.7.role": "Account Manager",
     world:
       "In a world that is always bustling about and concerned with immediate results, we stick to the belief that good work takes care and time. Every word is an investment in your brand, or your identity as an author. That is why we work on booking basis only and rarely take on rushed projects.",

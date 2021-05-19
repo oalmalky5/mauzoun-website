@@ -75,7 +75,7 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
             height='400px'
             layout='fixed'
             priority='true'
-            src='http://writingandwellness.com/wp-content/uploads/2015/02/Home-Office-2.jpg'
+            src='/team/mauzoun-office.jpeg'
             alt='an image of an office'
           />
 
