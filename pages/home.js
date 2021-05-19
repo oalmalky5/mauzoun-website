@@ -41,7 +41,7 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
         // overflowY: "scroll",
       }}
     >
-      <div
+      {/* <div
         className='test-home'
         style={{
           backgroundColor: backgroundColor,
@@ -50,7 +50,7 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
           position: "absolute",
           zIndex: -1,
         }}
-      ></div>
+      ></div> */}
       <div
         className='bg-animation-home'
         style={{

@@ -40,7 +40,7 @@ export default function job({ textAnimationControls }) {
         // overflowY: "scroll",
       }}
     >
-      <div
+      {/* <div
         className='test-job'
         style={{
           backgroundColor: backgroundColor,
@@ -49,7 +49,7 @@ export default function job({ textAnimationControls }) {
           position: "absolute",
           zIndex: -1,
         }}
-      ></div>
+      ></div> */}
       <div
         className='bg-animation-job'
         style={{

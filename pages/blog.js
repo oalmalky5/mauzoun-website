@@ -33,7 +33,7 @@ export default function blog({ textAnimationControls }) {
         // overflowY: "scroll",
       }}
     >
-      <div
+      {/* <div
         className='test-blog'
         style={{
           backgroundColor: backgroundColor,
@@ -42,7 +42,7 @@ export default function blog({ textAnimationControls }) {
           position: "absolute",
           zIndex: -1,
         }}
-      ></div>
+      ></div> */}
       <div
         className='bg-animation-blog'
         style={{

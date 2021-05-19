@@ -72,7 +72,7 @@ export default function services({ textAnimationControls }) {
         // overflowY: "scroll",
       }}
     >
-      <div
+      {/* <div
         className='test-services'
         style={{
           backgroundColor: backgroundColor,
@@ -81,7 +81,7 @@ export default function services({ textAnimationControls }) {
           position: "absolute",
           zIndex: -1,
         }}
-      ></div>
+      ></div> */}
       <div
         className='bg-animation-services'
         style={{
