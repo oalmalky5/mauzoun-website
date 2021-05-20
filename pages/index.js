@@ -3,7 +3,6 @@ import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
-
 import styles from "../styles/landingPage.module.scss";
 
 const kashidas = [
