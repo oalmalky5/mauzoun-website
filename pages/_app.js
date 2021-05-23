@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import "../styles/globals.scss";
 import { IntlProvider } from "react-intl";
 import { useRouter } from "next/router";
 import { AnimateSharedLayout, motion, useAnimation } from "framer-motion";
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
-import "../styles/globals.scss";
+import checkDevice, { DESKTOP, MOBILE, TABLET } from "../utils/checkDevice"
+import MobileDisabled from "../components/MobileDisabled"
 import * as locales from "../content/locale";
 
 function MyApp({ Component, pageProps }) {
@@ -29,13 +30,19 @@ function MyApp({ Component, pageProps }) {
     animate: "instantlyVisible",
   };
 
-  let [runningAnimations, setRunningAnimations] = React.useState([]);
-  const [pageTransition, setPageTransition] = React.useState(
+  let [runningAnimations, setRunningAnimations] = useState([]);
+  let [isMobile, setIsMobile] = useState(false);
+
+  const [pageTransition, setPageTransition] = useState(
     defaultPageTransition
   );
-  const [futurePageTransition, setFuturePageTransition] = React.useState();
+  const [futurePageTransition, setFuturePageTransition] = useState();
 
   React.useEffect(() => {
+    if (checkDevice() === MOBILE || checkDevice() === TABLET) {
+      setIsMobile(true)
+    }
+
     if (!runningAnimations.includes("visible") && futurePageTransition) {
       setPageTransition(futurePageTransition);
       setFuturePageTransition(null);
@@ -69,35 +76,36 @@ function MyApp({ Component, pageProps }) {
       defaultLocale={defaultLocale}
       messages={messages}
     >
-      <AnimateSharedLayout type="crossfade">
-        <div
-          dir={pathname !== "/" && locale === "ar" ? "rtl" : "ltr"}
-          className={"locale " + locale}
-        >
-          <motion.div
-            key={pathname}
-            initial={pageTransition.initial}
-            animate={pageTransition.animate}
-            variants={variants}
-            onAnimationStart={() => {
-              runningAnimations.push(pageTransition.animate);
-              setRunningAnimations(runningAnimations);
-            }}
-            onAnimationComplete={(definition) => {
-              runningAnimations = runningAnimations.filter(
-                (e) => e !== definition
-              );
-              setRunningAnimations(runningAnimations);
-            }}
+      {isMobile ? <MobileDisabled /> :
+        <AnimateSharedLayout type="crossfade">
+          <div
+            dir={pathname !== "/" && locale === "ar" ? "rtl" : "ltr"}
+            className={"locale " + locale}
           >
-            <Component
-              updatePageTransition={updatePageTransition}
-              textAnimationControls={textAnimationControls}
-              {...pageProps}
-            />
-          </motion.div>
-        </div>
-      </AnimateSharedLayout>
+            <motion.div
+              key={pathname}
+              initial={pageTransition.initial}
+              animate={pageTransition.animate}
+              variants={variants}
+              onAnimationStart={() => {
+                runningAnimations.push(pageTransition.animate);
+                setRunningAnimations(runningAnimations);
+              }}
+              onAnimationComplete={(definition) => {
+                runningAnimations = runningAnimations.filter(
+                  (e) => e !== definition
+                );
+                setRunningAnimations(runningAnimations);
+              }}
+            >
+              <Component
+                updatePageTransition={updatePageTransition}
+                textAnimationControls={textAnimationControls}
+                {...pageProps}
+              />
+            </motion.div>
+          </div>
+        </AnimateSharedLayout>}
     </IntlProvider>
   );
 }
