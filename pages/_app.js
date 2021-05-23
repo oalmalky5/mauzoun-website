@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
   };
 
   let [runningAnimations, setRunningAnimations] = useState([]);
-  let [isMobile, setIsMobile] = useState(false);
+  let [isMobile, setIsMobile] = useState("temp");
 
   const [pageTransition, setPageTransition] = useState(
     defaultPageTransition
@@ -40,7 +40,11 @@ function MyApp({ Component, pageProps }) {
 
   React.useEffect(() => {
     if (checkDevice() === MOBILE || checkDevice() === TABLET) {
+      console.log(checkDevice())
       setIsMobile(true)
+    }else{
+      setIsMobile(false)
+
     }
 
     if (!runningAnimations.includes("visible") && futurePageTransition) {
@@ -76,7 +80,7 @@ function MyApp({ Component, pageProps }) {
       defaultLocale={defaultLocale}
       messages={messages}
     >
-      {isMobile ? <MobileDisabled /> :
+      {isMobile!=="temp"&&(isMobile ? <MobileDisabled /> :
         <AnimateSharedLayout type="crossfade">
           <div
             dir={pathname !== "/" && locale === "ar" ? "rtl" : "ltr"}
@@ -105,7 +109,7 @@ function MyApp({ Component, pageProps }) {
               />
             </motion.div>
           </div>
-        </AnimateSharedLayout>}
+        </AnimateSharedLayout>)}
     </IntlProvider>
   );
 }
