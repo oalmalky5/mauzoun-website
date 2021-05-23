@@ -1,28 +1,35 @@
+.logo {
+	position: absolute;
+	top: 5%;
+	opacity: 0.6;
+	left: 7%;
+}
+.mobileNotsupportedTextAr {
+	position: absolute;
+	bottom: 32%;
+	text-align: center;
+	color: #999;
+	font-family: "GE Dinar Two";
+	font-size: 14px;
+	width: 80%;
+	font-weight: bold;
+}
+.mobileNotsupportedTextEn {
+	position: absolute;
+	bottom: 20%;
+	text-align: center;
+	color: #999;
+	font-size: 14px;
+	font-family: "Alegreya Sans";
+	width: 80%;
+	font-weight: bold;
+}
 
-.mobileNotsupportedTextAr{
-  position: absolute;
-  bottom: 36%;
-  text-align: center;
-  color: #999;
-  font-size: 14px;
-  width: 80%;
-  font-weight: bold;
+.mobileNotsupportedContainer {
+	display: flex;
+	justify-content: center;
 }
-.mobileNotsupportedTextEn{
-  position: absolute;
-  bottom: 20%;
-  text-align: center;
-  color: #999;
-  font-size: 14px;
-  width: 80%;
-  font-weight: bold;
-}
-
-.mobileNotsupportedContainer{
-display: flex;
-justify-content: center;
-}
-.notSupportedIframe{
-  width: 100vw;
-  height: 100vh;
+.notSupportedIframe {
+	width: 100vw;
+	height: 100vh;
 }

@@ -3,15 +3,13 @@ import styles from  "../styles/mobiledisabled.module.scss";
 
 const MobileDisabled=() => <div className={styles.mobileNotsupportedContainer}>
     <iframe className={styles.notSupportedIframe} src="https://lottiefiles.com/iframe/14306-empty-state-illustration"></iframe>
-    <p className={styles.mobileNotsupportedTextAr}>
+    <h6 className={styles.mobileNotsupportedTextAr} dir="rtl">
     لا يزال موقعنا في مرحلته التجريبية، ولذلك فهو لا يدعم التصفح عبر الهاتف المحمول. يرجى استخدام متصفح حاسوبكم للاطلاع على الموقع بأفضل شكل.
-
-    </p>
+    </h6>
     <p className={styles.mobileNotsupportedTextEn}>
     Our website is currently still in its beta version, and therefore does not support mobile view. For the best experience, please view the website from a desktop browser.
-    
     </p>
-
+<img className={styles.logo} src={'./Tilted Square.svg'}/>
     
 </div>
 
