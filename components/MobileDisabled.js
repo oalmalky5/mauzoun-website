@@ -9,9 +9,7 @@ const MobileDisabled=() => <div className={styles.mobileNotsupportedContainer}>
     <p className={styles.mobileNotsupportedTextEn}>
     Our website is currently still in its beta version, and therefore does not support mobile view. For the best experience, please view the website from a desktop browser.
     </p>
-<img className={styles.logo} src='/Mauzoun – Transparent Logo – Black-01.png'
-            alt='Mauzoun logo'/>
-    
+    <img className={styles.logo} src='/Mauzoun – Transparent Logo – Black-01.png' alt='Mauzoun logo'/>
 </div>
 
 export default MobileDisabled

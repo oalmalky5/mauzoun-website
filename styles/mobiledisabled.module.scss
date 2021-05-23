@@ -1,13 +1,13 @@
 .logo {
   position: absolute;
-  top: 0%;
+  top: 16%;
   left: auto;
   right: auto;
   width: 114px;
 }
 .mobileNotsupportedTextAr {
 	position: absolute;
-	bottom: 32%;
+	bottom: 28%;
 	text-align: center;
 	color: #999;
 	font-family: "GE Dinar Two light";
@@ -32,9 +32,7 @@
 }
 .notSupportedIframe {
 	width: 100vw;
-	height: 100vh;
-}
-#preview_player{
-  position: absolute;
-  top: -16%;
+    height: 100vh;
+    padding: 12vw;
+    padding-top: 19vh;
 }

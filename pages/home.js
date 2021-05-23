@@ -4,6 +4,7 @@ import { useIntl } from "react-intl";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { NextSeo } from 'next-seo'; 
 
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
@@ -15,21 +16,27 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
   const locale = useRouter().locale;
 
   const intl = useIntl();
-  const f = (id, options) =>
-    formatJsxMessage(intl, locale, id, {
+  const f = (id, options) => formatJsxMessage(intl, locale, id, {
       shouldFade: true,
       animationControls: textAnimationControls,
       ...options,
-    });
+    })
+
 
   const [areServicesVisible, setAreServicesVisible] = useState(false);
   const [isApproachVisible, setIsApproachVisible] = useState(false);
   const [areProjectsVisible, setAreProjectsVisible] = useState(false);
   const [isWorkVisible, setIsWorkVisible] = useState(false);
 
-  React.useEffect(() => updatePageTransition("default"), []);
+  React.useEffect(() =>updatePageTransition("default"), []);
 
   return (
+    <>
+    <NextSeo
+    title={locale!=="ar"?"Mauzoun | Home":"مَوْزوْن | البداية"}
+    description={f("pageTitle")}
+  />
+  
     <div
       style={{
         position: "fixed",
@@ -60,6 +67,8 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
           zIndex: 10,
         }}
       >
+
+
         <Menu
           backgroundColor={backgroundColor}
           textAnimationControls={textAnimationControls}
@@ -67,9 +76,7 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
 
         <div className='container' style={{ backgroundColor }}>
           <h1>{f("title")}</h1>
-
           {f("summary")}
-
           <img
             width='800px'
             height='400px'
@@ -170,5 +177,6 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
         <ContactButton />
       </div>
     </div>
+    </>
   );
 }

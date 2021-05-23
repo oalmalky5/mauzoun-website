@@ -2,6 +2,7 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { NextSeo } from 'next-seo';
 
 import styles from "../styles/story.module.scss";
 import Menu from "../components/Menu";
@@ -131,77 +132,84 @@ const Story = function ({ textAnimationControls }) {
   };
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        display: "flex",
-        alignItems: "stretch",
-        width: "100%",
-        height: "100%",
-        overflowX: "hidden",
-        // overflowY: "scroll",
-      }}
-    >
+    <>
+      <NextSeo
+        title={locale !== "ar" ? "Mauzoun | Story" : "مَوْزوْن | قصتنا"}
+        description={locale !== "ar" ? "Mauzoun | Story" : "مَوْزوْن | قصتنا"}
+      />
+
       <div
-        className='test-story'
         style={{
-          backgroundColor: backgroundColor,
-          width: "72%",
-          height: "150vh",
-          position: "absolute",
-          zIndex: -1,
-        }}
-      ></div>
-      <div
-        className='bg-animation-story'
-        style={{
-          position: "relative",
+          position: "fixed",
+          display: "flex",
+          alignItems: "stretch",
           width: "100%",
           height: "100%",
-          zIndex: 10,
+          overflowX: "hidden",
+          // overflowY: "scroll",
         }}
       >
-        <Menu
-          backgroundColor={backgroundColor}
-          textAnimationControls={textAnimationControls}
-        />
-
         <div
-          className='container'
-          style={{ backgroundColor }}
-          // layout="position"
+          className='test-story'
+          style={{
+            backgroundColor: backgroundColor,
+            width: "72%",
+            height: "150vh",
+            position: "absolute",
+            zIndex: -1,
+          }}
+        ></div>
+        <div
+          className='bg-animation-story'
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "100%",
+            zIndex: 10,
+          }}
         >
-          <div className={styles.storyCover}>
-            <img
-              src='/Story.png'
-              height='341px'
-              width='900px'
-              layout='fixed'
-              priority='true'
-            />
+          <Menu
+            backgroundColor={backgroundColor}
+            textAnimationControls={textAnimationControls}
+          />
+
+          <div
+            className='container'
+            style={{ backgroundColor }}
+          // layout="position"
+          >
+            <div className={styles.storyCover}>
+              <img
+                src='/Story.png'
+                height='341px'
+                width='900px'
+                layout='fixed'
+                priority='true'
+              />
+            </div>
+            <h1>{f("nameMeaning")}</h1>
+
+            {f("aim")}
+
+            <b>{f("teamwork")}</b>
+
+            <div className={styles.gridContainer}>{getTeamMembers()}</div>
+
+            {f("world")}
+
+            <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
+              <b>{f("whitebox.innerText1")}</b>
+              <br />
+              {f("whitebox.innerText2")}
+            </WhiteBox>
+
+            {f("workAspects")}
           </div>
-          <h1>{f("nameMeaning")}</h1>
 
-          {f("aim")}
-
-          <b>{f("teamwork")}</b>
-
-          <div className={styles.gridContainer}>{getTeamMembers()}</div>
-
-          {f("world")}
-
-          <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-            <b>{f("whitebox.innerText1")}</b>
-            <br />
-            {f("whitebox.innerText2")}
-          </WhiteBox>
-
-          {f("workAspects")}
+          <ContactButton />
         </div>
-
-        <ContactButton />
       </div>
-    </div>
+    </>
   );
 };
 

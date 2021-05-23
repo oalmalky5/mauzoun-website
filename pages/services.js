@@ -3,6 +3,7 @@ import { useIntl } from "react-intl";
 import { BsChevronDown } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import { NextSeo } from 'next-seo';
 
 import styles from "../styles/services.module.scss";
 import Menu from "../components/Menu";
@@ -37,6 +38,7 @@ const whiteBoxDecoratorsPositions = {
 
 export default function services({ textAnimationControls }) {
   const router = useRouter();
+  const locale = useRouter().locale;
 
   const intl = useIntl();
   const f = (id, options) =>
@@ -61,6 +63,11 @@ export default function services({ textAnimationControls }) {
   );
 
   return (
+    <>
+      <NextSeo
+        title={locale !== "ar" ? "Mauzoun | Services" : "مَوْزوْن | خدماتنا"}
+        description={locale !== "ar" ? "Mauzoun | Services" : "مَوْزوْن | خدماتنا"}
+      />
     <div
       style={{
         position: "fixed",
@@ -235,5 +242,6 @@ export default function services({ textAnimationControls }) {
         <ContactButton />
       </div>
     </div>
+    </>
   );
 }

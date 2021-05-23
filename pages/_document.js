@@ -11,7 +11,7 @@ class MainDocument extends Document {
       <Html>
         <Head >
         <link rel="shortcut icon" href="/Tilted Square.svg" />
-
+        {/* <title>hello</title> */}
         </Head>
         <body>
           <Main />

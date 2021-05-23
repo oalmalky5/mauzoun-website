@@ -3,6 +3,7 @@ import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
+import { NextSeo } from 'next-seo'; 
 import styles from "../styles/landingPage.module.scss";
 
 const kashidas = [
@@ -141,7 +142,11 @@ export default function LandingPage({
   }, []);
 
   return (
-    <>
+<>
+    <NextSeo
+    title="Mauzoun • مَوْزوْن | Welcome"
+    description="Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia, specializing in copywriting, translation, scriptwriting, and book editing in both the Arabic and English."
+  />
       <div className={styles.pageContainer}>
         {/* Kashidas organized from top left to bottom right */}
         <div

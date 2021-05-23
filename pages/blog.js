@@ -2,6 +2,7 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { NextSeo } from 'next-seo';
 
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
@@ -22,6 +23,11 @@ export default function blog({ textAnimationControls }) {
     });
 
   return (
+    <>
+      <NextSeo
+        title={locale !== "ar" ? "Mauzoun | Our Blog" : "مَوْزوْن | مدوّنتنا"}
+        description={locale !== "ar" ? "Mauzoun | Our Blog" : "مَوْزوْن | مدوّنتنا"}
+      />
     <div
       style={{
         position: "fixed",
@@ -70,5 +76,6 @@ export default function blog({ textAnimationControls }) {
         <ContactButton />
       </div>
     </div>
+    </>
   );
 }

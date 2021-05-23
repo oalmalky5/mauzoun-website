@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { Carousel } from "react-responsive-carousel";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { NextSeo } from 'next-seo';
 
 import styles from "../styles/portfolio.module.scss";
 import Menu from "../components/Menu";
@@ -85,6 +86,11 @@ export default function portfolio({ textAnimationControls }) {
   const oppositeSide = locale === "ar" ? "left" : "right";
 
   return (
+    <>
+      <NextSeo
+        title={locale !== "ar" ? "Mauzoun | Portfolio" : "مَوْزوْن | أعمالنا"}
+        description={locale !== "ar" ? "Mauzoun | Portfolio" : "مَوْزوْن | أعمالنا"}
+      />
     <div
       style={{
         position: "fixed",
@@ -200,5 +206,6 @@ export default function portfolio({ textAnimationControls }) {
         <ContactButton />
       </div>
     </div>
+    </>
   );
 }

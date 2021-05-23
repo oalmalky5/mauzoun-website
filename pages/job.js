@@ -3,6 +3,7 @@ import { useIntl } from "react-intl";
 import { BsChevronDown } from "react-icons/bs";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { NextSeo } from 'next-seo';
 
 import styles from "../styles/job.module.scss";
 import Menu from "../components/Menu";
@@ -29,6 +30,11 @@ export default function job({ textAnimationControls }) {
     useState(false);
 
   return (
+    <>
+      <NextSeo
+        title={locale !== "ar" ? "Mauzoun | Mauzoun & You" : "مَوْزوْن | مَوْزوْن وأنت"}
+        description={locale !== "ar" ? "Mauzoun | Mauzoun & You" : "مَوْزوْن | مَوْزوْن وأنت"}
+      />
     <div
       style={{
         position: "fixed",
@@ -153,5 +159,6 @@ export default function job({ textAnimationControls }) {
         <ContactButton />
       </div>
     </div>
+    </>
   );
 }
