@@ -185,7 +185,7 @@ export default function LandingPage({
           >
             <div dir='rtl'>
               <p style={{ fontFamily: "GE Dinar Two" }}>
-                حب للكلمات وفريق شغوف:
+                عشق للكلمات وفريق شغوف:
                 <br />
                 <b>أهلاً بكم في موزون.</b>
               </p>

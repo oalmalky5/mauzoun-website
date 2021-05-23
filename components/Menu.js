@@ -181,7 +181,7 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
 
           <div className={styles.languageSwitch}>
             <p className={locale}>
-              <b>{locale === "en-US" ? "English" : "عربــي"}</b>
+              <b>{locale === "en-US" ? "English" : "العربية"}</b>
             </p>
 
             <a
@@ -203,7 +203,7 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
             </a>
 
             <p className={otherLocale}>
-              {locale === "ar" ? "English" : "عربــي"}
+              {locale === "ar" ? "English" : "العربية"}
             </p>
           </div>
 
