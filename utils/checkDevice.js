@@ -1,7 +1,7 @@
 /*  
  * @return {string} ("desktop","mobile","tablet").
 */
-export default   () => {
+const  checkDevice = () => {
     const ua = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
       return TABLET;
@@ -19,3 +19,4 @@ export default   () => {
   export const MOBILE="mobile"
   export const DESKTOP="desktop"
   export const TABLET="tablet"
+  export default checkDevice 
