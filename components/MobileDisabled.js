@@ -1,10 +1,10 @@
 import React from "react";
 import styles from  "../styles/mobiledisabled.module.scss";
 
-export default () => <div className={styles.mobileNotsupportedContainer}>
-
+const MobileDisabled=() => <div className={styles.mobileNotsupportedContainer}>
     <iframe className={styles.notSupportedIframe} src="https://lottiefiles.com/iframe/14306-empty-state-illustration"></iframe>
     <p className={styles.mobileNotsupportedText}>
-        This device is not supported yet please open from a desktop browser
-</p>
+    Our website is currently still in its beta version, and therefore does not support mobile view. For the best experience, please view the website from a desktop browser.</p>
 </div>
+
+export default MobileDisabled
