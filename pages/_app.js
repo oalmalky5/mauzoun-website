@@ -76,7 +76,7 @@ function MyApp({ Component, pageProps }) {
       defaultLocale={defaultLocale}
       messages={messages}
     >
-      {!isMobile ? <MobileDisabled /> :
+      {isMobile ? <MobileDisabled /> :
         <AnimateSharedLayout type="crossfade">
           <div
             dir={pathname !== "/" && locale === "ar" ? "rtl" : "ltr"}
