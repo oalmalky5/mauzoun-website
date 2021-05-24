@@ -29,10 +29,14 @@
 .mobileNotsupportedContainer {
 	display: flex;
 	justify-content: center;
+	max-height: 100vh;
+    overflow: hidden;
 }
 .notSupportedIframe {
 	width: 100vw;
     height: 100vh;
+	max-height: 100vh;
+    overflow: hidden;
     padding: 21vw;
     padding-top: 19vh;
 }
