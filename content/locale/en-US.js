@@ -52,9 +52,9 @@ exports["en-US"] = {
     "becomeClient.content":
       "If you're interested in our services, you can become our client by simply e-mailing us or booking an introductory online call through the button at the bottom right of the page.",
     "joinTeam.intro": "Join the Team",
-    "joinTeam.content": `<b>There are currently no andyou opportunities available. Keep checking.</b>
+    "joinTeam.content": `<b>There are currently no job opportunities available. Keep checking.</b>
       <br /><br />
-      If you are interested in joining Mauzoun, keep checking this page or our Instagram account for the latest andyou announcements.
+      If you are interested in joining Mauzoun, keep checking this page or our Instagram account for the latest job announcements.
       <br /><br />
       At Mauzoun, we look for writers with bulletproof Arabic and English who are creative and passionate about writing. To win us over, make sure that your application is free of mistakes, and complement it with a captivating cover letter that conveys why you love the work you do.
       <br /><br />
