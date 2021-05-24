@@ -146,7 +146,7 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
 
         <div className={styles.menu}>
           <div>
-            {["home", "story", "services", "portfolio", "blog", "job"].map(
+            {["home", "story", "services", "portfolio", "blog", "andyou"].map(
               (e, i) => (
                 <div key={e}>
                   {!(i % 2) && buildTiltedSquare(e)}

@@ -5,7 +5,7 @@ exports["en-US"] = {
     servicesLink: "Services",
     portfolioLink: "Portfolio",
     blogLink: "Our Blog",
-    jobLink: "Mauzoun & You",
+    andyouLink: "Mauzoun & You",
     email: "hello@mauzoun.com",
     location: "Based in Jeddah, Saudi Arabia",
     comingSoon: "COMING SOON.",
@@ -41,20 +41,20 @@ exports["en-US"] = {
       ", from innovative brands to independent authors with passion projects. You can read our tales of success in <Link href='/portfolio'>our portfolio</Link>.",
     "work.intro": "Our work is dedicated and ethical",
     "work.content":
-      ", prioritizing our community as much as our clients. This is why we host an annual competition for up-and-coming writers who are developing their first-ever manuscripts. Winners are provided with free editing, marketing, and publishing services to unleash their works to the world. To learn more about this competition, <Link href='/job'>click here</Link>.",
+      ", prioritizing our community as much as our clients. This is why we host an annual competition for up-and-coming writers who are developing their first-ever manuscripts. Winners are provided with free editing, marketing, and publishing services to unleash their works to the world. To learn more about this competition, <Link href='/andyou'>click here</Link>.",
   },
   "/blog": {
     title: "Our Blog",
   },
-  "/job": {
+  "/andyou": {
     title: "Mauzoun & You",
     "becomeClient.intro": "Become Our Client",
     "becomeClient.content":
       "If you're interested in our services, you can become our client by simply e-mailing us or booking an introductory online call through the button at the bottom right of the page.",
     "joinTeam.intro": "Join the Team",
-    "joinTeam.content": `<b>There are currently no job opportunities available. Keep checking.</b>
+    "joinTeam.content": `<b>There are currently no andyou opportunities available. Keep checking.</b>
       <br /><br />
-      If you are interested in joining Mauzoun, keep checking this page or our Instagram account for the latest job announcements.
+      If you are interested in joining Mauzoun, keep checking this page or our Instagram account for the latest andyou announcements.
       <br /><br />
       At Mauzoun, we look for writers with bulletproof Arabic and English who are creative and passionate about writing. To win us over, make sure that your application is free of mistakes, and complement it with a captivating cover letter that conveys why you love the work you do.
       <br /><br />
@@ -135,7 +135,7 @@ exports["en-US"] = {
       <br /><br />
       We seek inspiration from the rich literary heritages of the world, and we aspire to contribute to our region’s libraries and partake in the advancement of language use. 
       <br /><br />
-      Our annual competition, which occurs every summer, offers the winner free services in either book doctoring or script doctoring, culminating in pairing the writer’s finished product with either a publisher or a producer. To find out more about our annual competition, <Link href='/job'>click here</Link>.
+      Our annual competition, which occurs every summer, offers the winner free services in either book doctoring or script doctoring, culminating in pairing the writer’s finished product with either a publisher or a producer. To find out more about our annual competition, <Link href='/andyou'>click here</Link>.
       `,
     "creativeWriting.services.header":
       "Here’s a list of some of the fee-based services we provide. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.",

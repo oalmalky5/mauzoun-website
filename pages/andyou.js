@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { NextSeo } from 'next-seo';
 
-import styles from "../styles/job.module.scss";
+import styles from "../styles/andyou.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
@@ -13,7 +13,7 @@ import ComingSoon from "../components/ComingSoon";
 
 const backgroundColor = "#b3d0ea";
 
-export default function job({ textAnimationControls }) {
+export default function andyou({ textAnimationControls }) {
   const locale = useRouter().locale;
 
   const intl = useIntl();
@@ -47,7 +47,7 @@ export default function job({ textAnimationControls }) {
       }}
     >
       {/* <div
-        className='test-job'
+        className='test-andyou'
         style={{
           backgroundColor: backgroundColor,
           width: "72%",
@@ -57,7 +57,7 @@ export default function job({ textAnimationControls }) {
         }}
       ></div> */}
       <div
-        className='bg-animation-job'
+        className='bg-animation-andyou'
         style={{
           position: "relative",
           width: "100%",
@@ -144,7 +144,7 @@ export default function job({ textAnimationControls }) {
             )}
           </div>
 
-          <div className={styles.jobCover}>
+          <div className={styles.andyouCover}>
             <img
               src='/Mauzoun & You.png'
               height='376px'
