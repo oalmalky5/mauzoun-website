@@ -30,18 +30,18 @@ exports["en-US"] = {
     "story.content":
       "We realized a lack of captivating brand content and creative writing in the Arab World. Quite simply, we created a solution.",
     "services.intro":
-      "Our services balance between the professional and the creative",
+      "<u>Our services balance between the professional and the creative</u>",
     "services.content":
       ". They include developing strategic content for brands and campaigns, as well as unleashing our creativities in book editing, creative writing, story doctoring, and boutique publishing.",
-    "approach.intro": "Our approach to writing is thoughtful and imaginative",
+    "approach.intro": "<u>Our approach to writing is thoughtful and imaginative</u>",
     "approach.content":
       ", balancing between Arabic and English while remaining loyal to each language and the kind of service we provide. We believe in work that is backed by a strong understanding of brand strategies, audience needs, and empathetic storytelling.",
-    "projects.intro": "We seek projects that need us as much as we need them",
+    "projects.intro": "<u>We seek projects that need us as much as we need them</u>",
     "projects.content":
-      ", from innovative brands to independent authors with passion projects. You can read our tales of success in <Link href='/portfolio'>our portfolio</Link>.",
-    "work.intro": "Our work is dedicated and ethical",
+      ", from innovative brands to independent authors with passion projects. You can read our tales of success in <u><Link href='/portfolio'>our portfolio</Link></u>.",
+    "work.intro": "<u>Our work is dedicated and ethical</u>",
     "work.content":
-      ", prioritizing our community as much as our clients. This is why we host an annual competition for up-and-coming writers who are developing their first-ever manuscripts. Winners are provided with free editing, marketing, and publishing services to unleash their works to the world. To learn more about this competition, <Link href='/andyou'>click here</Link>.",
+      ", prioritizing our community as much as our clients. This is why we host an annual competition for up-and-coming writers who are developing their first-ever manuscripts. Winners are provided with free editing, marketing, and publishing services to unleash their works to the world. To learn more about this competition, <u><Link href='/andyou'>click here</Link></u>.",
   },
   "/blog": {
     title: "Our Blog",
