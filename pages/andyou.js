@@ -32,8 +32,8 @@ export default function andyou({ textAnimationControls }) {
   return (
     <>
       <NextSeo
-        title={locale !== "ar" ? "Mauzoun | Mauzoun & You" : "مَوْزوْن | مَوْزوْن وأنت"}
-        description={locale !== "ar" ? "Mauzoun | Mauzoun & You" : "مَوْزوْن | مَوْزوْن وأنت"}
+        title={locale !== "ar" ? "Mauzoun | And You" : "مَوْزوْن | مَوْزوْن وأنت"}
+        description={locale !== "ar" ? "Mauzoun | And You" : "مَوْزوْن | مَوْزوْن وأنت"}
       />
     <div
       style={{
