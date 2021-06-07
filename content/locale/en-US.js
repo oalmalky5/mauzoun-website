@@ -69,7 +69,7 @@ exports["en-US"] = {
     content:
       "Read our team’s project-focused journal entries, which document our creative thought process and show our beloved final outcome.",
     "contentWriting.title": "Content Writing",
-    "contentWriting.clients.1": "Mauj",
+    "contentWriting.clients.1": "<Link href='/Mauj'>Mauj</Link>",
     "contentWriting.clients.2": "Shafra",
     "contentWriting.clients.3": "Musa & Palm",
     "contentWriting.clients.4": "Saudi Tourism Authority",
@@ -173,5 +173,11 @@ exports["en-US"] = {
       "This culture we cultivated takes our creativities and productivities up a notch, providing the space and time needed to bring a fresh outlook to our workplace and your projects.",
     workAspects:
       "In all aspects, the work we do, and how we do it, is holistic and innovative. We aim to ease and expedite the process for artists, independent filmmakers, personal brands, and businesses alike, activating their ambitions with powerful and captivating words.",
+
   },
+  "/Mauj": {
+    para1:
+      ""
+  }
 };
+
