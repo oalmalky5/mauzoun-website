@@ -10,8 +10,7 @@ import formatJsxMessage from "../utils/formatJsxMessage";
 import WhiteBox from "../components/WhiteBox";
 import ContactButton from "../components/ContactButton";
 import styles from "../styles/mauj.module.scss";
-import InstagramEmbed from 'react-instagram-embed'
-
+import InstagramEmbed from 'react-instagram-embed';
 
 const backgroundColor = "#fbec9a";
 
@@ -33,23 +32,8 @@ export default function Mauj() {
             <div className={styles.firstSec}>
                 <h1 className={styles.title}>Mauj defies the conventional.</h1>
                 <p className={styles.body}>Mauj is one of our most prominent, stimulating, and challenging projects. What we love most in Mauj is how aware their team is of what they present and how they present it, and their consideration of the culture of their audience of Arab women. We also love the way our writers balance between their beautiful poetic tone, and clear and direct educational method.</p>
-
-                <div className={styles.embed}>
-                </div>
-
-                <InstagramEmbed
-                url='https://instagr.am/p/Zw9o4/'
-                clientAccessToken='123|456'
-                maxWidth={320}
-                hideCaption={false}
-                containerTagName='div'
-                protocol=''
-                injectScript
-                onLoading={() => {}}
-                onSuccess={() => {}}
-                onAfterRender={() => {}}
-                onFailure={() => {}}
-            />
+                                    
+                
 
             </div>
 
@@ -78,7 +62,7 @@ export default function Mauj() {
 
             </div>
                 <div className={styles.fourthSec}>
-                    <h1 className={styles.title}>A flexible business relationship lead to an integrated brand.</h1>
+                    <h1 className={styles.title}>A flexible business relationship led to an integrated brand.</h1>
                     <p>With their deliberate management, brilliant illustrations and our written content, Mauj received 37K followers in the first five months alone, without ever resorting to promotions or paid advertisements, and as of this blog’s date of June 2021, they now have more than 53K followers. 12 of the posts we wrote for them received 80% more engagement than average. What we love the most about Mauj is how they balance sharing knowledge with promoting their products, without one side overshadowing the other.</p>
 
                     <p>Sometimes ideas seem to come out of nowhere, especially with new brands. You may arrive at fresh and daring concepts, which we at Mauzoun support with every client; regardless of how bold the idea or the limits it may push.</p>

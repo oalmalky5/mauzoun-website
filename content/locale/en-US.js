@@ -151,20 +151,20 @@ exports["en-US"] = {
       "Through our work process, we aim to reflect the richness and versatility of both the Arabic and English languages, the ingenuity of our writers, and how powerful and seamless good writing should be.",
     teamwork:
       "Our team works cooperatively to revive the appreciation of good writing, and we craft content and stories with precision and passion. Our words can pack a punch or be elegantly eloquent. It all depends on what you want, and how we see it best.",
-    "teamMember.1.name": "Layan Abdul Shakoor",
-    "teamMember.1.role": "Founder & Creative Director",
-    "teamMember.2.name": "Amal Al-Awlaki",
-    "teamMember.2.role": "Senior Writer",
-    "teamMember.3.name": "Fatmah Jadani",
-    "teamMember.3.role": "Writer",
-    "teamMember.4.name": "Nada Nasir",
-    "teamMember.4.role": "General Manager",
-    "teamMember.5.name": "Omar Thawabeh",
-    "teamMember.5.role": "Senior Writer",
-    "teamMember.6.name": "Aya Lozi",
-    "teamMember.6.role": "Writer",
-    "teamMember.7.name": "Omar AlMalky",
-    "teamMember.7.role": "Account Manager",
+      "teamMember.1.name": "Layan Abdul Shakoor",
+      "teamMember.1.role": "Founder & Creative Director",
+      "teamMember.2.name": "Amal Al-Awlaki",
+      "teamMember.2.role": "Senior Writer",
+      "teamMember.3.name": "Fatmah Jadani",
+      "teamMember.3.role": "Writer",
+      "teamMember.4.name": "Nada Nasir",
+      "teamMember.4.role": "General Manager",
+      "teamMember.5.name": "Omar Thawabeh",
+      "teamMember.5.role": "Senior Writer",
+      "teamMember.6.name": "Aya Lozi",
+      "teamMember.6.role": "Writer",
+      "teamMember.7.name": "Omar AlMalky",
+      "teamMember.7.role": "Account Manager",
     world:
       "In a world that is always bustling about and concerned with immediate results, we stick to the belief that good work takes care and time. Every word is an investment in your brand, or your identity as an author. That is why we work on booking basis only and rarely take on rushed projects.",
     "whitebox.innerText1":
@@ -176,8 +176,8 @@ exports["en-US"] = {
 
   },
   "/Mauj": {
-    para1:
-      ""
+    firstTitle:
+      "Mauj defies the conventional.",
   }
 };
 
