@@ -30,13 +30,15 @@ export default function mauj() {
   
     return (
 
-        <> 
-        <NextSeo
-            title={locale !== "ar" ? "Mauzoun | Portfolio | Mauj" : "مَوْزوْن | أعمالنا | موج"}
-            description={locale !== "ar" ? "Mauzoun | Story" : "مَوْزوْن | قصتنا"}
-        />
+        // <> 
 
         <div>
+
+            <NextSeo
+                title={locale !== "ar" ? "Mauzoun | Portfolio | Mauj" : "مَوْزوْن | أعمالنا | موج"}
+                description={locale !== "ar" ? "Mauzoun | Portfolio | Mauj"   : "مَوْزوْن | أعمالنا| موج "}
+            />
+
             <Menu
                 backgroundColor={backgroundColor}
                 // textAnimationControls={textAnimationControls}
@@ -102,6 +104,6 @@ export default function mauj() {
         </div>
         </div>
         </div>
-        </>
+        // </>
     )
 }
