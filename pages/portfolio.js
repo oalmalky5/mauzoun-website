@@ -11,7 +11,7 @@ import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import WhiteBox from "../components/WhiteBox";
 import ContactButton from "../components/ContactButton";
-import mauk from './mauj'
+import mauj from './mauj'
 
 const backgroundColor = "#fbec9a";
 
