@@ -52,15 +52,15 @@ export default function mauj({ textAnimationControls }) {
                 <div className="intro">
                     <h1 className='mb-0'>{f("intro.title")}</h1>
                     <p>{f("intro.para")}</p>
-                    <iframe width="550" height="600" src="https://www.instagram.com/p/CKqoCo5FZHM/embed" frameborder="0"></iframe>
+                    <iframe className={styles.frame} width="550" height="600" src="https://www.instagram.com/p/CKqoCo5FZHM/embed" frameborder="0"></iframe>
                 </div>
 
                 <div className="meeting">
                     <h1>{f("meeting.title")}</h1>
                     <p>{f("meeting.para1")}</p>
-                    <iframe width="550" height="600" src="https://www.instagram.com/p/CKOLK8EF21d/embed" frameborder="0"></iframe>
+                    <iframe className={styles.frame} width="550" height="600" src="https://www.instagram.com/p/CKOLK8EF21d/embed" frameborder="0"></iframe>
                     <p>{f("meeting.para2")}</p>
-                    <iframe width="550" height="600" src="https://www.instagram.com/p/CEyWFKnJtrl/embed" frameborder="0"></iframe>
+                    <iframe className={styles.frame} width="550" height="600" src="https://www.instagram.com/p/CEyWFKnJtrl/embed" frameborder="0"></iframe>
                 </div>  
 
                 <div className={styles.tone}>
@@ -73,16 +73,16 @@ export default function mauj({ textAnimationControls }) {
                     </ul>
                     <p className={styles.toneFinal}>{f("tone.final")}</p>
                     <p>{f("tone.para1")}</p>
-                    <iframe width="550" height="600" src="https://www.instagram.com/p/CEyT727pKDG/embed" frameborder="0"></iframe>
+                    <iframe className={styles.frame} width="550" height="600" src="https://www.instagram.com/p/CEyT727pKDG/embed" frameborder="0"></iframe>
                     <p>{f("tone.para2")}</p>
-                    <iframe width="550" height="600" src="https://www.instagram.com/p/CNAf2o_lkT7/embed" frameborder="0"></iframe>
+                    <iframe className={styles.frame} width="550" height="600" src="https://www.instagram.com/p/CNAf2o_lkT7/embed" frameborder="0"></iframe>
                     <p>{f("tone.para3")}</p>
                 </div>
 
                 <div className={styles.brand}>
                     <h1>{f("brand.title")}</h1>
                     <p>{f("brand.para1")}</p>
-                    <iframe width="550" height="600" src="https://www.instagram.com/p/CL1O4W3Fk3P/embed" frameborder="0"></iframe>
+                    <iframe  className={styles.frame} width="550" height="600" src="https://www.instagram.com/p/CL1O4W3Fk3P/embed" frameborder="0"></iframe>
                     <p>{f("brand.para2")}</p>
                 </div>
 
