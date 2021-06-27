@@ -10,7 +10,6 @@ import formatJsxMessage from "../utils/formatJsxMessage";
 import WhiteBox from "../components/WhiteBox";
 import ContactButton from "../components/ContactButton";
 import styles from "../styles/mauj.module.scss";
-import InstagramEmbed from 'react-instagram-embed';
 
 const backgroundColor = "#fbec9a";
 
@@ -93,7 +92,8 @@ export default function mauj({ textAnimationControls }) {
                     <p>{f("testimony.para3")}</p>
                 </div>
             </div>
-
+            
+            <ContactButton />
             
         </div>
         </>
