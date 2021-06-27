@@ -4,13 +4,29 @@
 
 .tone .list {
     list-style: none;
-    margin-left: 0px;
+    margin-left: 140px;
 }
 
 .tone .toneFinal {
-    margin-left: 40px;
+    margin-left: 140px;
 }
 
-.frame {
-    margin-left: 75px;
+.instaGrid {
+    display: grid;
+	grid-template-columns: [col1] 33% [col2] 33% [col3] 33%;
+	grid-gap: 10px;
+	grid-template-rows: [row1] 47% [row2] 47%;
+}
+
+.title1 {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: "Alegreya";
+}
+
+
+.para1 {
+   font-size: 25px; 
+   font-family: "Alegreya";
+   font-weight: normal;
 }
