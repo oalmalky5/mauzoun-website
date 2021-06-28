@@ -68,7 +68,7 @@ export const ar = {
     content:
       "اقرأوا مدونات فريقنا المتعلقة بمشاريعنا والتي توثق عمليتنا في التفكير الإبددعي وتظهر أعمالنا النهائية بصورتها التي أحببناها.",
     "contentWriting.title": "كتابة المحتوى المهني",
-    "contentWriting.clients.1": "موج",
+    "contentWriting.clients.1": "<Link href='/mauj'>موج</Link>",
     "contentWriting.clients.2": "شفرة",
     "contentWriting.clients.3": "موسى آند بالم",
     "contentWriting.clients.4": "الهيئة السعودية للسياحة",

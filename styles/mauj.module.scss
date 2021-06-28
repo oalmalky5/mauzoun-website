@@ -49,3 +49,12 @@
 
 }
 
+.locale {
+    &.ar,
+    & .ar .title1 {
+      font-size: 35px;
+      font-family: "GE Dinar One";
+      background-color: red;
+
+    }
+  }  

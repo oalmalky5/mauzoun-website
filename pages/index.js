@@ -144,7 +144,7 @@ export default function LandingPage({
   return (
 <>
     <NextSeo
-    title="Welcome to Mauzoun"
+    title="Welcome to Mauzoun | أهلًا بكم في مَوْزوْن"
     description="Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia, specializing in copywriting, translation, scriptwriting, and book editing in both the Arabic and English."
   />
       <div className={styles.pageContainer}>

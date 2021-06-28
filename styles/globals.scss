@@ -28,7 +28,13 @@ body {
     .heading {
       font-family: "GE Dinar Two";
     }
+    & .title1 {
+      background-color: red;
+    }
+  
   }
+
+
 
   &.en-US,
   & .en-US {
