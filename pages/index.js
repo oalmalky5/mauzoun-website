@@ -147,6 +147,11 @@ export default function LandingPage({
     title="Welcome to Mauzoun | أهلًا بكم في مَوْزوْن"
     description="Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia, specializing in copywriting, translation, scriptwriting, and book editing in both the Arabic and English."
   />
+  <Head>
+    <title>Welcome to Mauzoun | أهلًا بكم في مَوْزوْن</title>
+  </Head>
+  
+
       <div className={styles.pageContainer}>
         {/* Kashidas organized from top left to bottom right */}
         <div
