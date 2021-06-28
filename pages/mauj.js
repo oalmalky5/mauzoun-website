@@ -88,10 +88,10 @@ export default function mauj({ textAnimationControls }) {
                 </div>
 
                 <div className={styles.testimony}>
-                    <span className={styles.title1}>{f("testimony.title")}</span>
-                    <span className={styles.para1}>{f("testimony.para1")}</span>
-                    <span className={styles.para1}>{f("testimony.para2")}</span>
-                    <span className={styles.para1}>{f("testimony.para3")}</span>
+                    <span className={styles.title1} className={styles.centerTitle}>{f("testimony.title")}</span>
+                    <span className={styles.para1} className={styles.center}>{f("testimony.para1")}</span>
+                    <span className={styles.para1} className={styles.center}>{f("testimony.para2")}</span>
+                    <span className={styles.para1} className={styles.center}>{f("testimony.para3")}</span>
                 </div>
             </div>
             
