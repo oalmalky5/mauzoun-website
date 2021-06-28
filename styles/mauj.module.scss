@@ -4,11 +4,16 @@
 
 .tone .list {
     list-style: none;
-    margin-left: 140px;
+    margin-left: 100px;
+    font-size: 25px;
+    font-family: "Alegreya";
 }
 
 .tone .toneFinal {
-    margin-left: 140px;
+    font-size: 25px;
+    font-family: "Alegreya";
+    margin-top: 50px;
+
 }
 
 .instaGrid {
@@ -19,7 +24,7 @@
 }
 
 .title1 {
-    font-size: 35px;
+    font-size: 37px;
     font-weight: bold;
     font-family: "Alegreya";
 }
@@ -27,6 +32,6 @@
 
 .para1 {
    font-size: 25px; 
-   font-family: "Alegreya";
-   font-weight: normal;
+   font-family: "Alegreya Sans";
+   font-weight: 300;
 }
