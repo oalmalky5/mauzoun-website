@@ -68,7 +68,6 @@ export default function mauj({ textAnimationControls }) {
                         <li>{f("tone.listElement4")}</li>
                         <li className={styles.toneFinal}>{f("tone.final")}</li>
                     </ul>
-                    // <span className={styles.toneFinal}>{f("tone.final")}</span>
                     <span className={styles.para1}>{f("tone.para1")}</span>
                     <span className={styles.para1}>{f("tone.para2")}</span>
 
