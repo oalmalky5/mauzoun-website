@@ -7,9 +7,9 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { NextSeo } from 'next-seo';
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
-import WhiteBox from "../components/WhiteBox";
 import ContactButton from "../components/ContactButton";
 import styles from "../styles/mauj.module.scss";
+import WhiteBox from "../components/WhiteBox";
 
 const backgroundColor = "#fbec9a";
 
@@ -26,6 +26,44 @@ export default function mauj({ textAnimationControls }) {
         ...options,
         
       });
+
+      const whiteBoxDecoratorsPositions = {
+        fromTop: [
+          {
+            preferredMargin: "520px",
+          },
+          {
+            preferredMargin: "537px",
+          },
+          {
+            marginTop: "10px",
+            preferredMargin: "550px",
+          },
+          {
+            marginTop: "15px",
+          },
+          {
+            marginTop: "32px",
+          },
+          {
+            marginTop: "49px",
+          },
+        ],
+        fromBottom: [
+          {
+            preferredMargin: "300px",
+          },
+          {
+            marginTop: "-50px",
+            preferredMargin: "735px",
+          },
+          {
+            marginTop: "-67px",
+            preferredMargin: "735px",
+          },
+        ],
+      };
+      
   
     return (
 
@@ -88,10 +126,17 @@ export default function mauj({ textAnimationControls }) {
                 </div>
 
                 <div className={styles.testimony}>
-                    <span className={styles.title1} className={styles.centerTitle}>{f("testimony.title")}</span>
-                    <span className={styles.para1} className={styles.center}>{f("testimony.para1")}</span>
-                    <span className={styles.para1} className={styles.center}>{f("testimony.para2")}</span>
-                    <span className={styles.para1} className={styles.center}>{f("testimony.para3")}</span>
+
+                        <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
+                            <span className={styles.title1} className={styles.centerTitle}>{f("testimony.title")}</span>
+                            <br/>
+                            <span className={styles.para1} className={styles.center}>{f("testimony.para1")}</span>
+                            <br/>
+                            <span className={styles.para2} className={styles.center}>{f("testimony.para2")}</span>
+                            <br/>
+                            <span className={styles.para3} className={styles.center}>{f("testimony.para3")}</span>
+                        </WhiteBox>
+        
                 </div>
             </div>
             
