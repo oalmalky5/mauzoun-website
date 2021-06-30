@@ -196,12 +196,14 @@ const Story = function ({ textAnimationControls }) {
             <div className={styles.gridContainer}>{getTeamMembers()}</div>
 
             {f("world")}
-
+            <div class={styles.totalWhiteBox}>
             <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
               <b>{f("whitebox.innerText1")}</b>
               <br />
               {f("whitebox.innerText2")}
             </WhiteBox>
+
+            </div>
 
             {f("workAspects")}
           </div>
