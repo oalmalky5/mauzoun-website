@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { gsap } from "gsap";
-import { NextSeo } from 'next-seo'; 
+import { NextSeo } from 'next-seo';
 import styles from "../styles/landingPage.module.scss";
 
 const kashidas = [
@@ -22,8 +22,10 @@ export default function LandingPage({
   textAnimationControls,
 }) {
   const router = useRouter();
+  const [kashidaOut, setKashidaOut] = useState(true)
 
   React.useEffect(() => {
+    // router.events.on('')
     router.prefetch("/en-US/home");
     router.prefetch("/ar/home");
   }, []);
@@ -33,8 +35,11 @@ export default function LandingPage({
     //   initial: "hidden",
     //   animate: "visible",
     // });
+    setKashidaOut(!kashidaOut)
     Cookies.set("NEXT_LOCALE", locale);
-    router.push(`/${locale}/home`);
+    setTimeout(() => {
+      router.push(`/${locale}/home`);
+    }, 200)
     textAnimationControls.set("instantlyHidden");
   };
 
@@ -142,31 +147,43 @@ export default function LandingPage({
   }, []);
 
   return (
-<>
-    <NextSeo
-    title="Welcome to Mauzoun | أهلًا بكم في مَوْزوْن"
-    description="Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia, specializing in copywriting, translation, scriptwriting, and book editing in both the Arabic and English."
-  />
-  
+    <>
+      <NextSeo
+        title="Welcome to Mauzoun | أهلًا بكم في مَوْزوْن"
+        description="Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia, specializing in copywriting, translation, scriptwriting, and book editing in both the Arabic and English."
+      />
+
 
       <div className={styles.pageContainer}>
         {/* Kashidas organized from top left to bottom right */}
-        <div
-          className={"transition_dot"}
-          style={{
-            position: "relative",
-            display: "flex",
-            alignItems: "stretch",
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          {kashidas.map((e, i) => buildKashida(i + 1, e))}
-        </div>
+        <AnimatePresence exitBeforeEnter>
+          {kashidaOut &&
+            <motion.div
+              layoutId='kashidasLayout'
+              initial={{ right: '-1000px' }}
+              animate={{ right: '0px' }}
+              exit={{ right: '-1000px' }}
+              transition={{ duration: 0.3 }}
+              className={"transition_dot"}
+              style={{
+                position: "absolute",
+                display: "flex",
+                alignItems: "stretch",
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              {kashidas.map((e, i) => buildKashida(i + 1, e))}
+            </motion.div>
+          }
+        </AnimatePresence>
 
         <div />
 
-        <div className={styles.mainPanel + " background"}>
+        <motion.div
+          layoutId='backgroundLayout'
+          transition={{ duration: 0.5 }}
+          className={styles.mainPanel + " background"}>
           <img
             className={styles.logo + " logo"}
             src='https://i.imgur.com/HjDbXtR.png'
@@ -184,7 +201,7 @@ export default function LandingPage({
               bottom: 0,
               justifyContent: "center",
             }}
-          >
+            >
             <div dir='rtl'>
               <p style={{ fontFamily: "GE Dinar Two" }}>
                 عشق للكلمات وفريق شغوف:
@@ -225,7 +242,7 @@ export default function LandingPage({
               width='270px'
             />
           </div>
-        </div>
+        </motion.div>
         <div />
       </div>
     </>
