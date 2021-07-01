@@ -127,15 +127,17 @@ export default function mauj({ textAnimationControls }) {
 
                 <div className={styles.testimony}>
 
-                        <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                            <span className={styles.title1} className={styles.centerTitle}>{f("testimony.title")}</span>
-                            <br/>
-                            <span className={styles.para1} className={styles.center}>{f("testimony.para1")}</span>
-                            <br/>
-                            <span className={styles.para2} className={styles.center}>{f("testimony.para2")}</span>
-                            <br/>
-                            <span className={styles.para3} className={styles.center}>{f("testimony.para3")}</span>
-                        </WhiteBox>
+                        <span className={styles.title1} className={styles.centerTitle}>{f("testimony.title")}</span>
+                        <div className={styles.totalWhiteBox}>
+                          <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
+                              <br/>
+                              <span className={styles.para1} className={styles.center}>{f("testimony.para1")}</span>
+                              <br/>
+                              <span className={styles.para2} className={styles.center}>{f("testimony.para2")}</span>
+                              <br/>
+                              <span className={styles.para3} className={styles.center}>{f("testimony.para3")}</span>
+                          </WhiteBox>
+                        </div>
         
                 </div>
             </div>

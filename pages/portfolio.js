@@ -149,59 +149,60 @@ export default function portfolio({ textAnimationControls }) {
             {f("creativeWriting.title")}
           </h3>
           {getClients("creativeWriting")}
+          <div className={styles.totalWhiteBox}>
+            <WhiteBox
+              style={{ marginTop: "50px" }}
+              decoratorsPositions={whiteBoxDecoratorsPositions}
+            >
+              {f("clients")}
 
-          <WhiteBox
-            style={{ marginTop: "50px" }}
-            decoratorsPositions={whiteBoxDecoratorsPositions}
-          >
-            {f("clients")}
-
-            <div className={styles.carousel} style={{ direction: "initial" }}>
-              <Carousel
-                showStatus={false}
-                showIndicators={false}
-                showThumbs={false}
-                renderArrowPrev={(clickHandler, hasPrev) =>
-                  hasPrev && (
-                    <div
-                      className={styles.arrowContainer}
-                      style={{ [locale === "en-US" ? preferredSide : oppositeSide]: 0 }}
-                      onClick={clickHandler}
-                    >
+              <div className={styles.carousel} style={{ direction: "initial" }}>
+                <Carousel
+                  showStatus={false}
+                  showIndicators={false}
+                  showThumbs={false}
+                  renderArrowPrev={(clickHandler, hasPrev) =>
+                    hasPrev && (
                       <div
-                        className={styles.arrow}
+                        className={styles.arrowContainer}
                         style={{ [locale === "en-US" ? preferredSide : oppositeSide]: 0 }}
+                        onClick={clickHandler}
                       >
-                        <BsChevronLeft className={styles.chevron} />
+                        <div
+                          className={styles.arrow}
+                          style={{ [locale === "en-US" ? preferredSide : oppositeSide]: 0 }}
+                        >
+                          <BsChevronLeft className={styles.chevron} />
 
+                        </div>
                       </div>
-                    </div>
-                  )
-                }
-                renderArrowNext={(clickHandler, hasNext) =>
-                  hasNext && (
-                    <div
-                      className={styles.arrowContainer}
-                      style={{ [locale === "en-US" ? oppositeSide : preferredSide]: 0 }}
-                      onClick={clickHandler}
-                    >
+                    )
+                  }
+                  renderArrowNext={(clickHandler, hasNext) =>
+                    hasNext && (
                       <div
-                        className={styles.arrow}
+                        className={styles.arrowContainer}
                         style={{ [locale === "en-US" ? oppositeSide : preferredSide]: 0 }}
+                        onClick={clickHandler}
                       >
-                        <BsChevronRight className={styles.chevron} />
+                        <div
+                          className={styles.arrow}
+                          style={{ [locale === "en-US" ? oppositeSide : preferredSide]: 0 }}
+                        >
+                          <BsChevronRight className={styles.chevron} />
 
+                        </div>
                       </div>
-                    </div>
-                  )
-                }
-              >
-                {clientLogos.map((e) => (
-                  <img src={e} priority='true' />
-                ))}
-              </Carousel>
-            </div>
-          </WhiteBox>
+                    )
+                  }
+                >
+                  {clientLogos.map((e) => (
+                    <img src={e} priority='true' />
+                  ))}
+                </Carousel>
+              </div>
+            </WhiteBox>
+          </div>
         </div>
 
         <ContactButton />
