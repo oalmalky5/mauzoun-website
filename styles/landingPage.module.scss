@@ -1,7 +1,7 @@
 @use "mixins" as *;
 
 .kashida {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   transform: scale(0.5, 0.5);
 
