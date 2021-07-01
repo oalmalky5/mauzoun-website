@@ -89,7 +89,8 @@ export default function LandingPage({
           ref={kashidaRefs[id - 1]}
           className={styles.kashida}
           style={{
-            transformOrigin: position.left ? "left top" : "right top",
+              transformOrigin: position.left ? "left top" : "right top",
+            position: 'absolute',
             ...position,
           }}
           src={`/landingPage/Kashida ${id}.png`}
@@ -156,7 +157,7 @@ export default function LandingPage({
 
       <div className={styles.pageContainer}>
         {/* Kashidas organized from top left to bottom right */}
-        <AnimatePresence exitBeforeEnter>
+        {/* <AnimatePresence exitBeforeEnter>
           {kashidaOut &&
             <motion.div
               layoutId='kashidasLayout'
@@ -176,7 +177,7 @@ export default function LandingPage({
               {kashidas.map((e, i) => buildKashida(i + 1, e))}
             </motion.div>
           }
-        </AnimatePresence>
+        </AnimatePresence> */}
 
         <div />
 
@@ -201,7 +202,7 @@ export default function LandingPage({
               bottom: 0,
               justifyContent: "center",
             }}
-            >
+          >
             <div dir='rtl'>
               <p style={{ fontFamily: "GE Dinar Two" }}>
                 عشق للكلمات وفريق شغوف:
@@ -242,6 +243,22 @@ export default function LandingPage({
               width='270px'
             />
           </div>
+        </motion.div>
+        <motion.div
+          layoutId="layoutDiv2"
+          initial={{}}
+          transition={{ duration: 0.5 }}
+          style={{
+
+            // top: 0,
+            // position: "absolute",
+            width: '100%',
+            height: '100%',
+
+          }}
+        >
+          {kashidas.map((e, i) => buildKashida(i + 1, e))}
+
         </motion.div>
         <div />
       </div>

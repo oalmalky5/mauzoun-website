@@ -9,8 +9,21 @@ import { NextSeo } from 'next-seo';
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
+import styles from "../styles/landingPage.module.scss";
+// import Kashida from "../components/kashida";
+
 
 const backgroundColor = "#f8d952";
+const kashidas = [
+  { top: "15%", left: "11%" },
+  { top: "14%", right: "11%" },
+  { top: "25%", left: "35%" },
+  { top: "30%", right: "24%" },
+  { top: "65%", left: "18%" },
+  { top: "65%", right: "20%" },
+  { top: "80%", left: "6%" },
+  { top: "85%", right: "32%" },
+];
 
 export default function Home({ updatePageTransition, textAnimationControls }) {
   const locale = useRouter().locale;
@@ -18,9 +31,15 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
   // initial={{ left: '-5500px' }}
   // animate={{ left: 0 }}
   let initial = { left: '-5500px' }
+  let animateKashidaOut = {
+    right: '-5000px'
+  }
   // animate={{ right: 0 }}
   if (locale == 'ar') {
     initial = { right: '-5500px' }
+    animateKashidaOut = {
+      left: '-5000px'
+    }
   }
 
   const intl = useIntl();
@@ -37,6 +56,66 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
   const [isWorkVisible, setIsWorkVisible] = useState(false);
 
   React.useEffect(() => updatePageTransition("default"), []);
+
+  const [kashidaRefs, setKashidaRefs] = React.useState([]);
+  React.useEffect(() => {
+    // add or remove refs
+    setKashidaRefs((kashidaRefs) =>
+      Array(kashidas.length)
+        .fill()
+        .map((_, i) => kashidaRefs[i] || React.createRef())
+    );
+  }, [kashidas.length]);
+
+  const updateKashidaHoverState = (e, isHovered) => {
+    const id = e.target?.id;
+    if (!id) return;
+
+    if (isHovered) {
+      e.target.src = `/landingPage/${id}.png`;
+      e.target.style.marginTop =
+        ((e.target.clientHeight / 2) * -0.1).toString() + "px";
+
+      if (e.target.style.left) {
+        e.target.style.marginLeft =
+          ((e.target.clientWidth / 2) * -0.1).toString() + "px";
+      } else {
+        e.target.style.marginRight =
+          ((e.target.clientWidth / 2) * -0.1).toString() + "px";
+      }
+    } else {
+      e.target.src = `/landingPage/Kashida ${id}.png`;
+      e.target.style.marginTop = 0;
+      e.target.style.marginLeft = 0;
+      e.target.style.marginRight = 0;
+    }
+  };
+
+  const buildKashida = (id, position) => {
+    return (
+      <div key={id}>
+        <img
+          src={`/landingPage/${id}.png`}
+          style={{ display: "none", position: "absolute" }}
+        />
+        <img
+          id={id}
+          ref={kashidaRefs[id - 1]}
+          className={styles.kashida}
+          style={{
+            position: 'absolute',
+            transformOrigin: position.left ? "left top" : "right top",
+            ...position,
+          }}
+          src={`/landingPage/Kashida ${id}.png`}
+          onMouseEnter={(e) => updateKashidaHoverState(e, true)}
+          onMouseLeave={(e) => updateKashidaHoverState(e, false)}
+        />
+      </div>
+    );
+  };
+
+
 
   return (
     <>
@@ -73,7 +152,7 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
             height: "100%",
             zIndex: 10,
           }}
-         >
+        >
 
 
           <Menu
@@ -95,7 +174,7 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
               height='400px'
               layout='fixed'
               priority='true'
-              src='/team/Website-photo-01.png'
+              src='/team/website-photo-01.png'
               alt='an image of an office'
             />
 
@@ -188,6 +267,21 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
             )}
           </motion.div>
           <ContactButton />
+          <motion.div
+            layoutId="layoutDiv2"
+            initial={{}}
+            animate={{}}
+            transition={{ duration: 1.1 }}
+            style={{
+              ...animateKashidaOut,
+              position: "absolute",
+              width: '100%',
+              height: '100%',
+            }}
+          >
+            {/* <Kashida /> */}
+            {kashidas.map((e, i) => buildKashida(i + 1, e))}
+          </motion.div>
         </div>
       </div>
     </>
