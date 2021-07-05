@@ -128,22 +128,24 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
 
   return (
     <motion.div
-      layoutId='backgroundLayout'
-      transition={{ duration: 0.5 }}
-
+      layoutId='menuLayout'
       className={styles.sidenav + " navbar"}
-      style={{ backgroundColor }}
+      transition={{duration: 0.6}}
+      style={{
+        backgroundColor: '#f8d952'
+      }}
     // layout='position'
     >
       {" "}
       <div className='animationFade'>
         <Link href='/'>
-          <img
+          <motion.img
             src='https://i.imgur.com/HjDbXtR.png'
             alt='Mauzoun logo'
             className={styles.logo}
           // transition={logoTransition}
-          // layoutId="logo"
+            layoutId="imageLogo"
+            // layoutId="logo"
           />
         </Link>
 

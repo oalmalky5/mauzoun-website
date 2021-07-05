@@ -6,6 +6,7 @@ import styles from "../styles/contact.module.scss";
 import Contact from "../components/Contact";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import { motion } from "framer-motion";
+import CircleAnimation from "./CircleAnimation";
 
 export default function ContactButton({
   messageId = "contactPrompt",
@@ -24,7 +25,19 @@ export default function ContactButton({
       <div className={styles.pageContainer}>
         <div className={styles.buttonSpacer} />
         <div className={styles.buttonContainer}>
-          <motion.button
+          <div
+            className={styles.contactButton + " heading"}
+            style={{ backgroundColor: isHovered ? "#f8d952" : "#ffffff" }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <CircleAnimation
+              content={isHovered ? f(messageId + ".hovered") : f(messageId)}
+              size={230}
+              counter={false}
+              percents={100} />
+          </div>
+          {/* <motion.button
             className={styles.contactButton + " heading"}
             onClick={() => {
               setIsHovered(false);
@@ -37,6 +50,7 @@ export default function ContactButton({
           >
             {isHovered ? f(messageId + ".hovered") : f(messageId)}
           </motion.button>
+         */}
         </div>
       </div>
 

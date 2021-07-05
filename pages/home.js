@@ -9,6 +9,9 @@ import { NextSeo } from 'next-seo';
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
+import styles from "../styles/landingPage.module.scss";
+// import Kashida from "../components/kashida";
+
 
 const backgroundColor = "#f8d952";
 
@@ -18,9 +21,15 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
   // initial={{ left: '-5500px' }}
   // animate={{ left: 0 }}
   let initial = { left: '-5500px' }
+  let animateKashidaOut = {
+    right: '-5000px'
+  }
   // animate={{ right: 0 }}
   if (locale == 'ar') {
     initial = { right: '-5500px' }
+    animateKashidaOut = {
+      left: '-5000px'
+    }
   }
 
   const intl = useIntl();
@@ -37,7 +46,6 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
   const [isWorkVisible, setIsWorkVisible] = useState(false);
 
   React.useEffect(() => updatePageTransition("default"), []);
-
   return (
     <>
       <NextSeo
@@ -46,15 +54,28 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
       />
       <div
         style={{
-          position: "fixed",
-          display: "flex",
-          alignItems: "stretch",
-          width: "100%",
-          height: "100%",
-          overflowX: "hidden",
-          // overflowY: "scroll",
+          // position: "fixed",
+          // display: "flex",
+          // alignItems: "stretch",
+          // width: "100%",
+          // height: "100%",
+          // overflowX: "hidden",
+          // // overflowY: "scroll",
         }}
       >
+
+        <motion.div
+          layoutId="transitionLayout"
+          transition={{
+            duration: 0.6
+          }}
+          style={{
+            position: 'fixed',
+            backgroundColor: '#f8d952',
+            width: '430px',
+            height: "100%",
+            zIndex: -1,
+          }} />
         {/* <div
         className='test-home'
         style={{
@@ -65,26 +86,30 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
           zIndex: -1,
         }}
       ></div> */}
-        <div
-          className='bg-animation-home'
-          style={{
-            position: "relative",
-            width: "100%",
-            height: "100%",
-            zIndex: 10,
-          }}
-         >
 
-
+        <motion.div
+          initial={{ opacity: 0, }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.6,
+          }}>
           <Menu
             backgroundColor={backgroundColor}
             textAnimationControls={textAnimationControls}
           />
-
+        </motion.div>
+        <motion.div
+          layoutId='backgroundLayout'
+          initial={{ opacity: 0, }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.6,
+          }}
+        >
           <motion.div
-            initial={initial}
-            animate={{ right: 0, left: 0 }}
-            transition={{ type: 'tween', duration: 0.3 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
             className='container' style={{
               backgroundColor,
             }}>
@@ -95,7 +120,7 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
               height='400px'
               layout='fixed'
               priority='true'
-              src='/team/Website-photo-01.png'
+              src='/team/website-photo-01.png'
               alt='an image of an office'
             />
 
@@ -188,7 +213,7 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
             )}
           </motion.div>
           <ContactButton />
-        </div>
+        </motion.div>
       </div>
     </>
   );

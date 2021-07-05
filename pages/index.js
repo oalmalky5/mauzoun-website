@@ -5,24 +5,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import { gsap } from "gsap";
 import { NextSeo } from 'next-seo';
 import styles from "../styles/landingPage.module.scss";
-
-const kashidas = [
-  { top: "15%", left: "11%" },
-  { top: "14%", right: "11%" },
-  { top: "25%", left: "35%" },
-  { top: "30%", right: "24%" },
-  { top: "65%", left: "18%" },
-  { top: "65%", right: "20%" },
-  { top: "80%", left: "6%" },
-  { top: "85%", right: "32%" },
-];
+import Kashida from "../components/kashida";
 
 export default function LandingPage({
   updatePageTransition,
   textAnimationControls,
 }) {
   const router = useRouter();
-  const [kashidaOut, setKashidaOut] = useState(true)
+  const [pageOut, setPageOut] = useState(true)
+  const [arSelected, setArSelected] = useState('en')
 
   React.useEffect(() => {
     // router.events.on('')
@@ -35,70 +26,14 @@ export default function LandingPage({
     //   initial: "hidden",
     //   animate: "visible",
     // });
-    setKashidaOut(!kashidaOut)
     Cookies.set("NEXT_LOCALE", locale);
+    setPageOut(!pageOut)
     setTimeout(() => {
       router.push(`/${locale}/home`);
-    }, 200)
+    }, 600)
     textAnimationControls.set("instantlyHidden");
   };
 
-  const [kashidaRefs, setKashidaRefs] = React.useState([]);
-  React.useEffect(() => {
-    // add or remove refs
-    setKashidaRefs((kashidaRefs) =>
-      Array(kashidas.length)
-        .fill()
-        .map((_, i) => kashidaRefs[i] || React.createRef())
-    );
-  }, [kashidas.length]);
-
-  const updateKashidaHoverState = (e, isHovered) => {
-    const id = e.target?.id;
-    if (!id) return;
-
-    if (isHovered) {
-      e.target.src = `/landingPage/${id}.png`;
-      e.target.style.marginTop =
-        ((e.target.clientHeight / 2) * -0.1).toString() + "px";
-
-      if (e.target.style.left) {
-        e.target.style.marginLeft =
-          ((e.target.clientWidth / 2) * -0.1).toString() + "px";
-      } else {
-        e.target.style.marginRight =
-          ((e.target.clientWidth / 2) * -0.1).toString() + "px";
-      }
-    } else {
-      e.target.src = `/landingPage/Kashida ${id}.png`;
-      e.target.style.marginTop = 0;
-      e.target.style.marginLeft = 0;
-      e.target.style.marginRight = 0;
-    }
-  };
-
-  const buildKashida = (id, position) => {
-    return (
-      <div key={id}>
-        <img
-          src={`/landingPage/${id}.png`}
-          style={{ display: "none", position: "absolute" }}
-        />
-        <img
-          id={id}
-          ref={kashidaRefs[id - 1]}
-          className={styles.kashida}
-          style={{
-            transformOrigin: position.left ? "left top" : "right top",
-            ...position,
-          }}
-          src={`/landingPage/Kashida ${id}.png`}
-          onMouseEnter={(e) => updateKashidaHoverState(e, true)}
-          onMouseLeave={(e) => updateKashidaHoverState(e, false)}
-        />
-      </div>
-    );
-  };
 
   const handleMovePage = React.useCallback((click) => {
     //TODO : uncomment this part of code to enable animation
@@ -140,9 +75,15 @@ export default function LandingPage({
     // }, 700);
     //TODO : comment this part of code when animation enabled
     if (click === 1) {
-      changeLocale("ar");
+      setArSelected('ar')
+      setTimeout(() => {
+        changeLocale("ar");
+      }, 100)
     } else if (click === 2) {
-      changeLocale("en-US");
+      setArSelected('en')
+      setTimeout(() => {
+        changeLocale("en-US");
+      }, 100)
     }
   }, []);
 
@@ -152,97 +93,161 @@ export default function LandingPage({
         title="Welcome to Mauzoun | أهلًا بكم في مَوْزوْن"
         description="Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia, specializing in copywriting, translation, scriptwriting, and book editing in both the Arabic and English."
       />
+      {/* {!pageOut && <button
+        style={{
+          position: 'fixed'
+        }}
+        onClick={() => {
+          setPageOut(!pageOut)
+        }}>Back</button>
+      } */}
 
+      <AnimatePresence>
+        {pageOut && <motion.div
+          className={styles.fixedStyle}
+          layoutId='backgroundLayout'
+          initial={{ left: 0, transform: 'translate(-50%, 0)', }}
+          animate={{ left: '50%', transform: 'translate(-50%, 0) !important' }}
+          transition={{ duration: 0.6 }}
+          exit={{ left: arSelected === 'ar' ? '100%' : 0, width: '1000px' }} //eng transition
+          style={{
+            position: "fixed",
+            left: '50%',
+            height: '100%',
+            width: '50%',
+            transform: 'translate(-50%, 0)',
+            // transformOrigin: 'none',
+            backgroundColor: '#f8d952'
 
-      <div className={styles.pageContainer}>
-        {/* Kashidas organized from top left to bottom right */}
-        <AnimatePresence exitBeforeEnter>
-          {kashidaOut &&
-            <motion.div
-              layoutId='kashidasLayout'
-              initial={{ right: '-1000px' }}
-              animate={{ right: '0px' }}
-              exit={{ right: '-1000px' }}
-              transition={{ duration: 0.3 }}
-              className={"transition_dot"}
+            // 
+          }} />
+        }
+      </AnimatePresence>
+      {!pageOut && <motion.div
+        layoutId="transitionLayout"
+        className={styles.fixedStyle}
+        animate={{ opacity: [0, 0, 0, 0.5, 1] }}
+        transition={{ duration: 0.3 }}
+        // exit={{ left: 0, width: '1000px' }}
+        style={{
+          position: "fixed",
+          left: arSelected === 'ar'? '100%' : 0,
+          height: '100%',
+          width: '70%',
+          backgroundColor: '#f8d952'
+        }} />}
+      <div
+        className={styles.pageContainer}>
+        <div
+          className={styles.mainPanel}
+        >
+          <div>
+            <AnimatePresence>
+              {pageOut && <motion.img
+                layoutId="imageLogo"
+                initial={{ left: 0 }}
+                animate={{ left: '50%', transform: 'translate(-50%, 0)' }}
+                transition={{ duration: 0.6 }}
+                exit={{ left: arSelected === 'ar' ? '94%' : '10%' }}
+                className={styles.logo + ' ' + styles.fixedStyle}
+                style={{
+                  position: "absolute"
+                }}
+                src='https://i.imgur.com/HjDbXtR.png'
+                alt='Mauzoun logo'
+              />}
+            </AnimatePresence>
+          </div>
+          <AnimatePresence>
+            {pageOut && <motion.div
+              initial={{ right: '-240%' }}
+              animate={{ right: 0 }}
+              transition={{ duration: 0.6 }}
+              exit={{ right: arSelected === 'ar' ? '230%' : '-240%' }}
+
               style={{
-                position: "absolute",
+                // width: "100%",
                 display: "flex",
-                alignItems: "stretch",
-                width: "100%",
-                height: "100%",
+                flexDirection: "column",
+                alignItems: "center",
+                position: "relative",
+                overflow: 'hidden',
+                // height: "calc(100vh - 150px)",
+                // bottom: 0,
+                zIndex: 5,
+                textAlign: 'center',
+                justifyContent: "center",
               }}
             >
-              {kashidas.map((e, i) => buildKashida(i + 1, e))}
-            </motion.div>
-          }
-        </AnimatePresence>
+              <div dir='rtl'>
+                <p style={{ fontFamily: "GE Dinar Two" }}>
+                  عشق للكلمات وفريق شغوف:
+                  <br />
+                  <b>أهلاً بكم في موزون.</b>
+                </p>
+                <button
+                  className={styles.languageButton}
+                  style={{ fontFamily: "GE Dinar One", marginBottom: "30px" }}
+                  onClick={() => {
+                    handleMovePage(1);
+                  }}
+                >
+                  <b>اضغطوا هنا</b> لبدء قصتكم بالعربية.
+                </button>
+              </div>
 
-        <div />
-
-        <motion.div
-          layoutId='backgroundLayout'
-          transition={{ duration: 0.5 }}
-          className={styles.mainPanel + " background"}>
-          <img
-            className={styles.logo + " logo"}
-            src='https://i.imgur.com/HjDbXtR.png'
-            alt='Mauzoun logo'
-          />
-          <div
-            className='main'
-            style={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              position: "absolute",
-              height: "calc(100vh - 150px)",
-              bottom: 0,
-              justifyContent: "center",
-            }}
-            >
-            <div dir='rtl'>
-              <p style={{ fontFamily: "GE Dinar Two" }}>
-                عشق للكلمات وفريق شغوف:
+              <p style={{ fontFamily: "Alegreya" }}>
+                ‫‪A‬‬ ‫‪love‬‬ ‫‪for‬‬ ‫‪words‬‬ ‫‪and‬‬ ‫‪a‬‬ ‫‪team‬‬ ‫‪with‬‬
+                ‫‪fervor:‬‬
                 <br />
-                <b>أهلاً بكم في موزون.</b>
+                <b>‫‪welcome‬‬ ‫‪to‬‬ ‫‪Mauzoun.‬‬</b>
               </p>
               <button
                 className={styles.languageButton}
-                style={{ fontFamily: "GE Dinar One", marginBottom: "30px" }}
+                style={{ fontFamily: "Alegreya Sans" }}
                 onClick={() => {
-                  handleMovePage(1);
+                  handleMovePage(2);
                 }}
               >
-                <b>اضغطوا هنا</b> لبدء قصتكم بالعربية.
+                <b>‫‪Click‬‬ ‫‪here</b>‬‬ ‫‪to‬‬ ‫‪begin‬‬ ‫‪your‬‬ ‫‪story‬‬
+                ‫‪in‬‬ ‫‪English.‬‬
               </button>
-            </div>
 
-            <p style={{ fontFamily: "Alegreya" }}>
-              ‫‪A‬‬ ‫‪love‬‬ ‫‪for‬‬ ‫‪words‬‬ ‫‪and‬‬ ‫‪a‬‬ ‫‪team‬‬ ‫‪with‬‬
-              ‫‪fervor:‬‬
-              <br />
-              <b>‫‪welcome‬‬ ‫‪to‬‬ ‫‪Mauzoun.‬‬</b>
-            </p>
-            <button
-              className={styles.languageButton}
-              style={{ fontFamily: "Alegreya Sans" }}
-              onClick={() => {
-                handleMovePage(2);
-              }}
-            >
-              <b>‫‪Click‬‬ ‫‪here</b>‬‬ ‫‪to‬‬ ‫‪begin‬‬ ‫‪your‬‬ ‫‪story‬‬
-              ‫‪in‬‬ ‫‪English.‬‬
-            </button>
+            </motion.div>}
+          </AnimatePresence>
+          <AnimatePresence>
+            {pageOut &&
+              <motion.img
 
-            <img
-              className={styles.bottomKashida}
-              src={`/landingPage/Kashida bottom.png`}
-              width='270px'
-            />
-          </div>
-        </motion.div>
+                initial={{ right: '-1449px' }}
+                animate={{ right: 0 }}
+                transition={{ duration: 0.6 }}
+                exit={{ right: arSelected === 'ar' ? '230%' : '-1449px' }}
+                style={{
+                  position: 'relative'
+                }}
+                className={styles.bottomKashida}
+                src={`/landingPage/Kashida bottom.png`}
+                width='270px'
+              />
+            }
+          </AnimatePresence>
+        </div>
+        <AnimatePresence>
+          {pageOut && <motion.div
+            initial={{ right: '-1449px' }}
+            animate={{ right: 0 }}
+            transition={{ duration: 0.6 }}
+            style={{
+              position: 'fixed',
+              width: '100%',
+              height: '100%'
+            }}
+            exit={{ right: arSelected === 'ar' ? '230%' : '-1449px' }}
+          >
+            <Kashida />
+          </motion.div>}
+        </AnimatePresence>
         <div />
       </div>
     </>
