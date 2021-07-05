@@ -9,28 +9,11 @@ import { NextSeo } from 'next-seo';
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
-import styles from "../styles/landingPage.module.scss";
-// import Kashida from "../components/kashida";
-
 
 const backgroundColor = "#f8d952";
 
 export default function Home({ updatePageTransition, textAnimationControls }) {
   const locale = useRouter().locale;
-
-  // initial={{ left: '-5500px' }}
-  // animate={{ left: 0 }}
-  let initial = { left: '-5500px' }
-  let animateKashidaOut = {
-    right: '-5000px'
-  }
-  // animate={{ right: 0 }}
-  if (locale == 'ar') {
-    initial = { right: '-5500px' }
-    animateKashidaOut = {
-      left: '-5000px'
-    }
-  }
 
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, locale, id, {
@@ -131,88 +114,45 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
             </Link>
             <span className='mt-0'>{f("story.content")}</span>
 
-            {/* Services */}
-            {!areServicesVisible ? (
-              <div
-                className='content-wrapper'
-                onClick={() => setAreServicesVisible(true)}
-              >
-                <h5>{f("services.intro")}</h5>
-                <span className='reveal-icon'>
-                  <BsChevronDown className='reveal-icon' />
-                </span>
-              </div>
-            ) : (
-              <div className='inline unwrapped-content'>
-                <hr />
-                <Link href='/services'>
-                  <h5 style={{ cursor: "pointer" }}>{f("services.intro")}</h5>
-                </Link>
-                {f("services.content")}
-                <hr />
-              </div>
-            )}
 
-            {/* Approach */}
-            {!isApproachVisible ? (
-              <div
-                className='content-wrapper'
-                onClick={() => setIsApproachVisible(true)}
-              >
-                <h5>{f("approach.intro")}</h5>
-                <span className='reveal-icon'>
-                  <BsChevronDown className='reveal-icon' />
-                </span>
-              </div>
-            ) : (
-              <div className='inline unwrapped-content'>
-                {!areServicesVisible && <hr />}
-                <h5>{f("approach.intro")}</h5>
-                {f("approach.content")}
-                <hr />
-              </div>
-            )}
+            <Menu
+              backgroundColor={backgroundColor}
+              textAnimationControls={textAnimationControls}
+            />
 
-            {/* Projects */}
-            {!areProjectsVisible ? (
-              <div
-                className='content-wrapper'
-                onClick={() => setAreProjectsVisible(true)}
-              >
-                <h5>{f("projects.intro")}</h5>
-                <span className='reveal-icon'>
-                  <BsChevronDown className='reveal-icon' />
-                </span>
-              </div>
-            ) : (
-              <div className='inline unwrapped-content'>
-                {!isApproachVisible && <hr />}
-                <h5>{f("projects.intro")}</h5>
-                {f("projects.content")}
-                <hr />
-              </div>
-            )}
+            <div className='container' style={{ backgroundColor }}>
+              <h1>{f("title")}</h1>
+              {f("summary")}
+              <img
+                width='800px'
+                height='400px'
+                layout='fixed'
+                priority='true'
+                src='/team/Website-photo-01.png'
+                alt='an image of an office'
+              />
 
-            {/* Work */}
-            {!isWorkVisible ? (
-              <div
-                className='content-wrapper'
-                onClick={() => setIsWorkVisible(true)}
-              >
-                <h5>{f("work.intro")}</h5>
-                <span className='reveal-icon'>
-                  <BsChevronDown className='reveal-icon' />
-                </span>
-              </div>
-            ) : (
-              <div className='inline unwrapped-content'>
-                {!areProjectsVisible && <hr />}
-                <h5>{f("work.intro")}</h5>
-                {f("work.content")}
-              </div>
-            )}
+              {/* Work */}
+              {!isWorkVisible ? (
+                <div
+                  className='content-wrapper'
+                  onClick={() => setIsWorkVisible(true)}
+                >
+                  <h5>{f("work.intro")}</h5>
+                  <span className='reveal-icon'>
+                    <BsChevronDown className='reveal-icon' />
+                  </span>
+                </div>
+              ) : (
+                <div className='inline unwrapped-content'>
+                  {!areProjectsVisible && <hr />}
+                  <h5>{f("work.intro")}</h5>
+                  {f("work.content")}
+                </div>
+              )}
           </motion.div>
-          <ContactButton />
+            <ContactButton />
+          </motion.div>
         </motion.div>
       </div>
     </>

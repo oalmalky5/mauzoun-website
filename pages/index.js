@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { gsap } from "gsap";
-import { NextSeo } from 'next-seo';
+import { NextSeo } from 'next-seo'; 
 import styles from "../styles/landingPage.module.scss";
 import Kashida from "../components/kashida";
 
@@ -16,7 +16,6 @@ export default function LandingPage({
   const [arSelected, setArSelected] = useState('en')
 
   React.useEffect(() => {
-    // router.events.on('')
     router.prefetch("/en-US/home");
     router.prefetch("/ar/home");
   }, []);
