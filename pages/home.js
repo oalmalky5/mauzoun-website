@@ -14,16 +14,6 @@ import styles from "../styles/landingPage.module.scss";
 
 
 const backgroundColor = "#f8d952";
-const kashidas = [
-  { top: "15%", left: "11%" },
-  { top: "14%", right: "11%" },
-  { top: "25%", left: "35%" },
-  { top: "30%", right: "24%" },
-  { top: "65%", left: "18%" },
-  { top: "65%", right: "20%" },
-  { top: "80%", left: "6%" },
-  { top: "85%", right: "32%" },
-];
 
 export default function Home({ updatePageTransition, textAnimationControls }) {
   const locale = useRouter().locale;
@@ -56,67 +46,6 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
   const [isWorkVisible, setIsWorkVisible] = useState(false);
 
   React.useEffect(() => updatePageTransition("default"), []);
-
-  const [kashidaRefs, setKashidaRefs] = React.useState([]);
-  React.useEffect(() => {
-    // add or remove refs
-    setKashidaRefs((kashidaRefs) =>
-      Array(kashidas.length)
-        .fill()
-        .map((_, i) => kashidaRefs[i] || React.createRef())
-    );
-  }, [kashidas.length]);
-
-  const updateKashidaHoverState = (e, isHovered) => {
-    const id = e.target?.id;
-    if (!id) return;
-
-    if (isHovered) {
-      e.target.src = `/landingPage/${id}.png`;
-      e.target.style.marginTop =
-        ((e.target.clientHeight / 2) * -0.1).toString() + "px";
-
-      if (e.target.style.left) {
-        e.target.style.marginLeft =
-          ((e.target.clientWidth / 2) * -0.1).toString() + "px";
-      } else {
-        e.target.style.marginRight =
-          ((e.target.clientWidth / 2) * -0.1).toString() + "px";
-      }
-    } else {
-      e.target.src = `/landingPage/Kashida ${id}.png`;
-      e.target.style.marginTop = 0;
-      e.target.style.marginLeft = 0;
-      e.target.style.marginRight = 0;
-    }
-  };
-
-  const buildKashida = (id, position) => {
-    return (
-      <div key={id}>
-        <img
-          src={`/landingPage/${id}.png`}
-          style={{ display: "none", position: "absolute" }}
-        />
-        <img
-          id={id}
-          ref={kashidaRefs[id - 1]}
-          className={styles.kashida}
-          style={{
-            position: 'absolute',
-            transformOrigin: position.left ? "left top" : "right top",
-            ...position,
-          }}
-          src={`/landingPage/Kashida ${id}.png`}
-          onMouseEnter={(e) => updateKashidaHoverState(e, true)}
-          onMouseLeave={(e) => updateKashidaHoverState(e, false)}
-        />
-      </div>
-    );
-  };
-
-
-
   return (
     <>
       <NextSeo
@@ -125,15 +54,28 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
       />
       <div
         style={{
-          position: "fixed",
-          display: "flex",
-          alignItems: "stretch",
-          width: "100%",
-          height: "100%",
-          overflowX: "hidden",
-          // overflowY: "scroll",
+          // position: "fixed",
+          // display: "flex",
+          // alignItems: "stretch",
+          // width: "100%",
+          // height: "100%",
+          // overflowX: "hidden",
+          // // overflowY: "scroll",
         }}
       >
+
+        <motion.div
+          layoutId="transitionLayout"
+          transition={{
+            duration: 0.6
+          }}
+          style={{
+            position: 'fixed',
+            backgroundColor: '#f8d952',
+            width: '430px',
+            height: "100%",
+            zIndex: -1,
+          }} />
         {/* <div
         className='test-home'
         style={{
@@ -144,26 +86,30 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
           zIndex: -1,
         }}
       ></div> */}
-        <div
-          className='bg-animation-home'
-          style={{
-            position: "relative",
-            width: "100%",
-            height: "100%",
-            zIndex: 10,
-          }}
-        >
 
-
+        <motion.div
+          initial={{ opacity: 0, }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.6,
+          }}>
           <Menu
             backgroundColor={backgroundColor}
             textAnimationControls={textAnimationControls}
           />
-
+        </motion.div>
+        <motion.div
+          layoutId='backgroundLayout'
+          initial={{ opacity: 0, }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.6,
+          }}
+        >
           <motion.div
-            initial={initial}
-            animate={{ right: 0, left: 0 }}
-            transition={{ type: 'tween', duration: 0.3 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
             className='container' style={{
               backgroundColor,
             }}>
@@ -267,22 +213,7 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
             )}
           </motion.div>
           <ContactButton />
-          <motion.div
-            layoutId="layoutDiv2"
-            initial={{}}
-            animate={{}}
-            transition={{ duration: 1.1 }}
-            style={{
-              ...animateKashidaOut,
-              position: "absolute",
-              width: '100%',
-              height: '100%',
-            }}
-          >
-            {/* <Kashida /> */}
-            {kashidas.map((e, i) => buildKashida(i + 1, e))}
-          </motion.div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
