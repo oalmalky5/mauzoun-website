@@ -127,9 +127,14 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
   }, []);
 
   return (
-    <div
+    <motion.div
+      layoutId='menuLayout'
       className={styles.sidenav + " navbar"}
-      style={{ backgroundColor }}
+      transition={{duration: 0.6}}
+      style={{
+        // backgroundColor: '#f8d952'
+        backgroundColor
+      }}
     // layout='position'
     >
       {" "}
@@ -140,7 +145,8 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
             alt='Mauzoun logo'
             className={styles.logo}
           // transition={logoTransition}
-          // layoutId="logo"
+            layoutId="imageLogo"
+            // layoutId="logo"
           />
         </Link>
 
@@ -231,6 +237,6 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

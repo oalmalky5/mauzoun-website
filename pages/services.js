@@ -166,8 +166,7 @@ export default function services({ textAnimationControls }) {
               <>
                 {f("contentWriting.content")}
 
-              <div className={styles.totalWhiteBox}>
-                  <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
+                <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
                   {f("contentWriting.services.header")}
                   <br />
                   {[
@@ -184,7 +183,6 @@ export default function services({ textAnimationControls }) {
                     </div>
                   ))}
                 </WhiteBox>
-              </div>
               </>
             )}
           </div>
@@ -207,24 +205,22 @@ export default function services({ textAnimationControls }) {
             {isCreativeWritingVisible && (
               <>
                 {f("creativeWriting.content")}
-                <div className={styles.totalWhiteBox}>
-                    <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                      {f("creativeWriting.services.header")}
-                      <br />
-                      {[
-                        "creativeWriting.services.storyDoctoring",
-                        "creativeWriting.services.scriptwriting",
-                        "creativeWriting.services.bookEditing",
-                        "creativeWriting.services.bookTranslation",
-                      ].map((e) => (
-                        <div className={styles.service} key={e}>
-                          {bullet}
-                          {f(e)}
-                        </div>
-                      ))}
-                    </WhiteBox>
-                </div>
-                
+
+                <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
+                  {f("creativeWriting.services.header")}
+                  <br />
+                  {[
+                    "creativeWriting.services.storyDoctoring",
+                    "creativeWriting.services.scriptwriting",
+                    "creativeWriting.services.bookEditing",
+                    "creativeWriting.services.bookTranslation",
+                  ].map((e) => (
+                    <div className={styles.service} key={e}>
+                      {bullet}
+                      {f(e)}
+                    </div>
+                  ))}
+                </WhiteBox>
               </>
             )}
           </div>
