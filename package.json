@@ -13,6 +13,7 @@
     "babel-plugin-styled-components": "^1.12.0",
     "framer-motion": "^4.1.4",
     "gsap": "^3.6.1",
+    "hamburger-react": "^2.4.1",
     "i18n-iso-countries": "^6.7.0",
     "instagram-web-api": "^2.2.2",
     "js-cookie": "^2.2.1",

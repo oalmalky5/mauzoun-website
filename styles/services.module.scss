@@ -67,5 +67,11 @@
 }
 
 .totalWhiteBox {
-  margin-left: 31px;
+  @include ltr {
+    margin-left: 33px;
+  }
+
+  @include rtl {
+    margin-right: 33px;
+  }
 }

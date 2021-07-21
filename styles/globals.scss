@@ -137,25 +137,127 @@ a {
   }
 }
 
-.container {
+.background-animation{
+  height: 100%;
   position: absolute;
-  min-height: 100%;
-  width: 650px;
-  padding: 50px;
-  padding-top: 20px;
+  top: 0;
+  bottom: 0;
+  width: 75%;
+  padding-left: 33%;
+  background-color: rgb(248, 217, 82);
 
   @include ltr {
-    margin-left: 430px; /* Same as the width of the sidebar */
+      left: 0;
   }
 
   @include rtl {
-    margin-right: 430px; /* Same as the width of the sidebar */
-  }
-
-  @media (min-width: 1536px) {
-    width: 50%;    
+    right: 0;
   }
 }
+
+.container {
+
+  width: calc(100% - 430px);
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  height: fit-content;
+  min-height: 100%;
+
+  @include ltr {
+    margin-left: 430px;
+  }
+
+  @include rtl {
+    margin-right: 430px;
+  }
+
+  @media (max-width: 1240px) {
+    width: calc(100% - 230px);
+
+    @include ltr {
+      margin-left: 230px;
+    }
+  
+    @include rtl {
+      margin-right: 230px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding-bottom: 160px;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-top: 100px;
+
+    @include ltr {
+      margin-left: 0;
+    }
+  
+    @include rtl {
+      margin-right: 0;
+    }
+  }
+  
+
+  &-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    width: 100%;
+    max-width: 650px;
+    z-index: -1;
+    @media (min-width: 1536px) {
+      max-width: 992px;
+    }
+    @media (max-width: 767px) {
+      max-width: 767px;
+    }
+  }
+
+  &-content{
+    width: 100%;
+    max-width: 650px;
+    padding: 0 50px;
+  
+    @media (min-width: 1536px) {
+      max-width: 992px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 0 30px;
+    }
+  }
+  
+  &-image{
+    padding-left: 50px;
+    padding-right: 20px;
+
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+    @media (max-width: 767px) {
+      padding-left: 30px;
+      padding-right: 15px;
+    }
+  }
+
+  &-object{
+    padding: 0 50px;
+
+    @media (max-width: 767px) {
+      padding: 0 30px;
+      padding-right: 0;
+    }
+  }
+}
+
 
 .content-wrapper {
   margin-top: 20px;
@@ -180,6 +282,12 @@ a {
     @include rtl {
       margin-right: 5px;
     }
+  }
+}
+
+.transition_dot{
+  @media (max-width: 768px) {
+    display: none !important;
   }
 }
 
@@ -212,6 +320,7 @@ a {
 display: flex;
 justify-content: center;
 }
+
 .not-supported-iframe{
   width: 100vw;
   height: 100vh;

@@ -3,7 +3,7 @@ import { useIntl } from "react-intl";
 import { BsChevronDown } from "react-icons/bs";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { NextSeo } from 'next-seo';
+import { NextSeo } from "next-seo";
 
 import styles from "../styles/andyou.module.scss";
 import Menu from "../components/Menu";
@@ -13,8 +13,9 @@ import ComingSoon from "../components/ComingSoon";
 
 const backgroundColor = "#b3d0ea";
 
-export default function andyou({ textAnimationControls }) {
+export default function andyou({ textAnimationControls, handleBgColorChange, handleOpenNav, history, isNavOpen, ...rest }) {
   const locale = useRouter().locale;
+  const { key, initial, animate, variants } = rest;
 
   const intl = useIntl();
   const f = (id, options) =>
@@ -26,8 +27,9 @@ export default function andyou({ textAnimationControls }) {
 
   const [isBecomeClientVisible, setIsBecomeClientVisible] = useState(false);
   const [isJoinTeamVisible, setIsJoinTeamVisible] = useState(false);
-  const [isJoinCompetitionVisible, setIsJoinCompetitionVisible] =
-    useState(false);
+  const [isJoinCompetitionVisible, setIsJoinCompetitionVisible] = useState(false);
+
+  React.useEffect(() => handleBgColorChange(backgroundColor), []);
 
   return (
     <>
@@ -35,130 +37,124 @@ export default function andyou({ textAnimationControls }) {
         title={locale !== "ar" ? "Mauzoun | And You" : "مَوْزوْن | مَوْزوْن وأنت"}
         description={locale !== "ar" ? "Mauzoun | And You" : "مَوْزوْن | مَوْزوْن وأنت"}
       />
-    <div
-      style={{
-        position: "fixed",
-        display: "flex",
-        alignItems: "stretch",
-        width: "100%",
-        height: "100%",
-        overflowX: "hidden",
-        // overflowY: "scroll",
-      }}
-    >
-      {/* <div
-        className='test-andyou'
-        style={{
-          backgroundColor: backgroundColor,
-          width: "72%",
-          height: "150vh",
-          position: "absolute",
-          zIndex: -1,
-        }}
-      ></div> */}
-      <div
-        className='bg-animation-andyou'
-        style={{
-          position: "relative",
-          width: "100%",
-          height: "100%",
-          zIndex: 10,
-        }}
+      <div className="background-animation" style={{ backgroundColor }} />
+
+      <motion.div
+        key={key}
+        initial={initial}
+        animate={animate}
+        variants={variants}
+        
+        
       >
-        <Menu
-          backgroundColor={backgroundColor}
-          textAnimationControls={textAnimationControls}
-        />
-
+         <ContactButton isNavOpen = {isNavOpen} history = {history}/>
         <div
-          className='container'
-          style={{ backgroundColor }}
-          // layout="position"
+          style={{
+            position: "fixed",
+            display: "flex",
+            alignItems: "stretch",
+            width: "100%",
+            height: "100%",
+            overflowX: "hidden",
+            // overflowY: "scroll",
+          }}
         >
-          <h1 className='mb-0'>{f("title")}</h1>
-
-          {/* Become our client */}
-          <div className='mt-0 unwrapped-content'>
-            <div
-              className='content-wrapper'
-              onClick={() => setIsBecomeClientVisible(!isBecomeClientVisible)}
-              style={isBecomeClientVisible ? { marginBottom: "20px" } : {}}
-            >
-              <h2>{f("becomeClient.intro")}</h2>
-              <span className='reveal-icon'>
-                <BsChevronDown className='reveal-icon' />
-              </span>
-            </div>
-
-            {isBecomeClientVisible && (
-              <>
-                {f("becomeClient.content")}
-                <hr />
-              </>
-            )}
-          </div>
-
-          {/* Join the team */}
-          <div className='mt-0 unwrapped-content'>
-            <div
-              className='content-wrapper'
-              onClick={() => setIsJoinTeamVisible(!isJoinTeamVisible)}
-              style={isJoinTeamVisible ? { marginBottom: "20px" } : {}}
-            >
-              <h2>{f("joinTeam.intro")}</h2>
-              <span className='reveal-icon'>
-                <BsChevronDown className='reveal-icon' />
-              </span>
-            </div>
-
-            {isJoinTeamVisible && (
-              <>
-                {f("joinTeam.content")}
-                <hr />
-              </>
-            )}
-          </div>
-
-          {/* Join the competition */}
-          <div className='mt-0 unwrapped-content'>
-            <div
-              className='content-wrapper'
-              onClick={() =>
-                setIsJoinCompetitionVisible(!isJoinCompetitionVisible)
-              }
-              style={isJoinCompetitionVisible ? { marginBottom: "40px" } : {}}
-            >
-              <h2>{f("joinCompetition.intro")}</h2>
-              <span className='reveal-icon'>
-                <BsChevronDown className='reveal-icon' />
-              </span>
-            </div>
-
-            {isJoinCompetitionVisible && (
-              <>
-                <ComingSoon />
-                <div className={styles.content}>
-                  {f("joinCompetition.content")}
-                </div>
-              </>
-            )}
-          </div>
-
-          <div className={styles.andyouCover}>
-            <img
-              src='/Mauzoun & You.png'
-              height='376px'
-              width='750px'
-              layout='fixed'
-              priority='true'
+          <div
+            className="bg-animation-andyou"
+            style={{
+              position: "relative",
+              width: "100%",
+              height: "100%",
+              zIndex: 8,
+              overflow: isNavOpen ? "hidden" : null,
+            }}
+          >
+            <Menu
+              backgroundColor={backgroundColor}
+              textAnimationControls={textAnimationControls}
+              isNavOpen={isNavOpen}
+              handleOpenNav = {handleOpenNav}
             />
-          </div>
-          <div style={{ height: "350px" }} />
-        </div>
 
-        <ContactButton />
-      </div>
-    </div>
+            <div className="container">
+              <div className="container-background" style={{ backgroundColor }}></div>
+              <div className="container-content">
+                <h1 className="mb-0">{f("title")}</h1>
+              </div>
+              <div className="container-content">
+                {/* Become our client */}
+                <div className="mt-0 unwrapped-content">
+                  <div
+                    className="content-wrapper"
+                    onClick={() => setIsBecomeClientVisible(!isBecomeClientVisible)}
+                    style={isBecomeClientVisible ? { marginBottom: "20px" } : {}}
+                  >
+                    <h2>{f("becomeClient.intro")}</h2>
+                    <span className="reveal-icon">
+                      <BsChevronDown className="reveal-icon" />
+                    </span>
+                  </div>
+
+                  {isBecomeClientVisible && (
+                    <>
+                      {f("becomeClient.content")}
+                      <hr />
+                    </>
+                  )}
+                </div>
+
+                {/* Join the team */}
+                <div className="mt-0 unwrapped-content">
+                  <div
+                    className="content-wrapper"
+                    onClick={() => setIsJoinTeamVisible(!isJoinTeamVisible)}
+                    style={isJoinTeamVisible ? { marginBottom: "20px" } : {}}
+                  >
+                    <h2>{f("joinTeam.intro")}</h2>
+                    <span className="reveal-icon">
+                      <BsChevronDown className="reveal-icon" />
+                    </span>
+                  </div>
+
+                  {isJoinTeamVisible && (
+                    <>
+                      {f("joinTeam.content")}
+                      <hr />
+                    </>
+                  )}
+                </div>
+
+                {/* Join the competition */}
+                <div className="mt-0 unwrapped-content">
+                  <div
+                    className="content-wrapper"
+                    onClick={() => setIsJoinCompetitionVisible(!isJoinCompetitionVisible)}
+                    style={isJoinCompetitionVisible ? { marginBottom: "40px" } : {}}
+                  >
+                    <h2>{f("joinCompetition.intro")}</h2>
+                    <span className="reveal-icon">
+                      <BsChevronDown className="reveal-icon" />
+                    </span>
+                  </div>
+
+                  {isJoinCompetitionVisible && (
+                    <>
+                      <ComingSoon />
+                      <div className={styles.content}>{f("joinCompetition.content")}</div>
+                    </>
+                  )}
+                </div>
+              </div>
+              <div className="container-image">
+                <div className={styles.andyouCover}>
+                  <img src="/Mauzoun & You.png" height="376px" width="750px" layout="fixed" priority="true" />
+                </div>
+              </div>
+              <div style={{ height: "350px" }} />
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </>
   );
 }

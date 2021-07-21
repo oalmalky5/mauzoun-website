@@ -20,6 +20,7 @@ const kashidas = [
 export default function LandingPage({
   updatePageTransition,
   textAnimationControls,
+  screenWidth
 }) {
   const router = useRouter();
 
@@ -29,16 +30,13 @@ export default function LandingPage({
   }, []);
 
   const changeLocale = (locale) => {
-    // updatePageTransition({
-    //   initial: "hidden",
-    //   animate: "visible",
-    // });
     Cookies.set("NEXT_LOCALE", locale);
     router.push(`/${locale}/home`);
     textAnimationControls.set("instantlyHidden");
   };
 
   const [kashidaRefs, setKashidaRefs] = React.useState([]);
+  
   React.useEffect(() => {
     // add or remove refs
     setKashidaRefs((kashidaRefs) =>
@@ -96,49 +94,65 @@ export default function LandingPage({
   };
 
   const handleMovePage = React.useCallback((click) => {
-    //TODO : uncomment this part of code to enable animation
-    // gsap.fromTo(
-    //   ".background",
-    //   { opacity: 1 },
-    //   { opacity: 1, x: click === 2 ? -165 : 155, duration: 0.8 }
-    // );
-    // gsap.to(".background", {
-    //   duration: 0.8,
-    //   left: click === 2 ? "-25%" : "25%",
-    //   width: "100%",
-    //   justifyContent: "flex-start",
-    //   paddingLeft: "33%",
-    //   textAlign: "left",
-    // });
 
-    // gsap.to(".main", {
-    //   duration: 0.8,
-    //   left: click === 2 ? "100%" : "-100%",
-    //   opacity: 0,
-    // });
-    // gsap.fromTo(
-    //   ".transition_dot",
-    //   { opacity: 1 },
-    //   { opacity: 0, x: click === 2 ? 1200 : -1200, duration: 0.8 }
-    // );
-    // gsap.to(".logo", {
-    //   xPercent: click === 2 ? -208 : -78,
-    //   yPercent: -5,
-    //   duration: 0.8,
-    // });
-    // setTimeout(() => {
-    //   if (click === 1) {
-    //     changeLocale("ar");
-    //   } else if (click === 2) {
-    //     changeLocale("en-US");
-    //   }
-    // }, 700);
-    //TODO : comment this part of code when animation enabled
-    if (click === 1) {
-      changeLocale("ar");
-    } else if (click === 2) {
-      changeLocale("en-US");
-    }
+    gsap.to(".background", {
+      duration: 1,
+      width: "100%",
+      justifyContent: "flex-start",
+      textAlign: "left",
+    });
+
+    gsap.to(click === 2 ? ".background-left" : ".background-right", {
+      duration: 0,
+      width: "0%"
+    });
+
+    gsap.to(".main", {
+      duration: 1,
+      left: click === 2 ? "100%" : "-100%",
+      opacity: 0,
+    });
+
+    gsap.fromTo(
+      ".transition_dot",
+      { opacity: 1 },
+      { opacity: 0, x: click === 2 ? 1200 : -1200, duration: 1.2 }
+    );
+    
+  if (screenWidth < 768) {
+    gsap.to(".logo", {
+      [click === 1 ? 'right' : 'left']: "0%",
+      opacity: 1,
+      duration: 1,
+      y: -8,
+      width: 143,
+      height: 110,
+      onComplete: () => {
+        if (click === 1) {
+          changeLocale("ar");
+        } else if (click === 2) {
+          changeLocale("en-US");
+        }
+      }
+    });
+      } else {
+        gsap.to(".logo", {
+          [click === 1 ? 'right' : 'left']: "0%",
+          opacity: 1,
+          duration: 1,
+          width: 175,
+          height: 150,
+          y: 10,
+          x: click === 1 ? -5 : 5,
+          onComplete: () => {
+            if (click === 1) {
+              changeLocale("ar");
+            } else if (click === 2) {
+              changeLocale("en-US");
+            }
+          }
+        });
+      }
   }, []);
 
   return (
@@ -148,7 +162,6 @@ export default function LandingPage({
     description="Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia, specializing in copywriting, translation, scriptwriting, and book editing in both the Arabic and English."
   />
   
-
       <div className={styles.pageContainer}>
         {/* Kashidas organized from top left to bottom right */}
         <div
@@ -159,12 +172,16 @@ export default function LandingPage({
             alignItems: "stretch",
             width: "100%",
             height: "100%",
+            zIndex: 2
           }}
         >
           {kashidas.map((e, i) => buildKashida(i + 1, e))}
         </div>
 
         <div />
+
+        <div className = {styles.bgAnimation + " background-left"} style = {{left: 0}}></div>
+        <div className = {styles.bgAnimation + " background-right"} style = {{right: 0}}></div>
 
         <div className={styles.mainPanel + " background"}>
           <img
@@ -182,10 +199,11 @@ export default function LandingPage({
               position: "absolute",
               height: "calc(100vh - 150px)",
               bottom: 0,
+              padding: '0 10px',
               justifyContent: "center",
             }}
           >
-            <div dir='rtl'>
+            <div dir='rtl' style = {{zIndex: 3}}>
               <p style={{ fontFamily: "GE Dinar Two" }}>
                 عشق للكلمات وفريق شغوف:
                 <br />

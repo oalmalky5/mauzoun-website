@@ -29,6 +29,11 @@
   font-size: 25px;
   text-align: center;
   background-color: #f8d952;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 
   @media (max-width: 1536px) {
     width: 50%;
@@ -41,9 +46,13 @@
   & .logo {
     position: absolute;
     top: 0;
+
+    height: 150px;
+    margin-bottom: 30px;
+    cursor: pointer;
     height: 150px;
     width: 175px;
-    margin-top: 20px;
+    
   }
 
   & .languageButton {
@@ -56,11 +65,33 @@
     font-size: 25px;
     border: solid 1.5px black;
     cursor: pointer;
+    z-index: 3;
   }
 
   & .bottomKashida {
     position: absolute;
     bottom: 0;
     margin-bottom: 20px;
+
+    @media (max-height: 767px) {
+      display: none;
+    }
+  }
+}
+
+.bgAnimation{
+  width: 0;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+
+  @media (min-width: 768px) {
+    width: 25%;
+  }
+
+  @media (min-width: 1536px) {
+    width: 27.5%;
   }
 }

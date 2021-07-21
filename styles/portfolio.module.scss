@@ -12,7 +12,14 @@
   font-size: 50px;
   margin-top: 0px;
   margin-bottom: 0px;
-  white-space: nowrap;
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 30px;
+  }
 }
 
 .carousel {
@@ -41,10 +48,8 @@
       padding: 5px;
       border-radius: 100%;
       background-color: white;
-      --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
       & svg {
         stroke-width: 1.5px;
@@ -55,5 +60,11 @@
 }
 
 .totalWhiteBox {
-  margin-left: 33px;
+  @include ltr {
+    margin-left: 33px;
+  }
+
+  @include rtl {
+    margin-right: 33px;
+  }
 }
