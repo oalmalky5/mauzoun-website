@@ -6,7 +6,7 @@
   transform: scale(0.5, 0.5);
 
   &:hover {
-    transform: scale(0.1, 0.1);
+    transform: scale(0.25, 0.25);
   }
 }
 
@@ -46,13 +46,12 @@
   & .logo {
     position: absolute;
     top: 0;
-
     height: 150px;
+    margin-top: 20px;
     margin-bottom: 30px;
     cursor: pointer;
     height: 150px;
     width: 175px;
-    
   }
 
   & .languageButton {
@@ -79,7 +78,7 @@
   }
 }
 
-.bgAnimation{
+.bgAnimation {
   width: 0;
   position: absolute;
   background-color: #fff;

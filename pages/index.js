@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
-import { NextSeo } from 'next-seo'; 
+import { NextSeo } from "next-seo";
 import styles from "../styles/landingPage.module.scss";
 
 const kashidas = [
@@ -17,11 +17,7 @@ const kashidas = [
   { top: "85%", right: "32%" },
 ];
 
-export default function LandingPage({
-  updatePageTransition,
-  textAnimationControls,
-  screenWidth
-}) {
+export default function LandingPage({ updatePageTransition, textAnimationControls, screenWidth }) {
   const router = useRouter();
 
   React.useEffect(() => {
@@ -36,7 +32,7 @@ export default function LandingPage({
   };
 
   const [kashidaRefs, setKashidaRefs] = React.useState([]);
-  
+
   React.useEffect(() => {
     // add or remove refs
     setKashidaRefs((kashidaRefs) =>
@@ -52,15 +48,12 @@ export default function LandingPage({
 
     if (isHovered) {
       e.target.src = `/landingPage/${id}.png`;
-      e.target.style.marginTop =
-        ((e.target.clientHeight / 2) * -0.1).toString() + "px";
+      e.target.style.marginTop = ((e.target.clientHeight / 2) * -0.25).toString() + "px";
 
       if (e.target.style.left) {
-        e.target.style.marginLeft =
-          ((e.target.clientWidth / 2) * -0.1).toString() + "px";
+        e.target.style.marginLeft = ((e.target.clientWidth / 2) * -0.25).toString() + "px";
       } else {
-        e.target.style.marginRight =
-          ((e.target.clientWidth / 2) * -0.1).toString() + "px";
+        e.target.style.marginRight = ((e.target.clientWidth / 2) * -0.25).toString() + "px";
       }
     } else {
       e.target.src = `/landingPage/Kashida ${id}.png`;
@@ -73,10 +66,7 @@ export default function LandingPage({
   const buildKashida = (id, position) => {
     return (
       <div key={id}>
-        <img
-          src={`/landingPage/${id}.png`}
-          style={{ display: "none", position: "absolute" }}
-        />
+        <img src={`/landingPage/${id}.png`} style={{ display: "none", position: "absolute" }} />
         <img
           id={id}
           ref={kashidaRefs[id - 1]}
@@ -94,7 +84,6 @@ export default function LandingPage({
   };
 
   const handleMovePage = React.useCallback((click) => {
-
     gsap.to(".background", {
       duration: 1,
       width: "100%",
@@ -104,7 +93,7 @@ export default function LandingPage({
 
     gsap.to(click === 2 ? ".background-left" : ".background-right", {
       duration: 0,
-      width: "0%"
+      width: "0%",
     });
 
     gsap.to(".main", {
@@ -118,50 +107,50 @@ export default function LandingPage({
       { opacity: 1 },
       { opacity: 0, x: click === 2 ? 1200 : -1200, duration: 1.2 }
     );
-    
-  if (screenWidth < 768) {
-    gsap.to(".logo", {
-      [click === 1 ? 'right' : 'left']: "0%",
-      opacity: 1,
-      duration: 1,
-      y: -8,
-      width: 143,
-      height: 110,
-      onComplete: () => {
-        if (click === 1) {
-          changeLocale("ar");
-        } else if (click === 2) {
-          changeLocale("en-US");
-        }
-      }
-    });
-      } else {
-        gsap.to(".logo", {
-          [click === 1 ? 'right' : 'left']: "0%",
-          opacity: 1,
-          duration: 1,
-          width: 175,
-          height: 150,
-          y: 10,
-          x: click === 1 ? -5 : 5,
-          onComplete: () => {
-            if (click === 1) {
-              changeLocale("ar");
-            } else if (click === 2) {
-              changeLocale("en-US");
-            }
+
+    if (screenWidth < 768) {
+      gsap.to(".logo", {
+        [click === 1 ? "right" : "left"]: "0%",
+        opacity: 1,
+        duration: 1,
+        y: -28,
+        width: 143,
+        height: 110,
+        onComplete: () => {
+          if (click === 1) {
+            changeLocale("ar");
+          } else if (click === 2) {
+            changeLocale("en-US");
           }
-        });
-      }
+        },
+      });
+    } else {
+      gsap.to(".logo", {
+        [click === 1 ? "right" : "left"]: "0%",
+        opacity: 1,
+        duration: 1,
+        width: 175,
+        height: 150,
+        y: -10,
+        x: click === 1 ? -5 : 5,
+        onComplete: () => {
+          if (click === 1) {
+            changeLocale("ar");
+          } else if (click === 2) {
+            changeLocale("en-US");
+          }
+        },
+      });
+    }
   }, []);
 
   return (
-<>
-    <NextSeo
-    title="Welcome to Mauzoun | أهلًا بكم في مَوْزوْن"
-    description="Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia, specializing in copywriting, translation, scriptwriting, and book editing in both the Arabic and English."
-  />
-  
+    <>
+      <NextSeo
+        title="Welcome to Mauzoun | أهلًا بكم في مَوْزوْن"
+        description="Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia, specializing in copywriting, translation, scriptwriting, and book editing in both the Arabic and English."
+      />
+
       <div className={styles.pageContainer}>
         {/* Kashidas organized from top left to bottom right */}
         <div
@@ -172,7 +161,7 @@ export default function LandingPage({
             alignItems: "stretch",
             width: "100%",
             height: "100%",
-            zIndex: 2
+            zIndex: 2,
           }}
         >
           {kashidas.map((e, i) => buildKashida(i + 1, e))}
@@ -180,17 +169,17 @@ export default function LandingPage({
 
         <div />
 
-        <div className = {styles.bgAnimation + " background-left"} style = {{left: 0}}></div>
-        <div className = {styles.bgAnimation + " background-right"} style = {{right: 0}}></div>
+        <div className={styles.bgAnimation + " background-left"} style={{ left: 0 }}></div>
+        <div className={styles.bgAnimation + " background-right"} style={{ right: 0 }}></div>
 
         <div className={styles.mainPanel + " background"}>
           <img
             className={styles.logo + " logo"}
-            src='https://i.imgur.com/HjDbXtR.png'
-            alt='Mauzoun logo'
+            src="https://i.imgur.com/HjDbXtR.png"
+            alt="Mauzoun logo"
           />
           <div
-            className='main'
+            className="main"
             style={{
               width: "100%",
               display: "flex",
@@ -199,11 +188,11 @@ export default function LandingPage({
               position: "absolute",
               height: "calc(100vh - 150px)",
               bottom: 0,
-              padding: '0 10px',
+              padding: "0 10px",
               justifyContent: "center",
             }}
           >
-            <div dir='rtl' style = {{zIndex: 3}}>
+            <div dir="rtl" style={{ zIndex: 3 }}>
               <p style={{ fontFamily: "GE Dinar Two" }}>
                 عشق للكلمات وفريق شغوف:
                 <br />
@@ -221,8 +210,7 @@ export default function LandingPage({
             </div>
 
             <p style={{ fontFamily: "Alegreya" }}>
-              ‫‪A‬‬ ‫‪love‬‬ ‫‪for‬‬ ‫‪words‬‬ ‫‪and‬‬ ‫‪a‬‬ ‫‪team‬‬ ‫‪with‬‬
-              ‫‪fervor:‬‬
+              ‫‪A‬‬ ‫‪love‬‬ ‫‪for‬‬ ‫‪words‬‬ ‫‪and‬‬ ‫‪a‬‬ ‫‪team‬‬ ‫‪with‬‬ ‫‪fervor:‬‬
               <br />
               <b>‫‪welcome‬‬ ‫‪to‬‬ ‫‪Mauzoun.‬‬</b>
             </p>
@@ -233,14 +221,13 @@ export default function LandingPage({
                 handleMovePage(2);
               }}
             >
-              <b>‫‪Click‬‬ ‫‪here</b>‬‬ ‫‪to‬‬ ‫‪begin‬‬ ‫‪your‬‬ ‫‪story‬‬
-              ‫‪in‬‬ ‫‪English.‬‬
+              <b>‫‪Click‬‬ ‫‪here</b>‬‬ ‫‪to‬‬ ‫‪begin‬‬ ‫‪your‬‬ ‫‪story‬‬ ‫‪in‬‬ ‫‪English.‬‬
             </button>
 
             <img
               className={styles.bottomKashida}
               src={`/landingPage/Kashida bottom.png`}
-              width='270px'
+              width="270px"
             />
           </div>
         </div>

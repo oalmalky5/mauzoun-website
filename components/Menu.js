@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Cookies from "js-cookie";
+import { isIOS } from "react-device-detect";
 
 import styles from "../styles/menu.module.scss";
 import * as locales from "../content/locale";
@@ -194,19 +195,18 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
 
         <div className={styles.menu}>
           <div>
-            {["home", "story", "services", "portfolio", "blog", "andyou"].map(
-              (e, i) => {
-                const otherText = otherF(e + "Link")
-                return (
+            {["home", "story", "services", "portfolio", "blog", "andyou"].map((e, i) => {
+              const otherText = otherF(e + "Link");
+              return (
                 <div key={e}>
                   {!(i % 2) && buildTiltedSquare(e)}
 
                   <Link href={"/" + e}>
                     <a
                       className={styles.navLink}
-                      onMouseEnter={() => setHoveredLink(e)}
-                      onMouseLeave={() => setHoveredLink("")}
-                      onClick = {() => isNavOpen && handleOpenNav?.('instant')}
+                      onMouseEnter={() => (isIOS ? null : setHoveredLink(e))}
+                      onMouseLeave={() => (isIOS ? null : setHoveredLink(""))}
+                      onClick={() => isNavOpen && handleOpenNav?.("instant")}
                     >
                       <div
                         className={`${styles.itemTitle} heading`}
@@ -218,15 +218,20 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
                         {i % 2 ? buildTiltedSquare(e) : null}
                       </div>
 
-                      <span
-                        className={`${styles.otherLocaleLink} ${otherLocale} lighter`}
-                      >
-                        {otherText ? otherText : <p><span> </span></p>}
+                      <span className={`${styles.otherLocaleLink} ${otherLocale} lighter`}>
+                        {otherText ? (
+                          otherText
+                        ) : (
+                          <p>
+                            <span> </span>
+                          </p>
+                        )}
                       </span>
                     </a>
                   </Link>
-              </div>
-            )})}
+                </div>
+              );
+            })}
           </div>
 
           <div className={styles.languageSwitch}>
