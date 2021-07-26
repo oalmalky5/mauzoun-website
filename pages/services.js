@@ -232,13 +232,14 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
               <div style={{ height: "400px" }} />
               <div className="container-image">
                 <div className={styles.servicesCover}>
-                  <img
+                  <motion.img
                     src="/Services.png"
                     height="437px"
                     width="400px"
                     layout="fixed"
                     priority="true"
                     style={router.locale === "ar" ? { transform: "scaleX(-1)" } : {}}
+                    transition={{ duration: 0.5 }}
                   />
                 </div>
               </div>

@@ -147,7 +147,7 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
               </div>
               <div className="container-image">
                 <div className={styles.andyouCover}>
-                  <img src="/Mauzoun & You.png" height="376px" width="750px" layout="fixed" priority="true" />
+                  <motion.img src="/Mauzoun & You.png" height="376px" width="750px" layout="fixed" priority="true" transition={{ duration: 0.5 }}/>
                 </div>
               </div>
               <div style={{ height: "350px" }} />

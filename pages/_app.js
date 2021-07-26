@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
       transition: { delay: 0, duration: 0.8 },
     },
     instantlyVisible: { opacity: 1, transition: { duration: 0 } },
-    hidden: { opacity: width < 768 ? 1 : 0, transition: { delay: 0 } },
+    hidden: { opacity: width < 768 ? 1 : 0.4, transition: { delay: 0 } },
   };
   
   const defaultPageTransition = {

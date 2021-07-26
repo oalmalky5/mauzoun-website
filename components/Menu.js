@@ -72,105 +72,96 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
     );
   };
 
-  // USE THIS FUNCTION TO ANIMATION WITH TRANSITION EFFECT
+  const removeAndReturnBgColor = () => {
+    gsap.to(
+      '.container-background .navigation',
+      { backgroundColor: 'transparent', x: 0, duration: 0 }
+    )
 
-  // const handleAnimationTransition = React.useCallback((locale, callback) => {
-  //   const isFromLeftToRight = !locale || locale.includes("en-US");
+    gsap.to(
+      '.navigation',
+      { backgroundColor: 'transparent', x: 0, duration: 0 }
+    )
 
-  //   gsap.to(`.bg-animation-${pathname.split("/")[1]}`, {
-  //     opacity: 0,
-  //     delay: 0,
-  //     x: isFromLeftToRight ? -20 : 20,
-  //     duration: 1.5,
-  //     onComplete: callback,
-  //   });
+    gsap.from(
+      '.container-background .navigation',
+      { backgroundColor: 'transparent', x: 0, duration: 0, delay: 0.8 }
+    )
 
-  //   gsap.to(`.background-animation`, {
-  //     [isFromLeftToRight ? "left" : "right"]: "25%",
-  //     duration: 1.5,
-  //     delay: 0,
-  //     onComplete: () => {
-  //       document.querySelector(".background-animation").style.left = null;
-  //       document.querySelector(".background-animation").style.right = null;
-  //     },
-  //   });
+    gsap.from(
+      '.navigation',
+      { backgroundColor: 'transparent', x: 0, duration: 0, delay: 0.8 }
+    )
+  }
 
-  //   gsap.fromTo(
-  //     `.bg-animation-${pathname.split("/")[1]}`,
-  //     { x: isFromLeftToRight ? 100 : -100 },
-  //     { opacity: 1, x: 0, duration: 1, delay: 1.5 }
-  //   );
-  // }, []);
+  const removeAndReturnContent = () => {
+   
+    gsap.to( 
+      '.container-content ',
+    { opacity: 0, x: 0, duration: 0.4 });
+
+    gsap.to( 
+      '.animationFade ',
+    { opacity: 0, x: 0, duration: 0.4 });
+
+    gsap.to(
+      `.container-content`,
+      { opacity: 1, x: 0, duration: 0.4, delay: 0.8 }
+    );
+    gsap.to(
+      `.animationFade`,
+      { opacity: 1, x: 0, duration: 0.4, delay: 0.8 }
+    );
+
+  }
+
+  const hideContactBtnContent = () => {
+    gsap.to(`.contact-button`, {
+      opacity: 0,
+      duration: 0.2,
+      delay: 0,
+    });
+    gsap.to(`.contact-button`, {
+      opacity: 1,
+      duration: 0.4,
+      delay: 0.8,
+    });
+  }
 
   const handleAnimationFadeIn = React.useCallback((locale, callback) => {
     const isFromLeftToRight = !locale || locale.includes("en-US");
 
-    gsap.fromTo(
-      `.bg-animation-${pathname.split("/")[1]}`,
-      { opacity: 1 },
-      { opacity: 0, delay: 0, x: 0, duration: 0.8, onComplete: callback }
-    );
+    removeAndReturnBgColor()
+    removeAndReturnContent()
+    hideContactBtnContent()
 
-    gsap.to(`.contact-button`, {
+    gsap.to(`.header-mobile`, {
       opacity: 0,
-      duration: 0.8,
+      duration: 0.4,
       delay: 0,
     });
 
     gsap.to(`.header-mobile`, {
-      opacity: 0,
-      duration: 0.8,
-      delay: 0,
+      opacity: 1,
+      duration: 0.4,
+      delay: 0.4,
     });
-
-    // gsap.to(`.header-mobile__logo`, {
-    //   opacity: 0,
-    //   duration: 0.8,
-    //   delay: 0,
-    // });
-
-    // gsap.to(`.header-mobile__button`, {
-    //   opacity: 0,
-    //   duration: 0.8,
-    //   delay: 0,
-    // });
 
     gsap.to(`.background-animation`, {
       left: isFromLeftToRight ? "25%" : "0",
-      duration: 1,
-      delay: 0.8,
+      duration: 0.4,
+      delay: 0.4,
       clear: "all",
+      onStart: callback,
     });
 
     gsap.to(`.contact-button`, {
       opacity: 1,
-      duration: 0.6,
-      delay: 1.6,
+      duration: 0.4,
+      delay: 0.8,
     });
 
-    gsap.to(`.header-mobile`, {
-      opacity: 1,
-      duration: 0.6,
-      delay: 1.6,
-    });
 
-    // gsap.to(`.header-mobile__logo`, {
-    //   opacity: 1,
-    //   duration: 0.6,
-    //   delay: 1.6,
-    // });
-
-    // gsap.to(`.header-mobile__button`, {
-    //   opacity: 1,
-    //   duration: 0.6,
-    //   delay: 1.6,
-    // });
-
-    gsap.fromTo(
-      `.bg-animation-${pathname.split("/")[1]}`,
-      { opacity: 0, x: 0 },
-      { opacity: 1, x: 0, duration: 0.8, delay: 1.6 }
-    );
   }, []);
 
   return (
@@ -187,7 +178,7 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
               src="https://i.imgur.com/HjDbXtR.png"
               alt="Mauzoun logo"
               className={styles.logo}
-              transition={{ duration: 0 }}
+              transition={{ duration: 0.5 }}
               layoutId="logo"
             />
           </Link>
@@ -240,10 +231,12 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
             </p>
 
             <a
-              onClick={async (e) => {
+              onClick={(e) => {
                 e.preventDefault();
-                Cookies.set("NEXT_LOCALE", otherLocale);
+                e.stopPropagation()
+                isNavOpen && handleOpenNav?.("instant")
                 handleAnimationFadeIn(locale, () => {
+                  Cookies.set("NEXT_LOCALE", otherLocale);
                   router.push(pathname, pathname, { locale: otherLocale });
                 });
               }}

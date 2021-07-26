@@ -51,27 +51,33 @@ export default function ContactButton({
   
   return (
     <>
-      <div className={styles.pageContainer + " contact-button"}>
+      <div className={styles.pageContainer}>
         <div className={styles.buttonSpacer} />
         <div className={styles.buttonContainer}>
           <div className = {styles.contactWrapper}>
-          <div className = {styles.circleContainer}>
-            <svg height="100%" width="100%">
-	            <circle className={isWithAnimation ? styles.circleAnimation : ''} cx={circleParams.cx} cy={circleParams.cy} r={circleParams.r} stroke="#231f20" stroke-width="4" fill-opacity="0" />
-            </svg>
-          </div>
+
+
+
           <motion.button
             className={`${styles.contactButton} ${styles.spin}` + " heading"}
             onClick={() => {
               setIsHovered(false);
               // setIsContactFormVisible(true);
             }}
+            transition={{ duration: 0.5 }}
             style={{ backgroundColor: isHovered ? "#f8d952" : "#ffffff" }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             layout='position'
           >
+            <div className = {styles.circleContainer}>
+            <svg height="100%" width="100%">
+	            <circle className={isWithAnimation ? styles.circleAnimation : ''} cx={circleParams.cx} cy={circleParams.cy} r={circleParams.r} stroke="#231f20" stroke-width="4" fill-opacity="0" />
+            </svg>
+          </div>
+            <span className = "contact-button">
             {isHovered ? f(messageId + ".hovered") : f(messageId)}
+            </span>
           </motion.button>
           </div>
         </div>

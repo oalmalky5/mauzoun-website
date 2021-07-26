@@ -105,7 +105,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
     gsap.fromTo(
       ".transition_dot",
       { opacity: 1 },
-      { opacity: 0, x: click === 2 ? 1200 : -1200, duration: 1.2 }
+      { opacity: 0, x: click === 2 ? 1200 : -1200, duration: 1 }
     );
 
     if (screenWidth < 768) {
@@ -124,7 +124,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
           }
         },
       });
-    } else {
+    } else{
       gsap.to(".logo", {
         [click === 1 ? "right" : "left"]: "0%",
         opacity: 1,
@@ -132,7 +132,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
         width: 175,
         height: 150,
         y: -10,
-        x: click === 1 ? -5 : 5,
+        x: click === 1 ? (screenWidth <= 1240 ? -5 : -35) : (screenWidth <= 1240 ? 5 : 35),
         onComplete: () => {
           if (click === 1) {
             changeLocale("ar");
@@ -141,7 +141,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
           }
         },
       });
-    }
+    } 
   }, []);
 
   return (

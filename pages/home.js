@@ -83,13 +83,14 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                 {f("summary")}
               </div>
               <div className='container-image'>
-                <img
+                <motion.img
                   width='800px'
                   height='400px'
                   layout='fixed'
                   priority='true'
                   src='/team/Website-photo-01.png'
                   alt='an image of an office'
+                  transition={{ duration: 0.5 }}
                 />
               </div>
               <div className='container-content'>

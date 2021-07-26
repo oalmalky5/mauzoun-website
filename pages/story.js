@@ -181,7 +181,7 @@ const Story = function ({ textAnimationControls, handleBgColorChange, handleOpen
               <div className="container-background" style={{ backgroundColor }}></div>
               <div className="container-image">
                 <div className={styles.storyCover}>
-                  <img src="/Story.png" height="341px" width="900px" layout="fixed" priority="true" />
+                  <motion.img src="/Story.png" height="341px" width="900px" layout="fixed" priority="true" transition={{ duration: 0.5 }}/>
                 </div>
               </div>
 
