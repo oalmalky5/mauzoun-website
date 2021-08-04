@@ -12,6 +12,7 @@ import formatJsxMessage from "../utils/formatJsxMessage";
 import WhiteBox from "../components/WhiteBox";
 import ContactButton from "../components/ContactButton";
 import mauj from './mauj'
+import musaandpalm from "./musaandpalm.js";
 
 const backgroundColor = "#fbec9a";
 
