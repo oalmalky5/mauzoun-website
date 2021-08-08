@@ -8,6 +8,7 @@ import styles from "../styles/story.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import WhiteBox from "../components/WhiteBox";
+import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 
 const backgroundColor = "#d1e3f2";
@@ -167,6 +168,8 @@ const Story = function ({ textAnimationControls, handleBgColorChange, handleOpen
               overflow: isNavOpen ? "hidden" : null,
             }}
           >
+        <MotionLogo />
+
             <Menu
               backgroundColor={backgroundColor}
               textAnimationControls={textAnimationControls}

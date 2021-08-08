@@ -85,12 +85,12 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
 
     gsap.from(
       '.container-background .navigation',
-      { backgroundColor: 'transparent', x: 0, duration: 0, delay: 0.8 }
+      { backgroundColor: 'transparent', x: 0, duration: 0, delay: 0.6 }
     )
 
     gsap.from(
       '.navigation',
-      { backgroundColor: 'transparent', x: 0, duration: 0, delay: 0.8 }
+      { backgroundColor: 'transparent', x: 0, duration: 0, delay: 0.6 }
     )
   }
 
@@ -98,19 +98,19 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
    
     gsap.to( 
       '.container-content ',
-    { opacity: 0, x: 0, duration: 0.4 });
+    { opacity: 0, x: 0, duration: 0.3 });
 
     gsap.to( 
       '.animationFade ',
-    { opacity: 0, x: 0, duration: 0.4 });
+    { opacity: 0, x: 0, duration: 0.3 });
 
     gsap.to(
       `.container-content`,
-      { opacity: 1, x: 0, duration: 0.4, delay: 0.8 }
+      { opacity: 1, x: 0, duration: 0.3, delay: 0.6 }
     );
     gsap.to(
       `.animationFade`,
-      { opacity: 1, x: 0, duration: 0.4, delay: 0.8 }
+      { opacity: 1, x: 0, duration: 0.3, delay: 0.6 }
     );
 
   }
@@ -118,13 +118,13 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
   const hideContactBtnContent = () => {
     gsap.to(`.contact-button`, {
       opacity: 0,
-      duration: 0.2,
+      duration: 0.15,
       delay: 0,
     });
     gsap.to(`.contact-button`, {
       opacity: 1,
-      duration: 0.4,
-      delay: 0.8,
+      duration: 0.3,
+      delay: 0.6,
     });
   }
 
@@ -137,28 +137,28 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
 
     gsap.to(`.header-mobile`, {
       opacity: 0,
-      duration: 0.4,
+      duration: 0.3,
       delay: 0,
     });
 
     gsap.to(`.header-mobile`, {
       opacity: 1,
-      duration: 0.4,
-      delay: 0.4,
+      duration: 0.3,
+      delay: 0.3,
     });
 
     gsap.to(`.background-animation`, {
       left: isFromLeftToRight ? "25%" : "0",
-      duration: 0.4,
-      delay: 0.4,
+      duration: 0.3,
+      delay: 0.3,
       clear: "all",
       onStart: callback,
     });
 
     gsap.to(`.contact-button`, {
       opacity: 1,
-      duration: 0.4,
-      delay: 0.8,
+      duration: 0.3,
+      delay: 0.6,
     });
 
 
@@ -174,12 +174,13 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
       <div className="animationFade">
         {isNavOpen ? null : (
           <Link href="/">
-            <motion.img
+            <img
               src="https://i.imgur.com/HjDbXtR.png"
               alt="Mauzoun logo"
               className={styles.logo}
               transition={{ duration: 0.5 }}
               layoutId="logo"
+              style={{opacity:0, zIndex:-9}}
             />
           </Link>
         )}

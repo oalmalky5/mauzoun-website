@@ -7,6 +7,7 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { NextSeo } from "next-seo";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
+import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import styles from "../styles/mauj.module.scss";
 import WhiteBox from "../components/WhiteBox";
@@ -82,6 +83,7 @@ export default function mauj({ textAnimationControls, handleBgColorChange, handl
       >
          <ContactButton isNavOpen = {isNavOpen} history = {history}/>
         <div>
+        <MotionLogo />
           <Menu
             backgroundColor={backgroundColor}
             textAnimationControls={textAnimationControls}

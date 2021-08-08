@@ -10,6 +10,7 @@ import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
 
+import {MotionLogo} from "../components/MotionLogo"
 
 const backgroundColor = "#f8d952";
 
@@ -68,6 +69,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
             }}
           >
 
+            <MotionLogo />
             <Menu
               backgroundColor={backgroundColor}
               textAnimationControls={textAnimationControls}

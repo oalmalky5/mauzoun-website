@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { NextSeo } from "next-seo";
+import useWindowSize from '../utils/useWidth'
 import styles from "../styles/landingPage.module.scss";
 
 const kashidas = [
@@ -17,8 +18,10 @@ const kashidas = [
   { top: "85%", right: "32%" },
 ];
 
-export default function LandingPage({ updatePageTransition, textAnimationControls, screenWidth }) {
+export default function LandingPage({ updatePageTransition, textAnimationControls }) {
   const router = useRouter();
+
+  const {width} = useWindowSize()
 
   React.useEffect(() => {
     router.prefetch("/en-US/home");
@@ -85,7 +88,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
 
   const handleMovePage = React.useCallback((click) => {
     gsap.to(".background", {
-      duration: 1,
+      duration: 0.75,
       width: "100%",
       justifyContent: "flex-start",
       textAlign: "left",
@@ -97,7 +100,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
     });
 
     gsap.to(".main", {
-      duration: 1,
+      duration: 0.75,
       left: click === 2 ? "100%" : "-100%",
       opacity: 0,
     });
@@ -105,14 +108,15 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
     gsap.fromTo(
       ".transition_dot",
       { opacity: 1 },
-      { opacity: 0, x: click === 2 ? 1200 : -1200, duration: 1 }
+      { opacity: 0, x: click === 2 ? 1200 : -1200, duration: 0.75 }
     );
 
-    if (screenWidth < 768) {
+    if (width < 768) {
+
       gsap.to(".logo", {
         [click === 1 ? "right" : "left"]: "0%",
         opacity: 1,
-        duration: 1,
+        duration: 0.75,
         y: -28,
         width: 143,
         height: 110,
@@ -125,14 +129,15 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
         },
       });
     } else{
+
       gsap.to(".logo", {
         [click === 1 ? "right" : "left"]: "0%",
         opacity: 1,
-        duration: 1,
+        duration: 0.75,
         width: 175,
         height: 150,
         y: -10,
-        x: click === 1 ? (screenWidth <= 1240 ? -5 : -35) : (screenWidth <= 1240 ? 5 : 35),
+        x: click === 1 ? (width <= 1240 ? -5 : -35) : (width <= 1240 ? 5 : 35),
         onComplete: () => {
           if (click === 1) {
             changeLocale("ar");
@@ -142,7 +147,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
         },
       });
     } 
-  }, []);
+  }, [width]);
 
   return (
     <>
@@ -209,20 +214,22 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
               </button>
             </div>
 
-            <p style={{ fontFamily: "Alegreya" }}>
-              ‫‪A‬‬ ‫‪love‬‬ ‫‪for‬‬ ‫‪words‬‬ ‫‪and‬‬ ‫‪a‬‬ ‫‪team‬‬ ‫‪with‬‬ ‫‪fervor:‬‬
+            <div dir="ltr" style={{ zIndex: 3 }}>
+              <p style = {{fontFamily: "Alegreya"}}>
+              A love for words and a team with fervor:
               <br />
-              <b>‫‪welcome‬‬ ‫‪to‬‬ ‫‪Mauzoun.‬‬</b>
-            </p>
-            <button
-              className={styles.languageButton}
-              style={{ fontFamily: "Alegreya Sans" }}
-              onClick={() => {
-                handleMovePage(2);
-              }}
-            >
-              <b>‫‪Click‬‬ ‫‪here</b>‬‬ ‫‪to‬‬ ‫‪begin‬‬ ‫‪your‬‬ ‫‪story‬‬ ‫‪in‬‬ ‫‪English.‬‬
-            </button>
+              <b>welcome to Mauzoun.</b>
+              </p>
+              <button
+                className = {styles.languageButton}
+                style = {{fontFamily: 'Alegreya Sans'}}
+                onClick = {() => {
+                  handleMovePage(2);
+                }}
+              >
+                <b>Click here</b> to begin your story in English.
+              </button>
+            </div>
 
             <img
               className={styles.bottomKashida}

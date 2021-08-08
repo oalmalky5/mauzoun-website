@@ -10,6 +10,7 @@ import styles from "../styles/portfolio.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import WhiteBox from "../components/WhiteBox";
+import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import mauj from "./mauj";
 
@@ -133,6 +134,7 @@ export default function portfolio({ textAnimationControls, handleBgColorChange, 
               overflow: isNavOpen ? "hidden" : null,
             }}
           >
+        <MotionLogo />
             <Menu
               backgroundColor={backgroundColor}
               textAnimationControls={textAnimationControls}

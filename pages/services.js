@@ -8,6 +8,7 @@ import { NextSeo } from "next-seo";
 import styles from "../styles/services.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
+import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import WhiteBox from "../components/WhiteBox";
 
@@ -102,6 +103,8 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
               overflow: isNavOpen ? "hidden" : null,
             }}
           >
+        <MotionLogo />
+
             <Menu
               backgroundColor={backgroundColor}
               textAnimationControls={textAnimationControls}

@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
       transition: { delay: 0, duration: 0.8 },
     },
     instantlyVisible: { opacity: 1, transition: { duration: 0 } },
-    hidden: { opacity: width < 768 ? 1 : 0.4, transition: { delay: 0 } },
+    hidden: { opacity: 1, transition: { delay: 0 } },
   };
   
   const defaultPageTransition = {
@@ -55,10 +55,10 @@ function MyApp({ Component, pageProps }) {
     }
 
     if (isNavOpen) {
-      gsap.to('.navigation', {width: '0%', paddingRight: 0, paddingLeft: 0, duration: 0.4, clearProps: 'all', onComplete: () => setIsNavOpen(!isNavOpen)})
+      gsap.to('.navigation', {width: '0%', paddingRight: 0, paddingLeft: 0, duration: 0.3, clearProps: 'all', onComplete: () => setIsNavOpen(!isNavOpen)})
     } else {
       setIsNavOpen(!isNavOpen)
-      gsap.fromTo('.navigation', {width: 0}, {width: '100%', [paddingDirection]: 45, duration: 0.4, clearProps: 'all'})
+      gsap.fromTo('.navigation', {width: 0}, {width: '100%', [paddingDirection]: 45, duration: 0.3, clearProps: 'all'})
     }
   }
 

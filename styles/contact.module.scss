@@ -11,6 +11,10 @@
   top: 0;
   pointer-events: none;
 
+  @media (max-width: 767px) {
+    padding: 10px;
+  }
+
   .buttonSpacer {
     width: 650px;
 

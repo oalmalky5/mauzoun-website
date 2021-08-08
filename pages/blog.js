@@ -7,6 +7,7 @@ import { NextSeo } from "next-seo";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ComingSoon from "../components/ComingSoon";
+import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 
 const backgroundColor = "#f7f5f0";
@@ -61,6 +62,7 @@ export default function blog({ textAnimationControls, handleBgColorChange,handle
               overflow: isNavOpen ? "hidden" : null,
             }}
           >
+            <MotionLogo />
             <Menu
               backgroundColor={backgroundColor}
               textAnimationControls={textAnimationControls}

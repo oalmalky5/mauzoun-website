@@ -8,6 +8,7 @@ import { NextSeo } from "next-seo";
 import styles from "../styles/andyou.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
+import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import ComingSoon from "../components/ComingSoon";
 
@@ -69,6 +70,7 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
               overflow: isNavOpen ? "hidden" : null,
             }}
           >
+            <MotionLogo />
             <Menu
               backgroundColor={backgroundColor}
               textAnimationControls={textAnimationControls}
@@ -150,7 +152,6 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
                   <motion.img src="/Mauzoun & You.png" height="376px" width="750px" layout="fixed" priority="true" transition={{ duration: 0.5 }}/>
                 </div>
               </div>
-              <div style={{ height: "350px" }} />
             </div>
           </div>
         </div>

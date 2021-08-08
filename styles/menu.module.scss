@@ -127,6 +127,40 @@
   }
 }
 
+.motionLogo {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  height: 150px;
+  width: 175px;
+  opacity:1; 
+  position: absolute;
+  z-index:2;
+
+  @include ltr {
+    margin-left: 35px !important;
+  }
+
+  @include rtl {
+    margin-right: 35px !important;
+  }
+
+  @media (max-width: 1240px) {
+
+    @include ltr {
+    margin-left: 5px !important;
+    }
+  
+    @include rtl {
+    margin-right: 5px !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
 .navLink {
   & p {
     font-size: 25px;
@@ -136,12 +170,12 @@
 
   & .otherLocaleLink{
     min-height: 19px;
+    margin-bottom: 20px;
     display: block;
   }
 
   & .otherLocaleLink p {
     font-size: 15px;
-    margin-bottom: 20px;
   }
 }
 

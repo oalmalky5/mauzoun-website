@@ -23,7 +23,7 @@ exports["en-US"] = {
       "Sorry, we could not reach our servers. Please try again later.",
   },
   "/home": {
-    title: "A warm welcome to you from the Mauzoun Team.",
+    title: "A warm welcome from the Mauzoun Team.",
     summary:
       "We are a Jeddah-based writing studio that researches then writes creatively and holistically, providing services to clients worldwide.",
     "story.intro": "Here’s our story:",
