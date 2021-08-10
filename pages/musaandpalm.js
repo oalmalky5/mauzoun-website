@@ -100,7 +100,6 @@ export default function musaandpalm({textAnimationControls}) {
                 <div>
                     <span className={styles.title1}>{f("collab.title1")}</span>
                     <span className={styles.para1}>{f("collab.para1")}</span>
-                    // <span className={styles.para1}>{f("collab.para2")}</span>
                 </div>
 
                 <div>
