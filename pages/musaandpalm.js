@@ -81,26 +81,26 @@ export default function musaandpalm({textAnimationControls}) {
                 <div className="intro">
                     <span className={styles.title1}>{f("intro.title1")}</span>
                     <p className={styles.para1}>{f("intro.para1")}</p>
+                    <p className={styles.para1}>{f("intro.para2")}</p>
                 </div>
 
                 <div className="longStory">
                     <span className={styles.title1}>{f("longStory.title1")}</span>
                     <span className={styles.para1}>{f("longStory.para1")}</span>
+                    <span className={styles.para1}>{f("longStory.paraX")}</span>
                     <span className={styles.title2}>{f("longStory.title2")}</span>
                     <span className={styles.para2}>{f("longStory.para2")}</span>
-                    <span className={styles.para3}>{f("longStory.para3")}</span>
-                </div> 
+                 </div> 
                 
                 <div>
-                    <span className={styles.title1}>{f("process.title1")}</span>
-                    <img className={styles.image}src="Musa&PalmEN.png" alt="Musa & Palm table"/>
+                     <img className={styles.image}src="Musa&PalmEN.png" alt="Musa & Palm table"/>
                     <span className={styles.para1}>{f("process.para1")}</span>
                 </div>
 
                 <div>
                     <span className={styles.title1}>{f("collab.title1")}</span>
                     <span className={styles.para1}>{f("collab.para1")}</span>
-                    <span className={styles.para1}>{f("collab.para2")}</span>
+                    // <span className={styles.para1}>{f("collab.para2")}</span>
                 </div>
 
                 <div>
