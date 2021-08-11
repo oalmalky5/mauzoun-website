@@ -88,12 +88,13 @@ export default function musaandpalm({textAnimationControls}) {
                     <span className={styles.title1}>{f("longStory.title1")}</span>
                     <span className={styles.para1}>{f("longStory.para1")}</span>
                     <span className={styles.para1}>{f("longStory.paraX")}</span>
+                    <img className={styles.image1} src="mplogo1.png" alt="Musa & Palm logo"/>
                     <span className={styles.title2}>{f("longStory.title2")}</span>
                     <span className={styles.para2}>{f("longStory.para2")}</span>
                  </div> 
                 
                 <div>
-                     <img className={styles.image}src="Musa&PalmEN.png" alt="Musa & Palm table"/>
+                    <img className={styles.image2} src="Musa&PalmEN.png" alt="Musa & Palm table"/>
                     <span className={styles.para1}>{f("process.para1")}</span>
                 </div>
 
