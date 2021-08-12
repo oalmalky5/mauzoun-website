@@ -231,6 +231,10 @@ a {
     width: 100%;
     max-width: 650px;
     padding: 0 50px;
+
+    p{
+      max-width: 550px;
+    }
   
     @media (min-width: 1536px) {
       max-width: 992px;

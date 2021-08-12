@@ -133,9 +133,7 @@
   cursor: pointer;
   height: 150px;
   width: 175px;
-  opacity:1; 
-  position: absolute;
-  z-index:2;
+  position:fixed;
 
   @include ltr {
     margin-left: 35px !important;
@@ -153,6 +151,39 @@
   
     @include rtl {
     margin-right: 5px !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.motionLogoBGui {
+  margin-top: -10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  height: 170px;
+  width: 220px;
+  position:fixed;
+  z-index: 2;
+
+  @include ltr {
+    margin-left: -35px !important;
+  }
+
+  @include rtl {
+    margin-right: -35px !important;
+  }
+
+  @media (max-width: 1240px) {
+
+    @include ltr {
+    margin-left: -15px !important;
+    }
+  
+    @include rtl {
+    margin-right: -15px !important;
     }
   }
 

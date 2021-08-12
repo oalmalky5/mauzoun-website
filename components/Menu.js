@@ -75,22 +75,22 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
   const removeAndReturnBgColor = () => {
     gsap.to(
       '.container-background .navigation',
-      { backgroundColor: 'transparent', x: 0, duration: 0 }
+      { backgroundColor: 'transparent', duration: 0 }
     )
 
     gsap.to(
       '.navigation',
-      { backgroundColor: 'transparent', x: 0, duration: 0 }
+      { backgroundColor: 'transparent', duration: 0 }
     )
 
     gsap.from(
       '.container-background .navigation',
-      { backgroundColor: 'transparent', x: 0, duration: 0, delay: 0.6 }
+      { backgroundColor: 'transparent', duration: 0, delay: 0.6 }
     )
 
     gsap.from(
       '.navigation',
-      { backgroundColor: 'transparent', x: 0, duration: 0, delay: 0.6 }
+      { backgroundColor: 'transparent', duration: 0, delay: 0.6 }
     )
   }
 
@@ -98,19 +98,19 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
    
     gsap.to( 
       '.container-content ',
-    { opacity: 0, x: 0, duration: 0.3 });
+    { opacity: 0, duration: 0.3 });
 
     gsap.to( 
       '.animationFade ',
-    { opacity: 0, x: 0, duration: 0.3 });
+    { opacity: 0, duration: 0.3 });
 
     gsap.to(
       `.container-content`,
-      { opacity: 1, x: 0, duration: 0.3, delay: 0.6 }
+      { opacity: 1, duration: 0.3, delay: 0.6 }
     );
     gsap.to(
       `.animationFade`,
-      { opacity: 1, x: 0, duration: 0.3, delay: 0.6 }
+      { opacity: 1, duration: 0.3, delay: 0.6 }
     );
 
   }
@@ -173,8 +173,9 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
       {" "}
       <div className="animationFade">
         {isNavOpen ? null : (
+      <><div className={styles.motionLogoBGui} style={{backgroundColor}}></div>
           <Link href="/">
-            <img
+            <motion.img
               src="https://i.imgur.com/HjDbXtR.png"
               alt="Mauzoun logo"
               className={styles.logo}
@@ -182,7 +183,7 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
               layoutId="logo"
               style={{opacity:0, zIndex:-9}}
             />
-          </Link>
+          </Link></>
         )}
 
         <div className={styles.menu}>
