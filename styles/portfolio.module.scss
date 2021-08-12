@@ -20,7 +20,14 @@
   @media (max-width: 767px) {
     font-size: 30px;
   }
+  white-space: nowrap;
+
 }
+
+.client:hover {
+  color: #F7F5F0;
+}
+
 
 .carousel {
   margin-top: 30px;
