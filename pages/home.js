@@ -82,7 +82,7 @@ export default function Home({ updatePageTransition, textAnimationControls }) {
             height='400px'
             layout='fixed'
             priority='true'
-            src='website-photo-01.png'
+            src='officeMain.jpg'
             alt='an image of an office'
           />
 
