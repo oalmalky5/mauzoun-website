@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import Link from 'next/link'
-
-
 
 const Modal = ({ show, onClose, children, title }) => {
     const [isBrowser, setIsBrowser] = useState(false);
@@ -15,7 +12,6 @@ const Modal = ({ show, onClose, children, title }) => {
     const handleCloseClick = (e) => {
       e.preventDefault();
       onClose();
-      console.log('modal close function has been triggered')
     };
   
     const modalContent = show ? (

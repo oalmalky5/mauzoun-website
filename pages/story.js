@@ -2,12 +2,13 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { NextSeo } from 'next-seo';
+import { NextSeo } from "next-seo";
 
 import styles from "../styles/story.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import WhiteBox from "../components/WhiteBox";
+import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 
 const backgroundColor = "#d1e3f2";
@@ -80,8 +81,9 @@ const whiteBoxDecoratorsPositions = {
   ],
 };
 
-const Story = function ({ textAnimationControls }) {
+const Story = function ({ textAnimationControls, handleBgColorChange, handleOpenNav, history, isNavOpen, ...rest }) {
   const locale = useRouter().locale;
+  const { key, initial, animate, variants } = rest;
 
   const intl = useIntl();
   const f = (id, options) =>
@@ -92,16 +94,12 @@ const Story = function ({ textAnimationControls }) {
     });
 
   let numberOfMembersImage = Object.keys(teamMembersData).length;
-  let numberOfMembers =
-    Object.keys(intl.messages).filter((e) => e.startsWith("teamMember."))
-      .length / 2;
+  let numberOfMembers = Object.keys(intl.messages).filter((e) => e.startsWith("teamMember.")).length / 2;
 
   const updateTeamMembersHoverState = (e, isHovered) => {
     const id = e.target?.id;
     if (id && teamMembersData[id].src)
-      e.target.src = isHovered
-        ? teamMembersData[id].src
-        : teamMembersData[id].preview;
+      e.target.src = isHovered ? teamMembersData[id].src : teamMembersData[id].preview;
   };
 
   const getTeamMembers = () => {
@@ -119,7 +117,7 @@ const Story = function ({ textAnimationControls }) {
             onMouseLeave={(e) => updateTeamMembersHoverState(e, false)}
           />
           {i <= numberOfMembers && (
-            <div className='mt-0 mb-0 heading'>
+            <div className="mt-0 mb-0 heading">
               <b>{f(`teamMember.${i}.name`)}</b>
               {f(`teamMember.${i}.role`)}
             </div>
@@ -131,91 +129,97 @@ const Story = function ({ textAnimationControls }) {
     return teamMembers;
   };
 
+  React.useEffect(() => handleBgColorChange(backgroundColor), []);
+
   return (
     <>
       <NextSeo
         title={locale !== "ar" ? "Mauzoun | Story" : "مَوْزوْن | قصتنا"}
         description={locale !== "ar" ? "Mauzoun | Story" : "مَوْزوْن | قصتنا"}
       />
-
-      <div
-        style={{
-          position: "fixed",
-          display: "flex",
-          alignItems: "stretch",
-          width: "100%",
-          height: "100%",
-          overflowX: "hidden",
-          // overflowY: "scroll",
-        }}
+      <div className="background-animation" style={{ backgroundColor }} />
+      <motion.div
+        key={key}
+        initial={initial}
+        animate={animate}
+        variants={variants}
+        // 
+        // 
       >
+         <ContactButton isNavOpen = {isNavOpen} history = {history}/>
         <div
-          className='test-story'
           style={{
-            backgroundColor: backgroundColor,
-            width: "72%",
-            height: "150vh",
-            position: "absolute",
-            zIndex: -1,
-          }}
-        ></div>
-        <div
-          className='bg-animation-story'
-          style={{
-            position: "relative",
+            position: "fixed",
+            display: "flex",
+            alignItems: "stretch",
             width: "100%",
             height: "100%",
-            zIndex: 10,
+            overflowX: "hidden",
+            // overflowY: "scroll",
           }}
         >
-          <Menu
-            backgroundColor={backgroundColor}
-            textAnimationControls={textAnimationControls}
-          />
-
           <div
-            className='container'
-            style={{ backgroundColor }}
-          // layout="position"
+            className="bg-animation-story"
+            style={{
+              position: "relative",
+              width: "100%",
+              height: "100%",
+              zIndex: 8,
+              overflow: isNavOpen ? "hidden" : null,
+            }}
           >
-            <div className={styles.storyCover}>
-              <img
-                src='/Story.png'
-                height='341px'
-                width='900px'
-                layout='fixed'
-                priority='true'
-              />
+        <MotionLogo />
+
+            <Menu
+              backgroundColor={backgroundColor}
+              textAnimationControls={textAnimationControls}
+              isNavOpen={isNavOpen}
+              handleOpenNav = {handleOpenNav}
+            />
+
+            <div
+              className="container"
+              // layout="position"
+            >
+              <div className="container-background" style={{ backgroundColor }}></div>
+              <div className="container-image">
+                <div className={styles.storyCover}>
+                  <motion.img src="/Story.png" height="341px" width="900px" layout="fixed" priority="true" transition={{ duration: 0.5 }}/>
+                </div>
+              </div>
+
+              <div className="container-content">
+                <h1>{f("nameMeaning")}</h1>
+
+                {f("aim")}
+
+                <b>{f("teamwork")}</b>
+              </div>
+
+              <div className="container-object">
+                <div className={styles.gridContainer}>{getTeamMembers()}</div>
+              </div>
+
+              <div className="container-content">{f("world")}</div>
+
+              <div className="container-object">
+                <div class={styles.totalWhiteBox}>
+                  <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
+                    <b>{f("whitebox.innerText1")}</b>
+                    <br />
+                    {f("whitebox.innerText2")}
+                  </WhiteBox>
+                </div>
+              </div>
+              <div className="container-content">
+                {f("workAspects")}
+              </div>
             </div>
-            <h1>{f("nameMeaning")}</h1>
-
-            {f("aim")}
-
-            <b>{f("teamwork")}</b>
-
-            <div className={styles.gridContainer}>{getTeamMembers()}</div>
-
-            {f("world")}
-            <div class={styles.totalWhiteBox}>
-            <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-              <b>{f("whitebox.innerText1")}</b>
-              <br />
-              {f("whitebox.innerText2")}
-            </WhiteBox>
-
-            </div>
-
-            {f("workAspects")}
           </div>
-
-          <ContactButton />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
 
 export default Story;
-
-
-

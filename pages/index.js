@@ -3,7 +3,8 @@ import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
-import { NextSeo } from 'next-seo'; 
+import { NextSeo } from "next-seo";
+import useWindowSize from '../utils/useWidth'
 import styles from "../styles/landingPage.module.scss";
 
 const kashidas = [
@@ -17,11 +18,10 @@ const kashidas = [
   { top: "85%", right: "32%" },
 ];
 
-export default function LandingPage({
-  updatePageTransition,
-  textAnimationControls,
-}) {
+export default function LandingPage({ updatePageTransition, textAnimationControls }) {
   const router = useRouter();
+
+  const {width} = useWindowSize()
 
   React.useEffect(() => {
     router.prefetch("/en-US/home");
@@ -29,16 +29,13 @@ export default function LandingPage({
   }, []);
 
   const changeLocale = (locale) => {
-    // updatePageTransition({
-    //   initial: "hidden",
-    //   animate: "visible",
-    // });
     Cookies.set("NEXT_LOCALE", locale);
     router.push(`/${locale}/home`);
     textAnimationControls.set("instantlyHidden");
   };
 
   const [kashidaRefs, setKashidaRefs] = React.useState([]);
+
   React.useEffect(() => {
     // add or remove refs
     setKashidaRefs((kashidaRefs) =>
@@ -54,15 +51,12 @@ export default function LandingPage({
 
     if (isHovered) {
       e.target.src = `/landingPage/${id}.png`;
-      e.target.style.marginTop =
-        ((e.target.clientHeight / 2) * -0.1).toString() + "px";
+      e.target.style.marginTop = ((e.target.clientHeight / 2) * -0.25).toString() + "px";
 
       if (e.target.style.left) {
-        e.target.style.marginLeft =
-          ((e.target.clientWidth / 2) * -0.1).toString() + "px";
+        e.target.style.marginLeft = ((e.target.clientWidth / 2) * -0.25).toString() + "px";
       } else {
-        e.target.style.marginRight =
-          ((e.target.clientWidth / 2) * -0.1).toString() + "px";
+        e.target.style.marginRight = ((e.target.clientWidth / 2) * -0.25).toString() + "px";
       }
     } else {
       e.target.src = `/landingPage/Kashida ${id}.png`;
@@ -75,10 +69,7 @@ export default function LandingPage({
   const buildKashida = (id, position) => {
     return (
       <div key={id}>
-        <img
-          src={`/landingPage/${id}.png`}
-          style={{ display: "none", position: "absolute" }}
-        />
+        <img src={`/landingPage/${id}.png`} style={{ display: "none", position: "absolute" }} />
         <img
           id={id}
           ref={kashidaRefs[id - 1]}
@@ -96,58 +87,74 @@ export default function LandingPage({
   };
 
   const handleMovePage = React.useCallback((click) => {
-    //TODO : uncomment this part of code to enable animation
-    // gsap.fromTo(
-    //   ".background",
-    //   { opacity: 1 },
-    //   { opacity: 1, x: click === 2 ? -165 : 155, duration: 0.8 }
-    // );
-    // gsap.to(".background", {
-    //   duration: 0.8,
-    //   left: click === 2 ? "-25%" : "25%",
-    //   width: "100%",
-    //   justifyContent: "flex-start",
-    //   paddingLeft: "33%",
-    //   textAlign: "left",
-    // });
+    gsap.to(".background", {
+      duration: 0.75,
+      width: "100%",
+      justifyContent: "flex-start",
+      textAlign: "left",
+    });
 
-    // gsap.to(".main", {
-    //   duration: 0.8,
-    //   left: click === 2 ? "100%" : "-100%",
-    //   opacity: 0,
-    // });
-    // gsap.fromTo(
-    //   ".transition_dot",
-    //   { opacity: 1 },
-    //   { opacity: 0, x: click === 2 ? 1200 : -1200, duration: 0.8 }
-    // );
-    // gsap.to(".logo", {
-    //   xPercent: click === 2 ? -208 : -78,
-    //   yPercent: -5,
-    //   duration: 0.8,
-    // });
-    // setTimeout(() => {
-    //   if (click === 1) {
-    //     changeLocale("ar");
-    //   } else if (click === 2) {
-    //     changeLocale("en-US");
-    //   }
-    // }, 700);
-    //TODO : comment this part of code when animation enabled
-    if (click === 1) {
-      changeLocale("ar");
-    } else if (click === 2) {
-      changeLocale("en-US");
-    }
-  }, []);
+    gsap.to(click === 2 ? ".background-left" : ".background-right", {
+      duration: 0,
+      width: "0%",
+    });
+
+    gsap.to(".main", {
+      duration: 0.75,
+      left: click === 2 ? "100%" : "-100%",
+      opacity: 0,
+    });
+
+    gsap.fromTo(
+      ".transition_dot",
+      { opacity: 1 },
+      { opacity: 0, x: click === 2 ? 1200 : -1200, duration: 0.75 }
+    );
+
+    if (width < 768) {
+
+      gsap.to(".logo", {
+        [click === 1 ? "right" : "left"]: "0%",
+        opacity: 1,
+        duration: 0.75,
+        y: -28,
+        width: 143,
+        height: 110,
+        onComplete: () => {
+          if (click === 1) {
+            changeLocale("ar");
+          } else if (click === 2) {
+            changeLocale("en-US");
+          }
+        },
+      });
+    } else{
+
+      gsap.to(".logo", {
+        [click === 1 ? "right" : "left"]: "0%",
+        opacity: 1,
+        duration: 0.75,
+        width: 175,
+        height: 150,
+        y: -10,
+        x: click === 1 ? (width <= 1240 ? -5 : -35) : (width <= 1240 ? 5 : 35),
+        onComplete: () => {
+          if (click === 1) {
+            changeLocale("ar");
+          } else if (click === 2) {
+            changeLocale("en-US");
+          }
+        },
+      });
+    } 
+  }, [width]);
 
   return (
-<>
-    <NextSeo
-    title="Welcome to Mauzoun | أهلًا بكم في مَوْزوْن"
-    description="Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia, specializing in copywriting, translation, scriptwriting, and book editing in both the Arabic and English."
-  />
-  
+    <>
+      <NextSeo
+        title="Welcome to Mauzoun | أهلًا بكم في مَوْزوْن"
+        description="Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia, specializing in copywriting, translation, scriptwriting, and book editing in both the Arabic and English."
+      />
 
       <div className={styles.pageContainer}>
         {/* Kashidas organized from top left to bottom right */}
@@ -159,6 +166,7 @@ export default function LandingPage({
             alignItems: "stretch",
             width: "100%",
             height: "100%",
+            zIndex: 2,
           }}
         >
           {kashidas.map((e, i) => buildKashida(i + 1, e))}
@@ -166,14 +174,17 @@ export default function LandingPage({
 
         <div />
 
+        <div className={styles.bgAnimation + " background-left"} style={{ left: 0 }}></div>
+        <div className={styles.bgAnimation + " background-right"} style={{ right: 0 }}></div>
+
         <div className={styles.mainPanel + " background"}>
           <img
             className={styles.logo + " logo"}
-            src='https://i.imgur.com/HjDbXtR.png'
-            alt='Mauzoun logo'
+            src="https://i.imgur.com/HjDbXtR.png"
+            alt="Mauzoun logo"
           />
           <div
-            className='main'
+            className="main"
             style={{
               width: "100%",
               display: "flex",
@@ -182,10 +193,11 @@ export default function LandingPage({
               position: "absolute",
               height: "calc(100vh - 150px)",
               bottom: 0,
+              padding: "0 10px",
               justifyContent: "center",
             }}
           >
-            <div dir='rtl'>
+            <div dir="rtl" style={{ zIndex: 3 }}>
               <p style={{ fontFamily: "GE Dinar Two" }}>
                 عشق للكلمات وفريق شغوف:
                 <br />
@@ -202,27 +214,27 @@ export default function LandingPage({
               </button>
             </div>
 
-            <p style={{ fontFamily: "Alegreya" }}>
-              ‫‪A‬‬ ‫‪love‬‬ ‫‪for‬‬ ‫‪words‬‬ ‫‪and‬‬ ‫‪a‬‬ ‫‪team‬‬ ‫‪with‬‬
-              ‫‪fervor:‬‬
+            <div dir="ltr" style={{ zIndex: 3 }}>
+              <p style = {{fontFamily: "Alegreya"}}>
+              A love for words and a team with fervor:
               <br />
-              <b>‫‪welcome‬‬ ‫‪to‬‬ ‫‪Mauzoun.‬‬</b>
-            </p>
-            <button
-              className={styles.languageButton}
-              style={{ fontFamily: "Alegreya Sans" }}
-              onClick={() => {
-                handleMovePage(2);
-              }}
-            >
-              <b>‫‪Click‬‬ ‫‪here</b>‬‬ ‫‪to‬‬ ‫‪begin‬‬ ‫‪your‬‬ ‫‪story‬‬
-              ‫‪in‬‬ ‫‪English.‬‬
-            </button>
+              <b>welcome to Mauzoun.</b>
+              </p>
+              <button
+                className = {styles.languageButton}
+                style = {{fontFamily: 'Alegreya Sans'}}
+                onClick = {() => {
+                  handleMovePage(2);
+                }}
+              >
+                <b>Click here</b> to begin your story in English.
+              </button>
+            </div>
 
             <img
               className={styles.bottomKashida}
               src={`/landingPage/Kashida bottom.png`}
-              width='270px'
+              width="270px"
             />
           </div>
         </div>

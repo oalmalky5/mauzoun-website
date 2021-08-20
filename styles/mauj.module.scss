@@ -1,55 +1,59 @@
+@use "mixins" as *;
+
 .thirdSec .list {
-    list-style: none;
+  list-style: none;
 }
 
 .tone .list {
-    list-style: none;
-    margin-left: 100px;
-    font-size: 25px;
-    font-family: "Alegreya";
+  list-style: none;
+  margin-left: 100px;
+  font-size: 25px;
+  font-family: "Alegreya";
 }
 
 .tone .toneFinal {
-    font-size: 25px;
-    font-family: "Alegreya";
+  font-size: 25px;
+  font-family: "Alegreya";
 }
 
 .instaGrid {
-    display: grid;
-	grid-template-columns: [col1] 33% [col2] 33% [col3] 33%;
-	grid-gap: 10px;
-	grid-template-rows: [row1] 47% [row2] 47%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-template-rows: repeat(auto-fill, 300px);
 }
 
 .title1 {
-    font-size: 30px;
-    font-weight: bold;
-    font-family: "Alegreya";
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Alegreya";
 }
 
-
 .para1 {
-   font-size: 20px; 
-   font-family: "Alegreya Sans";
-   font-weight: 300;
+  font-size: 20px;
+  font-family: "Alegreya Sans";
+  font-weight: 300;
 }
 
 .centerTitle {
-    // text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: "Alegreya";
-    margin-bottom:40px;
+  // text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Alegreya";
+  margin-bottom: 40px;
 }
 
 .center {
-    font-size: 20px; 
-    font-family: "Alegreya";
-    // text-align: center;
-
+  font-size: 20px;
+  font-family: "Alegreya";
+  // text-align: center;
 }
 
-
 .totalWhiteBox {
+  @include ltr {
     margin-left: 33px;
+  }
+
+  @include rtl {
+    margin-right: 33px;
+  }
 }

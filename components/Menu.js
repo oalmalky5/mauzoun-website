@@ -1,11 +1,11 @@
 import React from "react";
-import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io";
-import { IoLogoInstagram } from "react-icons/io";
+import { IoLogoLinkedin, IoLogoTwitter, IoLogoInstagram } from "react-icons/io";
 import { useIntl, createIntl, createIntlCache } from "react-intl";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Cookies from "js-cookie";
+import { isIOS } from "react-device-detect";
 
 import styles from "../styles/menu.module.scss";
 import * as locales from "../content/locale";
@@ -15,7 +15,7 @@ import gsap from "gsap";
 
 const intlCache = createIntlCache();
 
-export default function Menu({ backgroundColor, textAnimationControls }) {
+export default function Menu({ backgroundColor, textAnimationControls, isNavOpen, handleOpenNav }) {
   const router = useRouter();
   const { locale, pathname } = router;
 
@@ -56,21 +56,15 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
 
   const [hoveredLink, setHoveredLink] = React.useState("");
 
-  // State used to avoid oddly appearing transition when switching languages
-  const [logoTransition, setLogoTransition] = React.useState({ duration: 2 });
-
   const buildTiltedSquare = (linkName) => {
     let filter;
     if (router.pathname === "/services" || router.pathname === "/blog")
-      filter =
-        "invert(92%) sepia(72%) saturate(682%) hue-rotate(329deg) brightness(96%) contrast(103%)";
-    else
-      filter =
-        "invert(99%) sepia(59%) saturate(426%) hue-rotate(169deg) brightness(112%) contrast(100%)";
+      filter = "invert(92%) sepia(72%) saturate(682%) hue-rotate(329deg) brightness(96%) contrast(103%)";
+    else filter = "invert(99%) sepia(59%) saturate(426%) hue-rotate(169deg) brightness(112%) contrast(100%)";
 
     return (
       <object
-        data='/Tilted Square.svg'
+        data="/Tilted Square.svg"
         className={styles.tiltedSquare}
         style={{ filter }}
         hidden={hoveredLink !== linkName && `/${linkName}` !== router.pathname}
@@ -78,84 +72,134 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
     );
   };
 
-  const handleAnimation = React.useCallback((locale) => {
-    gsap.fromTo(
-      `.bg-animation-${pathname.split("/")[1]}`,
-      { opacity: 0 },
-      { opacity: 1, delay: 1.5 }
+  const removeAndReturnBgColor = () => {
+    gsap.to(
+      '.container-background .navigation',
+      { backgroundColor: 'transparent', duration: 0 }
+    )
+
+    gsap.to(
+      '.navigation',
+      { backgroundColor: 'transparent', duration: 0 }
+    )
+
+    gsap.from(
+      '.container-background .navigation',
+      { backgroundColor: 'transparent', duration: 0, delay: 0.6 }
+    )
+
+    gsap.from(
+      '.navigation',
+      { backgroundColor: 'transparent', duration: 0, delay: 0.6 }
+    )
+  }
+
+  const removeAndReturnContent = () => {
+   
+    gsap.to( 
+      '.container-content ',
+    { opacity: 0, duration: 0.3 });
+
+    gsap.to( 
+      '.animationFade ',
+    { opacity: 0, duration: 0.3 });
+
+    gsap.to(
+      `.container-content`,
+      { opacity: 1, duration: 0.3, delay: 0.6 }
     );
-    if (!locale || locale.includes("en-US")) {
-      gsap.to(`.test-${pathname.split("/")[1]}`, { left: 0 });
-    } else {
-      gsap.to(`.test-${pathname.split("/")[1]}`, { right: 0 });
-    }
-    if (!locale || locale.includes("en-US")) {
-      gsap.fromTo(
-        `.test-${pathname.split("/")[1]}`,
-        {
-          opacity: 1,
-          x: 0,
-          right: 0,
-          width: "100%",
-        },
-        {
-          opacity: 1,
-          x: 100,
-          left: 0,
-          width: "72%",
-          duration: 1.2,
-        }
-      );
-    } else {
-      gsap.fromTo(
-        `.test-${pathname.split("/")[1]}`,
-        {
-          opacity: 1,
-          x: 0,
-          left: 0,
-          width: "100%",
-        },
-        {
-          opacity: 1,
-          x: -100,
-          right: 0,
-          width: pathname === "/portfolio" ? "78%" : "75%",
-          duration: 1.2,
-        }
-      );
-    }
+    gsap.to(
+      `.animationFade`,
+      { opacity: 1, duration: 0.3, delay: 0.6 }
+    );
+
+  }
+
+  const hideContactBtnContent = () => {
+    gsap.to(`.contact-button`, {
+      opacity: 0,
+      duration: 0.15,
+      delay: 0,
+    });
+    gsap.to(`.contact-button`, {
+      opacity: 1,
+      duration: 0.3,
+      delay: 0.6,
+    });
+  }
+
+  const handleAnimationFadeIn = React.useCallback((locale, callback) => {
+    const isFromLeftToRight = !locale || locale.includes("en-US");
+
+    removeAndReturnBgColor()
+    removeAndReturnContent()
+    hideContactBtnContent()
+
+    gsap.to(`.header-mobile`, {
+      opacity: 0,
+      duration: 0.3,
+      delay: 0,
+    });
+
+    gsap.to(`.header-mobile`, {
+      opacity: 1,
+      duration: 0.3,
+      delay: 0.3,
+    });
+
+    gsap.to(`.background-animation`, {
+      left: isFromLeftToRight ? "25%" : "0",
+      duration: 0.3,
+      delay: 0.3,
+      clear: "all",
+      onStart: callback,
+    });
+
+    gsap.to(`.contact-button`, {
+      opacity: 1,
+      duration: 0.3,
+      delay: 0.6,
+    });
+
+
   }, []);
 
   return (
     <div
-      className={styles.sidenav + " navbar"}
-      style={{ backgroundColor }}
-    // layout='position'
+      className={`${isNavOpen ? styles.open : ""} ${styles.sidenav} navigation`}
+      style={{ backgroundColor: isNavOpen ? null : backgroundColor }}
+      // layout='position'
     >
       {" "}
-      <div className='animationFade'>
-        <Link href='/'>
-          <motion.img
-            src='https://i.imgur.com/HjDbXtR.png'
-            alt='Mauzoun logo'
-            className={styles.logo}
-          // transition={logoTransition}
-          // layoutId="logo"
-          />
-        </Link>
+      <div className="animationFade">
+        {isNavOpen ? null : (
+      <><div className={styles.motionLogoBGui} style={{backgroundColor}}></div>
+          <Link href="/">
+            <motion.img
+              src="https://i.imgur.com/HjDbXtR.png"
+              alt="Mauzoun logo"
+              className={styles.logo}
+              transition={{ duration: 0.5 }}
+              layoutId="logo"
+              style={{opacity:0, zIndex:-9}}
+            />
+          </Link></>
+        )}
 
         <div className={styles.menu}>
           <div>
-            {["home", "story", "services", "portfolio", "blog", "andyou"].map(
-              (e, i) => (
+            {["home", "story", "services", "portfolio", "blog", "andyou"].map((e, i) => {
+              const otherText = otherF(e + "Link");
+              return (
                 <div key={e}>
                   {!(i % 2) && buildTiltedSquare(e)}
 
                   <Link href={"/" + e}>
                     <a
                       className={styles.navLink}
-                      onMouseEnter={() => setHoveredLink(e)}
-                      onMouseLeave={() => setHoveredLink("")}
+                      onMouseEnter={() => (isIOS ? null : setHoveredLink(e))}
+                      onMouseLeave={() => (isIOS ? null : setHoveredLink(""))}
+                      onClick={() => isNavOpen && handleOpenNav?.("instant")}
                     >
                       <div
                         className={`${styles.itemTitle} heading`}
@@ -167,16 +211,20 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
                         {i % 2 ? buildTiltedSquare(e) : null}
                       </div>
 
-                      <span
-                        className={`${styles.otherLocaleLink} ${otherLocale} lighter`}
-                      >
-                        {otherF(e + "Link")}
+                      <span className={`${styles.otherLocaleLink} ${otherLocale} lighter`}>
+                        {otherText ? (
+                          otherText
+                        ) : (
+                          <p>
+                            <span> </span>
+                          </p>
+                        )}
                       </span>
                     </a>
                   </Link>
                 </div>
-              )
-            )}
+              );
+            })}
           </div>
 
           <div className={styles.languageSwitch}>
@@ -185,49 +233,40 @@ export default function Menu({ backgroundColor, textAnimationControls }) {
             </p>
 
             <a
-              onClick={async (e) => {
+              onClick={(e) => {
                 e.preventDefault();
-                await textAnimationControls?.start("hidden");
-                setLogoTransition({ duration: 0.1 });
-                Cookies.set("NEXT_LOCALE", otherLocale);
-                router.push(pathname, pathname, { locale: otherLocale });
-                await textAnimationControls?.start("visible");
-                //TODO : uncomment this part of code to enable animation
-                // handleAnimation(locale);
+                e.stopPropagation()
+                isNavOpen && handleOpenNav?.("instant")
+                handleAnimationFadeIn(locale, () => {
+                  Cookies.set("NEXT_LOCALE", otherLocale);
+                  router.push(pathname, pathname, { locale: otherLocale });
+                });
               }}
             >
               <label className={styles.switch}>
-                <input type='checkbox' checked={locale === "ar"} readOnly />
+                <input type="checkbox" checked={locale === "ar"} readOnly />
                 <span className={styles.slider} />
               </label>
             </a>
 
-            <p className={otherLocale}>
-              {locale === "ar" ? "English" : "العربية"}
-            </p>
+            <p className={otherLocale}>{locale === "ar" ? "English" : "العربية"}</p>
           </div>
 
           <div className={styles.complementaryInfo}>
             <div className={styles.bottomNavIcons}>
-              <a target='_blank' href='https://twitter.com/mauzoun_?lang=en'>
-                <IoLogoTwitter size='30px' />
+              <a target="_blank" href="https://twitter.com/mauzoun_?lang=en">
+                <IoLogoTwitter size="30px" />
               </a>
-              <a
-                target='_blank'
-                href='https://www.instagram.com/mauzoun/?hl=en'
-              >
-                <IoLogoInstagram size='30px' />
+              <a target="_blank" href="https://www.instagram.com/mauzoun/?hl=en">
+                <IoLogoInstagram size="30px" />
               </a>
-              <a
-                target='_blank'
-                href='https://www.linkedin.com/company/mauzoun/about/'
-              >
-                <IoLogoLinkedin size='30px' />
+              <a target="_blank" href="https://www.linkedin.com/company/mauzoun/about/">
+                <IoLogoLinkedin size="30px" />
               </a>
             </div>
 
-            <span className='en-US'>{f("email")}</span>
-            <span className='bolder'>{f("location")}</span>
+            <span className="en-US">{f("email")}</span>
+            <span className="bolder">{f("location")}</span>
           </div>
         </div>
       </div>

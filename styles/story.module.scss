@@ -21,11 +21,16 @@
 }
 
 .gridContainer {
-  width: 450px;
+  width: 100%;
+  max-width: 800px;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat( auto-fit, minmax(210px, 1fr) );
   margin-top: 50px;
   margin-bottom: 20px;
+
+  @media (max-width: 767px) {
+  grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
+  }
 }
 
 .gridItem {
@@ -34,14 +39,6 @@
   align-items: center;
   text-align: center;
   margin-bottom: 30px;
-
-  @include ltr {
-    margin-right: 75px;
-  }
-
-  @include rtl {
-    margin-left: 75px;
-  }
 }
 
 .gridItemImage {
@@ -52,8 +49,20 @@
   border: 1px solid rgba(0, 0, 0, 0.8);
   background-color: white;
   background-size: 200px 200px;
+
+  @media (max-width: 767px) {
+    background-size: 120px 120px;
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .totalWhiteBox {
-  margin-left: 31px;
+  @include ltr {
+    margin-left: 33px;
+  }
+
+  @include rtl {
+    margin-right: 33px;
+  }
 }

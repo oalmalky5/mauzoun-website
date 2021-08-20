@@ -1,14 +1,19 @@
 @use "mixins" as *;
 
 .pageContainer {
-  position: fixed;
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
   background-color: transparent;
   z-index: 3;
+  position: fixed;
+  top: 0;
   pointer-events: none;
+
+  @media (max-width: 767px) {
+    padding: 10px;
+  }
 
   .buttonSpacer {
     width: 650px;
@@ -24,6 +29,16 @@
     @media (min-width: 1536px) {
       width: 38%;
     }
+
+    @media (max-width: 580px) {
+      @include ltr {
+        margin-left: 0; /* Same as the width of the sidebar */
+      }
+
+      @include rtl {
+        margin-right: 0; /* Same as the width of the sidebar */
+      }
+    }
   }
 }
 
@@ -37,18 +52,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
     padding: 30px;
-    width: 210px;
-    height: 210px;
+
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    border: solid black;
+    border: none;
     outline: none;
     pointer-events: auto;
     cursor: not-allowed;
 
     & p {
-      font-size: 18px;
+      font-size: 16px;
       font-style: italic;
     }
   }
@@ -64,6 +79,11 @@
   display: flex;
   padding: 25px;
   padding-bottom: 0px;
+  max-width: 100%;
+
+  @media (max-width: 500px) {
+    padding: 5px;
+  }
 
   & form {
     display: flex;
@@ -82,6 +102,10 @@
       padding: 5px;
       outline: none;
       font-family: inherit;
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
 
       &::placeholder {
         color: rgba(0, 0, 0, 1);
@@ -114,4 +138,60 @@
   margin-top: -8px;
   font-size: 35px;
   cursor: pointer;
+  position: absolute;
+  top: -3px;
+  right: 0;
+}
+
+.contactWrapper {
+  position: relative;
+
+  width: 20vw;
+  height: 20vw;
+  min-width: 150px;
+  min-height: 150px;
+  max-width: 210px;
+  max-height: 210px;
+
+  margin-bottom: 50px;
+  margin-right: 10px;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+}
+
+.circleContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transform: rotate(-90deg);
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .circleAnimation {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: stroke 2s ease-out forwards;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes stroke {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
 }

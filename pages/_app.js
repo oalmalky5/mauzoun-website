@@ -1,78 +1,68 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import "../styles/globals.scss";
 import { IntlProvider } from "react-intl";
 import { useRouter } from "next/router";
-import { AnimateSharedLayout, motion, useAnimation } from "framer-motion";
-import checkDevice, { DESKTOP, MOBILE, TABLET } from "../utils/checkDevice"
-import MobileDisabled from "../components/MobileDisabled"
+import { AnimateSharedLayout, useAnimation } from "framer-motion";
+import useWindowSize from '../utils/useWidth'
 import * as locales from "../content/locale";
+import HeaderMobile from '../components/HeaderMobile'
+import gsap from "gsap";
+
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const {width} = useWindowSize()
   const { pathname, locale, defaultLocale } = router;
   const localeCopy = locales[locale];
   const messages = Object.assign(localeCopy["shared"], localeCopy[pathname]);
 
   const textAnimationControls = useAnimation();
 
+  const [currentPageColor, setCurrentPageColor] = useState('')
+  const [isNavOpen, setIsNavOpen] = useState(false)
+  const [history, setHistory] = useState([])
+
+  useEffect(()=>{
+    if (width < 768){
+      setIsNavOpen(false)
+    }
+  }, [width])
+
+  useEffect(()=>{
+    setHistory(prev => [...prev, pathname])
+  }, [pathname])
+
   const variants = {
     visible: {
       opacity: 1,
-      transition: { delay: 0, duration: 2, ease: "circInOut" },
+      transition: { delay: 0, duration: 0.8 },
     },
     instantlyVisible: { opacity: 1, transition: { duration: 0 } },
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1, transition: { delay: 0 } },
   };
-
+  
   const defaultPageTransition = {
-    initial: false,
-    animate: "instantlyVisible",
+    initial: 'hidden',
+    animate: "visible",
   };
 
-  let [runningAnimations, setRunningAnimations] = useState([]);
-  let [isMobile, setIsMobile] = useState("temp");
+  const handleOpenNav = (type) => {
+    const paddingDirection = locale === "ar" ? 'paddingRight' : 'paddingLeft'
 
-  const [pageTransition, setPageTransition] = useState(
-    defaultPageTransition
-  );
-  const [futurePageTransition, setFuturePageTransition] = useState();
-
-  React.useEffect(() => {
-    if (checkDevice() === MOBILE || checkDevice() === TABLET) {
-      console.log(checkDevice())
-      setIsMobile(true)
-    }else{
-      setIsMobile(false)
-
+    if (type === 'instant'){
+      return setIsNavOpen(false)
     }
 
-    if (!runningAnimations.includes("visible") && futurePageTransition) {
-      setPageTransition(futurePageTransition);
-      setFuturePageTransition(null);
-    }
-  }, [runningAnimations]);
-
-  const updatePageTransition = (v) => {
-    let transition = v;
-
-    if (v === "default") {
-      transition = defaultPageTransition;
-    }
-
-    if (runningAnimations.length) {
-      setFuturePageTransition(transition);
+    if (isNavOpen) {
+      gsap.to('.navigation', {width: '0%', paddingRight: 0, paddingLeft: 0, duration: 0.3, clearProps: 'all', onComplete: () => setIsNavOpen(!isNavOpen)})
     } else {
-      setPageTransition(transition);
+      setIsNavOpen(!isNavOpen)
+      gsap.fromTo('.navigation', {width: 0}, {width: '100%', [paddingDirection]: 45, duration: 0.3, clearProps: 'all'})
     }
-  };
+  }
 
-  React.useEffect(async () => {
-    if (pageTransition.initial) {
-      await textAnimationControls.set("hidden");
-      await textAnimationControls.start("slowVisible");
-    }
-  }, [pathname]);
+  const handleBgColorChange = (color) => setCurrentPageColor(color)
 
   return (
     <IntlProvider
@@ -80,36 +70,32 @@ function MyApp({ Component, pageProps }) {
       defaultLocale={defaultLocale}
       messages={messages}
     >
-      {isMobile!=="temp"&&(isMobile ? <MobileDisabled /> :
         <AnimateSharedLayout type="crossfade">
           <div
             dir={pathname !== "/" && locale === "ar" ? "rtl" : "ltr"}
             className={"locale " + locale}
           >
-            <motion.div
-              key={pathname}
-              initial={pageTransition.initial}
-              animate={pageTransition.animate}
-              variants={variants}
-              onAnimationStart={() => {
-                runningAnimations.push(pageTransition.animate);
-                setRunningAnimations(runningAnimations);
-              }}
-              onAnimationComplete={(definition) => {
-                runningAnimations = runningAnimations.filter(
-                  (e) => e !== definition
-                );
-                setRunningAnimations(runningAnimations);
-              }}
-            >
+              <HeaderMobile 
+                  backgroundColor = {currentPageColor} 
+                  isNavOpen = {isNavOpen} 
+                  handleOpenNav = {handleOpenNav}
+              /> 
               <Component
-                updatePageTransition={updatePageTransition}
+                updatePageTransition={()=>{}}
                 textAnimationControls={textAnimationControls}
+                handleBgColorChange = {handleBgColorChange}
+                handleOpenNav = {handleOpenNav}
+                isNavOpen = {isNavOpen} 
+                key={pathname}
+                history = {history}
+                initial={defaultPageTransition.initial}
+                animate={defaultPageTransition.animate}
+                variants={variants}
+                screenWidth = {width}
                 {...pageProps}
               />
-            </motion.div>
           </div>
-        </AnimateSharedLayout>)}
+        </AnimateSharedLayout>
     </IntlProvider>
   );
 }

@@ -4,7 +4,6 @@
   display: flex;
   position: absolute;
   bottom: 0;
-// margin-top: 100px;
 
   & div {
     display: block !important;
@@ -28,5 +27,17 @@
     @include rtl {
       margin-right: 5vw;
     }
+  }
+}
+
+.image {
+  @media (min-width: 426px) {
+    margin-top: 150px;
+  }  
+  @media (min-width: 769px) {
+    margin-top: 250px;
+  }
+  @media (min-width: 1025px) {
+    margin-top: 350px;
   }
 }

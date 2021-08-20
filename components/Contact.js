@@ -11,7 +11,6 @@ countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 countries.registerLocale(require("i18n-iso-countries/langs/ar.json"));
 
 import styles from "../styles/contact.module.scss";
-import { transform } from "framer-motion";
 
 export default function Contact({ isOpen, onClose }) {
   const locale = useRouter().locale;
@@ -47,7 +46,7 @@ export default function Contact({ isOpen, onClose }) {
       ariaHideApp={false}
       style={{
         overlay: {
-          zIndex: 4,
+          zIndex: 10,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

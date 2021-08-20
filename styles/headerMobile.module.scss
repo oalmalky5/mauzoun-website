@@ -1,0 +1,67 @@
+@use "mixins" as *;
+
+.headerMobile{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 125px;
+    padding-bottom: 25px;
+    z-index: 9;
+    background: white;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+
+     @media (max-width: 767px) {
+         display: flex;
+     }
+}
+
+.logo{
+  height: 110px;
+  max-width: 100%;
+}
+
+
+.button {
+  
+  img{
+    width: 48px;
+    height: 48px;
+  }
+  
+    @include ltr {
+        margin-right: 30px;
+      }
+      @include rtl {
+        margin-left: 30px;
+      }
+}
+
+.close:active{
+  animation-name: icon;
+  animation-duration: 0.25s;
+  animation-direction: alternate;
+}
+
+.open:active{
+  animation-name: icon;
+  animation-duration: 0.25s;
+  animation-direction: alternate;
+}
+
+@keyframes icon {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
