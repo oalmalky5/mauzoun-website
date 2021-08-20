@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useIntl } from "react-intl";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { NextSeo } from "next-seo";
-
+import { NextSeo } from 'next-seo';
+import styles from "../styles/blog.module.scss";
 import Menu from "../components/Menu";
+import ReadMore from "../components/ReadMore";
+
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ComingSoon from "../components/ComingSoon";
 import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
+
 
 const backgroundColor = "#f7f5f0";
 
@@ -78,6 +81,7 @@ export default function blog({ textAnimationControls, handleBgColorChange,handle
               <div className="container-content">
                 <ComingSoon />
               </div>
+                <ContactButton />
             </div>
           </div>
         </div>
