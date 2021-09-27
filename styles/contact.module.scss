@@ -13,6 +13,7 @@
 
   @media (max-width: 767px) {
     padding: 10px;
+    display: none;
   }
 
   .buttonSpacer {
@@ -139,8 +140,8 @@
   font-size: 35px;
   cursor: pointer;
   position: absolute;
-  top: -3px;
-  right: 0;
+  top: 6px;
+  right: 7px;
 }
 
 .contactWrapper {

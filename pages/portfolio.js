@@ -10,10 +10,11 @@ import styles from "../styles/portfolio.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import WhiteBox from "../components/WhiteBox";
-import {MotionLogo} from "../components/MotionLogo"
+import { MotionLogo } from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import mauj from './mauj'
 import musaandpalm from "./musaandpalm.js";
+import Footer from "../components/Footer";
 
 const backgroundColor = "#fbec9a";
 
@@ -85,7 +86,7 @@ export default function portfolio({ textAnimationControls, handleBgColorChange, 
   const oppositeSide = locale === "ar" ? "left" : "right";
 
   React.useEffect(() => handleBgColorChange(backgroundColor), []);
-
+  console.log("locale :: => ", locale)
   return (
     <>
       <NextSeo
@@ -101,9 +102,9 @@ export default function portfolio({ textAnimationControls, handleBgColorChange, 
         animate={animate}
         variants={variants}
         
-        
+
       >
-         <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+        <ContactButton isNavOpen={isNavOpen} history={history} />
         <div
           style={{
             position: "fixed",
@@ -135,12 +136,12 @@ export default function portfolio({ textAnimationControls, handleBgColorChange, 
               overflow: isNavOpen ? "hidden" : null,
             }}
           >
-        <MotionLogo />
+            <MotionLogo />
             <Menu
               backgroundColor={backgroundColor}
               textAnimationControls={textAnimationControls}
               isNavOpen={isNavOpen}
-              handleOpenNav = {handleOpenNav}
+              handleOpenNav={handleOpenNav}
             />
 
             <div className="container">
@@ -174,6 +175,7 @@ export default function portfolio({ textAnimationControls, handleBgColorChange, 
                         showStatus={false}
                         showIndicators={false}
                         showThumbs={false}
+                        selectedItem={locale === "ar" ? (clientLogos).length - 1 : 0}
                         renderArrowPrev={(clickHandler, hasPrev) =>
                           hasPrev && (
                             <div
@@ -207,7 +209,7 @@ export default function portfolio({ textAnimationControls, handleBgColorChange, 
                           )
                         }
                       >
-                        {clientLogos.map((e) => (
+                        {(locale === "ar" ? JSON.parse(JSON.stringify(clientLogos)).reverse() : clientLogos).map((e) => (
                           <img src={e} priority="true" />
                         ))}
                       </Carousel>
@@ -219,6 +221,7 @@ export default function portfolio({ textAnimationControls, handleBgColorChange, 
           </div>
         </div>
       </motion.div>
+      <Footer />
     </>
   );
 }

@@ -56,8 +56,6 @@ export default function ContactButton({
         <div className={styles.buttonContainer}>
           <div className = {styles.contactWrapper}>
 
-
-
           <motion.button
             className={`${styles.contactButton} ${styles.spin}` + " heading"}
             onClick={() => {

@@ -11,6 +11,7 @@ import formatJsxMessage from "../utils/formatJsxMessage";
 import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import WhiteBox from "../components/WhiteBox";
+import Footer from "../components/Footer";
 
 const backgroundColor = "#f7f5f0";
 
@@ -78,8 +79,6 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
         initial={initial}
         animate={animate}
         variants={variants}
-        
-        
       >
          <ContactButton isNavOpen = {isNavOpen} history = {history}/>
         <div
@@ -250,6 +249,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
           </div>
         </div>
       </motion.div>
+      <Footer />
     </>
   );
 }

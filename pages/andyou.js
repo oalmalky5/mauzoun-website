@@ -11,6 +11,7 @@ import formatJsxMessage from "../utils/formatJsxMessage";
 import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import ComingSoon from "../components/ComingSoon";
+import Footer from "../components/Footer";
 
 const backgroundColor = "#b3d0ea";
 
@@ -156,6 +157,7 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
           </div>
         </div>
       </motion.div>
+      <Footer />
     </>
   );
 }

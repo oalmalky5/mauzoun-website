@@ -9,13 +9,17 @@ import ReadMore from "../components/ReadMore";
 
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ComingSoon from "../components/ComingSoon";
-import {MotionLogo} from "../components/MotionLogo"
+import { MotionLogo } from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
+import Footer from "../components/Footer";
 
 
 const backgroundColor = "#f7f5f0";
 
-export default function blog({ textAnimationControls, handleBgColorChange,handleOpenNav, history,isNavOpen, ...rest }) {
+const blogImage = "/Story.png";
+
+
+export default function blog({ textAnimationControls, handleBgColorChange, handleOpenNav, history, isNavOpen, ...rest }) {
   const locale = useRouter().locale;
   const { key, initial, animate, variants } = rest;
 
@@ -43,7 +47,7 @@ export default function blog({ textAnimationControls, handleBgColorChange,handle
         animate={animate}
         variants={variants}
       >
-        <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+        <ContactButton isNavOpen={isNavOpen} history={history} />
         <div
           style={{
             position: "fixed",
@@ -70,22 +74,38 @@ export default function blog({ textAnimationControls, handleBgColorChange,handle
               backgroundColor={backgroundColor}
               textAnimationControls={textAnimationControls}
               isNavOpen={isNavOpen}
-              handleOpenNav = {handleOpenNav}
+              handleOpenNav={handleOpenNav}
             />
 
             <div className="container">
               <div className="container-background" style={{ backgroundColor }}></div>
+              {/*<div className="container-content">*/}
+              {/*  <h1>{f("title")}</h1>*/}
+              {/*</div>*/}
               <div className="container-content">
-                <h1>{f("title")}</h1>
+                {/* <ComingSoon /> */}
+                <img src={blogImage} height="" width="100%" />
+                <div>
+                    <div className={styles.blogPost}>
+                        <div className={styles.postTitle}>
+                            <h4 style={locale === "ar" ? {paddingLeft:"15px"} : {paddingRight:"15px"}}>{locale === "ar" ? 'لماذا أسست موقع "موزون"' : 'Why I Founded Mauzoun'}</h4>
+                            <span style={{ fontSize: '14px'}}>{locale === "ar" ? '26 يوليو 2021' : 'July 26, 2021'}</span>
+                        </div>
+                        <span className={styles.postedBy}>{locale === "ar" ? ' بواسطة ليان عبد الشكور' : 'by Layan Abdul Shakur'} </span>
+                    </div>
+                  {/*<p>{locale === "ar" ? 'لماذا أسست موقع "موزون"' : 'Why I Founded Mauzoun'}*/}
+                  {/*  <span style={{ fontSize: '14px', float: `${locale === "ar" ? "left" : "right"}` }}>{locale === "ar" ? '26 يوليو 2021' : 'July 26, 2021'}</span><br />*/}
+                  {/*  <span style={{ fontSize: '14px' }}>{locale === "ar" ? ' بواسطة ليان عبد الشكور' : 'by Layan Abdul Shakur'} </span>*/}
+                  {/*</p>*/}
+                  <ReadMore />
+                </div>
               </div>
-              <div className="container-content">
-                <ComingSoon />
-              </div>
-                <ContactButton />
+              <ContactButton />
             </div>
           </div>
         </div>
       </motion.div>
+      <Footer />
     </>
   );
 }

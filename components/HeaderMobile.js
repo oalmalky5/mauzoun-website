@@ -8,7 +8,7 @@ import styles from "../styles/headerMobile.module.scss";
 export default function HeaderMobile({backgroundColor, isNavOpen, handleOpenNav}){
   const { pathname } = useRouter();
   const [isOpen, setIsOpen] = useState(false)
-
+  const locale = useRouter().locale;
   useEffect(()=>{
     if (isOpen !== isNavOpen) setIsOpen(isNavOpen)
   }, [isNavOpen])
@@ -17,6 +17,7 @@ export default function HeaderMobile({backgroundColor, isNavOpen, handleOpenNav}
     handleOpenNav(value)
     setIsOpen(!isOpen)
   }
+
 
   const iconCloseNav = () => {
     return(
@@ -27,11 +28,11 @@ export default function HeaderMobile({backgroundColor, isNavOpen, handleOpenNav}
   const iconOpenNav = () => {
     return(
     <img className={isOpen ? styles.close : styles.open} src="/open.svg"/>
-    ) 
+    )
   }
 
   if (pathname === '/') return null
-  
+
   return (
     <div className = {styles.headerMobile + ' header-mobile'} style = {{backgroundColor}}>
         <Link href='/'>
@@ -42,6 +43,7 @@ export default function HeaderMobile({backgroundColor, isNavOpen, handleOpenNav}
             layoutId="header-logo"
             onClick = {() => isNavOpen && handleCLick('instant')}
             style = {{backgroundColor, cursor: "pointer"}}
+            style={locale === "ar" ? {marginRight:"16px"} : {marginLeft:"16px"}}
           />
         </Link>
         <div className = {styles.button + ' header-mobile__button'} style = {{backgroundColor}} onClick={handleCLick}>
