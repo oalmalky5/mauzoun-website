@@ -77,7 +77,10 @@ export default function Footer({ children, style, decoratorsPositions }) {
 
           <span className={otherLocale}><b>{locale === "ar" ? "English" : "العربية"}</b></span>
         </div>
-        <span onClick={() => setIsOpenContactModel(true)} style={{ fontWeight: 'bold', float: `${locale === "ar" ? "left" : "right"}` }} ><Contact isOpen={isOpenContactModel} />{locale === "ar" ? "اتصل" : "Contact"}</span>
+        {/*<span onClick={() => setIsOpenContactModel(true)} style={{ fontWeight: 'bold', float: `${locale === "ar" ? "left" : "right"}` }} ><Contact isOpen={isOpenContactModel} />{locale === "ar" ? "اتصل" : "Contact"}</span>*/}
+        <a href="mailto:hello@mauzoun.com">
+          <span style={{ fontWeight: 'bold', float: `${locale === "ar" ? "left" : "right"}` }} >{locale === "ar" ? "اتصل" : "Contact"}</span>
+        </a>
       </div>
     </div>
   );
