@@ -13,7 +13,7 @@ import WhiteBox from "../components/WhiteBox";
 import { MotionLogo } from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import mauj from './mauj'
-import musaandpalm from "./musaandpalm.js";
+import musaandpalmCopy from "./musaandpalm.js";
 import Footer from "../components/Footer";
 
 const backgroundColor = "#fbec9a";

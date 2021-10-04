@@ -22,7 +22,7 @@ export default function ContactButton({
   const [circleParams, setCircleParams] = useState({cx: null, cy: null, r: null})
   const [isHovered, setIsHovered] = useState(false);
   const [isContactFormVisible, setIsContactFormVisible] = useState(false);
-  const [isWithAnimation, setIsWithAnimation] = useState(true)
+  const [isWithAnimation, setIsWithAnimation] = useState(true);
 
   useEffect(()=>{
     const maxSize = 210;

@@ -12,6 +12,7 @@ import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import WhiteBox from "../components/WhiteBox";
 import Footer from "../components/Footer";
+import ComingSoon from "../components/ComingSoon";
 
 const backgroundColor = "#f7f5f0";
 
@@ -54,6 +55,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
   const [isApproachVisible, setIsApproachVisible] = useState(false);
   const [isContentWritingVisible, setIsContentWritingVisible] = useState(false);
   const [isCreativeWritingVisible, setIsCreativeWritingVisible] = useState(false);
+  const [isBoutiquePublishingVisible, setIsBoutiquePublishingVisible] = useState(false);
 
   const bullet = (
     <div className={styles.bullet}>
@@ -192,43 +194,63 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                 </div>
 
                 {/* Creative Writing */}
-                <div className="mt-0 unwrapped-content">
-                  <div
-                    className="content-wrapper"
-                    onClick={() => setIsCreativeWritingVisible(!isCreativeWritingVisible)}
-                    style={isCreativeWritingVisible ? { marginBottom: "30px" } : {}}
-                  >
-                    <h2>{f("creativeWriting.title")}</h2>
-                    <span className="reveal-icon">
+                  <div className="mt-0 unwrapped-content">
+                      <div
+                          className="content-wrapper"
+                          onClick={() => setIsCreativeWritingVisible(!isCreativeWritingVisible)}
+                          style={isCreativeWritingVisible ? { marginBottom: "30px" } : {}}
+                      >
+                          <h2>{f("creativeWriting.title")}</h2>
+                          <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
+                      </div>
+
+                      {isCreativeWritingVisible && (
+                          <>
+                              {f("creativeWriting.content")}
+                              <div className="container-object">
+                                  <div className={styles.totalWhiteBox}>
+                                      <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
+                                          {f("creativeWriting.services.header")}
+                                          <br />
+                                          {[
+                                              "creativeWriting.services.storyDoctoring",
+                                              "creativeWriting.services.scriptwriting",
+                                              "creativeWriting.services.bookEditing",
+                                              "creativeWriting.services.bookTranslation",
+                                          ].map((e) => (
+                                              <div className={styles.service} key={e}>
+                                                  {bullet}
+                                                  {f(e)}
+                                              </div>
+                                          ))}
+                                      </WhiteBox>
+                                  </div>
+                              </div>
+                          </>
+                      )}
                   </div>
 
-                  {isCreativeWritingVisible && (
-                    <>
-                      {f("creativeWriting.content")}
-                      <div className="container-object">
-                        <div className={styles.totalWhiteBox}>
-                          <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                            {f("creativeWriting.services.header")}
-                            <br />
-                            {[
-                              "creativeWriting.services.storyDoctoring",
-                              "creativeWriting.services.scriptwriting",
-                              "creativeWriting.services.bookEditing",
-                              "creativeWriting.services.bookTranslation",
-                            ].map((e) => (
-                              <div className={styles.service} key={e}>
-                                {bullet}
-                                {f(e)}
-                              </div>
-                            ))}
-                          </WhiteBox>
-                        </div>
+                  {/* Boutique Publishing */}
+                  <div className="mt-0 unwrapped-content">
+                      <div
+                          className="content-wrapper"
+                          onClick={() => setIsBoutiquePublishingVisible(!isBoutiquePublishingVisible)}
+                          style={isBoutiquePublishingVisible ? { marginBottom: "30px" } : {}}
+                      >
+                          <h2>{f("boutiquePublishing.title")}</h2>
+                          <span className="reveal-icon">
+                      <BsChevronDown className="reveal-icon" />
+                    </span>
                       </div>
-                    </>
-                  )}
-                </div>
+
+                      {isBoutiquePublishingVisible && (
+                          <>
+                              <ComingSoon/>
+                          </>
+                      )}
+                  </div>
               </div>
 
               <div style={{ height: "400px" }} />
