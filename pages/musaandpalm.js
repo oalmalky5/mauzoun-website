@@ -105,7 +105,7 @@ export default function musaandpalm({textAnimationControls, handleBgColorChange,
                                 <span className={styles.title1}>{f("longStory.title1")}</span>
                                 <span className={styles.para1}>{f("longStory.para1")}</span>
                                 <span className={styles.para1}>{f("longStory.paraX")}</span>
-                                <img className={styles.image2} src="mppic.png" alt="Musa & Palm table"/>
+                                <img className={styles.image2} src="/mppic.png" alt="Musa & Palm table"/>
                                 <span className={styles.title2}>{f("longStory.title2")}</span>
                                 <span className={styles.para2}>{f("longStory.para2")}</span>
                             </div>
