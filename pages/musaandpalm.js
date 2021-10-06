@@ -152,4 +152,5 @@ export default function musaandpalm({textAnimationControls, handleBgColorChange,
             </motion.div>
         </>
     );
+
 }
