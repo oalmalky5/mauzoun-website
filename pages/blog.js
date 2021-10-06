@@ -99,8 +99,6 @@ export default function blog({ textAnimationControls, handleBgColorChange, handl
                 {/*</div>*/}
               </div>
 
-              <ContactButton />
-
             </div>
           </div>
         </div>
