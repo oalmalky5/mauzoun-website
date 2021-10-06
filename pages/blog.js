@@ -79,26 +79,24 @@ export default function blog({ textAnimationControls, handleBgColorChange, handl
 
             <div className="container">
               <div className="container-background" style={{ backgroundColor }}></div>
-              {/*<div className="container-content">*/}
-              {/*  <h1>{f("title")}</h1>*/}
-              {/*</div>*/}
+              <div className="container-content">
+                <h1>{f("title")}</h1>
+              </div>
               <div className="container-content">
                 {/* <ComingSoon /> */}
-                <img src={blogImage} height="" width="100%" />
-                <div>
-                    <div className={styles.blogPost}>
-                        <div className={styles.postTitle}>
-                            <h4 style={locale === "ar" ? {paddingLeft:"15px"} : {paddingRight:"15px"}}>{locale === "ar" ? 'لماذا أسست موقع "موزون"' : 'Why I Founded Mauzoun'}</h4>
-                            <span style={{ fontSize: '14px'}}>{locale === "ar" ? '26 يوليو 2021' : 'July 26, 2021'}</span>
-                        </div>
-                        <span className={styles.postedBy}>{locale === "ar" ? ' بواسطة ليان عبد الشكور' : 'by Layan Abdul Shakur'} </span>
-                    </div>
-                  {/*<p>{locale === "ar" ? 'لماذا أسست موقع "موزون"' : 'Why I Founded Mauzoun'}*/}
-                  {/*  <span style={{ fontSize: '14px', float: `${locale === "ar" ? "left" : "right"}` }}>{locale === "ar" ? '26 يوليو 2021' : 'July 26, 2021'}</span><br />*/}
-                  {/*  <span style={{ fontSize: '14px' }}>{locale === "ar" ? ' بواسطة ليان عبد الشكور' : 'by Layan Abdul Shakur'} </span>*/}
-                  {/*</p>*/}
-                  <ReadMore />
-                </div>
+
+                <ComingSoon/>
+                {/*<img src={blogImage} height="" width="100%" />*/}
+                {/*<div>*/}
+                {/*    <div className={styles.blogPost}>*/}
+                {/*        <div className={styles.postTitle}>*/}
+                {/*            <h4 style={locale === "ar" ? {paddingLeft:"15px"} : {paddingRight:"15px"}}>{locale === "ar" ? 'لماذا أسست موقع "موزون"' : 'Why I Founded Mauzoun'}</h4>*/}
+                {/*            <span style={{ fontSize: '14px'}}>{locale === "ar" ? '26 يوليو 2021' : 'July 26, 2021'}</span>*/}
+                {/*        </div>*/}
+                {/*        <span className={styles.postedBy}>{locale === "ar" ? ' بواسطة ليان عبد الشكور' : 'by Layan Abdul Shakur'} </span>*/}
+                {/*    </div>*/}
+                {/*  <ReadMore />*/}
+                {/*</div>*/}
               </div>
 
               <ContactButton />

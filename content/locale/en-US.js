@@ -9,8 +9,10 @@ exports["en-US"] = {
     email: "hello@mauzoun.com",
     location: "Based in Jeddah, Saudi Arabia",
     comingSoon: "COMING SOON.",
-    contactPrompt: "Beta Version: for a better experience, view via desktop.",
-    "contactPrompt.hovered": "Beta Version: for a better experience, view via desktop.",
+    contactPrompt: `Like what you read?<br/>`  +
+        "E-mail us today.",
+    "contactPrompt.hovered": `Like what you read?<br/>` +
+        "E-mail us today.",
     "contact.fullName": "Your full name.",
     "contact.projectName": "Your brand or project name.",
     "contact.country": "Your country of residence.",
@@ -194,6 +196,7 @@ exports["en-US"] = {
     "creativeWriting.services.scriptwriting": "Scriptwriting",
     "creativeWriting.services.bookEditing": "Book Editing",
     "creativeWriting.services.bookTranslation": "Book Translation",
+    "boutiquePublishing.title": "Boutique Publishing",
   },
   "/story": {
     nameMeaning:
