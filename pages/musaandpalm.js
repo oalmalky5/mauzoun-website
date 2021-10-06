@@ -111,8 +111,14 @@ export default function musaandpalm({textAnimationControls, handleBgColorChange,
                             </div>
 
                             <div>
-                                <img className={styles.image2} src={locale !== "ar" ? "Musa&PalmEN2.png":"musa&palmar.png"}
-                                     alt="Musa & Palm table"/>
+                                {
+                                    locale !== "ar" ?
+                                    <img className={styles.image2} src="Musa&PalmEN2.png"
+                                         alt="Musa & Palm table"/>
+                                         :
+                                        <img className={styles.image2} src="musa&palmar.png"
+                                             alt="Musa & Palm table"/>
+                                }
                                 <span className={styles.para1}>{f("process.para1")}</span>
                             </div>
 
