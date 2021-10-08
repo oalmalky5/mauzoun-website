@@ -10,6 +10,7 @@ import formatJsxMessage from "../utils/formatJsxMessage";
 import WhiteBox from "../components/WhiteBox";
 import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
+import Footer from "../components/Footer";
 
 const backgroundColor = "#d1e3f2";
 
@@ -218,6 +219,7 @@ const Story = function ({ textAnimationControls, handleBgColorChange, handleOpen
           </div>
         </div>
       </motion.div>
+      <Footer />
     </>
   );
 };

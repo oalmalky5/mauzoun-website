@@ -11,6 +11,7 @@ import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
 
 import {MotionLogo} from "../components/MotionLogo"
+import Footer from "../components/Footer";
 
 const backgroundColor = "#f8d952";
 
@@ -188,6 +189,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
           </div>
         </div>
         </motion.div>
+        <Footer />
     </>
   );
 }

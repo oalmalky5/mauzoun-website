@@ -22,7 +22,7 @@ export default function ContactButton({
   const [circleParams, setCircleParams] = useState({cx: null, cy: null, r: null})
   const [isHovered, setIsHovered] = useState(false);
   const [isContactFormVisible, setIsContactFormVisible] = useState(false);
-  const [isWithAnimation, setIsWithAnimation] = useState(true)
+  const [isWithAnimation, setIsWithAnimation] = useState(true);
 
   useEffect(()=>{
     const maxSize = 210;
@@ -56,8 +56,6 @@ export default function ContactButton({
         <div className={styles.buttonContainer}>
           <div className = {styles.contactWrapper}>
 
-
-
           <motion.button
             className={`${styles.contactButton} ${styles.spin}` + " heading"}
             onClick={() => {
@@ -71,9 +69,11 @@ export default function ContactButton({
             layout='position'
           >
             <div className = {styles.circleContainer}>
-            <svg height="100%" width="100%">
-	            <circle className={isWithAnimation ? styles.circleAnimation : ''} cx={circleParams.cx} cy={circleParams.cy} r={circleParams.r} stroke="#231f20" stroke-width="4" fill-opacity="0" />
-            </svg>
+              <a href="mailto:hello@mauzoun.com">
+                <svg height="100%" width="100%">
+                    <circle className={isWithAnimation ? styles.circleAnimation : ''} cx={circleParams.cx} cy={circleParams.cy} r={circleParams.r} stroke="#231f20" stroke-width="4" fill-opacity="0" />
+                </svg>
+              </a>
           </div>
             <span className = "contact-button">
             {isHovered ? f(messageId + ".hovered") : f(messageId)}

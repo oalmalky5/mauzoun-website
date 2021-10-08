@@ -1,15 +1,43 @@
+@use "mixins" as *;
 
 .title1 {
-    font-size: 30px;
-    font-family: "Alegreya";
+  font-size: 30px;
+  font-family: "Alegreya";
 }
 
 .date1 {
-    margin-left: 270px;
-    margin-top: 20px;
-    font-family: "Alegreya";
+  margin-left: 270px;
+  margin-top: 20px;
+  font-family: "Alegreya";
 }
 
 .name1 {
-    font-family: "Alegreya";
+  font-family: "Alegreya";
+}
+
+.blogPost {
+  margin-top: 20px;
+
+  .postTitle {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    h4 {
+      margin:0;
+
+      @media (max-width: 767px){
+        width: 72%;
+      }
+    }
+
+    span{
+      font-size: 14px;
+      padding-top: 3px;
+    }
+  }
+
+  .postedBy {
+    font-size: 14px;
+  }
 }

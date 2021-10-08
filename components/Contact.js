@@ -135,12 +135,12 @@ export default function Contact({ isOpen, onClose }) {
               style={{ resize: "none" }}
             />
 
-            {/* Date */}
+            {/* Date Time */}
             <input
-              type="date"
-              name="date"
+              type="datetime-local"
+              name="dateTime"
               placeholder={f("contact.date")}
-              min={moment().format("YYYY-MM-DD")}
+              min={moment().format("YYYY-MM-DD hh:mm:ss")}
               onChange={(e) => {
                 updateInputColor(e);
                 handleChange(e);
@@ -151,7 +151,7 @@ export default function Contact({ isOpen, onClose }) {
             />
 
             {/* Time */}
-            <input
+            {/* <input
               type="text"
               name="time"
               placeholder={f("contact.time")}
@@ -162,7 +162,7 @@ export default function Contact({ isOpen, onClose }) {
               style={{
                 color: placeholderColor,
               }}
-            />
+            /> */}
 
             {success || error ? (
               <div

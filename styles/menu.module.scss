@@ -234,6 +234,12 @@
   }
 }
 
+@media screen and (max-width: 769px) {
+  .languageSwitch {
+    display: none;
+  }
+}
+
 .switch {
   position: relative;
   display: inline-block;

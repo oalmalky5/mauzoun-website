@@ -22,16 +22,18 @@
 .logo{
   height: 110px;
   max-width: 100%;
+  margin-top: 30px;
+  margin-left: 16px;
 }
 
 
 .button {
-  
+
   img{
-    width: 48px;
-    height: 48px;
+    width: 30px;
+    height: 30px;
   }
-  
+
     @include ltr {
         margin-right: 30px;
       }
