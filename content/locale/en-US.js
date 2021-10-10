@@ -7,12 +7,11 @@ exports["en-US"] = {
     blogLink: "Our Blog",
     andyouLink: "Mauzoun & You",
     email: "hello@mauzoun.com",
-    location: "Based in Jeddah, Saudi Arabia",
+    location: "From the heart of Saudi <br></br> to the whole of the world.",
     comingSoon: "COMING SOON.",
     contactPrompt: `Like what you read?<br/>`  +
-        "E-mail us today.",
-    "contactPrompt.hovered": `Like what you read?<br/>` +
-        "E-mail us today.",
+        "Contact us today.",
+    "contactPrompt.hovered": `Like what you read?<br/>`  + "Contact us today.",
     "contact.fullName": "Your full name.",
     "contact.projectName": "Your brand or project name.",
     "contact.country": "Your country of residence.",
@@ -174,7 +173,8 @@ exports["en-US"] = {
       We choose to work exclusively with compelling brands on long-term basis, or on exciting campaigns.`,
     "contentWriting.services.header":
       "Here’s a list of some of the words we write. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.",
-    "contentWriting.services.naming": "Brand Naming",
+    "contentWriting.services.mm" : "Messaging Manual",
+    "contentWriting.services.naming": "Brand & Product Naming",
     "contentWriting.services.manifesto": "Brand Manifesto",
     "contentWriting.services.slogans": "Taglines & Slogans",
     "contentWriting.services.profile": "Company Profile",

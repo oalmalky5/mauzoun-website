@@ -174,6 +174,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                             {f("contentWriting.services.header")}
                             <br />
                             {[
+                              "contentWriting.services.mm",
                               "contentWriting.services.naming",
                               "contentWriting.services.manifesto",
                               "contentWriting.services.slogans",
