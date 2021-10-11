@@ -83,7 +83,7 @@ exports["en-US"] = {
   "/mauj": {
     title: "",
     "intro.title": "Mauj defies the conventional.",
-    "intro.para": "Mauj are one of our most prominent, stimulating, and challenging clients. What we love about them is how aware of what they present and how they present it, and their consideration of Arab women and Arab culture. For Mauj, we have developed a tone that balances the poetic with the clear, direct, and educational.",
+    "intro.para": "Mauj are one of our most prominent, stimulating, and challenging clients. What we love about them is how aware of what they present and how they present it, and their consideration of Arab women and Arab culture. For Mauj, we developed a tone that balances the poetic with the clear, direct, and educational.",
     "meeting.title": "How did we meet?",
     "meeting.para1": "In February 2020, we submitted a pitch for a mysterious new client, knowing nothing at the time except it being a platform concerned with women's health. We prepared a cheeky pitch with in-depth research and compelling samples. In turn, this mysterious client lovedloved our work and picked us in a heartbeat.",
     "meeting.para2": "It was then that we were formally introduced to Mauj, becoming their writing partners on a year-long contract.",
