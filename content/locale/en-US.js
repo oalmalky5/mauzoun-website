@@ -51,7 +51,7 @@ exports["en-US"] = {
     title: "Mauzoun & You",
     "becomeClient.intro": "Become Our Client",
     "becomeClient.content":
-      "If you're interested in our services, you can become our client by simply e-mailing by clicking the button at the bottom right of our website.",
+      "If you're interested in our services, you can become our client by simply e-mailing us via clicking the button at the bottom right of our website.",
     "joinTeam.intro": "Join the Team",
     "joinTeam.content": `<b>There are currently no job opportunities available. Keep checking.</b>
       <br /><br />
@@ -83,10 +83,10 @@ exports["en-US"] = {
   "/mauj": {
     title: "",
     "intro.title": "Mauj defies the conventional.",
-    "intro.para": "Mauj are one of our most prominent, stimulating, and challenging clients. What we love about them is how aware of what they present and how they present it, and their consideration of Arab and Arab culture. For Mauj, we have developed a tone that balances the poetic with the clear, direct, and educational.",
+    "intro.para": "Mauj are one of our most prominent, stimulating, and challenging clients. What we love about them is how aware of what they present and how they present it, and their consideration of Arab women and Arab culture. For Mauj, we have developed a tone that balances the poetic with the clear, direct, and educational.",
     "meeting.title": "How did we meet?",
-    "meeting.para1": "In February 2020, we submitted a pitch for a mysterious new project, knowing nothing at the time except it being a platform concerned with women's health. We prepared a cheeky pitch with in-dpeth research and compelling samples. In turn, loved our work and picked us in a heartbeat.",
-    "meeting.para2": "It was then that we were formally introduced to Mauj, becoming writing partners on a year-long contract.",
+    "meeting.para1": "In February 2020, we submitted a pitch for a mysterious new client, knowing nothing at the time except it being a platform concerned with women's health. We prepared a cheeky pitch with in-depth research and compelling samples. In turn, this mysterious client lovedloved our work and picked us in a heartbeat.",
+    "meeting.para2": "It was then that we were formally introduced to Mauj, becoming their writing partners on a year-long contract.",
     "meeting.para3": "This is what we did with Mauj. At the begging, Mauj started with another name – one that carries hidden meaning. They were likely going to encounter some obstacles, or reach an unintended audience that was unlikely to support their message. After we won the pitch (with flying colors!) we suggested they change their old name to another one more in line with their vision and direction, and this required many intensive sessions together to convince them of the need for change – after which we absolutely fell in love with their new choice, Mauj.",
     "tone.title": "What about our tone of writing?",
     "tone.listElement1":"Welcome to Mauj. <s>Welcome to your home.</s>",
@@ -94,7 +94,7 @@ exports["en-US"] = {
     "tone.listElement3":"<s>Welcome to Mauj.</s> We’ve been waiting for you.",
     "tone.listElement4": "<s>Welcome to Mauj. We’re glad you’re riding with us.</s>",
     "tone.final": "Welcome to Mauj. We’re glad you <u>came.</u>",
-    "tone.para1": "When it was time to develop Mauj's tone, we continued the thread of our pitch's cheeky tone while balancing it with their educational and poetic strategy, which is how we developed <u>we're glad you came</u>. As the words came together, visions of the brand became clearer, we were, in a sense, helping set the foundation for Mauj's emeregence. That was the ground from which we took off to write their social media content.",
+    "tone.para1": "When it was time to develop Mauj's tone, we continued the thread of our pitch's cheeky tone while balancing it with their educational and poetic strategy, which is how we developed <u>we're glad you came</u>. As the words came together, visions of the brand became clearer, and we were, in a sense, helping set the foundation for Mauj's emeregence. That was the ground from which we took off to write their social media content.",
     "tone.para2": "We knew very well that addressing topics on women's sexual health was unfamiliar but also necessary. This is why we always vet the best and smoothest to introduce these topics, and how the audience could join in on a constructive conversation. Mauj's social media launched in September 2020, gradually delving into more \"taboo\" topics throughout a six-month period.",
     "tone.para3": "What makes our work exceptional with Mauj is our collaboration with their team. We think together about which topics to discuss, and about the dates of publication, contemplating whether or not a post is suitable for its publication date, or if there's an event that would be in conflict with the content? We also help them develop their ideas; they are dear clients and valuable partners, and we love what they do with their work and the limits they push.",
     "brand.title": "A flexible business relationship led to an integrated brand.",
@@ -196,7 +196,7 @@ exports["en-US"] = {
     nameMeaning:
       "Mauzoun is a holistic writing studio that serves brands and authors worldwide. Our name aptly means “poetic balance” in Arabic, a meaning that our words, services, and values live up to.",
     aim:
-      "Founded in 2018, and established in Saudi, our work process aims to reflect the richness and versatility of both the Arabic and English languages, the ingenuity of our writers, and how powerful and seamless good writing should be.",
+      "Founded in 2018 and established in Saudi, our work reflects the richness of the Arabic and English languages, encourages the ingenuity of our writers, and emphasizes the importance of powerful and seamless writing.",
     teamwork:
       "We are a fully virtual workplace as of 2022. Our team works cooperatively to revive the appreciation of good writing, and we craft content and stories with precision and passion. Our words can pack a punch or be elegantly eloquent. It all depends on what you want, and how we see it best.",
       "teamMember.1.name": "Layan Abdul Shakoor",
