@@ -102,6 +102,14 @@ h5 p {
     font-weight: bolder !important;
   }
 }
+.ar .bolder {
+  font-weight: bolder !important;
+
+  & p {
+    font-weight: bolder !important;
+  }
+
+}
 
 hr {
   margin-top: 15px;
