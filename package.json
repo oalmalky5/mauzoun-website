@@ -10,6 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@panelbear/panelbear-nextjs": "^1.0.1",
     "babel-plugin-styled-components": "^1.12.0",
     "framer-motion": "^4.1.4",
     "gsap": "^3.6.1",
