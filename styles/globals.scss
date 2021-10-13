@@ -96,10 +96,10 @@ h5 p {
 }
 
 .bolder {
-  font-weight: bolder !important;
+  font-weight: normal !important;
 
   & p {
-    font-weight: bolder !important;
+    font-weight: normal !important;
   }
 }
 .ar .bolder {
