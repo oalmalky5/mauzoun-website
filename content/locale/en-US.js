@@ -78,14 +78,14 @@ exports["en-US"] = {
     "creativeWriting.title": "Creative Writing",
     "creativeWriting.clients.1":
       "Ministry of Culture:<br />Madinah Culinary Arts",
-    clients: "Since 2018, we have worked with <b><u>over 100 clients</u></b>.",
+    clients: "Since 2018, we have worked with <b><u>over 70 clients</u></b>.",
   },
   "/mauj": {
     title: "",
     "intro.title": "Mauj defies the conventional.",
     "intro.para": "Mauj are one of our most prominent, stimulating, and challenging clients. What we love about them is how aware of what they present and how they present it, and their consideration of Arab women and Arab culture. For Mauj, we developed a tone that balances the poetic with the clear, direct, and educational.",
     "meeting.title": "How did we meet?",
-    "meeting.para1": "In February 2020, we submitted a pitch for a mysterious new client, knowing nothing at the time except it being a platform concerned with women's health. We prepared a cheeky pitch with in-depth research and compelling samples. In turn, this mysterious client lovedloved our work and picked us in a heartbeat.",
+    "meeting.para1": "In February 2020, we submitted a pitch to a mysterious new client, knowing nothing at the time except it being a platform concerned with women's health. We prepared a cheeky pitch with in-depth research and compelling samples. In turn, this mysterious client loved our work and picked us in a heartbeat.",
     "meeting.para2": "It was then that we were formally introduced to Mauj, becoming their writing partners on a year-long contract.",
     "meeting.para3": "This is what we did with Mauj. At the begging, Mauj started with another name – one that carries hidden meaning. They were likely going to encounter some obstacles, or reach an unintended audience that was unlikely to support their message. After we won the pitch (with flying colors!) we suggested they change their old name to another one more in line with their vision and direction, and this required many intensive sessions together to convince them of the need for change – after which we absolutely fell in love with their new choice, Mauj.",
     "tone.title": "What about our tone of writing?",
@@ -95,7 +95,7 @@ exports["en-US"] = {
     "tone.listElement4": "<s>Welcome to Mauj. We’re glad you’re riding with us.</s>",
     "tone.final": "Welcome to Mauj. We’re glad you <u>came.</u>",
     "tone.para1": "When it was time to develop Mauj's tone, we continued the thread of our pitch's cheeky tone while balancing it with their educational and poetic strategy, which is how we developed <u>we're glad you came</u>. As the words came together, visions of the brand became clearer, and we were, in a sense, helping set the foundation for Mauj's emeregence. That was the ground from which we took off to write their social media content.",
-    "tone.para2": "We knew very well that addressing topics on women's sexual health was unfamiliar but also necessary. This is why we always vet the best and smoothest to introduce these topics, and how the audience could join in on a constructive conversation. Mauj's social media launched in September 2020, gradually delving into more \"taboo\" topics throughout a six-month period.",
+    "tone.para2": "We knew very well that addressing topics on women's sexual health was unfamiliar but also necessary. This is why we always vet the best and smoothest ways to introduce these topics, and how the audience could join in on a constructive conversation. Mauj's social media launched in September 2020, gradually delving into more \"taboo\" topics throughout a six-month period.",
     "tone.para3": "What makes our work exceptional with Mauj is our collaboration with their team. We think together about which topics to discuss, and about the dates of publication, contemplating whether or not a post is suitable for its publication date, or if there's an event that would be in conflict with the content? We also help them develop their ideas; they are dear clients and valuable partners, and we love what they do with their work and the limits they push.",
     "brand.title": "A flexible business relationship led to an integrated brand.",
     "brand.para1": "Mauj received 37K followers in the first five months alone, without ever resorting to promotions or paid advertisements. Over 20 of the posts we wrote received 80% more engagement than average, and more than 30 posts have receieved over 5,000 likes.",
@@ -111,7 +111,7 @@ exports["en-US"] = {
     "intro.para2": "Suha is one with clear aspiration, choosing her words with careful deliberation. When discussing Musa & Palm, she opted for the phrases “date and gift shop” and “café experience,” formulating her ideas with a distinct precision that guided us through our writing process.",
     "longStory.title1": "Long story short: ten names, yet the final choice fell on the first.",
     "longStory.para1": "Musa & Palm was the first suggestion we made. What was amusing was that Suha wasn’t sure about the name the first time around, so she asked that we try again. Our team of writers continued with the naming process. We were more than glad to do so because with naming, this is a more than a common occurrence. Ironically, after Suha consulted her friends and family, she was met with resounding enthusiasm for the allure of Musa & Palm, and she was sold on the name.",
-    "longStory.title2": "Just as the seedling blooms into the palm tree, great work takes preicous time.",
+    "longStory.title2": "Just as the seedling blooms into the palm tree, great work takes precious time.",
     "longStory.para2": "To balance the venerable with the beautiful, and to combine them with innovation, we needed to study and comprehend many references, namely <b><a href='https://ar.wikipedia.org/wiki/%D9%88%D8%AD%D9%8A_%D8%A7%D9%84%D9%82%D9%84%D9%85'>Mostafa Saadeq Al-Rafe’ie’s “Wahy Al-Qalam”.</a></b> It was an imperative step in order to refine an expression wholly unique to the identity of Musa & Palm.",
     "process.title1" : "An exchange and adaptation of words:",
     "collab.title1": " Throughout the process, Suha continued to share her creative inspirations, which clarified the bigger picture.",
@@ -120,9 +120,9 @@ exports["en-US"] = {
     "invitation.para1": "Finally, Musa & Palm extended an invitation to our team to visit their shop. From the moment we walked in, we were captivated by the cohesive beauty of the space, which aptly reflected the brand’s elegant precision. Plus, who can say no to the exquisite taste of a Sukkari date filled with decadently creamy goat cheese topped with slivers of premium sun-dried tomatoes?",
     "invitation.para2": "Reading what we wrote and witnessing it in print was one of our happiest moments. How delightful it was to see the fruits of our year-long labor, and how incredible it felt to grow alongside Suha, to believe in her dreams, and bring those dreams closer to life.",
     "testimony.title": "And here is Suha’s narration of her story with us:",
-    "testimony.para1": "What distinguishes Mauzoun is their precision in asking the right questions, the extensive research they undertake for any project, and the wealth of language that they pair with their professionalism and flexibility. They not only assist with writing the project; they are with you hand-in-hand, helping you with ideas that are not only for the content they provide, but sometimes for the project as a whole.",
-    "testimony.para2": "The Mauzoun Team is pleasant and organized. The work they do is intelligent and diligent, and their style of writing is consistent, specific, and excellent. I feel that the content Mauzoun writes is there to stay for years, without the need of revamping it anytime soon, because they always write in a timeless way and are not easily swayed by fleeting trends in writing.",
-    "testimony.para3": "They are trustworthy, loyal, and will always be completely honest with the client. I always feel like I’m part of their family of work. I would absolutely recommend Mauzoun, and I continue to recommend them to all my friends and family."
+    "testimony.para1": "What distinguishes Mauzoun is their precision in asking the right questions, the extensive research they undertake for any project, and the wealth of language that they pair with their professionalism and flexibility. <b>They not only assist with writing the project; they are with you hand-in-hand,</b> helping you with ideas that are not only for the content they provide, but sometimes for the project as a whole.",
+    "testimony.para2": "The Mauzoun Team is pleasant and organized. The work they do is intelligent and diligent, and their style of writing is consistent, specific, and excellent. <b>I feel that the content Mauzoun writes is there to stay for years,</b> without the need of revamping it anytime soon, because they always write in a timeless way and are not easily swayed by fleeting trends in writing.",
+    "testimony.para3": "<b>They are trustworthy, loyal, and will always be completely honest with the client.</b> I always feel like I’m part of their family of work. I would absolutely recommend Mauzoun, and I continue to recommend them to all my friends and family."
 
   },
   "/services": {
@@ -214,9 +214,9 @@ exports["en-US"] = {
       "teamMember.7.name": "Omar AlMalky",
       "teamMember.7.role": "Account Manager",
     world:
-      "In a world that is always bustling about and concerned with immediate results, we stick to the belief that good work takes care and time. Every word is an investment in your brand, or your identity as an author. That is why we work on booking basis only and rarely take on rushed projects.",
+      "In a world that is always bustling about and concerned with immediate results, we stick to the belief that good work takes care and time. Every word is an investment in your brand or your identity as an author. That is why we work on booking basis only and rarely take on rushed projects.",
     "whitebox.innerText1":
-      "We believe in the four-day work week, and consider ourselves pioneers in actively pursuing a work-life balance for all of our team members.",
+      "We believe in the four-day work week and consider ourselves pioneers in actively pursuing a work-life balance for all of our team members.",
     "whitebox.innerText2":
       "This culture we cultivated takes our creativities and productivities up a notch, providing the space and time needed to bring a fresh outlook to our virtual workplace and your projects.",
     workAspects:

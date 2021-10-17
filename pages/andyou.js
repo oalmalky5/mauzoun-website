@@ -36,8 +36,8 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
   return (
     <>
       <NextSeo
-        title={locale !== "ar" ? "Mauzoun | And You" : "مَوْزوْن | مَوْزوْن وأنت"}
-        description={locale !== "ar" ? "Mauzoun | And You" : "مَوْزوْن | مَوْزوْن وأنت"}
+        title={locale !== "ar" ? "Mauzoun | And You" : "مَوْزوْن | وأنت"}
+        description={locale !== "ar" ? "Mauzoun | And You" : "مَوْزوْن | وأنت"}
       />
       <div className="background-animation" style={{ backgroundColor }} />
 
