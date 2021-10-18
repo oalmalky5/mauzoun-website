@@ -15,7 +15,7 @@ export const MotionLogo = () => {
       <>
           <Link href="/">
             <motion.img
-            src="https://i.imgur.com/HjDbXtR.png"
+            src="https://i.ibb.co/28W6QH5/mainLogo.png"
             alt="Mauzoun logo"
             className={styles.motionLogo}
             transition={{ duration: 0.5, delay:0 }}

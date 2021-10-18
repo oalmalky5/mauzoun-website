@@ -37,7 +37,7 @@ export default function HeaderMobile({backgroundColor, isNavOpen, handleOpenNav}
     <div className = {styles.headerMobile + ' header-mobile'} style = {{backgroundColor}}>
         <Link href='/'>
           <img
-            src='https://i.imgur.com/HjDbXtR.png'
+            src='mainLogo.png'
             alt='Mauzoun logo'
             className={styles.logo + " header-mobile__logo"}
             layoutId="header-logo"

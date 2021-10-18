@@ -183,7 +183,7 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
       <><div className={styles.motionLogoBGui} style={{backgroundColor}}></div>
           <Link href="/">
             <motion.img
-              src="https://i.imgur.com/HjDbXtR.png"
+              src="https://i.ibb.co/28W6QH5/mainLogo.png"
               alt="Mauzoun logo"
               className={styles.logo}
               transition={{ duration: 0.5 }}

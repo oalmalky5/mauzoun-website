@@ -180,7 +180,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
         <div className={styles.mainPanel + " background"}>
           <img
             className={styles.logo + " logo"}
-            src="https://i.imgur.com/HjDbXtR.png"
+            src="https://i.ibb.co/28W6QH5/mainLogo.png"
             alt="Mauzoun logo"
           />
           <div
