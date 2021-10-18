@@ -75,7 +75,7 @@ export const ar = {
     "contentWriting.clients.5": "وزارة الثقافة: جدة التاريخية",
     "creativeWriting.title": "الكتابة الإبداعية",
     "creativeWriting.clients.1": "وزارة الثقافة:<br /> فنون الطهي المدينية",
-    clients: "عملنا منذ ٢٠١٨ مع <b><u>أكثر من ٧٠ عميل وعميل</u></b>.",
+    clients: "عملنا منذ ٢٠١٨ مع <b><u>أكثر من ٧٠ عميل وعملية</u></b>.",
   },
 
   "/mauj": {
