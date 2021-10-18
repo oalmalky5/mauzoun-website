@@ -112,7 +112,9 @@ exports["en-US"] = {
     "longStory.title1": "Long story short: ten names, yet the final choice fell on the first.",
     "longStory.para1": "Musa & Palm was the first suggestion we made. What was amusing was that Suha wasn’t sure about the name the first time around, so she asked that we try again. Our team of writers continued with the naming process. We were more than glad to do so because with naming, this is a more than a common occurrence. Ironically, after Suha consulted her friends and family, she was met with resounding enthusiasm for the allure of Musa & Palm, and she was sold on the name.",
     "longStory.title2": "Just as the seedling blooms into the palm tree, great work takes precious time.",
-    "longStory.para2": "To balance the venerable with the beautiful, and to combine them with innovation, we needed to study and comprehend many references, namely <b><a href='https://ar.wikipedia.org/wiki/%D9%88%D8%AD%D9%8A_%D8%A7%D9%84%D9%82%D9%84%D9%85'>Mostafa Saadeq Al-Rafe’ie’s “Wahy Al-Qalam”.</a></b> It was an imperative step in order to refine an expression wholly unique to the identity of Musa & Palm.",
+
+    "longStory.para2": "To balance the venerable with the beautiful, and to combine them with innovation, we needed to study and comprehend many references, namely <span className='medFont'><a href='https://ar.wikipedia.org/wiki/%D9%88%D8%AD%D9%8A_%D8%A7%D9%84%D9%82%D9%84%D9%85' target='_blank'>Mostafa Saadeq Al-Rafe’ie’s “Wahy Al-Qalam”.</a></span> It was an imperative step in order to refine an expression wholly unique to the identity of Musa & Palm.",
+
     "process.title1" : "An exchange and adaptation of words:",
     "collab.title1": " Throughout the process, Suha continued to share her creative inspirations, which clarified the bigger picture.",
     "collab.para1": "While writing the brand content, Suha continued to share with us her brand's evolving elements and illustrations. This was to paint a clear picture in the minds of our writers, bringing our perceptions of the brand closer to reality.",

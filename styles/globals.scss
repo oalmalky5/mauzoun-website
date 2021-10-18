@@ -111,6 +111,40 @@ h5 p {
 
 }
 
+.ar .tone .list {
+  list-style: none;
+  font-size: 25px;
+  padding: 0 !important;
+  //font-family: "Alegreya";
+}
+
+
+.medFont{
+  font-weight: normal !important;
+  
+
+  & span {
+    font-weight: normal !important;
+  }
+}
+
+.ar .medFont{
+  font-weight: bold !important;
+
+  & span {
+    font-weight: bold !important;
+  }
+}
+
+.medFont:hover {
+  color: white;
+}
+
+.ar .medFont:hover {
+  color: white;
+}
+
+
 hr {
   margin-top: 15px;
   margin-bottom: 15px;
