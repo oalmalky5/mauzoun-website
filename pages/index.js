@@ -201,7 +201,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
               <p style={{ fontFamily: "GE Dinar Two" }}>
                 عشق للكلمات وفريق شغوف:
                 <br />
-                <b>أهلاً بكم في موزون.</b>
+                <b>أهلاً بكم في مَوْزوْن.</b>
               </p>
               <button
                 className={styles.languageButton}
