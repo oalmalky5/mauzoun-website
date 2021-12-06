@@ -203,7 +203,7 @@ export const ar = {
     "teamMember.1.name": "ليان عبد الشكور",
     "teamMember.1.role": "المؤسِسَة والمديرة الإبداعية",
     "teamMember.2.name": "أمل العولقي",
-    "teamMember.2.role": "كاتبة رئيسية",
+    "teamMember.2.role": "مسؤولة إستراتيجيات المحتوى",
     "teamMember.3.name": "فاطمة جدعاني",
     "teamMember.3.role": "كاتبة",
     "teamMember.4.name": "ندى ناصر",

@@ -204,7 +204,7 @@ exports["en-US"] = {
       "teamMember.1.name": "Layan Abdul Shakoor",
       "teamMember.1.role": "Founder & Creative Director",
       "teamMember.2.name": "Amal Al-Awlaki",
-      "teamMember.2.role": "Senior Writer",
+      "teamMember.2.role": "Content Strategist",
       "teamMember.3.name": "Fatmah Jadani",
       "teamMember.3.role": "Writer",
       "teamMember.4.name": "Nada Nasir",

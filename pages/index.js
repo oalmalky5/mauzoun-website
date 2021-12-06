@@ -136,7 +136,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
         duration: 0.75,
         width: 175,
         height: 150,
-        y: -10,
+        y: 0,
         x: click === 1 ? (width <= 1240 ? -5 : -35) : (width <= 1240 ? 5 : 35),
         onComplete: () => {
           if (click === 1) {
