@@ -20,28 +20,28 @@ const teamMembersData = {
     preview: "/team/layan.png",
   },
   2: {
-    src: "/team/amal.gif",
-    preview: "/team/amal static.gif",
-  },
-  3: {
-    src: "/team/fatima.gif",
-    preview: "/team/fatima.png",
-  },
-  4: {
     src: "/team/nada.gif",
     preview: "/team/nada.png",
   },
-  5: {
+  3: {
+    src: "/team/omarm.gif",
+    preview: "/team/omarm.png",
+  },
+  4: {
     src: "/team/omart.gif",
     preview: "/team/omart.png",
   },
+  5: {
+    src: "/team/amal.gif",
+    preview: "/team/amal static.gif",
+  },
   6: {
-    src: "/team/aya.gif",
-    preview: "/team/aya.png",
+    src: "/team/fatima.gif",
+    preview: "/team/fatima.png",
   },
   7: {
-    src: "/team/omarm.gif",
-    preview: "/team/omarm.png",
+    src: "/team/aya.gif",
+    preview: "/team/aya.png",
   },
 };
 

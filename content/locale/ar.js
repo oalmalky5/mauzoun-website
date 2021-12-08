@@ -209,7 +209,7 @@ export const ar = {
     "teamMember.4.name": "ندى ناصر",
     "teamMember.4.role": "المديرة العامة",
     "teamMember.5.name": "عمر ذوابه",
-    "teamMember.5.role": "كاتب رئيسي",
+    "teamMember.5.role": "مدير المحتوى",
     "teamMember.6.name": "آية اللوزي",
     "teamMember.6.role": "كاتبة",
     "teamMember.7.name": "عمر المالكي",
