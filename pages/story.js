@@ -17,27 +17,27 @@ const backgroundColor = "#d1e3f2";
 const teamMembersData = {
   1: {
     src: "/team/layan.gif",
-    preview: "/team/layan.png",
+    preview: "/team/Mauzoun _ Layan.png",
   },
   2: {
     src: "/team/nada.gif",
-    preview: "/team/nada.png",
+    preview: "/team/Mauzoun _ Nada.png",
   },
   3: {
     src: "/team/omarm.gif",
-    preview: "/team/omarm.png",
+    preview: "/team/Mauzoun _ Omar AlMalky.png",
   },
   4: {
     src: "/team/omart.gif",
-    preview: "/team/omart.png",
+    preview: "/team/Mauzoun _ Omar Thawabeh.png",
   },
   5: {
     src: "/team/amal.gif",
-    preview: "/team/amal static.gif",
+    preview: "/team/Mauzoun _ Amal.png",
   },
   6: {
     src: "/team/fatima.gif",
-    preview: "/team/fatima.png",
+    preview: "/team/Mauzoun _ Fatmah Jadani.jpg",
   },
   7: {
     src: "/team/aya.gif",
