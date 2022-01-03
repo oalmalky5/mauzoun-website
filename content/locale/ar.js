@@ -212,8 +212,17 @@ export const ar = {
     "teamMember.5.role": "مسؤولة إستراتيجيات المحتوى",
     "teamMember.6.name": "فاطمة جدعاني",
     "teamMember.6.role": "كاتبة",
-    "teamMember.7.name": "آية اللوزي",
-    "teamMember.7.role": "كاتبة",
+    "teamMember.7.name": "أحمد حوزة",
+    "teamMember.7.role": "كاتب",
+    "teamMember.8.name": "أمنية الزبيدي",
+    "teamMember.8.role": "كاتبة",
+    "teamMember.9.name": "دانه القاعوري",
+    "teamMember.9.role": "كاتبة",
+    "teamMember.10.name": "فاطمة علوي",
+    "teamMember.10.role": "مصممة",
+
+
+
     world:
       "في عالم يضج ساعيًا وراء النتائج الفورية، نتمسك بإيماننا بأن العمل المتقن يحتاج إلى عناية ووقت. كل كلمة هي استثمار في علامتكم، أو في هويتكم ككتاب. لهذا السبب نتبع العمل حسب الحجز المسبق فقط ونادرًا ما نقبل المشاريع المستعجلة.",
     "whitebox.innerText1":

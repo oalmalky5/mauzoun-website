@@ -213,8 +213,14 @@ exports["en-US"] = {
       "teamMember.5.role": "Content Strategist",
       "teamMember.6.name": "Fatmah Jadani",
       "teamMember.6.role": "Writer",
-      "teamMember.7.name": "Aya Lozi",
+      "teamMember.7.name": "Ahmed Hoza",
       "teamMember.7.role": "Writer",
+      "teamMember.8.name": "Omnia Alzabidi",
+      "teamMember.8.role": "Writer",
+      "teamMember.9.name": "Danah Kaouri",
+      "teamMember.9.role": "Writer",
+      "teamMember.10.name": "Fatimah Alawi",
+      "teamMember.10.role": "Designer",
     world:
       "In a world that is always bustling about and concerned with immediate results, we stick to the belief that good work takes care and time. Every word is an investment in your brand or your identity as an author. That is why we work on booking basis only and rarely take on rushed projects.",
     "whitebox.innerText1":

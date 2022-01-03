@@ -40,8 +40,20 @@ const teamMembersData = {
     preview: "/team/Mauzoun _ Fatmah Jadani.jpg",
   },
   7: {
-    src: "/team/aya.gif",
-    preview: "/team/aya.png",
+    src: "",
+    preview: "/team/Mauzoun _ Ahmed Hoza.png",
+  },
+  8: {
+    src: "",
+    preview: "/team/Mauzoun _ Omnia.png",
+  },
+  9: {
+    src: "",
+    preview: "/team/Mauzoun _ Danah.png",
+  },
+  10: {
+    src: "",
+    preview: "/team/Mauzoun _ Fatimah Alawi.png",
   },
 };
 
