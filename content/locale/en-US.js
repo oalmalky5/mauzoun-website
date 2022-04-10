@@ -1,10 +1,10 @@
 exports["en-US"] = {
   shared: {
-    homeLink: "Home",
-    storyLink: "Story",
+    homeLink: "Story",
+    storyLink: "Team",
     servicesLink: "Services",
     portfolioLink: "Portfolio",
-    blogLink: "Our Blog",
+    blogLink: "Blog",
     andyouLink: "Mauzoun & You",
     email: "hello@mauzoun.com",
     location: "From the heart of Saudi <br></br> to the whole of the world.",
@@ -68,17 +68,21 @@ exports["en-US"] = {
     title: "Portfolio",
     subtitle: "A personal look into our tales of success.",
     content:
-      "Read our team’s project-focused journal entries, which document our creative thought process and show our beloved final outcome.",
+      "Read our team’s project-focused journal entries, which document our creative thought process and show our beloved final outcomes.",
     "contentWriting.title": "Content Writing",
     "contentWriting.clients.1": "<Link href='/mauj'>Mauj</Link>",
     "contentWriting.clients.2": "Shafra",
     "contentWriting.clients.3": "<Link href='/musaandpalm'>Musa & Palm</Link>",
     "contentWriting.clients.4": "Saudi Tourism Authority",
     "contentWriting.clients.5": "Ministry of Culture: AlBalad",
+    "contentWriting.clients.6": "Red Sea International Film Festival (2021)",
+    "contentWriting.clients.7": "The National Pavilion of Saudi Arabia <br/> at the 59th Biennale de Venezia",
     "creativeWriting.title": "Creative Writing",
     "creativeWriting.clients.1":
-      "Ministry of Culture:<br />Madinah Culinary Arts",
-    clients: "Since 2018, we have worked with <b><u>over 70 clients</u></b>.",
+      "Ministry of Culture:<br />Culinary Arts Books",
+    "boutiquePublishing.title": "Boutique Publishing",
+    "boutiquePublishing.clients.1": "The Myths in Our World & Around It",
+    clients: "Since 2018, we have worked with <b><u>over 90 clients</u></b>.",
   },
   "/mauj": {
     title: "",
@@ -196,7 +200,7 @@ exports["en-US"] = {
   },
   "/story": {
     nameMeaning:
-      "Mauzoun is a holistic writing studio that serves brands and authors worldwide. Our name aptly means “poetic balance” in Arabic, a meaning that our words, services, and values live up to.",
+      "Mauzoun is a writing studio and publishing house that serves brands and authors worldwide. Our name aptly means “poetic balance” in Arabic, a meaning that our words, services, and values live up to.",
     aim:
       "Founded in 2018 and established in Saudi, our work reflects the richness of the Arabic and English languages, encourages the ingenuity of our writers, and emphasizes the importance of powerful and seamless writing.",
     teamwork:

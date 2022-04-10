@@ -171,6 +171,10 @@ export default function portfolio({textAnimationControls, handleBgColorChange, h
                                 {/* Creative Writing */}
                                 <h3 className={styles.clientCategory}>{f("creativeWriting.title")}</h3>
                                 {getClients("creativeWriting")}
+
+                                {/* Boutique Publishing */}
+                                <h3 className={styles.clientCategory}>{f("boutiquePublishing.title")}</h3>
+                                {getClients("boutiquePublishing")}
                             </div>
 
                             <div className="container-object">
