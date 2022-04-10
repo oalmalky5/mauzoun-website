@@ -1,7 +1,7 @@
 export const ar = {
   shared: {
     homeLink: "قصتنا",
-    storyLink: "الفريق",
+    storyLink: "فريقنا",
     servicesLink: "خدماتنا",
     portfolioLink: "أعمالنا",
     blogLink: "مدوّنتنا",
@@ -73,9 +73,13 @@ export const ar = {
     "contentWriting.clients.3": "<Link href='/musaandpalm'>موسى آند بالم</Link>",
     "contentWriting.clients.4": "الهيئة السعودية للسياحة",
     "contentWriting.clients.5": "وزارة الثقافة: جدة التاريخية",
+    "contentWriting.clients.6": "مهرجان البحر الأحمر السينمائي الدولي (٢٠٢١)",
+    "contentWriting.clients.7": "جناح الوطني السعودي في بينالي البندقية ٥٩",
     "creativeWriting.title": "الكتابة الإبداعية",
     "creativeWriting.clients.1": "وزارة الثقافة:<br /> فنون الطهي المدينية",
-    clients: "عملنا منذ ٢٠١٨ مع <b><u>أكثر من ٧٠ عميل وعملية</u></b>.",
+    "boutiquePublishing.title": "النشر المتخصص",
+    "boutiquePublishing.clients.1": "الأساطير في عالمنا وحوله",
+    clients: "عملنا منذ ٢٠١٨ على <b><u>أكثر من ٩٠ مشروع</u></b>.",
   },
 
   "/mauj": {

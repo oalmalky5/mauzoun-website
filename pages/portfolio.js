@@ -172,6 +172,8 @@ export default function portfolio({textAnimationControls, handleBgColorChange, h
                                 <h3 className={styles.clientCategory}>{f("creativeWriting.title")}</h3>
                                 {getClients("creativeWriting")}
 
+                                <hr className="big-margin" size={1} color="black"/>
+
                                 {/* Boutique Publishing */}
                                 <h3 className={styles.clientCategory}>{f("boutiquePublishing.title")}</h3>
                                 {getClients("boutiquePublishing")}

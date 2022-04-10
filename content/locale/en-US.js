@@ -82,7 +82,7 @@ exports["en-US"] = {
       "Ministry of Culture:<br />Culinary Arts Books",
     "boutiquePublishing.title": "Boutique Publishing",
     "boutiquePublishing.clients.1": "The Myths in Our World & Around It",
-    clients: "Since 2018, we have worked with <b><u>over 90 clients</u></b>.",
+    clients: "Since 2018, we have worked on <b><u>over 90 projects</u></b>.",
   },
   "/mauj": {
     title: "",
