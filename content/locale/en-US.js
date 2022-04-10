@@ -79,9 +79,9 @@ exports["en-US"] = {
     "contentWriting.clients.7": "The National Pavilion of Saudi Arabia <br/> at the 59th Biennale de Venezia",
     "creativeWriting.title": "Creative Writing",
     "creativeWriting.clients.1":
-      "Ministry of Culture:<br />Culinary Arts Books",
+      "<b>Ministry of Culture: Culinary Arts Books</b>",
     "boutiquePublishing.title": "Boutique Publishing",
-    "boutiquePublishing.clients.1": "The Myths in Our World & Around It",
+    "boutiquePublishing.clients.1": "<b>The Myths in Our World & Around It</b>",
     clients: "Since 2018, we have worked on <b><u>over 90 projects</u></b>.",
   },
   "/mauj": {

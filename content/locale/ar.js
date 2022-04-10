@@ -76,9 +76,9 @@ export const ar = {
     "contentWriting.clients.6": "مهرجان البحر الأحمر السينمائي الدولي (٢٠٢١)",
     "contentWriting.clients.7": "جناح الوطني السعودي في بينالي البندقية ٥٩",
     "creativeWriting.title": "الكتابة الإبداعية",
-    "creativeWriting.clients.1": "وزارة الثقافة:<br /> فنون الطهي المدينية",
+    "creativeWriting.clients.1": "<b>وزارة الثقافة: كتب فنون الطهي</b>",
     "boutiquePublishing.title": "النشر المتخصص",
-    "boutiquePublishing.clients.1": "الأساطير في عالمنا وحوله",
+    "boutiquePublishing.clients.1": "<b>الأساطير في عالمنا وحوله</b>",
     clients: "عملنا منذ ٢٠١٨ على <b><u>أكثر من ٩٠ مشروع</u></b>.",
   },
 
