@@ -200,11 +200,11 @@ exports["en-US"] = {
   },
   "/story": {
     nameMeaning:
-      "Mauzoun is a writing studio and publishing house that serves brands and authors worldwide. Our name aptly means “poetic balance” in Arabic, a meaning that our words, services, and values live up to.",
+      "You’re only as good as your team. We’re proud to have a brilliant team of talented Arabs who think critically, collaborate compassionately, and prioritize work-life balance over everything.",
     aim:
       "Founded in 2018 and established in Saudi, our work reflects the richness of the Arabic and English languages, encourages the ingenuity of our writers, and emphasizes the importance of powerful and seamless writing.",
     teamwork:
-      "We are a fully virtual workplace as of 2022. Our team works cooperatively to revive the appreciation of good writing, and we craft content and stories with precision and passion. Our words can pack a punch or be elegantly eloquent. It all depends on what you want, and how we see it best.",
+      "We are a virtual workplace as of 2022. Our team works cooperatively to uplift writings and publications with precision and passion. We genuinely foster both personal and professional well-being through our flexible policies, cultural practices, and countless learning opportunities.",
       "teamMember.1.name": "Layan Abdul Shakoor",
       "teamMember.1.role": "Founder & Creative Director",
       "teamMember.2.name": "Nada Nasir",
@@ -226,13 +226,13 @@ exports["en-US"] = {
       "teamMember.10.name": "Fatimah Alawi",
       "teamMember.10.role": "Designer",
     world:
-      "In a world that is always bustling about and concerned with immediate results, we stick to the belief that good work takes care and time. Every word is an investment in your brand or your identity as an author. That is why we work on booking basis only and rarely take on rushed projects.",
+      "In a bustling world that is concerned with immediate results, we stick to the belief that good work takes time. Every word is an investment in your brand or your identity as an author. That is why we work on a booking basis only and selectively take on rushed projects.",
     "whitebox.innerText1":
-      "We believe in the four-day work week and consider ourselves pioneers in actively pursuing a work-life balance for all of our team members.",
+      "We believe in the four-day work week and consider ourselves pioneers in actively pursuing a work-life balance for all of our team members. We only work thirty-two hours per week. This elevates our creativity and productivity, providing the space and time needed to bring a fresh outlook to our virtual workplace and projects.",
     "whitebox.innerText2":
       "This culture we cultivated takes our creativities and productivities up a notch, providing the space and time needed to bring a fresh outlook to our virtual workplace and your projects.",
     workAspects:
-      "In all aspects, the work we do, and how we do it, is holistic and innovative. We aim to ease and expedite the process for artists, independent filmmakers, personal brands, and businesses alike, activating their ambitions with powerful and captivating words.",
+      "We work smart, not hard, and always assume accountability. We serve our clients and authors with devotion and above all, we write and work excellently. Uplifting diversity in our communities is a priority to us, especially in our hiring philosophy. When in doubt, we choose honesty and empathy.",
 
   }
 };

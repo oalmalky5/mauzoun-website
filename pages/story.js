@@ -147,8 +147,8 @@ const Story = function ({ textAnimationControls, handleBgColorChange, handleOpen
   return (
     <>
       <NextSeo
-        title={locale !== "ar" ? "Mauzoun | Story" : "مَوْزوْن | قصتنا"}
-        description={locale !== "ar" ? "Mauzoun | Story" : "مَوْزوْن | قصتنا"}
+        title={locale !== "ar" ? "Mauzoun | Team" : "مَوْزوْن | فريقنا"}
+        description={locale !== "ar" ? "Mauzoun | Team" : "مَوْزوْن | فريقنا"}
       />
       <div className="background-animation" style={{ backgroundColor }} />
       <motion.div
@@ -194,23 +194,24 @@ const Story = function ({ textAnimationControls, handleBgColorChange, handleOpen
               className="container"
               // layout="position"
             >
-              <div className="container-background" style={{ backgroundColor }}></div>
-              <div className="container-image">
+             <div className="container-background" style={{ backgroundColor }}></div>
+              {/*<div className="container-image">
                 <div className={styles.storyCover}>
                   <motion.img src="/Story.png" height="341px" width="900px" layout="fixed" priority="true" transition={{ duration: 0.5 }}/>
                 </div>
-              </div>
+                </div>*/}
 
               <div className="container-content">
                 <h1>{f("nameMeaning")}</h1>
 
-                {f("aim")}
+                <div className="container-object">
+                   <div className={styles.gridContainer}>{getTeamMembers()}</div>
+                </div>
+
+
+                
 
                 <b>{f("teamwork")}</b>
-              </div>
-
-              <div className="container-object">
-                <div className={styles.gridContainer}>{getTeamMembers()}</div>
               </div>
 
               <div className="container-content">{f("world")}</div>
@@ -219,8 +220,8 @@ const Story = function ({ textAnimationControls, handleBgColorChange, handleOpen
                 <div class={styles.totalWhiteBox}>
                   <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
                     <b>{f("whitebox.innerText1")}</b>
-                    <br />
-                    {f("whitebox.innerText2")}
+                
+                    
                   </WhiteBox>
                 </div>
               </div>
