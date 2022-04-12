@@ -74,7 +74,7 @@ export const ar = {
     "contentWriting.clients.4": "الهيئة السعودية للسياحة",
     "contentWriting.clients.5": "وزارة الثقافة: جدة التاريخية",
     "contentWriting.clients.6": "مهرجان البحر الأحمر السينمائي الدولي (٢٠٢١)",
-    "contentWriting.clients.7": "جناح الوطني السعودي في بينالي البندقية ٥٩",
+    "contentWriting.clients.7": "الجناح الوطني السعودي في بينالي البندقية ٥٩",
     "creativeWriting.title": "الكتابة الإبداعية",
     "creativeWriting.clients.1": "<b>وزارة الثقافة: كتب فنون الطهي</b>",
     "boutiquePublishing.title": "النشر المتخصص",
