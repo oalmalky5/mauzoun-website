@@ -13,7 +13,7 @@ import ContactButton from "../components/ContactButton";
 import WhiteBox from "../components/WhiteBox";
 import styles from "../styles/musaandpalm.module.scss";
 
-const backgroundColor = "#fbec9a";
+const backgroundColor = "#f7f5f0";
 
 export default function musaandpalm({textAnimationControls, handleBgColorChange, handleOpenNav, history, isNavOpen, ...rest}) {
     const locale = useRouter().locale;

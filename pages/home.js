@@ -14,7 +14,7 @@ import { usePanelbear } from '@panelbear/panelbear-nextjs';
 import {MotionLogo} from "../components/MotionLogo"
 import Footer from "../components/Footer";
 
-const backgroundColor = "#f8d952";
+const backgroundColor = "#f7f5f0";
 
 export default function Home({ updatePageTransition, textAnimationControls, handleBgColorChange, history, handleOpenNav, isNavOpen, ...rest }) {
   const { key, initial, animate, variants } = rest;

@@ -12,7 +12,7 @@ import ContactButton from "../components/ContactButton";
 import styles from "../styles/mauj.module.scss";
 import WhiteBox from "../components/WhiteBox";
 
-const backgroundColor = "#fbec9a";
+const backgroundColor = "#f7f5f0";
 
 export default function mauj({ textAnimationControls, handleBgColorChange, handleOpenNav,history, isNavOpen, ...rest }) {
   const locale = useRouter().locale;

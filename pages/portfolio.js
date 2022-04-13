@@ -16,7 +16,7 @@ import mauj from './mauj'
 import musaandpalmCopy from "./musaandpalm.js";
 import Footer from "../components/Footer";
 
-const backgroundColor = "#fbec9a";
+const backgroundColor = "#f7f5f0";
 
 const clientLogos = [
     "/clientLogos/1.png",

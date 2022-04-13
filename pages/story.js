@@ -12,7 +12,7 @@ import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import Footer from "../components/Footer";
 
-const backgroundColor = "#d1e3f2";
+const backgroundColor = "#f7f5f0";
 
 const teamMembersData = {
   1: {

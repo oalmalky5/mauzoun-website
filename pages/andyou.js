@@ -13,7 +13,7 @@ import ContactButton from "../components/ContactButton";
 import ComingSoon from "../components/ComingSoon";
 import Footer from "../components/Footer";
 
-const backgroundColor = "#b3d0ea";
+const backgroundColor = "#f7f5f0";
 
 export default function andyou({ textAnimationControls, handleBgColorChange, handleOpenNav, history, isNavOpen, ...rest }) {
   const locale = useRouter().locale;
