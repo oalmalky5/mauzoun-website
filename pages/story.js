@@ -220,7 +220,7 @@ const Story = function ({ textAnimationControls, handleBgColorChange, handleOpen
               <div className="container-object">
                 <div class={styles.totalWhiteBox}>
                   <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                    <b>{f("whitebox.innerText1")}</b>
+                    <b className="whitebox-font">{f("whitebox.innerText1")}</b>
                 
                     
                   </WhiteBox>

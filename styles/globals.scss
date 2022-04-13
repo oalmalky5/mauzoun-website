@@ -28,8 +28,8 @@ body {
     .heading {
       font-family: "GE Dinar Two";
     }
-    & .title1 {
-      background-color: red;
+    & .proud-section {
+      font-family: "GE Dinar One";
     }
   
   }
@@ -380,5 +380,13 @@ justify-content: center;
 }
 
 .proud-section {
-  font-family: 'alegreya sans light' !important;
+  font-family: 'alegreya sans light';
+
+  .proud-section .ar {
+    font-family: 'GE Dinar One' !important;
+  }
+}
+
+.whitebox-font {
+  font-size: 28px !important;
 }
