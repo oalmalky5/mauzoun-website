@@ -204,11 +204,12 @@ const Story = function ({ textAnimationControls, handleBgColorChange, handleOpen
               <div className="container-content">
                 <h1>{f("nameMeaning")}</h1>
 
+                {f("proud")}
                 <div className="container-object">
                    <div className={styles.gridContainer}>{getTeamMembers()}</div>
                 </div>
 
-
+                
                 
 
                 <b>{f("teamwork")}</b>

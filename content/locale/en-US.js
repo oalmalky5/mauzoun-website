@@ -200,9 +200,9 @@ exports["en-US"] = {
   },
   "/story": {
     nameMeaning:
-      "You’re only as good as your team. We’re proud to have a brilliant team of talented Arabs who think critically, collaborate compassionately, and prioritize work-life balance over everything.",
-    aim:
-      "Founded in 2018 and established in Saudi, our work reflects the richness of the Arabic and English languages, encourages the ingenuity of our writers, and emphasizes the importance of powerful and seamless writing.",
+      "You’re only as good as your team.",
+    proud:
+      "We’re proud to have a brilliant team of talented Arabs who think critically, collaborate compassionately, and prioritize work-life balance over everything.",
     teamwork:
       "We are a virtual workplace as of 2022. Our team works cooperatively to uplift writings and publications with precision and passion. We genuinely foster both personal and professional well-being through our flexible policies, cultural practices, and countless learning opportunities.",
       "teamMember.1.name": "Layan Abdul Shakoor",
