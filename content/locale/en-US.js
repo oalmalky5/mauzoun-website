@@ -29,20 +29,22 @@ exports["en-US"] = {
       "Founded in 2018 and established in Saudi, our work reflects the richness of the Arabic and English languages, encourages the ingenuity of Arab writers, and emphasizes the power of premium publications.",
     "story.intro": "Here’s our story:",
     "story.content":
-      "We realized a lack of captivating brand content and creative writing in the Arab World. Quite simply, we created a solution.",
+      "<b>We holistically balance content writing, creative writing, and boutique publishing.</b>",
     "services.intro":
       "<u>Our services balance between the professional and the creative</u>",
     "services.content":
-      ". They include developing strategic content for brands and campaigns, as well as unleashing our creativities in book editing, creative writing, story doctoring, and boutique publishing.",
+      "We realized a lack of captivating content, wonderful writing, and beautiful books in the Arab World. Quite simply, we created a solution.",
     "approach.intro": "<u>Our approach to writing is thoughtful and imaginative</u>",
     "approach.content":
-      ", balancing between Arabic and English while remaining loyal to each language and the kind of service we provide. We believe in work that is backed by a strong understanding of brand strategies, audience needs, and empathetic storytelling.",
+      "As your partners in writing and publishing, our services always consider strategy, best practices, and industry trends, all while remaining thoughtful and timeless.",
     "projects.intro": "<u>We seek projects that need us as much as we need them</u>",
     "projects.content":
-      ", from innovative brands to independent authors with passion projects. You can read our tales of success in <u><Link href='/portfolio'>our portfolio</Link></u>.",
+      "We ensure that our treatment of Arabic and English writings remains loyal to each language’s nativity, backed by a strong understanding of strategy, target audience, and compelling storytelling. You can count on us to share our industry insights and honest opinions to give you the best quality possible.",
     "work.intro": "<u>Our work is dedicated and ethical</u>",
     "work.content":
-      ", prioritizing our community as much as our clients. This is why we host an annual competition for up-and-coming writers who are developing their first-ever manuscripts. Winners are provided with free editing, marketing, and publishing services to unleash their works to the world. To learn more about this competition, <u><Link href='/andyou'>click here</Link></u>.",
+      "We partner with exciting and ethical projects that seek win-win outcomes.",
+    "work.content2":
+      "We communicate with clarity and consistency, ensuring organized digital correspondence and timely deliverables. Consider it done upon your project’s activation; we align the finest details of your brief with our knowledge of best practices to ensure the most excellent outcome possible, which we further refine with you through our two complimentary rounds of changes."
   },
   "/blog": {
     title: "Our Blog",

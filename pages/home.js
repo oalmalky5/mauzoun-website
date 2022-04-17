@@ -114,10 +114,10 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     {/*<u>{f("story.intro")}</u>*/}
                   </h5>
                 </Link>
-               { /*<span className='mt-0'>{f("story.content")}</span>*/}
+               { <span className='content'>{f("story.content")}</span>}
 
                 {/* Services */}
-                {/*{!areServicesVisible ? (
+                {/*!areServicesVisible ? (
                   <div
                     className='content-wrapper'
                     onClick={() => setAreServicesVisible(true)}
@@ -136,8 +136,8 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     {f("services.content")}
                     <hr />
                   </div>
-                )}*/}
-
+                )*/}
+                <span>{f("services.content")}</span>
                 {/* Approach */}
                 {/*!isApproachVisible ? (
                   <div
@@ -156,7 +156,10 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     {f("approach.content")}
                     <hr />
                   </div>
-                )}
+                )*/}
+                
+
+                <span className="mt-1">{f("approach.content")}</span>
 
                 {/* Projects */}
                 {/*!areProjectsVisible ? (
@@ -176,8 +179,8 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     {f("projects.content")}
                     <hr />
                   </div>
-                )}
-
+                )*/}
+                {f("projects.content")}
                 {/* Work */}
                 {/*!isWorkVisible ? (
                   <div
@@ -196,6 +199,8 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     {f("work.content")}
                   </div>
                 )*/}
+                <span className="work">{f("work.content")}</span>
+                {f("work.content2")}
               </div>
             </div>
           </div>
