@@ -24,9 +24,9 @@ exports["en-US"] = {
       "Sorry, we could not reach our servers. Please try again later.",
   },
   "/home": {
-    title: "A warm welcome from the Mauzoun Team.",
+    title: "Mauzoun is a writing studio and publishing house that serves brands and authors worldwide. Our name aptly means “poetic balance” in Arabic, a meaning that our words, services, and values live up to.",
     summary:
-      "We are a Jeddah-based writing studio that researches then writes creatively and holistically, providing services to clients worldwide.",
+      "Founded in 2018 and established in Saudi, our work reflects the richness of the Arabic and English languages, encourages the ingenuity of Arab writers, and emphasizes the power of premium publications.",
     "story.intro": "Here’s our story:",
     "story.content":
       "We realized a lack of captivating brand content and creative writing in the Arab World. Quite simply, we created a solution.",

@@ -97,7 +97,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                 <h1>{f("title")}</h1>
                 {f("summary")}
               </div>
-              <div className='container-image'>
+              {/*<div className='container-image'>
                 <motion.img
                   width='800px'
                   height='400px'
@@ -107,17 +107,17 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                   alt='an image of an office'
                   transition={{ duration: 0.5 }}
                 />
-              </div>
+          </div>*/}
               <div className='container-content'>
                 <Link href='/story'>
                   <h5 className='mb-0'>
-                    <u>{f("story.intro")}</u>
+                    {/*<u>{f("story.intro")}</u>*/}
                   </h5>
                 </Link>
-                <span className='mt-0'>{f("story.content")}</span>
+               { /*<span className='mt-0'>{f("story.content")}</span>*/}
 
                 {/* Services */}
-                {!areServicesVisible ? (
+                {/*{!areServicesVisible ? (
                   <div
                     className='content-wrapper'
                     onClick={() => setAreServicesVisible(true)}
@@ -136,10 +136,10 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     {f("services.content")}
                     <hr />
                   </div>
-                )}
+                )}*/}
 
                 {/* Approach */}
-                {!isApproachVisible ? (
+                {/*!isApproachVisible ? (
                   <div
                     className='content-wrapper'
                     onClick={() => setIsApproachVisible(true)}
@@ -159,7 +159,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                 )}
 
                 {/* Projects */}
-                {!areProjectsVisible ? (
+                {/*!areProjectsVisible ? (
                   <div
                     className='content-wrapper'
                     onClick={() => setAreProjectsVisible(true)}
@@ -179,7 +179,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                 )}
 
                 {/* Work */}
-                {!isWorkVisible ? (
+                {/*!isWorkVisible ? (
                   <div
                     className='content-wrapper'
                     onClick={() => setIsWorkVisible(true)}
@@ -195,7 +195,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     <h5>{f("work.intro")}</h5>
                     {f("work.content")}
                   </div>
-                )}
+                )*/}
               </div>
             </div>
           </div>
