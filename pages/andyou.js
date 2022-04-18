@@ -12,8 +12,33 @@ import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import ComingSoon from "../components/ComingSoon";
 import Footer from "../components/Footer";
+import WhiteBox from "../components/WhiteBox";
+
 
 const backgroundColor = "#f7f5f0";
+
+const whiteBoxDecoratorsPositions = {
+  fromTop: [
+    {},
+    {
+      preferredMargin: "650px",
+    },
+    {
+      preferredMargin: "667px",
+    },
+  ],
+  fromBottom: [
+    {
+      preferredMargin: "550px",
+    },
+    {
+      preferredMargin: "567px",
+    },
+    {
+      preferredMargin: "584px",
+    },
+  ],
+};
 
 export default function andyou({ textAnimationControls, handleBgColorChange, handleOpenNav, history, isNavOpen, ...rest }) {
   const locale = useRouter().locale;
@@ -30,6 +55,15 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
   const [isBecomeClientVisible, setIsBecomeClientVisible] = useState(false);
   const [isJoinTeamVisible, setIsJoinTeamVisible] = useState(false);
   const [isJoinCompetitionVisible, setIsJoinCompetitionVisible] = useState(false);
+
+  const bullet = (
+    <div className={styles.bullet}>
+      <object data="/Tilted Square.svg" className={styles.tiltedSquare} />
+      <svg width="40" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 10 L40 10" stroke="black" stroke-width="2" />
+      </svg>
+    </div>
+  );
 
   React.useEffect(() => handleBgColorChange(backgroundColor), []);
 
@@ -86,7 +120,7 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
               </div>
               <div className="container-content">
                 {/* Become our client */}
-                <div className="mt-0 unwrapped-content">
+                {/*<div className="mt-0 unwrapped-content">
                   <div
                     className="content-wrapper"
                     onClick={() => setIsBecomeClientVisible(!isBecomeClientVisible)}
@@ -104,7 +138,7 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
                       <hr />
                     </>
                   )}
-                </div>
+                  </div>*/}
 
                 {/* Join the team */}
                 <div className="mt-0 unwrapped-content">
@@ -122,6 +156,29 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
                   {isJoinTeamVisible && (
                     <>
                       {f("joinTeam.content")}
+
+                      <div className="container-object">
+                      <div className={styles.totalWhiteBox}>
+                          <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
+                              <span className="publishingHeader">{f("hiring.header")}</span>
+                              <br />
+                              {[
+                                "hiring.contentWriting",
+                                "hiring.creativeWriting",
+                                "hiring.publishing",
+                                "hiring.management",
+                                "hiring.media",
+                                "hiring.art",
+                              ].map((e) => (
+                                  <div className={styles.service} key={e}>
+                                      {bullet}
+                                      {f(e)}
+                                  </div>
+                              ))}
+                          </WhiteBox>
+                      </div>
+                  </div>
+                  {f("hiring.content")}
                       <hr />
                     </>
                   )}

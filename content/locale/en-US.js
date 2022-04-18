@@ -55,16 +55,31 @@ exports["en-US"] = {
     "becomeClient.content":
       "If you're interested in our services, you can become our client by simply e-mailing us via clicking the button at the bottom right of our website.",
     "joinTeam.intro": "Join the Team",
-    "joinTeam.content": `<b>There are currently no job opportunities available. Keep checking.</b>
+    "joinTeam.content": `<b>We always announce our job and training opportunities on our Instagram page.</b>
       <br /><br />
-      If you are interested in joining Mauzoun, keep checking this page or our Instagram account for the latest job announcements.
-      <br /><br />
-      At Mauzoun, we look for writers with bulletproof Arabic and English who are creative and passionate about writing. To win us over, make sure that your application is free of mistakes, and complement it with a captivating cover letter that conveys why you love the work you do.
-      <br /><br />
-      We also seek managers who are able to lead our team in a manner that balances the humanistic with the professional: diligent, organized, precise and empathic are the traits we seek.`,
+      If you are interested in joining Mauzoun, follow our Instagram account to stay in the know.
+    `,
+    "hiring.header": 
+      "We hire at the following departments at Mauzoun:",
+      "hiring.contentWriting": "Content Writing",
+      "hiring.creativeWriting": "Creative Writing",
+      "hiring.publishing": "Boutique Publishing",
+      "hiring.management": "Management",
+      "hiring.media": "Media",
+      "hiring.art": "Art",
+      "hiring.content": `
+        We seek writers with bulletproof Arabic and English who are creative and passionate about writing. To win us over, make sure that your application is free of mistakes, and complement it with a captivating cover letter that conveys why you love the work you do.
+        <br></br>
+        <br></br>
+        We also seek managers who are able to lead our team in a manner that balances the humanistic with the professional: diligent, organized, precise and empathic are the traits we seek.
+        <br></br>
+        <br></br>
+        For our Boutique Publishing, Media, and Art Departments, we seek team members who are diligent, compassionate, and embody our values, which you can read more about <Link href='/story'><u>here</u></Link>.
+      `,
     "joinCompetition.intro": "Apply to the Competition",
     "joinCompetition.content":
-      "Our latest endeavor in creative writing will be investing our story development and publishing services in emerging and first-time writers from the Arab World, who are trying to publish their first book, novel, short story, collection of essays, play, and everything in between. The judging criteria will be made public, and after shortlisting the best writers for a pitch session, we will select one writer who will receive our creative writing and publishing services for free for one year.",
+      "Our latest endeavor in creative writing will be investing our story development and publishing services in emerging and first-time writers from the Arab World who want to publish their first book, novel, short story, collection of essays, play, and everything in between. After shortlisting the best writers for a pitch session, we will select one winning writer. The competition details, dates, judging criteria, and awards package will be announced in late 2023.",
+    
   },
   "/portfolio": {
     title: "Portfolio",

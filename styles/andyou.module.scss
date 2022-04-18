@@ -41,3 +41,39 @@
     margin-top: 350px;
   }
 }
+
+.service {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+
+  & p {
+    display: inline;
+  }
+
+  .bullet {
+    @include ltr {
+      margin-right: 10px;
+    }
+
+    @include rtl {
+      margin-left: 10px;
+    }
+
+    & .tiltedSquare {
+      position: absolute;
+      width: 15px;
+      margin-top: 3px;
+      transform: scaleX(-1);
+
+      @include ltr {
+        margin-left: -5px;
+      }
+
+      @include rtl {
+        margin-right: -5px;
+      }
+    }
+  }
+}
