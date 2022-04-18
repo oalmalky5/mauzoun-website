@@ -240,7 +240,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                           onClick={() => setIsBoutiquePublishingVisible(!isBoutiquePublishingVisible)}
                           style={isBoutiquePublishingVisible ? { marginBottom: "30px" } : {}}
                       >
-                          <h2>{f("boutiquePublishing.title")}</h2>
+                          <h2>{f("publishing.title")}</h2>
                           <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
@@ -248,14 +248,39 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
 
                       {isBoutiquePublishingVisible && (
                           <>
-                              <ComingSoon/>
+                          {f("publishing.content")}
+                          <div className="container-object">
+                                  <div className={styles.totalWhiteBox}>
+                                      <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
+                                          {f("publishing.services.header")}
+                                          <br />
+                                          {[
+                                            "publishing.services.storyEditing",
+                                            "publishing.services.copyEditing",
+                                            "publishing.services.authorBranding",
+                                            "publishing.services.authorPublicity",
+                                            "publishing.services.bookDesign",
+                                            "publishing.services.bookMarketing",
+                                            "publishing.services.bookTranslation",
+                                            "publishing.services.printing",
+                                            "publishing.services.distribution",
+                                            "publishing.services.publicityEventsCoordination"
+                                          ].map((e) => (
+                                              <div className={styles.service} key={e}>
+                                                  {bullet}
+                                                  {f(e)}
+                                              </div>
+                                          ))}
+                                      </WhiteBox>
+                                  </div>
+                              </div>
                           </>
                       )}
                   </div>
               </div>
 
               <div style={{ height: "400px" }} />
-              <div className="container-image">
+              {/*<div className="container-image">
                 <div className={styles.servicesCover}>
                   <motion.img
                     src="/Services.png"
@@ -267,7 +292,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                     transition={{ duration: 0.5 }}
                   />
                 </div>
-              </div>
+               </div>*/}
             </div>
           </div>
         </div>

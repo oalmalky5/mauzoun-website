@@ -150,28 +150,28 @@ exports["en-US"] = {
     "approach.timeline.header": "4. We Book Your Timeline.",
     "approach.timeline.content":
       "After receiving your approval of the quotation and down payment, we book your timeline immediately. Our busy schedule and workload demand that we work on booking basis only.",
-    "approach.research.header": "5. We Dive into the Research.",
+    "approach.research.header": "5. We Dive Into the Research.",
     "approach.research.content":
-      "Good work is slow work––that’s our motto. Our average timeline is between 10 to 21 business days. Great writing takes time, so we gather all the data and information needed to complement our writing process and distinguish your tone from competitors.",
+      "Good work takes time––that’s our motto. Our average timeline is between 10 to 21 business days. Great writing takes time, so we gather all the data and information needed to complement our writing process and distinguish your tone from competitors.",
     "approach.writing.header": "6.  The Writing Process Begins.",
     "approach.writing.content":
       "After finalizing our research internally, we hand it over to our brilliant team of English and Arabic writers who adapt to your tone with the best quality of writing. We then proofread the content at least seven times to make sure that everything is grammatically correct, structurally strong, and holistically captivating.",
     "approach.delivery.header": "7. Your Deliverables Arrive Right on Time.",
     "approach.delivery.content":
-      "Working on a booking basis means we’re always on time and with work polished to final draft perfection.",
+      "Working on a booking basis means we’re always on time to deliver work that is polished and proofread to perfection.",
     "approach.feedback.header": "8. You Share Your Feedback or Approval.",
     "approach.feedback.content":
-      "You provide your feedback via e-mail or phone, and may immediately approve the project! If not, don’t worry—great content takes time. Every project at Mauzoun has a standard 2 rounds of changes in order to polish your content to perfection. ",
-    "approach.adaptTimeline.header": "9. We Adapt Your Timeline.",
+      "You provide your feedback via e-mail or online meeting, or you may immediately approve the project. If not, don’t worry—great content takes time. That’s why every project at Mauzoun has a standard 2 rounds of changes.",
+    "approach.adaptTimeline.header": "9. We Rebook Your Timeline.",
     "approach.adaptTimeline.content":
-      "We repeat steps 5 through 7 with a new and different approach to research and writing to ensure different results.",
+      "We repeat steps 5 through 7 with a renewed approach to research and writing to ensure different results.",
     "approach.finished.header": "10. Your Story Comes to Life.",
     "approach.finished.content":
-      "Our holistic process ensures that when your content is finalized it is an embodiment of your vision, having brought together your story to life.",
+      "Our holistic process ensures that your content is finalized as an embodiment of your vision, bringing your story to life.",
     "contentWriting.title": "Content Writing",
-    "contentWriting.content": `<b>Holistic, research-based services for strong brands and campaigns that need captivating content.</b>
+    "contentWriting.content": `<b>We provide holistic, research-based content writing for brands and campaigns that want captivating content.</b>
       <br /><br />
-      All of our content writing services must be preceded by a Brand Strategy or Messaging Manual. If your brand does not have one, we’d be more than glad to prepare one for you.
+      All of our content writing services must be preceded by a Brand Strategy or Messaging Manual. If your brand does not have one, we can gladly prepare one for you.
       <br /><br />
       We choose to work exclusively with compelling brands on long-term basis, or on exciting campaigns.`,
     "contentWriting.services.header":
@@ -188,9 +188,7 @@ exports["en-US"] = {
       <br /><br />
       Writers are artists of speech and thought. There’s nothing we enjoy more than telling a story, and we can help you tell your own in the best way possible.
       <br /><br />
-      We seek inspiration from the rich literary heritages of the world, and we aspire to contribute to our region’s libraries and partake in the advancement of language use. 
-      <br /><br />
-      Our annual competition, which occurs every summer, offers the winner free services in either book doctoring or script doctoring, culminating in pairing the writer’s finished product with either a publisher or a producer. To find out more about our annual competition, <Link href='/andyou'>click here</Link>.
+      We seek inspiration from the rich literary heritages of the Arab world, and we aspire to contribute to our region’s libraries and partake in the advancement of language. 
       `,
     "creativeWriting.services.header":
       "Here’s a list of some of the fee-based services we provide. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.",
@@ -198,7 +196,27 @@ exports["en-US"] = {
     "creativeWriting.services.scriptwriting": "Scriptwriting",
     "creativeWriting.services.bookEditing": "Book Editing",
     "creativeWriting.services.bookTranslation": "Book Translation",
-    "boutiquePublishing.title": "Boutique Publishing",
+
+    "publishing.title": "Boutique Publishing",
+    "publishing.content": `<b>We prioritize talent over the region’s pay-to-publish model.</b>
+    <br /><br />
+    We headhunt talented authors with truly exceptional manuscripts. Likewise, authors can apply to be signed to Mauzoun.
+    <br /><br />
+    We follow an investment model, so authors pay zero riyals to publish their books, forever. Authors will also get a higher rights percentage than the industry average with a fully negotiable offer delineated in our contracts.
+    `,
+    "publishing.services.header": 
+      "<b>It’s our responsibility as publishers to ensure that the author and the book are well-developed and well-marketed to create a win-win situation. That’s why we fully handle:</b>",
+      "publishing.services.storyEditing": "Story Editing",
+      "publishing.services.copyEditing": "Copy Editing",
+      "publishing.services.authorBranding": "Author Branding",
+      "publishing.services.authorPublicity": "Author Publicity",
+      "publishing.services.bookDesign": "Book Design",
+      "publishing.services.bookMarketing": "Book Marketing",
+      "publishing.services.bookTranslation": "Book Translation",
+      "publishing.services.printing": "Printing",
+      "publishing.services.distribution": "Distribution",
+      "publishing.services.publicityEventsCoordination": "Publicity Events Coordination",
+    
   },
   "/story": {
     nameMeaning:
