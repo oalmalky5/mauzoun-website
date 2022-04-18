@@ -252,7 +252,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                           <div className="container-object">
                                   <div className={styles.totalWhiteBox}>
                                       <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                                          {f("publishing.services.header")}
+                                          <span className="publishingHeader">{f("publishing.services.header")}</span>
                                           <br />
                                           {[
                                             "publishing.services.storyEditing",

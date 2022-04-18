@@ -205,7 +205,7 @@ exports["en-US"] = {
     We follow an investment model, so authors pay zero riyals to publish their books, forever. Authors will also get a higher rights percentage than the industry average with a fully negotiable offer delineated in our contracts.
     `,
     "publishing.services.header": 
-      "<b>It’s our responsibility as publishers to ensure that the author and the book are well-developed and well-marketed to create a win-win situation. That’s why we fully handle:</b>",
+      "It’s our responsibility as publishers to ensure that the author and the book are well-developed and well-marketed to create a win-win situation. That’s why we fully handle:",
       "publishing.services.storyEditing": "Story Editing",
       "publishing.services.copyEditing": "Copy Editing",
       "publishing.services.authorBranding": "Author Branding",
