@@ -137,7 +137,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     <hr />
                   </div>
                 )*/}
-                <span>{f("services.content")}</span>
+                <span className="servicesContent">{f("services.content")}</span>
                 {/* Approach */}
                 {/*!isApproachVisible ? (
                   <div

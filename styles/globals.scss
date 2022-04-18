@@ -28,8 +28,8 @@ body {
     .heading {
       font-family: "GE Dinar Two";
     }
-    & .proud-section {
-      font-family: "GE Dinar One";
+    & .proud-section, .content, .mt-1, .work {
+      font-family: "GE Dinar Two";
     }
   
   }
@@ -422,24 +422,36 @@ justify-content: center;
 .content {
   font-size: 30px !important;
   font-weight: bold !important;
+  font-family: "Alegreya";
 }
 
 .content .ar {
   font-size: 30px !important;
   font-weight: bold !important;
+  font-family: "GE Dinar One";
 }
 
 .mt-1 {
   font-size: 30px !important;
   font-weight: bold !important;
+  font-family: "Alegreya"
+  
+}
+
+.mt-1 .ar {
+  font-size: 30px !important;
+  font-weight: bold !important;
+  font-family: "GE Dinar One" !important;
 }
 
 .work {
   font-size: 30px !important;
   font-weight: bold !important;
+  font-family: "Alegreya"
 }
 
 .balance .ar {
   font-size: 30px !important;
   font-weight: bold !important; 
 }
+
