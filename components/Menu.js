@@ -219,6 +219,7 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
                       onMouseEnter={() => (isIOS ? null : setHoveredLink(e))}
                       onMouseLeave={() => (isIOS ? null : setHoveredLink(""))}
                       onClick={() => isNavOpen && handleOpenNav?.("instant")}
+                      
                     >
                       <div
                         className={`${styles.itemTitle} heading`}

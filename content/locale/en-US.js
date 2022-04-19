@@ -155,32 +155,29 @@ exports["en-US"] = {
       "The language of storytelling is one, no matter the path your project paves. Below is the flow that all of our projects follow.",
     "approach.contact.header": "1. Contact Us.",
     "approach.contact.content":
-      "<u>Send an e-mail</u> or <u>book a call</u> through our scheduling system. Our team is keen to get to know you better and understand the kind of services you’re looking for.",
-    "approach.briefForm.header": "2. Complete the Mauzoun Brief Form.",
-    "approach.briefForm.content":
-      "After understanding your needs, we will provide you with the Mauzoun Brief Form, where you can fill the necessary information required to further understand the scope of your project.",
-    "approach.quotation.header": "3. We Prepare Your Quotation.",
+      "Send us an e-mail. Our team is keen to get to know you better and understand the kind of services you’re looking for, so make sure to give us a detailed brief. If we feel that information is missing, we will reply back to you with questions for further clarification. After understanding your needs, we can move on to the next step.",
+    "approach.quotation.header": "2. We Prepare Your Quotation.",
     "approach.quotation.content":
       "Our quotations take around 3 business days to prepare after reviewing your form. They include our Terms and Conditions and help clarify and streamline our work together.",
-    "approach.timeline.header": "4. We Book Your Timeline.",
+    "approach.timeline.header": "3. We Book Your Timeline.",
     "approach.timeline.content":
       "After receiving your approval of the quotation and down payment, we book your timeline immediately. Our busy schedule and workload demand that we work on booking basis only.",
-    "approach.research.header": "5. We Dive Into the Research.",
+    "approach.research.header": "4. We Dive Into the Research.",
     "approach.research.content":
       "Good work takes time––that’s our motto. Our average timeline is between 10 to 21 business days. Great writing takes time, so we gather all the data and information needed to complement our writing process and distinguish your tone from competitors.",
-    "approach.writing.header": "6.  The Writing Process Begins.",
+    "approach.writing.header": "5.  The Writing Process Begins.",
     "approach.writing.content":
       "After finalizing our research internally, we hand it over to our brilliant team of English and Arabic writers who adapt to your tone with the best quality of writing. We then proofread the content at least seven times to make sure that everything is grammatically correct, structurally strong, and holistically captivating.",
-    "approach.delivery.header": "7. Your Deliverables Arrive Right on Time.",
+    "approach.delivery.header": "6. Your Deliverables Arrive Right on Time.",
     "approach.delivery.content":
       "Working on a booking basis means we’re always on time to deliver work that is polished and proofread to perfection.",
-    "approach.feedback.header": "8. You Share Your Feedback or Approval.",
+    "approach.feedback.header": "7. You Share Your Feedback or Approval.",
     "approach.feedback.content":
       "You provide your feedback via e-mail or online meeting, or you may immediately approve the project. If not, don’t worry—great content takes time. That’s why every project at Mauzoun has a standard 2 rounds of changes.",
-    "approach.adaptTimeline.header": "9. We Rebook Your Timeline.",
+    "approach.adaptTimeline.header": "8. We Rebook Your Timeline.",
     "approach.adaptTimeline.content":
       "We repeat steps 5 through 7 with a renewed approach to research and writing to ensure different results.",
-    "approach.finished.header": "10. Your Story Comes to Life.",
+    "approach.finished.header": "9. Your Story Comes to Life.",
     "approach.finished.content":
       "Our holistic process ensures that your content is finalized as an embodiment of your vision, bringing your story to life.",
     "contentWriting.title": "Content Writing",
