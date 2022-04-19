@@ -79,6 +79,7 @@
   width: 40px;
   z-index: -1;
   transform: scaleX(-1);
+  
 
   @include ltr {
     margin-left: -10px;
