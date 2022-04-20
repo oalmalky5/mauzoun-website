@@ -216,7 +216,7 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
                   <Link href={"/" + e}>
                     <a
                       className={styles.navLink}
-                      onMouseEnter={() => (isIOS ? null : setHoveredLink(e))}
+                      onMouseEnter={() => (isIOS ? null : setHoveredLink())}
                       onMouseLeave={() => (isIOS ? null : setHoveredLink(""))}
                       onClick={() => isNavOpen && handleOpenNav?.("instant")}
                       
