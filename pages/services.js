@@ -181,6 +181,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                               "contentWriting.services.profile",
                               "contentWriting.services.website",
                               "contentWriting.services.socialMedia",
+                              "contentWriting.services.scriptWriting"
                             ].map((e) => (
                               <div className={styles.service} key={e}>
                                 {bullet}
@@ -214,21 +215,43 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                                   <div className={styles.totalWhiteBox}>
                                       <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
                                           {f("creativeWriting.services.header")}
-                                          <br />
+                                          <br/>
+                                          <b>{f("creativeWriting.services.title1")}</b>
+
                                           {[
-                                              "creativeWriting.services.storyDoctoring",
-                                              "creativeWriting.services.scriptwriting",
-                                              "creativeWriting.services.bookEditing",
-                                              "creativeWriting.services.bookTranslation",
-                                          ].map((e) => (
+                                            "creativeWriting.services.research",
+                                            "creativeWriting.services.narrativeDevelopment",
+                                            "creativeWriting.services.artDirection",
+                                            "creativeWriting.services.bookWriting",
+                                            "creativeWriting.services.storyEditing",
+                                            "creativeWriting.services.copyEditing",
+                                            "creativeWriting.services.bookTranslation",
+                                            "creativeWriting.services.bookDesing",
+                                                                                  ].map((e) => (
+                                              <div className={styles.service} key={e}>
+                                                  {bullet}
+                                                  {f(e)}
+                                              </div>
+                                          ))}
+                                          <br />                                          
+                                          <b>{f("creativeWriting.services.title2")}</b>
+                                          {[
+                                            "creativeWriting.services.research",
+                                            "creativeWriting.services.narrativeDevelopment",
+                                            "creativeWriting.services.storyDoctoring",
+                                            "creativeWriting.services.scriptWritingFilm",
+                                                                                  ].map((e) => (
                                               <div className={styles.service} key={e}>
                                                   {bullet}
                                                   {f(e)}
                                               </div>
                                           ))}
                                       </WhiteBox>
+                                      
                                   </div>
                               </div>
+                              {f("creativeWriting.services.commissions1")}
+                              {f("creativeWriting.services.commissions2")}
                           </>
                       )}
                   </div>
@@ -255,23 +278,25 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                                           <span className="publishingHeader">{f("publishing.services.header")}</span>
                                           <br />
                                           {[
+                                            "publishing.services.research",
+                                            "publishing.services.narrativeDevelopment",
                                             "publishing.services.storyEditing",
                                             "publishing.services.copyEditing",
-                                            "publishing.services.authorBranding",
-                                            "publishing.services.authorPublicity",
-                                            "publishing.services.bookDesign",
-                                            "publishing.services.bookMarketing",
                                             "publishing.services.bookTranslation",
+                                            "publishing.services.bookDesign",
                                             "publishing.services.printing",
                                             "publishing.services.distribution",
-                                            "publishing.services.publicityEventsCoordination"
-                                          ].map((e) => (
+                                            "publishing.services.authorBranding",
+                                            "publishing.services.bookMarketing",
+                                                                                ].map((e) => (
                                               <div className={styles.service} key={e}>
                                                   {bullet}
                                                   {f(e)}
                                               </div>
                                           ))}
                                       </WhiteBox>
+                                      
+                                      
                                   </div>
                               </div>
                           </>

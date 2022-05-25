@@ -29,7 +29,7 @@ exports["en-US"] = {
       "Founded in 2018 and established in Saudi, our work reflects the richness of the Arabic and English languages, encourages the ingenuity of Arab writers, and emphasizes the power of premium publications.",
     "story.intro": "Here’s our story:",
     "story.content":
-      "<b>We holistically balance content writing, creative writing, and boutique publishing.</b>",
+      "<b>We holistically balance content writing, book and script commissions, and boutique publishing.</b>",
     "services.intro":
       "<u>Our services balance between the professional and the creative</u>",
     "services.content":
@@ -62,7 +62,7 @@ exports["en-US"] = {
     "hiring.header": 
       "We hire at the following departments at Mauzoun:",
       "hiring.contentWriting": "Content Writing",
-      "hiring.creativeWriting": "Creative Writing",
+      "hiring.creativeWriting": "Book & Script Commissions",
       "hiring.publishing": "Boutique Publishing",
       "hiring.management": "Management",
       "hiring.media": "Media",
@@ -88,13 +88,13 @@ exports["en-US"] = {
       "Read our team’s project-focused journal entries, which document our creative thought process and show our beloved final outcomes.",
     "contentWriting.title": "Content Writing",
     "contentWriting.clients.1": "<div class='maujHover'><Link href='/mauj'>Mauj</Link></div>",
-    "contentWriting.clients.2": "<div class='shafraHover'> Shafra</div>",
+    "contentWriting.clients.2": "<div class='shafraHover'><Link href='/shafra'>Shafra</Link></div>",
     "contentWriting.clients.3": "<div class='palmHover'><Link href='/musaandpalm'>Musa & Palm</Link></div>",
     "contentWriting.clients.4": "<div class='authorityHover'>Saudi Tourism Authority</div>",
     "contentWriting.clients.5": "<div class='albalad'>Ministry of Culture: AlBalad</div>",
     "contentWriting.clients.6": "<div class='redSea'>Red Sea International Film Festival (2021)</div>",
     "contentWriting.clients.7": "<div class='pavilion'>The National Pavilion of Saudi Arabia <br/> at the 59th Biennale de Venezia</div>",
-    "creativeWriting.title": "Creative Writing",
+    "creativeWriting.title": "Book & Script Commissions",
     "creativeWriting.clients.1":
       "<div class='arts'><b>Ministry of Culture: Culinary Arts Books</b></div>",
     "boutiquePublishing.title": "Boutique Publishing",
@@ -104,7 +104,7 @@ exports["en-US"] = {
   "/mauj": {
     title: "",
     "intro.title": "Mauj defies the conventional.",
-    "intro.para": "Mauj are one of our most prominent, stimulating, and challenging clients. What we love about them is how aware of what they present and how they present it, and their consideration of Arab women and Arab culture. For Mauj, we developed a tone that balances the poetic with the clear, direct, and educational.",
+    "intro.para1": "Mauj are one of our most prominent, stimulating, and challenging clients. What we love about them is how aware of what they present and how they present it, and their consideration of Arab women and Arab culture. For Mauj, we developed a tone that balances the poetic with the clear, direct, and educational.",
     "meeting.title": "How did we meet?",
     "meeting.para1": "In February 2020, we submitted a pitch to a mysterious new client, knowing nothing at the time except it being a platform concerned with women's health. We prepared a cheeky pitch with in-depth research and compelling samples. In turn, this mysterious client loved our work and picked us in a heartbeat.",
     "meeting.para2": "It was then that we were formally introduced to Mauj, becoming their writing partners on a year-long contract.",
@@ -125,6 +125,8 @@ exports["en-US"] = {
     "testimony.para2": "<b>We were not only looking for excellent writers, we were seeking strategic partners</b> who could think with us (sometimes for us), help us better understand our regional audience, engage in future planning, and who are equally invested in the success of the business. That’s exactly what the Mauzoun Team is.",
     "testimony.para3": "They have mastered the Arabic language, are culturally tapped in, understand the ins and outs of social norms, always add their creative magic to all that they do, and are up for a challenge any day. <b>The harder the brief or ask, the more excited they get and the better the work.</b> They inspire us to up our strategy, put out better work, think harder, and act faster. They are willing to bend over backwards to get us to meet our objectives, and that kind of partnership doesn’t come easy. We are so thankful to have such an impressive group of strong, smart, and witty writers who we get to call our partners."
   },
+
+
   "/musaandpalm": {
     title: "",
     "intro.title1": "Musa & Palm: a captivating encounter that narrates the date fruit experience anew.",
@@ -155,37 +157,37 @@ exports["en-US"] = {
       "The language of storytelling is one, no matter the path your project paves. Below is the flow that all of our projects follow.",
     "approach.contact.header": "1. Contact Us.",
     "approach.contact.content":
-      "Send us an e-mail. Our team is keen to get to know you better and understand the kind of services you’re looking for, so make sure to give us a detailed brief. If we feel that information is missing, we will reply back to you with questions for further clarification. After understanding your needs, we can move on to the next step.",
+      "Send us an e-mail. Our team is keen to get to know you better and understand the content writing, book or script commission, or boutique publishing service you’re looking for, so make sure to give us a detailed brief. If we feel that information is missing, we will reply back to you with questions for further clarification. After understanding your needs, we can move on to the next step.",
     "approach.quotation.header": "2. We Prepare Your Quotation.",
     "approach.quotation.content":
-      "Our quotations take around 3 business days to prepare after reviewing your form. They include our Terms and Conditions and help clarify and streamline our work together.",
+      "If your service is content writing, our quotations take around 3 business days to prepare after reviewing your form. They include our Terms and Conditions and help clarify and streamline our work together. However, if you’re seeking a commission or publishing service, we’ll prepare a contract within 10-14 business days.",
     "approach.timeline.header": "3. We Book Your Timeline.",
     "approach.timeline.content":
-      "After receiving your approval of the quotation and down payment, we book your timeline immediately. Our busy schedule and workload demand that we work on booking basis only.",
+      "Good work takes time––that’s our motto. After receiving your approval of the quotation and down payment, we book your timeline immediately. Our busy schedule and workload demand that we work on a booking basis only. Our average content writing timeline is between 10 to 21 business days. For commissions and publishing, timelines can range from 4 to 10 months, depending on the project.",
     "approach.research.header": "4. We Dive Into the Research.",
     "approach.research.content":
-      "Good work takes time––that’s our motto. Our average timeline is between 10 to 21 business days. Great writing takes time, so we gather all the data and information needed to complement our writing process and distinguish your tone from competitors.",
+      "Great writing is informed by knowledge, so we gather all the data and information needed to complement our writing process and distinguish your tone from competitors.",
     "approach.writing.header": "5.  The Writing Process Begins.",
     "approach.writing.content":
-      "After finalizing our research internally, we hand it over to our brilliant team of English and Arabic writers who adapt to your tone with the best quality of writing. We then proofread the content at least seven times to make sure that everything is grammatically correct, structurally strong, and holistically captivating.",
+      "After finalizing our research internally, we hand it over to our brilliant team of English and Arabic writers who adapt to your tone with the best quality of writing. We then proofread the work at least seven times to make sure that everything is grammatically correct, structurally strong, and holistically captivating.",
     "approach.delivery.header": "6. Your Deliverables Arrive Right on Time.",
     "approach.delivery.content":
       "Working on a booking basis means we’re always on time to deliver work that is polished and proofread to perfection.",
     "approach.feedback.header": "7. You Share Your Feedback or Approval.",
     "approach.feedback.content":
-      "You provide your feedback via e-mail or online meeting, or you may immediately approve the project. If not, don’t worry—great content takes time. That’s why every project at Mauzoun has a standard 2 rounds of changes.",
+      "You provide your feedback via e-mail or online meeting, or you may immediately approve the project. If not, don’t worry—great work takes time. That’s why every project at Mauzoun has a standard 2 rounds of changes.",
     "approach.adaptTimeline.header": "8. We Rebook Your Timeline.",
     "approach.adaptTimeline.content":
       "We repeat steps 5 through 7 with a renewed approach to research and writing to ensure different results.",
     "approach.finished.header": "9. Your Story Comes to Life.",
     "approach.finished.content":
-      "Our holistic process ensures that your content is finalized as an embodiment of your vision, bringing your story to life.",
+      "Our holistic process ensures that your work is finalized as an embodiment of your vision, bringing your story to life.",
     "contentWriting.title": "Content Writing",
     "contentWriting.content": `<b>We provide holistic, research-based content writing for brands and campaigns that want captivating content.</b>
       <br /><br />
       All of our content writing services must be preceded by a Brand Strategy or Messaging Manual. If your brand does not have one, we can gladly prepare one for you.
       <br /><br />
-      We choose to work exclusively with compelling brands on long-term basis, or on exciting campaigns.`,
+      We choose to work exclusively with compelling brands on a long-term basis or on exciting campaigns.`,
     "contentWriting.services.header":
       "Here’s a list of some of the words we write. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.",
     "contentWriting.services.mm" : "Messaging Manual",
@@ -195,39 +197,61 @@ exports["en-US"] = {
     "contentWriting.services.profile": "Company Profile",
     "contentWriting.services.website": "Website Content",
     "contentWriting.services.socialMedia": "Social Media Content",
-    "creativeWriting.title": "Creative Writing",
+    "contentWriting.services.scriptWriting": "Scriptwriting for Ads",
+    
+    "creativeWriting.title": "Book & Script Commissions",
     "creativeWriting.content": `<b>All that moves the heart begins with a story.</b>
       <br /><br />
       Writers are artists of speech and thought. There’s nothing we enjoy more than telling a story, and we can help you tell your own in the best way possible.
       <br /><br />
-      We seek inspiration from the rich literary heritages of the Arab world, and we aspire to contribute to our region’s libraries and partake in the advancement of language. 
+      Clients and authors may choose to commission books or scripts with us, so long as they fit within Mauzoun’s vision and strategy for the quality and genres of works that we seek.
+      <br /><br />
+      Mauzoun’s genres of interest include original works of fiction written in Arabic; original non-fiction works in the Arabic language about society, history, culture, or the arts; visual novels by Arab authors regardless of their original language of publication; coffee table books with compelling cultural topics; and lastly, the acquisition and translation of fiction and non-fiction works by Arab authors in foreign languages
+      <br /><br />
+      We seek inspiration from the rich literary heritages of the Arab world, and we aspire to contribute to our region’s libraries and partake in the advancement of language.
       `,
     "creativeWriting.services.header":
       "Here’s a list of some of the fee-based services we provide. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.",
-    "creativeWriting.services.storyDoctoring": "Story Doctoring",
-    "creativeWriting.services.scriptwriting": "Scriptwriting",
-    "creativeWriting.services.bookEditing": "Book Editing",
+    "creativeWriting.services.title1": "Books:",
+    "creativeWriting.services.research": "Research",
+    "creativeWriting.services.narrativeDevelopment": "Narrative Development",
+    "creativeWriting.services.artDirection": "Art Direction",
+    "creativeWriting.services.bookWriting": "Book Writing (Coffee Table Books & Visual Novels Only)",
+    "creativeWriting.services.storyEditing": "Story Editing",
+    "creativeWriting.services.copyEditing": "Copy Editing",
     "creativeWriting.services.bookTranslation": "Book Translation",
+    "creativeWriting.services.bookDesing": "Book Design",
+
+    "creativeWriting.services.title2": "Script:",
+    "creativeWriting.services.storyDoctoring": "Story Doctoring",
+    "creativeWriting.services.scriptWritingFilm": "Scriptwriting for Film and Television",
+    
+    "creativeWriting.services.commissions1": "Commissions only cover the research, writing, and design phases. They do not include marketing, branding, publicity, printing, publishing, or distribution.",
+  
+    "creativeWriting.services.commissions2":"If a client has commissioned a book, upon completion of the book, they may choose to transition it to our Boutique Publishing department. If they do so, Mauzoun is entitled to a minority rights percentage of the book, and the client is entitled to a majority rights percentage because they commissioned the book. Mauzoun will conduct the printing, publishing, and distribution of the book (sans marketing) for an upfront fee.",
+  
+   
 
     "publishing.title": "Boutique Publishing",
     "publishing.content": `<b>We prioritize talent over the region’s pay-to-publish model.</b>
     <br /><br />
-    We headhunt talented authors with truly exceptional manuscripts. Likewise, authors can apply to be signed to Mauzoun.
+    We headhunt talented authors with truly exceptional book manuscripts. Likewise, authors can apply to be signed to Mauzoun.
     <br /><br />
     We follow an investment model, so authors pay zero riyals to publish their books, forever. Authors will also get a higher rights percentage than the industry average with a fully negotiable offer delineated in our contracts.
     `,
     "publishing.services.header": 
       "It’s our responsibility as publishers to ensure that the author and the book are well-developed and well-marketed to create a win-win situation. That’s why we fully handle:",
+      "publishing.services.research": "Research",
+      "publishing.services.narrativeDevelopment": "Narrative Development",
       "publishing.services.storyEditing": "Story Editing",
       "publishing.services.copyEditing": "Copy Editing",
-      "publishing.services.authorBranding": "Author Branding",
-      "publishing.services.authorPublicity": "Author Publicity",
-      "publishing.services.bookDesign": "Book Design",
-      "publishing.services.bookMarketing": "Book Marketing",
       "publishing.services.bookTranslation": "Book Translation",
+      "publishing.services.bookDesign": "Book Design",
       "publishing.services.printing": "Printing",
       "publishing.services.distribution": "Distribution",
-      "publishing.services.publicityEventsCoordination": "Publicity Events Coordination",
+      "publishing.services.authorBranding": "Author Branding",
+      "publishing.services.bookMarketing": "Book Marketing",
+  
     
   },
   "/story": {
@@ -266,6 +290,23 @@ exports["en-US"] = {
     workAspects:
       "We work smart, not hard, and always assume accountability. We serve our clients and authors with devotion and above all, we write and work excellently. Uplifting diversity in our communities is a priority to us, especially in our hiring philosophy. When in doubt, we choose honesty and empathy.",
 
-  }
+  },
+
+  "/shafra": {
+    "code.title": "Your genetic code, analyzed by Shafra for the Arab World.",
+    "code.para1": "It may seem unlikely at first that we, as a writing studio, hold so much in common with a scientific brand like Shafra. However, what connects us goes beyond the services that either of us provide. We immediately connected with Shafra’s founders, Mariya Al Hinai and Raya Al Sukkari, and we loved their dedication to keenly developing their brand.",
+    "code.para2": "What solidified our collaboration is our mutual strive for providing specialized services to Arab audiences wherever they may be. Sure, there are international brands that specialize in analyzing human DNA and providing their relevant reports and findings. However, they all seem to cater to a primarily Western audience. In this regard, these brands may overlook the sociocultural aspects that Arab audiences need in order to feel personal resonance with a brand.",
+    "mm.title": "We cultivated an initial brand diagnosis with our Messaging Manual",
+    "mm.para1": "In line with the spontaneity that brought us together, Shafra was one of our first clients to obtain our Messaging Manual service, which we developed to encompass all the different facets of a brand’s tonality and messaging.",
+    "mm.para2": "In the briefing session with Shafra, we understood that although they attempted several strategies in crafting a unique tonality for the brand, they could not reach their preferred outcome. With this, we set out on a journey to find the phrases, expressions, and vocabulary that could reflect the brand’s essence.",
+    "lang.title": "Two languages, one story.",
+    "lang.para1": "After successfully developing the Messaging Manual, we wrote Shafra’s Brand Manifesto, along with two slogans for their website.",
+    "table.ara1": ".<s>اكتشف سرديتك</s> الجينية<br/>.اكتشفوا سرديتكم الجينية",
+    "table.eng" : "<s>Rooted in</s> science with accurate results. <br/> Accurate results with a scientific basis.",
+    "table.ara2" : "تعمقوا في سماتكم الشخصية، وأطلبوا <s>عدة شفرة</s><br/>.عدة الفحص الجيني من شفرة الآن",
+    "story.title": "Though our story came to an end, their words to us were here to stay:",
+    "story.para": "We did a lot of experimentation while trying to find the best possible way to present Shafra and deliver its messages to our clients, but we were not satisfied with the results. The professional and creative team at Mauzoun was then able to present Shafra in an integrated manner by capturing the heart of the brand through the Messaging Manual, showcasing it in a way that arouses curiosity and engages all five senses. We loved the extensive detail the Messaging Manual gets into, down even to the emojis our brand should use. We can now present our company and create our own marketing content, supported by a clear instructional guide that includes what can and cannot be used for communication, saving us a great deal of effort and time."
+  },
+
 };
 
