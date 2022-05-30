@@ -455,7 +455,7 @@ justify-content: center;
   font-weight: bold !important; 
 }
 
-.codeTitle, .mmTitle, .langTitle, .storyTitle {
+.codeTitle, .mmTitle, .langTitle, .storyTitle, .title {
   font-size: 30px !important;
   font-weight: bold !important;
 }
@@ -480,4 +480,26 @@ table, th, td {
 
 .story {
   margin-left: 25px !important;
+}
+
+.para1, .para2, .para3 {
+  font-size: 25px !important;
+  
+}
+
+.devCenter {
+  text-align: center !important;
+}
+
+.package1, .package3, .package5 {
+  font-weight: bold;
+}
+
+.people {
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.peopleDiff {
+  font-weight: bold;
 }
