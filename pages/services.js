@@ -216,7 +216,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                                       <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
                                           {f("creativeWriting.services.header")}
                                           <br/>
-                                          <b>{f("creativeWriting.services.title1")}</b>
+                                          {f("creativeWriting.services.title1")}
 
                                           {[
                                             "creativeWriting.services.research",
@@ -234,7 +234,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                                               </div>
                                           ))}
                                           <br />                                          
-                                          <b>{f("creativeWriting.services.title2")}</b>
+                                          {f("creativeWriting.services.title2")}
                                           {[
                                             "creativeWriting.services.research",
                                             "creativeWriting.services.narrativeDevelopment",
