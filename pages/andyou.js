@@ -55,6 +55,9 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
   const [isBecomeClientVisible, setIsBecomeClientVisible] = useState(false);
   const [isJoinTeamVisible, setIsJoinTeamVisible] = useState(false);
   const [isJoinCompetitionVisible, setIsJoinCompetitionVisible] = useState(false);
+  const [isWritingClientVisible, setIsWritingClientVisible] = useState(false)
+  const [isCommissionVisible, setIsCommissionVisible] =  useState(false)
+  const [isMauzounAuthorVisible, setIsMauzounAuthorVisible] = useState(false)
 
   const bullet = (
     <div className={styles.bullet}>
@@ -188,19 +191,57 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
                 <div className="mt-0 unwrapped-content">
                   <div
                     className="content-wrapper"
-                    onClick={() => setIsJoinCompetitionVisible(!isJoinCompetitionVisible)}
-                    style={isJoinCompetitionVisible ? { marginBottom: "40px" } : {}}
+                    onClick={() => setIsWritingClientVisible(!isWritingClientVisible)}
+                    style={isWritingClientVisible ? { marginBottom: "40px" } : {}}
                   >
-                    <h2>{f("joinCompetition.intro")}</h2>
+                    <h2>{f("writingClient.title")}</h2>
                     <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
                   </div>
 
-                  {isJoinCompetitionVisible && (
+                  {isWritingClientVisible && (
                     <>
-                      <ComingSoon />
-                      <div className={styles.content}>{f("joinCompetition.content")}</div>
+                      
+                      <div className={styles.content}>{f("writingClient.content")}</div>
+                    </>
+                  )}
+                </div>
+                <div className="mt-0 unwrapped-content">
+                  <div
+                    className="content-wrapper"
+                    onClick={() => setIsCommissionVisible(!isCommissionVisible)}
+                    style={isCommissionVisible ? { marginBottom: "40px" } : {}}
+                  >
+                    <h2>{f("commission.title")}</h2>
+                    <span className="reveal-icon">
+                      <BsChevronDown className="reveal-icon" />
+                    </span>
+                  </div>
+
+                  {isCommissionVisible && (
+                    <>
+                      
+                      <div className={styles.content}>{f("commission.content")}</div>
+                    </>
+                  )}
+                </div>
+                <div className="mt-0 unwrapped-content">
+                  <div
+                    className="content-wrapper"
+                    onClick={() => setIsMauzounAuthorVisible(!isMauzounAuthorVisible)}
+                    style={isMauzounAuthorVisible ? { marginBottom: "40px" } : {}}
+                  >
+                    <h2>{f("mauzounAuthor.title")}</h2>
+                    <span className="reveal-icon">
+                      <BsChevronDown className="reveal-icon" />
+                    </span>
+                  </div>
+
+                  {isMauzounAuthorVisible && (
+                    <>
+                      
+                      <div className={styles.content}>{f("mauzounAuthor.content")}</div>
                     </>
                   )}
                 </div>

@@ -79,7 +79,12 @@ exports["en-US"] = {
     "joinCompetition.intro": "Apply to the Competition",
     "joinCompetition.content":
       "Our latest endeavor in creative writing will be investing our story development and publishing services in emerging and first-time writers from the Arab World who want to publish their first book, novel, short story, collection of essays, play, and everything in between. After shortlisting the best writers for a pitch session, we will select one winning writer. The competition details, dates, judging criteria, and awards package will be announced in late 2023.",
-    
+    "writingClient.title": "Become a Content Writing Client",
+    "writingClient.content": "As your premium writing partners, we will holistically advise, develop, and support your brand or project. We are here to uplift content in the Arab World, in both the Arabic and English languages, so that they are reflective of each others' intricacies, nativity, and authenticity. Send us an e-mail today and we’ll respond within 1-3 business days.",
+    "commission.title": "Commission a Book or Script",
+    "commission.content": "Do you have a vision for a book or a script which you want to see come to fruition? Tell us more about your project and we will become your creative partners if our perspectives match. We accept commissions for books or scripts from individuals, artistic, cultural, or hospitality institutions, governmental or semi-governmental entities, and others. We will assess your creative needs and join you in the process of bringing your project to reality. Please note that this is not a ghostwriting service and that our contracts stipulate crediting Mauzoun as the writer of the work.",
+    "mauzounAuthor.title": "Apply to Be a Mauzoun Author",
+    "mauzounAuthor.content": "We look for writers whose fiction or non-fiction manuscripts align with our vision to diversify the Arab literary corpus and spark meaningful discussions. If you think your work is appropriate please send an e-mail with the subject title “New Author Application” and attach a copy of your manuscript, CV, and author bio. We will respond within 1-2 months to let you know our decision and in case of rejection, we will explain why the manuscript wasn’t approved.",
   },
   "/portfolio": {
     title: "Portfolio",
@@ -206,7 +211,7 @@ exports["en-US"] = {
       <br /><br />
       Clients and authors may choose to commission books or scripts with us, so long as they fit within Mauzoun’s vision and strategy for the quality and genres of works that we seek.
       <br /><br />
-      Mauzoun’s genres of interest include original works of fiction written in Arabic; original non-fiction works in the Arabic language about society, history, culture, or the arts; visual novels by Arab authors regardless of their original language of publication; coffee table books with compelling cultural topics; and lastly, the acquisition and translation of fiction and non-fiction works by Arab authors in foreign languages
+      We accept commissions for books or scripts from individuals, artistic, cultural, or hospitality institutions, governmental or semi-governmental entities, and others. The genres we seek include but are not limited to coffee table books, visual novels, memoirs, as well as short and feature length films.
       <br /><br />
       We seek inspiration from the rich literary heritages of the Arab world, and we aspire to contribute to our region’s libraries and partake in the advancement of language.
       `,
@@ -226,7 +231,7 @@ exports["en-US"] = {
     "creativeWriting.services.storyDoctoring": "Story Doctoring",
     "creativeWriting.services.scriptWritingFilm": "Scriptwriting for Film and Television",
     
-    "creativeWriting.services.commissions1": "Commissions only cover the research, writing, and design phases. They do not include marketing, branding, publicity, printing, publishing, or distribution.",
+    "creativeWriting.services.commissions1": "Commissions only cover the research, writing, and design phases. They do not include marketing, branding, publicity, printing, publishing, or distribution. Please note that this is not a ghostwriting service and that our contracts stipulate crediting Mauzoun as the writer of the work.",
   
     "creativeWriting.services.commissions2":"If a client has commissioned a book, upon completion of the book, they may choose to transition it to our Boutique Publishing department. If they do so, Mauzoun is entitled to a minority rights percentage of the book, and the client is entitled to a majority rights percentage because they commissioned the book. Mauzoun will conduct the printing, publishing, and distribution of the book (sans marketing) for an upfront fee.",
   
@@ -238,6 +243,8 @@ exports["en-US"] = {
     We headhunt talented authors with truly exceptional book manuscripts. Likewise, authors can apply to be signed to Mauzoun.
     <br /><br />
     We follow an investment model, so authors pay zero riyals to publish their books, forever. Authors will also get a higher rights percentage than the industry average with a fully negotiable offer delineated in our contracts.
+    <br><br />
+    Mauzoun’s genres of interest include original works of fiction written in Arabic; original non-fiction works in the Arabic language about society, history, culture, or the arts; visual novels by Arab authors regardless of their original language of publication; coffee table books with compelling cultural topics; and lastly, the acquisition and translation of fiction and non-fiction works by Arab authors in foreign languages.
     `,
     "publishing.services.header": 
       "It’s our responsibility as publishers to ensure that the author and the book are well-developed and well-marketed to create a win-win situation. That’s why we fully handle:",
@@ -309,14 +316,14 @@ exports["en-US"] = {
   },
 
   "/sta": {
-    "celebrate.title": "Saudi Tourism Authority: Celebrating our nation’s National Day and summer.",
+    "celebrate.title": "Saudi Tourism Authority: celebrating our nation’s National Day and summer.",
     "celebrate.para1": "In 2020, we won a pitch to develop two promotional campaigns for the Saudi Tourism Authority (STA). The first promoted domestic tourism as the quarantine ended in the summer of 2020. The second celebrates Saudi National Day based on the success of the first, building its content using photos and video contributed by those who benefited from the summer domestic tourism campaign.",
     "celebrate.para2": "At Mauzoun, our role was to develop the concepts of each campaign, to create their slogans in Arabic and English, and to provide scriptwriting for the ads and content writing for social media platforms. Those two projects were a pivotal juncture for us at Mauzoun, especially during that crucial year as we managed to express our gratitude for our beloved country through our passion for words and creativity.",
-    "48.title": "A Forty-Eight Hour Drive.",
+    "48.title": "A forty-eight hour drive.",
     "48.para1": "Our journey with the STA started by the competitive pitch we developed and submitted in a record time",
     "48.para2": "STA shared the project brief with several companies, requesting a competitive pitch to be submitted within 48 hours, proposing a visual identity and two slogans. We began this adventure, excited, and in collaboration with our partners Wetheloft. We submitted a detailed pitch, including analysis of the campaign in this phase, along with case studies of similar campaigns that were successful. Then, we analyzed the target audience segments, and illustrated the campaign narrative we developed, and concluded the pitch with two integrated proposals for the campaign brand identity and slogans. ",
     "48.para3": "Our pitch impressed the STA team, and we won the tender to work on the second phase of the “Saudi Summer” campaign and the third phase for the National Day Campaign. Since creative writing is our passion and specialty, we decided to partner with Wetheloft. Their expertise in design and creating innovative visual identities, strategies and plans, along with their professionalism and dedication in their field, both made our partnership rely on integration and harmony between us, which enabled us to approach the projects with close attention to the finest details.",
-    "visit.title": "Visit Saudi and Experience its Soul.",
+    "visit.title": "Visit Saudi and experience its soul.",
     "visit.para1": "The “Saudi Summer” STA campaign aimed to promote domestic tourism as a first choice, through the “Visit Saudi” website and app, which allows visitors to purchase summer packages and plan their trips. The campaign came in the midst of the repercussions of the coronavirus and was launched following the end of the nation-wide lockdown. That’s why we at Mauzoun decided to emphasis on restoring the trust in the domestic tourism, and on encouraging our people to discover Saudi Arabia while taking all necessary precaution but without fear of the pandemic.",
     "visit.para2": "The services package we provided for this campaign included the concept and scriptwriting of the video and radio advertisements, several promotional slogans, and social media content, all within the campaign name “Where’s your summer”.",
     "visit.package1": "Countless tourist destinations.",
@@ -325,11 +332,11 @@ exports["en-US"] = {
     "visit.package4": "Download the app and reserve your trip now.",
     "visit.package5": "Diverse tourist packages.",
     "visit.package6": "Download the app and reserve your trip now.",
-    "effort.title": "A Unified Effort and a Collaborative Excellence.",
+    "effort.title": "A unified effort and collaborative excellence.",
     "effort.para1": "The campaign’s success relied on the harmony of the collaboration with our creative partners, Wetheloft and Daw Production. Wetheloft developed a communication strategy, supervised the development of concepts and ideas, produced the video advertisement, and created the social media designs. Daw Production provided the videography and photography services for the content used in the campaign. We extend our gratitude to our brilliant partners for the dedication and passion that made it possible to achieve the objectives of this national campaign, and proved how Saudi talents can shine brightly when they combine their efforts.",
-    "day.title": "On the National Day We Meet.",
+    "day.title": "On National Day, we meet.",
     "day.para1": "The National Day campaign generated around 10 million views across social media platforms, and was listed among the best 5 Saudi national campaigns on Twitter. The campaign’s objective was to express our national pride is celebration of our beloved country, especially under the pandemic, where the nation presented an astonishing display of awareness, commitment, organization, solidarity and care. In turn, this mitigated the repercussions of the pandemic which were severe elsewhere. Our task for this campaign was to come up with its concept, title, tagline, video advertisement script, and social media content.",
-    "people.title": "Saudi From the Point of View of its People.",
+    "people.title": "Saudi, from the points of view of its people.",
     "people.para1": "The National Day campaign offered us the space to further utilize and sustain the success of the Saudi Summer campaign. We decided to allow for more direct audience engagement by inviting audiences to play an active role by sharing short videos from their domestic travels with family and friends to show Saudi from their perspective and to reflect their gratitude and love for our nation. We successfully combined the user-generated content curated from proud Saudis who benefited from the STA Saudi Summer packages, with the National Day message of pride in the country and its people.",
     "people.message1": "Saudis are Lucky.",
     "people.message2": "We’re Lucky to Be Saudis",
@@ -338,9 +345,9 @@ exports["en-US"] = {
     "people.message5": "Saudi is my homeland, and that makes me lucky!",
     "people.message6": "Lucky Saudis",
     "people.para2": "We carried out an in-depth research about Saudi history and its many eras, and our nation’s rapid pace of development, thrive, peace and stability we enjoy today, became apparent to us. Just then, one of our team members exclaimed with gratitude, “Oh, how lucky we are!” Her sincere comment became the basis for the concept we developed, and led us to the tagline “Lucky Saudis”, a tagline that is deep within its simplicity.",
-    "pride.title": "National Pride in Every Language",
+    "pride.title": "National pride in every language.",
     "pride.para1": "The promotional website was a major element in the campaign, as it enabled users to celebrate in an innovative and interactive way. It featured the campaign video advertisement in multiple languages: Arabic, English, Chinese, German, Russian, Spanish, and French. It allowed users to choose the greeting they want from several options in the language of their choosing, and it displayed statistics of reshares as well as the percentage per language.",
-    "words.title": "A Heartfelt Sincerity and a Simplicity of Words.",
+    "words.title": "A heartfelt sincerity and a simplicity of words.",
     "words.para1": "Developing the campaign slogan was unlike any previous project we handled at Mauzoun, because our thoughts were guided by our fervent emotions. Thus, we wanted to express them in the simplest and most seamless of words, but simplicity is elusive at times, especially when it is tied to the responsibility of expressing and celebrating our most important national occasion. We tried to express these sentiments in the video ad script in a way that authentically portrays the Saudi people and to demonstrate the rich landscape throughout our homeland.",
     "words.para2": "For the National Day campaign, we collaborated again with our partner, Wetheloft, who built the communication strategy for the campaign. They also supervised the development of ideation, design development, and website and social media posts, in addition to collecting contributing videos from participants, and overseeing post-production of the video advertisement. This partnership extended to include Telfaz Productions, who produced and edited the video, Panda Voiceover, who worked on the Arabic voiceover, and IconCreations, who developed the promotional website for the campaign.",
   },
