@@ -243,7 +243,8 @@ exports["en-US"] = {
     We headhunt talented authors with truly exceptional book manuscripts. Likewise, authors can apply to be signed to Mauzoun.
     <br /><br />
     We follow an investment model, so authors pay zero riyals to publish their books, forever. Authors will also get a higher rights percentage than the industry average with a fully negotiable offer delineated in our contracts.
-    <br><br />
+    <br />
+    <br />
     Mauzoun’s genres of interest include original works of fiction written in Arabic; original non-fiction works in the Arabic language about society, history, culture, or the arts; visual novels by Arab authors regardless of their original language of publication; coffee table books with compelling cultural topics; and lastly, the acquisition and translation of fiction and non-fiction works by Arab authors in foreign languages.
     `,
     "publishing.services.header": 
