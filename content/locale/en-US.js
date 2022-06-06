@@ -227,7 +227,7 @@ exports["en-US"] = {
     "creativeWriting.services.bookTranslation": "Book Translation",
     "creativeWriting.services.bookDesing": "Book Design",
 
-    "creativeWriting.services.title2": "Script:",
+    "creativeWriting.services.title2": "Scripts:",
     "creativeWriting.services.storyDoctoring": "Story Doctoring",
     "creativeWriting.services.scriptWritingFilm": "Scriptwriting for Film and Television",
     
