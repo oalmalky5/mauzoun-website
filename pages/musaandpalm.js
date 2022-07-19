@@ -136,8 +136,8 @@ export default function musaandpalm({textAnimationControls, handleBgColorChange,
 
                             <div className={styles.testimony}>
 
-                                <span className="testimony">
-                                      className={styles.centerTitle}>{f("testimony.title")}</span>
+                                
+                                <span className={styles.centerTitle}>{f("testimony.title")}</span>
                                 <div className={styles.totalWhiteBox}>
                                     <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
                                         <br/>
