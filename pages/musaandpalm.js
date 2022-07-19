@@ -96,47 +96,47 @@ export default function musaandpalm({textAnimationControls, handleBgColorChange,
                         <div className="container-background" style={{backgroundColor}}></div>
                         <div className="container-content">
                             <div className="intro">
-                                <span className={styles.title1}>{f("intro.title1")}</span>
-                                <p className={styles.para1}>{f("intro.para1")}</p>
-                                <p className={styles.para1}>{f("intro.para2")}</p>
+                                <span className="title">{f("intro.title1")}</span>
+                                <p className="para1">{f("intro.para1")}</p>
+                                <p className="para2">{f("intro.para2")}</p>
                             </div>
 
                             <div className="longStory">
-                                <span className={styles.title1}>{f("longStory.title1")}</span>
-                                <span className={styles.para1}>{f("longStory.para1")}</span>
+                                <span className="title">{f("longStory.title1")}</span>
+                                <span className="para">{f("longStory.para1")}</span>
                                 <img className={styles.image2} src="/mppic.png" alt="Musa & Palm table"/>
-                                <span className={styles.title2}>{f("longStory.title2")}</span>
-                                <span className={styles.para2}>{f("longStory.para2")}</span>
-                                <span className={styles.para2}>{f("longStory.para3")}</span>
+                                <span className="para">{f("longStory.title2")}</span>
+                                <span className="para">{f("longStory.para2")}</span>
+                                <span className="para">{f("longStory.para3")}</span>
                             </div>
 
                             <div>
-                                <span className={styles.title1}>{f("process.title1")}</span>
+                                <span className="title">{f("process.title1")}</span>
 
                                 {
                                     <img className={styles.image2}
                                          src={locale !== "ar" ? "/Musa&PalmEN2.png" : "/musa&palmar.png"}
                                          alt="Musa & Palm table"/>
                                 }
-                                <span className={styles.para1}>{f("process.para1")}</span>
+                                <span className="para">{f("process.para1")}</span>
                             </div>
 
                             <div>
-                                <span className={styles.title1}>{f("collab.title1")}</span>
-                                <span className={styles.para1}>{f("collab.para1")}</span>
-                                <span className={styles.para1}>{f("collab.para2")}</span>
+                                <span className="title">{f("collab.title1")}</span>
+                                <span className="para">{f("collab.para1")}</span>
+                                <span className="para">{f("collab.para2")}</span>
                             </div>
 
                             <div>
-                                <span className={styles.title1}>{f("invitation.title1")}</span>
-                                <span className={styles.para1}>{f("invitation.para1")}</span>
-                                <span className={styles.para1}>{f("invitation.para2")}</span>
-                                <span className={styles.para1}>{f("invitation.para3")}</span>
+                                <span className="title">{f("invitation.title1")}</span>
+                                <span className="para">{f("invitation.para1")}</span>
+                                <span className="para">{f("invitation.para2")}</span>
+                                <span className="para">{f("invitation.para3")}</span>
                             </div>
 
                             <div className={styles.testimony}>
 
-                                <span className={styles.title1}
+                                <span className="testimony">
                                       className={styles.centerTitle}>{f("testimony.title")}</span>
                                 <div className={styles.totalWhiteBox}>
                                     <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>

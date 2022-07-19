@@ -20,7 +20,7 @@ export default function WhiteBox({ children, style, decoratorsPositions }) {
       [preferredMargin]: parseNumber(options.preferredMargin),
     };
 
-    if (!style.marginTop) style.top = "-10px";
+    if (!style.marginTop) style.top = "-20px";
     if (!style[preferredMargin]) style[preferredMargin] = "-10px";
 
     return (

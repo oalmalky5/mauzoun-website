@@ -1,5 +1,7 @@
 @use "mixins" as *;
 
+
+
 .whiteBox {
   width: 100%;
   position: relative;
@@ -21,11 +23,11 @@
     padding: 35px;
   }
 
-  & p {
-    font-size: 28px !important;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
+  // & p {
+  //   font-size: 34px !important;
+  //   margin-top: 0px;
+  //   margin-bottom: 0px;
+  // }
 }
 
 .tiltedSquare {

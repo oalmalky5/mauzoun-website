@@ -95,27 +95,27 @@ export default function mauj({ textAnimationControls, handleBgColorChange, handl
             <div className="container-background" style={{ backgroundColor }}></div>
             <div className="container-content">
               <div className="intro">
-                <span className={styles.title1}>{f("intro.title")}</span>
-                <p className={styles.para1}>{f("intro.para")}</p>
+                <span className="mainTitle">{f("intro.title")}</span>
+                <p className="introPara">{f("intro.para")}</p>
               </div>
 
               <div className="meeting">
-                <span className={styles.title1}>{f("meeting.title")}</span>
-                <span className={styles.para1}>{f("meeting.para1")}</span>
-                <span className={styles.para1}>{f("meeting.para2")}</span>
+                <span className="meetingTitle">{f("meeting.title")}</span>
+                <span className="meetingPara1">{f("meeting.para1")}</span>
+                <span className="meetingPara2">{f("meeting.para2")}</span>
               </div>
 
               <div className={styles.tone}>
-                <span className={styles.title1}>{f("tone.title")}</span>
-                <ul className={styles.list}>
+                <span className="toneTitle">{f("tone.title")}</span>
+                <ul className="list">
                   <li>{f("tone.listElement1")}</li>
                   <li>{f("tone.listElement2")}</li>
                   <li>{f("tone.listElement3")}</li>
                   <li>{f("tone.listElement4")}</li>
-                  <li className={styles.toneFinal}>{f("tone.final")}</li>
+                  <li>{f("tone.final")}</li>
                 </ul>
-                <span className={styles.para1}>{f("tone.para1")}</span>
-                <span className={styles.para1}>{f("tone.para2")}</span>
+                <span className="tonePara1">{f("tone.para1")}</span>
+                <span className="tonePara2">{f("tone.para2")}</span>
 
                 <div class={styles.instaGrid}>
                   <div className={styles.cell1}>
@@ -176,27 +176,27 @@ export default function mauj({ textAnimationControls, handleBgColorChange, handl
               </div>
 
               <div className={styles.brand}>
-                <span className={styles.title1}>{f("brand.title")}</span>
-                <span className={styles.para1}>{f("brand.para1")}</span>
-                <span className={styles.para1}>{f("brand.para2")}</span>
+                <span className="brandTitle">{f("brand.title")}</span>
+                <span className="brandPara1">{f("brand.para1")}</span>
+                <span className="brandPara2">{f("brand.para2")}</span>
               </div>
 
-              <div className={styles.testimony}>
-                <span className={styles.title1} className={styles.centerTitle}>
+              <div className="testimony">
+                <span className="testTitle" className={styles.centerTitle}>
                   {f("testimony.title")}
                 </span>
-                <div className={styles.totalWhiteBox}>
+                <div className="totalWhiteBox" >
                   <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
                     <br />
-                    <span className={styles.para1} className={styles.center}>
+                    <span className="testPara1" className={styles.center}>
                       {f("testimony.para1")}
                     </span>
                     <br />
-                    <span className={styles.para2} className={styles.center}>
+                    <span className="testPara2" className={styles.center}>
                       {f("testimony.para2")}
                     </span>
                     <br />
-                    <span className={styles.para3} className={styles.center}>
+                    <span className="testPara3" className={styles.center}>
                       {f("testimony.para3")}
                     </span>
                   </WhiteBox>

@@ -22,7 +22,7 @@ export default function ComingSoon() {
         </div>
 
         <div className={styles.statusBox}>
-          <span className="mt-0 mb-0">{f("comingSoon")}</span>
+          <span className="mt-0 mb-0 textSize">{f("comingSoon")}</span>
         </div>
 
         <div className={styles.tiltedSquare}>

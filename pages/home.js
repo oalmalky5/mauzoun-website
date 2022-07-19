@@ -94,8 +94,8 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
               <div className='container-background' style={{ backgroundColor }}>
               </div>
               <div className='container-content'>
-                <h1>{f("title")}</h1>
-                {f("summary")}
+                <span className="homeTitle">{f("title")}</span>
+                <span className="homeSummary">{f("summary")}</span>
               </div>
               {/*<div className='container-image'>
                 <motion.img
@@ -114,7 +114,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     {/*<u>{f("story.intro")}</u>*/}
                   </h5>
                 </Link>
-               { <span className='content'>{f("story.content")}</span>}
+               { <p className="contentHome">{f("story.content")}</p>}
 
                 {/* Services */}
                 {/*!areServicesVisible ? (
@@ -137,7 +137,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     <hr />
                   </div>
                 )*/}
-                <span className="servicesContent">{f("services.content")}</span>
+                <p className="servicesContent">{f("services.content")}</p>
                 {/* Approach */}
                 {/*!isApproachVisible ? (
                   <div
@@ -159,7 +159,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                 )*/}
                 
 
-                <span className="mt-1">{f("approach.content")}</span>
+                <p className="mt-1">{f("approach.content")}</p>
 
                 {/* Projects */}
                 {/*!areProjectsVisible ? (
@@ -180,7 +180,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     <hr />
                   </div>
                 )*/}
-                {f("projects.content")}
+                <p className="homeProjects">{f("projects.content")}</p>
                 {/* Work */}
                 {/*!isWorkVisible ? (
                   <div
@@ -199,8 +199,8 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     {f("work.content")}
                   </div>
                 )*/}
-                <span className="work">{f("work.content")}</span>
-                {f("work.content2")}
+                <p className="work">{f("work.content")}</p>
+                <span className="homeWork">{f("work.content2")}</span>
               </div>
             </div>
           </div>

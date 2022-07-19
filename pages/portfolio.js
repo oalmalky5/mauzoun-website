@@ -164,7 +164,7 @@ export default function portfolio({textAnimationControls, handleBgColorChange, h
 
                                 {/* Content Writing */}
                                 <h3 className={styles.clientCategory}>{f("contentWriting.title")}</h3>
-                                {getClients("contentWriting")}
+                                <span>{getClients("contentWriting")}</span>
 
                                 <hr className="big-margin" size={1} color="black"/>
 

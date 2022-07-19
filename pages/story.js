@@ -131,8 +131,8 @@ const Story = function ({ textAnimationControls, handleBgColorChange, handleOpen
           />
           {i <= numberOfMembers && (
             <div className="mt-0 mb-0 heading">
-              <b>{f(`teamMember.${i}.name`)}</b>
-              {f(`teamMember.${i}.role`)}
+              <span className="memberName">{f(`teamMember.${i}.name`)}</span>
+              <span className="memberRole">{f(`teamMember.${i}.role`)}</span>
             </div>
           )}
         </div>
@@ -202,9 +202,9 @@ const Story = function ({ textAnimationControls, handleBgColorChange, handleOpen
                 </div>*/}
 
               <div className="container-content">
-                <h1>{f("nameMeaning")}</h1>
+                <span className="nameStory">{f("nameMeaning")}</span>
 
-               <div className="proud-section">{f("proud")}</div> 
+               <div className="proudStory">{f("proud")}</div> 
                 <div className="container-object">
                    <div className={styles.gridContainer}>{getTeamMembers()}</div>
                 </div>
@@ -212,7 +212,7 @@ const Story = function ({ textAnimationControls, handleBgColorChange, handleOpen
                 
                 
 
-                <b>{f("teamwork")}</b>
+                <span className="storyTeamwork">{f("teamwork")}</span>
               </div>
 
               <div className="container-content">{f("world")}</div>
@@ -220,7 +220,7 @@ const Story = function ({ textAnimationControls, handleBgColorChange, handleOpen
               <div className="container-object">
                 <div class={styles.totalWhiteBox}>
                   <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                    <b className="whitebox-font">{f("whitebox.innerText1")}</b>
+                    <span className="whitebox-font">{f("whitebox.innerText1")}</span>
                 
                     
                   </WhiteBox>

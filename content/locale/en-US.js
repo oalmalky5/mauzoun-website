@@ -160,31 +160,31 @@ exports["en-US"] = {
     "approach.title": "Approach",
     "approach.header":
       "The language of storytelling is one, no matter the path your project paves. Below is the flow that all of our projects follow.",
-    "approach.contact.header": "1. Contact Us.",
+    "approach.contact.header": "<span className='serviceTitles'>1. Contact Us.</span>",
     "approach.contact.content":
       "Send us an e-mail. Our team is keen to get to know you better and understand the content writing, book or script commission, or boutique publishing service you’re looking for, so make sure to give us a detailed brief. If we feel that information is missing, we will reply back to you with questions for further clarification. After understanding your needs, we can move on to the next step.",
-    "approach.quotation.header": "2. We Prepare Your Quotation.",
+    "approach.quotation.header": "<span className='serviceTitles'>2. We Prepare Your Quotation.</span>",
     "approach.quotation.content":
       "If your service is content writing, our quotations take around 3 business days to prepare after reviewing your form. They include our Terms and Conditions and help clarify and streamline our work together. However, if you’re seeking a commission or publishing service, we’ll prepare a contract within 10-14 business days.",
-    "approach.timeline.header": "3. We Book Your Timeline.",
+    "approach.timeline.header": "<span className='serviceTitles'>3. We Book Your Timeline.</span>",
     "approach.timeline.content":
       "Good work takes time––that’s our motto. After receiving your approval of the quotation and down payment, we book your timeline immediately. Our busy schedule and workload demand that we work on a booking basis only. Our average content writing timeline is between 10 to 21 business days. For commissions and publishing, timelines can range from 4 to 10 months, depending on the project.",
-    "approach.research.header": "4. We Dive Into the Research.",
+    "approach.research.header": "<span className='serviceTitles'>4. We Dive Into the Research.</span>",
     "approach.research.content":
       "Great writing is informed by knowledge, so we gather all the data and information needed to complement our writing process and distinguish your tone from competitors.",
-    "approach.writing.header": "5.  The Writing Process Begins.",
+    "approach.writing.header": "<span className='serviceTitles'>5.  The Writing Process Begins</span>.",
     "approach.writing.content":
       "After finalizing our research internally, we hand it over to our brilliant team of English and Arabic writers who adapt to your tone with the best quality of writing. We then proofread the work at least seven times to make sure that everything is grammatically correct, structurally strong, and holistically captivating.",
-    "approach.delivery.header": "6. Your Deliverables Arrive Right on Time.",
+    "approach.delivery.header": "<span className='serviceTitles'>6. Your Deliverables Arrive Right on Time.</span>",
     "approach.delivery.content":
       "Working on a booking basis means we’re always on time to deliver work that is polished and proofread to perfection.",
-    "approach.feedback.header": "7. You Share Your Feedback or Approval.",
+    "approach.feedback.header": "<span className='serviceTitles'>7. You Share Your Feedback or Approval.</span>",
     "approach.feedback.content":
       "You provide your feedback via e-mail or online meeting, or you may immediately approve the project. If not, don’t worry—great work takes time. That’s why every project at Mauzoun has a standard 2 rounds of changes.",
-    "approach.adaptTimeline.header": "8. We Rebook Your Timeline.",
+    "approach.adaptTimeline.header": "<span className='serviceTitles'>8. We Rebook Your Timeline.</span>",
     "approach.adaptTimeline.content":
       "We repeat steps 5 through 7 with a renewed approach to research and writing to ensure different results.",
-    "approach.finished.header": "9. Your Story Comes to Life.",
+    "approach.finished.header": "<span className='serviceTitles'>9. Your Story Comes to Life.</span>",
     "approach.finished.content":
       "Our holistic process ensures that your work is finalized as an embodiment of your vision, bringing your story to life.",
     "contentWriting.title": "Content Writing",

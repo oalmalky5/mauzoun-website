@@ -17,8 +17,8 @@ body {
 .locale {
   &.ar,
   & .ar {
-    font-size: 25px;
-    font-family: "GE Dinar One";
+    font-size: 34px;
+    font-family: "MizanAR-Regular";
 
     & h1,
     & h2,
@@ -26,11 +26,32 @@ body {
     & h4,
     & h5,
     .heading {
-      font-family: "GE Dinar Two";
+      font-family: "MizanAR-SemiBold";
     }
-    & .proud-section, .content, .mt-1, .work {
-      font-family: "GE Dinar Two";
+    &  .whitebox-font, .nameStory, .work, .mt-1, .mainTitle, .meetingTitle, .toneTitle, .brandTitle, .testTitle, .contentHome, .homeTitle, .title {
+      font-family: "MizanAR-Bold" !important;
+      font-size: 42px !important;
+      
     }
+    & .proudStory, .homeWork, .homeProjects, .servicesContent, .homeSummary, .meetingPara1, .meetingPara2, .list, .tonePara1, .tonePara2, .brandPara1, .brandPara2, .testPara1, .testPara2, .testPara3  {
+      font-family: 'MizanAR-Regular' !important;
+      font-size: 34px !important;
+    
+    }
+    & .memberName {
+      font-family: "MizanAR-SemiBold" !important;
+      font-size: 30px !important;
+    }
+    & .memberRole {
+      font-family: 'MizanAR-Regular'!important;
+      font-size: 25px !important;
+    }
+    & .maujHover, .palmHover {
+      font-family: inherit;
+      font-size: 50px !important;
+    }
+    
+
   
   }
 
@@ -39,7 +60,7 @@ body {
   &.en-US,
   & .en-US {
     font-size: 25px;
-    font-family: "Alegreya Sans";
+    font-family: "Lierata-Regular";
 
     & h1,
     & h2,
@@ -47,8 +68,24 @@ body {
     & h4,
     & h5,
     .heading {
-      font-family: "Alegreya";
+      font-family: "Lierata-SemiBold";
     }
+    & .container-content, .storyTeamwork,.memberRole, .proudStory, .homeWork, .homeProjects, .servicesContent, .homeSummary, .meetingPara1, 
+    .meetingPara2, .list, .tonePara1, .tonePara2, .brandPara1, .brandPara2, .testPara1, .testPara2, .testPara3   {
+      font-family: 'Sharik-Regular';
+      font-size: 25px;
+    
+    }
+    & .whitebox-font, .nameStory, .work, .mt-1, .mainTitle, .meetingTitle, .toneTitle, .brandTitle, .testTitle, .contentHome, .homeTitle, .introPara, .title {
+      font-family: 'Lierata-Bold' !important;
+      font-size: 34px !important;
+    }
+
+    & .memberName, .serviceTitles, .testPara1, .testPara2, .testPara3 {
+      font-family: 'Lierata-SemiBold' !important;
+      font-size: 30px !important;
+    }
+        
   }
 }
 
@@ -275,7 +312,7 @@ a {
     padding: 0 50px;
 
     p{
-      max-width: 550px;
+      max-width:800px;
     }
   
     @media (min-width: 1536px) {
@@ -380,16 +417,16 @@ justify-content: center;
 }
 
 .proud-section {
-  font-family: 'alegreya sans light';
+  font-family: 'Lierata-Regular';
 
   .proud-section .ar {
-    font-family: 'GE Dinar One' !important;
+    font-family: 'MizanAR-Regualr' !important;
   }
 }
 
-.whitebox-font {
-  font-size: 28px !important;
-}
+// .whitebox-font {
+//   font-size: 28px !important;
+// }
 
 .maujHover:hover {
   color: #331640
@@ -419,10 +456,13 @@ justify-content: center;
   color:#331640
 }
 
+
+
 .content {
   font-size: 30px !important;
   font-weight: bold !important;
-  font-family: "Alegreya";
+  font-family: "Lierata-SemiBold";
+  
 }
 
 .content .ar {
@@ -447,7 +487,7 @@ justify-content: center;
 .work {
   font-size: 30px !important;
   font-weight: bold !important;
-  font-family: "Alegreya"
+  font-family: "Lierata-SemiBold"
 }
 
 .balance .ar {
@@ -468,15 +508,15 @@ table, th, td {
   font-size: 24px;
 }
 
-.arabic {
-  text-align: right;
-  font-family: "GE Dinar One" !important;
-}
+// .arabic {
+//   text-align: right;
+//   font-family: "GE Dinar One" !important;
+// }
 
-.english {
-  text-align: left;
-  font-size: "Alegreya Sans" !important;
-}
+// .english {
+//   text-align: left;
+//   font-size: "Alegreya Sans" !important;
+// }
 
 .story {
   margin-left: 25px !important;
@@ -503,3 +543,23 @@ table, th, td {
 .peopleDiff {
   font-weight: bold;
 }
+
+.textSize {
+  font-size: 18px !important;
+}
+
+
+.class {
+  font: 20px;
+}
+
+// .mainTitle, .meetingTitle, .toneTitle, .brandTitle, .testTitle {
+//   font-family: 'Lierata-Bold' !important;
+//   font-size: 30px;
+// }
+// .meetingPara1, .meetingPara2, .list, .tonePara1, .tonePara2, .brandPara1, .brandPara2, .testPara1, .testPara2, .testPara3  {
+//   font-family: 'Sharik-Regular' !important;
+//   font-size: 25px;
+
+// }
+
