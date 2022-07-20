@@ -96,20 +96,20 @@ export default function shafra({ textAnimationControls, handleBgColorChange, han
             <div className="container-content">
 
               <div className="code">
-                <span class="codeTitle">{f("code.title")}</span>
-                <span className={styles.para1}>{f("code.para1")}</span>
-                <span className={styles.para2}>{f("code.para2")}</span>
+                <span class="title">{f("code.title")}</span>
+                <span className="para">{f("code.para1")}</span>
+                <span className="para">{f("code.para2")}</span>
               </div>
 
               <div className="mm">
-                <span class="mmTitle">{f("mm.title")}</span>
-                <span className={styles.para1}>{f("mm.para1")}</span>
-                <span className={styles.para2}>{f("mm.para2")}</span>
+                <span class="title">{f("mm.title")}</span>
+                <span className="para">{f("mm.para1")}</span>
+                <span className="para">{f("mm.para2")}</span>
               </div>
 
               <div className="lang">
-                <span class="langTitle">{f("lang.title")}</span>
-                <span className={styles.para1}>{f("lang.para1")}</span>
+                <span class="title">{f("lang.title")}</span>
+                <span className="para">{f("lang.para1")}</span>
 
                 <table>
                   <tr>
@@ -127,9 +127,9 @@ export default function shafra({ textAnimationControls, handleBgColorChange, han
                 </table>
 
                 <div className="story">
-                  <span class="storyTitle">{f("story.title")}</span>
+                  <span class="title">{f("story.title")}</span>
                   <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                    <span className={styles.para1}>{f("story.para")}</span>
+                    <span className="testPara1">{f("story.para")}</span>
                   </WhiteBox>
                 </div>
 

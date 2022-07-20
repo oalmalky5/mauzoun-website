@@ -97,8 +97,8 @@ export default function musaandpalm({textAnimationControls, handleBgColorChange,
                         <div className="container-content">
                             <div className="intro">
                                 <span className="title">{f("intro.title1")}</span>
-                                <p className="para1">{f("intro.para1")}</p>
-                                <p className="para2">{f("intro.para2")}</p>
+                                <p className="para">{f("intro.para1")}</p>
+                                <p className="para">{f("intro.para2")}</p>
                             </div>
 
                             <div className="longStory">
@@ -137,18 +137,15 @@ export default function musaandpalm({textAnimationControls, handleBgColorChange,
                             <div className={styles.testimony}>
 
                                 
-                                <span className={styles.centerTitle}>{f("testimony.title")}</span>
+                                <span className="testTitle" >{f("testimony.title")}</span>
                                 <div className={styles.totalWhiteBox}>
                                     <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                                        <br/>
-                                        <span className={styles.para1}
-                                              className={styles.center}>{f("testimony.para1")}</span>
-                                        <br/>
-                                        <span className={styles.para2}
-                                              className={styles.center}>{f("testimony.para2")}</span>
-                                        <br/>
-                                        <span className={styles.para3}
-                                              className={styles.center}>{f("testimony.para3")}</span>
+                                        <span
+                                              className="testPara1">{f("testimony.para1")}</span>
+                                        <span 
+                                              className="testPara2">{f("testimony.para2")}</span>
+                                        <span 
+                                              className="testPara3">{f("testimony.para3")}</span>
                                     </WhiteBox>
                                 </div>
 

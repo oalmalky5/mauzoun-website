@@ -155,27 +155,27 @@ export default function portfolio({textAnimationControls, handleBgColorChange, h
                         <div className="container">
                             <div className="container-background" style={{backgroundColor}}></div>
                             <div className="container-content">
-                                <h1>{f("title")}</h1>
+                                <span className="title">{f("title")}</span>
 
-                                <h2>{f("subtitle")}</h2>
+                                <span className="mainHeader">{f("subtitle")}</span>
                             </div>
                             <div className="container-content">
                                 <span style={{marginBottom: "50px"}}>{f("content")}</span>
 
                                 {/* Content Writing */}
-                                <h3 className={styles.clientCategory}>{f("contentWriting.title")}</h3>
-                                <span>{getClients("contentWriting")}</span>
+                                <span className="sub-title">{f("contentWriting.title")}</span>
+                                <span className="clientName">{getClients("contentWriting")}</span>
 
                                 <hr className="big-margin" size={1} color="black"/>
 
                                 {/* Creative Writing */}
-                                <h3 className={styles.clientCategory}>{f("creativeWriting.title")}</h3>
+                                <span className="sub-title">{f("creativeWriting.title")}</span>
                                 {getClients("creativeWriting")}
 
                                 <hr className="big-margin" size={1} color="black"/>
 
                                 {/* Boutique Publishing */}
-                                <h3 className={styles.clientCategory}>{f("boutiquePublishing.title")}</h3>
+                                <span className="sub-title">{f("boutiquePublishing.title")}</span>
                                 {getClients("boutiquePublishing")}
                             </div>
 

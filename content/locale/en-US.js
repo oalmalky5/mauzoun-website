@@ -92,13 +92,13 @@ exports["en-US"] = {
     content:
       "Read our team’s project-focused journal entries, which document our creative thought process and show our beloved final outcomes.",
     "contentWriting.title": "Content Writing",
-    "contentWriting.clients.1": "<div class='maujHover'><Link href='/mauj'>Mauj</Link></div>",
-    "contentWriting.clients.2": "<div class='shafraHover'><Link href='/shafra'>Shafra</Link></div>",
-    "contentWriting.clients.3": "<div class='palmHover'><Link href='/musaandpalm'>Musa & Palm</Link></div>",
-    "contentWriting.clients.4": "<div class='authorityHover'><Link href='/sta'>Saudi Tourism Authority</Link></div>",
-    "contentWriting.clients.5": "<div class='albalad'>Ministry of Culture: AlBalad</div>",
-    "contentWriting.clients.6": "<div class='redSea'>Red Sea International Film Festival (2021)</div>",
-    "contentWriting.clients.7": "<div class='pavilion'>The National Pavilion of Saudi Arabia <br/> at the 59th Biennale de Venezia</div>",
+    "contentWriting.clients.1": "<span className='maujHover'><Link href='/mauj'>Mauj</Link></span>",
+    "contentWriting.clients.2": "<span className='shafraHover'><Link href='/shafra'>Shafra</Link></span>",
+    "contentWriting.clients.3": "<span className='palmHover'><Link href='/musaandpalm'>Musa & Palm</Link></span>",
+    "contentWriting.clients.4": "<span className='authorityHover'><Link href='/sta'>Saudi Tourism Authority</Link></span>",
+    "contentWriting.clients.5": "<span className='albalad'>Ministry of Culture: AlBalad</span>",
+    "contentWriting.clients.6": "<span className='redSea'>Red Sea International Film Festival (2021)</span>",
+    "contentWriting.clients.7": "<span className='pavilion'>The National Pavilion of Saudi Arabia <br/> at the 59th Biennale de Venezia</span>",
     "creativeWriting.title": "Book & Script Commissions",
     "creativeWriting.clients.1":
       "<div class='arts'><b>Ministry of Culture: Culinary Arts Books</b></div>",
@@ -188,24 +188,24 @@ exports["en-US"] = {
     "approach.finished.content":
       "Our holistic process ensures that your work is finalized as an embodiment of your vision, bringing your story to life.",
     "contentWriting.title": "Content Writing",
-    "contentWriting.content": `<b>We provide holistic, research-based content writing for brands and campaigns that want captivating content.</b>
+    "contentWriting.content": `<span className='contentWritingFont'>We provide holistic, research-based content writing for brands and campaigns that want captivating content.</span>
       <br /><br />
       All of our content writing services must be preceded by a Brand Strategy or Messaging Manual. If your brand does not have one, we can gladly prepare one for you.
       <br /><br />
       We choose to work exclusively with compelling brands on a long-term basis or on exciting campaigns.`,
     "contentWriting.services.header":
-      "Here’s a list of some of the words we write. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.",
-    "contentWriting.services.mm" : "Messaging Manual",
-    "contentWriting.services.naming": "Brand & Product Naming",
-    "contentWriting.services.manifesto": "Brand Manifesto",
-    "contentWriting.services.slogans": "Taglines & Slogans",
-    "contentWriting.services.profile": "Company Profile",
-    "contentWriting.services.website": "Website Content",
-    "contentWriting.services.socialMedia": "Social Media Content",
-    "contentWriting.services.scriptWriting": "Scriptwriting for Ads",
+      "<span className='creativeWritingFont'>Here’s a list of some of the words we write. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.</span>",
+    "contentWriting.services.mm" : "<span className='contentService'>Messaging Manual</span>",
+    "contentWriting.services.naming": "<span className='contentService'>Brand & Product Naming</span>",
+    "contentWriting.services.manifesto": "<span className='contentService'>Brand Manifesto</span>",
+    "contentWriting.services.slogans": "<span className='contentService'>Taglines & Slogans</span>",
+    "contentWriting.services.profile": "<span className='contentService'>Company Profile</span>",
+    "contentWriting.services.website": "<span className='contentService'>Website Content</span>",
+    "contentWriting.services.socialMedia": "<span className='contentService'>Social Media Content</span>",
+    "contentWriting.services.scriptWriting": "<span className='contentService'>Scriptwriting for Ads</span>",
     
     "creativeWriting.title": "Book & Script Commissions",
-    "creativeWriting.content": `<b>All that moves the heart begins with a story.</b>
+    "creativeWriting.content": `<span className='creativeWritingFont'>All that moves the heart begins with a story.</span>
       <br /><br />
       Writers are artists of speech and thought. There’s nothing we enjoy more than telling a story, and we can help you tell your own in the best way possible.
       <br /><br />
@@ -216,20 +216,20 @@ exports["en-US"] = {
       We seek inspiration from the rich literary heritages of the Arab world, and we aspire to contribute to our region’s libraries and partake in the advancement of language.
       `,
     "creativeWriting.services.header":
-      "Here’s a list of some of the fee-based services we provide. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.",
-    "creativeWriting.services.title1": "Books:",
-    "creativeWriting.services.research": "Research",
-    "creativeWriting.services.narrativeDevelopment": "Narrative Development",
-    "creativeWriting.services.artDirection": "Art Direction",
-    "creativeWriting.services.bookWriting": "Book Writing (Coffee Table Books & Visual Novels Only)",
-    "creativeWriting.services.storyEditing": "Story Editing",
-    "creativeWriting.services.copyEditing": "Copy Editing",
-    "creativeWriting.services.bookTranslation": "Book Translation",
-    "creativeWriting.services.bookDesing": "Book Design",
+      "<span className='servicesHeader'>Here’s a list of some of the fee-based services we provide. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.</span>",
+    "creativeWriting.services.title1": "<span className='servicesHeader'>Books:</span>",
+    "creativeWriting.services.research": "<span className='contentService'>Research</span>",
+    "creativeWriting.services.narrativeDevelopment": "<span className='contentService'>Narrative Development</span>",
+    "creativeWriting.services.artDirection": "<span className='contentService'>Art Direction</span>",
+    "creativeWriting.services.bookWriting": "<span className='contentService'>Book Writing (Coffee Table Books & Visual Novels Only)</span>",
+    "creativeWriting.services.storyEditing": "<span className='contentService'>Story Editing</span>",
+    "creativeWriting.services.copyEditing": "<span className='contentService'>Copy Editing</span>",
+    "creativeWriting.services.bookTranslation": "<span className='contentService'>Book Translation</span>",
+    "creativeWriting.services.bookDesing": "<span className='contentService'>Book Design</span>",
 
-    "creativeWriting.services.title2": "Scripts:",
-    "creativeWriting.services.storyDoctoring": "Story Doctoring",
-    "creativeWriting.services.scriptWritingFilm": "Scriptwriting for Film and Television",
+    "creativeWriting.services.title2": "<span className='servicesHeader'>Scripts:</span>",
+    "creativeWriting.services.storyDoctoring": "<span className='contentService'>Story Doctoring</span>",
+    "creativeWriting.services.scriptWritingFilm": "<span className='contentService'>Scriptwriting for Film and Television</span>",
     
     "creativeWriting.services.commissions1": "Commissions only cover the research, writing, and design phases. They do not include marketing, branding, publicity, printing, publishing, or distribution. Please note that this is not a ghostwriting service and that our contracts stipulate crediting Mauzoun as the writer of the work.",
   
@@ -238,7 +238,7 @@ exports["en-US"] = {
    
 
     "publishing.title": "Boutique Publishing",
-    "publishing.content": `<b>We prioritize talent over the region’s pay-to-publish model.</b>
+    "publishing.content": `<span className='creativeWritingFont'>We prioritize talent over the region’s pay-to-publish model.</span>
     <br /><br />
     We headhunt talented authors with truly exceptional book manuscripts. Likewise, authors can apply to be signed to Mauzoun.
     <br /><br />
@@ -248,17 +248,17 @@ exports["en-US"] = {
     Mauzoun’s genres of interest include original works of fiction written in Arabic; original non-fiction works in the Arabic language about society, history, culture, or the arts; visual novels by Arab authors regardless of their original language of publication; coffee table books with compelling cultural topics; and lastly, the acquisition and translation of fiction and non-fiction works by Arab authors in foreign languages.
     `,
     "publishing.services.header": 
-      "It’s our responsibility as publishers to ensure that the author and the book are well-developed and well-marketed to create a win-win situation. That’s why we fully handle:",
-      "publishing.services.research": "Research",
-      "publishing.services.narrativeDevelopment": "Narrative Development",
-      "publishing.services.storyEditing": "Story Editing",
-      "publishing.services.copyEditing": "Copy Editing",
-      "publishing.services.bookTranslation": "Book Translation",
-      "publishing.services.bookDesign": "Book Design",
-      "publishing.services.printing": "Printing",
-      "publishing.services.distribution": "Distribution",
-      "publishing.services.authorBranding": "Author Branding",
-      "publishing.services.bookMarketing": "Book Marketing",
+      "<span className='servicesHeader'>It’s our responsibility as publishers to ensure that the author and the book are well-developed and well-marketed to create a win-win situation. That’s why we fully handle:</span>",
+      "publishing.services.research": "<span className='contentService'>Research</span>",
+      "publishing.services.narrativeDevelopment": "<span className='contentService'>Narrative Development</span>",
+      "publishing.services.storyEditing": "<span className='contentService'>Story Editing</span>",
+      "publishing.services.copyEditing": "<span className='contentService'>Copy Editing</span>",
+      "publishing.services.bookTranslation": "<span className='contentService'>Book Translation</span>",
+      "publishing.services.bookDesign": "<span className='contentService'>Book Design</span>",
+      "publishing.services.printing": "<span className='contentService'>Printing</span>",
+      "publishing.services.distribution": "<span className='contentService'>Distribution</span>",
+      "publishing.services.authorBranding": "<span className='contentService'>Author Branding</span>",
+      "publishing.services.bookMarketing": "<span className='contentService'>Book Marketing</span>",
   
     
   },

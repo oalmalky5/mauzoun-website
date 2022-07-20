@@ -116,13 +116,13 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
             <div className="container">
               <div className="container-background" style={{ backgroundColor }}></div>
               <div className="container-content">
-                <h1 className="mb-0">{f("title")}</h1>
+                <span className="title">{f("title")}</span>
               </div>
               <div className="container-content">
                 {/* Approach */}
                 <div className="mt-0 unwrapped-content">
                   <div className="content-wrapper" onClick={() => setIsApproachVisible(!isApproachVisible)}>
-                    <h2>{f("approach.title")}</h2>
+                    <span className="title approachTitle">{f("approach.title")}</span>
                     <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
@@ -130,10 +130,11 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
 
                   {isApproachVisible && (
                     <div>
-                      <h3>{f("approach.header")}</h3>
+                    <br/>
+                      <span className="approachHeader">{f("approach.header")}</span>
                       {[
                         "approach.contact",
-                        "approach.briefForm",
+                        "approach.briefForm",   
                         "approach.quotation",
                         "approach.timeline",
                         "approach.research",
@@ -159,7 +160,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                     onClick={() => setIsContentWritingVisible(!isContentWritingVisible)}
                     style={isContentWritingVisible ? { marginBottom: "30px" } : {}}
                   >
-                    <h2>{f("contentWriting.title")}</h2>
+                    <span className="title">{f("contentWriting.title")}</span>
                     <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
@@ -202,7 +203,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                           onClick={() => setIsCreativeWritingVisible(!isCreativeWritingVisible)}
                           style={isCreativeWritingVisible ? { marginBottom: "30px" } : {}}
                       >
-                          <h2>{f("creativeWriting.title")}</h2>
+                          <span className="title">{f("creativeWriting.title")}</span>
                           <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
@@ -214,7 +215,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                               <div className="container-object">
                                   <div className={styles.totalWhiteBox}>
                                       <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                                          {f("creativeWriting.services.header")}
+                                          <span className="contentWritingServicesHeader">{f("creativeWriting.services.header")}</span>
                                           <br/>
                                           {f("creativeWriting.services.title1")}
 
@@ -263,7 +264,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                           onClick={() => setIsBoutiquePublishingVisible(!isBoutiquePublishingVisible)}
                           style={isBoutiquePublishingVisible ? { marginBottom: "30px" } : {}}
                       >
-                          <h2>{f("publishing.title")}</h2>
+                          <span className="title">{f("publishing.title")}</span>
                           <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>

@@ -285,7 +285,7 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
               </a>
             </div>
 
-            <span className="en-US">{f("email")}</span>
+            <span className="email">{f("email")}</span>
             <span className="bolder">{f("location")}</span>
           </div>
         </div>

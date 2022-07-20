@@ -182,21 +182,21 @@ export default function mauj({ textAnimationControls, handleBgColorChange, handl
               </div>
 
               <div className="testimony">
-                <span className="testTitle" className={styles.centerTitle}>
+                <span className="testTitle" >
                   {f("testimony.title")}
                 </span>
                 <div className="totalWhiteBox" >
                   <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                    <br />
-                    <span className="testPara1" className={styles.center}>
+                   
+                    <span className="testPara1" >
                       {f("testimony.para1")}
                     </span>
-                    <br />
-                    <span className="testPara2" className={styles.center}>
+                    
+                    <span className="testPara2" >
                       {f("testimony.para2")}
                     </span>
-                    <br />
-                    <span className="testPara3" className={styles.center}>
+                
+                    <span className="testPara3" >
                       {f("testimony.para3")}
                     </span>
                   </WhiteBox>

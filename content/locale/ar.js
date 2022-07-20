@@ -174,53 +174,53 @@ export const ar = {
     "approach.title": "توجهنا",
     "approach.header":
       "إن لغة السرد واحدة، أيًا كان الدرب الذي يمضي به مشروعكم. سنقدم هنا المجرى الذي تتبعه جميع مشاريعنا.",
-    "approach.contact.header": "١. تواصلوا معنا.",
+    "approach.contact.header": "<span className='serviceTitles'>١. تواصلوا معنا.</span>",
     "approach.contact.content":
       "راسلونا عبر البريد الإلكتروني. يحرص فريقنا على أن يتعرف إليكم بشكل أفضل وأن يفهم نوع الخدمات التي تبحثون عنها، سواء كانت في كتابة المحتوى، أو تكليفات الكتب والسيناريو، أو النشر المتخصص، لذلك تأكدوا من تزويدنا بملخص مفصل. إذا شعرنا بنقص في المعلومات، سنجيبكم بأسئلة بهدف التوضيح، ومن بعد استيعاب حاجاتكم، يمكننا الانتقال للخطوة التالية.",
     
-    "approach.quotation.header": "٢. نحضّر عرض السعر.",
+    "approach.quotation.header": "<span className='serviceTitles'>٢. نحضّر عرض السعر.</span>",
     "approach.quotation.content":
       "إذا اندرجت الخدمة التي تبحثون عنها ضمن كتابة المحتوى، يستغرق تحضير عروض السعر (٣) أيام عمل، كما تضم الشروط والأحكام الواضحة التي تساهم في وضوح وانسيابية عملنا مع بعض. ولكن إذا كنتم تبحثون عن خدمة تكليفات الكتب والسيناريو، سنحضر عقدًا خلال ١٠-١٤ يوم عمل.",
-    "approach.timeline.header": "٣. نحجز جدول مشروعكم الزمني.",
+    "approach.timeline.header": "<span className='serviceTitles'>٣. نحجز جدول مشروعكم الزمني.</span>",
     "approach.timeline.content":
       "العمل المتقن عمل جدير بالوقت—هذا شعارنا. بعد استلام موافقتكم على عرض السعر إضافة إلى الدفعة المقدمة، نحجز جدولكم فورًا. يتطلب جدولنا الزاخر وكثافة أنشطتنا بأن نسير في عملنا بناء على حجز مسبق فقط. يتراوح جدول العمل الذي نخصصه لكتابة المحتوى بين ١٠ و٢١ يوم عمل، وأما خدمات التكليفات والنشر، فتتراوح جداولها بين ٤ إلى ١٠ شهور، اعتمادًا على المشروع.",
     "approach.research.header":
-      "٤. نتعمق في البحث.",
+      "<span className='serviceTitles'>٤. نتعمق في البحث.</span>",
     "approach.research.content": `نعرف أن الكتابة القيمة معززة بالمعرفة، ولذلك نجمع كل البيانات والمعلومات اللازمة لتكامل عملية الكتابة وتمييز نبرتكم عن نبرات منافسيكم.`,
-    "approach.writing.header": "٥. تبدأ عملية الكتابة.",
+    "approach.writing.header": "<span className='serviceTitles'>٥. تبدأ عملية الكتابة.</span>",
     "approach.writing.content": `
     بعد انتهائنا من عملية البحث، نسلّم العمل لفريقنا المبدع من الكتاب بكلا اللغتين العربية والإنجليزية وهم قادرون على التكيّف مع نبرتكم مع ضمان الجودة الأفضل في الكتابة.      <br />
     نقوم بعدها بتدقيق العمل على الأقل سبع مرات للتأكد من أن الكتابة خالية من الأخطاء القواعدية، وذات بنية قوية، وجذابة بشكل متكامل.`,
-    "approach.delivery.header": "٦. تستلمون أعمالكم في الوقت المتفق عليه.",
+    "approach.delivery.header": "<span className='serviceTitles'>٦. تستلمون أعمالكم في الوقت المتفق عليه.</span>",
     "approach.delivery.content":
       "يساعدنا عملنا القائم على الحجز المسبق في الالتزام الدائم بأوقات التسليم، والحرص على أدق جودة حتى في المسودة الأولى.",
-    "approach.feedback.header": "٧. نستلم ملاحظاتكم أو موافقتكم.",
+    "approach.feedback.header": "<span className='serviceTitles'>٧. نستلم ملاحظاتكم أو موافقتكم.</span>",
     "approach.feedback.content":
       "تزودوننا بملاحظاتكم عبر البريد الإلكتروني أو خلال لقاء عبر زوم، أو ربما توافقون على المشروع بشكل مباشر! في حال لم توافقوا، لا مشكلة—فالعمل القيم يحتاج إلى وقت كافٍ. لذلك يمر كل مشروع في مَوْزوْن بجولتي تعديلات، كي نصل بعملكم إلى الكمال.",
-    "approach.adaptTimeline.header": "٨. نعدل جدول مشروعكم الزمني.",
+    "approach.adaptTimeline.header": "<span className='serviceTitles'>٨. نعدل جدول مشروعكم الزمني.</span>",
     "approach.adaptTimeline.content":
       "نكرر جميع الخطوات من الخامسة إلى السابعة بتوجه بحث وكتابة جديد ومختلف لكي نضمن نتائج مختلفة.",
-    "approach.finished.header": "٩. وهكذا تُبعث الحياة في قصتكم.",
+    "approach.finished.header": "<span className='serviceTitles'>٩. وهكذا تُبعث الحياة في قصتكم.",
     "approach.finished.content": "تضمن عمليتنا المتكاملة عند الانتهاء من عملكم بأنه تجسيد لرؤيتكم، جامعًا أجزاء قصتكم وباعثًا الحياة فيها.",
     "contentWriting.title": "كتابة المحتوى",
-    "contentWriting.content": `<b>نقدم الخدمات المتكاملة القائمة على البحث التي تخص العلامات القوية والحملات التي تسعى لمحتوى جذاب.</b>
+    "contentWriting.content": `<span className='contentWritingFont'>نقدم الخدمات المتكاملة القائمة على البحث التي تخص العلامات القوية والحملات التي تسعى لمحتوى جذاب.</span>
       <br /><br />
       على جميع خدماتنا في كتابة المحتوى أن تتبع استراتيجية العلامة. في حال عدم وجود استراتيجية خاصة بعلامتكم، سيسعدنا أن نقوم بتحضيرها.
       <br /><br />
       اخترنا العمل حصريًا مع العلامات المقنعة وعلى نطاق زمني طويل الأمد، أو العمل على تحضير الحملات المشوقة.`,
     "contentWriting.services.header":
-      "نقدم لكم هنا قائمة ببعض خدمات الكتابة التي نقدمها. في حال لم تجدوا الخدمة التي تبحثون عنها، لا تترددوا في مراسلتنا، وسنكون على أتم استعداد لضمها إلى العرض المخصص لكم.",
-    "contentWriting.services.mm": "دليل نبرة وأسلوب المحتوى",
-    "contentWriting.services.naming": "تسمية العلامات والمنتجات",
-    "contentWriting.services.manifesto": "بيان العلامة",
-    "contentWriting.services.slogans": "كتابة الشعارات",
-    "contentWriting.services.profile": "الملف التعريفي للشركة",
-    "contentWriting.services.website": "محتوى الموقع الإلكتروني",
-    "contentWriting.services.socialMedia": "محتوى التواصل الاجتماعي",
-    "contentWriting.services.scriptWriting": "سيناريو الإعلانات",
+      "<span className='servicesHeader'>نقدم لكم هنا قائمة ببعض خدمات الكتابة التي نقدمها. في حال لم تجدوا الخدمة التي تبحثون عنها، لا تترددوا في مراسلتنا، وسنكون على أتم استعداد لضمها إلى العرض المخصص لكم.</span>",
+    "contentWriting.services.mm": "<span className='contentService'>دليل نبرة وأسلوب المحتوى</span>",
+    "contentWriting.services.naming": "<span className='contentService'>تسمية العلامات والمنتجات</span>",
+    "contentWriting.services.manifesto": "<span className='contentService'>بيان العلامة</span>",
+    "contentWriting.services.slogans": "<span className='contentService'>كتابة الشعارات</span>",
+    "contentWriting.services.profile": "<span className='contentService'>الملف التعريفي للشركة</span>",
+    "contentWriting.services.website": "<span className='contentService'>محتوى الموقع الإلكتروني</span>",
+    "contentWriting.services.socialMedia": "<span className='contentService'>محتوى التواصل الاجتماعي</span>",
+    "contentWriting.services.scriptWriting": "<span className='contentService'>سيناريو الإعلانات</span>",
 
     "creativeWriting.title": "تكليفات الكتب والسيناريو",
-    "creativeWriting.content": `<b>كل ما يحرك القلب يبدأ بقصة.</b>
+    "creativeWriting.content": `<span className='creativeWritingFont'>كل ما يحرك القلب يبدأ بقصة.</span>
       <br /><br />
       الكتاب هم فنانو الحوار والفكر. لا متعة تضاهي متعتنا في إخبار الحكايات، وسنساعدكم كي تخبروا حكايتكم بأحسن طريقة.
       <br /><br />
@@ -232,21 +232,21 @@ export const ar = {
       نستمد الإلهام من التراث الأدبي الغني من العالم العربي، ونطمح للمساهمة في إثراء مكتبات المنطقة والمشاركة في تطوير استخدام اللغات.
       `,
     "creativeWriting.services.header":
-      "إليكم قائمة بخدماتنا المدفوعة. في حال لم تجدوا الخدمة التي تبحثون عنها، لا تترددوا في مراسلتنا، وسنكون على أتم استعداد لضمها إلى العرض المخصص لكم.",
+      "<span className='servicesHeader'>إليكم قائمة بخدماتنا المدفوعة. في حال لم تجدوا الخدمة التي تبحثون عنها، لا تترددوا في مراسلتنا، وسنكون على أتم استعداد لضمها إلى العرض المخصص لكم.</span>",
 
-      "creativeWriting.services.title1": "الكتب:",
-      "creativeWriting.services.research": "البحث",
-      "creativeWriting.services.narrativeDevelopment": "التطوير السردي",
-      "creativeWriting.services.artDirection": "الإخراج الفني",
-      "creativeWriting.services.bookWriting": "التأليف (الكتب الفاخرة والروايات البصرية فقط)",
-      "creativeWriting.services.storyEditing": "التحرير السردي",
-      "creativeWriting.services.copyEditing": "التحرير اللغوي",
-      "creativeWriting.services.bookTranslation": "ترجمة الكتب",
-      "creativeWriting.services.bookDesing": "تصميم الكتب",
+      "creativeWriting.services.title1": "<span className='servicesHeader'>الكتب:</span>",
+      "creativeWriting.services.research": "<span className='contentService'>البحث</span>",
+      "creativeWriting.services.narrativeDevelopment": "<span className='contentService'>التطوير السردي</span>",
+      "creativeWriting.services.artDirection": "<span className='contentService'>الإخراج الفني</span>",
+      "creativeWriting.services.bookWriting": "<span className='contentService'>التأليف (الكتب الفاخرة والروايات البصرية فقط)</span>",
+      "creativeWriting.services.storyEditing": "<span className='contentService'>التحرير السردي</span>",
+      "creativeWriting.services.copyEditing": "<span className='contentService'>التحرير اللغوي</span>",
+      "creativeWriting.services.bookTranslation": "<span className='contentService'>ترجمة الكتب</span>",
+      "creativeWriting.services.bookDesing": "<span className='contentService'>تصميم الكتب</span>",
 
-      "creativeWriting.services.title2": "السيناريو:",
-      "creativeWriting.services.storyDoctoring": "معالجة القصص",
-      "creativeWriting.services.scriptWritingFilm": "سيناريو الأفلام والتلفزيون",
+      "creativeWriting.services.title2": "<span className='servicesHeader'>السيناريو:</span>",
+      "creativeWriting.services.storyDoctoring": "<span className='contentService'>معالجة القصص</span>",
+      "creativeWriting.services.scriptWritingFilm": "<span className='contentService'>سيناريو الأفلام والتلفزيون</span>",
 
       "creativeWriting.services.commissions1": "تشمل التكليفات مراحل البحث والكتابة والتصميم فقط، ولا تتضمن التسويق والترويج والترويج الإعلامي والطباعة والنشر والتوزيع. يرجى الانتباه إلى أن التكليفات ليست من خدمات الكتّاب الخفيين، وبأن عقودنا تنص على ذكر مَوْزوْن بصفته كاتب العمل.",
 
@@ -256,7 +256,7 @@ export const ar = {
   
   
       "publishing.title": "النشر المتخصص",
-      "publishing.content": `<b>تكمن أولويتنا في الموهبة بخلاف نموذج الدفع مقابل النشر الرائج في المنطقة.</b>
+      "publishing.content": `<span className='creativeWritingFont'>تكمن أولويتنا في الموهبة بخلاف نموذج الدفع مقابل النشر الرائج في المنطقة.</span>
       <br /><br />
       نبحث عن كتاب موهوبين يقدمون مخطوطات كتب استثنائية بالفعل، كما يمكن للكتاب أن يتقدموا كي يصبح مَوْزوْن ناشرهم.
       <br /><br />
@@ -266,18 +266,18 @@ export const ar = {
       تتضمن أنواع المؤلفات التي تعنينا في مَوْزوْن الأعمال الأصلية الروائية باللغة العربية، والأعمال الأصلية غير الروائية باللغة العربية والتي تدور حول المجتمع والتاريخ والثقافة والفنون، والروايات البصرية لكتاب عرب أيًا كانت اللغة الأصلية التي نشرت بها، والكتب الفاخرة ذات المواضيع الثقافية الآسرة، وأخيرًا الاستحصال على حقوق وترجمة الأعمال الروائية وغير الروائية لكتاب عرب بلغات أجنبية.      `,    
       
       "publishing.services.header": 
-      "تكمن مسؤوليتنا كناشرين في الحرص على أن يكون كتّابنا ومنشوراتنا على درجة عالية من التطور وأن ينالوا التسويق المطلوب كي نصل إلى نتيجة مربحة للجميع، ولذلك نحن مسؤولون بالكامل عمّا يلي:",
+      "<span className='servicesHeader'>تكمن مسؤوليتنا كناشرين في الحرص على أن يكون كتّابنا ومنشوراتنا على درجة عالية من التطور وأن ينالوا التسويق المطلوب كي نصل إلى نتيجة مربحة للجميع، ولذلك نحن مسؤولون بالكامل عمّا يلي:</span>",
 
-      "publishing.services.research": "البحث",
-      "publishing.services.narrativeDevelopment": "التطوير السردي",
-      "publishing.services.storyEditing": "التحرير السردي",
-      "publishing.services.copyEditing": "التحرير اللغوي",
-      "publishing.services.bookTranslation": "ترجمة الكتب",
-      "publishing.services.bookDesign": "تصميم الكتب",
-      "publishing.services.printing": "الطباعة",
-      "publishing.services.distribution": "التوزيع",
-      "publishing.services.authorBranding": "الترويج لهوية وسمعة الكتّاب",
-      "publishing.services.bookMarketing": "تسويق الكتب",
+      "publishing.services.research": "<span className='contentService'>البحث</span>",
+      "publishing.services.narrativeDevelopment": "<span className='contentService'>التطوير السردي</span>",
+      "publishing.services.storyEditing": "<span className='contentService'>التحرير السردي</span>",
+      "publishing.services.copyEditing": "<span className='contentService'>التحرير اللغوي</span>",
+      "publishing.services.bookTranslation": "<span className='contentService'>ترجمة الكتب</span>",
+      "publishing.services.bookDesign": "<span className='contentService'>تصميم الكتب</span>",
+      "publishing.services.printing": "<span className='contentService'>الطباعة</span>",
+      "publishing.services.distribution": "<span className='contentService'>التوزيع</span>",
+      "publishing.services.authorBranding": "<span className='contentService'>الترويج لهوية وسمعة الكتّاب</span>",
+      "publishing.services.bookMarketing": "<span className='contentService'>تسويق الكتب</span>",
 
   },
   "/story": {
