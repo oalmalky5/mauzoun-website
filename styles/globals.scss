@@ -28,7 +28,7 @@ body {
     .heading {
       font-family: "MizanAR-SemiBold";
     }
-    & .nameStory, .work, .mt-1, .mainTitle, .meetingTitle, .toneTitle, .brandTitle, .testTitle, .contentHome, .homeTitle, .title {
+    & .nameStory, .work, .mt-1, .mainTitle, .meetingTitle, .toneTitle, .brandTitle, .testTitle, .contentHome, .homeTitle, .title, .teamTitle {
       font-family: "MizanAR-Bold" !important;
       font-size: 42px !important;
       
@@ -39,7 +39,7 @@ body {
       font-size: 30px !important;
     
     }
-    & .memberName, .serviceTitles {
+    & .memberName, .serviceTitles, .mainHeader {
       font-family: "MizanAR-SemiBold" !important;
       font-size: 30px !important;
     }
@@ -97,7 +97,7 @@ body {
       font-size: 25px;
     
     }
-    &  .nameStory, .work, .mt-1, .mainTitle, .meetingTitle, .toneTitle, .brandTitle, .testTitle, .contentHome, .homeTitle, .introPara, .title {
+    &  .nameStory, .work, .mt-1, .mainTitle, .meetingTitle, .toneTitle, .brandTitle, .testTitle, .contentHome, .homeTitle, .introPara, .title, .andYouTitle, .teamTitle {
       font-family: 'Lierata-Bold' !important;
       font-size: 34px !important;
     }

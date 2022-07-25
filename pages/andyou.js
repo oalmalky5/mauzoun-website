@@ -119,7 +119,7 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
             <div className="container">
               <div className="container-background" style={{ backgroundColor }}></div>
               <div className="container-content">
-                <h1 className="mb-0">{f("title")}</h1>
+                <span className="teamTitle">{f("title")}</span>
               </div>
               <div className="container-content">
                 {/* Become our client */}
@@ -150,7 +150,7 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
                     onClick={() => setIsJoinTeamVisible(!isJoinTeamVisible)}
                     style={isJoinTeamVisible ? { marginBottom: "20px" } : {}}
                   >
-                    <h2>{f("joinTeam.intro")}</h2>
+                    <span className="teamTitle">{f("joinTeam.intro")}</span>
                     <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
@@ -194,7 +194,7 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
                     onClick={() => setIsWritingClientVisible(!isWritingClientVisible)}
                     style={isWritingClientVisible ? { marginBottom: "40px" } : {}}
                   >
-                    <h2>{f("writingClient.title")}</h2>
+                    <span className="teamTitle">{f("writingClient.title")}</span>
                     <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
@@ -213,7 +213,7 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
                     onClick={() => setIsCommissionVisible(!isCommissionVisible)}
                     style={isCommissionVisible ? { marginBottom: "40px" } : {}}
                   >
-                    <h2>{f("commission.title")}</h2>
+                    <span className="teamTitle">{f("commission.title")}</span>
                     <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
@@ -232,7 +232,7 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
                     onClick={() => setIsMauzounAuthorVisible(!isMauzounAuthorVisible)}
                     style={isMauzounAuthorVisible ? { marginBottom: "40px" } : {}}
                   >
-                    <h2>{f("mauzounAuthor.title")}</h2>
+                    <span className="teamTitle">{f("mauzounAuthor.title")}</span>
                     <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>

@@ -52,19 +52,19 @@ export const ar = {
     "becomeClient.content":
       "إذا كنتم مهتمين بخدماتنا، وترغبون بأن تصبحوا من عملائنا، ما عليكم إلا أن تراسلونا على بريدنا الإلكتروني بالضغط على الزر الدائري أسفل يسار هذه الصفحة.",
     "joinTeam.intro": "انضموا إلى الفريق",
-    "joinTeam.content": `<b>نعلن عن فرص العمل والتدريب على الدوام عبر صفحتنا على إنستجرام.</b>
+    "joinTeam.content": `<span className='mainHeader'>نعلن عن فرص العمل والتدريب على الدوام عبر صفحتنا على إنستجرام.</span>
       <br /><br />
       إذا وددتم الانضمام إلى مَوْزوْن، تابعوا صفحتنا على إنستجرام لتبقوا على اطلاع.
       <br /><br />
       `,
       "hiring.header": 
-      "يقع التوظيف في مَوْزوْن ضمن الأقسام التالية:",
-      "hiring.contentWriting": "كتابة المحتوى",
-      "hiring.creativeWriting": "تكليفات الكتب والسيناريو",
-      "hiring.publishing": "النشر المتخصص",
-      "hiring.management": "الإدارة",
-      "hiring.media": "الإعلام",
-      "hiring.art": "الفن",
+      "<span className='servicesHeader'>يقع التوظيف في مَوْزوْن ضمن الأقسام التالية:</span>",
+      "hiring.contentWriting": "<span className='contentService'>كتابة المحتوى</span>",
+      "hiring.creativeWriting": "<span className='contentService'>تكليفات الكتب والسيناريو</span>",
+      "hiring.publishing": "<span className='contentService'>النشر المتخصص</span>",
+      "hiring.management": "<span className='contentService'>الإدارة</span>",
+      "hiring.media": "<span className='contentService'>الإعلام</span>",
+      "hiring.art": "<span className='contentService'>الفن</span>",
       "hiring.content": `
       نبحث عن كتاب ذوي مهارة متكاملة في اللغتين العربية والإنجليزية، من المبدعين الشغوفين بالكتابة. إذا أردتم نيل إعجابنا، تأكدوا من خلو طلبات عملكم من الأخطاء، وأضيفوا إليها رسالة تقديم تعبر عن حبكم للعمل الذي تقومون به.
         <br></br>

@@ -53,20 +53,20 @@ exports["en-US"] = {
     title: "Mauzoun & You",
     "becomeClient.intro": "Become Our Client",
     "becomeClient.content":
-      "If you're interested in our services, you can become our client by simply e-mailing us via clicking the button at the bottom right of our website.",
+      "If you're interested in our services, you can become our client by simply e-mailing us via clicking the button at the bottom right of our website.</span>",
     "joinTeam.intro": "Join the Team",
-    "joinTeam.content": `<b>We always announce our job and training opportunities on our Instagram page.</b>
+    "joinTeam.content": `<span className='mainHeader'>We always announce our job and training opportunities on our Instagram page.</span>
       <br /><br />
       If you are interested in joining Mauzoun, follow our Instagram account to stay in the know.
     `,
     "hiring.header": 
-      "We hire at the following departments at Mauzoun:",
-      "hiring.contentWriting": "Content Writing",
-      "hiring.creativeWriting": "Book & Script Commissions",
-      "hiring.publishing": "Boutique Publishing",
-      "hiring.management": "Management",
-      "hiring.media": "Media",
-      "hiring.art": "Art",
+      "<span className='servicesHeader'>We hire at the following departments at Mauzoun:</span>",
+      "hiring.contentWriting": "<span className='contentService'>Content Writing</span>",
+      "hiring.creativeWriting": "<span className='contentService'>Book & Script Commissions</span>",
+      "hiring.publishing": "<span className='contentService'>Boutique Publishing</span>",
+      "hiring.management": "<span className='contentService'>Management</span>",
+      "hiring.media": "<span className='contentService'>Media</span>",
+      "hiring.art": "<span className='contentService'>Art</span>",
       "hiring.content": `
         We seek writers with bulletproof Arabic and English who are creative and passionate about writing. To win us over, make sure that your application is free of mistakes, and complement it with a captivating cover letter that conveys why you love the work you do.
         <br></br>
@@ -194,7 +194,7 @@ exports["en-US"] = {
       <br /><br />
       We choose to work exclusively with compelling brands on a long-term basis or on exciting campaigns.`,
     "contentWriting.services.header":
-      "<span className='creativeWritingFont'>Here’s a list of some of the words we write. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.</span>",
+      "<span className='servicesHeader'>Here’s a list of some of the words we write. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.</span>",
     "contentWriting.services.mm" : "<span className='contentService'>Messaging Manual</span>",
     "contentWriting.services.naming": "<span className='contentService'>Brand & Product Naming</span>",
     "contentWriting.services.manifesto": "<span className='contentService'>Brand Manifesto</span>",
