@@ -13,7 +13,7 @@ import ContactButton from "../components/ContactButton";
 import Footer from "../components/Footer";
 
 const backgroundColor = "#f7f5f0";
-
+let test = '111'
 const teamMembersData = {
   1: {
     src: "/team/layan.gif",
@@ -67,7 +67,6 @@ const teamMembersData = {
   },
 
 };
-
 const whiteBoxDecoratorsPositions = {
   fromTop: [
     {
