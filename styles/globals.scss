@@ -131,9 +131,10 @@ body {
       font-family: "Lierata-Regular";
       font-size: 30px;
     }
-    & .maujHover {
+    .maujHover {
       font-family: "Lierata-Bold";
       font-size: 42px;
+      
     }
     
   }
@@ -478,7 +479,7 @@ justify-content: center;
 //   font-size: 28px !important;
 // }
 
-.maujHover:hover {
+Link .maujHover:hover {
   color: #331640
 }
 .shafraHover:hover {

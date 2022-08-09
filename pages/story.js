@@ -28,33 +28,44 @@ const teamMembersData = {
     preview: "/team/Mauzoun _ Omar AlMalky.png",
   },
   4: {
-    src: "/team/omart.gif",
-    preview: "/team/Mauzoun _ Omar Thawabeh.png",
-  },
-  5: {
     src: "/team/amal.gif",
     preview: "/team/Mauzoun _ Amal.png",
   },
-  6: {
-    src: "/team/fatima.gif",
-    preview: "/team/Mauzoun _ Fatmah Jadani.jpg",
+  5: {
+    src: "/team/zahrah.gif",
+    preview: "/team/Mauzoun _ Zahrah.png",
   },
+
+  6: {
+    src: "/team/omart.gif",
+    preview: "/team/Mauzoun _ Omar Thawabeh.png",
+  },
+  
   7: {
-    src: "/team/Hoza for Mauzoun website.gif",
+    src: "/team/ahmed.gif",
     preview: "/team/Mauzoun _ Ahmed Hoza.png",
   },
   8: {
-    src: "/team/Omnia for Mauzoun website.gif",
+    src: "/team/omnia.gif",
     preview: "/team/Mauzoun _ Omnia.png",
   },
   9: {
-    src: "/team/Danah for Mauzoun website.gif",
+    src: "/team/danah.gif",
     preview: "/team/Mauzoun _ Danah.png",
   },
   10: {
-    src: "/team/Alawi for Mauzoun website.gif",
+    src: "/team/jadani.gif",
+    preview: "/team/Mauzoun _ Fatmah Jadani.png",
+  },
+  11: {
+    src: "/team/alawi.gif",
     preview: "/team/Mauzoun _ Fatimah Alawi.png",
   },
+  12: {
+    src: "/team/abeer.gif",
+    preview: "/team/Mauzoun  _ Abeer.png",
+  },
+
 };
 
 const whiteBoxDecoratorsPositions = {
