@@ -13,7 +13,6 @@ import ContactButton from "../components/ContactButton";
 import Footer from "../components/Footer";
 
 const backgroundColor = "#f7f5f0";
-let test = '111'
 const teamMembersData = {
   1: {
     src: "/team/layan.gif",
@@ -47,7 +46,7 @@ const teamMembersData = {
   },
   8: {
     src: "/team/omnia.gif",
-    preview: "/team/Mauzoun _ Omnia.png",
+    preview: "/team/Mauzoun _ Omnia11.png",
   },
   9: {
     src: "/team/danah.gif",
