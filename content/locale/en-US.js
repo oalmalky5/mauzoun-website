@@ -4,14 +4,14 @@ exports["en-US"] = {
     storyLink: "Team",
     servicesLink: "Services",
     portfolioLink: "Portfolio",
-    blogLink: "Blog",
+    storeLink: "<a href='shop.mauzoun.com' target='_blank'>E-Store</a>",
     andyouLink: "Mauzoun & You",
     email: "hello@mauzoun.com",
     location: "From the heart of Saudi <br></br> to the whole of the world.",
     comingSoon: "COMING SOON.",
-    contactPrompt: `Like what you read?<br/>`  +
+    contactPrompt: `Like what<br/> you read?<br/>`  +
         "Contact us today.",
-    "contactPrompt.hovered": `Like what you read?<br/>`  + "Contact us today.",
+    "contactPrompt.hovered": `Like what <br/> you read?<br/>`  + "Contact us today.",
     "contact.fullName": "Your full name.",
     "contact.projectName": "Your brand or project name.",
     "contact.country": "Your country of residence.",
@@ -22,6 +22,8 @@ exports["en-US"] = {
     "contact.success": "Thanks for contacting us!",
     "contact.failure":
       "Sorry, we could not reach our servers. Please try again later.",
+    "storeMain": "E-Store",
+    "storeSmall": "متجرنا الإلكتروني"
   },
   "/home": {
     title: "Mauzoun is a writing studio and publishing house that serves brands and authors worldwide. Our name aptly means “poetic balance” in Arabic, a meaning that our words, services, and values live up to.",
@@ -44,7 +46,9 @@ exports["en-US"] = {
     "work.content":
       "We partner with exciting and ethical projects that seek win-win outcomes.",
     "work.content2":
-      "We communicate with clarity and consistency, ensuring organized digital correspondence and timely deliverables. Consider it done upon your project’s activation; we align the finest details of your brief with our knowledge of best practices to ensure the most excellent outcome possible, which we further refine with you through our two complimentary rounds of changes."
+      "We communicate with clarity and consistency, ensuring organized digital correspondence and timely deliverables. Consider it done upon your project’s activation; we align the finest details of your brief with our knowledge of best practices to ensure the most excellent outcome possible, which we further refine with you through our two complimentary rounds of changes.",
+    "pic": 
+      "<img class='picBg' src='homeBgPicEn.png'/>"
   },
   "/blog": {
     title: "Our Blog",
@@ -92,13 +96,13 @@ exports["en-US"] = {
     content:
       "Read our team’s project-focused journal entries, which document our creative thought process and show our beloved final outcomes.",
     "contentWriting.title": "Content Writing",
-    "contentWriting.clients.1": "<span className='maujHover'><a href='/mauj'>Mauj</a></span>",
-    "contentWriting.clients.2": "<span className='shafraHover'><Link href='/shafra'>Shafra</Link></span>",
-    "contentWriting.clients.3": "<span className='palmHover'><Link href='/musaandpalm'>Musa & Palm</Link></span>",
-    "contentWriting.clients.4": "<span className='authorityHover'><Link href='/sta'>Saudi Tourism Authority</Link></span>",
-    "contentWriting.clients.5": "<span className='albalad'>Ministry of Culture: AlBalad</span>",
-    "contentWriting.clients.6": "<span className='redSea'>Red Sea International Film Festival (2021)</span>",
-    "contentWriting.clients.7": "<span className='pavilion'>The National Pavilion of Saudi Arabia <br/> at the 59th Biennale de Venezia</span>",
+    "contentWriting.clients.1": "<div class='maujHover'><a href='/mauj'>Mauj</a></div>",
+    "contentWriting.clients.2": "<div class='shafraHover'><a href='/shafra'>Shafra</a></div>",
+    "contentWriting.clients.3": "<div class='palmHover'><a href='/musaandpalm'>Musa & Palm</a></div>",
+    "contentWriting.clients.4": "<div class='authorityHover'><a href='/sta'>Saudi Tourism Authority</a></div>",
+    "contentWriting.clients.5": "<div class='albalad'>Ministry of Culture: AlBalad</div>",
+    "contentWriting.clients.6": "<div class='redSea'>Red Sea International Film Festival (2021)</div>",
+    "contentWriting.clients.7": "<div class='pavilion'>The National Pavilion of Saudi Arabia <br/> at the 59th Biennale de Venezia</div>",
     "creativeWriting.title": "Book & Script Commissions",
     "creativeWriting.clients.1":
       "<div class='arts'><b>Ministry of Culture: Culinary Arts Books</b></div>",
@@ -356,7 +360,10 @@ exports["en-US"] = {
     "words.title": "A heartfelt sincerity and a simplicity of words.",
     "words.para1": "Developing the campaign slogan was unlike any previous project we handled at Mauzoun, because our thoughts were guided by our fervent emotions. Thus, we wanted to express them in the simplest and most seamless of words, but simplicity is elusive at times, especially when it is tied to the responsibility of expressing and celebrating our most important national occasion. We tried to express these sentiments in the video ad script in a way that authentically portrays the Saudi people and to demonstrate the rich landscape throughout our homeland.",
     "words.para2": "For the National Day campaign, we collaborated again with our partner, Wetheloft, who built the communication strategy for the campaign. They also supervised the development of ideation, design development, and website and social media posts, in addition to collecting contributing videos from participants, and overseeing post-production of the video advertisement. This partnership extended to include Telfaz Productions, who produced and edited the video, Panda Voiceover, who worked on the Arabic voiceover, and IconCreations, who developed the promotional website for the campaign.",
+    
   },
+
+  
 
 };
 

@@ -12,12 +12,13 @@ import * as locales from "../content/locale";
 import formatJsxMessage from "../utils/formatJsxMessage";
 
 import gsap from "gsap";
+import { redirect } from "next/dist/next-server/server/api-utils";
 
 const intlCache = createIntlCache();
 
 export default function Menu({ backgroundColor, textAnimationControls, isNavOpen, handleOpenNav }) {
   const router = useRouter();
-  const { locale, pathname } = router;
+  const { locale, pathname, asPath } = router;
 
   const otherLocale = locale === "en-US" ? "ar" : "en-US";
 
@@ -61,7 +62,20 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
       ...options,
     });
 
+    const handleAnchorClick = event => {
+      // 👇️ use event.preventDefault() if you want to
+      // prevent navigation
+      // event.preventDefault();
+  
+      console.log('Anchor element clicked');
+  
+      // 👇️ refers to the link element
+      console.log(event.currentTarget);
+    };
+    
+
   const [hoveredLink, setHoveredLink] = React.useState("");
+
 
   const buildTiltedSquare = (linkName) => {
     let filter;
@@ -207,18 +221,26 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
 
         <div className={styles.menu}>
           <div>
-            {["home", "story", "services", "portfolio", "blog", "andyou"].map((e, i) => {
+            {["home", "story", "services", "portfolio", "andyou"].map((e, i) => {
               const otherText = otherF(e + "Link");
               return (
                 <div key={e}>
                   {!(i % 2) && buildTiltedSquare(e)}
+                  
+                  <Link href={e + '/'} >
+                  
 
-                  <Link href={"/" + e}>
                     <a
+
                       className={styles.navLink}
-                      onMouseEnter={() => (isIOS ? null : setHoveredLink())}
-                      onMouseLeave={() => (isIOS ? null : setHoveredLink(""))}
+                      
+                      // onMouseEnter={() => (isIOS ? null : setHoveredLink())}
+                      // onMouseLeave={() => (isIOS ? null : setHoveredLink(""))}
+                      onMouseEnter={() =>  setHoveredLink(router.asPath === '/' + e)}
+                      onMouseLeave={() =>  setHoveredLink("")}
                       onClick={() => isNavOpen && handleOpenNav?.("instant")}
+
+                      
                       
                     >
                       <div
@@ -240,13 +262,17 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
                           </p>
                         )}
                       </span>
+                      
                     </a>
                   </Link>
                 </div>
+                
               );
+              
             })}
           </div>
-
+          <span className="store"><a href={"//shop.mauzoun.com"} target="_blank">{f("storeMain")}</a></span>
+          <span className="storeSmall"><a href={"//shop.mauzoun.com"} target="_blank" >{f("storeSmall")}</a></span>
           <div className={styles.languageSwitch}>
             <p className={locale}>
               <b>{locale === "en-US" ? "English" : "العربية"}</b>

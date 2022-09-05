@@ -47,7 +47,7 @@ body {
       font-family: 'MizanAR-Regular'!important;
       font-size: 25px !important;
     }
-    & .maujHover, .palmHover {
+    & .maujHover, .palmHover, .shafraHover, .authorityHover, .albalad, .redSea, .pavilion, .arts, .myths{
       font-family: "MizanAR-Bold" !important;
       font-size: 50px !important;
     }
@@ -73,6 +73,115 @@ body {
       font-size: 35px;
     }
 
+
+    & .picBgAr {
+      width: 700px;
+    }
+
+    & .homeTitle {
+      color: white;
+      position: absolute;
+      width: 360px;
+      top: 4%;
+      margin-right: 30px;
+      font-size: 1.8rem !important;
+      font-family: "MizanAR-Bold";
+    }
+
+    & .homeSummary {
+      position: absolute;
+      color: black;
+      top: 23%;
+      width: 360px;
+      margin-right: 150px;
+      font-size: 1.4rem !important;
+      font-family: "MizanAR-SemiBold";
+    }
+
+    & .storyContent {
+      position: absolute;
+      color: black;
+      top: 32%;
+      width: 360px;
+      margin-right: 65px;
+      font-size: 1.8rem !important;
+      font-family: "MizanAR-Bold";
+    }
+
+    & .servicesContent {
+      position: absolute;
+      color: black;
+      top: 41%;
+      width: 360px;
+      margin-right: 65px;
+      font-size: 1.4rem !important;
+      font-family: "MizanAR-SemiBold";
+    }
+
+    & .approach {
+      position: absolute;
+      color: white;
+      top: 48%;
+      width: 400px;
+      margin-right: 250px;
+      font-size: 1.8rem !important;
+      font-family: "MizanAR-Bold";
+    }
+
+    & .projects {
+      position: absolute;
+      color: white;
+      top: 58%;
+      width: 400px;
+      margin-right: 250px;
+      font-size: 1.4rem !important;
+      font-family: "MizanAR-Regular";
+    }
+
+
+    & .partner {
+      position: absolute;
+      color: white;
+      top: 73%;
+      width: 500px;
+      margin-right: 110px;
+      font-size: 1.8rem !important;
+      font-family: "MizanAR-Bold";
+    }
+
+    & .communicate {
+      position: absolute;
+      color: white;
+      top: 79%;
+      width: 500px;
+      margin-right: 110px;
+      font-size: 1.4rem !important;
+      font-family: "MizanAR-Regular";
+    }
+
+    & .circleBfrHover, .circleAfterHover {
+      font-size: 20px;
+    }
+
+    & .store {
+      font-size: 25px;
+      font-family: 'MizanAR-Bold';
+      position: absolute;
+      margin-top: 435px 
+    
+    }
+
+    & .storeSmall {
+      font-size: 20px;
+      font-family: 'Lierata-Regular';
+      position: absolute;
+      margin-top: 470px;
+    
+    }
+
+
+    
+    
   
   }
 
@@ -115,7 +224,7 @@ body {
       font-family: 'Sharik-Regular';
       font-size: 20px;
     }
-    & .whitebox-font, .testPara1, .testPara2, .testPara3, .servicesHeader, .sub-title {
+    & .whitebox-font, .testPara1, .testPara2, .testPara3, .servicesHeader, .sub-title, .titleMain {
       font-family: "Lierata-Bold" !important;
       font-size: 30px !important;
     }
@@ -131,13 +240,117 @@ body {
       font-family: "Lierata-Regular";
       font-size: 30px;
     }
-    .maujHover {
+    & .maujHover {
       font-family: "Lierata-Bold";
       font-size: 42px;
       
     }
+
+
+    & .picBg {
+      width: 700px;
+    }
+
+    & .homeTitle {
+      color: white;
+      position: absolute;
+      width: 360px;
+      top: 3%;
+      margin-left: 30px;
+      font-size: 1.3rem !important;
+      font-family: "Lierata-Bold";
+    }
+
+    & .homeSummary {
+      position: absolute;
+      color: black;
+      top: 21%;
+      width: 360px;
+      margin-left: 120px;
+      font-size: 1.1rem !important;
+      font-family: "Sharik-regular";
+    }
+
+    & .storyContent {
+      position: absolute;
+      color: black;
+      top: 32%;
+      width: 360px;
+      margin-left: 65px;
+      font-size: 1.3rem !important;
+      font-family: "Lierata-Bold";
+    }
+
+    & .servicesContent {
+      position: absolute;
+      color: black;
+      top: 41%;
+      width: 360px;
+      margin-left: 65px;
+      font-size: 1.15rem !important;
+      font-family: "Sharik-regular";
+    }
+
+    & .approach {
+      position: absolute;
+      color: white;
+      top: 48%;
+      width: 400px;
+      margin-left: 250px;
+      font-size: 1.3rem !important;
+      font-family: "Lierata-Bold";
+    }
+
+    & .projects {
+      position: absolute;
+      color: white;
+      top: 59%;
+      width: 400px;
+      margin-left: 250px;
+      font-size: 1.15rem !important;
+      font-family: "Sharik-regular";
+    }
+
+
+    & .partner {
+      position: absolute;
+      color: white;
+      top: 74%;
+      width: 500px;
+      margin-left: 110px;
+      font-size: 1.3rem !important;
+      font-family: "Lierata-Bold";
+    }
+
+    & .communicate {
+      position: absolute;
+      color: white;
+      top: 79%;
+      width: 500px;
+      margin-left: 110px;
+      font-size: 1.15rem !important;
+      font-family: "Sharik-regular";
+    }
+
+    & .store {
+      font-size: 25px;
+      font-family: 'Lierata-SemiBold';
+      position: absolute;
+      margin-top: 380px 
     
+    }
+    & .storeSmall {
+      font-size: 20px;
+      font-family: 'MizanAR-Regular';
+      position: absolute;
+      margin-top: 425px;
+    
+    }
+
+
+
   }
+
 }
 
 h1 p {
@@ -479,7 +692,7 @@ justify-content: center;
 //   font-size: 28px !important;
 // }
 
-Link .maujHover:hover {
+.maujHover:hover {
   color: #331640
 }
 .shafraHover:hover {
@@ -613,4 +826,10 @@ table, th, td {
 //   font-size: 25px;
 
 // }
+
+.shafraTable {
+  height: 150%;
+  width: 90%;
+  object-fit: contain;
+}
 

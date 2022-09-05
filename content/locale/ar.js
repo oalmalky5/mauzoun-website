@@ -4,13 +4,13 @@ export const ar = {
     storyLink: "فريقنا",
     servicesLink: "خدماتنا",
     portfolioLink: "أعمالنا",
-    blogLink: "مدوّنتنا",
+    storeLink: "متجرنا الإلكتروني",
     andyouLink: "مَوْزوْن وأنت",
     email: "hello@mauzoun.com",
     location: "من قلب السعودية<br></br> إلى العالم أجمع.",
     comingSoon: "قريبًا.",
-    contactPrompt: `كتاباتنا موزونة؟ `+`<br/>`+`راسلونا اليوم.`,
-    "contactPrompt.hovered": `كتاباتنا موزونة؟ `+`<br/>`+`راسلونا اليوم.`,
+    contactPrompt: `<span class='circleBfrHover'>كتاباتنا موزونة؟ `+`<br/>`+`راسلونا اليوم.</span>`,
+    "contactPrompt.hovered": `<span class='circleAfterHover'>كتاباتنا موزونة؟ `+`<br/>`+`راسلونا اليوم.</span>`,
     "contact.fullName": "اسمكم الكامل.",
     "contact.projectName": "اسم علامتكم أو مشروعكم.",
     "contact.country": "بلد إقامتكم.",
@@ -21,6 +21,9 @@ export const ar = {
     "contact.success": "Thanks for contacting us!",
     "contact.failure":
       "Sorry, we could not reach our servers. Please try again later.",
+    "storeMain": "متجرنا الإلكتروني",
+    "storeSmall": "E-Store"
+  
   },
   "/home": {
     title: "مَوْزوْن هو ستوديو كتابة ودار نشر في خدمة العلامات والمؤلفين في العالم أجمع. نأمل أن نكون اسمًا على مسمّى، بحيث تبقى كلماتنا وخدماتنا وقيمنا جميعها موزونة.",
@@ -41,7 +44,9 @@ export const ar = {
     "work.content":
       "نخوض شراكات مع المشاريع الشيقة والأخلاقية والتي تسعى لنتائج مربحة للطرفين.",
     "work.content2":
-      "نتواصل بوضوح واستمرارية ونحرص على المراسلات الرقمية المنظمة والمنجزات التي تراعي الوقت، وهذا واقع تلمسونه عند تفعيل مشروعكم، إذ نوازي بين أدق التفاصيل في ملخصكم وبين معرفتنا بأفضل الممارسات كي نضمن أفضل النتائج الممكنة، والتي نستمر في تحسينها وإياكم عبر جولتي التعديلات المجانية."
+      "نتواصل بوضوح واستمرارية ونحرص على المراسلات الرقمية المنظمة والمنجزات التي تراعي الوقت، وهذا واقع تلمسونه عند تفعيل مشروعكم، إذ نوازي بين أدق التفاصيل في ملخصكم وبين معرفتنا بأفضل الممارسات كي نضمن أفضل النتائج الممكنة، والتي نستمر في تحسينها وإياكم عبر جولتي التعديلات المجانية.",
+    "pic": 
+      "<img class='picBgAr' src='/homeBgPicAr.png'/>"
   },
   "/blog": {
     title: "مدوّنتنا",
@@ -90,9 +95,9 @@ export const ar = {
     content:
       "اقرأوا مدونات فريقنا المتعلقة بمشاريعنا والتي توثق عمليتنا في التفكير الإبداعي وتظهر أعمالنا النهائية بصورتها التي أحببناها.",
     "contentWriting.title": "كتابة المحتوى المهني",
-    "contentWriting.clients.1": "<div class='maujHover'><Link href='/mauj'>موج</Link></div>",
-    "contentWriting.clients.2": "<div class='shafraHover'> شفرة</div>",
-    "contentWriting.clients.3": "<div class='palmHover'><Link href='/musaandpalm'>موسى آند بالم</Link></div>",
+    "contentWriting.clients.1": "<div class='maujHover'><a href='/mauj'>موج</a></div>",
+    "contentWriting.clients.2": "<div class='shafraHover'><a href='/shafra'>شفرة</a></div>",
+    "contentWriting.clients.3": "<div class='palmHover'><a href='/musaandpalm'>موسى آند بالم</a></div>",
     "contentWriting.clients.4": "<div class='authorityHover'>الهيئة السعودية للسياحة</div>",
     "contentWriting.clients.5": "<div class='albalad'>وزارة الثقافة: جدة التاريخية</div>",
     "contentWriting.clients.6": "<div class='redSea'>مهرجان البحر الأحمر السينمائي الدولي (٢٠٢١)</div>",

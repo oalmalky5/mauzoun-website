@@ -111,20 +111,7 @@ export default function shafra({ textAnimationControls, handleBgColorChange, han
                 <span class="title">{f("lang.title")}</span>
                 <span className="para">{f("lang.para1")}</span>
 
-                <table>
-                  <tr>
-                    <th></th>
-                    <th class="arabic">{f("table.ara1")}</th>
-                  </tr>
-                  <tr>
-                    <td class="english">{f("table.eng")}</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td class="arabic">{f("table.ara2")}</td>
-                  </tr>
-                </table>
+                <img className="shafraTable" src="Mauzoun_Web_Shafra (TABLE2).png" alt="shafra_table"/>
 
                 <div className="story">
                   <span class="title">{f("story.title")}</span>

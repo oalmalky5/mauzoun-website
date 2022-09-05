@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from "react";
 import { useIntl } from "react-intl";
-import { useRouter } from "next/router";
+import router, { useRouter } from "next/router";
 
 import styles from "../styles/contact.module.scss";
 import Contact from "../components/Contact";
@@ -13,9 +13,11 @@ export default function ContactButton({
   backgroundColor = "#ffffff",
   isNavOpen,
   history
-}) {
+}) {  
+
   const {oneVW} = useWidth()
   const {locale} = useRouter();
+
 
   const intl = useIntl();
   const f = (id, options) => formatJsxMessage(intl, locale, id, options);
@@ -23,7 +25,10 @@ export default function ContactButton({
   const [isHovered, setIsHovered] = useState(false);
   const [isContactFormVisible, setIsContactFormVisible] = useState(false);
   const [isWithAnimation, setIsWithAnimation] = useState(true);
+  const { asPath, pathname } = useRouter();
 
+
+  
   useEffect(()=>{
     const maxSize = 210;
     const minSize = 150;
@@ -63,7 +68,13 @@ export default function ContactButton({
               // setIsContactFormVisible(true);
             }}
             transition={{ duration: 0.5 }}
-            style={{ backgroundColor: isHovered ? "#f8d952" : "#ffffff" }}
+            style={{ backgroundColor: isHovered & asPath === '/home' ? "#69488E" : 
+                                      isHovered & asPath === '/story' ? '#C14729' : 
+                                      isHovered & asPath === '/services' ? '#CD9F26' :
+                                      isHovered & asPath === '/portfolio' ? '#F8D952' :
+                                      isHovered & asPath === '/blog' ? '#34A798' :
+                                      isHovered & asPath === '/andyou' ? '#A0D1CA' : "#ffffff"
+                                    }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             layout='position'
@@ -71,7 +82,7 @@ export default function ContactButton({
             <div className = {styles.circleContainer}>
               <a href="mailto:hello@mauzoun.com">
                 <svg height="100%" width="100%">
-                    <circle className={isWithAnimation ? styles.circleAnimation : ''} cx={circleParams.cx} cy={circleParams.cy} r={circleParams.r} stroke="#231f20" stroke-width="4" fill-opacity="0" />
+                    <circle className={isWithAnimation ? styles.circleAnimation : ''} cx={circleParams.cx} cy={circleParams.cy} r={circleParams.r} stroke="#231f20" stroke-width="1.5" fill-opacity="0" />
                 </svg>
               </a>
           </div>

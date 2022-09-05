@@ -5,7 +5,6 @@ import {motion} from "framer-motion";
 import {Carousel} from "react-responsive-carousel";
 import {BsChevronLeft, BsChevronRight} from "react-icons/bs";
 import {NextSeo} from "next-seo";
-
 import styles from "../styles/portfolio.module.scss";
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
@@ -161,19 +160,19 @@ export default function portfolio({textAnimationControls, handleBgColorChange, h
                                 <span style={{marginBottom: "50px"}}>{f("content")}</span>
 
                                 {/* Content Writing */}
-                                <span className="sub-title">{f("contentWriting.title")}</span>
+                                <span className="titleMain">{f("contentWriting.title")}</span>
                                 <span className="clientName">{getClients("contentWriting")}</span>
 
                                 <hr className="big-margin" size={1} color="black"/>
 
                                 {/* Creative Writing */}
-                                <span className="sub-title">{f("creativeWriting.title")}</span>
+                                <span className="titleMain">{f("creativeWriting.title")}</span>
                                 {getClients("creativeWriting")}
 
                                 <hr className="big-margin" size={1} color="black"/>
 
                                 {/* Boutique Publishing */}
-                                <span className="sub-title">{f("boutiquePublishing.title")}</span>
+                                <span className="titleMain">{f("boutiquePublishing.title")}</span>
                                 {getClients("boutiquePublishing")}
                             </div>
 

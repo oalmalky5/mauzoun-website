@@ -89,13 +89,12 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
               isNavOpen = {isNavOpen}
               handleOpenNav = {handleOpenNav}
             />
-
-            <div className='container'>
+              
+              <div className='container'>
               <div className='container-background' style={{ backgroundColor }}>
+                {/*<img className="backgroundImg" src="/homeBgPicEn.png" />*/}
               </div>
               <div className='container-content'>
-                <span className="homeTitle">{f("title")}</span>
-                <span className="homeSummary">{f("summary")}</span>
               </div>
               {/*<div className='container-image'>
                 <motion.img
@@ -107,14 +106,42 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                   alt='an image of an office'
                   transition={{ duration: 0.5 }}
                 />
-          </div>*/}
+              </div>*/}
               <div className='container-content'>
                 <Link href='/story'>
                   <h5 className='mb-0'>
                     {/*<u>{f("story.intro")}</u>*/}
                   </h5>
                 </Link>
-               { <p className="contentHome">{f("story.content")}</p>}
+
+              <div className="homeContainer">
+             
+              {f("pic")}
+                <div>
+                  {<span className="homeTitle">{f("title")}</span> }
+                </div>
+                <div>
+                  {<span className="homeSummary">{f("summary")}</span> }
+                </div>
+                <div>
+                  {<span className="storyContent">{f("story.content")}</span> }
+                  {<span className="servicesContent">{f("services.content")}</span> }
+                </div>
+                <div>
+                  {<span className="approach">{f("approach.content")}</span> }
+                  {<span className="projects">{f("projects.content")}</span> }
+                </div>
+                <div>
+                  {<span className="partner">{f("work.content")}</span> }
+                  {<span className="communicate">{f("work.content2")}</span> }
+                </div>
+
+              </div>
+
+
+                
+
+               { /* <p className="contentHome">{f("story.content")}</p> */}
 
                 {/* Services */}
                 {/*!areServicesVisible ? (
@@ -137,7 +164,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     <hr />
                   </div>
                 )*/}
-                <p className="servicesContent">{f("services.content")}</p>
+                {/*<p className="servicesContent">{f("services.content")}</p>*/}
                 {/* Approach */}
                 {/*!isApproachVisible ? (
                   <div
@@ -159,7 +186,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                 )*/}
                 
 
-                <p className="mt-1">{f("approach.content")}</p>
+                {/*<p className="mt-1">{f("approach.content")}</p>*/}
 
                 {/* Projects */}
                 {/*!areProjectsVisible ? (
@@ -180,7 +207,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     <hr />
                   </div>
                 )*/}
-                <p className="homeProjects">{f("projects.content")}</p>
+                {/* <p className="homeProjects">{f("projects.content")}</p>*/}
                 {/* Work */}
                 {/*!isWorkVisible ? (
                   <div
@@ -199,8 +226,8 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                     {f("work.content")}
                   </div>
                 )*/}
-                <p className="work">{f("work.content")}</p>
-                <span className="homeWork">{f("work.content2")}</span>
+               {/*<p className="work">{f("work.content")}</p> */}
+                {/*<span className="homeWork">{f("work.content2")}</span>*/}
               </div>
             </div>
           </div>

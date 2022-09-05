@@ -33,77 +33,76 @@ export default function blog({ textAnimationControls, handleBgColorChange, handl
 
   React.useEffect(() => handleBgColorChange(backgroundColor), []);
 
-  return (
-    <>
-      <NextSeo
-        title={locale !== "ar" ? "Mauzoun | Our Blog" : "مَوْزوْن | مدوّنتنا"}
-        description={locale !== "ar" ? "Mauzoun | Our Blog" : "مَوْزوْن | مدوّنتنا"}
-      />
-      <div className="background-animation" style={{ backgroundColor }} />
-
-      <motion.div
-        key={key}
-        initial={initial}
-        animate={animate}
-        variants={variants}
-      >
-        <ContactButton isNavOpen={isNavOpen} history={history} />
-        <div
-          style={{
-            position: "fixed",
-            display: "flex",
-            alignItems: "stretch",
-            width: "100%",
-            height: "100%",
-            overflowX: "hidden",
-            // overflowY: "scroll",
-          }}
-        >
-          <div
-            className="bg-animation-blog"
-            style={{
-              position: "relative",
-              width: "100%",
-              height: "100%",
-              zIndex: 8,
-              overflow: isNavOpen ? "hidden" : null,
-            }}
-          >
-            <MotionLogo />
-            <Menu
-              backgroundColor={backgroundColor}
-              textAnimationControls={textAnimationControls}
-              isNavOpen={isNavOpen}
-              handleOpenNav={handleOpenNav}
-            />
-
-            <div className="container">
-              <div className="container-background" style={{ backgroundColor }}></div>
-              <div className="container-content">
-                <h1>{f("title")}</h1>
-              </div>
-              <div className="container-content">
-                {/* <ComingSoon /> */}
-
-                <ComingSoon/>
-                {/*<img src={blogImage} height="" width="100%" />*/}
-                {/*<div>*/}
-                {/*    <div className={styles.blogPost}>*/}
-                {/*        <div className={styles.postTitle}>*/}
-                {/*            <h4 style={locale === "ar" ? {paddingLeft:"15px"} : {paddingRight:"15px"}}>{locale === "ar" ? 'لماذا أسست موقع "موزون"' : 'Why I Founded Mauzoun'}</h4>*/}
-                {/*            <span style={{ fontSize: '14px'}}>{locale === "ar" ? '26 يوليو 2021' : 'July 26, 2021'}</span>*/}
-                {/*        </div>*/}
-                {/*        <span className={styles.postedBy}>{locale === "ar" ? ' بواسطة ليان عبد الشكور' : 'by Layan Abdul Shakur'} </span>*/}
-                {/*    </div>*/}
-                {/*  <ReadMore />*/}
-                {/*</div>*/}
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </motion.div>
-      <Footer />
-    </>
-  );
+  return ('');
 }
+
+
+      // <NextSeo
+      //   title={locale !== "ar" ? "Mauzoun | Our Blog" : "مَوْزوْن | مدوّنتنا"}
+      //   description={locale !== "ar" ? "Mauzoun | Our Blog" : "مَوْزوْن | مدوّنتنا"}
+      // />
+      // <div className="background-animation" style={{ backgroundColor }} />
+
+      // <motion.div
+      //   key={key}
+      //   initial={initial}
+      //   animate={animate}
+      //   variants={variants}
+      // >
+      //   <ContactButton isNavOpen={isNavOpen} history={history} />
+      //   <div
+      //     style={{
+      //       position: "fixed",
+      //       display: "flex",
+      //       alignItems: "stretch",
+      //       width: "100%",
+      //       height: "100%",
+      //       overflowX: "hidden",
+      //       // overflowY: "scroll",
+      //     }}
+      //   >
+      //     <div
+      //       className="bg-animation-blog"
+      //       style={{
+      //         position: "relative",
+      //         width: "100%",
+      //         height: "100%",
+      //         zIndex: 8,
+      //         overflow: isNavOpen ? "hidden" : null,
+      //       }}
+      //     >
+      //       <MotionLogo />
+      //       <Menu
+      //         backgroundColor={backgroundColor}
+      //         textAnimationControls={textAnimationControls}
+      //         isNavOpen={isNavOpen}
+      //         handleOpenNav={handleOpenNav}
+      //       />
+
+      //       <div className="container">
+      //         <div className="container-background" style={{ backgroundColor }}></div>
+      //         <div className="container-content">
+      //           <h1>{f("title")}</h1>
+      //         </div>
+      //         <div className="container-content">
+      //           {/* <ComingSoon /> */}
+
+      //           <ComingSoon/>
+      //           {/*<img src={blogImage} height="" width="100%" />*/}
+      //           {/*<div>*/}
+      //           {/*    <div className={styles.blogPost}>*/}
+      //           {/*        <div className={styles.postTitle}>*/}
+      //           {/*            <h4 style={locale === "ar" ? {paddingLeft:"15px"} : {paddingRight:"15px"}}>{locale === "ar" ? 'لماذا أسست موقع "موزون"' : 'Why I Founded Mauzoun'}</h4>*/}
+      //           {/*            <span style={{ fontSize: '14px'}}>{locale === "ar" ? '26 يوليو 2021' : 'July 26, 2021'}</span>*/}
+      //           {/*        </div>*/}
+      //           {/*        <span className={styles.postedBy}>{locale === "ar" ? ' بواسطة ليان عبد الشكور' : 'by Layan Abdul Shakur'} </span>*/}
+      //           {/*    </div>*/}
+      //           {/*  <ReadMore />*/}
+      //           {/*</div>*/}
+      //         </div>
+
+      //       </div>
+      //     </div>
+      //   </div>
+      // </motion.div>
+      // <Footer />

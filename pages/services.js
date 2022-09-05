@@ -213,7 +213,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                           <>
                               {f("creativeWriting.content")}
                               <div className="container-object">
-                                  <div className={styles.totalWhiteBox}>
+                                  <div className="totalWhiteBox">
                                       <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
                                           <span className="contentWritingServicesHeader">{f("creativeWriting.services.header")}</span>
                                           <br/>

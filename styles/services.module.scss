@@ -66,12 +66,12 @@
   }
 }
 
-.totalWhiteBox {
-  @include ltr {
-    margin-left: 33px;
-  }
+// .totalWhiteBox {
+//   @include ltr {
+//     margin-left: 33px;
+//   }
 
-  @include rtl {
-    margin-right: 33px;
-  }
-}
+//   @include rtl {
+//     margin-right: 33px;
+//   }
+// }

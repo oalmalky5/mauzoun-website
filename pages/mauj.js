@@ -14,6 +14,7 @@ import WhiteBox from "../components/WhiteBox";
 
 const backgroundColor = "#f7f5f0";
 
+
 export default function mauj({ textAnimationControls, handleBgColorChange, handleOpenNav,history, isNavOpen, ...rest }) {
   const locale = useRouter().locale;
   const { key, initial, animate, variants } = rest;
