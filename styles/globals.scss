@@ -1,5 +1,6 @@
 @use "mixins" as *;
 @import "fonts";
+@import url('/components/Menu.js');
 
 html,
 body {
@@ -51,7 +52,7 @@ body {
       font-family: "MizanAR-Bold" !important;
       font-size: 50px !important;
     }
-    & .whitebox-font, .testPara1, .testPara2, .testPara3, .servicesHeader, .sub-title {
+    & .whitebox-font, .testPara1, .testPara2, .testPara3,  .sub-title, .titleMain{
       font-family: "MizanAR-Bold" !important;
       font-size: 35px !important;
     }
@@ -64,7 +65,7 @@ body {
       font-family: "Lierata-Regular";
       font-size: 22px;
     }
-    & .approachHeader, .contentWritingFont, .creativeWritingFont, .mainHeader{
+    & .approachHeader, .contentWritingFont, .creativeWritingFont, .mainHeader {
       font-family: "MizanAR-Bold";
       font-size: 30px;
     }
@@ -84,7 +85,7 @@ body {
       width: 360px;
       top: 4%;
       margin-right: 30px;
-      font-size: 1.8rem !important;
+      font-size: 1.875rem !important;
       font-family: "MizanAR-Bold";
     }
 
@@ -104,7 +105,7 @@ body {
       top: 32%;
       width: 360px;
       margin-right: 65px;
-      font-size: 1.8rem !important;
+      font-size: 1.875rem !important;
       font-family: "MizanAR-Bold";
     }
 
@@ -121,17 +122,17 @@ body {
     & .approach {
       position: absolute;
       color: white;
-      top: 48%;
+      top: 47%;
       width: 400px;
       margin-right: 250px;
-      font-size: 1.8rem !important;
+      font-size: 1.875rem !important;
       font-family: "MizanAR-Bold";
     }
 
     & .projects {
       position: absolute;
       color: white;
-      top: 58%;
+      top: 60%;
       width: 400px;
       margin-right: 250px;
       font-size: 1.4rem !important;
@@ -145,7 +146,7 @@ body {
       top: 73%;
       width: 500px;
       margin-right: 110px;
-      font-size: 1.8rem !important;
+      font-size: 1.875rem !important;
       font-family: "MizanAR-Bold";
     }
 
@@ -178,6 +179,22 @@ body {
       margin-top: 470px;
     
     }
+
+    & .whitebox-font, .servicesHeader, .brandsNumber, .testPara1, .testPara2, .testPara3, .shafraTest, .musaPara1, .musaPara2, .musaPara3 {
+      font-size: 32px !important;
+      font-family: 'MizanAR-Bold';
+    }
+    & .contentService {
+      font-size: 27px !important;
+      font-family: 'MizanAR-Regualr';
+    }
+
+    & .hyperLink {
+      font-size: 30px;
+      font-family: 'MizanAR-Bold';
+    }
+
+
 
 
     
@@ -224,7 +241,7 @@ body {
       font-family: 'Sharik-Regular';
       font-size: 20px;
     }
-    & .whitebox-font, .testPara1, .testPara2, .testPara3, .servicesHeader, .sub-title, .titleMain {
+    & .whitebox-font, .testPara1, .testPara2, .testPara3, .sub-title, .titleMain {
       font-family: "Lierata-Bold" !important;
       font-size: 30px !important;
     }
@@ -346,6 +363,31 @@ body {
       margin-top: 425px;
     
     }
+    & .navLink {
+      color: green !important;
+    }
+    & .whitebox-font, .servicesHeader, .brandsNumber, .testPara1, .testPara2, .testPara3, .shafraTest, .musaPara1, .musaPara2, .musaPara3 {
+      font-size: 27px !important;
+      font-family: 'Lierata-Bold';
+    }
+    & .contentService {
+      font-size: 27px !important;
+      font-family: 'Lierata-Regular';
+    }
+
+    & .hyperLink {
+      font-size: 25px;
+      font-family: 'Sharik-Bold';
+    }
+
+   & .maujPic {
+    width: 700px;
+   }
+
+
+
+
+
 
 
 

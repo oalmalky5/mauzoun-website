@@ -170,7 +170,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
                     <>
                       {f("contentWriting.content")}
                       <div className="container-object">
-                        <div className={styles.totalWhiteBox}>
+                        <div className="totalWhiteBox">
                           <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
                             {f("contentWriting.services.header")}
                             <br />

@@ -1,4 +1,5 @@
 @use "mixins" as *;
+@import "fonts";
 
 .sidenav {
   position: fixed;
@@ -196,9 +197,10 @@
 
 .navLink {
   & p {
-    font-size: 25px;
+    font-size: 30px;
     margin-top: 0px;
     margin-bottom: 0px;
+    
   }
 
   & .otherLocaleLink{
@@ -208,7 +210,7 @@
   }
 
   & .otherLocaleLink p {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
@@ -291,3 +293,4 @@
     transform: translateX(35px);
   }
 }
+

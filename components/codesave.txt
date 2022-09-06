@@ -1,0 +1,8 @@
+          // <span className="store"
+          //       onMouseEnter={() => {
+          //          buildTiltedSquare()
+          //          setHoveredLink("invert(58%) sepia(29%) saturate(790%) hue-rotate(132deg) brightness(92%) contrast(88%)")
+          //       }}
+          //       // onMouseLeave={}
+          // ><a href={"//shop.mauzoun.com"} target="_blank">{f("storeMain")}</a></span>
+          // <span className="storeSmall"><a href={"//shop.mauzoun.com"} target="_blank" >{f("storeSmall")}</a></span>

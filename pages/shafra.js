@@ -116,7 +116,7 @@ export default function shafra({ textAnimationControls, handleBgColorChange, han
                 <div className="story">
                   <span class="title">{f("story.title")}</span>
                   <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                    <span className="testPara1">{f("story.para")}</span>
+                    <span className="shafraTest">{f("story.para")}</span>
                   </WhiteBox>
                 </div>
 

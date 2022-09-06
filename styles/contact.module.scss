@@ -10,6 +10,7 @@
   position: fixed;
   top: 0;
   pointer-events: none;
+  
 
   @media (max-width: 767px) {
     padding: 10px;
@@ -48,6 +49,7 @@
   align-items: flex-end;
   justify-content: center;
   flex-grow: 1;
+  margin: auto;
 
   .contactButton {
     display: flex;
@@ -65,7 +67,7 @@
 
     & p {
       font-size: 16px;
-      font-style: italic;
+      
     }
 
     

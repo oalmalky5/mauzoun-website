@@ -11,6 +11,9 @@ import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import styles from "../styles/mauj.module.scss";
 import WhiteBox from "../components/WhiteBox";
+import * as locales from "../content/locale";
+import Story from "./story";
+
 
 const backgroundColor = "#f7f5f0";
 
@@ -108,13 +111,7 @@ export default function mauj({ textAnimationControls, handleBgColorChange, handl
 
               <div className={styles.tone}>
                 <span className="toneTitle">{f("tone.title")}</span>
-                <ul className="list">
-                  <li>{f("tone.listElement1")}</li>
-                  <li>{f("tone.listElement2")}</li>
-                  <li>{f("tone.listElement3")}</li>
-                  <li>{f("tone.listElement4")}</li>
-                  <li>{f("tone.final")}</li>
-                </ul>
+                <span className="maujPic">{locale === "en-US" ? <img src="Mauj-02.png"/> : <img src="Mauj-01.png"/>}</span>
                 <span className="tonePara1">{f("tone.para1")}</span>
                 <span className="tonePara2">{f("tone.para2")}</span>
 

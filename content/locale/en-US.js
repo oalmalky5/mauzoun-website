@@ -4,14 +4,13 @@ exports["en-US"] = {
     storyLink: "Team",
     servicesLink: "Services",
     portfolioLink: "Portfolio",
-    storeLink: "<a href='shop.mauzoun.com' target='_blank'>E-Store</a>",
+    blogLink: "E-Store",
     andyouLink: "Mauzoun & You",
     email: "hello@mauzoun.com",
     location: "From the heart of Saudi <br></br> to the whole of the world.",
     comingSoon: "COMING SOON.",
-    contactPrompt: `Like what<br/> you read?<br/>`  +
-        "Contact us today.",
-    "contactPrompt.hovered": `Like what <br/> you read?<br/>`  + "Contact us today.",
+    contactPrompt: `Let's<br/>`  + "Collaborate",
+    "contactPrompt.hovered": `Let's<br/>`  + "Collaborate",
     "contact.fullName": "Your full name.",
     "contact.projectName": "Your brand or project name.",
     "contact.country": "Your country of residence.",
@@ -78,7 +77,7 @@ exports["en-US"] = {
         We also seek managers who are able to lead our team in a manner that balances the humanistic with the professional: diligent, organized, precise and empathic are the traits we seek.
         <br></br>
         <br></br>
-        For our Boutique Publishing, Media, and Art Departments, we seek team members who are diligent, compassionate, and embody our values, which you can read more about <Link href='/story'><u>here</u></Link>.
+        For our Boutique Publishing, Media, and Art Departments, we seek team members who are diligent, compassionate, and embody our values, which you can read more about <a class='hyperLink' href='/story'><u>here</u></a>.
       `,
     "joinCompetition.intro": "Apply to the Competition",
     "joinCompetition.content":
@@ -108,7 +107,7 @@ exports["en-US"] = {
       "<div class='arts'><b>Ministry of Culture: Culinary Arts Books</b></div>",
     "boutiquePublishing.title": "Boutique Publishing",
     "boutiquePublishing.clients.1": "<div class='myths'><b>The Myths in Our World & Around It</b></div>",
-    clients: "Since 2018, we have worked on <b><u>over 90 projects</u></b>.",
+    clients: "<span class='brandsNumber'>Since 2018, we have worked on <b><u>over 90 projects</u></b>.</span>",
   },
   "/mauj": {
     title: "",
@@ -132,8 +131,9 @@ exports["en-US"] = {
     "testimony.title": "What Mauj wrote about Mauzoun:",
     "testimony.para1": "<b>Mauzoun won us over with the first page of their proposal.</b> Their in-depth research, cultural references, insightful analysis, and brilliant, witty writing sealed the deal.",
     "testimony.para2": "<b>We were not only looking for excellent writers, we were seeking strategic partners</b> who could think with us (sometimes for us), help us better understand our regional audience, engage in future planning, and who are equally invested in the success of the business. That’s exactly what the Mauzoun Team is.",
-    "testimony.para3": "They have mastered the Arabic language, are culturally tapped in, understand the ins and outs of social norms, always add their creative magic to all that they do, and are up for a challenge any day. <b>The harder the brief or ask, the more excited they get and the better the work.</b> They inspire us to up our strategy, put out better work, think harder, and act faster. They are willing to bend over backwards to get us to meet our objectives, and that kind of partnership doesn’t come easy. We are so thankful to have such an impressive group of strong, smart, and witty writers who we get to call our partners."
-  },
+    "testimony.para3": "They have mastered the Arabic language, are culturally tapped in, understand the ins and outs of social norms, always add their creative magic to all that they do, and are up for a challenge any day. <b>The harder the brief or ask, the more excited they get and the better the work.</b> They inspire us to up our strategy, put out better work, think harder, and act faster. They are willing to bend over backwards to get us to meet our objectives, and that kind of partnership doesn’t come easy. We are so thankful to have such an impressive group of strong, smart, and witty writers who we get to call our partners.",
+    "processPic": `<img src='Mauj-01.png' />`
+  },           
 
 
   "/musaandpalm": {

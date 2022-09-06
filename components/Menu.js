@@ -1,5 +1,5 @@
 import React from "react";
-import { IoLogoLinkedin, IoLogoTwitter, IoLogoInstagram } from "react-icons/io";
+import { IoLogoLinkedin, IoLogoTwitter, IoLogoInstagram, IoMdStopwatch } from "react-icons/io";
 import { useIntl, createIntl, createIntlCache } from "react-intl";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -91,6 +91,9 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
       filter = "invert(58%) sepia(29%) saturate(790%) hue-rotate(132deg) brightness(92%) contrast(88%)"
     else if (router.pathname === "/andyou")
       filter = "invert(80%) sepia(37%) saturate(164%) hue-rotate(116deg) brightness(89%) contrast(88%)"
+    else {
+      filter = "invert(58%) sepia(29%) saturate(790%) hue-rotate(132deg) brightness(92%) contrast(88%)"
+    }
     {/*if (router.pathname === "/services" || router.pathname === "/blog")
       filter = "invert(92%) sepia(72%) saturate(682%) hue-rotate(329deg) brightness(96%) contrast(103%)";
   else filter = "invert(99%) sepia(59%) saturate(426%) hue-rotate(169deg) brightness(112%) contrast(100%)";*/}
@@ -221,22 +224,32 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
 
         <div className={styles.menu}>
           <div>
-            {["home", "story", "services", "portfolio", "andyou"].map((e, i) => {
+            {["home", "story", "services", "portfolio", "blog", "andyou"].map((e, i) => {
               const otherText = otherF(e + "Link");
+              
+              // if (e === "blog"){
+              //   return <a href={"//shop.mauzoun.com"} target="_blank" ></a>
+              // }
               return (
                 <div key={e}>
                   {!(i % 2) && buildTiltedSquare(e)}
                   
-                  <Link href={e + '/'} >
+                  <Link href={e + '/'} > 
+                    
                   
 
+                  
                     <a
-
+                      
                       className={styles.navLink}
+                      // href={otherText === "blogLink" ? <Link to={"shop.mauzoun.com"}></Link> : ""}
+                      
                       
                       // onMouseEnter={() => (isIOS ? null : setHoveredLink())}
                       // onMouseLeave={() => (isIOS ? null : setHoveredLink(""))}
-                      onMouseEnter={() =>  setHoveredLink(router.asPath === '/' + e)}
+                      onMouseEnter={() =>  {
+                        setHoveredLink(e)
+                      }}
                       onMouseLeave={() =>  setHoveredLink("")}
                       onClick={() => isNavOpen && handleOpenNav?.("instant")}
 
@@ -265,14 +278,13 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
                       
                     </a>
                   </Link>
+                  
                 </div>
                 
               );
               
             })}
           </div>
-          <span className="store"><a href={"//shop.mauzoun.com"} target="_blank">{f("storeMain")}</a></span>
-          <span className="storeSmall"><a href={"//shop.mauzoun.com"} target="_blank" >{f("storeSmall")}</a></span>
           <div className={styles.languageSwitch}>
             <p className={locale}>
               <b>{locale === "en-US" ? "English" : "العربية"}</b>

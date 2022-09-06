@@ -3,13 +3,13 @@
 
 
 .whiteBox {
-  width: 100%;
   position: relative;
-  max-width: 892px !important;
+  width: 896px !important;
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: white;
   border: solid black 2px;
+    
 
   @include ltr {
     margin-left: -30px;
@@ -35,3 +35,4 @@
   width: 20px;
   transform: scaleX(-1);
 }
+

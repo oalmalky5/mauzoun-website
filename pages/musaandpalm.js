@@ -141,11 +141,11 @@ export default function musaandpalm({textAnimationControls, handleBgColorChange,
                                 <div className={styles.totalWhiteBox}>
                                     <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
                                         <span
-                                              className="testPara1">{f("testimony.para1")}</span>
+                                              className="musaPara1">{f("testimony.para1")}</span>
                                         <span 
-                                              className="testPara2">{f("testimony.para2")}</span>
+                                              className="musaPara2">{f("testimony.para2")}</span>
                                         <span 
-                                              className="testPara3">{f("testimony.para3")}</span>
+                                              className="musaPara3">{f("testimony.para3")}</span>
                                     </WhiteBox>
                                 </div>
 
