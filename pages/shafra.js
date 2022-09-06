@@ -11,6 +11,8 @@ import {MotionLogo} from "../components/MotionLogo"
 import ContactButton from "../components/ContactButton";
 import styles from "../styles/shafra.module.scss";
 import WhiteBox from "../components/WhiteBox";
+import Image from "next/image"
+
 
 const backgroundColor = "#f7f5f0";
 
@@ -111,7 +113,7 @@ export default function shafra({ textAnimationControls, handleBgColorChange, han
                 <span class="title">{f("lang.title")}</span>
                 <span className="para">{f("lang.para1")}</span>
 
-                <img className="shafraTable" src="Mauzoun_Web_Shafra (TABLE2).png" alt="shafra_table"/>
+                <Image className="shafraTable" src="/Mauzoun_Web_Shafra (TABLE2).png" alt="shafra_table" width={1000} height={400}/>
 
                 <div className="story">
                   <span class="title">{f("story.title")}</span>
