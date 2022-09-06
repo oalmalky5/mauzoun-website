@@ -21,7 +21,7 @@ module.exports = {
     return [
       {
         source: '/blog',
-        destination: 'http://shop.mauzoun.com',
+        destination: 'https://shop.mauzoun.com',
         permanent: false
       }
     ];

@@ -9,7 +9,7 @@ export const ar = {
     email: "hello@mauzoun.com",
     location: "من قلب السعودية<br></br> إلى العالم أجمع.",
     comingSoon: "قريبًا.",
-    contactPrompt: `<span class='circleBfrHover'>لنتعاون`+`<br/>`+` معًا</span>`,
+    contactPrompt: `<span class='circleBfrHover'>لـنـتـعــــــاون`+`<br/>`+` معًا</span>`,
     "contactPrompt.hovered": `<span class='circleAfterHover'>لنتعاون`+`<br/>`+` معًا</span>`,
     "contact.fullName": "اسمكم الكامل.",
     "contact.projectName": "اسم علامتكم أو مشروعكم.",
