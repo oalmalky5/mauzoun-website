@@ -22,7 +22,7 @@ module.exports = {
       {
         source: '/blog',
         destination: 'https://shop.mauzoun.com',
-        permanent: false
+        permanent: true
       }
     ];
   }
