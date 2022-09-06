@@ -6,6 +6,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Cookies from "js-cookie";
 import { isIOS } from "react-device-detect";
+import { useEffect } from "react";
+import Router from "next/router";
 
 import styles from "../styles/menu.module.scss";
 import * as locales from "../content/locale";
@@ -72,6 +74,7 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
       // 👇️ refers to the link element
       console.log(event.currentTarget);
     };
+
     
 
   const [hoveredLink, setHoveredLink] = React.useState("");
@@ -227,9 +230,6 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
             {["home", "story", "services", "portfolio", "blog", "andyou"].map((e, i) => {
               const otherText = otherF(e + "Link");
               
-              // if (e === "blog"){
-              //   return <a href={"//shop.mauzoun.com"} target="_blank" ></a>
-              // }
               return (
                 <div key={e}>
                   {!(i % 2) && buildTiltedSquare(e)}
@@ -242,7 +242,7 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
                     <a
                       
                       className={styles.navLink}
-                      // href={otherText === "blogLink" ? <Link to={"shop.mauzoun.com"}></Link> : ""}
+                      href={e === "blog" ? "shop.mauzoun.com" : null}
                       
                       
                       // onMouseEnter={() => (isIOS ? null : setHoveredLink())}
