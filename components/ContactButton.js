@@ -86,7 +86,7 @@ export default function ContactButton({
             <div className = {styles.circleContainer}>
               <a href="mailto:hello@mauzoun.com">
                 <svg height="100%" width="100%">
-                    <circle className={isWithAnimation ? styles.circleAnimation : ''} cx={circleParams.cx} cy={circleParams.cy} r={circleParams.r} stroke="#231f20" stroke-width="1.5" fill-opacity="0" />
+                    <circle className={isWithAnimation ? styles.circleAnimation : ''} cx={circleParams.cx} cy={circleParams.cy} r={circleParams.r} stroke="#231f20" stroke-width="2" fill-opacity="0" />
                 </svg>
               </a>
           </div>
