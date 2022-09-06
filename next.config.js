@@ -17,17 +17,18 @@ module.exports = {
 
     return config
   },
-  async redirects() {
-    return [
-      {
-        source: '/blog',
-        destination: 'shop.mauzoun.com',
-        permanent: true
-      }
-    ];
-  }
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/blog',
+  //       destination: 'shop.mauzoun.com',
+  //       permanent: true
+  //     }
+  //   ];
+  // }
 
 }
+
 
 
 
