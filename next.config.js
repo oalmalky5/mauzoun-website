@@ -20,7 +20,7 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: 'https://www.mauzoun.com/blog',
+        source: '/blog',
         destination: 'https://shop.mauzoun.com',
         permanent: true
       }
