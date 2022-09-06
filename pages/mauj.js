@@ -13,6 +13,7 @@ import styles from "../styles/mauj.module.scss";
 import WhiteBox from "../components/WhiteBox";
 import * as locales from "../content/locale";
 import Story from "./story";
+import Image from "next/image"
 
 
 const backgroundColor = "#f7f5f0";
@@ -111,8 +112,8 @@ export default function mauj({ textAnimationControls, handleBgColorChange, handl
 
               <div className={styles.tone}>
                 <span className="toneTitle">{f("tone.title")}</span>
-                <span className="maujPic">{locale === "en-US" ? <img src="Mauj-02.png"/> : null}</span>
-                <span className="maujPic">{locale === "ar" ? <img src="Mauj-01.png"/> : null}</span>
+                <span className="maujPic">{locale === "en-US" ? <Image src="/Mauj-02.png" width={800} height={400}/> : null}</span>
+                <span className="maujPic">{locale === "ar" ? <Image src="/Mauj-01.png" width={600} height={350}/> : null}</span>
                 <span className="tonePara1">{f("tone.para1")}</span>
                 <span className="tonePara2">{f("tone.para2")}</span>
 
