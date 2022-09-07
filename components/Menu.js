@@ -8,7 +8,6 @@ import Cookies from "js-cookie";
 import { isIOS } from "react-device-detect";
 import { useEffect } from "react";
 import Router from "next/router";
-
 import styles from "../styles/menu.module.scss";
 import * as locales from "../content/locale";
 import formatJsxMessage from "../utils/formatJsxMessage";
@@ -64,6 +63,8 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
       ...options,
     });
 
+
+    
     const handleAnchorClick = event => {
       // 👇️ use event.preventDefault() if you want to
       // prevent navigation
@@ -227,6 +228,7 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
 
         <div className={styles.menu}>
           <div>
+            
             {["story", "team", "services", "portfolio", "blog", "andyou"].map((e, i) => {
               const otherText = otherF(e + "Link");
               
@@ -234,15 +236,16 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
                 <div key={e}>
                   {!(i % 2) && buildTiltedSquare(e)}
                   
+                  
                   <Link href={e + '/'} > 
                     
                   
-
+                    
                   
                     <a
                       
                       className={styles.navLink}
-                      href={e === "blog" ? "shop.mauzoun.com" : null}
+                      
                       
                       
                       // onMouseEnter={() => (isIOS ? null : setHoveredLink())}
@@ -252,6 +255,7 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
                       }}
                       onMouseLeave={() =>  setHoveredLink("")}
                       onClick={() => isNavOpen && handleOpenNav?.("instant")}
+                      
 
                       
                       
@@ -277,6 +281,7 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
                       </span>
                       
                     </a>
+                    
                   </Link>
                   
                 </div>

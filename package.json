@@ -25,6 +25,7 @@
     "next-google-fonts": "^2.2.0",
     "next-seo": "^4.24.0",
     "nextjs-google-fonts": "^3.0.0",
+    "nextjs-redirect": "^6.0.1",
     "react": "17.0.2",
     "react-circular-progressbar": "^2.0.4",
     "react-device-detect": "^1.17.0",
