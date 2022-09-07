@@ -1,7 +1,7 @@
 export const ar = {
   shared: {
-    homeLink: "قصتنا",
-    storyLink: "فريقنا",
+    storyLink: "قصتنا",
+    teamLink: "فريقنا",
     servicesLink: "خدماتنا",
     portfolioLink: "أعمالنا",
     blogLink: "متجرنا الإلكتروني",
@@ -25,7 +25,7 @@ export const ar = {
     "storeSmall": "E-Store"
   
   },
-  "/home": {
+  "/story": {
     title: "مَوْزوْن هو ستوديو كتابة ودار نشر في خدمة العلامات والمؤلفين في العالم أجمع. نأمل أن نكون اسمًا على مسمّى، بحيث تبقى كلماتنا وخدماتنا وقيمنا جميعها موزونة.",
     summary:
     "تأسسنا عام ٢٠١٨ في السعودية برؤية تطمح لأن تعكس غنى اللغتين العربية والانجليزية، وتشجع إبداع الكُتّاب العرب، وتُبرز القوة الكامنة في المنشورات المميزة.",
@@ -286,7 +286,7 @@ export const ar = {
       "publishing.services.bookMarketing": "<span className='contentService'>تسويق الكتب</span>",
 
   },
-  "/story": {
+  "/team": {
     nameMeaning:
       "إن جودتكم الحقيقية نابعة من جودة فريقكم.",
     proud:

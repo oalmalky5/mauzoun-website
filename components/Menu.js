@@ -227,7 +227,7 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
 
         <div className={styles.menu}>
           <div>
-            {["home", "story", "services", "portfolio", "blog", "andyou"].map((e, i) => {
+            {["story", "team", "services", "portfolio", "blog", "andyou"].map((e, i) => {
               const otherText = otherF(e + "Link");
               
               return (

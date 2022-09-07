@@ -24,13 +24,13 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
   const {width} = useWindowSize()
 
   React.useEffect(() => {
-    router.prefetch("/en-US/home");
-    router.prefetch("/ar/home");
+    router.prefetch("/en-US/story");
+    router.prefetch("/ar/story");
   }, []);
 
   const changeLocale = (locale) => {
     Cookies.set("NEXT_LOCALE", locale);
-    router.push(`/${locale}/home`);
+    router.push(`/${locale}/story`);
     textAnimationControls.set("instantlyHidden");
   };
 

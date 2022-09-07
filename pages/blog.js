@@ -3,12 +3,16 @@ import { useEffect } from "react";
 import Router from "next/router";
 
 
-export default function redirect() {
+
+function Contact() {
+
   useEffect(() => {
-    window.location.assign('https://shop.mauzoun.com/')
-  })
-  return(
-      <>
-      </>
-  )
+    window.open("https://shop.mauzoun.com", "_blank")
+  }, []);
+
+  return (
+    <></>
+  );
 }
+
+export default Contact;

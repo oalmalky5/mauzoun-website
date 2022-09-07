@@ -1,7 +1,7 @@
 exports["en-US"] = {
   shared: {
-    homeLink: "Story",
-    storyLink: "Team",
+    storyLink: "Story",
+    teamLink: "Team",
     servicesLink: "Services",
     portfolioLink: "Portfolio",
     blogLink: "E-Store",
@@ -24,7 +24,7 @@ exports["en-US"] = {
     "storeMain": "E-Store",
     "storeSmall": "متجرنا الإلكتروني"
   },
-  "/home": {
+  "/Story": {
     title: "Mauzoun is a writing studio and publishing house that serves brands and authors worldwide. Our name aptly means “poetic balance” in Arabic, a meaning that our words, services, and values live up to.",
     summary:
       "Founded in 2018 and established in Saudi, our work reflects the richness of the Arabic and English languages, encourages the ingenuity of Arab writers, and emphasizes the power of premium publications.",
@@ -266,7 +266,7 @@ exports["en-US"] = {
   
     
   },
-  "/story": {
+  "/team": {
     nameMeaning:
       "You’re only as good as your team.",
     proud:
