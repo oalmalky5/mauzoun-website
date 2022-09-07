@@ -13,6 +13,8 @@ import { usePanelbear } from '@panelbear/panelbear-nextjs';
 
 import {MotionLogo} from "../components/MotionLogo"
 import Footer from "../components/Footer";
+import Image from "next/image"
+
 
 const backgroundColor = "#f7f5f0";
 
@@ -116,8 +118,11 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
 
               <div className="homeContainer">
              
-              {f("pic")}
-                <div>
+              <span className="homePageEn">{locale === "en-US" ? <Image src="/homeBgWithTextEn.png" width={"800px"} height={1500}/> : null}</span>
+              <span className="homePageAr">{locale === "ar" ? <Image src="/homeBgWithTextAr.png" width={"800px"} height={1500}/>  : null} </span>
+
+
+                {/*<div>
                   {<span className="homeTitle">{f("title")}</span> }
                 </div>
                 <div>
@@ -134,7 +139,7 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
                 <div>
                   {<span className="partner">{f("work.content")}</span> }
                   {<span className="communicate">{f("work.content2")}</span> }
-                </div>
+            </div>*/}
 
               </div>
 
