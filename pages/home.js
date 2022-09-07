@@ -118,8 +118,8 @@ export default function Home({ updatePageTransition, textAnimationControls, hand
 
               <div className="homeContainer">
              
-              <span className="homePageEn">{locale === "en-US" ? <Image src="/homeBgWithTextEn.png" width={"800px"} height={1500}/> : null}</span>
-              <span className="homePageAr">{locale === "ar" ? <Image src="/homeBgWithTextAr.png" width={"800px"} height={1500}/>  : null} </span>
+              <span className="homePageEn">{locale === "en-US" ? <Image src="/homeBgWithTextEn.png" width={"750px"} height={"1500px"}/> : null}</span>
+              <span className="homePageAr">{locale === "ar" ? <Image src="/homeBgWithTextAr.png" width={"750px"} height={"1500px"}/>  : null} </span>
 
 
                 {/*<div>
