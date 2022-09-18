@@ -153,7 +153,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
     <>
       <NextSeo
         title="Mauzoun | مَوْزوْن"
-        description="Mauzoun is a creative writing studio based in Jeddah, Saudi Arabia, specializing in copywriting, translation, scriptwriting, and book editing in both the Arabic and English."
+        description="Mauzoun is a writing studio and publishing house that serves brands and authors worldwide. We holistically balance content writing, book and script commissions, and boutique publishing."
       />
 
       <div className={styles.pageContainer}>
