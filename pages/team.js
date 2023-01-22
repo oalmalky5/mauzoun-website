@@ -59,7 +59,7 @@ const teamMembersData = {
   },
   11: {
     src: "/team/FA.gif",
-    preview: "/team/Mauzoun _ Fatimah Alawi11.png",
+    preview: "/team/Mauzoun _ Fatimah Alawi.png",
   },
   12: {
     src: "/team/Abeer.gif",

@@ -314,7 +314,7 @@ exports["en-US"] = {
     "teamMember.8.role": "Writer",
     "teamMember.9.name": "Danah Kaouri",
     "teamMember.9.role": "Writer",
-    "teamMember.101.name": "Fatmah Jadani",
+    "teamMember.10.name": "Fatmah Jadani",
     "teamMember.10.role": "Publishing Coordinator",
     "teamMember.11.name": "Fatimah Alawi",
     "teamMember.11.role": "Designer",
