@@ -198,27 +198,27 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
             }}
           >
             <div dir="rtl" style={{ zIndex: 3 }}>
-              <p style={{ fontFamily: "GE Dinar Two" }}>
+              <p style={{ fontFamily: "MizanAR-Regular", fontSize: "32px" }}>
                 عشق للكلمات وفريق شغوف:
                 <br />
-                <b>أهلاً بكم في مَوْزوْن.</b>
+                <b style={{fontFamily: "MizanAR-Bold", fontSize: "32px"}}>أهلاً بكم في مَوْزوْن.</b>
               </p>
               <button
                 className={styles.languageButton}
-                style={{ fontFamily: "GE Dinar One", marginBottom: "30px" }}
+                style={{ fontFamily: "GE Dinar One", marginBottom: "20px",  }}
                 onClick={() => {
                   handleMovePage(1);
                 }}
               >
-                <b>اضغطوا هنا</b> لبدء قصتكم بالعربية.
+                <span style={{fontFamily: "MizanAR-Regular", fontSize: "32px"}}><b style={{fontFamily: "MizanAR-Bold", fontSize: "32px"}}>اضغطوا هنا</b> لبدء قصتكم بالعربية.</span>
               </button>
             </div>
 
             <div dir="ltr" style={{ zIndex: 3 }}>
-              <p style = {{fontFamily: "Alegreya"}}>
+              <p style = {{fontFamily: "Sharik-Regular", fontSize: "27px"}}>
               A love for words and a team with fervor:
               <br />
-              <b>welcome to Mauzoun.</b>
+              <b style = {{fontFamily: "Sharik-Bold", fontSize: "27px"}}>welcome to Mauzoun.</b>
               </p>
               <button
                 className = {styles.languageButton}
@@ -227,7 +227,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
                   handleMovePage(2);
                 }}
               >
-                <b>Click here</b> to begin your story in English.
+                <span style = {{fontFamily: "Sharik-Regular", fontSize: "27px"}}><b style = {{fontFamily: "Sharik-Bold", fontSize: "27px"}}>Click here</b> to begin your story in English.</span>
               </button>
             </div>
 

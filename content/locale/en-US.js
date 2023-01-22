@@ -2,15 +2,19 @@ exports["en-US"] = {
   shared: {
     storyLink: "Story",
     teamLink: "Team",
-    servicesLink: "Services",
+    cultureLink: "Culture",
+    methodLink: "Our Method",
+    contentwritingLink: "Content Writing",
+    bookcommissionsLink: "Book Commissions",
+    boutiquepublishingLink: "Boutique Publishing",
     portfolioLink: "Portfolio",
     blogLink: "E-Store",
     andyouLink: "Mauzoun & You",
     email: "hello@mauzoun.com",
     location: "From the heart of Saudi <br></br> to the whole of the world.",
     comingSoon: "COMING SOON.",
-    contactPrompt: `Let's<br/>`  + "Collaborate",
-    "contactPrompt.hovered": `Let's<br/>`  + "Collaborate",
+    contactPrompt: `Let's<br/>` + "Collaborate",
+    "contactPrompt.hovered": `Let's<br/>` + "Collaborate",
     "contact.fullName": "Your full name.",
     "contact.projectName": "Your brand or project name.",
     "contact.country": "Your country of residence.",
@@ -46,7 +50,7 @@ exports["en-US"] = {
       "We partner with exciting and ethical projects that seek win-win outcomes.",
     "work.content2":
       "We communicate with clarity and consistency, ensuring organized digital correspondence and timely deliverables. Consider it done upon your project’s activation; we align the finest details of your brief with our knowledge of best practices to ensure the most excellent outcome possible, which we further refine with you through our two complimentary rounds of changes.",
-    "pic": 
+    "pic":
       "<img class='picBg' src='homeBgPicEn.png'/>"
   },
   "/blog": {
@@ -62,15 +66,15 @@ exports["en-US"] = {
       <br /><br />
       If you are interested in joining Mauzoun, follow our Instagram account to stay in the know.
     `,
-    "hiring.header": 
+    "hiring.header":
       "<span className='servicesHeader'>We hire at the following departments at Mauzoun:</span>",
-      "hiring.contentWriting": "<span className='contentService'>Content Writing</span>",
-      "hiring.creativeWriting": "<span className='contentService'>Book & Script Commissions</span>",
-      "hiring.publishing": "<span className='contentService'>Boutique Publishing</span>",
-      "hiring.management": "<span className='contentService'>Management</span>",
-      "hiring.media": "<span className='contentService'>Media</span>",
-      "hiring.art": "<span className='contentService'>Art</span>",
-      "hiring.content": `
+    "hiring.contentWriting": "<span className='contentService'>Content Writing</span>",
+    "hiring.creativeWriting": "<span className='contentService'>Book & Script Commissions</span>",
+    "hiring.publishing": "<span className='contentService'>Boutique Publishing</span>",
+    "hiring.management": "<span className='contentService'>Management</span>",
+    "hiring.media": "<span className='contentService'>Media</span>",
+    "hiring.art": "<span className='contentService'>Art</span>",
+    "hiring.content": `
         We seek writers with bulletproof Arabic and English who are creative and passionate about writing. To win us over, make sure that your application is free of mistakes, and complement it with a captivating cover letter that conveys why you love the work you do.
         <br></br>
         <br></br>
@@ -102,12 +106,14 @@ exports["en-US"] = {
     "contentWriting.clients.5": "<div class='albalad'>Ministry of Culture: AlBalad</div>",
     "contentWriting.clients.6": "<div class='redSea'>Red Sea International Film Festival (2021)</div>",
     "contentWriting.clients.7": "<div class='pavilion'>The National Pavilion of Saudi Arabia <br/> at the 59th Biennale de Venezia</div>",
-    "creativeWriting.title": "Book & Script Commissions",
+    "creativeWriting.title": "Book Commissions",
     "creativeWriting.clients.1":
       "<div class='arts'><b>Ministry of Culture: Culinary Arts Books</b></div>",
+    "creativeWriting.clients.2":
+      "<div class='arts'><b>States of Light</b></div>",
     "boutiquePublishing.title": "Boutique Publishing",
     "boutiquePublishing.clients.1": "<div class='myths'><b>The Myths in Our World & Around It</b></div>",
-    clients: "<span class='brandsNumber'>Since 2018, we have worked on <b><u>over 90 projects</u></b>.</span>",
+    clients: "<span class='brandsNumber'>Since 2018, we have worked on <b><u>over 110 projects</u></b>.</span>",
   },
   "/mauj": {
     title: "",
@@ -118,9 +124,9 @@ exports["en-US"] = {
     "meeting.para2": "It was then that we were formally introduced to Mauj, becoming their writing partners on a year-long contract.",
     "meeting.para3": "This is what we did with Mauj. At the begging, Mauj started with another name – one that carries hidden meaning. They were likely going to encounter some obstacles, or reach an unintended audience that was unlikely to support their message. After we won the pitch (with flying colors!) we suggested they change their old name to another one more in line with their vision and direction, and this required many intensive sessions together to convince them of the need for change – after which we absolutely fell in love with their new choice, Mauj.",
     "tone.title": "What about our tone of writing?",
-    "tone.listElement1":"Welcome to Mauj. <s>Welcome to your home.</s>",
-    "tone.listElement2":"Welcome to Mauj. <s>We’ve been waiting for you.</s>",
-    "tone.listElement3":"<s>Welcome to Mauj.</s> We’ve been waiting for you.",
+    "tone.listElement1": "Welcome to Mauj. <s>Welcome to your home.</s>",
+    "tone.listElement2": "Welcome to Mauj. <s>We’ve been waiting for you.</s>",
+    "tone.listElement3": "<s>Welcome to Mauj.</s> We’ve been waiting for you.",
     "tone.listElement4": "<s>Welcome to Mauj. We’re glad you’re riding with us.</s>",
     "tone.final": "Welcome to Mauj. We’re glad you <u>came.</u>",
     "tone.para1": "When it was time to develop Mauj's tone, we continued the thread of our pitch's cheeky tone while balancing it with their educational and poetic strategy, which is how we developed <u>we're glad you came</u>. As the words came together, visions of the brand became clearer, and we were, in a sense, helping set the foundation for Mauj's emeregence. That was the ground from which we took off to write their social media content.",
@@ -133,7 +139,7 @@ exports["en-US"] = {
     "testimony.para2": "<b>We were not only looking for excellent writers, we were seeking strategic partners</b> who could think with us (sometimes for us), help us better understand our regional audience, engage in future planning, and who are equally invested in the success of the business. That’s exactly what the Mauzoun Team is.",
     "testimony.para3": "They have mastered the Arabic language, are culturally tapped in, understand the ins and outs of social norms, always add their creative magic to all that they do, and are up for a challenge any day. <b>The harder the brief or ask, the more excited they get and the better the work.</b> They inspire us to up our strategy, put out better work, think harder, and act faster. They are willing to bend over backwards to get us to meet our objectives, and that kind of partnership doesn’t come easy. We are so thankful to have such an impressive group of strong, smart, and witty writers who we get to call our partners.",
     "processPic": `<img src='Mauj-01.png' />`
-  },           
+  },
 
 
   "/musaandpalm": {
@@ -147,7 +153,7 @@ exports["en-US"] = {
 
     "longStory.para2": "To balance the venerable with the beautiful, and to combine them with innovation, we needed to study and comprehend many references, namely <span className='medFont'><a href='https://ar.wikipedia.org/wiki/%D9%88%D8%AD%D9%8A_%D8%A7%D9%84%D9%82%D9%84%D9%85' target='_blank'>Mostafa Saadeq Al-Rafe’ie’s “Wahy Al-Qalam”.</a></span> It was an imperative step in order to refine an expression wholly unique to the identity of Musa & Palm.",
 
-    "process.title1" : "An exchange and adaptation of words:",
+    "process.title1": "An exchange and adaptation of words:",
     "collab.title1": " Throughout the process, Suha continued to share her creative inspirations, which clarified the bigger picture.",
     "collab.para1": "While writing the brand content, Suha continued to share with us her brand's evolving elements and illustrations. This was to paint a clear picture in the minds of our writers, bringing our perceptions of the brand closer to reality.",
     "invitation.title1": "An invitation awash with abundance.",
@@ -159,38 +165,54 @@ exports["en-US"] = {
     "testimony.para3": "<b>They are trustworthy, loyal, and will always be completely honest with the client.</b> I always feel like I’m part of their family of work. I would absolutely recommend Mauzoun, and I continue to recommend them to all my friends and family."
 
   },
-  "/services": {
-    title: "Services",
-    "approach.title": "Approach",
+  "/method": {
+    "pageTitle": "Our Method",
+    "mainSection1": "We aim to be unrivaled in the premium quality of our works, which are led by thorough research and diligent expertise. We believe in the importance of advising our clients and authors on best practices and in cultivating processes that result in win-win outcomes.",
+    "mainSection2": "We offer three main services: Content Writing, Book Commissions, and Boutique Publishing. To learn more about each service, click on their respective pages in the sidebar.",
+    "mainSubheader": "Our Process",
     "approach.header":
-      "The language of storytelling is one, no matter the path your project paves. Below is the flow that all of our projects follow.",
-    "approach.contact.header": "<span className='serviceTitles'>1. Contact Us.</span>",
+      "The language of storytelling is one, no matter the path your project paves. Below is the flow that all of our services follow.",
+    "approach.contact.header": "<span className='serviceTitles'>1. Contact us via e-mail.</span>",
     "approach.contact.content":
-      "Send us an e-mail. Our team is keen to get to know you better and understand the content writing, book or script commission, or boutique publishing service you’re looking for, so make sure to give us a detailed brief. If we feel that information is missing, we will reply back to you with questions for further clarification. After understanding your needs, we can move on to the next step.",
-    "approach.quotation.header": "<span className='serviceTitles'>2. We Prepare Your Quotation.</span>",
+      "E-mail is our preferred method of communication. Our team is keen to get to know you better and understand the service you seek, so make sure to give us a detailed project brief. If we feel that information is missing, we will reply back to you with questions for further clarification. After understanding your needs, we can move on to the next step.",
+    "approach.quotation.header": "<span className='serviceTitles'>2. We prepare the quotation or contract.</span>",
     "approach.quotation.content":
-      "If your service is content writing, our quotations take around 3 business days to prepare after reviewing your form. They include our Terms and Conditions and help clarify and streamline our work together. However, if you’re seeking a commission or publishing service, we’ll prepare a contract within 10-14 business days.",
-    "approach.timeline.header": "<span className='serviceTitles'>3. We Book Your Timeline.</span>",
+      `If your service is from our Content Writing or Book Commissions departments, we will prepare a quotation, which will take up to 3 business days.
+      <br></br>
+      <br></br>
+      If you have been nominated as an author in our Boutique Publishing department, we will prepare your contract within 14 business days. Negotiations usually follow so we can reach the best agreement for both parties, with the ultimate intention of furthering your author brand and publishing career.
+      `,
+    "approach.timeline.header": "<span className='serviceTitles'>3. We book your timeline.</span>",
     "approach.timeline.content":
-      "Good work takes time––that’s our motto. After receiving your approval of the quotation and down payment, we book your timeline immediately. Our busy schedule and workload demand that we work on a booking basis only. Our average content writing timeline is between 10 to 21 business days. For commissions and publishing, timelines can range from 4 to 10 months, depending on the project.",
-    "approach.research.header": "<span className='serviceTitles'>4. We Dive Into the Research.</span>",
+      "Good work takes time––that’s our motto. After receiving your approval of the quotation or contract, as well as the down payment or payment agreement, we book your timeline immediately. Our busy schedule and workload demand that we work on a booking basis only. Our average Content Writing timeline is between 10 to 21 business days. For Book Commissions and Boutique Publishing, timelines can range from 3 to 10 months, depending on the project.",
+    "approach.research.header": "<span className='serviceTitles'>4. We dive into the research.</span>",
     "approach.research.content":
-      "Great writing is informed by knowledge, so we gather all the data and information needed to complement our writing process and distinguish your tone from competitors.",
-    "approach.writing.header": "<span className='serviceTitles'>5.  The Writing Process Begins</span>.",
-    "approach.writing.content":
-      "After finalizing our research internally, we hand it over to our brilliant team of English and Arabic writers who adapt to your tone with the best quality of writing. We then proofread the work at least seven times to make sure that everything is grammatically correct, structurally strong, and holistically captivating.",
-    "approach.delivery.header": "<span className='serviceTitles'>6. Your Deliverables Arrive Right on Time.</span>",
+      "Great work is informed by knowledge, so we gather all the findings needed to elevate the work and distinguish it from competitors.",
+    "approach.writing.header": "<span className='serviceTitles'>5. The process begins</span>.",
+    "approach.writing.content": `After finalizing our internal research, we hand it over to our brilliant team.
+    <br></br>
+    <br></br>
+    For Content Writing and Book Commissions services, our talented writers combine your brief with the research to create your uniquely premium writing tone. We then proofread the work several times to make sure that everything is grammatically correct, structurally strong, and holistically captivating.
+    <br></br>
+    <br></br>
+    For Boutique Publishing services, our team will guide you through your book process, from writing, editing, design, printing, publishing, distribution, and marketing.
+    `,
+    "approach.delivery.header": "<span className='serviceTitles'>6. Your work arrives right on time.</span>",
     "approach.delivery.content":
-      "Working on a booking basis means we’re always on time to deliver work that is polished and proofread to perfection.",
-    "approach.feedback.header": "<span className='serviceTitles'>7. You Share Your Feedback or Approval.</span>",
+      "Working on a booking basis means we are always on time to deliver work that is polished and proofread to perfection.",
+    "approach.feedback.header": "<span className='serviceTitles'>7. You share your feedback or approval.</span>",
     "approach.feedback.content":
-      "You provide your feedback via e-mail or online meeting, or you may immediately approve the project. If not, don’t worry—great work takes time. That’s why every project at Mauzoun has a standard 2 rounds of changes.",
-    "approach.adaptTimeline.header": "<span className='serviceTitles'>8. We Rebook Your Timeline.</span>",
+      "You provide your feedback via e-mail or online meeting, or you may immediately approve the project. If not, do not worry—great work takes time. That is why every project at Mauzoun has a standard 2 rounds of changes.",
+    "approach.adaptTimeline.header": "<span className='serviceTitles'>8. We refine the work.</span>",
     "approach.adaptTimeline.content":
-      "We repeat steps 5 through 7 with a renewed approach to research and writing to ensure different results.",
-    "approach.finished.header": "<span className='serviceTitles'>9. Your Story Comes to Life.</span>",
+      `For Content Writing and Book Commissions services, we repeat steps five, six, and seven with a renewed approach to research and writing to ensure different results.
+      <br></br>
+      <br></br>
+      For Boutique Publishing services, our team workshops the feedback with you in line with best practices and our sales strategy. Afterwards, we apply the changes.
+      `,
+    "approach.finished.header": "<span className='serviceTitles'>9. Your story comes to life.</span>",
     "approach.finished.content":
-      "Our holistic process ensures that your work is finalized as an embodiment of your vision, bringing your story to life.",
+      "Our holistic process ensures that your work is finalized as a manifestation of your vision, bringing your story to life.",
     "contentWriting.title": "Content Writing",
     "contentWriting.content": `<span className='contentWritingFont'>We provide holistic, research-based content writing for brands and campaigns that want captivating content.</span>
       <br /><br />
@@ -199,7 +221,7 @@ exports["en-US"] = {
       We choose to work exclusively with compelling brands on a long-term basis or on exciting campaigns.`,
     "contentWriting.services.header":
       "<span className='servicesHeader'>Here’s a list of some of the words we write. If you don’t see the service you want, simply e-mail us, and we’ll be happy to include it in your proposal.</span>",
-    "contentWriting.services.mm" : "<span className='contentService'>Messaging Manual</span>",
+    "contentWriting.services.mm": "<span className='contentService'>Messaging Manual</span>",
     "contentWriting.services.naming": "<span className='contentService'>Brand & Product Naming</span>",
     "contentWriting.services.manifesto": "<span className='contentService'>Brand Manifesto</span>",
     "contentWriting.services.slogans": "<span className='contentService'>Taglines & Slogans</span>",
@@ -207,7 +229,7 @@ exports["en-US"] = {
     "contentWriting.services.website": "<span className='contentService'>Website Content</span>",
     "contentWriting.services.socialMedia": "<span className='contentService'>Social Media Content</span>",
     "contentWriting.services.scriptWriting": "<span className='contentService'>Scriptwriting for Ads</span>",
-    
+
     "creativeWriting.title": "Book & Script Commissions",
     "creativeWriting.content": `<span className='creativeWritingFont'>All that moves the heart begins with a story.</span>
       <br /><br />
@@ -234,12 +256,12 @@ exports["en-US"] = {
     "creativeWriting.services.title2": "<span className='servicesHeader'>Scripts:</span>",
     "creativeWriting.services.storyDoctoring": "<span className='contentService'>Story Doctoring</span>",
     "creativeWriting.services.scriptWritingFilm": "<span className='contentService'>Scriptwriting for Film and Television</span>",
-    
+
     "creativeWriting.services.commissions1": "Commissions only cover the research, writing, and design phases. They do not include marketing, branding, publicity, printing, publishing, or distribution. Please note that this is not a ghostwriting service and that our contracts stipulate crediting Mauzoun as the writer of the work.",
-  
-    "creativeWriting.services.commissions2":"If a client has commissioned a book, upon completion of the book, they may choose to transition it to our Boutique Publishing department. If they do so, Mauzoun is entitled to a minority rights percentage of the book, and the client is entitled to a majority rights percentage because they commissioned the book. Mauzoun will conduct the printing, publishing, and distribution of the book (sans marketing) for an upfront fee.",
-  
-   
+
+    "creativeWriting.services.commissions2": "If a client has commissioned a book, upon completion of the book, they may choose to transition it to our Boutique Publishing department. If they do so, Mauzoun is entitled to a minority rights percentage of the book, and the client is entitled to a majority rights percentage because they commissioned the book. Mauzoun will conduct the printing, publishing, and distribution of the book (sans marketing) for an upfront fee.",
+
+
 
     "publishing.title": "Boutique Publishing",
     "publishing.content": `<span className='creativeWritingFont'>We prioritize talent over the region’s pay-to-publish model.</span>
@@ -251,59 +273,58 @@ exports["en-US"] = {
     <br />
     Mauzoun’s genres of interest include original works of fiction written in Arabic; original non-fiction works in the Arabic language about society, history, culture, or the arts; visual novels by Arab authors regardless of their original language of publication; coffee table books with compelling cultural topics; and lastly, the acquisition and translation of fiction and non-fiction works by Arab authors in foreign languages.
     `,
-    "publishing.services.header": 
+    "publishing.services.header":
       "<span className='servicesHeader'>It’s our responsibility as publishers to ensure that the author and the book are well-developed and well-marketed to create a win-win situation. That’s why we fully handle:</span>",
-      "publishing.services.research": "<span className='contentService'>Research</span>",
-      "publishing.services.narrativeDevelopment": "<span className='contentService'>Narrative Development</span>",
-      "publishing.services.storyEditing": "<span className='contentService'>Story Editing</span>",
-      "publishing.services.copyEditing": "<span className='contentService'>Copy Editing</span>",
-      "publishing.services.bookTranslation": "<span className='contentService'>Book Translation</span>",
-      "publishing.services.bookDesign": "<span className='contentService'>Book Design</span>",
-      "publishing.services.printing": "<span className='contentService'>Printing</span>",
-      "publishing.services.distribution": "<span className='contentService'>Distribution</span>",
-      "publishing.services.authorBranding": "<span className='contentService'>Author Branding</span>",
-      "publishing.services.bookMarketing": "<span className='contentService'>Book Marketing</span>",
-  
-    
+    "publishing.services.research": "<span className='contentService'>Research</span>",
+    "publishing.services.narrativeDevelopment": "<span className='contentService'>Narrative Development</span>",
+    "publishing.services.storyEditing": "<span className='contentService'>Story Editing</span>",
+    "publishing.services.copyEditing": "<span className='contentService'>Copy Editing</span>",
+    "publishing.services.bookTranslation": "<span className='contentService'>Book Translation</span>",
+    "publishing.services.bookDesign": "<span className='contentService'>Book Design</span>",
+    "publishing.services.printing": "<span className='contentService'>Printing</span>",
+    "publishing.services.distribution": "<span className='contentService'>Distribution</span>",
+    "publishing.services.authorBranding": "<span className='contentService'>Author Branding</span>",
+    "publishing.services.bookMarketing": "<span className='contentService'>Book Marketing</span>",
+
+
+
   },
   "/team": {
     nameMeaning:
       "You’re only as good as your team.",
     proud:
-      "We’re proud to have a brilliant team of talented Arabs who think critically, collaborate compassionately, and prioritize work-life balance over everything.",
+      "You are only as good as your team. We are proud to have a brilliant team of talented Arabs who think critically, collaborate compassionately, and prioritize work-life balance over everything.",
     teamwork:
-      "We are a virtual workplace as of 2022. Our team works cooperatively to uplift writings and publications with precision and passion. We genuinely foster both personal and professional well-being through our flexible policies, cultural practices, and countless learning opportunities.",
-      "teamMember.1.name": "Layan Abdul Shakoor",
-      "teamMember.1.role": "Founder & Creative Director",
-      "teamMember.2.name": "Nada Nasir",
-      "teamMember.2.role": "General Manager",
-      "teamMember.3.name": "Omar AlMalky",
-      "teamMember.3.role": "Account Manager",
-      "teamMember.4.name": "Dalia Ziyadah",
-      "teamMember.4.role": "Account Executive",
-      "teamMember.5.name": "Amal Al-Awlaki",
-      "teamMember.5.role": "Project Manager",
-      "teamMember.6.name": "Zahrah Saleh",
-      "teamMember.6.role": "Administrative Assistant",
-      "teamMember.7.name": "Omar Thawabeh",
-      "teamMember.7.role": "Copy Chief",
-      "teamMember.8.name": "Ahmed Hoza",
-      "teamMember.8.role": "Writer",
-      "teamMember.9.name": "Omnia Alzabidi",
-      "teamMember.9.role": "Writer",
-      "teamMember.10.name": "Danah Kaouri",
-      "teamMember.10.role": "Writer",
-      "teamMember.11.name": "Fatmah Jadani",
-      "teamMember.11.role": "Publishing Coordinator",
-      "teamMember.12.name": "Fatimah Alawi",
-      "teamMember.12.role": "Designer",
-      "teamMember.13.name": "Abeer Sultan",
-      "teamMember.13.role": "Designer",
+      "Our team works cooperatively to uplift writings and publications with precision and passion. We genuinely foster both personal and professional well-being through our flexible policies, cultural practices, and countless learning opportunities.",
+    "teamMember.1.name": "Layan Abdul Shakoor",
+    "teamMember.1.role": "Founder & Creative Director",
+    "teamMember.2.name": "Nada Nasir",
+    "teamMember.2.role": "General Manager",
+    "teamMember.3.name": "Omar AlMalky",
+    "teamMember.3.role": "Account Manager",
+    "teamMember.4.name": "Dalia Ziyadah",
+    "teamMember.4.role": "Account Executive",
+    "teamMember.5.name": "Amal Al-Awlaki",
+    "teamMember.5.role": "Project Manager",
+    "teamMember.6.name": "Zahrah Saleh",
+    "teamMember.6.role": "Administrative Assistant",
+    "teamMember.7.name": "Ahmed Hoza",
+    "teamMember.7.role": "Writer",
+    "teamMember.8.name": "Omnia Alzabidi",
+    "teamMember.8.role": "Writer",
+    "teamMember.9.name": "Danah Kaouri",
+    "teamMember.9.role": "Writer",
+    "teamMember.101.name": "Fatmah Jadani",
+    "teamMember.10.role": "Publishing Coordinator",
+    "teamMember.11.name": "Fatimah Alawi",
+    "teamMember.11.role": "Designer",
+    "teamMember.12.name": "Abeer Sultan",
+    "teamMember.12.role": "Designer",
 
     world:
       "In a bustling world that is concerned with immediate results, we stick to the belief that good work takes time. Every word is an investment in your brand or your identity as an author. That is why we work on a booking basis only and selectively take on rushed projects.",
     "whitebox.innerText1":
-      "We believe in the four-day work week and consider ourselves pioneers in actively pursuing a work-life balance for all of our team members. We only work thirty-two hours per week. This elevates our creativity and productivity, providing the space and time needed to bring a fresh outlook to our virtual workplace and projects.",
+      "Our team’s professional background is diverse, hailing from the fields of art, culture, education, science, and technology. Our team members worked for entities such as King Abdullah University of Science and Technology, Kearney, Dar Al Nimr, Effat University, Makkah Development Authority, Mozaik Agency, and Martin Lindstrom.",
     "whitebox.innerText2":
       "This culture we cultivated takes our creativities and productivities up a notch, providing the space and time needed to bring a fresh outlook to our virtual workplace and your projects.",
     workAspects:
@@ -321,8 +342,8 @@ exports["en-US"] = {
     "lang.title": "Two languages, one story.",
     "lang.para1": "After successfully developing the Messaging Manual, we wrote Shafra’s Brand Manifesto, along with two slogans for their website.",
     "table.ara1": ".<s>اكتشف سرديتك</s> الجينية<br/>.اكتشفوا سرديتكم الجينية",
-    "table.eng" : "<s>Rooted in</s> science with accurate results. <br/> Accurate results with a scientific basis.",
-    "table.ara2" : "تعمقوا في سماتكم الشخصية، وأطلبوا <s>عدة شفرة</s><br/>.عدة الفحص الجيني من شفرة الآن",
+    "table.eng": "<s>Rooted in</s> science with accurate results. <br/> Accurate results with a scientific basis.",
+    "table.ara2": "تعمقوا في سماتكم الشخصية، وأطلبوا <s>عدة شفرة</s><br/>.عدة الفحص الجيني من شفرة الآن",
     "story.title": "Though our story came to an end, their words to us were here to stay:",
     "story.para": "We did a lot of experimentation while trying to find the best possible way to present Shafra and deliver its messages to our clients, but we were not satisfied with the results. The professional and creative team at Mauzoun was then able to present Shafra in an integrated manner by capturing the heart of the brand through the Messaging Manual, showcasing it in a way that arouses curiosity and engages all five senses. We loved the extensive detail the Messaging Manual gets into, down even to the emojis our brand should use. We can now present our company and create our own marketing content, supported by a clear instructional guide that includes what can and cannot be used for communication, saving us a great deal of effort and time."
   },
@@ -362,10 +383,136 @@ exports["en-US"] = {
     "words.title": "A heartfelt sincerity and a simplicity of words.",
     "words.para1": "Developing the campaign slogan was unlike any previous project we handled at Mauzoun, because our thoughts were guided by our fervent emotions. Thus, we wanted to express them in the simplest and most seamless of words, but simplicity is elusive at times, especially when it is tied to the responsibility of expressing and celebrating our most important national occasion. We tried to express these sentiments in the video ad script in a way that authentically portrays the Saudi people and to demonstrate the rich landscape throughout our homeland.",
     "words.para2": "For the National Day campaign, we collaborated again with our partner, Wetheloft, who built the communication strategy for the campaign. They also supervised the development of ideation, design development, and website and social media posts, in addition to collecting contributing videos from participants, and overseeing post-production of the video advertisement. This partnership extended to include Telfaz Productions, who produced and edited the video, Panda Voiceover, who worked on the Arabic voiceover, and IconCreations, who developed the promotional website for the campaign.",
+
+  },
+
+  "/culture": {
+    "culturePageTitle": "Culture",
+    "mainSection.quality": "<span className='bolded'>The quality of our work is directly proportional to the quality of our team’s work-life balance.</span> That’s why the Mauzoun Culture is the most important cornerstone to our work.",
+    "mainSection.culture": "Culture is more than just a set of policies. It is our moral code as a team, and the promises that we set for our purpose, team, and clients to fulfill our ultimate vision: to produce premium work that we enjoy creating that feeds directly into work-life balance and the fulfillment of our personal goals.",
+    "subheader.titleMain": "Our Purpose",
+    "subheader.para1": "We provide holistic and premium services in Content Writing, Book Commissions, and Boutique Publishing. <span className='bolded'>We aspire to become the premier writing studio and publishing house in the Arab World</span> that is unmatched in quality.",
+    "subheader.para2": "<span className='bolded'>Our work is guided by an unwavering commitment to cultural authenticity and meticulous research</span> to produce premium writing and publishing services that tell the stories of our clients and authors in a bespoke manner.",
+    "subheader.para3": "<span className='bolded'>We are pioneers in the Arab writing and publishing industries,</span> being one of the first creative studies to specialize in premium writing and to forego the region's pay-to-publish model.",
+    "subsection.title": "Our Promise to Our Team",
+    "subsection.box.first": "We champion the four-day work week",
+    "subsection.box.second": "In a world full of amazing possibilities, it is our right to work from anywhere",
+    "subsection.box.third": "We work smart, not hard.",
+    "subsection.box.fourth": "Diversity is of utmost importance.",
+    "subsection.box.fifth": "Our most important investment is each team member's growth.",
+    "subsection.champion": "<span className='bolded'>We champion the four-day work week.</span> We are pioneers in actively pursuing a work-life balance for all of our team members and we only work thirty-two hours per week. This elevates our creativity and productivity, providing the space and time needed to bring a fresh outlook to our virtual workplace and projects.",
+    "subsection.fullWorld": "<span className='bolded'>In a world full of amazing possibilities, it’s our right to work from anywhere</span>. We are a virtual workplace. You can work from anywhere, but in specific times that are flexible upon request, because dynamically working together is what creates Mauzoun’s brilliant results.",
+    "subsection.smart": "<span className='bolded'>We work smart, not hard.</span> Innovating new solutions is equally important as tried-and-true methods. True wisdom is knowing when to use what.",
+    "subsection.diversity": "<span className='bolded'>Diversity is of utmost importance.</span> It is our responsibility to uplift diversity in our communities through our hiring philosophy. This means hiring team members of different races, socioeconomic backgrounds, ages, and more.",
+    "subsection.important": "<span className='bolded'>Our most important investment is each team member's growth.</span> Your growth, personally and professionally, is always a win for the team. Work-life balance is key to fulfilling this, so help us help you––use honesty and empathy to communicate your wants and needs and we'll surely help.",
+    "subheader.title": "Our Promise to Our Clients and Collaborators",
+    "subsection.box1.first": "Our work together is built on transparency, trust, and consistency.",
+    "subsection.box1.second": "We strive to produce work you that are proud to present.",
+    "subsection.box1.third": "We understand that good work takes time.",
+    "subsection.box1.fourth": "We plan smart and commit to downtimes.",
+    "subsection.box1.fifth": "Every project is an opportunity to authentically uplift the Arabic language.",
+    "subsection.ourWork": "<span className='bolded'>Our work together is built on transparency, trust, and consistency.</span> We serve our clients and authors with devotion and above all, we deliver excellent work.",
+    "subsection.strive": "<span className='bolded'>We strive to produce work that you are proud to present.</span> It is our duty to understand your needs and align them with best practices to produce work that is undoubtedly premium.",
+    "subsection.understand": "<span className='bolded'>We understand that good work takes time.</span> In a bustling world that is concerned with immediate results, we stick to the belief that good work takes time. Every word is an investment in your brand or your identity as an author. That is why we work on a booking basis only and selectively take on rushed projects. We will create reasonable and feasible timelines together and adhere to them because the quality of the work always comes first.",
+    "subsection.plan": "<span className='bolded'>We plan smart and commit to downtimes.</span> With smart planning, no work will be rushed. Together, we plan around the outdated notions of working during weekends or vacations––which only work against your work's quality and completion by depleting everyone's much-needed rest energy.",
+    "subsection.every": "<span className='bolded'>Every project is an opportunity to authentically uplift the Arabic language.</span> Words play an important role in cultivating culture. Whether you are working on a small project or your magnum opus, your work plays a role in maintaining the beauty and authenticity of the Arab identity and the Arabic language. Acknowledging that is all you need to do, and the rest is on us.",
+  },
+
+  // "/method": {
+  //   "pageTitle": "Our Method",
+  //   "mainSection1": "We aim to be unrivaled in the premium quality of our works, which are led by thorough research and diligent expertise. We believe in the importance of advising our clients and authors on best practices and in cultivating processes that result in win-win outcomes.",
+  //   "mainSection2": "We offer three main services: Content Writing, Book Commissions, and Boutique Publishing. To learn more about each service, click on their respective pages in the sidebar.",
+  // }
+
+  "/contentwriting": {
+    "contentPageTitle": "Content Writing",
+    "mainPara": "We provide holistic, research-based content writing for brands and campaigns that want captivating content.",
+    "serviceQ": "What is Content Writing?",
+    "serviceAnswer": "Any brand or campaign needs content, whether it is an unforgettable tagline, a catchy slogan, a press release, a brand manifesto, or website content––and much more. Generally, if it requires research, ideation, and writing, and if it is for a brand or campaign, then it most certainly can be fulfilled by Mauzoun under this department.",
+    "whatServicesQ": "What are the services provided?",
+    "serviceHeader": "Content writing services include but are not limited to:",
+    "contentWriting.services.mm": "<span className='contentService'>Messaging Manual</span>",
+    "contentWriting.services.naming": "<span className='contentService'>Brand & Product Naming</span>",
+    "contentWriting.services.manifesto": "<span className='contentService'>Brand Manifesto</span>",
+    "contentWriting.services.slogans": "<span className='contentService'>Taglines & Slogans</span>",
+    "contentWriting.services.profile": "<span className='contentService'>Company Profile</span>",
+    "contentWriting.services.website": "<span className='contentService'>Website Content</span>",
+    "contentWriting.services.socialMedia": "<span className='contentService'>Social Media Content</span>",
+    "contentWriting.services.scriptWriting": "<span className='contentService'>Advertisement Scriptwriting</span>",
+    "whoForQ": "Who is this service for? ",
+    "whoForAnswer": "This service is ideal for businesses, entrepreneurs, or government entities that seek premium and captivating content for their brands or campaigns.",
+    "smallProjectsQ": "Do you take on both small-scale and large-scale projects?",
+    "smallProjectsAnswer": "Of course. We accept large-scale projects, such as writing the entirety of the Red Sea International Film Festival's festival content, as well as small-scale projects, such as writing a brand manifesto for your brand, or a food menu for your café.",
+  },
+
+  "/bookcommissions": {
+    "bookPageTitle": "Book Commissions",
+    "mainPara": "You have the story and we have the skill. Let us write your non-fiction book in the best way possible.",
+    "secondPara": "Commission your non-fiction book with us. So long as you have a well-rounded main idea, we will develop, write, edit, and design it into a book for you.",
+    "thirdPara": "This service undergoes a qualification process. As part of our commitment to writing ethics, we must ensure the originality of the brief, the integrity of the idea, and its alignment with Mauzoun’s strategy before proceeding with the commission.",
+    "serviceQ": "What are Book Commissions?",
+    "serviceAnswer": "Any brand or campaign needs content, whether it is an unforgettable tagline, a catchy slogan, a press release, a brand manifesto, or website content––and much more. Generally, if it requires research, ideation, and writing, and if it is for a brand or campaign, then it most certainly can be fulfilled by Mauzoun under this department.",
+    "whatServicesQ": "What are the services provided?",
+    "serviceHeader": "All Book Commissions include the following services:",
+    "creativeWriting.services.title1": "<span className='servicesHeader'>Books:</span>",
+    "creativeWriting.services.research": "<span className='contentService'>Research</span>",
+    "creativeWriting.services.narrativeDevelopment": "<span className='contentService'>Narrative Development</span>",
+    "creativeWriting.services.artDirection": "<span className='contentService'>Story Editing</span>",
+    "creativeWriting.services.bookWriting": "<span className='contentService'>Copy Editing</span>",
+    "creativeWriting.services.storyEditing": "<span className='contentService'>Book Translation</span>",
+    "creativeWriting.services.copyEditing": "<span className='contentService'>Book Design</span>",
+    "creativeWriting.services.bookTranslation": "<span className='contentService'>Printing</span>",
+    "creativeWriting.services.bookDesing": "<span className='contentService'>Distribution</span>",
+    "creativeWriting.services.author": "<span className='contentService'>Author Branding</span>",
+    "creativeWriting.services.marketing": "<span className='contentService'>Book Marketing</span>",
+    "underBoxPara": "Book Commissions only cover the research, writing, and design phases. They do not include marketing, branding, publicity, printing, publishing, or distribution. Please note that this is not a ghostwriting service and that our contracts stipulate crediting Mauzoun as the writer of the work.",
+    "whoForQ": "Who is this service for? ",
+    "whoForAnswer": "Public entities or noteworthy persons who wish to document a legacy or a topic of interest in the form of a non-fiction book are the ideal candidates for this service. Examples include a museum that wishes to create a coffee table book about an exhibit, or a noteworthy person who wishes to commission a biography of their renowned work.",
+    "qualificationQ": "What is the qualification process for?",
+    "qualificationAnswer": "of our commitment to writing ethics, we must ensure the originality of the brief, the integrity of the idea, and its alignment with Mauzoun’s strategy before proceeding with the commission. The qualification process ensures that your idea is comprehensive and sound––in other words, we need to make sure that you know exactly what you want to talk about and that you are truly an expert on the subject matter. We also need to vet the authenticity of the idea to avoid plagiarism.",
+    "publishQ": "Can I publish my commissioned book with Mauzoun?",
+    "publishAnswer": "If you have commissioned a book, upon its completion, you may choose to transition it to our Boutique Publishing department. If you do so, Mauzoun is entitled to a minority rights percentage of the book, and you are entitled to a majority rights percentage because you commissioned the book. Mauzoun will conduct the printing, publishing, and distribution of the book (sans marketing) for an upfront fee."
+  },
+
+  "/boutiquepublishing": {
+    "bookPageTitle": "Boutique Publishing",
+    "mainPara": "We prioritize talent over the region’s pay-to-publish model, and we headhunt talented authors with truly exceptional book manuscripts.",
+    "secondPara": "We follow an investment model, so authors pay zero riyals to publish their books, forever. Authors will also get a higher rights percentage than the industry average with a fully negotiable offer delineated in our contracts. An author may also choose to contribute to the book’s overhead in exchange for a higher royalty percentage.",
+    "serviceQ": "What is Boutique Publishing?",
+    "serviceAnswer": "This service is for talented individuals that have a complete manuscript and seek to publish their book in the international royalty based module. This service is by nomination only and covers all the steps leading to publishing and marketing of the book.",
+    "whatServicesQ": "What books does Mauzoun publish?",
+    "serviceHeader": "Mauzoun publishes both fiction and non-fiction books. We produce original works and also acquire international works to translate into the Arabic language. We primarily target books that are by written Arabs, no matter the work's original language, and books with topics that are Arab-adjacent.",
+    "serviceHeader1": "All Book Commissions include the following services:",
+    "creativeWriting.services.novels": "<span className='contentService'>Novels</span>",
+    "creativeWriting.services.visNovels": "<span className='contentService'>Visual Novels</span>",
+    "creativeWriting.services.anth": "<span className='contentService'>Anthologies</span>",
+    "creativeWriting.services.mem": "<span className='contentService'>Memoirs</span>",
+    "creativeWriting.services.essay": "<span className='contentService'>Selections of Essays</span>",
+    "creativeWriting.services.coffee": "<span className='contentService'>Coffee Table Books</span>",
+    // "underBoxPara": "Book Commissions only cover the research, writing, and design phases. They do not include marketing, branding, publicity, printing, publishing, or distribution. Please note that this is not a ghostwriting service and that our contracts stipulate crediting Mauzoun as the writer of the work.",
+    "whoForQ": "Who is this service for? ",
+    "whoForAnswer": "This service is by nomination only. We look for writers whose fiction or nonfiction manuscripts align with our vision to diversify the Arab literary corpus and spark meaningful discussions.",
+    "whatService2": "What services are included in the publishing deal?",
+    "serviceHeaderMain": "It’s our responsibility as publishers to ensure that the author and the book are well-developed and well-marketed to create a win-win outcome. That is why we fully handle:",
+    "creativeWriting.services.researc": "<span className='contentService'>Research</span>",
+    "creativeWriting.services.narrDev": "<span className='contentService'>Narrative Development</span>",
+    "creativeWriting.services.editing": "<span className='contentService'>Story Editing</span>",
+    "creativeWriting.services.copy": "<span className='contentService'>Copy Editing</span>",
+    "creativeWriting.services.translation": "<span className='contentService'>Book Translation</span>",
+    "creativeWriting.services.bookDesign": "<span className='contentService'>Book Design</span>",
+    "creativeWriting.services.printing": "<span className='contentService'>Printing</span>",
+    "creativeWriting.services.dist": "<span className='contentService'>Distribution</span>",
+    "creativeWriting.services.author": "<span className='contentService'>Author Branding</span>",
+    "creativeWriting.services.marketing": "<span className='contentService'>Book Marketing</span>",
+    "nominationQ": "What are the nomination criteria?",
+    "nominationAnswer": "We seek writers whose fiction or non-fiction manuscripts align with our vision to diversify the Arab literary corpus and spark meaningful discussions. The most important elements of assessment are a clear and purposeful story structure as well as a unique and well-formed writing voice.",
+    "qualifyQ": "How can I qualify for nomination?",
+    "qualifyAnswer": "Registered literary agents and renowned literary and publishing institutions or figures may nominate your book to us. In doing so, ensure that you include a complete and competitively written story deck, author profile, and book manuscript.",
+    "mauzounQ":"What are the books that have been acquired or published by Mauzoun?",
+    "mauzounAnswer":"Visit the Mauzoun E-Store to view the comprehensive author list and book catalog.",
     
   },
 
-  
 
 };
 

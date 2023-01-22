@@ -1,0 +1,77 @@
+@use "mixins" as *;
+
+.servicesCover {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+
+  & div {
+    display: block !important;
+  }
+
+  @include ltr {
+    margin-left: 450px;
+  }
+
+  @include rtl {
+    margin-right: 450px;
+  }
+
+  @media (min-width: 1536px) {
+    width: 30vh;
+
+    @include ltr {
+      margin-left: 25vw;
+    }
+
+    @include rtl {
+      margin-right: 25vw;
+    }
+  }
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+
+  & p {
+    display: inline;
+  }
+
+  .bullet {
+    @include ltr {
+      margin-right: 10px;
+    }
+
+    @include rtl {
+      margin-left: 10px;
+    }
+
+    & .tiltedSquare {
+      position: absolute;
+      width: 15px;
+      margin-top: 3px;
+      transform: scaleX(-1);
+
+      @include ltr {
+        margin-left: -5px;
+      }
+
+      @include rtl {
+        margin-right: -5px;
+      }
+    }
+  }
+}
+
+// .totalWhiteBox {
+//   @include ltr {
+//     margin-left: 33px;
+//   }
+
+//   @include rtl {
+//     margin-right: 33px;
+//   }
+// }

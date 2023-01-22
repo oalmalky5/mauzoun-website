@@ -40,32 +40,28 @@ const teamMembersData = {
     preview: "/team/Mauzoun _ Zahrah.png",
   },
 
-  7: {
-    src: "/team/OmarT.gif",
-    preview: "/team/Mauzoun _ Omar Thawabeh.png",
-  },
   
-  8: {
+  7: {
     src: "/team/Ahmed.gif",
     preview: "/team/Mauzoun _ Ahmed Hoza.png",
   },
-  9: {
+  8: {
     src: "/team/Omnia.gif",
     preview: "/team/Mauzoun _ Omnia11.png",
   },
-  10: {
+  9: {
     src: "/team/Danah.gif",
     preview: "/team/Mauzoun _ Danah.png",
   },
-  11: {
+  10: {
     src: "/team/FJ.gif",
     preview: "/team/Mauzoun _ Fatmah Jadani.png",
   },
-  12: {
+  11: {
     src: "/team/FA.gif",
     preview: "/team/Mauzoun _ Fatimah Alawi11.png",
   },
-  13: {
+  12: {
     src: "/team/Abeer.gif",
     preview: "/team/Mauzoun _ Abeer.png",
   },
@@ -217,7 +213,7 @@ const Team = function ({ textAnimationControls, handleBgColorChange, handleOpenN
                 </div>*/}
 
               <div className="container-content">
-                <span className="nameStory">{f("nameMeaning")}</span>
+                {/*<span className="nameStory">{f("nameMeaning")}</span>*/}
 
                <div className="proudStory">{f("proud")}</div> 
                 <div className="container-object">
@@ -230,7 +226,7 @@ const Team = function ({ textAnimationControls, handleBgColorChange, handleOpenN
                 <span className="storyTeamwork">{f("teamwork")}</span>
               </div>
 
-              <div className="container-content">{f("world")}</div>
+              {/*<div className="container-content">{f("world")}</div>*/}
 
               <div className="container-object">
                 <div class={styles.totalWhiteBox}>
@@ -242,7 +238,7 @@ const Team = function ({ textAnimationControls, handleBgColorChange, handleOpenN
                 </div>
               </div>
               <div className="container-content">
-                {f("workAspects")}
+                {/*f("workAspects")*/}
               </div>
             </div>
           </div>

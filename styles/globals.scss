@@ -29,13 +29,14 @@ body {
     .heading {
       font-family: "MizanAR-SemiBold";
     }
-    & .nameStory, .work, .mt-1, .mainTitle, .meetingTitle, .toneTitle, .brandTitle, .testTitle, .contentHome, .homeTitle, .title, .teamTitle {
+    & .nameStory, .work, .mt-1, .mainTitle, .meetingTitle, .toneTitle, .brandTitle, .testTitle, .contentHome, 
+    .homeTitle, .title, .teamTitle, .subheaderTitle, .subsectionTitle {
       font-family: "MizanAR-Bold" !important;
       font-size: 42px !important;
       
     }
     & .proudStory, .homeWork, .homeProjects, .servicesContent, .homeSummary, .meetingPara1, .meetingPara2, .list, .tonePara1, 
-    .tonePara2, .brandPara1, .brandPara2, .testPara1, .testPara2, .testPara3, .storyTeamwork, .storyWorld, .container-content  {
+    .tonePara2, .brandPara1, .brandPara2, .testPara1, .testPara2, .testPara3, .storyTeamwork, .storyWorld, .container-content, .quality {
       font-family: 'MizanAR-Regular' !important;
       font-size: 30px !important;
     
@@ -65,7 +66,7 @@ body {
       font-family: "Lierata-Regular";
       font-size: 22px;
     }
-    & .approachHeader, .contentWritingFont, .creativeWritingFont, .mainHeader {
+    & .approachHeader, .contentWritingFont, .creativeWritingFont, .mainHeader, .bolded, .mainPara {
       font-family: "MizanAR-Bold";
       font-size: 30px;
     }
@@ -218,12 +219,13 @@ body {
       font-family: "Lierata-SemiBold";
     }
     & .container-content, .storyTeamwork,.memberRole, .proudStory, .homeWork, .homeProjects, .servicesContent, .homeSummary, .meetingPara1, 
-    .meetingPara2, .list, .tonePara1, .tonePara2, .brandPara1, .brandPara2, .testPara1, .testPara2, .testPara3   {
+    .meetingPara2, .list, .tonePara1, .tonePara2, .brandPara1, .brandPara2, .testPara1, .testPara2, .testPara3, .quality   {
       font-family: 'Sharik-Regular';
       font-size: 25px;
     
     }
-    &  .nameStory, .work, .mt-1, .mainTitle, .meetingTitle, .toneTitle, .brandTitle, .testTitle, .contentHome, .homeTitle, .introPara, .title, .andYouTitle, .teamTitle {
+    &  .nameStory, .work, .mt-1, .mainTitle, .meetingTitle, .toneTitle, .brandTitle, .testTitle, .contentHome, 
+    .homeTitle, .introPara, .title, .andYouTitle, .teamTitle, .subheaderTitle, .subsectionTitle {
       font-family: 'Lierata-Bold' !important;
       font-size: 34px !important;
     }
@@ -249,7 +251,7 @@ body {
       font-family: "Lierata-Regular";
       font-size: 22px;
     }
-    &  .approachHeader, .contentWritingFont, .creativeWritingFont, .mainHeader {
+    &  .approachHeader, .contentWritingFont, .creativeWritingFont, .mainHeader, .bolded {
       font-family: "Sharik-Bold";
       font-size: 25px;
     }
@@ -262,6 +264,21 @@ body {
       font-size: 42px;
       
     }
+    & .totalWhiteBoxCulture {
+      font-family: "Lierata-Regular";
+      font-size: 27px;
+    }
+
+    & .mainPara {
+      font-family: "Sharik-SemiBold";
+      font-size: 25px;
+    }
+
+    & .serviceHeader {
+      font-family: "Sharik-SemiBold";
+      font-size: 30px
+    }
+    
 
 
     & .picBg {

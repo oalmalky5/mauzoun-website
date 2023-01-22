@@ -23,6 +23,7 @@ const clientLogos = [
     "/clientLogos/3.png",
     "/clientLogos/4.png",
     "/clientLogos/5.png",
+    "/clientLogos/6.png"
 ];
 
 const whiteBoxDecoratorsPositions = {

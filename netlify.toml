@@ -9,3 +9,4 @@
 NEXT_SERVERLESS = "true"
 NPM_FLAGS = "--legacy-peer-deps"
 NODE_ENV = "production"
+
