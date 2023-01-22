@@ -23,7 +23,7 @@ const teamMembersData = {
     preview: "/team/Mauzoun _ Nada.png",
   },
   3: {
-    src: "/team/OmarM.gif",
+    src: "/team/Omar M.gif",
     preview: "/team/Mauzoun _ Omar AlMalky.png",
   },
   4 : {
@@ -47,7 +47,7 @@ const teamMembersData = {
   },
   8: {
     src: "/team/Omnia.gif",
-    preview: "/team/Mauzoun _ Omnia11.png",
+    preview: "/team/Mauzoun _ Omnia.png",
   },
   9: {
     src: "/team/Danah.gif",
