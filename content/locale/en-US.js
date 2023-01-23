@@ -110,7 +110,7 @@ exports["en-US"] = {
     "creativeWriting.clients.1":
       "<div class='arts'><b>Ministry of Culture: Culinary Arts Books</b></div>",
     "creativeWriting.clients.2":
-      "<div class='arts'><b>States of Light</b></div>",
+      "<div class='light'><b>States of Light</b></div>",
     "boutiquePublishing.title": "Boutique Publishing",
     "boutiquePublishing.clients.1": "<div class='myths'><b>The Myths in Our World & Around It</b></div>",
     clients: "<span class='brandsNumber'>Since 2018, we have worked on <b><u>over 110 projects</u></b>.</span>",
@@ -290,6 +290,7 @@ exports["en-US"] = {
 
   },
   "/team": {
+    "teamPageTitle": "Team",
     nameMeaning:
       "You’re only as good as your team.",
     proud:
@@ -469,7 +470,7 @@ exports["en-US"] = {
     "whoForQ": "Who is this service for? ",
     "whoForAnswer": "Public entities or noteworthy persons who wish to document a legacy or a topic of interest in the form of a non-fiction book are the ideal candidates for this service. Examples include a museum that wishes to create a coffee table book about an exhibit, or a noteworthy person who wishes to commission a biography of their renowned work.",
     "qualificationQ": "What is the qualification process for?",
-    "qualificationAnswer": "of our commitment to writing ethics, we must ensure the originality of the brief, the integrity of the idea, and its alignment with Mauzoun’s strategy before proceeding with the commission. The qualification process ensures that your idea is comprehensive and sound––in other words, we need to make sure that you know exactly what you want to talk about and that you are truly an expert on the subject matter. We also need to vet the authenticity of the idea to avoid plagiarism.",
+    "qualificationAnswer": "As part of our commitment to writing ethics, we must ensure the originality of the brief, the integrity of the idea, and its alignment with Mauzoun’s strategy before proceeding with the commission. The qualification process ensures that your idea is comprehensive and sound––in other words, we need to make sure that you know exactly what you want to talk about and that you are truly an expert on the subject matter. We also need to vet the authenticity of the idea to avoid plagiarism.",
     "publishQ": "Can I publish my commissioned book with Mauzoun?",
     "publishAnswer": "If you have commissioned a book, upon its completion, you may choose to transition it to our Boutique Publishing department. If you do so, Mauzoun is entitled to a minority rights percentage of the book, and you are entitled to a majority rights percentage because you commissioned the book. Mauzoun will conduct the printing, publishing, and distribution of the book (sans marketing) for an upfront fee."
   },

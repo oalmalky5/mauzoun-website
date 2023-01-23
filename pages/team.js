@@ -211,10 +211,12 @@ const Team = function ({ textAnimationControls, handleBgColorChange, handleOpenN
                   <motion.img src="/Story.png" height="341px" width="900px" layout="fixed" priority="true" transition={{ duration: 0.5 }}/>
                 </div>
                 </div>*/}
-
+              <div className="container-content">
+                <span className="title">{f("teamPageTitle")}</span>
+              </div>  
               <div className="container-content">
                 {/*<span className="nameStory">{f("nameMeaning")}</span>*/}
-
+               <span className="title approachTitle">{f("subheader.titleMain")}</span>
                <div className="proudStory">{f("proud")}</div> 
                 <div className="container-object">
                    <div className={styles.gridContainer}>{getTeamMembers()}</div>

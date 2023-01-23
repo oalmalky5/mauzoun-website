@@ -307,6 +307,7 @@ export const ar = {
 
   },
   "/team": {
+    "teamPageTitle": "فريقنا",
     nameMeaning:
       "إن جودتكم الحقيقية نابعة من جودة فريقكم.",
     proud:
