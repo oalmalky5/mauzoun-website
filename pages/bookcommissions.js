@@ -183,7 +183,7 @@ export default function BookCommissions({ textAnimationControls, handleBgColorCh
                           </WhiteBox>
                           
                         </div>
-                        <div>{f("underBoxPara")}</div>
+                        {<div>{f("underBoxPara")}</div>}
                       </div>
                      
                     </>
