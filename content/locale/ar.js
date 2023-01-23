@@ -108,7 +108,7 @@ export const ar = {
     "contentWriting.clients.7": "<div class='pavilion'>الجناح الوطني السعودي في بينالي البندقية ٥٩</div>",
     "creativeWriting.title": "تكليفات الكتب",
     "creativeWriting.clients.1": "<div class='arts'><b>وزارة الثقافة: كتب فنون الطهي</b></div>",
-    "creativeWriting.clients.2": "<div class='arts'><b>أحوال النور</b></div>",
+    "creativeWriting.clients.2": "<div class='light'><b>أحوال النور</b></div>",
     "boutiquePublishing.title": "النشر المتخصص",
     "boutiquePublishing.clients.1": "<div class='myths'><b>الأساطير في عالمنا وحوله</b></div>",
     clients: "<span class='brandsNumber'>عملنا منذ عام ٢٠١٨ على <b><u>أكثر من ١١٠ مشروع</u></b>.</span>",
