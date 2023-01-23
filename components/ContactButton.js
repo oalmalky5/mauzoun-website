@@ -68,12 +68,14 @@ export default function ContactButton({
               // setIsContactFormVisible(true);
             }}
             transition={{ duration: 0.5 }}
-            style={{ backgroundColor: isHovered & asPath === '/home' ? "#69488E" : 
-                                      isHovered & asPath === '/story' ? '#C14729' : 
-                                      isHovered & asPath === '/services' ? '#CD9F26' :
-                                      isHovered & asPath === '/portfolio' ? '#F8D952' :
-                                      isHovered & asPath === '/blog' ? '#34A798' :
-                                      isHovered & asPath === '/andyou' ? '#A0D1CA' : 
+            style={{ backgroundColor: isHovered & asPath === '/story' ? "#69488E" : 
+                                      isHovered & asPath === '/team' ? '#C14729' : 
+                                      isHovered & asPath === '/culture' ? '#CD9F26' :
+                                      isHovered & asPath === '/method' ? '#F8D952' :
+                                      isHovered & asPath === '/contentwriting' ? '#34A798' :
+                                      isHovered & asPath === '/bookcommissions' ? '#A0D1CA' :
+                                      isHovered & asPath === '/boutiquepublishing' ? "#69488E" :
+                                      isHovered & asPath === '/portfolio' ? '#C14729' :
                                       isHovered & asPath === '/mauj' ? '#F8D952' :
                                       isHovered & asPath === '/sta' ? '#F8D952' :
                                       isHovered & asPath === '/musaandpalm' ? '#F8D952' :

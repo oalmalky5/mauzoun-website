@@ -83,20 +83,24 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
 
   const buildTiltedSquare = (linkName) => {
     let filter;
-    if (router.pathname === "/home")
-      filter = " invert(30%) sepia(10%) saturate(3580%) hue-rotate(220deg) brightness(98%) contrast(85%)"
-    else if (router.pathname === "/story")
+    if (router.pathname === "/story")
+      filter = "invert(30%) sepia(10%) saturate(3580%) hue-rotate(220deg) brightness(98%) contrast(85%)"
+    else if (router.pathname === "/team")
       filter = "invert(25%) sepia(91%) saturate(1730%) hue-rotate(352deg) brightness(94%) contrast(78%)"
-    else if (router.pathname === "/services")
+    else if (router.pathname === "/culture")
       filter = "invert(83%) sepia(27%) saturate(4335%) hue-rotate(356deg) brightness(85%) contrast(92%)"
-    else if (router.pathname === "/portfolio")
+    else if (router.pathname === "/method")
       filter = "invert(73%) sepia(92%) saturate(308%) hue-rotate(359deg) brightness(104%) contrast(93%)"
-    else if (router.pathname === "/blog")
+    else if (router.pathname === "/contentwriting")
       filter = "invert(58%) sepia(29%) saturate(790%) hue-rotate(132deg) brightness(92%) contrast(88%)"
-    else if (router.pathname === "/andyou")
+    else if (router.pathname === "/bookcommissions")
       filter = "invert(80%) sepia(37%) saturate(164%) hue-rotate(116deg) brightness(89%) contrast(88%)"
-    else {
-      filter = "invert(58%) sepia(29%) saturate(790%) hue-rotate(132deg) brightness(92%) contrast(88%)"
+    else if (router.pathname === "/boutiquepublishing"){
+      filter = "invert(30%) sepia(10%) saturate(3580%) hue-rotate(220deg) brightness(98%) contrast(85%)"
+    } else if (router.pathname === "/portfolio"){
+      filter = "invert(25%) sepia(91%) saturate(1730%) hue-rotate(352deg) brightness(94%) contrast(78%)"
+    } else if (router.pathname === "/portfolio"){
+      filter = "invert(25%) sepia(91%) saturate(1730%) hue-rotate(352deg) brightness(94%) contrast(78%)"
     }
     {/*if (router.pathname === "/services" || router.pathname === "/blog")
       filter = "invert(92%) sepia(72%) saturate(682%) hue-rotate(329deg) brightness(96%) contrast(103%)";
