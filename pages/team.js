@@ -216,7 +216,7 @@ const Team = function ({ textAnimationControls, handleBgColorChange, handleOpenN
               </div>  
               <div className="container-content">
                 {/*<span className="nameStory">{f("nameMeaning")}</span>*/}
-               <span className="title approachTitle">{f("subheader.titleMain")}</span>
+               
                <div className="proudStory">{f("proud")}</div> 
                 <div className="container-object">
                    <div className={styles.gridContainer}>{getTeamMembers()}</div>
