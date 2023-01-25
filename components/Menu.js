@@ -101,7 +101,15 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
       filter = "invert(25%) sepia(91%) saturate(1730%) hue-rotate(352deg) brightness(94%) contrast(78%)"
     } else if (router.pathname === "/portfolio"){
       filter = "invert(25%) sepia(91%) saturate(1730%) hue-rotate(352deg) brightness(94%) contrast(78%)"
-    }
+    } else if (router.pathname === "/mauj"){
+      filter = "invert(25%) sepia(91%) saturate(1730%) hue-rotate(352deg) brightness(94%) contrast(78%)"
+    } else if (router.pathname === "/shafra"){
+      filter = "invert(25%) sepia(91%) saturate(1730%) hue-rotate(352deg) brightness(94%) contrast(78%)"
+    } else if (router.pathname === "/musaandpalm"){
+      filter = "invert(25%) sepia(91%) saturate(1730%) hue-rotate(352deg) brightness(94%) contrast(78%)"
+    } else if (router.pathname === "/sta"){
+      filter = "invert(25%) sepia(91%) saturate(1730%) hue-rotate(352deg) brightness(94%) contrast(78%)"
+    } 
     {/*if (router.pathname === "/services" || router.pathname === "/blog")
       filter = "invert(92%) sepia(72%) saturate(682%) hue-rotate(329deg) brightness(96%) contrast(103%)";
   else filter = "invert(99%) sepia(59%) saturate(426%) hue-rotate(169deg) brightness(112%) contrast(100%)";*/}

@@ -76,10 +76,10 @@ export default function ContactButton({
                                       isHovered & asPath === '/bookcommissions' ? '#A0D1CA' :
                                       isHovered & asPath === '/boutiquepublishing' ? "#69488E" :
                                       isHovered & asPath === '/portfolio' ? '#C14729' :
-                                      isHovered & asPath === '/mauj' ? '#F8D952' :
-                                      isHovered & asPath === '/sta' ? '#F8D952' :
-                                      isHovered & asPath === '/musaandpalm' ? '#F8D952' :
-                                      isHovered & asPath === '/shafra' ? '#F8D952' : "#ffffff"
+                                      isHovered & asPath === '/mauj' ? '#C14729' :
+                                      isHovered & asPath === '/sta' ? '#C14729' :
+                                      isHovered & asPath === '/musaandpalm' ? '#C14729' :
+                                      isHovered & asPath === '/shafra' ? '#C14729' : "#ffffff"
                                     }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

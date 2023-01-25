@@ -234,8 +234,6 @@ const Team = function ({ textAnimationControls, handleBgColorChange, handleOpenN
                 <div class={styles.totalWhiteBox}>
                   <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
                     <span className="whitebox-font">{f("whitebox.innerText1")}</span>
-                
-                    
                   </WhiteBox>
                 </div>
               </div>

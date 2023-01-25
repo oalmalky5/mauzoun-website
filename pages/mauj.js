@@ -112,7 +112,7 @@ export default function mauj({ textAnimationControls, handleBgColorChange, handl
 
               <div className={styles.tone}>
                 <span className="toneTitle">{f("tone.title")}</span>
-                <span className="maujPic">{locale === "en-US" ? <Image src="/Mauj-02.png" width={800} height={400}/> : null}</span>
+                <span className="maujPic">{locale === "en-US" ? <Image src="/Mauj-02.png" width={890} height={324}/> : null}</span>
                 <span className="maujPic">{locale === "ar" ? <Image src="/Mauj-01.png" width={600} height={350}/> : null}</span>
                 <span className="tonePara1">{f("tone.para1")}</span>
                 <span className="tonePara2">{f("tone.para2")}</span>
