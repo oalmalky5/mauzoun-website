@@ -77,8 +77,8 @@ export default function BookCommissions({ textAnimationControls, handleBgColorCh
   return (
     <>
       <NextSeo
-        title={locale !== "ar" ? "Mauzoun | Book Commissions" : "مَوْزوْن | تكاليف الكتب"}
-        description={locale !== "ar" ? "Mauzoun | Book Commissions" : "مَوْزوْن | تكاليف الكتب"}
+        title={locale !== "ar" ? "Mauzoun | Boutique Publishing" : "مَوْزوْن | النشر المتخصص"}
+        description={locale !== "ar" ? "Mauzoun | Boutique Publishing" : "مَوْزوْن | النشر المتخصص"}
       />
       <div className="background-animation" style={{ backgroundColor }} />
 
