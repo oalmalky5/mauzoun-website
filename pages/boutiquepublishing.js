@@ -146,75 +146,12 @@ export default function BookCommissions({ textAnimationControls, handleBgColorCh
                     <div>
                     <br/>
                     <span className="servicesAnswer">{f("serviceAnswer")}</span>
+                    <span className="servicesAnswer">{f("serviceAnswer1")}</span>
                     </div>
                   )}
                 </div>
 
-                {/* Content Writing */}
                 <div className="mt-0 unwrapped-content">
-                  <div
-                    className="content-wrapper"
-                    onClick={() => setIsContentWritingVisible(!isContentWritingVisible)}
-                    style={isContentWritingVisible ? { marginBottom: "30px" } : {}}
-                  >
-                    <span className="title">{f("whatServicesQ")}</span>
-                    <span className="reveal-icon">
-                      <BsChevronDown className="reveal-icon" />
-                    </span>
-                  </div>
-
-                  {isContentWritingVisible && (
-                    <>
-                      <div className="container-object">
-                        <div className="totalWhiteBox">
-                          <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                            <span className="topHeader">{f("serviceHeader")}</span>
-                            <div className="serviceHeader">{f("serviceHeader1")}</div>
-                            <br />
-                            {[
-                              "creativeWriting.services.novels",
-                              "creativeWriting.services.visNovels",
-                              "creativeWriting.services.anth",
-                              "creativeWriting.services.mem",
-                              "creativeWriting.services.essay",
-                              "creativeWriting.services.coffee",
-                              ].map((e) => (
-                              <div className={styles.service} key={e}>
-                                {bullet}
-                                {f(e)}
-                              </div>
-                            ))}
-                          </WhiteBox>
-                          
-                        </div>
-                        
-                      </div>
-                     
-                    </>
-                  )}
-                </div>
-
-                {/* Creative Writing */}
-                  <div className="mt-0 unwrapped-content">
-                      <div
-                          className="content-wrapper"
-                          onClick={() => setIsCreativeWritingVisible(!isCreativeWritingVisible)}
-                          style={isCreativeWritingVisible ? { marginBottom: "30px" } : {}}
-                      >
-                          <span className="title">{f("whoForQ")}</span>
-                          <span className="reveal-icon">
-                      <BsChevronDown className="reveal-icon" />
-                    </span>
-                      </div>
-
-                      {isCreativeWritingVisible && (
-                          <>
-                              {f("whoForAnswer")}
-                          </>
-                      )}
-                  </div>
-                 
-                  <div className="mt-0 unwrapped-content">
                   <div
                     className="content-wrapper"
                     onClick={() => setIsPublishServiecVisible(!isPublishServiecVisible)}
@@ -259,27 +196,27 @@ export default function BookCommissions({ textAnimationControls, handleBgColorCh
                     </>
                   )}
                 </div>
-                  {/* Boutique Publishing */}
-                  <div className="mt-0 unwrapped-content">
+
+                <div className="mt-0 unwrapped-content">
                       <div
                           className="content-wrapper"
-                          onClick={() => setIsBoutiquePublishingVisible(!isBoutiquePublishingVisible)}
-                          style={isBoutiquePublishingVisible ? { marginBottom: "30px" } : {}}
+                          onClick={() => setIsCreativeWritingVisible(!isCreativeWritingVisible)}
+                          style={isCreativeWritingVisible ? { marginBottom: "30px" } : {}}
                       >
-                          <span className="title">{f("nominationQ")}</span>
+                          <span className="title">{f("whoForQ")}</span>
                           <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
                       </div>
 
-                      {isBoutiquePublishingVisible && (
+                      {isCreativeWritingVisible && (
                           <>
-                              {f("nominationAnswer")}
+                              {f("whoForAnswer")}
+                              {f("whoForAnswer1")}
+                              {f("whoForAnswer2")}
                           </>
                       )}
                   </div>
-
-                  
 
                   <div className="mt-0 unwrapped-content">
                   <div
@@ -299,6 +236,82 @@ export default function BookCommissions({ textAnimationControls, handleBgColorCh
                       </>
                   )}
                 </div>
+
+                <div className="mt-0 unwrapped-content">
+                      <div
+                          className="content-wrapper"
+                          onClick={() => setIsBoutiquePublishingVisible(!isBoutiquePublishingVisible)}
+                          style={isBoutiquePublishingVisible ? { marginBottom: "30px" } : {}}
+                      >
+                          <span className="title">{f("nominationQ")}</span>
+                          <span className="reveal-icon">
+                      <BsChevronDown className="reveal-icon" />
+                    </span>
+                      </div>
+
+                      {isBoutiquePublishingVisible && (
+                          <>
+                              {f("nominationAnswer")}
+                          </>
+                      )}
+                  </div>
+
+                {/* Content Writing */}
+                <div className="mt-0 unwrapped-content">
+                  <div
+                    className="content-wrapper"
+                    onClick={() => setIsContentWritingVisible(!isContentWritingVisible)}
+                    style={isContentWritingVisible ? { marginBottom: "30px" } : {}}
+                  >
+                    <span className="title">{f("whatServicesQ")}</span>
+                    <span className="reveal-icon">
+                      <BsChevronDown className="reveal-icon" />
+                    </span>
+                  </div>
+
+                  {isContentWritingVisible && (
+                    <>
+                      <div className="container-object">
+                        <div className="totalWhiteBox">
+                          <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
+                            <span className="topHeader">{f("serviceHeader")}</span>
+                            <span className="topHeader">{f("serviceHeader1")}</span>
+                            <span className="topHeader">{f("serviceHeader2")}</span>
+                            <div className="serviceHeader">{f("serviceHeader3")}</div>
+                            <br />
+                            {[
+                              "creativeWriting.services.novels",
+                              "creativeWriting.services.visNovels",
+                              "creativeWriting.services.anth",
+                              "creativeWriting.services.mem",
+                              "creativeWriting.services.essay",
+                              "creativeWriting.services.coffee",
+                              ].map((e) => (
+                              <div className={styles.service} key={e}>
+                                {bullet}
+                                {f(e)}
+                              </div>
+                            ))}
+                          </WhiteBox>
+                          
+                        </div>
+                        
+                      </div>
+                     
+                    </>
+                  )}
+                </div>
+
+                {/* Creative Writing */}
+                  
+                 
+                  
+                  {/* Boutique Publishing */}
+                  
+
+                  
+
+                 
 
                 <div className="mt-0 unwrapped-content">
                   <div

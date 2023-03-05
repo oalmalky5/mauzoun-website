@@ -477,13 +477,16 @@ exports["en-US"] = {
 
   "/boutiquepublishing": {
     "bookPageTitle": "Boutique Publishing",
-    "mainPara": "We prioritize talent over the region’s pay-to-publish model, and we headhunt talented authors with truly exceptional book manuscripts.",
-    "secondPara": "We follow an investment model, so authors pay zero riyals to publish their books, forever. Authors will also get a higher rights percentage than the industry average with a fully negotiable offer delineated in our contracts. An author may also choose to contribute to the book’s overhead in exchange for a higher royalty percentage.",
+    "mainPara": "We prioritize talent over the region’s pay-to-publish model, headhunting talented authors with truly exceptional book manuscripts.",
+    "secondPara": "Our Boutique Publishing model follows the international royalty-based publishing model rather than the Arab World's standard pay-to-publish model. We target talented authors with excellent manuscripts, holistically handling the publishing process from story development, book editing, design, marketing, and more. In this nomination-only model, we headhunt distinguished authors whose works enrich the Saudi and Arab cultural scenes with their innovative creative concepts and unrivaled narrative quality.",
     "serviceQ": "What is Boutique Publishing?",
-    "serviceAnswer": "This service is for talented individuals that have a complete manuscript and seek to publish their book in the international royalty based module. This service is by nomination only and covers all the steps leading to publishing and marketing of the book.",
+    "serviceAnswer": "Boutique Publishing, also known as traditional publishing or the New York publishing model, focuses on quality rather than quantity. These publishing houses are selective in the works they publish, headhunting authors who fulfill a particular criteria of quality and style.",
+    "serviceAnswer1": "This publishing model is royalty-based, so authors pay zero riyals to publish their books, forever. Authors will also get a higher rights percentage than the Arab industry average with a fully negotiable offer delineated in our contract. An author may also choose to contribute to the book’s overhead in exchange for a higher royalty percentage.",
     "whatServicesQ": "What books does Mauzoun publish?",
-    "serviceHeader": "Mauzoun publishes both fiction and non-fiction books. We produce original works and also acquire international works to translate into the Arabic language. We primarily target books that are by written Arabs, no matter the work's original language, and books with topics that are Arab-adjacent.",
-    "serviceHeader1": "Some of the book formats we publish include but are not limited to:",
+    "serviceHeader": "We seek works that enrich the Saudi and Arab cultural scenes with compelling stories, unique creative perspectives, and exceptional quality. We greatly prefer works that address Arab or Arab-adjacent themes.",
+    "serviceHeader1": "We produce original works and acquire foreign language Arab or Arab-adjacent works to then translate into the Arabic language.",
+    "serviceHeader2": "We publish and sell both premium, high-end books as well as regular, everyday-use books.",
+    "serviceHeader3": "Some of the book formats we publish include but are not limited to:",
     "creativeWriting.services.novels": "<span className='contentService'>Novels</span>",
     "creativeWriting.services.visNovels": "<span className='contentService'>Visual Novels</span>",
     "creativeWriting.services.anth": "<span className='contentService'>Anthologies</span>",
@@ -492,7 +495,9 @@ exports["en-US"] = {
     "creativeWriting.services.coffee": "<span className='contentService'>Coffee Table Books</span>",
     // "underBoxPara": "Book Commissions only cover the research, writing, and design phases. They do not include marketing, branding, publicity, printing, publishing, or distribution. Please note that this is not a ghostwriting service and that our contracts stipulate crediting Mauzoun as the writer of the work.",
     "whoForQ": "Who is this service for? ",
-    "whoForAnswer": "This service is by nomination only. We look for writers whose fiction or nonfiction manuscripts align with our vision to diversify the Arab literary corpus and spark meaningful discussions.",
+    "whoForAnswer": "This service is for talented individuals with innovative manuscripts who seek to publish their books with a publishing house that follows the international royalty-based model rather than the pay-to-publish or vanity publishing model.",
+    "whoForAnswer1": "Publishing with Mauzoun is by nomination only. Please note that Mauzoun publishes only up to twelve books per year. Mauzoun will cover all the steps, from story development, copy editing, design, all the way to publishing and marketing the book, and more.",
+    "whoForAnswer2": "We seek writers whose fiction or non-fiction works align with our vision to diversify the Arab literary corpus and spark meaningful discussions.",
     "whatService2": "What services are included in the publishing deal?",
     "serviceHeaderMain": "It’s our responsibility as publishers to ensure that the author and the book are well-developed and well-marketed to create a win-win outcome. That is why we fully handle:",
     "creativeWriting.services.researc": "<span className='contentService'>Research</span>",
@@ -509,9 +514,9 @@ exports["en-US"] = {
     "nominationAnswer": "We seek writers whose fiction or non-fiction manuscripts align with our vision to diversify the Arab literary corpus and spark meaningful discussions. The most important elements of assessment are a clear and purposeful story structure as well as a unique and well-formed writing voice.",
     "qualifyQ": "How can I qualify for nomination?",
     "qualifyAnswer": "Registered literary agents and renowned literary and publishing institutions or figures may nominate your book to us. In doing so, ensure that you include a complete and competitively written story deck, author profile, and book manuscript.",
-    "mauzounQ":"What are the books that have been acquired or published by Mauzoun?",
-    "mauzounAnswer":"Visit the Mauzoun E-Store to view the comprehensive author list and book catalog.",
-    
+    "mauzounQ": "What are the books that have been acquired or published by Mauzoun?",
+    "mauzounAnswer": "Visit the Mauzoun E-Store to view the comprehensive author list and book catalog.",
+
   },
 
 
