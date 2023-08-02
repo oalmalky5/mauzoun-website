@@ -148,7 +148,7 @@ export default function LandingPage({ updatePageTransition, textAnimationControl
       });
     } 
   };
-
+  // this is the index page
   return (
     <>
       <NextSeo
