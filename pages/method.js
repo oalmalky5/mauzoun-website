@@ -9,7 +9,6 @@ import { NextSeo } from 'next-seo';
 import Menu from "../components/Menu";
 import formatJsxMessage from "../utils/formatJsxMessage";
 import ContactButton from "../components/ContactButton";
-import { usePanelbear } from '@panelbear/panelbear-nextjs';
 
 import {MotionLogo} from "../components/MotionLogo"
 import Footer from "../components/Footer";
@@ -32,7 +31,6 @@ export default function ({ updatePageTransition, textAnimationControls, handleBg
   function CustomApp({ Component, pageProps }) {
 
     // Load Panelbear only once during the app lifecycle
-    usePanelbear('BLavSVGQgtx');
   
     return <Component {...pageProps} />;
   }
