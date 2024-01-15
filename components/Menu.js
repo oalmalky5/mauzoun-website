@@ -13,7 +13,6 @@ import * as locales from "../content/locale";
 import formatJsxMessage from "../utils/formatJsxMessage";
 
 import gsap from "gsap";
-import { redirect } from "next/dist/next-server/server/api-utils";
 
 const intlCache = createIntlCache();
 
@@ -238,112 +237,85 @@ export default function Menu({ backgroundColor, textAnimationControls, isNavOpen
           </Link></>
         )}
 
-        <div className={styles.menu}>
-          <div>
-            
-            {["story", "team", "culture", "method", "contentwriting", "bookcommissions", "boutiquepublishing", "portfolio", "blog"].map((e, i) => {
-              const otherText = otherF(e + "Link");
-              
-              return (
-                <div key={e}>
-                  {!(i % 2) && buildTiltedSquare(e)}
-                  
-                  
-                  <Link href={e + '/'} > 
-                    
-                  
-                    
-                  
-                    <a
-                      
-                      className={styles.navLink}
-                      
-                      
-                      
-                      // onMouseEnter={() => (isIOS ? null : setHoveredLink())}
-                      // onMouseLeave={() => (isIOS ? null : setHoveredLink(""))}
-                      onMouseEnter={() =>  {
-                        setHoveredLink(e)
-                      }}
-                      onMouseLeave={() =>  setHoveredLink("")}
-                      onClick={() => isNavOpen && handleOpenNav?.("instant")}
-                      
+<div className={styles.menu}>
+  <div>
+    {["story", "team", "culture", "method", "contentwriting", "bookcommissions", "boutiquepublishing", "portfolio", "blog"].map((e, i) => {
+      const otherText = otherF(e + "Link");
 
-                      
-                      
-                    >
-                      <div
-                        className={`${styles.itemTitle} heading`}
-                        style={{
-                          fontWeight: locale === "en-US" ? "500" : "bold",
-                        }}
-                      >
-                        {f(e + "Link")}
-                        {i % 2 ? buildTiltedSquare(e) : null}
-                      </div>
+      return (
+        <div key={e}>
+          {!(i % 2) && buildTiltedSquare(e)}
 
-                      <span className={`${styles.otherLocaleLink} ${otherLocale} lighter`}>
-                        {otherText ? (
-                          otherText
-                        ) : (
-                          <p>
-                            <span> </span>
-                          </p>
-                        )}
-                      </span>
-                      
-                    </a>
-                    
-                  </Link>
-                  
-                </div>
-                
-              );
-              
-            })}
-          </div>
-          <div className={styles.languageSwitch}>
-            <p className={locale}>
-              <b>{locale === "en-US" ? "English" : "العربية"}</b>
-            </p>
-
-            <a
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation()
-                isNavOpen && handleOpenNav?.("instant")
-                handleAnimationFadeIn(locale, () => {
-                  Cookies.set("NEXT_LOCALE", otherLocale);
-                  router.push(pathname, pathname, { locale: otherLocale });
-                });
-              }}
+          {/* Corrected Link usage */}
+          <Link href={`/${e}`} passHref>
+            <div
+              className={styles.navLink}
+              onMouseEnter={() => setHoveredLink(e)}
+              onMouseLeave={() => setHoveredLink("")}
+              onClick={() => isNavOpen && handleOpenNav?.("instant")}
             >
-              <label className={styles.switch}>
-                <input type="checkbox" checked={locale === "ar"} readOnly />
-                <span className={styles.slider} />
-              </label>
-            </a>
-
-            <p className={otherLocale}>{locale === "ar" ? "English" : "العربية"}</p>
-          </div>
-
-          <div className={styles.complementaryInfo}>
-            <div className={styles.bottomNavIcons}>
-              <a target="_blank" href="https://twitter.com/mauzoun_?lang=en">
-                <IoLogoTwitter size="30px" />
-              </a>
-              <a target="_blank" href="https://www.instagram.com/mauzoun/?hl=en">
-                <IoLogoInstagram size="30px" />
-              </a>
-              <a target="_blank" href="https://www.linkedin.com/company/mauzoun/about/">
-                <IoLogoLinkedin size="30px" />
-              </a>
+              <div
+                className={`${styles.itemTitle} heading`}
+                style={{
+                  fontWeight: locale === "en-US" ? "500" : "bold",
+                }}
+              >
+                {f(e + "Link")}
+                {i % 2 ? buildTiltedSquare(e) : null}
+              </div>
+              <span className={`${styles.otherLocaleLink} ${otherLocale} lighter`}>
+                {otherText ? otherText : <p><span> </span></p>}
+              </span>
             </div>
+          </Link>
 
-            <span className="email">{f("email")}</span>
-            <span className="bolder">{f("location")}</span>
-          </div>
         </div>
+      );
+    })}
+  </div>
+  <div className={styles.languageSwitch}>
+    <p className={locale}>
+      <b>{locale === "en-US" ? "English" : "العربية"}</b>
+    </p>
+
+    {/* Adjusted for proper Link usage */}
+    <a
+      onClick={(e) => {
+        e.preventDefault();
+        isNavOpen && handleOpenNav?.("instant");
+        handleAnimationFadeIn(locale, () => {
+          Cookies.set("NEXT_LOCALE", otherLocale);
+          router.push(pathname, pathname, { locale: otherLocale });
+        });
+      }}
+    >
+      <label className={styles.switch}>
+        <input type="checkbox" checked={locale === "ar"} readOnly />
+        <span className={styles.slider}></span>
+      </label>
+    </a>
+
+    <p className={otherLocale}>{locale === "ar" ? "English" : "العربية"}</p>
+  </div>
+  <div className={styles.complementaryInfo}>
+    <div className={styles.bottomNavIcons}>
+    <div className={styles.bottomNavIcons}>
+      <Link href="https://twitter.com/mauzoun_?lang=en" passHref>
+        <IoLogoTwitter size="30px" />
+      </Link>
+      <Link href="https://www.instagram.com/mauzoun/?hl=en" passHref>
+        <IoLogoInstagram size="30px" />
+      </Link>
+      <Link href="https://www.linkedin.com/company/mauzoun/about/" passHref>
+        <IoLogoLinkedin size="30px" />
+      </Link>
+    </div>
+
+    </div>
+    <span className="email">{f("email")}</span>
+    <span className="bolder">{f("location")}</span>
+  </div>
+</div>
       </div>
     </div>
   );

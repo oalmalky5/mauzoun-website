@@ -82,7 +82,7 @@ export default function musaandpalm({textAnimationControls, handleBgColorChange,
 
 
             >
-                <ContactButton isNavOpen={isNavOpen} history={history}/>
+                {/* <ContactButton isNavOpen={isNavOpen} history={history}/> */}
                 <div>
                     <MotionLogo/>
                     <Menu

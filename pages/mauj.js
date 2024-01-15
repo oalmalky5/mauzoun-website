@@ -86,7 +86,7 @@ export default function mauj({ textAnimationControls, handleBgColorChange, handl
         
         
       >
-         <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+         {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div>
         <MotionLogo />
           <Menu
@@ -117,62 +117,51 @@ export default function mauj({ textAnimationControls, handleBgColorChange, handl
                 <span className="tonePara1">{f("tone.para1")}</span>
                 <span className="tonePara2">{f("tone.para2")}</span>
 
-                <div class={styles.instaGrid}>
+                {/* <div class={styles.instaGrid}>
                   <div className={styles.cell1}>
-                    <iframe
-                      className={styles.frame}
+                    <InstagramEmbed
+                      url="https://www.instagram.com/p/CKqoCo5FZHM"
                       width="250"
                       height="300"
-                      src="https://www.instagram.com/p/CKqoCo5FZHM/embed"
-                      frameborder="0"
-                    ></iframe>
+                    ></InstagramEmbed>
                   </div>
                   <div className={styles.cell2}>
-                    <iframe
-                      className={styles.frame}
+                    <InstagramEmbed
                       width="250"
                       height="300"
-                      src="https://www.instagram.com/p/CEyWFKnJtrl/embed"
-                      frameborder="0"
-                    ></iframe>
+                      url="https://www.instagram.com/p/CEyWFKnJtrl"
+                    ></InstagramEmbed>
                   </div>
                   <div className={styles.cell3}>
-                    <iframe
-                      className={styles.frame}
+                    <InstagramEmbed
                       width="250"
                       height="300"
-                      src="https://www.instagram.com/p/CEyT727pKDG/embed"
-                      frameborder="0"
-                    ></iframe>
+                      url="https://www.instagram.com/p/CEyT727pKDG"
+                    ></InstagramEmbed>
                   </div>
                   <div className={styles.cell4}>
-                    <iframe
-                      className={styles.frame}
+                    <InstagramEmbed
                       width="250"
                       height="300"
-                      src="https://www.instagram.com/p/CNsRmqQlVFI/embed"
-                      frameborder="0"
-                    ></iframe>
+                      url="https://www.instagram.com/p/CNsRmqQlVFI"
+                      
+                    ></InstagramEmbed>
                   </div>
                   <div className={styles.cell5}>
-                    <iframe
-                      className={styles.frame}
+                    <InstagramEmbed
                       width="250"
                       height="300"
-                      src="https://www.instagram.com/p/COUt156lh35/embed"
-                      frameborder="0"
-                    ></iframe>
+                      url="https://www.instagram.com/p/COUt156lh35"
+                    ></InstagramEmbed>
                   </div>
                   <div className={styles.cell6}>
-                    <iframe
-                      className={styles.frame}
+                    <InstagramEmbed
                       width="250"
                       height="300"
-                      src="https://www.instagram.com/p/CNaVfcWFIJm/embed"
-                      frameborder="0"
-                    ></iframe>
+                      url="https://www.instagram.com/p/CNaVfcWFIJm"
+                    ></InstagramEmbed>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               <div className={styles.brand}>
@@ -187,7 +176,6 @@ export default function mauj({ textAnimationControls, handleBgColorChange, handl
                 </span>
                 <div className="totalWhiteBox" >
                   <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                   
                     <span className="testPara1" >
                       {f("testimony.para1")}
                     </span>

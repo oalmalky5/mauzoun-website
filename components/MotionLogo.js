@@ -13,14 +13,14 @@ export const MotionLogo = () => {
 
     return (
       <>
-          <Link href="/">
+          <Link href="/en-US/story">
             <motion.img
-            src="https://i.ibb.co/28W6QH5/mainLogo.png"
-            alt="Mauzoun logo"
-            className={styles.motionLogo}
-            transition={{ duration: 0.5, delay:0 }}
-            layoutId="motionLogo"
-            style={{opacity:1, zIndex:2, position}}
+              src="https://i.ibb.co/28W6QH5/mainLogo.png"
+              alt="Mauzoun logo"
+              className={styles.motionLogo}
+              transition={{ duration: 0.5, delay:0 }}
+              layoutId="motionLogo"
+              style={{opacity:1, zIndex:2, position}}
             />
           </Link>
         </>

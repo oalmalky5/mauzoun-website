@@ -1,0 +1,127 @@
+@use "mixins" as *;
+.kashida {
+  position: fixed;
+  z-index: 2;
+  -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+}
+
+.kashida:hover {
+  -webkit-transform: scale(0.25, 0.25);
+          transform: scale(0.25, 0.25);
+}
+
+.pageContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.mainPanel {
+  position: absolute;
+  width: 45%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 25px;
+  text-align: center;
+  background-color: #f7f5f0;
+  overflow-y: scroll;
+}
+
+.mainPanel::-webkit-scrollbar {
+  width: 0;
+}
+
+@media (max-width: 1536px) {
+  .mainPanel {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainPanel {
+    width: 100%;
+  }
+}
+
+.mainPanel .logo {
+  position: absolute !important;
+  top: 0;
+  height: 400px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  height: 135px !important;
+  width: 140px !important;
+}
+
+.mainPanel .languageButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  white-space: pre-wrap;
+  background: transparent;
+  padding: 5px 20px;
+  font-size: 25px;
+  border: solid 1.5px black;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.mainPanel .bottomKashida {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+}
+
+@media (max-height: 767px) {
+  .mainPanel .bottomKashida {
+    display: none;
+  }
+}
+
+.bgAnimation {
+  width: 0;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .bgAnimation {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .bgAnimation {
+    width: 27.5%;
+  }
+}
+/*# sourceMappingURL=landingPage.module.css.map */

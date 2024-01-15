@@ -85,7 +85,7 @@ export default function Culture({ textAnimationControls, handleBgColorChange,han
         animate={animate}
         variants={variants}
       >
-      <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+      {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div
           style={{
             position: "fixed",

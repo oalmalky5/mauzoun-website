@@ -544,7 +544,7 @@ a {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 75%;
+  width: 100%;
   padding-left: 33%;
   background-color: rgb(248, 217, 82);
 
@@ -619,10 +619,9 @@ a {
     bottom: 0;
     min-height: 100%;
     width: 100%;
-    max-width: 650px;
+    
     z-index: -1;
     @media (min-width: 1536px) {
-      max-width: 992px;
     }
     @media (max-width: 767px) {
       max-width: 767px;
@@ -631,7 +630,7 @@ a {
 
   &-content{
     width: 100%;
-    max-width: 650px;
+    
     padding: 0 50px;
 
     p{
@@ -639,7 +638,6 @@ a {
     }
   
     @media (min-width: 1536px) {
-      max-width: 992px;
     }
 
     @media (max-width: 767px) {

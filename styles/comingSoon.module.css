@@ -1,0 +1,44 @@
+@use "mixins" as *;
+.comingSoon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: -35px;
+  margin-bottom: 20px;
+}
+
+.comingSoon .tiltedSquare div {
+  display: block !important;
+}
+
+.comingSoon .statusBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 160px;
+  height: 45px;
+  background-color: white;
+  border: solid;
+  font-weight: bold;
+  font-size: 20px !important;
+}
+
+.comingSoon .statusBox p {
+  font-size: 20px !important;
+}
+/*# sourceMappingURL=comingSoon.module.css.map */

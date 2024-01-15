@@ -86,7 +86,7 @@ export default function andyou({ textAnimationControls, handleBgColorChange, han
         
         
       >
-         <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+         {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div
           style={{
             position: "fixed",

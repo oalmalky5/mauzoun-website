@@ -82,7 +82,7 @@ export default function services({ textAnimationControls, handleBgColorChange,ha
         animate={animate}
         variants={variants}
       >
-      <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+      {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div
           style={{
             position: "fixed",

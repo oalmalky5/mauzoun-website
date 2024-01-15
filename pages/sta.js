@@ -81,7 +81,7 @@ export default function sta({ textAnimationControls, handleBgColorChange, handle
         
         
       >
-         <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+         {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div>
         <MotionLogo />
           <Menu

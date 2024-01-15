@@ -83,7 +83,7 @@ export default function BookCommissions({ textAnimationControls, handleBgColorCh
         animate={animate}
         variants={variants}
       >
-      <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+      {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div
           style={{
             position: "fixed",

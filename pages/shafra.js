@@ -83,7 +83,7 @@ export default function shafra({ textAnimationControls, handleBgColorChange, han
         
         
       >
-         <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+         {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div>
         <MotionLogo />
           <Menu

@@ -82,7 +82,7 @@ export default function ContentWriting({ textAnimationControls, handleBgColorCha
         animate={animate}
         variants={variants}
       >
-      <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+      {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div
           style={{
             position: "fixed",

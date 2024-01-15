@@ -42,11 +42,11 @@ const formatJsxMessage = (intl, locale, id, options) => {
 
   return (
     <p
-    // animate={
-    //   options.shouldFade ? options.animationControls : "instantlyVisible"
-    // }
-    // variants={variants}
-    // style={options.style}
+      animate={
+        options.shouldFade ? options.animationControls : "instantlyVisible"
+      }
+      variants={variants}
+      style={options.style}
     >
       {content}
     </p>

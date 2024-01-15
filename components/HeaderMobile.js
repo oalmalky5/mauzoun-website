@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "../styles/headerMobile.module.scss";
+import { motion } from "framer-motion";
+
 
 // import { Fade as Hamburger } from 'hamburger-react'
 
@@ -36,7 +38,7 @@ export default function HeaderMobile({backgroundColor, isNavOpen, handleOpenNav}
   return (
     <div className = {styles.headerMobile + ' header-mobile'} style = {{backgroundColor}}>
         <Link href='/'>
-          <img
+          <motion.img
             src='https://i.ibb.co/28W6QH5/mainLogo.png'
             alt='Mauzoun logo'
             className={styles.logo + " header-mobile__logo"}

@@ -57,12 +57,12 @@ export default function Story({ updatePageTransition, textAnimationControls, han
       <div className = "background-animation" style={{ backgroundColor }}/>
 
       <motion.div
-        key={key}
-        initial={initial}
-        animate={animate}
-        variants={variants}
+        // key={key}
+        // initial={initial}
+        // animate={animate}
+        // variants={variants}
       >
-        <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+        {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div
           style={{
             position: "fixed",
@@ -118,8 +118,19 @@ export default function Story({ updatePageTransition, textAnimationControls, han
 
               <div className="homeContainer">
              
-              <span className="homePageEn">{locale === "en-US" ? <Image src="/homeBgWithTextEn.png" width={"750px"} height={"1500px"}/> : null}</span>
-              <span className="homePageAr">{locale === "ar" ? <Image src="/homeBgWithTextAr.png" width={"750px"} height={"1500px"}/>  : null} </span>
+              <span className="homePageEn">{locale === "en-US" ? <Image 
+                              src="/homeBgWithTextEn.png" 
+                              width={750} 
+                              height={1500} 
+                              sizes="(max-width: 750px) 100vw, 750px"
+                            />
+                            : null}</span>
+              <span className="homePageAr">{locale === "ar" ? <Image 
+                              src="/homeBgWithTextAr.png" 
+                              width={750} 
+                              height={1500} 
+                              sizes="(max-width: 750px) 100vw, 750px"
+                            />  : null} </span>
 
 
                 {/*<div>

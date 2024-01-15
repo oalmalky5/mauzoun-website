@@ -6,6 +6,7 @@ import Contact from "./Contact";
 
 import gsap from "gsap";
 import Cookies from "js-cookie";
+import Link from "next/link";
 
 export default function Footer({ children, style, decoratorsPositions }) {
   const router = useRouter();
@@ -60,27 +61,28 @@ export default function Footer({ children, style, decoratorsPositions }) {
             <b>{locale === "en-US" ? "English" : "العربية"}</b>
           </span>
 
-          <a onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation()
-                handleAnimationFadeIn(locale, () => {
-                  Cookies.set("NEXT_LOCALE", otherLocale);
-                  router.push(pathname, pathname, { locale: otherLocale });
-                });
-              }}>
+          <div onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            handleAnimationFadeIn(locale, () => {
+              Cookies.set("NEXT_LOCALE", otherLocale);
+              router.push(pathname, pathname, { locale: otherLocale });
+            });
+          }}>
             <label className={styles.switch}>
               <input type="checkbox" checked={locale === "ar"} readOnly />
               <span className={styles.slider} />
             </label>
-          </a>
+          </div>
+
 
 
           <span className={otherLocale}><b>{locale === "ar" ? "English" : "العربية"}</b></span>
         </div>
         {/*<span onClick={() => setIsOpenContactModel(true)} style={{ fontWeight: 'bold', float: `${locale === "ar" ? "left" : "right"}` }} ><Contact isOpen={isOpenContactModel} />{locale === "ar" ? "اتصل" : "Contact"}</span>*/}
-        <a href="mailto:hello@mauzoun.com">
+        <Link href="mailto:hello@mauzoun.com">
           <span style={{ fontWeight: 'bold', float: `${locale === "ar" ? "left" : "right"}` }} >{locale === "ar" ? "اتصل" : "Contact"}</span>
-        </a>
+        </Link>
       </div>
     </div>
   );

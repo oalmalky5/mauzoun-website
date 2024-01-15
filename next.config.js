@@ -6,19 +6,21 @@ module.exports = {
   images: {
     domains: ["i.imgur.com", "writingandwellness.com"],
   },
-  target: "serverless",
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/story',
+        permanent: true, // set to false if you want the redirect to be temporary
+      },
+    ]
+  },
   webpack: (config, { isServer }) => {
-    // Fixes npm packages that depend on `fs` module
     if (!isServer) {
-      config.node = {
-        fs: 'empty'
-      }
+      // Configure the fallback for the 'fs' module when running in the browser
+      config.resolve.fallback = { fs: false };
     }
 
-    return config
+    return config;
   },
-
-}
-
-
-
+};

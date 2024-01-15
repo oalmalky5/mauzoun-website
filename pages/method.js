@@ -62,7 +62,7 @@ export default function ({ updatePageTransition, textAnimationControls, handleBg
         animate={animate}
         variants={variants}
       >
-        <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+        {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div
           style={{
             position: "fixed",

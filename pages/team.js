@@ -137,8 +137,8 @@ const Team = function ({ textAnimationControls, handleBgColorChange, handleOpenN
             id={i}
             src={teamMembersData[i].preview}
             className={styles.gridItemImage}
-            onMouseEnter={(e) => updateTeamMembersHoverState(e, true)}
-            onMouseLeave={(e) => updateTeamMembersHoverState(e, false)}
+            // onMouseEnter={(e) => updateTeamMembersHoverState(e, true)}
+            // onMouseLeave={(e) => updateTeamMembersHoverState(e, false)}
           />
           {i <= numberOfMembers && (
             <div className="mt-0 mb-0 heading">
@@ -170,7 +170,7 @@ const Team = function ({ textAnimationControls, handleBgColorChange, handleOpenN
         // 
         // 
       >
-         <ContactButton isNavOpen = {isNavOpen} history = {history}/>
+         {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div
           style={{
             position: "fixed",

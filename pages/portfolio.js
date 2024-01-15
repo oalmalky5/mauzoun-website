@@ -110,7 +110,7 @@ export default function portfolio({textAnimationControls, handleBgColorChange, h
 
 
             >
-                <ContactButton isNavOpen={isNavOpen} history={history}/>
+                {/* <ContactButton isNavOpen={isNavOpen} history={history}/> */}
                 <div
                     style={{
                         position: "fixed",
