@@ -1,36 +1,32 @@
-@use "mixins" as *;
+@use 'mixins' as *;
 
 .storyCover {
   margin-top: -50px;
-
   & div {
     display: block !important;
   }
-
   @include ltr {
     margin-left: -50px;
   }
-
   @include rtl {
     margin-right: -50px;
   }
-
   @media (min-width: 1536px) {
     width: 50vw;
   }
 }
 
 .gridContainer {
-  width: 100%;
-  max-width: 800px;
-  display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(210px, 1fr) );
-  margin-top: 50px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 800px;
+}
 
-  @media (max-width: 767px) {
-  grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
-  }
+.gridItemWrapper {
+  flex: 1 0 210px; /* Flex basis of 210px with no growth or shrink */
+  margin-bottom: 300px; /* Space between rows */
+  width: 300px; /* Fixed width */
 }
 
 .gridItem {
@@ -38,7 +34,12 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 30px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  width: 250px;
 }
 
 .gridItemImage {
@@ -46,7 +47,6 @@
   width: 200px;
   height: 200px;
   margin-bottom: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.8);
   background-color: white;
   background-size: 200px 200px;
 
@@ -57,13 +57,29 @@
   }
 }
 
+.membersInfo {
+  max-height: 30px;
+  margin-bottom: 100px;
+}
+
+.buttonContainer button {
+  margin-top: 10px;
+  align-self: center;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.gridItem.expanded {
+  max-height: 1000px;
+  max-width: 250px;
+}
+
 .totalWhiteBox {
   @include ltr {
     margin-left: 33px;
   }
-
   @include rtl {
     margin-right: 33px;
   }
 }
-
