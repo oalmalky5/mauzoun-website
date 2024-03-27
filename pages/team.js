@@ -17,9 +17,7 @@ const teamMembersData = {
   1: {
     src: '/team_pics_2024/2024-Layan.png',
   },
-  2: {
-    src: '/team_pics_2024/2024-Omar.png',
-  },
+
   3: {
     src: '/team_pics_2024/2024-Ahmad.png',
   },
@@ -49,6 +47,12 @@ const teamMembersData = {
   },
   12: {
     src: '/team_pics_2024/2024-Fatimah.png',
+  },
+  14: {
+    src: '/team_pics_2024/2024-Seham.png',
+  },
+  15: {
+    src: '/team_pics_2024/2024-Soumaya.png',
   },
 };
 

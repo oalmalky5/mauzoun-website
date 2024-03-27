@@ -1,58 +1,69 @@
-import React, { useState } from "react";
-import { BsChevronDown } from "react-icons/bs";
-import { useIntl } from "react-intl";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import { BsChevronDown } from 'react-icons/bs';
+import { useIntl } from 'react-intl';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 import { NextSeo } from 'next-seo';
 
-import Menu from "../components/Menu";
-import formatJsxMessage from "../utils/formatJsxMessage";
-import ContactButton from "../components/ContactButton";
+import Menu from '../components/Menu';
+import formatJsxMessage from '../utils/formatJsxMessage';
+import ContactButton from '../components/ContactButton';
 
-import {MotionLogo} from "../components/MotionLogo"
-import Footer from "../components/Footer";
-import Image from "next/image"
+import { MotionLogo } from '../components/MotionLogo';
+import Footer from '../components/Footer';
+import Image from 'next/image';
 
+const backgroundColor = '#f7f5f0';
 
-const backgroundColor = "#f7f5f0";
-
-export default function ({ updatePageTransition, textAnimationControls, handleBgColorChange, history, handleOpenNav, isNavOpen, ...rest }) {
+export default function ({
+  updatePageTransition,
+  textAnimationControls,
+  handleBgColorChange,
+  history,
+  handleOpenNav,
+  isNavOpen,
+  ...rest
+}) {
   const { key, initial, animate, variants } = rest;
   const locale = useRouter().locale;
 
   const intl = useIntl();
-  const f = (id, options) => formatJsxMessage(intl, locale, id, {
-    shouldFade: true,
-    animationControls: textAnimationControls,
-    ...options,
-  })
+  const f = (id, options) =>
+    formatJsxMessage(intl, locale, id, {
+      shouldFade: true,
+      animationControls: textAnimationControls,
+      ...options,
+    });
 
   function CustomApp({ Component, pageProps }) {
-
     // Load Panelbear only once during the app lifecycle
-  
+
     return <Component {...pageProps} />;
   }
-  
 
   const [areServicesVisible, setAreServicesVisible] = useState(false);
   const [isApproachVisible, setIsApproachVisible] = useState(false);
   const [areProjectsVisible, setAreProjectsVisible] = useState(false);
   const [isWorkVisible, setIsWorkVisible] = useState(false);
 
-  React.useEffect(()=>handleBgColorChange(backgroundColor), [])
+  React.useEffect(() => handleBgColorChange(backgroundColor), []);
+
+  const titleStyles = [
+    { color: '#3C1053' },
+    { color: '#69488E' },
+    { color: '#C14729' },
+    { color: '#CD9F26' },
+    { color: '#41A99C' },
+  ];
 
   return (
-
-    
     <>
-
       <NextSeo
-        title={locale !== "ar" ? "Mauzoun | Our Method" : "مَوْزوْن | منهجيتنا"}
-        description={f("pageTitle")}
+        title={locale !== 'ar' ? 'Mauzoun | Our Method' : 'مَوْزوْن | منهجيتنا'}
+        description={f('pageTitle')}
       />
-      <div className = "background-animation" style={{ backgroundColor }}/>
+      <div className="background-animation" style={{ backgroundColor }} />
 
       <motion.div
         key={key}
@@ -63,39 +74,37 @@ export default function ({ updatePageTransition, textAnimationControls, handleBg
         {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div
           style={{
-            position: "fixed",
-            display: "flex",
-            alignItems: "stretch",
-            width: "100%",
-            height: "100%",
-            overflowX: "hidden",
+            position: 'fixed',
+            display: 'flex',
+            alignItems: 'stretch',
+            width: '100%',
+            height: '100%',
+            overflowX: 'hidden',
           }}
         >
           <div
-            className='bg-animation-home'
+            className="bg-animation-home"
             style={{
-              position: "relative",
-              width: "100%",
-              height: "100%",
+              position: 'relative',
+              width: '100%',
+              height: '100%',
               zIndex: 8,
-              overflow: isNavOpen ? 'hidden' : null
+              overflow: isNavOpen ? 'hidden' : null,
             }}
           >
-
             <MotionLogo />
             <Menu
               backgroundColor={backgroundColor}
               textAnimationControls={textAnimationControls}
-              isNavOpen = {isNavOpen}
-              handleOpenNav = {handleOpenNav}
+              isNavOpen={isNavOpen}
+              handleOpenNav={handleOpenNav}
             />
-              
-              <div className='container'>
-              <div className='container-background' style={{ backgroundColor }}>
+
+            <div className="container">
+              <div className="container-background" style={{ backgroundColor }}>
                 {/*<img className="backgroundImg" src="/homeBgPicEn.png" />*/}
               </div>
-              <div className='container-content'>
-              </div>
+              <div className="container-content"></div>
               {/*<div className='container-image'>
                 <motion.img
                   width='800px'
@@ -107,18 +116,13 @@ export default function ({ updatePageTransition, textAnimationControls, handleBg
                   transition={{ duration: 0.5 }}
                 />
               </div>*/}
-              <div className='container-content'>
-                <Link href='/story'>
-                  <h5 className='mb-0'>
-                    {/*<u>{f("story.intro")}</u>*/}
-                  </h5>
+              <div className="container-content">
+                <Link href="/story">
+                  <h5 className="mb-0">{/*<u>{f("story.intro")}</u>*/}</h5>
                 </Link>
 
-              <div className="homeContainer">
-             
-
-
-                {/*<div>
+                <div className="homeContainer">
+                  {/*<div>
                   {<span className="homeTitle">{f("title")}</span> }
                 </div>
                 <div>
@@ -137,46 +141,47 @@ export default function ({ updatePageTransition, textAnimationControls, handleBg
                   {<span className="communicate">{f("work.content2")}</span> }
                  </div>*/}
 
-                 <div>
-                  <span className="title">{f("pageTitle")}</span>
-                 </div>
-                 <div>
-                  <span className="mainBlock">{f("mainSection1")}</span>
-                 </div>
-                 <div>
-                  <span className="mainBlock">{f("mainSection2")}</span>
-                 </div>
+                  <div>
+                    <span className="title">{f('pageTitle')}</span>
+                  </div>
+                  <div>
+                    <span className="mainBlock">{f('mainSection1')}</span>
+                  </div>
+                  <div>
+                    <span className="mainBlock">{f('mainSection2')}</span>
+                  </div>
 
-                 <div>
-                  <span className="title">{f("mainSubheader")}</span>
-                 </div>
+                  <div>
+                    <span className="title">{f('mainSubheader')}</span>
+                  </div>
 
-                 <div>
-                      <span className="approachHeader">{f("approach.header")}</span>
-                      {[
-                        "approach.contact",
-                        "approach.briefForm",   
-                        "approach.quotation",
-                        "approach.timeline",
-                        "approach.research",
-                        "approach.writing",
-                        "approach.delivery",
-                        "approach.feedback",
-                        "approach.adaptTimeline",
-                        "approach.finished",
-                      ].map((e) => (
-                        <div className="content-block" key={e}>
-                          <b>{f(`${e}.header`)}</b>
-                          {intl.formatMessage({ id: `${e}.content` }) !== `${e}.content` && f(`${e}.content`)}
-                        </div>
-                      ))}
-                    </div>
-              </div>
+                  <div>
+                    <span className="approachHeader">
+                      {f('approach.header')}
+                    </span>
+                    {[
+                      'approach.contact',
+                      'approach.quotation',
+                      'approach.timeline',
+                      'approach.research',
+                      'approach.writing',
+                      'approach.delivery',
+                      'approach.feedback',
+                      'approach.adaptTimeline',
+                      'approach.finished',
+                    ].map((e, index) => (
+                      <div className="content-block" key={e}>
+                        <b style={titleStyles[index % titleStyles.length]}>
+                          {f(`${e}.header`)}
+                        </b>
+                        {intl.formatMessage({ id: `${e}.content` }) !==
+                          `${e}.content` && f(`${e}.content`)}
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-
-                
-
-               { /* <p className="contentHome">{f("story.content")}</p> */}
+                {/* <p className="contentHome">{f("story.content")}</p> */}
 
                 {/* Services */}
                 {/*!areServicesVisible ? (
@@ -219,7 +224,6 @@ export default function ({ updatePageTransition, textAnimationControls, handleBg
                     <hr />
                   </div>
                 )*/}
-                
 
                 {/*<p className="mt-1">{f("approach.content")}</p>*/}
 
@@ -261,14 +265,14 @@ export default function ({ updatePageTransition, textAnimationControls, handleBg
                     {f("work.content")}
                   </div>
                 )*/}
-               {/*<p className="work">{f("work.content")}</p> */}
+                {/*<p className="work">{f("work.content")}</p> */}
                 {/*<span className="homeWork">{f("work.content2")}</span>*/}
               </div>
             </div>
           </div>
         </div>
-        </motion.div>
-        <Footer />
+      </motion.div>
+      <Footer />
     </>
   );
 }

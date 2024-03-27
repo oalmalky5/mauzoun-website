@@ -301,7 +301,8 @@ body {
     .andYouTitle,
     .teamTitle,
     .subheaderTitle,
-    .subsectionTitle {
+    .subsectionTitle,
+    .header {
       font-family: 'Lierata-Bold' !important;
       font-size: 34px !important;
     }
@@ -986,4 +987,10 @@ td {
   font-size: 12px !important;
   font-family: 'Lierata-Regular';
   overflow-y: visible; /* Scrollbar for overflow content */
+}
+
+// method section //////////////////////////////////
+
+.title-1 {
+  color: #3c1053;
 }

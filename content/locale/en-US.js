@@ -4,6 +4,7 @@ exports['en-US'] = {
     teamLink: 'Team',
     cultureLink: 'Culture',
     methodLink: 'Our Method',
+    servicesLink: 'Services',
     contentwritingLink: 'Content Writing',
     bookcommissionsLink: 'Book Commissions',
     boutiquepublishingLink: 'Boutique Publishing',
@@ -28,33 +29,23 @@ exports['en-US'] = {
     storeMain: 'E-Store',
     storeSmall: 'متجرنا الإلكتروني',
   },
-  '/Story': {
-    title:
-      'Mauzoun is a writing studio and publishing house that serves brands and authors worldwide. Our name aptly means “poetic balance” in Arabic, a meaning that our words, services, and values live up to.',
-    summary:
-      'Founded in 2018 and established in Saudi, our work reflects the richness of the Arabic and English languages, encourages the ingenuity of Arab writers, and emphasizes the power of premium publications.',
-    'story.intro': 'Here’s our story:',
-    'story.content':
-      '<b>We holistically balance content writing, book and script commissions, and boutique publishing.</b>',
-    'services.intro':
-      '<u>Our services balance between the professional and the creative</u>',
-    'services.content':
-      'We realized a lack of captivating content, wonderful writing, and beautiful books in the Arab World. Quite simply, we created a solution.',
-    'approach.intro':
-      '<u>Our approach to writing is thoughtful and imaginative</u>',
-    'approach.content':
-      'As your partners in writing and publishing, our services always consider strategy, best practices, and industry trends, all while remaining thoughtful and timeless.',
-    'projects.intro':
-      '<u>We seek projects that need us as much as we need them</u>',
-    'projects.content':
-      'We ensure that our treatment of Arabic and English writings remains loyal to each language’s nativity, backed by a strong understanding of strategy, target audience, and compelling storytelling. You can count on us to share our industry insights and honest opinions to give you the best quality possible.',
-    'work.intro': '<u>Our work is dedicated and ethical</u>',
-    'work.content':
-      'We partner with exciting and ethical projects that seek win-win outcomes.',
-    'work.content2':
-      'We communicate with clarity and consistency, ensuring organized digital correspondence and timely deliverables. Consider it done upon your project’s activation; we align the finest details of your brief with our knowledge of best practices to ensure the most excellent outcome possible, which we further refine with you through our two complimentary rounds of changes.',
-    pic: "<img class='picBg' src='homeBgPicEn.png'/>",
+  '/story': {
+    'awards.title': 'Awards',
+    'awardBar.content':
+      'Our journey has been recognized by the following awards.',
+
+    'barClients.title': 'Clients & Collaborations',
+    'barClients.content':
+      'We have had the pleasure of working with the following clients and collaborators.',
+
+    'barServices.title': 'Services',
+    'barServices.content': 'We offer great services',
+
+    'barAbout.title': 'About',
+    'barAbout.content':
+      'We are a creative studio that specializes in premium writing and boutique publishing.',
   },
+
   '/blog': {
     title: 'Our Blog',
   },
@@ -463,6 +454,13 @@ exports['en-US'] = {
     'teamMember.11.name': 'Lobaba <br />Shehab',
     'teamMember.11.role': 'Writer',
     'teamMember.11.bio': `
+
+    Lobaba joined the writing team as the English writer less than a year ago. Since then, she has contributed to several notable projects, including Al Marai product naming. Additionally, she has served as a literary translator for two of Mauzoun's books.
+    <br></br>
+    Before joining Mauzoun, Lobaba established herself as a skilled multilingual translator. Her academic achievements reflect her dedication to language and literature, as she graduated at the top of her class with a degree in Hispanic Philology. She also holds a master's degree in Modern Spanish Poetry from the University of Salamanca.
+    <br></br>
+    Lobaba’s keen interest in the artistry of words reflects her commitment to mastering the craft of writing and advancing as an editor.
+
         `,
 
     'teamMember.12.name': 'Fatimah <br />Alawi',
@@ -796,5 +794,20 @@ exports['en-US'] = {
       'What are the books that have been acquired or published by Mauzoun?',
     mauzounAnswer:
       'Visit the Mauzoun E-Store to view the comprehensive author list and book catalog.',
+  },
+
+  '/services': {
+    'services.header': 'Services',
+    'services.intro': 'We offer three main services:',
+    'service1.title': 'Content Writing',
+    'service1.description':
+      'We provide holistic, research-based content writing for brands and campaigns that want captivating content.',
+    'service2.title': 'Book Commissions',
+    'service2.description':
+      'You have the story and we have the skill. Let us write your non-fiction book in the best way possible.',
+    'service3.title': 'Boutique Publishing',
+    'service3.description':
+      'We prioritize talent over the region’s pay-to-publish model, and we headhunt talented authors with truly exceptional book manuscripts.',
+    'services.readMore': 'Read More.',
   },
 };

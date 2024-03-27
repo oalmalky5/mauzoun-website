@@ -1,2 +1,308 @@
-@use "mixins" as *;
+@use 'mixins' as *;
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    /* Text starts slightly lower and moves up */
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    /* Text starts slightly lower and moves up */
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100vh;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.verticalBars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100vh;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  color: white;
+}
+
+.bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 600px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-right: 1px solid #000;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.leftContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.rightContent {
+  padding: 35px;
+  -webkit-animation: fadeIn 0.5s ease-out forwards;
+          animation: fadeIn 0.5s ease-out forwards;
+}
+
+.barContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.text {
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.awards,
+.clientsCollaborations,
+.servicesBar,
+.aboutBar {
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+
+.awards {
+  background-color: #cd9f26;
+  width: 80px;
+}
+
+.clientsCollaborations {
+  background-color: #c14729;
+  width: 130px;
+}
+
+.servicesBar {
+  background-color: #69488e;
+  width: 90px;
+}
+
+.aboutBar {
+  background-color: #3c1053;
+  width: 80px;
+}
+
+.imageWrapper {
+  width: 70%;
+  height: 80px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.image1,
+.image2,
+.image3,
+.image4 {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.bar.expanded {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Use flexbox for internal layout */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* Align children horizontally */
+  width: 700px;
+}
+
+.en .rightContent,
+.ar .rightContent {
+  font-size: 12px;
+  color: black;
+  /* Adjust the font color as needed */
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  /* Adjust for better positioning */
+  right: 10px;
+  /* Adjust based on language direction */
+  width: 30px;
+  /* Width of the button */
+  height: 30px;
+  /* Height of the button */
+  background: url("../public/Tilted Square.svg") no-repeat center center;
+  /* Update the path as necessary */
+  background-size: cover;
+  /* Ensure the image covers the button */
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  /* No padding needed for an image */
+}
+
+/* Ensure text inside the button is not visible */
+.closeButton::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.homepageImage {
+  width: 45%;
+  /* Adjust as needed */
+  height: auto;
+  /* Keeps the aspect ratio of the image */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  /* Ensure the image is above the background but below the bars */
+}
+
+.fadeOut {
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.rightContent p {
+  padding-left: 35px;
+  padding-right: 30px;
+  font-size: 20px;
+}
+
+.rightContent ul {
+  list-style-type: none;
+  padding-left: 20px;
+  /* Adjust as needed */
+  padding-left: 60px;
+  font-size: 22px;
+}
+
+.rightContent li {
+  position: relative;
+  padding-left: 40px;
+  /* Adjust based on the size of your custom bullet */
+  margin-bottom: 10px;
+  /* Space between items */
+}
+
+.rightContent li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 23%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 15px;
+  /* Width of the custom bullet */
+  height: 25px;
+  /* Height of the custom bullet */
+  background-image: url("/white-kashidas.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.animateTextContent {
+  -webkit-animation: fadeIn 0.5s ease-out forwards;
+          animation: fadeIn 0.5s ease-out forwards;
+}
+
+:lang(ar) .rightContent p {
+  font-size: 28px;
+}
+
+:lang(ar) .rightContent li {
+  font-size: 28px;
+  padding-right: 40px;
+  margin-bottom: 10px;
+  /* Space between items */
+}
+
+:lang(ar) .rightContent li::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 23%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 15px;
+  /* Width of the custom bullet */
+  height: 25px;
+  /* Height of the custom bullet */
+  background-image: url("/white-kashidas.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 /*# sourceMappingURL=home.module.css.map */

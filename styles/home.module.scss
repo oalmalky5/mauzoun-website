@@ -1,1 +1,226 @@
-@use "mixins" as *;
+@use 'mixins' as *;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Text starts slightly lower and moves up */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
+  justify-content: flex-end;
+}
+
+.verticalBars {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100vh;
+  flex-wrap: nowrap;
+  color: white;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 600px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-right: 1px solid #000;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  transition: width 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.leftContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.rightContent {
+  padding: 35px;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.barContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.text {
+  writing-mode: tb-rl;
+  transform: rotate(360deg);
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.awards,
+.clientsCollaborations,
+.servicesBar,
+.aboutBar {
+  transition: width 0.5s ease-in-out;
+}
+
+.awards {
+  background-color: #cd9f26;
+  width: 80px;
+}
+
+.clientsCollaborations {
+  background-color: #c14729;
+  width: 130px;
+}
+
+.servicesBar {
+  background-color: #69488e;
+  width: 90px;
+}
+
+.aboutBar {
+  background-color: #3c1053;
+  width: 80px;
+}
+
+.imageWrapper {
+  width: 70%;
+  height: 80px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.image1,
+.image2,
+.image3,
+.image4 {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.bar.expanded {
+  display: flex; /* Use flexbox for internal layout */
+  flex-direction: row; /* Align children horizontally */
+  width: 700px;
+}
+
+.en .rightContent,
+.ar .rightContent {
+  font-size: 12px;
+  color: black; /* Adjust the font color as needed */
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px; /* Adjust for better positioning */
+  right: 10px; /* Adjust based on language direction */
+  width: 30px; /* Width of the button */
+  height: 30px; /* Height of the button */
+  background: url('../public/Tilted\ Square.svg') no-repeat center center; /* Update the path as necessary */
+  background-size: cover; /* Ensure the image covers the button */
+  border: none;
+  cursor: pointer;
+  padding: 0; /* No padding needed for an image */
+}
+
+/* Ensure text inside the button is not visible */
+.closeButton::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.homepageImage {
+  width: 45%; /* Adjust as needed */
+  height: auto; /* Keeps the aspect ratio of the image */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure the image is above the background but below the bars */
+}
+
+.fadeOut {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.rightContent p {
+  padding-left: 35px;
+  padding-right: 30px;
+  font-size: 20px;
+}
+
+.rightContent ul {
+  list-style-type: none;
+  padding-left: 20px; /* Adjust as needed */
+  padding-left: 60px;
+  font-size: 22px;
+}
+
+.rightContent li {
+  position: relative;
+  padding-left: 40px; /* Adjust based on the size of your custom bullet */
+  margin-bottom: 10px; /* Space between items */
+}
+
+.rightContent li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 23%;
+  transform: translateY(-50%);
+  width: 15px; /* Width of the custom bullet */
+  height: 25px; /* Height of the custom bullet */
+  background-image: url('/white-kashidas.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.animateTextContent {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+:lang(ar) .rightContent p {
+  font-size: 28px;
+}
+
+:lang(ar) .rightContent li {
+  font-size: 28px;
+  padding-right: 40px;
+  margin-bottom: 10px; /* Space between items */
+}
+
+:lang(ar) .rightContent li::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 23%;
+  transform: translateY(-50%);
+  width: 15px; /* Width of the custom bullet */
+  height: 25px; /* Height of the custom bullet */
+  background-image: url('/white-kashidas.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bar > *:not(.imageWrapper) {
+  pointer-events: none;
+}

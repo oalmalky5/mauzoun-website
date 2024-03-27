@@ -1,12 +1,11 @@
-@use "mixins" as *;
-@import "fonts";
+@use 'mixins' as *;
+@import 'fonts';
 
 .sidenav {
   position: fixed;
   top: 0;
   height: 100%;
   width: 430px;
-  padding-top: 10px;
   display: flex;
   flex-direction: column;
   z-index: 1;
@@ -15,7 +14,7 @@
 
   &::-webkit-scrollbar {
     width: 0;
-}
+  }
 
   @include ltr {
     left: 0;
@@ -33,22 +32,22 @@
     @include ltr {
       padding-left: 30px;
     }
-  
+
     @include rtl {
       padding-right: 30px;
     }
 
-  @media (max-width: 767px) {
+    @media (max-width: 767px) {
       width: 0;
-      
+
       @include ltr {
         padding-left: 0;
       }
-    
+
       @include rtl {
         padding-right: 0;
       }
-  }
+    }
   }
 
   & .menu {
@@ -57,22 +56,22 @@
   }
 }
 
-.open{
+.open {
   background-color: white;
   padding-top: 150px;
   padding-left: 45px;
-  
+
   @media (max-width: 767px) {
     width: 100%;
-    
+
     @include ltr {
       padding-left: 45px;
     }
-  
+
     @include rtl {
       padding-right: 45px;
     }
-}
+  }
 }
 
 .tiltedSquare {
@@ -80,7 +79,6 @@
   width: 40px;
   z-index: -1;
   transform: scaleX(-1);
-  
 
   @include ltr {
     margin-left: -10px;
@@ -135,8 +133,7 @@
   cursor: pointer;
   height: 135px !important;
   width: 140px !important;
-  position:absolute;
-
+  position: absolute;
 
   @include ltr {
     margin-left: 35px !important;
@@ -147,13 +144,12 @@
   }
 
   @media (max-width: 1240px) {
-
     @include ltr {
-    margin-left: 5px !important;
+      margin-left: 5px !important;
     }
-  
+
     @include rtl {
-    margin-right: 5px !important;
+      margin-right: 5px !important;
     }
   }
 
@@ -168,7 +164,7 @@
   cursor: pointer;
   height: 135px !important;
   width: 140px !important;
-  position:fixed;
+  position: fixed;
   z-index: 2;
 
   @include ltr {
@@ -180,13 +176,12 @@
   }
 
   @media (max-width: 1240px) {
-
     @include ltr {
-    margin-left: -15px !important;
+      margin-left: -15px !important;
     }
-  
+
     @include rtl {
-    margin-right: -15px !important;
+      margin-right: -15px !important;
     }
   }
 
@@ -197,13 +192,12 @@
 
 .navLink {
   & p {
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 0px;
     margin-bottom: 0px;
-    
   }
 
-  & .otherLocaleLink{
+  & .otherLocaleLink {
     min-height: 19px;
     margin-bottom: 20px;
     display: block;
@@ -231,7 +225,7 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 35px;
-  margin-top: 20px;
+  margin-top: 10 px;
 
   & p {
     font-size: 18px !important;
@@ -275,7 +269,7 @@
 
   & .slider:before {
     position: absolute;
-    content: "";
+    content: '';
     height: 20px;
     width: 20px;
     left: 5px;
@@ -292,4 +286,3 @@
     transform: translateX(35px);
   }
 }
-

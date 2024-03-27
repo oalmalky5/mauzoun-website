@@ -1,45 +1,52 @@
-import React, { useState } from "react";
-import { useIntl } from "react-intl";
-import { BsChevronDown } from "react-icons/bs";
-import { motion } from "framer-motion";
-import { useRouter } from "next/router";
-import { NextSeo } from "next-seo";
+import React, { useState } from 'react';
+import { useIntl } from 'react-intl';
+import { BsChevronDown } from 'react-icons/bs';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 
-import styles from "../styles/contentwriting.module.scss";
-import Menu from "../components/Menu";
-import formatJsxMessage from "../utils/formatJsxMessage";
-import {MotionLogo} from "../components/MotionLogo"
-import ContactButton from "../components/ContactButton";
-import WhiteBox from "../components/WhiteBox";
-import Footer from "../components/Footer";
-import ComingSoon from "../components/ComingSoon";
+import styles from '../styles/contentwriting.module.scss';
+import Menu from '../components/Menu';
+import formatJsxMessage from '../utils/formatJsxMessage';
+import { MotionLogo } from '../components/MotionLogo';
+import ContactButton from '../components/ContactButton';
+import WhiteBox from '../components/WhiteBox';
+import Footer from '../components/Footer';
+import ComingSoon from '../components/ComingSoon';
 
-const backgroundColor = "#f7f5f0";
+const backgroundColor = '#f7f5f0';
 
 const whiteBoxDecoratorsPositions = {
   fromTop: [
     {},
     {
-      preferredMargin: "650px",
+      preferredMargin: '650px',
     },
     {
-      preferredMargin: "667px",
+      preferredMargin: '667px',
     },
   ],
   fromBottom: [
     {
-      preferredMargin: "550px",
+      preferredMargin: '550px',
     },
     {
-      preferredMargin: "567px",
+      preferredMargin: '567px',
     },
     {
-      preferredMargin: "584px",
+      preferredMargin: '584px',
     },
   ],
 };
 
-export default function ContentWriting({ textAnimationControls, handleBgColorChange,handleOpenNav, history, isNavOpen, ...rest }) {
+export default function ContentWriting({
+  textAnimationControls,
+  handleBgColorChange,
+  handleOpenNav,
+  history,
+  isNavOpen,
+  ...rest
+}) {
   const router = useRouter();
   const locale = useRouter().locale;
   const { key, initial, animate, variants } = rest;
@@ -54,8 +61,10 @@ export default function ContentWriting({ textAnimationControls, handleBgColorCha
 
   const [isApproachVisible, setIsApproachVisible] = useState(false);
   const [isContentWritingVisible, setIsContentWritingVisible] = useState(false);
-  const [isCreativeWritingVisible, setIsCreativeWritingVisible] = useState(false);
-  const [isBoutiquePublishingVisible, setIsBoutiquePublishingVisible] = useState(false);
+  const [isCreativeWritingVisible, setIsCreativeWritingVisible] =
+    useState(false);
+  const [isBoutiquePublishingVisible, setIsBoutiquePublishingVisible] =
+    useState(false);
 
   const bullet = (
     <div className={styles.bullet}>
@@ -71,8 +80,16 @@ export default function ContentWriting({ textAnimationControls, handleBgColorCha
   return (
     <>
       <NextSeo
-        title={locale !== "ar" ? "Mauzoun | Content Writing" : "مَوْزوْن | كتابة المحتوى"}
-        description={locale !== "ar" ? "Mauzoun | Content Writing" : "مَوْزوْن | كتابة المحتوى"}
+        title={
+          locale !== 'ar'
+            ? 'Mauzoun | Content Writing'
+            : 'مَوْزوْن | كتابة المحتوى'
+        }
+        description={
+          locale !== 'ar'
+            ? 'Mauzoun | Content Writing'
+            : 'مَوْزوْن | كتابة المحتوى'
+        }
       />
       <div className="background-animation" style={{ backgroundColor }} />
 
@@ -82,53 +99,56 @@ export default function ContentWriting({ textAnimationControls, handleBgColorCha
         animate={animate}
         variants={variants}
       >
-      {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
+        {/* <ContactButton isNavOpen = {isNavOpen} history = {history}/> */}
         <div
           style={{
-            position: "fixed",
-            display: "flex",
-            alignItems: "stretch",
-            width: "100%",
-            height: "100%",
-            overflowX: "hidden",
+            position: 'fixed',
+            display: 'flex',
+            alignItems: 'stretch',
+            width: '100%',
+            height: '100%',
+            overflowX: 'hidden',
             // overflowY: "scroll",
           }}
         >
           <div
             className="bg-animation-services"
             style={{
-              position: "relative",
-              width: "100%",
-              height: "100%",
+              position: 'relative',
+              width: '100%',
+              height: '100%',
               zIndex: 8,
-              overflow: isNavOpen ? "hidden" : null,
+              overflow: isNavOpen ? 'hidden' : null,
             }}
           >
-        <MotionLogo />
+            <MotionLogo />
 
             <Menu
               backgroundColor={backgroundColor}
               textAnimationControls={textAnimationControls}
               isNavOpen={isNavOpen}
-              handleOpenNav = {handleOpenNav}
+              handleOpenNav={handleOpenNav}
             />
-
             <div className="container">
-              <div className="container-background" style={{ backgroundColor }}></div>
+              <div
+                className="container-background"
+                style={{ backgroundColor }}
+              ></div>
               <div className="container-content">
-                <span className="title">{f("contentPageTitle")}</span>
+                <span className="title">{f('contentPageTitle')}</span>
               </div>
               <div className="container-content">
-                <div className="mainPara">{f("mainPara")}</div>
+                <div className="mainPara">{f('mainPara')}</div>
               </div>
-              
 
               <div className="container-content">
                 {/* Approach */}
                 <div className="mt-0 unwrapped-content">
-                  <div className="content-wrapper" onClick={() => setIsApproachVisible(!isApproachVisible)}>
-                    
-                    <span className="title approachTitle">{f("serviceQ")}</span>
+                  <div
+                    className="content-wrapper"
+                    onClick={() => setIsApproachVisible(!isApproachVisible)}
+                  >
+                    <span className="title approachTitle">{f('serviceQ')}</span>
                     <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
@@ -136,8 +156,10 @@ export default function ContentWriting({ textAnimationControls, handleBgColorCha
 
                   {isApproachVisible && (
                     <div>
-                    <br/>
-                    <span className="servicesAnswer">{f("serviceAnswer")}</span>
+                      <br />
+                      <span className="servicesAnswer">
+                        {f('serviceAnswer')}
+                      </span>
                     </div>
                   )}
                 </div>
@@ -146,10 +168,14 @@ export default function ContentWriting({ textAnimationControls, handleBgColorCha
                 <div className="mt-0 unwrapped-content">
                   <div
                     className="content-wrapper"
-                    onClick={() => setIsContentWritingVisible(!isContentWritingVisible)}
-                    style={isContentWritingVisible ? { marginBottom: "30px" } : {}}
+                    onClick={() =>
+                      setIsContentWritingVisible(!isContentWritingVisible)
+                    }
+                    style={
+                      isContentWritingVisible ? { marginBottom: '30px' } : {}
+                    }
                   >
-                    <span className="title">{f("whatServicesQ")}</span>
+                    <span className="title">{f('whatServicesQ')}</span>
                     <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
@@ -159,18 +185,22 @@ export default function ContentWriting({ textAnimationControls, handleBgColorCha
                     <>
                       <div className="container-object">
                         <div className="totalWhiteBox">
-                          <WhiteBox decoratorsPositions={whiteBoxDecoratorsPositions}>
-                            <span className="serviceHeader">{f("serviceHeader")}</span>
+                          <WhiteBox
+                            decoratorsPositions={whiteBoxDecoratorsPositions}
+                          >
+                            <span className="serviceHeader">
+                              {f('serviceHeader')}
+                            </span>
                             <br />
                             {[
-                              "contentWriting.services.mm",
-                              "contentWriting.services.naming",
-                              "contentWriting.services.manifesto",
-                              "contentWriting.services.slogans",
-                              "contentWriting.services.profile",
-                              "contentWriting.services.website",
-                              "contentWriting.services.socialMedia",
-                              "contentWriting.services.scriptWriting"
+                              'contentWriting.services.mm',
+                              'contentWriting.services.naming',
+                              'contentWriting.services.manifesto',
+                              'contentWriting.services.slogans',
+                              'contentWriting.services.profile',
+                              'contentWriting.services.website',
+                              'contentWriting.services.socialMedia',
+                              'contentWriting.services.scriptWriting',
                             ].map((e) => (
                               <div className={styles.service} key={e}>
                                 {bullet}
@@ -185,48 +215,53 @@ export default function ContentWriting({ textAnimationControls, handleBgColorCha
                 </div>
 
                 {/* Creative Writing */}
-                  <div className="mt-0 unwrapped-content">
-                      <div
-                          className="content-wrapper"
-                          onClick={() => setIsCreativeWritingVisible(!isCreativeWritingVisible)}
-                          style={isCreativeWritingVisible ? { marginBottom: "30px" } : {}}
-                      >
-                          <span className="title">{f("whoForQ")}</span>
-                          <span className="reveal-icon">
+                <div className="mt-0 unwrapped-content">
+                  <div
+                    className="content-wrapper"
+                    onClick={() =>
+                      setIsCreativeWritingVisible(!isCreativeWritingVisible)
+                    }
+                    style={
+                      isCreativeWritingVisible ? { marginBottom: '30px' } : {}
+                    }
+                  >
+                    <span className="title">{f('whoForQ')}</span>
+                    <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
-                      </div>
-
-                      {isCreativeWritingVisible && (
-                          <>
-                              {f("whoForAnswer")}
-                          </>
-                      )}
                   </div>
 
-                  {/* Boutique Publishing */}
-                  <div className="mt-0 unwrapped-content">
-                      <div
-                          className="content-wrapper"
-                          onClick={() => setIsBoutiquePublishingVisible(!isBoutiquePublishingVisible)}
-                          style={isBoutiquePublishingVisible ? { marginBottom: "30px" } : {}}
-                      >
-                          <span className="title">{f("smallProjectsQ")}</span>
-                          <span className="reveal-icon">
+                  {isCreativeWritingVisible && <>{f('whoForAnswer')}</>}
+                </div>
+
+                {/* Boutique Publishing */}
+                <div className="mt-0 unwrapped-content">
+                  <div
+                    className="content-wrapper"
+                    onClick={() =>
+                      setIsBoutiquePublishingVisible(
+                        !isBoutiquePublishingVisible
+                      )
+                    }
+                    style={
+                      isBoutiquePublishingVisible
+                        ? { marginBottom: '30px' }
+                        : {}
+                    }
+                  >
+                    <span className="title">{f('smallProjectsQ')}</span>
+                    <span className="reveal-icon">
                       <BsChevronDown className="reveal-icon" />
                     </span>
-                      </div>
-
-                      {isBoutiquePublishingVisible && (
-                          <>
-                              {f("smallProjectsAnswer")}
-                          </>
-                      )}
                   </div>
-                  
+
+                  {isBoutiquePublishingVisible && (
+                    <>{f('smallProjectsAnswer')}</>
+                  )}
+                </div>
               </div>
 
-              <div style={{ height: "400px" }} />
+              <div style={{ height: '400px' }} />
               {/*<div className="container-image">
                 <div className={styles.servicesCover}>
                   <motion.img
