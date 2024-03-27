@@ -305,4 +305,52 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.bar > *:not(.imageWrapper) {
+  pointer-events: none;
+}
+
+/* Add responsive styles inside this media query for tablet devices */
+@media only screen and (max-width: 1384px) {
+  .verticalBars {
+    display: none;
+    /* Hide the bars on tablet devices */
+  }
+  .homepageImage {
+    width: 60%;
+    /* Increase width for better visibility on smaller screens */
+    top: 40%;
+    /* Adjust the position to better fit the screen */
+  }
+  /* Adjust other elements as needed for tablet view */
+}
+
+/* Add responsive styles inside this media query for mobile devices */
+@media only screen and (max-width: 480px) {
+  .verticalBars {
+    display: none;
+    /* Hide the bars on mobile devices */
+  }
+  .homepageImage {
+    width: 75%;
+    /* Increase width for better visibility on smaller screens */
+    top: 30%;
+    /* Adjust the position to better fit the screen */
+  }
+  /* Adjust other elements as needed for mobile view */
+}
+
+/* Ensure interactive elements inside the bar are clickable */
+.bar > * {
+  pointer-events: all;
+}
+
+.bar.expanded > *:not(.imageWrapper):not(.rightContent) {
+  pointer-events: none;
+}
+
+.rightContent,
+.closeButton {
+  pointer-events: all;
+}
 /*# sourceMappingURL=home.module.css.map */
