@@ -5,7 +5,7 @@ export const barText = {
         'As award-winning publishers, we seek inspiration <br /> from the rich literary heritage of the Arab world,<br /> and we aspire to contribute to our region’s libraries <br /> and partake in the advancement of language.',
       points: [
         "Publishing Accelerator Award by the Saudi Ministry <br /> of Culture's Literature, Publishing, and Translation Commission (2022)",
-        "Tarjim Grant by the Saudi Ministry of Culture's Literature, Publishing, and Translation Commission (2022)",
+        "Tarjim Grant by the Saudi Ministry of Culture's Literature, Publishing, and Translation <br /> Commission (2022)",
         'Ithra Arabic Content Initiative: Translation Grant (2023)',
       ],
     },
