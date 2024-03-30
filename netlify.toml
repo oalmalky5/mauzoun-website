@@ -2,9 +2,10 @@
   command = "npm run build"
   publish = "out"
 
-
 [context.production.environment]
-NEXT_SERVERLESS = "true"
-NPM_FLAGS = "--legacy-peer-deps"
-NODE_ENV = "production"
+  NEXT_SERVERLESS = "true"
+  NPM_FLAGS = "--legacy-peer-deps"
+  NODE_ENV = "production"
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
