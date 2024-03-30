@@ -16,6 +16,7 @@
   align-items: flex-end;
   height: 100vh;
   justify-content: flex-end;
+  position: relative;
 }
 
 .verticalBars {
@@ -26,6 +27,8 @@
   height: 100vh;
   flex-wrap: nowrap;
   color: white;
+  position: relative;
+  z-index: 3;
 }
 
 .bar {
@@ -42,6 +45,8 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  z-index: 1;
+  opacity: 0;
 }
 
 .leftContent {
@@ -118,6 +123,8 @@
   display: flex; /* Use flexbox for internal layout */
   flex-direction: row; /* Align children horizontally */
   width: 700px;
+  z-index: 5; /* Ensure the expanded bar is above the background */
+  position: relative;
 }
 
 .en .rightContent,
@@ -148,24 +155,27 @@
 }
 
 .homepageImage {
-  width: 45%; /* Adjust as needed */
-  height: auto; /* Keeps the aspect ratio of the image */
+  width: 650px; /* Or another percentage based on what works with your design */
+  height: auto; /* Maintains aspect ratio */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1; /* Ensure the image is above the background but below the bars */
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out; /* For smooth opacity transitions */
 }
 
 .fadeOut {
   transition: opacity 0.5s ease-in-out;
-  opacity: 0;
+  opacity: 0.5;
 }
 
 .rightContent p {
   padding-left: 35px;
   padding-right: 30px;
-  font-size: 20px;
+  font-size: 21px;
+  font-family: 'Sharik-Regular';
 }
 
 .rightContent ul {
@@ -173,6 +183,7 @@
   padding-left: 20px; /* Adjust as needed */
   padding-left: 60px;
   font-size: 22px;
+  font-family: 'Sharik-Regular';
 }
 
 .rightContent li {
@@ -200,12 +211,14 @@
 
 :lang(ar) .rightContent p {
   font-size: 28px;
+  font-family: 'MizanAR-Regular';
 }
 
 :lang(ar) .rightContent li {
   font-size: 28px;
   padding-right: 40px;
   margin-bottom: 10px; /* Space between items */
+  font-family: 'MizanAR-Regular';
 }
 
 :lang(ar) .rightContent li::before {
@@ -248,6 +261,7 @@
   .homepageImage {
     width: 75%; /* Increase width for better visibility on smaller screens */
     top: 30%; /* Adjust the position to better fit the screen */
+    z-index: 1; /* Ensure the image is above the background but below the bars */
   }
 
   /* Adjust other elements as needed for mobile view */
@@ -256,10 +270,6 @@
 /* Ensure interactive elements inside the bar are clickable */
 .bar > * {
   pointer-events: all;
-}
-
-.bar.expanded > *:not(.imageWrapper):not(.rightContent) {
-  pointer-events: none;
 }
 
 .rightContent,

@@ -2,9 +2,9 @@ export const barText = {
   awards: {
     'en-US': {
       statement:
-        'As award-winning publishers, we seek inspiration from the rich literary heritage of the Arab world, and we aspire to contribute to our region’s libraries and partake in the advancement of language.',
+        'As award-winning publishers, we seek inspiration <br /> from the rich literary heritage of the Arab world,<br /> and we aspire to contribute to our region’s libraries <br /> and partake in the advancement of language.',
       points: [
-        "Publishing Accelerator Award by the Saudi Ministry of Culture's Literature, Publishing, and Translation Commission (2022)",
+        "Publishing Accelerator Award by the Saudi Ministry <br /> of Culture's Literature, Publishing, and Translation Commission (2022)",
         "Tarjim Grant by the Saudi Ministry of Culture's Literature, Publishing, and Translation Commission (2022)",
         'Ithra Arabic Content Initiative: Translation Grant (2023)',
       ],
@@ -22,7 +22,7 @@ export const barText = {
   clientsCollaborations: {
     'en-US': {
       statement:
-        'We partner with exciting and ethical projects that seek win-win outcomes. We communicate with clarity and consistency, ensuring organized digital correspondence and timely deliverables. Consider it done upon your project’s activation; we align the finest details of your brief with our knowledge of best practices to ensure the most excellent outcome possible, which we further refine with you through our two complimentary rounds of changes.',
+        'We partner with exciting and ethical projects that seek <br /> win-win outcomes. We communicate with clarity<br /> and consistency, ensuring organized digital correspondence and timely deliverables. Consider it done upon your project’s activation; we align the finest details of your brief with our knowledge of best practices to ensure the most excellent outcome possible, which we further refine with you through our two complimentary rounds of changes.',
       points: [],
     },
     ar: {
@@ -34,7 +34,7 @@ export const barText = {
   servicesBar: {
     'en-US': {
       statement:
-        'We ensure that our treatment of Arabic and English writings remains loyal to each language’s nativity, backed by a strong understanding of strategy, target audience, and compelling storytelling. You can count on us to share our industry insights and honest opinions to give you the best quality possible.',
+        'We ensure that our treatment of Arabic and English writings remains loyal to each language’s nativity, backed by a strong understanding of strategy, target audience, and compelling storytelling. You can count on us to share our industry insights and honest opinions to give you the best<br/> quality possible.',
       points: [],
     },
     ar: {
@@ -46,9 +46,9 @@ export const barText = {
   aboutBar: {
     'en-US': {
       statement: `
-        We holistically balance content writing, book commissions, and boutique publishing. Our work reflects the richness of the Arabic and English languages, encourages the ingenuity of Arab writers, and emphasizes the power of premium publications.
+        We holistically balance content writing, book commissions, and boutique publishing. Our work reflects the richness<br/> of the Arabic and English languages, encourages<br/> the ingenuity of Arab writers, and emphasizes the power<br/> of premium publications.
         <br></br>
-        Based in Saudi, Mauzoun was founded in 2018 by Layan Abdul Shakoor on a serendipitous day during a three-month writing residency in Los Angeles. A taxi driver asked her a rapid fire question about her ultimate goal in life, and her spontaneous answer revealed the vision for Mauzoun. Three months later, she established the business. Bearing rich professional experience in story development and editing, she realized a lack of captivating content, wonderful writing, and beautiful books in the Arab World. Quite simply, she created a solution.
+        Based in Saudi, Mauzoun was founded in 2018 by Layan Abdul Shakoor on a serendipitous day during a three-month writing residency in Los Angeles. A taxi driver asked<br/> her a rapid fire question about her ultimate goal<br/> in life, and her spontaneous answer revealed the vision<br/> for Mauzoun. Three months later, she established<br/> the business. Bearing rich professional experience in story development and editing, she realized a lack of captivating content, wonderful writing, and beautiful books in the Arab World. Quite simply, she created a solution.
         `,
       points: [],
     },

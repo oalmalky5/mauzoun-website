@@ -137,7 +137,7 @@ export default function Services({
                   </p>
                   <hr className={`${styles.separator} ${styles.gold}`} />
                   <Service
-                    title={intl.formatMessage({ id: 'service3.title' })}
+                    title={intl.formatMessage({ id: 'service1.title' })}
                     description={intl.formatMessage({
                       id: 'service3.description',
                     })}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 import Bar from '../components/Bar';
 import styles from '../styles/home.module.scss';
 import BarTextContent from '../components/BarTextContent';
+import gsap from 'gsap';
 
 const backgroundColor = '#f7f5f0';
 
@@ -22,6 +23,7 @@ export default function Story({
   ...rest
 }) {
   const [expandedBar, setExpandedBar] = useState(null);
+  const [areBarsVisible, setAreBarsVisible] = useState(false); // New state to manage visibility
 
   const barsExtended = expandedBar !== null;
 
@@ -34,7 +36,18 @@ export default function Story({
       ...options,
     });
 
-  React.useEffect(() => handleBgColorChange(backgroundColor), []);
+  useEffect(() => {
+    handleBgColorChange(backgroundColor);
+
+    // Assuming the initial opacity is set to 0 in CSS, we skip the immediate fade-out.
+    // We only define the fade-in animation, which will be triggered after a slight delay.
+    // This delay allows any re-rendering to complete before the fade-in begins.
+    gsap.fromTo(
+      `.${styles.bar}`,
+      { opacity: 0, y: 0 },
+      { opacity: 1, y: 0, duration: 0.1, delay: 0.1 }
+    );
+  }, [locale]);
 
   return (
     <>
@@ -45,19 +58,6 @@ export default function Story({
       <div className="background-animation" style={{ backgroundColor }} />
 
       <motion.div>
-        <AnimatePresence>
-          <img
-            src={
-              locale === 'ar'
-                ? `/homepage-text-ar.png`
-                : `/homepage-text-en.png`
-            }
-            alt={locale === 'ar' ? 'الصفحة الرئيسية' : 'Homepage text'}
-            className={`${styles.homepageImage} ${
-              barsExtended ? styles.fadeOut : ''
-            }`}
-          />
-        </AnimatePresence>
         <div
           style={{
             position: 'fixed',
@@ -87,11 +87,24 @@ export default function Story({
             />
 
             <div className={styles.container} style={{ backgroundColor }}>
+              <img
+                src={
+                  locale === 'ar'
+                    ? `/homepage-text-ar.png`
+                    : `/homepage-text-en.png`
+                }
+                alt={locale === 'ar' ? 'الصفحة الرئيسية' : 'Homepage text'}
+                className={styles.homepageImage}
+                style={{
+                  opacity: barsExtended ? 0.2 : 1,
+                  transition: 'opacity 0.5s ease-in-out',
+                }} // Dim the image if any bar is expanded
+              />
               <div className={styles.verticalBars}>
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 1 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
                 >
                   <Bar
                     title={locale === 'ar' ? 'الجوائز' : 'Awards'}
@@ -111,7 +124,7 @@ export default function Story({
                     >
                       <BarTextContent locale={locale} type="awards" />
                     </div>
-                  </Bar>{' '}
+                  </Bar>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0 }}

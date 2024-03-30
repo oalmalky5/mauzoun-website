@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import { NextSeo } from 'next-seo';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
-import styles from '../styles/story.module.scss';
+import styles from '../styles/team.module.scss';
 import Menu from '../components/Menu';
 import formatJsxMessage from '../utils/formatJsxMessage';
 import WhiteBox from '../components/WhiteBox';
@@ -170,7 +170,7 @@ const Team = function ({
                 </div>
                 <div className="bio-container">
                   {isExpanded && (
-                    <p className="bio">{f(`teamMember.${i}.bio`)}</p>
+                    <p className={styles.bio}>{f(`teamMember.${i}.bio`)}</p>
                   )}
                 </div>
                 <div className={styles.buttonContainer}>

@@ -17,7 +17,9 @@ function BarTextContent({ locale, type }) {
         </p>
         <ul>
           {content.points.map((point, index) => (
-            <li key={index}>{point}</li>
+            <li key={index}>
+              <HtmlContent content={point} />
+            </li>
           ))}
         </ul>
       </div>

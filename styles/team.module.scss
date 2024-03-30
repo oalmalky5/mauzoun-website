@@ -74,6 +74,13 @@
   max-height: 1000px;
   max-width: 250px;
 }
+.bio {
+  text-align: left;
+}
+
+:lang(ar) .bio {
+  text-align: right;
+}
 
 .totalWhiteBox {
   @include ltr {
@@ -83,4 +90,3 @@
     margin-right: 33px;
   }
 }
-
