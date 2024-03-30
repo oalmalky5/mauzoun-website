@@ -38,15 +38,6 @@ export default function Story({
 
   useEffect(() => {
     handleBgColorChange(backgroundColor);
-
-    // Assuming the initial opacity is set to 0 in CSS, we skip the immediate fade-out.
-    // We only define the fade-in animation, which will be triggered after a slight delay.
-    // This delay allows any re-rendering to complete before the fade-in begins.
-    gsap.fromTo(
-      `.${styles.bar}`,
-      { opacity: 0, y: 0 },
-      { opacity: 1, y: 0, duration: 0.1, delay: 0.1 }
-    );
   }, [locale]);
 
   return (

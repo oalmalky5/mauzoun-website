@@ -168,11 +168,12 @@ export default function Menu({
   };
 
   const removeAndReturnContent = () => {
-    gsap.to('.container-content ', { opacity: 0, duration: 0.3 });
+    gsap.to('.container-content container', { opacity: 0, duration: 0.3 });
 
     gsap.to('.animationFade ', { opacity: 0, duration: 0.3 });
 
     gsap.to(`.container-content`, { opacity: 1, duration: 0.3, delay: 0.6 });
+    gsap.to(`.container`, { opacity: 1, duration: 0.3, delay: 0.6 });
     gsap.to(`.animationFade`, { opacity: 1, duration: 0.3, delay: 0.6 });
   };
 
