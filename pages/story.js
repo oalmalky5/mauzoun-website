@@ -38,7 +38,18 @@ export default function Story({
 
   useEffect(() => {
     handleBgColorChange(backgroundColor);
-  }, [locale]);
+
+    // Determine the direction of movement based on the current language
+    // For example, if the language is Arabic (RTL), we start from the right side; otherwise, we start from the left.
+    const startX = locale === 'ar' ? 100 : -100; // Adjust values as needed
+
+    // Apply an animation to the bars. Here, we're moving the bars along the x-axis.
+    gsap.fromTo(
+      `.${styles.bar}`,
+      { x: startX, opacity: 1 }, // Starting from off-screen on the x-axis
+      { x: 0, opacity: 1, duration: 0.5, ease: 'power2.out' } // Ending at their normal position, fully visible
+    );
+  }, [locale, handleBgColorChange, backgroundColor]);
 
   return (
     <>
@@ -120,7 +131,7 @@ export default function Story({
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 1 }}
+                  transition={{ duration: 0.5 }}
                 >
                   <Bar
                     title={
