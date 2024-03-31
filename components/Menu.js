@@ -87,7 +87,7 @@ export default function Menu({
 
   const buildTiltedSquare = (linkName) => {
     let filter;
-    if (router.pathname === '/story')
+    if (router.pathname === '/story' || router.pathname === '/')
       filter =
         'invert(30%) sepia(10%) saturate(3580%) hue-rotate(220deg) brightness(98%) contrast(85%)';
     else if (router.pathname === '/team')
