@@ -6,7 +6,6 @@ module.exports = {
   images: {
     domains: ['i.imgur.com', 'writingandwellness.com'],
   },
-  target: 'serverless',
   async redirects() {
     return [
       {
