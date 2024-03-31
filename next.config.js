@@ -6,7 +6,15 @@ module.exports = {
   images: {
     domains: ['i.imgur.com', 'writingandwellness.com'],
   },
-
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/story',
+        permanent: true,
+      },
+    ];
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = { fs: false }; // Configure fallback for 'fs' module in the browser
